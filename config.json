@@ -1,0 +1,48 @@
+{
+  "youtube": {
+    "api_key": "YOUR_YOUTUBE_API_KEY",
+    "max_results_per_topic": 10,
+    "region_code": "IN",
+    "relevance_language": "en"
+  },
+  "education": {
+    "board": "All",
+    "classes": [
+      "11th",
+      "12th"
+    ],
+    "streams": {
+      "medical": "MBBS",
+      "non_medical": "BTech"
+    }
+  },
+  "notion": {
+    "parent_page_id": "32629d9d-9c6e-8045-b22d-fc81f673800a",
+    "parent_page_url": "https://www.notion.so/EduContent-Pipeline-32629d9d9c6e8045b22dfc81f673800a",
+    "databases": {
+      "master_databases": {
+        "MBBS": "32629d9d-9c6e-8115-b8ac-e1cf8f6a4b6c",
+        "BTech": "32629d9d-9c6e-8176-835e-db51610aab76"
+      },
+      "video_tracker": "32629d9d-9c6e-812f-b271-d4c45c556fdc",
+      "pipeline_queue": "32629d9d-9c6e-81bd-957e-cce67271f3e5"
+    }
+  },
+  "notebooklm": {
+    "authenticated": true,
+    "use_native_video": true
+  },
+  "postprocessing": {
+    "tts_engine": "QUEN TTS",
+    "use_custom_voice_clone": true,
+    "crop_watermark": true,
+    "trim_outro": true,
+    "insert_hooks": true
+  },
+  "pipeline": {
+    "topics_per_day": 1,
+    "round_robin_subjects": true,
+    "retry_on_failure": true,
+    "max_retries": 3
+  }
+}

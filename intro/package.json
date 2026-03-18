@@ -1,0 +1,16 @@
+{
+  "name": "axiom-intro",
+  "version": "1.0.0",
+  "description": "AXIOM animated intro for YouTube videos",
+  "scripts": {
+    "start": "remotion studio",
+    "render": "remotion render AxiomIntro out/intro.mp4",
+    "render-dynamic": "remotion render AxiomIntro out/intro.mp4 --props"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0",
+    "@remotion/cli": "^4.0.0"
+  }
+}

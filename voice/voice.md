@@ -1,0 +1,1 @@
+Hello my name is Azam Rizwan and today our topic is going to be about automating the resources. How can you do it? Basically you just need to clone this voice so that I can create my own YouTube videos through automation. That is the task that I gave you so hope you will do it good.  
