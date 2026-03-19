@@ -1,12 +1,12 @@
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../config/.env') });
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
-const path = require('path');
 const multer = require('multer');
 const { spawn } = require('child_process');
 const { google } = require('googleapis');
-const { authorize } = require('./uploader/youtube_uploader');
+const { authorize } = require('../modules/uploader/youtube_uploader');
 
 const app = express();
 app.use(cors());
@@ -15,7 +15,7 @@ app.use(express.json());
 // Set up Multer for handling file uploads from Dashboard to the /data directory
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    const dataPath = path.join(__dirname, 'data');
+    const dataPath = path.join(__dirname, '../data');
     if (!fs.existsSync(dataPath)){
         fs.mkdirSync(dataPath, { recursive: true });
     }
@@ -44,7 +44,7 @@ const headers = {
     "Notion-Version": "2022-06-28"
 };
 
-const configPath = path.join(__dirname, 'config.json');
+const configPath = path.join(__dirname, '../config/config.json');
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
 // Route: Get YouTube Stats
@@ -149,8 +149,8 @@ app.post('/api/run-pipeline', (req, res) => {
     console.log(`Triggering pipeline for ${stream || 'BTech'}...`);
     
     // Spawn the node script detached so it continues running
-    const child = spawn('node', ['scripts/run_pipeline.js', stream || 'BTech'], {
-        cwd: __dirname,
+    const child = spawn('node', ['modules/orchestrator/run_pipeline.js', stream || 'BTech'], {
+        cwd: path.join(__dirname, '../'),
         detached: true,
         stdio: 'ignore'
     });
