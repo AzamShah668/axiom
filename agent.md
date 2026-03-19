@@ -27,6 +27,10 @@ d:\notebook lm\
 │   │   └── CONTEXT.md       ← Module docs (load on-demand)
 │   ├── tts\
 │   │   └── CONTEXT.md       ← TTS engine docs
+│   ├── thumbnails\          ← AI-powered thumbnail generator (Gemini)
+│   │   ├── scripts\         ← Python generation scripts
+│   │   ├── assets\headshots\← Drop headshot PNG here
+│   │   └── CONTEXT.md       ← Thumbnail docs
 │   └── uploader\
 │       ├── youtube_uploader.js
 │       └── CONTEXT.md       ← Upload/playlist docs
