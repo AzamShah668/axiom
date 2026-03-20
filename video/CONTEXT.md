@@ -15,15 +15,22 @@ Dual-mode video engine: Remotion for programmatic video generation, FFmpeg for p
 | `engines/` | Placeholder for Engine 1 & 2 scripts (NOT YET BUILT) |
 
 ## FFmpeg Post-Processing Steps (post_processor.js)
-1. **Enhance** transcript with natural intro/outro via `transcript_enhancer.js`
-2. **Generate** TTS voice clone via Colab Gradio API (`tts_generator.js`)
-3. **Scale** intro video to 1920x1080
-4. **Crop** bottom 60px to remove NotebookLM watermark
-5. **Generate** black outro card with centered AXIOM logo
-6. **Concatenate** intro → main video → outro
-7. **Overlay** AXIOM watermark (top-left, 60% opacity) + subscribe button (bottom-right, 80% opacity)
-8. **Map** TTS audio as the sole audio track
-9. Output → `final_output.mp4` (same directory as input)
+Runs AFTER Engine 2 produces the synced video. Takes Engine 2 output → YouTube-ready branded MP4.
+
+1. **Probe** input + intro durations for fade timing
+2. **Scale** AXIOM intro to 1920x1080 @ 30fps, add fade-out at end
+3. **Crop** bottom 60px of main video (removes NotebookLM watermark), scale to 1080p, fade-in + fade-out
+4. **Generate** black outro card (8s) with centered AXIOM logo (colorkey'd for transparency)
+5. **Normalize** all audio to 44100Hz stereo (intro, main TTS, silence for outro)
+6. **Concatenate** intro → main → outro (video + audio)
+7. **Overlay** AXIOM logo watermark (top-left, 60% opacity, colorkey'd background)
+8. **Overlay** Subscribe button (bottom-right, FFmpeg-drawn red box + text)
+9. Output → `<input_name>_branded.mp4`
+
+### CLI Usage
+```
+node video/post_processor.js <SyncedVideoPath> [OutputPath]
+```
 
 ## Pending Work
 - **Engine 1** (`engines/engine_1_transcribe.py`): Whisper word-level timestamps for original + new audio
