@@ -136,14 +136,56 @@ def build_synced_video(video_path, tts_audio_path, keypoints, tts_duration, outp
     return True
 
 
+def trim_notebooklm_branding(video_path):
+    """
+    Pre-processing: trim the last 3 seconds from the NotebookLM video.
+    
+    Every NotebookLM-generated video ends with a ~2-3s branded screen
+    showing the NotebookLM logo and 'notebooklm.google.com'. This MUST
+    be removed BEFORE audio sync to avoid losing real content audio.
+    
+    Returns the path to the trimmed video (or original if trimming fails).
+    """
+    TRIM_SECONDS = 3  # seconds to cut from end
+    
+    duration = get_duration(video_path)
+    trimmed_duration = max(0, duration - TRIM_SECONDS)
+    
+    # Create trimmed file in same directory
+    base = Path(video_path)
+    trimmed_path = str(base.parent / f"{base.stem}_trimmed{base.suffix}")
+    
+    print(f"\n  ✂️  Pre-trim: removing last {TRIM_SECONDS}s (NotebookLM branding)")
+    print(f"      {duration:.1f}s → {trimmed_duration:.1f}s")
+    
+    cmd = [
+        "ffmpeg", "-y",
+        "-i", video_path,
+        "-t", str(trimmed_duration),
+        "-c", "copy",  # fast copy, no re-encode
+        trimmed_path
+    ]
+    
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"  ⚠️  Pre-trim failed, using original video: {result.stderr[-200:]}")
+        return video_path
+    
+    print(f"      Trimmed video: {trimmed_path}")
+    return trimmed_path
+
+
 def run_engine_2(video_path, tts_audio_path, tts_timestamps_path, output_path, model_size="base"):
     """Full Engine 2 pipeline."""
     print("=" * 60)
     print("ENGINE 2: Visual Slicer & Forced Alignment Sync")
     print("=" * 60)
 
-    # Step 1: Transcribe original video
-    orig_segments = transcribe_original(video_path, model_size)
+    # Step 0: Pre-trim NotebookLM branding (last 3s)
+    trimmed_video = trim_notebooklm_branding(video_path)
+
+    # Step 1: Transcribe original video (using trimmed version)
+    orig_segments = transcribe_original(trimmed_video, model_size)
 
     # Step 2: Align original segments to TTS timeline
     print("\nEngine 2: Aligning segments...")
@@ -159,8 +201,8 @@ def run_engine_2(video_path, tts_audio_path, tts_timestamps_path, output_path, m
         }, f, indent=2)
     print(f"  Alignment saved: {alignment_path}")
 
-    # Step 3: Build synced video
-    success = build_synced_video(video_path, tts_audio_path, keypoints, tts_duration, output_path)
+    # Step 3: Build synced video (using trimmed version)
+    success = build_synced_video(trimmed_video, tts_audio_path, keypoints, tts_duration, output_path)
 
     if success:
         print("\n" + "=" * 60)

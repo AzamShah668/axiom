@@ -22,9 +22,8 @@ const SUBSCRIBE_PATH = path.join(ASSETS_DIR, 'subscribe_button.png');
 
 const OUTRO_DURATION = 8;       // seconds — branded outro card
 const FADE_DURATION = 1;        // seconds — fade transition between segments
-const NOTEBOOKLM_TRIM_SECONDS = 3; // seconds to trim from end of main video
-                                    // (removes the "notebooklm.google.com" branded screen
-                                    //  that appears at the end of EVERY NotebookLM video)
+// NOTE: NotebookLM branding trim (last 3s) is handled in Engine 2 (engine_2_sync.py)
+//       BEFORE audio sync, so no audio is lost.
 
 /**
  * Get the duration of a media file in seconds via ffprobe.
@@ -171,13 +170,9 @@ async function processVideo(syncedVideoPath, outputPath) {
 function buildFFmpegCommand(syncedVideoPath, finalOutputPath, introDuration, mainDuration) {
     const fwd = (p) => p.replace(/\\/g, '/');
 
-    // Trim the NotebookLM branded outro from the end of the main video
-    const trimmedMainDuration = Math.max(0, mainDuration - NOTEBOOKLM_TRIM_SECONDS);
-    console.log(`   ✂️  Trimming last ${NOTEBOOKLM_TRIM_SECONDS}s (NotebookLM branding): ${mainDuration.toFixed(1)}s → ${trimmedMainDuration.toFixed(1)}s`);
-
     // Compute fade-out start times
     const introFadeOutStart = Math.max(0, introDuration - FADE_DURATION);
-    const mainFadeOutStart = Math.max(0, trimmedMainDuration - FADE_DURATION);
+    const mainFadeOutStart = Math.max(0, mainDuration - FADE_DURATION);
 
     const filterLines = [
         // ══════════ VIDEO PREP ══════════
@@ -188,10 +183,10 @@ function buildFFmpegCommand(syncedVideoPath, finalOutputPath, introDuration, mai
             `setsar=1,fps=30,format=yuv420p,` +
             `fade=t=out:st=${introFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[intro_v]`,
 
-        // Main: trim last 3s (NotebookLM branding), crop bottom 60px (watermark),
-        //        scale → 1080p, 30fps, fade-in at start, fade-out at end
-        `[1:v]trim=0:${trimmedMainDuration.toFixed(3)},setpts=PTS-STARTPTS,` +
-            `crop=in_w:in_h-60:0:0,` +
+        // Main: crop bottom 60px (NotebookLM watermark), scale → 1080p, 30fps,
+        //        fade-in at start, fade-out at end
+        // NOTE: NotebookLM branding already trimmed in Engine 2
+        `[1:v]crop=in_w:in_h-60:0:0,` +
             `scale=1920:1080:force_original_aspect_ratio=decrease,` +
             `pad=1920:1080:(ow-iw)/2:(oh-ih)/2:black,` +
             `setsar=1,fps=30,format=yuv420p,` +
@@ -214,9 +209,8 @@ function buildFFmpegCommand(syncedVideoPath, finalOutputPath, introDuration, mai
         `[0:a]aformat=sample_rates=44100:channel_layouts=stereo,` +
             `afade=t=out:st=${introFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[intro_a]`,
 
-        // Main audio (TTS voice), trimmed to match video, fade-in at start, fade-out at end
-        `[1:a]atrim=0:${trimmedMainDuration.toFixed(3)},asetpts=PTS-STARTPTS,` +
-            `aformat=sample_rates=44100:channel_layouts=stereo,` +
+        // Main audio (TTS voice), fade-in at start, fade-out at end
+        `[1:a]aformat=sample_rates=44100:channel_layouts=stereo,` +
             `afade=t=in:st=0:d=${FADE_DURATION},` +
             `afade=t=out:st=${mainFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[main_a]`,
 
