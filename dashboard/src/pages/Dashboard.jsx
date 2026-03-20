@@ -10,75 +10,124 @@ const Dashboard = () => {
     channelName: "Loading..."
   });
   const [isProcessing, setIsProcessing] = useState(false);
+  const [publishingTopicId, setPublishingTopicId] = useState(null);
+  const [selectedStream, setSelectedStream] = useState('BTech');
+  const [pipelineLog, setPipelineLog] = useState([]);
   const [loading, setLoading] = useState(true);
   const [serverError, setServerError] = useState(null);
 
   const fetchDashboardData = async () => {
     try {
-      // Fetch YT Stats
       const statsRes = await fetch('http://localhost:3001/api/stats');
       if (statsRes.ok) {
         const statsData = await statsRes.json();
         setStats(statsData);
       }
-
-      // Fetch Notion Queue
       const queueRes = await fetch('http://localhost:3001/api/queue');
       if (queueRes.ok) {
         const queueData = await queueRes.json();
         setQueue(queueData);
       }
-      setServerError(null); // Clear any previous errors on success
+      setServerError(null);
     } catch (error) {
       console.error("Error fetching dashboard data:", error);
-      setServerError("Backend API server is offline. Please run 'node server.js' in the terminal.");
+      setServerError("Backend API server is offline. Please run 'node core/server.js' in the terminal.");
     } finally {
       setLoading(false);
     }
   };
 
+  const fetchLogs = async () => {
+    try {
+      const logsRes = await fetch('http://localhost:3001/api/pipeline-logs');
+      if (logsRes.ok) {
+        const logsData = await logsRes.json();
+        setPipelineLog(logsData.logs || []);
+      }
+    } catch (e) {
+      // Ignore log fetch errors to prevent spamming console if server drops
+    }
+  };
+
   useEffect(() => {
     fetchDashboardData();
-    // Poll every 30 seconds for live updates
-    const interval = setInterval(fetchDashboardData, 30000);
-    return () => clearInterval(interval);
+    const dataInterval = setInterval(fetchDashboardData, 30000); // 30s Notion/YT polling
+    const logsInterval = setInterval(fetchLogs, 2000); // 2s Real-time logs polling
+    return () => {
+      clearInterval(dataInterval);
+      clearInterval(logsInterval);
+    };
   }, []);
 
+  useEffect(() => {
+    // If we're processing or publishing, check if logs indicate completion or failure
+    if ((isProcessing || publishingTopicId) && pipelineLog.length > 0) {
+      const latestLogs = pipelineLog.slice(-5).join('\n').toLowerCase();
+      if (latestLogs.includes('pipeline complete!') || latestLogs.includes('pipeline error')) {
+         setIsProcessing(false);
+         setPublishingTopicId(null);
+      }
+    }
+  }, [pipelineLog]);
+
+  // ── Publish: Next Pending (by stream) ──────────────────────────────
   const startPipeline = async () => {
     setIsProcessing(true);
     try {
-        const res = await fetch('http://localhost:3001/api/run-pipeline', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ stream: "BTech" }) // Can be made dynamic later
-        });
-        const data = await res.json();
-        alert(data.message);
+      await fetch('http://localhost:3001/api/run-pipeline', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ stream: selectedStream })
+      });
     } catch (error) {
-        console.error("Error starting pipeline:", error);
-        alert("Failed to start pipeline. Is the server running?");
-    } finally {
-        setTimeout(() => setIsProcessing(false), 2000);
+      console.error("Error starting pipeline:", error);
+      setIsProcessing(false);
+    }
+  };
+
+  // ── Publish: Specific Topic ────────────────────────────────────────
+  const publishTopic = async (item) => {
+    setPublishingTopicId(item.id);
+    try {
+      await fetch('http://localhost:3001/api/run-pipeline-topic', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          pageId: item.id,
+          topic: item.topic,
+          subject: item.subject,
+          chapter: item.chapter,
+          stream: item.stream
+        })
+      });
+    } catch (error) {
+      console.error("Failed to publish", error);
+      setPublishingTopicId(null);
     }
   };
 
   if (loading) {
-      return <div className="dashboard-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}><h2>Loading Live EduContent Data...</h2></div>;
+    return (
+      <div className="dashboard-container" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <h2>Loading Live EduContent Data...</h2>
+      </div>
+    );
   }
 
   if (serverError) {
-      return (
-        <div className="dashboard-container" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
-            <h2 style={{color: 'var(--warning)', marginBottom: '1rem'}}>⚠️ Connection Lost</h2>
-            <p>{serverError}</p>
-        </div>
-      );
+    return (
+      <div className="dashboard-container" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <h2 style={{color: 'var(--warning)', marginBottom: '1rem'}}>⚠️ Connection Lost</h2>
+        <p>{serverError}</p>
+      </div>
+    );
   }
 
   return (
     <div className="dashboard-container">
       <h1>{stats.channelName} Command Center</h1>
       
+      {/* ── Stats Row ─────────────────────────────────────────── */}
       <div className="grid-layout">
         <div className="glass-panel stat-card">
           <span className="stat-label">Total Videos Generated</span>
@@ -94,57 +143,89 @@ const Dashboard = () => {
         </div>
       </div>
 
+      {/* ── Queue + Insights ──────────────────────────────────── */}
       <div className="grid-layout">
         <div className="glass-panel">
-          <h2>🎯 Next Video Queue (Live from Notion)</h2>
+          <h2>🎯 Video Queue (Live from Notion)</h2>
           {queue.length === 0 ? (
-              <p>No remaining videos in the queue!</p>
+            <p>No remaining videos in the queue!</p>
           ) : (
-              <ul className="queue-list">
-                {queue.map((item) => (
-                  <li key={item.id} className="queue-item">
-                    <div>
-                      <strong>{item.topic}</strong>
-                      <p>{item.subject} | {item.stream}</p>
-                    </div>
+            <ul className="queue-list">
+              {queue.map((item) => (
+                <li key={item.id} className="queue-item">
+                  <div style={{flex: 1}}>
+                    <strong>{item.topic}</strong>
+                    <p style={{fontSize: '0.85rem'}}>{item.subject} | {item.chapter} | {item.stream}</p>
+                  </div>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '12px'}}>
                     <span className={`badge ${item.status === 'Pending' ? 'pending' : 'success'}`}>
                       {item.status}
                     </span>
-                  </li>
-                ))}
-              </ul>
+                    {item.status === 'Pending' && (
+                      <button
+                        className={`btn btn-publish ${publishingTopicId === item.id ? 'pulse' : ''}`}
+                        onClick={() => publishTopic(item)}
+                        disabled={publishingTopicId === item.id}
+                        title={`Publish "${item.topic}" to YouTube`}
+                      >
+                        {publishingTopicId === item.id ? '⏳' : '🚀'}
+                      </button>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
           )}
         </div>
 
         <div className="glass-panel">
-          <h2>💡 Probability & Insights (Live Algorithmic Assessment)</h2>
-          {/* In a fully dynamic system, this data would come from the /api/insights endpoint based on real YT analytics crunching. 
-              For this phase, displaying tailored insight cards simulating real recommendations. */}
-          <div className="insights-list">
-            <div className="insight-card success">
-              <strong>Optimization Recommendation</strong>
-              <p>The SEO Generator is actively embedding target tags to capture 11th & 12th Grade search intent. Maintain current Hook titles.</p>
+          <h2>💡 Pipeline Activity</h2>
+          {pipelineLog.length === 0 ? (
+            <div className="insights-list">
+              <div className="insight-card success">
+                <strong>Ready</strong>
+                <p>Pipeline is idle. Use the Publish button to start processing videos.</p>
+              </div>
+              <div className="insight-card">
+                <strong>SEO Engine</strong>
+                <p>Viral title generator active — titles rotate through 12 attention-grabbing formulas.</p>
+              </div>
             </div>
-            <div className="insight-card">
-              <strong>Consistency Metric</strong>
-              <p>Posting frequency impacts algorithm reach. The Master Pipeline is ready to process the next batch of definitions.</p>
+          ) : (
+            <div className="pipeline-log" style={{ maxHeight: '250px', overflowY: 'auto' }}>
+              {pipelineLog.slice(-15).map((log, i) => (
+                <div key={i} className="log-entry" style={{ fontFamily: 'monospace', fontSize: '0.85rem' }}>
+                  <span>{log}</span>
+                </div>
+              ))}
             </div>
-          </div>
+          )}
         </div>
       </div>
 
-      <div className="glass-panel" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div>
-          <h2>🚀 Pipeline Control</h2>
-          <p>Manually trigger the orchestration script for the next pending topic.</p>
+      {/* ── Publish Control Panel ─────────────────────────────── */}
+      <div className="glass-panel publish-control-panel">
+        <div style={{flex: 1}}>
+          <h2>🚀 Publish Next Video</h2>
+          <p>Auto-picks the next "Pending" topic from Notion, generates video via NotebookLM, applies TTS voice clone, creates thumbnail, and publishes to YouTube.</p>
         </div>
-        <button 
-          className={`btn btn-primary ${isProcessing ? 'pulse' : ''}`}
-          onClick={startPipeline}
-          disabled={isProcessing}
-        >
-          {isProcessing ? 'Pipeline Running in Background...' : 'Run Master Pipeline'}
-        </button>
+        <div className="publish-controls">
+          <select
+            className="stream-select"
+            value={selectedStream}
+            onChange={(e) => setSelectedStream(e.target.value)}
+          >
+            <option value="BTech">BTech</option>
+            <option value="MBBS">MBBS</option>
+          </select>
+          <button 
+            className={`btn btn-primary btn-large ${isProcessing ? 'pulse' : ''}`}
+            onClick={startPipeline}
+            disabled={isProcessing}
+          >
+            {isProcessing ? '⏳ Pipeline Running...' : '🚀 Publish'}
+          </button>
+        </div>
       </div>
     </div>
   );

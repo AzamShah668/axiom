@@ -7,6 +7,7 @@ const multer = require('multer');
 const { spawn } = require('child_process');
 const { google } = require('googleapis');
 const { authorize } = require('../modules/uploader/youtube_uploader');
+const { runFullPipeline } = require('../modules/orchestrator/run_pipeline');
 
 const app = express();
 app.use(cors());
@@ -142,22 +143,78 @@ app.post('/api/upload', upload.array('assets', 10), (req, res) => {
     }
 });
 
-// Route: Trigger Pipeline
+// --- Global Pipeline Logger ---
+let globalPipelineLogs = [];
+
+function stripAnsi(str) {
+    return str.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '');
+}
+
+function addLog(msg) {
+    const text = stripAnsi(msg.toString()).trim();
+    if (!text) return;
+    
+    // Prefix with timestamp and keep the last 50 logs
+    const timestamp = new Date().toLocaleTimeString();
+    
+    // Split by newlines in case multiple logs come in one chunk
+    text.split('\n').forEach(line => {
+        if (line.trim()) {
+            globalPipelineLogs.push(`[${timestamp}] ${line.trim()}`);
+        }
+    });
+
+    while (globalPipelineLogs.length > 50) {
+        globalPipelineLogs.shift();
+    }
+}
+
+// Route: Get Pipeline Logs Real-Time
+app.get('/api/pipeline-logs', (req, res) => {
+    res.json({ logs: globalPipelineLogs });
+});
+
 app.post('/api/run-pipeline', (req, res) => {
     const { stream } = req.body;
+    globalPipelineLogs = [];
+    addLog(`🚀 [SERVER] Triggering pipeline for ${stream || 'BTech'}...`);
     
-    console.log(`Triggering pipeline for ${stream || 'BTech'}...`);
-    
-    // Spawn the node script detached so it continues running
     const child = spawn('node', ['modules/orchestrator/run_pipeline.js', stream || 'BTech'], {
-        cwd: path.join(__dirname, '../'),
-        detached: true,
-        stdio: 'ignore'
+        cwd: path.join(__dirname, '../')
     });
     
-    child.unref(); // Allow the parent (API server) to exit independently of the child
+    child.stdout.on('data', addLog);
+    child.stderr.on('data', addLog);
+    child.on('close', (code) => {
+        if (code !== 0) addLog(`❌ Pipeline Error: Process exited with code ${code}`);
+    });
 
-    res.json({ message: "Pipeline started successfully in the background." });
+    res.json({ message: "Pipeline started! Watch the Activity panel." });
+});
+
+app.post('/api/run-pipeline-topic', (req, res) => {
+    const { pageId, topic, subject, chapter, stream } = req.body;
+    if (!pageId || !topic) return res.status(400).json({ error: 'pageId and topic are required' });
+
+    globalPipelineLogs = [];
+    addLog(`🎯 [SERVER] Triggering pipeline specific topic: "${topic}"...`);
+    
+    const child = spawn('node', [
+        'modules/orchestrator/run_pipeline.js',
+        '--topic', topic,
+        '--subject', subject || 'General',
+        '--chapter', chapter || 'General'
+    ], {
+        cwd: path.join(__dirname, '../')
+    });
+    
+    child.stdout.on('data', addLog);
+    child.stderr.on('data', addLog);
+    child.on('close', (code) => {
+        if (code !== 0) addLog(`❌ Pipeline Error: Process exited with code ${code}`);
+    });
+
+    res.json({ message: `Pipeline started for "${topic}"! Watch the Activity panel.` });
 });
 
 app.listen(PORT, () => {

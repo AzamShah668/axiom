@@ -1,69 +1,120 @@
 // seo_generator.js
-// Generates viral, highly-targeted YouTube titles, descriptions, and tags.
+// Generates VIRAL, attention-grabbing YouTube titles, descriptions, and tags.
+// Uses multiple proven hook formulas rotated for variety.
 
 /**
- * Generates SEO metadata based on the subject and topic.
- * @param {string} topic - The specific topic of the video (e.g., "Newton's First Law")
- * @param {string} subject - The broader subject (e.g., "Physics")
- * @param {string} chapter - The chapter name (e.g., "Laws of Motion")
- * @returns {Object} { title, description, tags }
+ * Generates SEO metadata optimized for virality and algorithm reach.
+ * @param {string} topic   - e.g., "QuickSort"
+ * @param {string} subject - e.g., "DSA"
+ * @param {string} chapter - e.g., "Sorting Algorithms"
+ * @param {object} [opts]  - Optional overrides
+ * @returns {{ title: string, description: string, tags: string[] }}
  */
-function generateSEOMetadata(topic, subject, chapter) {
-    // 1. Generate a Catchy Title
-    // We want the primary keyword early, plus a hook or emotional trigger.
-    const hookPhrases = [
-        "Explained in 5 Minutes!",
-        "The Easiest Explanation",
-        "Master this in One Video",
-        "Exam Prep Masterclass",
-        "Everything You Need To Know",
-        "Explained Simply"
-    ];
-    const randomHook = hookPhrases[Math.floor(Math.random() * hookPhrases.length)];
-    const title = `${topic} | ${chapter} | ${subject} - ${randomHook}`;
+function generateSEOMetadata(topic, subject, chapter, opts = {}) {
 
-    // 2. Generate a Viral Description
-    const descriptionTemplate = `
-🚀 Master ${topic} in ${subject}! 
-In this video, we dive deep into ${chapter}, breaking down the core concepts of ${topic} so you can understand it easily and ace your exams.
+    // ─── 1. VIRAL TITLE GENERATOR ────────────────────────────────────
 
-📚 What you will learn:
-- Clear, simple definitions of ${topic}
-- Core concepts and theories from ${chapter}
-- Real-world examples and applications
-
-Make sure to LIKE 👍 and SUBSCRIBE 🔔 for more premium educational content on ${subject}!
-
-#${subject.replace(/\s+/g, '')} #${chapter.replace(/\s+/g, '')} #${topic.replace(/\s+/g, '')} #Education #Studying #ExamPrep #BoardExams #NCERT
-`;
-
-    // 3. Generate Targeted Tags
-    // Mix of broad, specific, and trending keywords
-    const baseTags = [
-        "education", "study", "lecture", "exam prep", "ncert", "cbse"
-    ];
-    
-    // Add specific topic and subject tags, breaking them down by words too
-    const specificTags = [
-        subject.toLowerCase(),
-        chapter.toLowerCase(),
-        topic.toLowerCase(),
-        `${subject} class 11`, 
-        `${subject} class 12`,
-        `${topic} explained`,
-        `${chapter} full chapter`
+    const titleFormulas = [
+        `Watch This and You'll FINALLY Understand ${topic}`,
+        `${topic} — The Video I WISH I Had Before My Exam`,
+        `${topic} Explained So Well, You'll Never Forget It`,
+        `How ${topic} ACTUALLY Works (${subject})`,
+        `I Taught ${topic} to 1000 Students — Here's the BEST Way`,
+        `${topic} in ${subject}: Once You See This, It Clicks`,
+        `Stop Memorizing ${topic} — UNDERSTAND It Instead`,
+        `${topic} | The Only Video You'll Ever Need (${chapter})`,
+        `Why Most Students Get ${topic} WRONG — And How to Fix It`,
+        `${topic} — From Zero to Hero in One Video`,
+        `The Secret Behind ${topic} That Teachers Don't Tell You`,
+        `${topic} Made RIDICULOUSLY Simple | ${subject}`,
     ];
 
-    // Combine and deduplicate, ensuring we stay within YouTube limits (approx 500 chars total for tags)
-    const combinedTags = [...new Set([...specificTags, ...baseTags])];
-    
-    // Safety check: ensure no tag is too long (YouTube limit: 30 chars per tag)
-    const validTags = combinedTags.map(tag => tag.substring(0, 30));
+    const titleIndex = opts.titleIndex ?? Math.floor(Math.random() * titleFormulas.length);
+    const title = titleFormulas[titleIndex % titleFormulas.length].substring(0, 100);
+
+    // ─── 2. ALGORITHM-OPTIMIZED DESCRIPTION ──────────────────────────
+
+    // YouTube shows the first ~120 chars in search results — pack keywords here
+    const description = `🚀 ${topic} in ${subject} — the COMPLETE breakdown you've been looking for!
+
+In this video, we go deep into ${chapter}, covering ${topic} from the absolute basics to exam-level mastery. Whether you're prepping for semester exams, GATE, placements, or just want to truly understand the concept — this is the one video you need.
+
+📌 What You'll Learn:
+• Core definition & intuition behind ${topic}
+• Step-by-step worked examples with dry runs
+• Common mistakes & how to avoid them
+• Time & space complexity analysis
+• Real interview questions on ${topic}
+
+⏱️ Timestamps:
+0:00 — Intro & Why ${topic} Matters
+0:30 — Core Concept Explained
+2:00 — Step-by-Step Example
+4:30 — Common Mistakes
+6:00 — Complexity Analysis
+7:30 — Interview Questions & Recap
+
+🔥 If this helped, smash that LIKE button and SUBSCRIBE for daily ${subject} videos!
+
+📚 Part of our ${chapter} series in ${subject}.
+
+#${topic.replace(/\s+/g, '')} #${subject.replace(/\s+/g, '')} #${chapter.replace(/\s+/g, '')} #Education #Engineering #ExamPrep #GATE #Placements #CodingInterview #BTech #CSE #LearnWithMe
+`.trim();
+
+    // ─── 3. COMPETITIVE TAGS (long-tail + broad) ─────────────────────
+
+    const topicLower = topic.toLowerCase();
+    const subjectLower = subject.toLowerCase();
+    const chapterLower = chapter.toLowerCase();
+
+    const tags = [
+        // Exact match Keywords (highest priority)
+        topicLower,
+        `${topicLower} explained`,
+        `${topicLower} in ${subjectLower}`,
+        `${topicLower} tutorial`,
+
+        // Long-tail variations
+        `${topicLower} for beginners`,
+        `${topicLower} step by step`,
+        `${topicLower} with example`,
+        `${topicLower} interview questions`,
+        `${topicLower} gate`,
+        `${topicLower} placement`,
+
+        // Chapter-level
+        chapterLower,
+        `${chapterLower} ${subjectLower}`,
+        `${chapterLower} full chapter`,
+
+        // Subject-level
+        subjectLower,
+        `${subjectLower} lecture`,
+        `${subjectLower} class 11`,
+        `${subjectLower} class 12`,
+        `${subjectLower} btech`,
+        `${subjectLower} notes`,
+
+        // Broad education
+        "education",
+        "exam prep",
+        "semester exam",
+        "engineering",
+        "ncert",
+        "cbse",
+        "gate preparation",
+        "coding interview",
+        "learn with me",
+        "study tips",
+    ];
+
+    // Deduplicate + enforce YouTube 30-char-per-tag limit
+    const uniqueTags = [...new Set(tags)].map(t => t.substring(0, 30));
 
     return {
-        title: title.substring(0, 100), // YouTube limit: 100 chars
-        description: descriptionTemplate.trim(), // YouTube limit: 5000 chars
-        tags: validTags
+        title,
+        description: description.substring(0, 4900), // YouTube limit: 5000 chars
+        tags: uniqueTags,
     };
 }
 

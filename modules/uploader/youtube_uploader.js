@@ -1,14 +1,14 @@
 // youtube_uploader.js
 // Handles YouTube OAuth, Video Upload, and precise Playlist Management for Subjects and Chapters
 
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config({ path: require('path').join(__dirname, '../../config/.env') });
 const fs = require('fs');
 const path = require('path');
 const { google } = require('googleapis');
 const readline = require('readline');
 
 // The OAuth file provided by the user
-const CREDENTIALS_PATH = path.join(__dirname, '../client_secret_38777465067-iaku7ck3ormsr8q72noa27ka5l9n12id.apps.googleusercontent.com.json');
+const CREDENTIALS_PATH = path.join(__dirname, '../../client_secret_38777465067-iaku7ck3ormsr8q72noa27ka5l9n12id.apps.googleusercontent.com.json');
 const TOKEN_PATH = path.join(__dirname, 'token.json');
 
 const SCOPES = [
@@ -161,7 +161,7 @@ async function uploadToYouTube(videoFilePath, info) {
                 categoryId: '27' // Education
             },
             status: {
-                privacyStatus: 'unlisted', // Highly recommend unlisted until reviewed! Change to 'public' for full automation
+                privacyStatus: info.privacyStatus || 'public', // Configurable: 'public' (default), 'unlisted', or 'private'
                 selfDeclaredMadeForKids: false
             }
         },

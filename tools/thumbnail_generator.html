@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral YouTube Thumbnail Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-glow: #00b8d4;
+            --accent-red: #FF4444;
+            --bg-dark: #050a14;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            background-color: var(--bg-dark);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .thumbnail {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 30%, #1a1a2e 0%, #050a14 100%);
+            display: flex;
+            align-items: center;
+        }
+
+        /* ═══════ BACKGROUND IMAGE ═══════ */
+        .bg-image-container {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+        }
+        .bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85; /* Increased opacity for visibility */
+            filter: brightness(1.1) contrast(1.2);
+        }
+
+        .bottom-vignette {
+            position: absolute;
+            bottom: 0; left: 0; right: 0; height: 300px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            z-index: 2;
+        }
+
+        /* ═══════ TEXT CONTENT ═══════ */
+        .text-content {
+            position: absolute;
+            left: 80px;
+            z-index: 10;
+            max-width: 650px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .top-badge {
+            display: inline-block;
+            background: var(--accent-red);
+            color: white;
+            padding: 8px 16px;
+            font-family: 'Bebas Neue', cursiv;
+            font-size: 32px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+        }
+
+        .main-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 140px;
+            line-height: 0.9;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+        }
+
+        .subtitle {
+            font-size: 48px;
+            font-weight: 700;
+            color: #FFD700;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        .sub-line {
+            font-size: 32px;
+            color: #ddd;
+            font-style: italic;
+        }
+
+        /* ═══════ HEADSHOT ═══════ */
+        .headshot-container {
+            position: absolute;
+            right: -50px;
+            bottom: -20px;
+            height: 110%;
+            width: 60%;
+            z-index: 5;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        #headshot-canvas {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(-20px 0px 50px rgba(0, 184, 212, 0.5)) brightness(1.1);
+        }
+
+        /* ═══════ LOGO ═══════ */
+        .axiom-logo {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            z-index: 20;
+        }
+        .axiom-logo img {
+            height: 45px;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+        }
+
+        .must-watch {
+            position: absolute;
+            bottom: 40px;
+            left: 80px;
+            background: #FFD700;
+            color: black;
+            padding: 10px 20px;
+            font-family: 'Bebas Neue', cursiv;
+            font-size: 36px;
+            z-index: 20;
+            border: 4px solid white;
+            transform: rotate(-3deg);
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnail">
+        <div class="bg-image-container">
+            <img class="bg-image" src="{{BG_IMAGE_BASE64}}" style="display: {{BG_IMAGE_DISPLAY}};">
+        </div>
+        
+        <div class="bottom-vignette"></div>
+
+        <div class="text-content">
+            <div class="top-badge" style="display: {{TOP_BADGE_DISPLAY}};">{{TOP_BADGE}}</div>
+            <h1 class="main-title">{{MAIN_TITLE}}</h1>
+            <div class="subtitle">{{SUBTITLE}}</div>
+            <div class="sub-line">{{SUB_LINE}}</div>
+        </div>
+
+        <div class="must-watch" style="display: {{MUST_WATCH_DISPLAY}};">{{MUST_WATCH_TEXT}}</div>
+
+        <div class="headshot-container">
+            <canvas id="headshot-canvas"></canvas>
+            <!-- Hidden source for processing -->
+            <img id="headshot-src" src="{{HEADSHOT_BASE64}}" style="display: none;">
+        </div>
+
+        <div class="axiom-logo" style="display: {{LOGO_DISPLAY}};">
+            <img src="{{LOGO_BASE64}}">
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const img = document.getElementById('headshot-src');
+            const canvas = document.getElementById('headshot-canvas');
+            const ctx = canvas.getContext('2d');
+
+            if (img.complete && img.naturalWidth > 0) {
+                processImage();
+            } else {
+                img.onload = processImage;
+            }
+
+            function processImage() {
+                canvas.width = img.naturalWidth;
+                canvas.height = img.naturalHeight;
+                ctx.drawImage(img, 0, 0);
+
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const data = imageData.data;
+
+                // Threshold for "white" background removal
+                // We'll remove pixels where R, G, B are all > 220
+                for (let i = 0; i < data.length; i += 4) {
+                    const r = data[i];
+                    const g = data[i + 1];
+                    const b = data[i + 2];
+                    
+                    if (r > 240 && g > 240 && b > 240) {
+                        data[i + 3] = 0; // Set alpha to 0 (transparent)
+                    }
+                }
+
+                ctx.putImageData(imageData, 0, 0);
+                console.log("✅ Headshot background processed");
+                window.renderReady = true; // Signal to Puppeteer
+            }
+        };
+    </script>
+</body>
+</html>

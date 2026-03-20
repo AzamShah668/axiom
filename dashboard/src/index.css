@@ -303,3 +303,130 @@ p {
   padding: 2rem;
   /* background matching app body */
 }
+
+/* ── Publish Control Panel ────────────────────────── */
+.publish-control-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.publish-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.stream-select {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.stream-select:hover {
+  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.stream-select option {
+  background: #1e293b;
+  color: var(--text-main);
+}
+
+.btn-large {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Per-Topic Publish Button ─────────────────────── */
+.btn-publish {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent-primary), #4f46e5);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px var(--accent-glow);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-publish:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 24px var(--accent-glow);
+}
+
+.btn-publish:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Pipeline Activity Log ────────────────────────── */
+.pipeline-log {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.pipeline-log::-webkit-scrollbar {
+  width: 4px;
+}
+
+.pipeline-log::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.log-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  border-left: 3px solid var(--accent-primary);
+  animation: slideInLog 0.3s ease;
+}
+
+.log-time {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  padding-top: 1px;
+}
+
+@keyframes slideInLog {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
