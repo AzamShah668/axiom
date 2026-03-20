@@ -107,13 +107,26 @@ A browser-automation subagent (since NotebookLM has no official API for click-in
 
 This component sanitizes and edits the raw NotebookLM video export to make it production-ready and monetizable:
 
-1. **Local TTS Generation (QUEN TTS)**: Feeds the extracted NotebookLM transcript to your local **Qwen TTS** model. 
-   - **Command Trigger**: `C:\Users\AZAM RIZWAN\qwen-tts-gpu\Scripts\python.exe C:\Users\AZAM RIZWAN\Desktop\QwenTTS-Automation\qwen_tts_engine.py --mode clone --ref-audio "d:\notebook lm\voice\Recording (9).m4a" --ref-text "d:\notebook lm\voice\voice.md" --text "%TRANSCRIPT%" --out "%OUTPUT_PATH%" --language Auto --device cuda:0`
+1. **Cloud TTS Generation (Qwen3 TTS on Colab)**: Feeds the enhanced transcript to the Qwen3 TTS voice clone server running on Google Colab (T4 GPU). The reference audio (`voice/Recording (14).m4a`) and its transcript are sent with every API call to maintain voice consistency.
+   - **Colab Notebook**: `https://colab.research.google.com/drive/1uV6ZIqg3M9mwi-9Leplkmntn94rKEh9S`
+   - **Local wrapper**: `video/tts_generator.js` → calls Colab Gradio API via `gradio_client`
+   - **URL manager**: `video/colab_manager.js` → auto-detects expired Colab sessions
 2. **Audio Replacement**: Mutes the original NotebookLM audio track in the MP4 and seamlessly syncs the newly generated Qwen TTS audio track.
 3. **Video Trimming (Outro Removal)**: Automatically slices off the final few seconds of the MP4 to guarantee the NotebookLM ending bumper/logo is completely removed.
-4. **Watermark Removal**: Crops or scales the video, or applies an opaque channel logo overlay, to hide the NotebookLM watermark permanently residing in the bottom right corner.
-5. **Intro Splicing & Catchy Hooks**: Prepends your custom Intro video/script. The system will dynamically generate catchy text/audio hooks (e.g., *"Understand this topic in five minutes,"* *"Watch this video and you'll never need to see anything else"*).
-6. **Final Render**: Uses Remotion to export the finalized `_edited.mp4` ready for YouTube upload.
+4. **Watermark Removal**: Crops the bottom 60px of the video to remove the NotebookLM watermark, then pads back to 1080p.
+5. **Intro Splicing & Catchy Hooks**: Prepends your custom AXIOM intro video (`assets/axiom_intro.mp4`). The `transcript_enhancer.js` dynamically generates natural intro/outro scripts.
+6. **Brand Overlays**: Adds AXIOM logo watermark (top-left, 60% opacity) and subscribe button (bottom-right, 80% opacity).
+7. **Final Render**: Uses FFmpeg to export the finalized video ready for YouTube upload.
+
+#### [PENDING] Engine 1: Transcript Timestamp Generator
+- **File**: `video/engines/engine_1_transcribe.py` (NOT YET BUILT)
+- Uses Whisper to generate word-level timestamps for both original and new TTS audio
+- Critical for Engine 2's forced alignment
+
+#### [PENDING] Engine 2: Visual Slicer & Forced Alignment Sync
+- **File**: `video/engines/engine_2_sync.py` (NOT YET BUILT)
+- Maps original video timestamps to new TTS timestamps
+- Uses FFmpeg to stretch/compress video segments so visuals perfectly match new voice pacing
 
 ---
 
