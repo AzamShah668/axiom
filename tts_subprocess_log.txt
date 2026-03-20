@@ -1,7 +1,0 @@
-=== STDOUT ===
-(empty)
-
-=== STDERR ===
-(empty)
-
-=== EXIT CODE: 3221225477 ===
