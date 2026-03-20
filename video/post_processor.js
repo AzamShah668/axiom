@@ -22,6 +22,9 @@ const SUBSCRIBE_PATH = path.join(ASSETS_DIR, 'subscribe_button.png');
 
 const OUTRO_DURATION = 8;       // seconds — branded outro card
 const FADE_DURATION = 1;        // seconds — fade transition between segments
+const NOTEBOOKLM_TRIM_SECONDS = 3; // seconds to trim from end of main video
+                                    // (removes the "notebooklm.google.com" branded screen
+                                    //  that appears at the end of EVERY NotebookLM video)
 
 /**
  * Get the duration of a media file in seconds via ffprobe.
@@ -168,9 +171,13 @@ async function processVideo(syncedVideoPath, outputPath) {
 function buildFFmpegCommand(syncedVideoPath, finalOutputPath, introDuration, mainDuration) {
     const fwd = (p) => p.replace(/\\/g, '/');
 
+    // Trim the NotebookLM branded outro from the end of the main video
+    const trimmedMainDuration = Math.max(0, mainDuration - NOTEBOOKLM_TRIM_SECONDS);
+    console.log(`   ✂️  Trimming last ${NOTEBOOKLM_TRIM_SECONDS}s (NotebookLM branding): ${mainDuration.toFixed(1)}s → ${trimmedMainDuration.toFixed(1)}s`);
+
     // Compute fade-out start times
     const introFadeOutStart = Math.max(0, introDuration - FADE_DURATION);
-    const mainFadeOutStart = Math.max(0, mainDuration - FADE_DURATION);
+    const mainFadeOutStart = Math.max(0, trimmedMainDuration - FADE_DURATION);
 
     const filterLines = [
         // ══════════ VIDEO PREP ══════════
@@ -181,19 +188,23 @@ function buildFFmpegCommand(syncedVideoPath, finalOutputPath, introDuration, mai
             `setsar=1,fps=30,format=yuv420p,` +
             `fade=t=out:st=${introFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[intro_v]`,
 
-        // Main: crop bottom 60px (NotebookLM watermark), scale → 1080p, 30fps,
-        //        fade-in at start, fade-out at end
-        `[1:v]crop=in_w:in_h-60:0:0,` +
+        // Main: trim last 3s (NotebookLM branding), crop bottom 60px (watermark),
+        //        scale → 1080p, 30fps, fade-in at start, fade-out at end
+        `[1:v]trim=0:${trimmedMainDuration.toFixed(3)},setpts=PTS-STARTPTS,` +
+            `crop=in_w:in_h-60:0:0,` +
             `scale=1920:1080:force_original_aspect_ratio=decrease,` +
             `pad=1920:1080:(ow-iw)/2:(oh-ih)/2:black,` +
             `setsar=1,fps=30,format=yuv420p,` +
             `fade=t=in:st=0:d=${FADE_DURATION},` +
             `fade=t=out:st=${mainFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[main_v]`,
 
-        // Outro card: black bg + centered AXIOM logo (colorkey removes grey bg), fade-in
-        `color=c=black:s=1920x1080:d=${OUTRO_DURATION}:r=30,format=yuv420p[outro_bg]`,
-        `[2:v]scale=350:-1,format=rgba,colorkey=color=0xD6D2CC:similarity=0.25:blend=0.15[outro_logo]`,
-        `[outro_bg][outro_logo]overlay=(W-w)/2:(H-h)/2:format=auto,format=yuv420p,` +
+        // Outro card: dark gradient bg + AXIOM logo on white card for contrast, fade-in
+        `color=c=0x1A1A2E:s=1920x1080:d=${OUTRO_DURATION}:r=30,format=yuv420p[outro_bg]`,
+        // White card behind logo for contrast (450x250 white rectangle)
+        `color=c=0xF0F0F0:s=450x250:d=${OUTRO_DURATION}:r=30,format=yuv420p[logo_card]`,
+        `[outro_bg][logo_card]overlay=(W-w)/2:(H-h)/2-30[outro_with_card]`,
+        `[2:v]scale=380:-1,format=rgba[outro_logo]`,
+        `[outro_with_card][outro_logo]overlay=(W-w)/2:(H-h)/2-30:format=auto,format=yuv420p,` +
             `fade=t=in:st=0:d=${FADE_DURATION}[outro_v]`,
 
         // ══════════ AUDIO PREP ══════════
@@ -203,8 +214,9 @@ function buildFFmpegCommand(syncedVideoPath, finalOutputPath, introDuration, mai
         `[0:a]aformat=sample_rates=44100:channel_layouts=stereo,` +
             `afade=t=out:st=${introFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[intro_a]`,
 
-        // Main audio (TTS voice), fade-in at start, fade-out at end
-        `[1:a]aformat=sample_rates=44100:channel_layouts=stereo,` +
+        // Main audio (TTS voice), trimmed to match video, fade-in at start, fade-out at end
+        `[1:a]atrim=0:${trimmedMainDuration.toFixed(3)},asetpts=PTS-STARTPTS,` +
+            `aformat=sample_rates=44100:channel_layouts=stereo,` +
             `afade=t=in:st=0:d=${FADE_DURATION},` +
             `afade=t=out:st=${mainFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[main_a]`,
 
@@ -216,17 +228,17 @@ function buildFFmpegCommand(syncedVideoPath, finalOutputPath, introDuration, mai
 
         // ══════════ OVERLAYS ══════════
 
-        // AXIOM logo watermark — top-left, 60% opacity, small
-        // colorkey removes the grey/white background from the logo PNG
-        `[2:v]scale=100:-1,format=rgba,colorkey=color=0xD6D2CC:similarity=0.25:blend=0.15,colorchannelmixer=aa=0.6[wm]`,
+        // AXIOM logo watermark — top-left, 90% opacity, clearly visible
+        // colorkey removes the grey/white background, then boost brightness
+        `[2:v]scale=150:-1,format=rgba,colorkey=color=0xD6D2CC:similarity=0.25:blend=0.15,colorchannelmixer=aa=0.9[wm]`,
         `[concat_v][wm]overlay=20:20[with_wm]`,
 
-        // Subscribe button — bottom-right, drawn natively in FFmpeg (no external PNG)
-        // Solid red box with "SUBSCRIBE" text — zero transparency artifacts
-        `color=c=0xFF0000:s=170x40:d=1,format=rgba,colorchannelmixer=aa=0.85,` +
-            `drawtext=text='SUBSCRIBE':fontcolor=white:fontsize=20:` +
+        // Subscribe button — bottom-right, large and catchy
+        // Solid red box with bold "SUBSCRIBE" text — fully in-frame
+        `color=c=0xFF0000:s=240x50:d=1,format=rgba,colorchannelmixer=aa=0.9,` +
+            `drawtext=text='SUBSCRIBE':fontcolor=white:fontsize=26:` +
             `x=(w-text_w)/2:y=(h-text_h)/2[sub]`,
-        `[with_wm][sub]overlay=W-w-20:H-h-20[final_v]`,
+        `[with_wm][sub]overlay=W-w-30:H-h-60[final_v]`,
     ];
 
     const filterComplex = filterLines.join('; ');
