@@ -1,73 +1,77 @@
 // tts_generator.js
-// Integrates with the local Qwen TTS GPU Engine using the Gradio API.
-// KEY FIX: Chunks large text into ~60-word pieces to prevent the server from hanging/OOMing,
-// then stitches all WAV chunks together using FFmpeg.
+// Integrates with the Qwen3 TTS GPU server running on Google Colab.
+// SINGLE-PASS: Sends the entire transcript in ONE call to keep the voice
+// perfectly consistent. AUTOMATIC: The Colab URL is health-checked and
+// auto-renewed via colab_manager.js — no manual link updates ever needed.
 
 const { exec } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
+const { getLiveColabUrl } = require('./colab_manager');
 
 const PYTHON_EXECUTABLE = `"C:\\Users\\AZAM RIZWAN\\qwen-tts-gpu\\Scripts\\python.exe"`;
-const MAX_WORDS_PER_CHUNK = 60;
-const TTS_TIMEOUT_MS = 3 * 60 * 1000; // 3 min per chunk
+const TTS_TIMEOUT_MS = 15 * 60 * 1000; // 15 min — generous for long full-transcript runs on Colab
+
+// Your voice clone reference — the recording you made + its exact transcript
+const REF_AUDIO_PATH = "D:/notebook lm/voice/Recording (14).m4a";
+const REF_TRANSCRIPT = "Hey everyone, welcome back! Have you ever wondered how artificial intelligence is changing the way we learn? Today, we are going to explore some incredible new concepts together. It's truly fascinating, and I know you're going to love it.";
 
 /**
- * Splits text into sentence-aware chunks of approximately MAX_WORDS_PER_CHUNK words.
- */
-function chunkText(text) {
-    // Split on sentence boundaries
-    const sentences = text.match(/[^.!?]+[.!?]+[\s]*/g) || [text];
-    const chunks = [];
-    let current = '';
-    let wordCount = 0;
-
-    for (const sentence of sentences) {
-        const words = sentence.trim().split(/\s+/).length;
-        if (wordCount + words > MAX_WORDS_PER_CHUNK && current.trim()) {
-            chunks.push(current.trim());
-            current = sentence;
-            wordCount = words;
-        } else {
-            current += ' ' + sentence;
-            wordCount += words;
-        }
-    }
-    if (current.trim()) chunks.push(current.trim());
-    return chunks.filter(c => c.length > 2);
-}
-
-/**
- * Generates a single WAV chunk from text using the local Qwen TTS Gradio server.
- * @param {string} text - Text for this chunk.
- * @param {string} outputPath - Path where the .wav should be saved.
+ * Generates a WAV audio file via the Colab Gradio API in a SINGLE PASS.
+ * The full transcript is sent at once — no chunking — so the voice stays
+ * 100% consistent from the first word to the last.
+ *
+ * @param {string} transcriptText - Full text to synthesize.
+ * @param {string} outputPath     - Final .wav destination.
  * @returns {Promise<string>}
  */
-function synthesizeChunk(text, outputPath) {
-    const tempPyScriptPath = path.join(os.tmpdir(), `gradio_chunk_${Date.now()}.py`);
-    const escapedText = JSON.stringify(text);
-    // Use forward slashes in the Python script to avoid Windows backslash issues
-    const pyOutputPath = outputPath.replace(/\\/g, '/');
+async function generateTTS(transcriptText, outputPath) {
+    console.log(`\n🎙️  Starting Qwen3 TTS — Single-Pass Mode (full transcript, no chunking)...`);
+
+    // ── Auto-refresh Colab URL if expired ──
+    const GRADIO_URL = await getLiveColabUrl();
+    console.log(`📡  Colab server: ${GRADIO_URL}`);
+
+    // Sanitize control characters that may cause issues in Python string literals
+    const safeText = transcriptText
+        .replace(/\0/g, '')
+        .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, ' ')
+        .trim();
+
+    const wordCount = safeText.split(/\s+/).length;
+    console.log(`📝  Full transcript: ${wordCount} words — sending to GPU in one shot...`);
+
+    const tempPyScriptPath = path.join(os.tmpdir(), `qwen_tts_singlepass_${Date.now()}.py`);
+    const escapedText       = JSON.stringify(safeText);
+    const escapedTranscript = JSON.stringify(REF_TRANSCRIPT);
+    const pyOutputPath      = outputPath.replace(/\\/g, '/');
+    const refAudioForward   = REF_AUDIO_PATH.replace(/\\/g, '/');
 
     const pyCode = `
 import sys, shutil
-from gradio_client import Client
+from gradio_client import Client, handle_file
 
 try:
-    client = Client("http://127.0.0.1:8000/")
-    
+    client = Client("${GRADIO_URL}")
+
+    print("Sending full transcript to Colab GPU...")
+
+    # Single predict call — the entire transcript flows through the voice clone model at once
     result = client.predict(
         text=${escapedText},
-        lang_disp="English",
-        spk_disp="Dylan",
-        instruct="narrate in a natural, engaging way. speak clearly and at a steady pace.",
-        api_name="/run_instruct"
+        ref_audio_path=handle_file(r"${refAudioForward}"),
+        ref_text=${escapedTranscript},
+        language="English",
+        api_name="/predict"
     )
-    
-    audio_wav = result[0]
+
+    # result is the filepath of the generated WAV returned by gr.Audio
+    audio_wav = result
     shutil.copy(audio_wav, "${pyOutputPath}")
-    print("SUCCESS|" + audio_wav)
+    print("SUCCESS|" + str(audio_wav))
     sys.exit(0)
+
 except Exception as e:
     import traceback
     print("ERROR|" + str(e))
@@ -79,95 +83,28 @@ except Exception as e:
     const command = `${PYTHON_EXECUTABLE} "${tempPyScriptPath}"`;
 
     return new Promise((resolve, reject) => {
-        const child = exec(command, { maxBuffer: 1024 * 1024 * 10, timeout: TTS_TIMEOUT_MS }, (error, stdout, stderr) => {
-            // Keep temp script on error for debugging, cleanup on success
+        exec(command, { maxBuffer: 1024 * 1024 * 20, timeout: TTS_TIMEOUT_MS }, (error, stdout, stderr) => {
+            try { fs.unlinkSync(tempPyScriptPath); } catch (_) {}
+
             if (error) {
-                const logMsg = `ERROR:\n${error.message}\n\nSTDOUT:\n${stdout}\n\nSTDERR:\n${stderr}\n\nSCRIPT:\n${tempPyScriptPath}`;
-                fs.writeFileSync(path.join(__dirname, '..', 'js_python_error.log'), logMsg);
-                try { fs.unlinkSync(tempPyScriptPath); } catch (_) {}
-                return reject(new Error(`TTS chunk failed: ${error.message}\nSTDOUT: ${stdout}\nSTDERR: ${stderr}`));
+                const logMsg = `ERROR:\n${error.message}\n\nSTDOUT:\n${stdout}\n\nSTDERR:\n${stderr}`;
+                fs.writeFileSync(path.join(__dirname, '..', 'logs', 'tts_error.log'), logMsg);
+                return reject(new Error(`TTS generation failed: ${error.message}\nSTDOUT: ${stdout}\nSTDERR: ${stderr}`));
             }
             if (!fs.existsSync(outputPath)) {
-                return reject(new Error(`TTS chunk returned success but output missing. STDOUT: ${stdout}`));
+                return reject(new Error(`TTS returned success but output WAV is missing. STDOUT: ${stdout}`));
             }
+
+            console.log(`✅  Full audio saved to: ${outputPath}`);
             resolve(outputPath);
         });
     });
-}
-
-/**
- * Stitches multiple WAV files into one using FFmpeg concat demuxer.
- * @param {string[]} wavPaths - List of .wav file paths to concatenate.
- * @param {string} outputPath - Final output .wav path.
- * @returns {Promise<string>}
- */
-function stitchWavFiles(wavPaths, outputPath) {
-    const listFile = path.join(os.tmpdir(), `ffmpeg_concat_${Date.now()}.txt`);
-    const content = wavPaths.map(p => `file '${p.replace(/\\/g, '/')}'`).join('\n');
-    fs.writeFileSync(listFile, content, 'utf8');
-
-    const command = `ffmpeg -y -f concat -safe 0 -i "${listFile}" -c copy "${outputPath}"`;
-
-    return new Promise((resolve, reject) => {
-        exec(command, { timeout: 60000 }, (error, stdout, stderr) => {
-            try { fs.unlinkSync(listFile); } catch (_) {}
-            if (error) {
-                return reject(new Error(`FFmpeg stitch failed: ${error.message}\n${stderr}`));
-            }
-            resolve(outputPath);
-        });
-    });
-}
-
-/**
- * Main entry point: Chunks text, synthesizes each chunk, stitches output.
- * @param {string} transcriptText - Full text to synthesize.
- * @param {string} outputPath - Final .wav destination.
- * @returns {Promise<string>}
- */
-async function generateTTS(transcriptText, outputPath) {
-    console.log(`\n🎙️ Starting Qwen TTS with chunked synthesis...`);
-
-    // Sanitize
-    const safeText = transcriptText
-        .replace(/\0/g, '')
-        .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, ' ');
-
-    const chunks = chunkText(safeText);
-    console.log(`📦 Split into ${chunks.length} chunks (max ${MAX_WORDS_PER_CHUNK} words/chunk)`);
-
-    const tempDir = path.join(os.tmpdir(), `tts_chunks_${Date.now()}`);
-    fs.mkdirSync(tempDir, { recursive: true });
-
-    const chunkPaths = [];
-    for (let i = 0; i < chunks.length; i++) {
-        const chunkPath = path.join(tempDir, `chunk_${String(i).padStart(3, '0')}.wav`);
-        const wordCount = chunks[i].split(/\s+/).length;
-        console.log(`  🔊 Chunk ${i + 1}/${chunks.length} (~${wordCount} words)...`);
-        await synthesizeChunk(chunks[i], chunkPath);
-        chunkPaths.push(chunkPath);
-        console.log(`  ✅ Chunk ${i + 1} done.`);
-    }
-
-    if (chunkPaths.length === 1) {
-        fs.copyFileSync(chunkPaths[0], outputPath);
-    } else {
-        console.log(`🎵 Stitching ${chunkPaths.length} audio chunks...`);
-        await stitchWavFiles(chunkPaths, outputPath);
-    }
-
-    // Cleanup temp chunks
-    try { chunkPaths.forEach(p => fs.unlinkSync(p)); } catch (_) {}
-    try { fs.rmdirSync(tempDir); } catch (_) {}
-
-    console.log(`✅ Full TTS audio saved to: ${outputPath}`);
-    return outputPath;
 }
 
 if (require.main === module) {
     const args = process.argv.slice(2);
     if (args.length < 2) {
-        console.log("Usage: node tts_generator.js <\"Text To Speak\"> <OutputWavPath>");
+        console.log("Usage: node tts_generator.js <\"Full Text To Speak\"> <OutputWavPath>");
     } else {
         generateTTS(args[0], args[1]).catch(err => {
             console.error(err.message);

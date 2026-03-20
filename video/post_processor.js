@@ -8,11 +8,8 @@
 const { exec } = require('child_process');
 const path = require('path');
 const fs = require('fs');
-require('dotenv').config({ path: path.join(__dirname, '../config/.env') });
 const { generateTTS } = require('./tts_generator');
 const { enhanceTranscript } = require('../scripts/transcript_enhancer');
-const { generateThumbnail } = require('../scripts/thumbnail_generator');
-const { generateSEOMetadata } = require('../scripts/seo_generator');
 
 const ASSETS_DIR = path.join(__dirname, '../assets');
 const INTRO_VIDEO = path.join(ASSETS_DIR, 'axiom_intro.mp4');     // Pre-rendered Remotion intro (7s)
@@ -71,22 +68,9 @@ async function processVideo(rawVideoPath, rawTranscript, topicName, subjectName)
     await generateTTS(enhanced.fullScript, audioPath);
 
     // ==========================================
-    // STEP 3: Generate SEO & Thumbnail
+    // STEP 3: FFmpeg Complex Pipeline
     // ==========================================
-    console.log(`\n--- Step 3: Generating Viral Metadata & Thumbnail ---`);
-    const seo = generateSEOMetadata(topicName, subjectName, topicName); // Fixed: using topic as chapter name for now
-    const thumbPath = await generateThumbnail(topicName, subjectName);
-    
-    const metadataPath = path.join(baseDir, 'metadata.json');
-    fs.writeFileSync(metadataPath, JSON.stringify(seo, null, 2), 'utf8');
-    console.log(`✅ SEO Title: ${seo.title}`);
-    console.log(`✅ Metadata saved to: ${metadataPath}`);
-    console.log(`✅ Thumbnail ready at: ${thumbPath}`);
-
-    // ==========================================
-    // STEP 4: FFmpeg Complex Pipeline
-    // ==========================================
-    console.log(`\n--- Step 4: FFmpeg Video Assembly ---`);
+    console.log(`\n--- Step 3: FFmpeg Video Assembly ---`);
 
     const introDuration = 7; // seconds — matches the pre-rendered Remotion intro
     const outroDuration = enhanced.outroDurationSec;
@@ -164,7 +148,7 @@ if (require.main === module) {
         console.log("Usage: node post_processor.js <VideoPath> <TranscriptFile> <TopicName> <SubjectName>");
     } else {
         const transcript = fs.readFileSync(args[1], 'utf8');
-        processVideo(path.resolve(args[0]), transcript, args[2], args[3]).catch(console.error);
+        processVideo(args[0], transcript, args[2], args[3]).catch(console.error);
     }
 }
 

@@ -27,7 +27,9 @@
 - [x] Execute `setup-notion-dbs.js` with user's Notion Token
 - [x] Update `agent.md` to reflect the new post-processing flow using NotebookLM sub-agents.
 - [ ] Refactor `youtube_scraper.js` to return direct video URLs instead of transcripts
-- [x] Implement TTS audio sync and Remotion video post-processing (Intro, Watermark removal, Outro trimming)
+- [x] Implement Remotion video post-processing (Intro splicing, Watermark removal, Outro trimming)
+- [ ] Build Engine 1: Transcript Timestamp Generator (Whisper-based)
+- [ ] Build Engine 2: Visual Slicer & Forced Alignment Sync for custom voice lengths
 
 ## Phase 3: Notion Database Setup & Refinement
 - [x] Write `scripts/setup-notion-dbs.js` setup script
