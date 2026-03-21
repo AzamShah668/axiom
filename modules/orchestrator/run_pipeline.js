@@ -36,6 +36,8 @@ const { generateIntroVideo, generateOutroVideo } = require('../../video/intro_ge
 let uploadToYouTube = null;
 try { uploadToYouTube = require('../uploader/youtube_uploader').uploadToYouTube; } catch (_) {}
 
+const slack = require('../../tools/slack_notifier');
+
 const PYTHON_EXE = 'C:\\Users\\AZAM RIZWAN\\qwen-tts-gpu\\Scripts\\python.exe';
 
 const ROOT      = path.join(__dirname, '../..');
@@ -365,6 +367,7 @@ async function runFullPipeline({ topic, subject, chapter, notionPageId, notionDb
         // ══════════════════════════════════════════════════════════════════════
         if (uploadToYouTube) {
             console.log('\n--- STEP 7: YouTube Upload ---');
+            await slack.notify(`🎬 *Now uploading:* "${seo.title}"`);
             const uploadedUrl = await uploadToYouTube(finalVideoPath, {
                 title: seo.title,
                 description: seo.description,
@@ -375,6 +378,7 @@ async function runFullPipeline({ topic, subject, chapter, notionPageId, notionDb
             });
             console.log(`   Published: ${uploadedUrl}`);
             if (notionPageId) await markComplete(notionPageId, uploadedUrl);
+            await slack.notify(`✅ *Uploaded!* "${seo.title}"\n${uploadedUrl}`);
             console.log('\n🎉 Pipeline Complete!');
             return uploadedUrl;
         } else {
@@ -412,6 +416,7 @@ async function runFullPipeline({ topic, subject, chapter, notionPageId, notionDb
         } catch (_) {}
 
         if (notionPageId) await markFailed(notionPageId);
+        await slack.notify(`❌ *Pipeline failed* [${category}]: ${msg}`);
         throw err;
     }
 }

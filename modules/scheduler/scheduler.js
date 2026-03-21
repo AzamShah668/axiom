@@ -14,6 +14,7 @@ const path = require('path');
 const fs   = require('fs');
 
 const { startFromNotion } = require('../orchestrator/run_pipeline');
+const slack = require('../../tools/slack_notifier');
 
 const STATE_FILE = path.join(__dirname, '../../config/scheduler_state.json');
 
@@ -87,14 +88,18 @@ function startCron(stream, uploadHourIST) {
         saveState(state);
 
         log(`Running daily pipeline — stream: ${stream}`);
+        await slack.cancelReminder();
+        await slack.notify(`🚀 *AXIOM Agent* is starting today's upload (stream: ${stream})...`);
 
         try {
             await startFromNotion(stream);
             state.lastStatus = 'success';
             log('Pipeline completed successfully');
+            await slack.notify(`✅ *Video uploaded!* Today's AXIOM video is live on YouTube.`);
         } catch (err) {
             state.lastStatus = `failed: ${err.message}`;
             log(`Pipeline failed: ${err.message}`);
+            await slack.notify(`❌ *Pipeline failed:* ${err.message}`);
         }
 
         saveState(state);
@@ -166,6 +171,11 @@ function init(onLog) {
     const didRunToday     = state.lastRun && isSameDayIST(state.lastRun, now.toISOString());
     const scheduledPassed = now > scheduledTodayUTC;
 
+    // Schedule today's reminder whether or not we're doing a catch-up
+    if (!didRunToday) {
+        slack.scheduleReminder(state.uploadHourIST).catch(() => {});
+    }
+
     if (!didRunToday && scheduledPassed) {
         log('Missed upload detected — catch-up run will start in 60 seconds...');
         setTimeout(async () => {
@@ -182,14 +192,18 @@ function init(onLog) {
             s.nextRun    = getNextRunISO(s.uploadHourIST);
             saveState(s);
             log(`Running catch-up pipeline — stream: ${s.stream}`);
+            await slack.cancelReminder();
+            await slack.notify(`🔄 *AXIOM catch-up:* Missed upload detected — starting now (stream: ${s.stream})...`);
 
             try {
                 await startFromNotion(s.stream);
                 s.lastStatus = 'success';
                 log('Catch-up pipeline completed successfully');
+                await slack.notify(`✅ *Catch-up complete!* Today's video is now live on YouTube.`);
             } catch (err) {
                 s.lastStatus = `failed: ${err.message}`;
                 log(`Catch-up pipeline failed: ${err.message}`);
+                await slack.notify(`❌ *Catch-up failed:* ${err.message}`);
             }
             saveState(s);
         }, 60 * 1000);
