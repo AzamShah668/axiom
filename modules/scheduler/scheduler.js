@@ -137,13 +137,62 @@ function getStatus() {
     };
 }
 
+/** Returns true if two ISO timestamps fall on the same calendar day in IST (UTC+5:30). */
+function isSameDayIST(isoA, isoB) {
+    const toIST = d => new Date(new Date(d).getTime() + (5 * 60 + 30) * 60000);
+    const a = toIST(isoA);
+    const b = toIST(isoB);
+    return a.getUTCFullYear() === b.getUTCFullYear() &&
+           a.getUTCMonth()    === b.getUTCMonth()    &&
+           a.getUTCDate()     === b.getUTCDate();
+}
+
 /** Call once on server startup to resume if Auto-Pilot was enabled. */
 function init(onLog) {
     logFn = onLog || null;
     const state = loadState();
-    if (state.enabled) {
-        startCron(state.stream, state.uploadHourIST);
-        log(`Resumed — next run: ${formatIST(getNextRunISO(state.uploadHourIST))}`);
+    if (!state.enabled) return;
+
+    startCron(state.stream, state.uploadHourIST);
+    log(`Resumed — next run: ${formatIST(getNextRunISO(state.uploadHourIST))}`);
+
+    // ── Catch-up: run immediately if today's upload was missed ──────────────
+    // e.g. scheduled for 4 PM IST but laptop was closed; user opens at 6 PM.
+    const now = new Date();
+    const { hour: utcHour, minute: utcMin } = istToUtc(state.uploadHourIST);
+    const scheduledTodayUTC = new Date(now);
+    scheduledTodayUTC.setUTCHours(utcHour, utcMin, 0, 0);
+
+    const didRunToday     = state.lastRun && isSameDayIST(state.lastRun, now.toISOString());
+    const scheduledPassed = now > scheduledTodayUTC;
+
+    if (!didRunToday && scheduledPassed) {
+        log('Missed upload detected — catch-up run will start in 60 seconds...');
+        setTimeout(async () => {
+            // Re-read state: guard against disable between startup and this callback
+            const s = loadState();
+            if (!s.enabled) { log('Catch-up cancelled — Auto-Pilot was disabled.'); return; }
+            if (s.lastRun && isSameDayIST(s.lastRun, new Date().toISOString())) {
+                log('Catch-up cancelled — already uploaded today.');
+                return;
+            }
+
+            s.lastRun    = new Date().toISOString();
+            s.lastStatus = 'running';
+            s.nextRun    = getNextRunISO(s.uploadHourIST);
+            saveState(s);
+            log(`Running catch-up pipeline — stream: ${s.stream}`);
+
+            try {
+                await startFromNotion(s.stream);
+                s.lastStatus = 'success';
+                log('Catch-up pipeline completed successfully');
+            } catch (err) {
+                s.lastStatus = `failed: ${err.message}`;
+                log(`Catch-up pipeline failed: ${err.message}`);
+            }
+            saveState(s);
+        }, 60 * 1000);
     }
 }
 
