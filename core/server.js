@@ -390,6 +390,13 @@ app.get('/api/analytics/youtube', async (req, res) => {
     }
 });
 
+// Serve the built React dashboard at localhost:3001
+const DASHBOARD_DIST = path.join(__dirname, '../dashboard/dist');
+if (fs.existsSync(DASHBOARD_DIST)) {
+    app.use(express.static(DASHBOARD_DIST));
+    app.use((_req, res) => res.sendFile(path.join(DASHBOARD_DIST, 'index.html')));
+}
+
 app.listen(PORT, () => {
     console.log(`EduContent Backend API running on http://localhost:${PORT}`);
     // Resume Auto-Pilot scheduler if it was enabled before server restart
