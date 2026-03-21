@@ -1,5 +1,24 @@
 import React, { useState, useEffect } from 'react';
 
+// Live countdown to next scheduled run
+function useCountdown(targetISO) {
+  const [label, setLabel] = useState('—');
+  useEffect(() => {
+    if (!targetISO) { setLabel('—'); return; }
+    const tick = () => {
+      const diff = new Date(targetISO) - Date.now();
+      if (diff <= 0) { setLabel('Now'); return; }
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      setLabel(`${h}h ${m}m`);
+    };
+    tick();
+    const id = setInterval(tick, 30000);
+    return () => clearInterval(id);
+  }, [targetISO]);
+  return label;
+}
+
 const Dashboard = () => {
   const [queue, setQueue] = useState([]);
   const [stats, setStats] = useState({
@@ -16,17 +35,26 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [serverError, setServerError] = useState(null);
 
+  // Auto-Pilot
+  const [autoPilot, setAutoPilot] = useState(null);
+  const [apStream, setApStream] = useState('BTech');
+  const [apHour, setApHour] = useState(18);
+  const countdown = useCountdown(autoPilot?.nextRun);
+
   const fetchDashboardData = async () => {
     try {
       const statsRes = await fetch('http://localhost:3001/api/stats');
-      if (statsRes.ok) {
-        const statsData = await statsRes.json();
-        setStats(statsData);
-      }
+      if (statsRes.ok) setStats(await statsRes.json());
+
       const queueRes = await fetch('http://localhost:3001/api/queue');
-      if (queueRes.ok) {
-        const queueData = await queueRes.json();
-        setQueue(queueData);
+      if (queueRes.ok) setQueue(await queueRes.json());
+
+      const apRes = await fetch('http://localhost:3001/api/scheduler/status');
+      if (apRes.ok) {
+        const apData = await apRes.json();
+        setAutoPilot(apData);
+        setApStream(apData.stream || 'BTech');
+        setApHour(apData.uploadHourIST ?? 18);
       }
       setServerError(null);
     } catch (error) {
@@ -104,6 +132,21 @@ const Dashboard = () => {
       console.error("Failed to publish", error);
       setPublishingTopicId(null);
     }
+  };
+
+  // ── Auto-Pilot: Enable / Disable ──────────────────────────────────
+  const enableAutoPilot = async () => {
+    const res = await fetch('http://localhost:3001/api/scheduler/enable', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ stream: apStream, uploadHourIST: apHour })
+    });
+    if (res.ok) setAutoPilot(await res.json());
+  };
+
+  const disableAutoPilot = async () => {
+    const res = await fetch('http://localhost:3001/api/scheduler/disable', { method: 'POST' });
+    if (res.ok) setAutoPilot(await res.json());
   };
 
   if (loading) {
@@ -218,7 +261,7 @@ const Dashboard = () => {
             <option value="BTech">BTech</option>
             <option value="MBBS">MBBS</option>
           </select>
-          <button 
+          <button
             className={`btn btn-primary btn-large ${isProcessing ? 'pulse' : ''}`}
             onClick={startPipeline}
             disabled={isProcessing}
@@ -226,6 +269,74 @@ const Dashboard = () => {
             {isProcessing ? '⏳ Pipeline Running...' : '🚀 Publish'}
           </button>
         </div>
+      </div>
+
+      {/* ── Auto-Pilot Panel ──────────────────────────────────── */}
+      <div className="glass-panel" style={{ borderLeft: autoPilot?.enabled ? '4px solid var(--success)' : '4px solid rgba(255,255,255,0.1)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.2rem' }}>
+          <h2 style={{ margin: 0 }}>🤖 Auto-Pilot</h2>
+          <span style={{
+            padding: '4px 14px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 700,
+            background: autoPilot?.enabled ? 'rgba(16,185,129,0.2)' : 'rgba(255,255,255,0.07)',
+            color: autoPilot?.enabled ? 'var(--success)' : '#94a3b8',
+            border: `1px solid ${autoPilot?.enabled ? 'var(--success)' : 'rgba(255,255,255,0.1)'}`,
+          }}>
+            {autoPilot?.enabled ? 'ENABLED' : 'DISABLED'}
+          </span>
+        </div>
+
+        {autoPilot?.enabled ? (
+          <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
+            {/* Status cards */}
+            <div style={{ flex: 1, minWidth: '160px' }}>
+              <p style={{ margin: '0 0 4px', fontSize: '0.75rem', textTransform: 'uppercase', color: '#94a3b8' }}>Next Upload In</p>
+              <p style={{ margin: 0, fontSize: '2rem', fontWeight: 700, color: 'var(--success)' }}>{countdown}</p>
+              <p style={{ margin: '4px 0 0', fontSize: '0.8rem', color: '#64748b' }}>{autoPilot.nextRunFormatted || '—'}</p>
+            </div>
+            <div style={{ flex: 1, minWidth: '160px' }}>
+              <p style={{ margin: '0 0 4px', fontSize: '0.75rem', textTransform: 'uppercase', color: '#94a3b8' }}>Schedule</p>
+              <p style={{ margin: 0, fontSize: '1.1rem', fontWeight: 600 }}>{autoPilot.uploadHourIST}:00 IST · {autoPilot.stream}</p>
+            </div>
+            <div style={{ flex: 1, minWidth: '160px' }}>
+              <p style={{ margin: '0 0 4px', fontSize: '0.75rem', textTransform: 'uppercase', color: '#94a3b8' }}>Last Run</p>
+              <p style={{ margin: 0, fontSize: '0.95rem' }}>{autoPilot.lastRunFormatted || 'Never'}</p>
+              {autoPilot.lastStatus && (
+                <p style={{ margin: '4px 0 0', fontSize: '0.8rem', color: autoPilot.lastStatus === 'success' ? 'var(--success)' : '#f59e0b' }}>
+                  {autoPilot.lastStatus === 'success' ? '✓ Success' : autoPilot.lastStatus}
+                </p>
+              )}
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <button className="btn" onClick={disableAutoPilot}
+                style={{ background: 'rgba(239,68,68,0.15)', color: '#f87171', border: '1px solid rgba(239,68,68,0.3)' }}>
+                Disable
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <p style={{ flex: 1, margin: 0, color: '#94a3b8', minWidth: '200px' }}>
+              Publish one video per day automatically. The pipeline picks the next Pending topic from Notion, generates the full video, and uploads to YouTube — no manual action needed.
+            </p>
+            <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap' }}>
+              <select className="stream-select" value={apStream} onChange={e => setApStream(e.target.value)}>
+                <option value="BTech">BTech</option>
+                <option value="MBBS">MBBS</option>
+              </select>
+              <select className="stream-select" value={apHour} onChange={e => setApHour(Number(e.target.value))}
+                title="Upload time in IST">
+                {Array.from({ length: 24 }, (_, h) => (
+                  <option key={h} value={h}>
+                    {h === 0 ? '12:00 AM' : h < 12 ? `${h}:00 AM` : h === 12 ? '12:00 PM' : `${h - 12}:00 PM`} IST
+                  </option>
+                ))}
+              </select>
+              <button className="btn btn-primary" onClick={enableAutoPilot}>
+                Enable Auto-Pilot
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
