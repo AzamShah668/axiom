@@ -1,100 +1,119 @@
 // post_processor.js
-// Full video post-production pipeline — runs AFTER Engine 2 has produced the synced video.
+// Full video post-production pipeline — 3-Track Assembly Model.
 //
-// What this does:
-// 1. Takes the Engine 2 output (synced raw video + TTS audio)
-// 2. Prepends the AXIOM intro (7s brand animation)
-// 3. Appends the AXIOM outro card (black + logo, ~8s)
-// 4. Adds fade transitions between intro→main and main→outro (monetization-safe)
-// 5. Crops the NotebookLM watermark (bottom 60px)
-// 6. Overlays AXIOM logo (top-left) and subscribe button (bottom-right)
-// 7. Scales everything to 1920x1080 @ 30fps
-// 8. Outputs a single final MP4
+// Takes 3 independently-synced tracks and assembles the final YouTube-ready video:
+//
+// Track 1: INTRO (dynamic video + TTS audio)
+// Track 2: MAIN  (per-slide synced NotebookLM video + TTS audio)
+// Track 3: OUTRO (dynamic video + TTS audio)
+//
+// Then applies:
+// - Fade transitions between tracks (1s opacity fades)
+// - NotebookLM watermark crop (bottom 60px) on main track
+// - AXIOM logo overlay (top-left)
+// - Subscribe button overlay (bottom-right)
+// - Scale to 1920x1080 @ 30fps
+// - H.264/AAC output
 
 const { exec, execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
 const ASSETS_DIR = path.join(__dirname, '..', 'assets');
-const INTRO_VIDEO = path.join(ASSETS_DIR, 'axiom_intro.mp4');
 const LOGO_PATH = path.join(ASSETS_DIR, 'axiom_logo.png');
-const SUBSCRIBE_PATH = path.join(ASSETS_DIR, 'subscribe_button.png');
+const FONT_PATH = 'C\\:/Windows/Fonts/arialbd.ttf';
 
-const OUTRO_DURATION = 8;       // seconds — branded outro card
-const FADE_DURATION = 1;        // seconds — fade transition between segments
-// NOTE: NotebookLM branding trim (last 3s) is handled in Engine 2 (engine_2_sync.py)
-//       BEFORE audio sync, so no audio is lost.
+const FADE_DURATION = 1;  // seconds — fade transition between segments
 
 /**
  * Get the duration of a media file in seconds via ffprobe.
  */
 function probeDuration(filePath) {
     const result = execSync(
-        `ffprobe -v quiet -show_entries format=duration -of csv=p=0 "${filePath}"`,
+        `ffprobe -v quiet -show_entries format=duration -of csv=p=0 "${filePath.replace(/\\/g, '/')}"`,
         { encoding: 'utf8' }
     );
     return parseFloat(result.trim());
 }
 
 /**
- * Post-processes the Engine 2 synced video into the final YouTube-ready output.
+ * 3-Track Assembly: Merge intro, main, and outro into final branded video.
  *
  * VISUAL TIMELINE:
- * |── AXIOM Intro (7s) ──|─ fade ─|── Main Video ──|─ fade ─|── Outro (8s) ──|
+ * |── Intro (dynamic) ──|─ fade ─|── Main (synced) ──|─ fade ─|── Outro (dynamic) ──|
  *
- * OVERLAYS (across entire output):
- * - AXIOM logo: top-LEFT, 60% opacity
- * - Subscribe button: bottom-RIGHT, 80% opacity
+ * OVERLAYS (across main + outro only):
+ * - AXIOM logo: top-left, 90% opacity
+ * - Subscribe button: bottom-right (red box with text)
  *
- * TRANSITIONS:
- * - Fade-out last 1s of intro + fade-in first 1s of main (dissolve via concat)
- * - Fade-out last 1s of main + fade-in first 1s of outro (dissolve via concat)
- * These are simple opacity fades — YouTube monetization safe (no flash/strobe).
- *
- * @param {string} syncedVideoPath - Path to the Engine 2 output (synced video + TTS audio)
- * @param {string} [outputPath]    - Optional custom output path
- * @returns {Promise<string>}      - Path to the final branded video
+ * @param {object} opts
+ * @param {string} opts.introVideo  - Dynamic intro video (from intro_generator)
+ * @param {string} opts.introAudio  - Intro TTS WAV
+ * @param {string} opts.mainVideo   - Per-slide synced video (from engine_2, already has main TTS audio)
+ * @param {string} opts.outroVideo  - Dynamic outro video (from intro_generator)
+ * @param {string} opts.outroAudio  - Outro TTS WAV
+ * @param {string} [opts.outputPath] - Final output path
+ * @returns {Promise<string>} - Path to final branded video
  */
-async function processVideo(syncedVideoPath, outputPath) {
+async function processVideo(opts) {
+    const { introVideo, introAudio, mainVideo, outroVideo, outroAudio, outputPath } = opts;
+
     console.log(`\n🎬 ═══════════════════════════════════════════════════════════`);
-    console.log(`   AXIOM Post-Processor — Full Branding Pipeline`);
+    console.log(`   AXIOM Post-Processor — 3-Track Assembly`);
     console.log(`   ═══════════════════════════════════════════════════════════\n`);
 
-    // ── Validate all inputs ──
+    // Validate all inputs
     const requiredFiles = {
-        'Synced video': syncedVideoPath,
-        'Intro video': INTRO_VIDEO,
-        'AXIOM logo': LOGO_PATH,
-        'Subscribe button': SUBSCRIBE_PATH,
+        'Intro video': introVideo,
+        'Intro audio': introAudio,
+        'Main video': mainVideo,
+        'Outro video': outroVideo,
+        'Outro audio': outroAudio,
     };
     for (const [label, fp] of Object.entries(requiredFiles)) {
         if (!fs.existsSync(fp)) {
-            throw new Error(`❌ ${label} not found: ${fp}`);
+            throw new Error(`${label} not found: ${fp}`);
         }
     }
 
-    // ── Probe durations ──
-    const introDuration = probeDuration(INTRO_VIDEO);
-    const mainDuration = probeDuration(syncedVideoPath);
+    // Probe durations
+    const introDuration = probeDuration(introVideo);
+    const mainDuration = probeDuration(mainVideo);
+    const outroDuration = probeDuration(outroVideo);
 
-    console.log(`   📐 Probed durations:`);
+    console.log(`   Probed durations:`);
     console.log(`      Intro: ${introDuration.toFixed(1)}s`);
     console.log(`      Main:  ${mainDuration.toFixed(1)}s`);
-    console.log(`      Outro: ${OUTRO_DURATION}s`);
+    console.log(`      Outro: ${outroDuration.toFixed(1)}s`);
     console.log(`      Fade:  ${FADE_DURATION}s each transition\n`);
 
-    const baseDir = path.dirname(syncedVideoPath);
-    const baseName = path.basename(syncedVideoPath, path.extname(syncedVideoPath));
+    const baseDir = path.dirname(mainVideo);
+    const baseName = path.basename(mainVideo, path.extname(mainVideo));
     const finalOutputPath = outputPath || path.join(baseDir, `${baseName}_branded.mp4`);
 
-    console.log(`   📥 Input:     ${syncedVideoPath}`);
-    console.log(`   📤 Output:    ${finalOutputPath}\n`);
+    console.log(`   Input main: ${mainVideo}`);
+    console.log(`   Output:     ${finalOutputPath}\n`);
 
-    // ── Build & run FFmpeg ──
-    const ffmpegCmd = buildFFmpegCommand(
-        syncedVideoPath, finalOutputPath,
-        introDuration, mainDuration
-    );
+    // Probe the audio stream duration of the main video separately —
+    // Engine 2 may pad the video container beyond the actual TTS audio length.
+    let mainAudioDuration = mainDuration;
+    try {
+        const raw = execSync(
+            `ffprobe -v quiet -show_entries stream=duration -select_streams a:0 -of csv=p=0 "${mainVideo.replace(/\\/g, '/')}"`,
+            { encoding: 'utf8' }
+        ).trim().split('\n')[0];
+        const parsed = parseFloat(raw);
+        if (!isNaN(parsed) && parsed > 0) mainAudioDuration = parsed;
+    } catch (_) {}
+
+    if (mainAudioDuration < mainDuration - 0.5) {
+        console.log(`   Main audio shorter than video: ${mainAudioDuration.toFixed(1)}s < ${mainDuration.toFixed(1)}s — trimming video to audio`);
+    }
+
+    const ffmpegCmd = buildFFmpegCommand({
+        introVideo, introAudio, mainVideo, outroVideo, outroAudio,
+        finalOutputPath, introDuration, mainDuration, outroDuration, mainAudioDuration
+    });
 
     // Save command for debugging
     const cmdLogPath = path.join(__dirname, '..', 'logs', 'post_processor_cmd.txt');
@@ -104,14 +123,14 @@ async function processVideo(syncedVideoPath, outputPath) {
     } catch (_) {}
 
     return new Promise((resolve, reject) => {
-        console.log(`   🛠️  Running FFmpeg pipeline...\n`);
+        console.log(`   Running FFmpeg 3-track assembly...\n`);
 
         const child = exec(ffmpegCmd, {
             maxBuffer: 1024 * 1024 * 200,
-            timeout: 15 * 60 * 1000   // 15 min max
+            timeout: 15 * 60 * 1000
         }, (error, stdout, stderr) => {
             if (error) {
-                console.error(`\n❌ FFmpeg Post-Processing FAILED`);
+                console.error(`\n   FFmpeg Post-Processing FAILED`);
                 console.error(`   Error: ${error.message}`);
                 console.error(`   Last stderr:\n${stderr.slice(-1000)}`);
                 const logPath = path.join(__dirname, '..', 'logs', 'post_processor_error.log');
@@ -119,7 +138,6 @@ async function processVideo(syncedVideoPath, outputPath) {
                     fs.writeFileSync(logPath,
                         `COMMAND:\n${ffmpegCmd}\n\nERROR:\n${error.message}\n\nSTDOUT:\n${stdout}\n\nSTDERR:\n${stderr}`
                     );
-                    console.error(`   Full log: ${logPath}`);
                 } catch (_) {}
                 return reject(error);
             }
@@ -132,7 +150,7 @@ async function processVideo(syncedVideoPath, outputPath) {
             let finalDur = 0;
             try { finalDur = probeDuration(finalOutputPath); } catch (_) {}
 
-            console.log(`\n   ✅ ═══════════════════════════════════════════════════════`);
+            console.log(`\n   ═══════════════════════════════════════════════════════`);
             console.log(`      AXIOM Post-Processing COMPLETE`);
             console.log(`      Output:   ${finalOutputPath}`);
             console.log(`      Duration: ${finalDur.toFixed(1)}s`);
@@ -142,105 +160,127 @@ async function processVideo(syncedVideoPath, outputPath) {
             resolve(finalOutputPath);
         });
 
-        // Stream progress
         if (child.stderr) {
             child.stderr.on('data', (data) => {
                 const line = data.toString().trim();
                 if (line.includes('frame=') || line.includes('time=')) {
-                    process.stdout.write(`\r   ⏳ ${line.substring(0, 120)}`);
+                    process.stdout.write(`\r   ${line.substring(0, 120)}`);
                 }
             });
         }
     });
 }
 
-
 /**
- * Builds the full FFmpeg command.
+ * Builds the FFmpeg filter graph for 3-track assembly.
  *
- * Audio normalization strategy:
- *   All audio streams are resampled to 44100 Hz stereo BEFORE concat,
- *   so FFmpeg concat doesn't choke on mismatched formats.
- *
- * Transition strategy:
- *   Fade-out end of segment N + fade-in start of segment N+1.
- *   Then concat. This is visually identical to a crossfade but
- *   doesn't require xfade (which needs a known offset).
+ * Inputs:
+ *   0: intro video
+ *   1: intro audio
+ *   2: main video (already has audio from Engine 2)
+ *   3: outro video
+ *   4: outro audio
+ *   5: AXIOM logo PNG
  */
-function buildFFmpegCommand(syncedVideoPath, finalOutputPath, introDuration, mainDuration) {
+function buildFFmpegCommand(opts) {
+    const {
+        introVideo, introAudio, mainVideo, outroVideo, outroAudio,
+        finalOutputPath, introDuration, mainAudioDuration
+    } = opts;
+
     const fwd = (p) => p.replace(/\\/g, '/');
 
-    // Compute fade-out start times
-    const introFadeOutStart = Math.max(0, introDuration - FADE_DURATION);
-    const mainFadeOutStart = Math.max(0, mainDuration - FADE_DURATION);
+    const introFadeOut = Math.max(0, introDuration - FADE_DURATION);
+    // Use audio duration (not video duration) so fade-out aligns with actual speech end
+    const mainFadeOut = Math.max(0, mainAudioDuration - FADE_DURATION);
+
+    const hasLogo = fs.existsSync(LOGO_PATH);
 
     const filterLines = [
         // ══════════ VIDEO PREP ══════════
 
-        // Intro: scale → 1080p, 30fps, fade-out at end
+        // Intro: scale to 1080p, fade-out at end
         `[0:v]scale=1920:1080:force_original_aspect_ratio=decrease,` +
             `pad=1920:1080:(ow-iw)/2:(oh-ih)/2:black,` +
             `setsar=1,fps=30,format=yuv420p,` +
-            `fade=t=out:st=${introFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[intro_v]`,
+            `fade=t=out:st=${introFadeOut.toFixed(3)}:d=${FADE_DURATION}[intro_v]`,
 
-        // Main: crop bottom 60px (NotebookLM watermark), scale → 1080p, 30fps,
+        // Main: trim to audio duration (Engine 2 may pad video beyond TTS),
+        //        crop bottom 60px (NotebookLM watermark), scale to 1080p,
         //        fade-in at start, fade-out at end
-        // NOTE: NotebookLM branding already trimmed in Engine 2
-        `[1:v]crop=in_w:in_h-60:0:0,` +
+        `[2:v]trim=end=${mainAudioDuration.toFixed(3)},setpts=PTS-STARTPTS,` +
+        `crop=in_w:in_h-60:0:0,` +
             `scale=1920:1080:force_original_aspect_ratio=decrease,` +
             `pad=1920:1080:(ow-iw)/2:(oh-ih)/2:black,` +
             `setsar=1,fps=30,format=yuv420p,` +
             `fade=t=in:st=0:d=${FADE_DURATION},` +
-            `fade=t=out:st=${mainFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[main_v]`,
+            `fade=t=out:st=${mainFadeOut.toFixed(3)}:d=${FADE_DURATION}[main_v]`,
 
-        // Outro card: dark gradient bg + AXIOM logo on white card for contrast, fade-in
-        `color=c=0x1A1A2E:s=1920x1080:d=${OUTRO_DURATION}:r=30,format=yuv420p[outro_bg]`,
-        // White card behind logo for contrast (450x250 white rectangle)
-        `color=c=0xF0F0F0:s=450x250:d=${OUTRO_DURATION}:r=30,format=yuv420p[logo_card]`,
-        `[outro_bg][logo_card]overlay=(W-w)/2:(H-h)/2-30[outro_with_card]`,
-        `[2:v]scale=380:-1,format=rgba[outro_logo]`,
-        `[outro_with_card][outro_logo]overlay=(W-w)/2:(H-h)/2-30:format=auto,format=yuv420p,` +
+        // Outro: scale to 1080p, fade-in at start
+        `[3:v]scale=1920:1080:force_original_aspect_ratio=decrease,` +
+            `pad=1920:1080:(ow-iw)/2:(oh-ih)/2:black,` +
+            `setsar=1,fps=30,format=yuv420p,` +
             `fade=t=in:st=0:d=${FADE_DURATION}[outro_v]`,
 
         // ══════════ AUDIO PREP ══════════
-        // Normalize ALL audio to 44100 Hz stereo so concat works
+        // Normalize all audio to 44100 Hz stereo for clean concat
 
-        // Intro audio (from the Remotion intro — has music/sfx), fade-out at end
-        `[0:a]aformat=sample_rates=44100:channel_layouts=stereo,` +
-            `afade=t=out:st=${introFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[intro_a]`,
+        // Intro audio (TTS) — no fade, transitions are video-only
+        `[1:a]aformat=sample_rates=44100:channel_layouts=stereo[intro_a]`,
 
-        // Main audio (TTS voice), fade-in at start, fade-out at end
-        `[1:a]aformat=sample_rates=44100:channel_layouts=stereo,` +
-            `afade=t=in:st=0:d=${FADE_DURATION},` +
-            `afade=t=out:st=${mainFadeOutStart.toFixed(3)}:d=${FADE_DURATION}[main_a]`,
+        // Main audio (from Engine 2 — already muxed in main video)
+        // Trim to actual TTS duration (video may be longer due to Engine 2 padding)
+        `[2:a]aformat=sample_rates=44100:channel_layouts=stereo,` +
+            `atrim=end=${mainAudioDuration.toFixed(3)},asetpts=PTS-STARTPTS[main_a]`,
 
-        // Outro audio (silence, matching format)
-        `anullsrc=r=44100:cl=stereo,atrim=0:${OUTRO_DURATION}[outro_a]`,
+        // Outro audio (TTS) — no fade, transitions are video-only
+        `[4:a]aformat=sample_rates=44100:channel_layouts=stereo[outro_a]`,
 
         // ══════════ CONCATENATE ══════════
         `[intro_v][intro_a][main_v][main_a][outro_v][outro_a]concat=n=3:v=1:a=1[concat_v][concat_a]`,
-
-        // ══════════ OVERLAYS ══════════
-
-        // AXIOM logo watermark — top-left, 90% opacity, clearly visible
-        // colorkey removes the grey/white background, then boost brightness
-        `[2:v]scale=150:-1,format=rgba,colorkey=color=0xD6D2CC:similarity=0.25:blend=0.15,colorchannelmixer=aa=0.9[wm]`,
-        `[concat_v][wm]overlay=20:20[with_wm]`,
-
-        // Subscribe button — bottom-right, large and catchy
-        // Solid red box with bold "SUBSCRIBE" text — fully in-frame
-        `color=c=0xFF0000:s=240x50:d=1,format=rgba,colorchannelmixer=aa=0.9,` +
-            `drawtext=text='SUBSCRIBE':fontcolor=white:fontsize=26:` +
-            `x=(w-text_w)/2:y=(h-text_h)/2[sub]`,
-        `[with_wm][sub]overlay=W-w-30:H-h-60[final_v]`,
     ];
+
+    // ══════════ OVERLAYS ══════════
+    if (hasLogo) {
+        filterLines.push(
+            // AXIOM logo watermark — top-left, 90% opacity
+            `[5:v]scale=150:-1,format=rgba,colorkey=color=0xD6D2CC:similarity=0.25:blend=0.15,` +
+                `colorchannelmixer=aa=0.9[wm]`,
+            `[concat_v][wm]overlay=20:20[with_wm]`,
+        );
+
+        // Subscribe button — bottom-right
+        filterLines.push(
+            `color=c=0xFF0000:s=240x50:d=1,format=rgba,colorchannelmixer=aa=0.9,` +
+                `drawtext=fontfile='${FONT_PATH}':text='SUBSCRIBE':fontcolor=white:fontsize=26:` +
+                `x=(w-text_w)/2:y=(h-text_h)/2[sub]`,
+            `[with_wm][sub]overlay=W-w-30:H-h-60[final_v]`,
+        );
+    } else {
+        // No logo — just subscribe button on concat
+        filterLines.push(
+            `color=c=0xFF0000:s=240x50:d=1,format=rgba,colorchannelmixer=aa=0.9,` +
+                `drawtext=fontfile='${FONT_PATH}':text='SUBSCRIBE':fontcolor=white:fontsize=26:` +
+                `x=(w-text_w)/2:y=(h-text_h)/2[sub]`,
+            `[concat_v][sub]overlay=W-w-30:H-h-60[final_v]`,
+        );
+    }
 
     const filterComplex = filterLines.join('; ');
 
+    // Build input list
+    let inputs = '';
+    inputs += `-i "${fwd(introVideo)}" `;    // 0: intro video
+    inputs += `-i "${fwd(introAudio)}" `;    // 1: intro audio
+    inputs += `-i "${fwd(mainVideo)}" `;     // 2: main video+audio (from Engine 2)
+    inputs += `-i "${fwd(outroVideo)}" `;    // 3: outro video
+    inputs += `-i "${fwd(outroAudio)}" `;    // 4: outro audio
+    if (hasLogo) {
+        inputs += `-i "${fwd(LOGO_PATH)}" `; // 5: AXIOM logo PNG
+    }
+
     return `ffmpeg -y ` +
-        `-i "${fwd(INTRO_VIDEO)}" ` +            // 0: AXIOM intro
-        `-i "${fwd(syncedVideoPath)}" ` +         // 1: Engine 2 synced video + TTS
-        `-i "${fwd(LOGO_PATH)}" ` +               // 2: AXIOM logo PNG
+        inputs +
         `-filter_complex "${filterComplex}" ` +
         `-map "[final_v]" -map "[concat_a]" ` +
         `-c:v libx264 -preset fast -crf 20 ` +
@@ -250,37 +290,38 @@ function buildFFmpegCommand(syncedVideoPath, finalOutputPath, introDuration, mai
 }
 
 
-// ═══════════════════════════════════════════════════════════
 // CLI
-// ═══════════════════════════════════════════════════════════
 if (require.main === module) {
     const args = process.argv.slice(2);
 
-    if (args.length < 1) {
+    if (args.length < 5) {
         console.log(`
-AXIOM Post-Processor — Branding & Assembly Pipeline
-────────────────────────────────────────────────────
+AXIOM Post-Processor — 3-Track Assembly Pipeline
+─────────────────────────────────────────────────
 
 Usage:
-  node post_processor.js <SyncedVideoPath> [OutputPath]
-
-Example:
-  node post_processor.js "d:/notebook lm/output/videos/quicksort_final.mp4"
+  node post_processor.js <introVideo> <introAudio> <mainVideo> <outroVideo> <outroAudio> [outputPath]
 
 Pipeline:
-  ✅ Prepend 7s AXIOM intro (fade transition)
-  ✅ Append 8s AXIOM outro card (fade transition)
-  ✅ Remove NotebookLM watermark (bottom crop)
-  ✅ AXIOM logo overlay (top-left, 60% opacity)
-  ✅ Subscribe button overlay (bottom-right, 80% opacity)
-  ✅ Scale to 1920x1080 @ 30fps
-  ✅ YouTube-ready MP4 output
+  Track 1: Intro video + intro TTS audio (fade transition)
+  Track 2: Main synced video + main TTS audio (watermark cropped)
+  Track 3: Outro video + outro TTS audio (fade transition)
+  + AXIOM logo overlay (top-left)
+  + Subscribe button (bottom-right)
+  + Scale to 1920x1080 @ 30fps
 `);
         process.exit(0);
     }
 
-    processVideo(args[0], args[1])
-        .then((out) => console.log(`\n🎉 Done: ${out}`))
+    processVideo({
+        introVideo: args[0],
+        introAudio: args[1],
+        mainVideo: args[2],
+        outroVideo: args[3],
+        outroAudio: args[4],
+        outputPath: args[5]
+    })
+        .then((out) => console.log(`\nDone: ${out}`))
         .catch((err) => {
             console.error(`\nFATAL: ${err.message}`);
             process.exit(1);

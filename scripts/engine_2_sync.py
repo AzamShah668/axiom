@@ -1,12 +1,28 @@
 """
-Engine 2: Visual Slicer & Forced Alignment Sync
-1. Transcribes original video audio with Whisper (word timestamps)
-2. Aligns original transcript segments to TTS transcript segments
-3. Time-maps video segments to match TTS pacing
-4. Assembles final video with TTS audio overlay
+Engine 2 v2: Per-Slide Segment Sync
+Replaces the old proportional speed adjustment with precise per-slide alignment.
+
+For each slide detected by scene_detector:
+1. Find the corresponding TTS word timestamps
+2. Calculate per-slide speed factor
+3. Use FFmpeg setpts to stretch/compress that video segment
+4. Concatenate all adjusted segments + overlay main TTS audio
+
+Usage:
+    python engine_2_sync.py <video_path> <main_tts_audio> <slide_map_json> <tts_timestamps_json> <output_path>
+
+Inputs:
+    video_path         - NotebookLM video (already trimmed or raw)
+    main_tts_audio     - Main section TTS WAV (from tts_segmenter)
+    slide_map_json     - Slide-to-word mapping (from slide_word_mapper)
+    tts_timestamps_json - Whisper timestamps of the full TTS audio
+    output_path        - Final synced video output
+
+The slide_map tells us which words belong to which slide.
+The tts_timestamps tell us when OUR voice says each word.
+By comparing slide video duration vs TTS word duration, we stretch/compress each slide independently.
 """
 
-import whisper
 import json
 import subprocess
 import sys
@@ -16,8 +32,10 @@ import tempfile
 from pathlib import Path
 
 
+TRIM_SECONDS = 3  # NotebookLM branding at end
+
+
 def get_duration(filepath):
-    """Get media duration in seconds via ffprobe."""
     r = subprocess.run(
         ["ffprobe", "-v", "quiet", "-show_entries", "format=duration", "-of", "csv=p=0", filepath],
         capture_output=True, text=True
@@ -25,203 +43,255 @@ def get_duration(filepath):
     return float(r.stdout.strip())
 
 
-def transcribe_original(video_path, model_size="base"):
-    """Transcribe the original video's audio to get segment timestamps."""
-    print("Engine 2: Transcribing original video audio...")
-    model = whisper.load_model(model_size)
-    result = model.transcribe(video_path, language="en", word_timestamps=True, verbose=False)
+def trim_branding(video_path):
+    """Trim last 3s of NotebookLM branding."""
+    duration = get_duration(video_path)
+    trimmed_duration = max(0, duration - TRIM_SECONDS)
 
-    segments = []
-    for seg in result.get("segments", []):
-        segments.append({
-            "start": round(seg["start"], 3),
-            "end": round(seg["end"], 3),
-            "text": seg["text"].strip()
-        })
-    return segments
+    base = Path(video_path)
+    trimmed_path = str(base.parent / f"{base.stem}_trimmed{base.suffix}")
+
+    cmd = ["ffmpeg", "-y", "-i", video_path, "-t", str(trimmed_duration), "-c", "copy", trimmed_path]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+
+    if result.returncode != 0:
+        print(f"  Trim failed, using original: {result.stderr[-200:]}")
+        return video_path
+
+    print(f"  Trimmed: {duration:.1f}s -> {trimmed_duration:.1f}s")
+    return trimmed_path
 
 
-def align_segments(orig_segments, tts_timestamps_path):
-    """
-    Create time mapping between original video and TTS audio.
-    Uses proportional alignment: maps each original segment to
-    a proportional position in the TTS timeline.
-    """
+def extract_slide_segment(video_path, start, end, output_path):
+    """Extract a video segment without re-encoding."""
+    cmd = [
+        "ffmpeg", "-y",
+        "-i", video_path,
+        "-ss", f"{start:.3f}",
+        "-t", f"{end - start:.3f}",
+        "-c", "copy",
+        "-an",  # Strip audio — we'll add TTS later
+        output_path
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    return result.returncode == 0
+
+
+def speed_adjust_segment(input_path, speed_factor, output_path):
+    """Adjust video speed using setpts filter."""
+    # setpts: PTS / speed_factor speeds up, PTS * (1/speed_factor) slows down
+    # We want: if speed_factor > 1, video plays faster (compress); if < 1, slower (stretch)
+    pts_factor = 1.0 / speed_factor if speed_factor > 0 else 1.0
+
+    cmd = [
+        "ffmpeg", "-y",
+        "-i", input_path,
+        "-filter_complex", f"[0:v]setpts={pts_factor:.6f}*PTS[v]",
+        "-map", "[v]",
+        "-c:v", "libx264",
+        "-preset", "fast",
+        "-crf", "20",
+        "-an",
+        output_path
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    return result.returncode == 0
+
+
+def run_engine_2(video_path, main_tts_audio, slide_map_path, tts_timestamps_path, output_path):
+    """Per-slide sync engine."""
+    print("=" * 60)
+    print("ENGINE 2 v2: Per-Slide Segment Sync")
+    print("=" * 60)
+
+    # Load data
+    with open(slide_map_path, "r", encoding="utf-8") as f:
+        slide_map = json.load(f)
+
     with open(tts_timestamps_path, "r", encoding="utf-8") as f:
         tts_data = json.load(f)
 
-    orig_duration = orig_segments[-1]["end"] if orig_segments else 0
-    tts_duration = tts_data["duration"]
-    tts_segments = tts_data["segments"]
+    tts_words = tts_data["words"]
+    segments = slide_map["segments"]
 
-    print(f"  Original duration: {orig_duration:.1f}s")
-    print(f"  TTS duration: {tts_duration:.1f}s")
-    print(f"  Original segments: {len(orig_segments)}")
-    print(f"  TTS segments: {len(tts_segments)}")
+    # We need to map the slide_map word indices to the MAIN section of the TTS.
+    # The tts_timestamps cover the full script (intro+main+outro).
+    # The slide_map word indices are relative to the ORIGINAL transcript.
+    # But the main_tts_audio is already segmented — its word indices start at 0.
+    # So we need to find the offset: intro words are not in the main audio.
+    #
+    # HOWEVER: the tts_timestamps passed here should be from the MAIN audio segment only
+    # (run Whisper on main_audio.wav, not full_tts.wav).
+    # If that's the case, word indices align directly with slide_map.
 
-    # Build alignment keypoints using proportional mapping
-    # Each original segment maps to the same proportional position in TTS
-    keypoints = []
-    for orig_seg in orig_segments:
-        proportion_start = orig_seg["start"] / orig_duration if orig_duration > 0 else 0
-        proportion_end = orig_seg["end"] / orig_duration if orig_duration > 0 else 0
+    print(f"\n  Slides: {len(segments)}")
+    print(f"  TTS words: {len(tts_words)}")
 
-        tts_start = proportion_start * tts_duration
-        tts_end = proportion_end * tts_duration
+    # Trim branding
+    trimmed = trim_branding(video_path)
 
-        keypoints.append({
-            "orig_start": orig_seg["start"],
-            "orig_end": orig_seg["end"],
-            "tts_start": round(tts_start, 3),
-            "tts_end": round(tts_end, 3),
-            "speed": (orig_seg["end"] - orig_seg["start"]) / max(tts_end - tts_start, 0.01)
-        })
+    # Create temp directory for slide segments
+    tmp_dir = tempfile.mkdtemp(prefix="engine2_")
+    segment_files = []
 
-    return keypoints, tts_duration
+    print(f"\n  Processing {len(segments)} slides...")
+
+    for seg in segments:
+        slide_idx = seg["slide_index"]
+        v_start = seg["video_start"]
+        v_end = seg["video_end"]
+        v_duration = v_end - v_start
+
+        word_start = seg["word_start_index"]
+        word_end = seg["word_end_index"]
+
+        # Find TTS timing for these words
+        # Clamp indices to available words
+        ws = min(word_start, len(tts_words) - 1)
+        we = min(word_end, len(tts_words) - 1)
+
+        if ws < len(tts_words) and we < len(tts_words):
+            tts_start = tts_words[ws]["start"]
+            tts_end = tts_words[we]["end"]
+            tts_duration = tts_end - tts_start
+        else:
+            # Fallback: proportional
+            tts_duration = v_duration
+
+        # Avoid division by zero
+        if tts_duration < 0.1:
+            tts_duration = v_duration
+
+        speed_factor = v_duration / tts_duration
+
+        # Clamp speed factor to reasonable range (0.5x to 2.0x)
+        speed_factor = max(0.5, min(2.0, speed_factor))
+
+        print(f"    Slide {slide_idx}: video {v_start:.1f}-{v_end:.1f}s ({v_duration:.1f}s) -> "
+              f"TTS {tts_duration:.1f}s | speed: {speed_factor:.2f}x")
+
+        # Extract video segment
+        raw_segment = os.path.join(tmp_dir, f"slide_{slide_idx:03d}_raw.mp4")
+        if not extract_slide_segment(trimmed, v_start, v_end, raw_segment):
+            print(f"      Failed to extract slide {slide_idx}, using proportional fallback")
+            continue
+
+        # Speed-adjust if needed (skip if close to 1.0x)
+        if abs(speed_factor - 1.0) < 0.05:
+            segment_files.append(raw_segment)
+        else:
+            adjusted = os.path.join(tmp_dir, f"slide_{slide_idx:03d}_adj.mp4")
+            if speed_adjust_segment(raw_segment, speed_factor, adjusted):
+                segment_files.append(adjusted)
+            else:
+                print(f"      Speed adjustment failed for slide {slide_idx}, using raw")
+                segment_files.append(raw_segment)
+
+    if not segment_files:
+        print("\n  No segments processed! Falling back to simple speed adjustment.")
+        return fallback_sync(trimmed, main_tts_audio, output_path)
+
+    # Concatenate all adjusted segments
+    print(f"\n  Concatenating {len(segment_files)} adjusted segments...")
+    concat_list = os.path.join(tmp_dir, "concat.txt")
+    with open(concat_list, "w") as f:
+        for sf in segment_files:
+            f.write(f"file '{sf}'\n")
+
+    concat_video = os.path.join(tmp_dir, "concat_video.mp4")
+    cmd = [
+        "ffmpeg", "-y",
+        "-f", "concat", "-safe", "0",
+        "-i", concat_list,
+        "-c:v", "libx264", "-preset", "fast", "-crf", "20",
+        "-an",
+        concat_video
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+
+    if result.returncode != 0:
+        print(f"  Concat failed: {result.stderr[-500:]}")
+        return fallback_sync(trimmed, main_tts_audio, output_path)
+
+    # Overlay TTS audio onto concatenated video
+    print("  Overlaying TTS audio...")
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+
+    cmd = [
+        "ffmpeg", "-y",
+        "-i", concat_video,
+        "-i", main_tts_audio,
+        "-map", "0:v",
+        "-map", "1:a",
+        "-c:v", "copy",
+        "-c:a", "aac", "-b:a", "192k",
+        "-shortest",
+        "-movflags", "+faststart",
+        output_path
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+
+    if result.returncode != 0:
+        print(f"  Audio overlay failed: {result.stderr[-500:]}")
+        return False
+
+    final_dur = get_duration(output_path)
+    final_size = Path(output_path).stat().st_size / (1024 * 1024)
+
+    print(f"\n  {'=' * 50}")
+    print(f"  ENGINE 2 v2 COMPLETE")
+    print(f"  Output: {output_path}")
+    print(f"  Duration: {final_dur:.1f}s | Size: {final_size:.1f} MB")
+    print(f"  {'=' * 50}")
+
+    # Cleanup temp files
+    try:
+        import shutil
+        shutil.rmtree(tmp_dir, ignore_errors=True)
+    except:
+        pass
+
+    # Cleanup trimmed file
+    if trimmed != video_path and os.path.exists(trimmed):
+        try:
+            os.remove(trimmed)
+        except:
+            pass
+
+    return True
 
 
-def build_synced_video(video_path, tts_audio_path, keypoints, tts_duration, output_path):
-    """
-    Build the final synced video:
-    1. Adjust video speed to match TTS duration
-    2. Overlay TTS audio
-    """
-    orig_duration = get_duration(video_path)
-    speed_factor = orig_duration / tts_duration
+def fallback_sync(video_path, tts_audio_path, output_path):
+    """Simple proportional sync as fallback if per-slide fails."""
+    print("\n  Using fallback: proportional speed adjustment...")
 
-    print(f"\nEngine 2: Building synced video...")
-    print(f"  Speed factor: {speed_factor:.4f}x")
-    print(f"  Target duration: {tts_duration:.1f}s")
+    v_dur = get_duration(video_path)
+    a_dur = get_duration(tts_audio_path)
+    speed = v_dur / a_dur
+    pts = 1.0 / speed
 
-    # Use FFmpeg to:
-    # 1. Adjust video speed with setpts filter
-    # 2. Replace audio with TTS
-    setpts = f"PTS*{1/speed_factor:.6f}"
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
 
     cmd = [
         "ffmpeg", "-y",
         "-i", video_path,
         "-i", tts_audio_path,
-        "-filter_complex",
-        f"[0:v]setpts={setpts}[v]",
-        "-map", "[v]",
-        "-map", "1:a",
-        "-c:v", "libx264",
-        "-preset", "fast",
-        "-crf", "18",
-        "-c:a", "aac",
-        "-b:a", "192k",
-        "-shortest",
-        "-movflags", "+faststart",
+        "-filter_complex", f"[0:v]setpts={pts:.6f}*PTS[v]",
+        "-map", "[v]", "-map", "1:a",
+        "-c:v", "libx264", "-preset", "fast", "-crf", "18",
+        "-c:a", "aac", "-b:a", "192k",
+        "-shortest", "-movflags", "+faststart",
         output_path
     ]
 
-    print(f"  Running FFmpeg...")
-    start = time.time()
     result = subprocess.run(cmd, capture_output=True, text=True)
-
-    if result.returncode != 0:
-        print(f"  FFmpeg error: {result.stderr[-500:]}")
-        return False
-
-    elapsed = time.time() - start
-    final_size = Path(output_path).stat().st_size / (1024 * 1024)
-    final_dur = get_duration(output_path)
-
-    print(f"  FFmpeg done in {elapsed:.1f}s")
-    print(f"  Output: {output_path}")
-    print(f"  Size: {final_size:.1f} MB")
-    print(f"  Duration: {final_dur:.1f}s")
-
-    return True
-
-
-def trim_notebooklm_branding(video_path):
-    """
-    Pre-processing: trim the last 3 seconds from the NotebookLM video.
-    
-    Every NotebookLM-generated video ends with a ~2-3s branded screen
-    showing the NotebookLM logo and 'notebooklm.google.com'. This MUST
-    be removed BEFORE audio sync to avoid losing real content audio.
-    
-    Returns the path to the trimmed video (or original if trimming fails).
-    """
-    TRIM_SECONDS = 3  # seconds to cut from end
-    
-    duration = get_duration(video_path)
-    trimmed_duration = max(0, duration - TRIM_SECONDS)
-    
-    # Create trimmed file in same directory
-    base = Path(video_path)
-    trimmed_path = str(base.parent / f"{base.stem}_trimmed{base.suffix}")
-    
-    print(f"\n  ✂️  Pre-trim: removing last {TRIM_SECONDS}s (NotebookLM branding)")
-    print(f"      {duration:.1f}s → {trimmed_duration:.1f}s")
-    
-    cmd = [
-        "ffmpeg", "-y",
-        "-i", video_path,
-        "-t", str(trimmed_duration),
-        "-c", "copy",  # fast copy, no re-encode
-        trimmed_path
-    ]
-    
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    if result.returncode != 0:
-        print(f"  ⚠️  Pre-trim failed, using original video: {result.stderr[-200:]}")
-        return video_path
-    
-    print(f"      Trimmed video: {trimmed_path}")
-    return trimmed_path
-
-
-def run_engine_2(video_path, tts_audio_path, tts_timestamps_path, output_path, model_size="base"):
-    """Full Engine 2 pipeline."""
-    print("=" * 60)
-    print("ENGINE 2: Visual Slicer & Forced Alignment Sync")
-    print("=" * 60)
-
-    # Step 0: Pre-trim NotebookLM branding (last 3s)
-    trimmed_video = trim_notebooklm_branding(video_path)
-
-    # Step 1: Transcribe original video (using trimmed version)
-    orig_segments = transcribe_original(trimmed_video, model_size)
-
-    # Step 2: Align original segments to TTS timeline
-    print("\nEngine 2: Aligning segments...")
-    keypoints, tts_duration = align_segments(orig_segments, tts_timestamps_path)
-
-    # Save alignment data
-    alignment_path = tts_timestamps_path.replace("timestamps", "alignment")
-    with open(alignment_path, "w", encoding="utf-8") as f:
-        json.dump({
-            "original_segments": len(orig_segments),
-            "keypoints": keypoints,
-            "tts_duration": tts_duration
-        }, f, indent=2)
-    print(f"  Alignment saved: {alignment_path}")
-
-    # Step 3: Build synced video (using trimmed version)
-    success = build_synced_video(trimmed_video, tts_audio_path, keypoints, tts_duration, output_path)
-
-    if success:
-        print("\n" + "=" * 60)
-        print("ENGINE 2 COMPLETE ✅")
-        print(f"  Final video: {output_path}")
-        print("=" * 60)
-    else:
-        print("\nENGINE 2 FAILED ❌")
-
-    return success
+    return result.returncode == 0
 
 
 if __name__ == "__main__":
-    video = sys.argv[1] if len(sys.argv) > 1 else "d:/notebook lm/Demystifying_Quicksort.mp4"
-    tts_audio = sys.argv[2] if len(sys.argv) > 2 else "d:/notebook lm/data/quicksort_tts.wav"
-    tts_timestamps = sys.argv[3] if len(sys.argv) > 3 else "d:/notebook lm/data/quicksort_timestamps.json"
-    output = sys.argv[4] if len(sys.argv) > 4 else "d:/notebook lm/output/videos/quicksort_final.mp4"
+    if len(sys.argv) < 6:
+        print("Usage: python engine_2_sync.py <video> <main_tts_wav> <slide_map_json> <tts_timestamps_json> <output>")
+        sys.exit(1)
 
-    # Ensure output directory exists
-    Path(output).parent.mkdir(parents=True, exist_ok=True)
-
-    run_engine_2(video, tts_audio, tts_timestamps, output)
+    success = run_engine_2(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+    sys.exit(0 if success else 1)

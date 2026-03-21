@@ -23,7 +23,7 @@ d:\notebook lm\
 │   └── server.js            ← Express API entrypoint (port 3001)
 ├── modules\
 │   ├── orchestrator\
-│   │   ├── run_pipeline.js  ← 🚀 Master pipeline orchestrator
+│   │   ├── run_pipeline.js  ← Master pipeline orchestrator
 │   │   └── CONTEXT.md       ← Module docs (load on-demand)
 │   ├── tts\
 │   │   └── CONTEXT.md       ← TTS engine docs
@@ -34,15 +34,27 @@ d:\notebook lm\
 │   └── uploader\
 │       ├── youtube_uploader.js
 │       └── CONTEXT.md       ← Upload/playlist docs
+├── tools\                   ← Browser automation + Colab management
+│   ├── chrome_bridge.js     ← Chrome debug port connection (Mode A only)
+│   ├── colab_launcher.js    ← Colab notebook "Run All" + Gradio URL extraction
+│   ├── colab_manager.js     ← Colab session health + auto-relaunch
+│   ├── notebooklm_controller.js ← NotebookLM browser automation
+│   ├── topic_strategy.js    ← YouTube trend analysis + branching
+│   └── utils\               ← Shared utilities
+│       ├── retry.js         ← Generic retry-with-backoff wrapper
+│       └── paths.js         ← Centralized path constants
 ├── scripts\                 ← Utility scripts (Notion setup, scraper, syllabus)
 │   └── CONTEXT.md           ← Script docs
-├── video\                   ← Remotion renderer + FFmpeg post-processor
+├── video\                   ← FFmpeg post-processor + TTS generator
+│   ├── post_processor.js    ← Branding pipeline (intro/outro/overlays)
+│   ├── tts_generator.js     ← Qwen3 TTS via Colab Gradio
 │   └── CONTEXT.md           ← Render docs
 ├── voice\                   ← Reference voice samples for TTS cloning
 ├── data\                    ← Scraped data, transcripts, temp inputs
 ├── output\videos\           ← Final rendered MP4s
 ├── logs\                    ← Runtime logs (auto-created)
 ├── dashboard\               ← Frontend UI
+├── CLAUDE.md                ← GSD + Ralph Loop integration config
 └── GEMINI.md                ← Project-level AI efficiency rules
 ```
 

@@ -21,7 +21,7 @@ const path        = require('path');
 const config  = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/config.json'), 'utf8'));
 const youtube = google.youtube({
     version: 'v3',
-    auth: config.youtube?.api_key || process.env.YOUTUBE_DATA_API_KEY
+    auth: config.youtube?.api_key || process.env.YOUTUBE_API_KEY || process.env.YOUTUBE_DATA_API_KEY
 });
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;

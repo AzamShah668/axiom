@@ -27,61 +27,72 @@ const OUTRO_TEMPLATES = [
  * Enhances a raw NotebookLM transcript with a natural intro and outro.
  * The intro flows INTO the transcript and the outro wraps it up organically.
  *
+ * IMPORTANT: The main transcript text is NEVER modified — only intro/outro are added around it.
+ *
  * @param {string} rawTranscript - The raw transcript text from NotebookLM
  * @param {string} topicName - The specific topic being covered
  * @param {string} subjectName - The subject (e.g., "Data Structures")
- * @returns {object} - { fullScript, introText, outroText, introWordCount, outroWordCount }
+ * @returns {object} - Enhanced transcript with separate intro/main/outro + word counts
  */
 function enhanceTranscript(rawTranscript, topicName, subjectName) {
-    // Pick a random intro and outro template
     const introIdx = Math.floor(Math.random() * INTRO_TEMPLATES.length);
     const outroIdx = Math.floor(Math.random() * OUTRO_TEMPLATES.length);
 
     const introText = INTRO_TEMPLATES[introIdx](topicName, subjectName);
+    const mainText = rawTranscript.trim();
     const outroText = OUTRO_TEMPLATES[outroIdx](topicName);
 
-    // Stitch them together seamlessly
-    // The intro ends with a forward-looking transition, the raw transcript begins, and the outro picks up naturally.
-    const fullScript = `${introText}\n\n${rawTranscript.trim()}\n\n${outroText}`;
+    const fullScript = `${introText}\n\n${mainText}\n\n${outroText}`;
 
-    // Calculate approximate word counts for timing calculations
     const introWordCount = introText.split(/\s+/).length;
+    const mainWordCount = mainText.split(/\s+/).length;
     const outroWordCount = outroText.split(/\s+/).length;
-    const totalWordCount = fullScript.split(/\s+/).length;
+    const totalWordCount = introWordCount + mainWordCount + outroWordCount;
 
-    // Estimate durations (avg 150 words per minute for clear narration)
     const wordsPerSecond = 2.5; // 150 WPM
     const introDurationSec = Math.ceil(introWordCount / wordsPerSecond);
+    const mainDurationSec = Math.ceil(mainWordCount / wordsPerSecond);
     const outroDurationSec = Math.ceil(outroWordCount / wordsPerSecond);
 
     console.log(`📝 Transcript Enhanced!`);
     console.log(`   Intro: ~${introWordCount} words (~${introDurationSec}s)`);
-    console.log(`   Main body: ~${(totalWordCount - introWordCount - outroWordCount)} words`);
+    console.log(`   Main body: ~${mainWordCount} words (~${mainDurationSec}s) [UNCHANGED]`);
     console.log(`   Outro: ~${outroWordCount} words (~${outroDurationSec}s)`);
 
     return {
         fullScript,
         introText,
+        mainText,
         outroText,
         introWordCount,
+        mainWordCount,
         outroWordCount,
         totalWordCount,
         introDurationSec,
+        mainDurationSec,
         outroDurationSec
     };
 }
 
-// CLI for testing
+// CLI
 if (require.main === module) {
     const args = process.argv.slice(2);
     if (args.length < 3) {
-        console.log("Usage: node transcript_enhancer.js <transcript_file> <topic> <subject>");
+        console.log("Usage: node transcript_enhancer.js <transcript_file> <topic> <subject> [output_dir]");
     } else {
         const transcript = fs.readFileSync(args[0], 'utf8');
+        const outputDir = args[3] || path.join(__dirname, '../data');
         const result = enhanceTranscript(transcript, args[1], args[2]);
-        const outPath = path.join(__dirname, '../data/enhanced_transcript.txt');
-        fs.writeFileSync(outPath, result.fullScript, 'utf8');
-        console.log(`\nEnhanced transcript saved to: ${outPath}`);
+
+        fs.mkdirSync(outputDir, { recursive: true });
+
+        // Save full script as text
+        fs.writeFileSync(path.join(outputDir, 'enhanced_transcript.txt'), result.fullScript, 'utf8');
+
+        // Save structured JSON (used by TTS segmenter and pipeline)
+        fs.writeFileSync(path.join(outputDir, 'enhanced_transcript.json'), JSON.stringify(result, null, 2), 'utf8');
+
+        console.log(`\nSaved to: ${outputDir}/enhanced_transcript.{txt,json}`);
     }
 }
 

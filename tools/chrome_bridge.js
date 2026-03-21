@@ -1,36 +1,29 @@
 /**
  * chrome_bridge.js
- * 
- * The Problem: Chrome locks its profile directory when running.
- * Puppeteer can't use `userDataDir` pointing to an active Chrome session.
- * 
- * The Solution (2 modes):
- * 
- * MODE A — Fresh Chrome with debug port (RECOMMENDED):
- *   Kills existing Chrome, relaunches it with --remote-debugging-port=9222
- *   Puppeteer then connects to it via CDP (Chrome DevTools Protocol)
- *   Your session/cookies/login are preserved because we still use your profile dir
  *
- * MODE B — Puppeteer launches its own Chrome with a COPY of your profile:
- *   Copies your Profile 4 to a temp dir (so Chrome doesn't fight over the lock)
- *   Puppeteer runs its own Chrome with the copied session
- *   ⚠️  Slower (copy takes time) but doesn't require killing Chrome
+ * Launches a SEPARATE automation Chrome instance using .automation_profile/
+ * so we never kill the user's regular Chrome. Chrome requires a non-default
+ * user-data-dir for --remote-debugging-port to work.
  *
- * This file exposes: getPage() → returns a Puppeteer page ready to use
+ * Flow:
+ *  1. Try to connect to existing automation Chrome on port 9222
+ *  2. If not running, launch Chrome with .automation_profile/ + debug port
+ *  3. Return a Puppeteer browser/page ready to use
+ *
+ * This file exposes: getPage(), getBrowser(), relaunchChromeWithDebugPort()
  */
 
 const puppeteer = require('puppeteer');
+const path      = require('path');
 const { execSync, spawn } = require('child_process');
-const fs   = require('fs');
-const path = require('path');
 
 const CHROME_EXE       = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const CHROME_USER_DATA = 'C:\\Users\\AZAM RIZWAN\\AppData\\Local\\Google\\Chrome\\User Data';
-const CHROME_PROFILE   = 'Profile 4';
+// Use dedicated automation profile dir — Chrome blocks debug port on the default dir
+const AUTO_USER_DATA   = path.resolve(__dirname, '..', '.automation_profile');
+const AUTO_PROFILE     = 'Default';
 const DEBUG_PORT       = 9222;
-const TEMP_PROFILE_DIR = path.join(require('os').tmpdir(), 'axiom_chrome_profile');
 
-// ── Mode A: Connect to existing Chrome (after relaunch with debug port) ────────
+// ── Connect to existing automation Chrome ────────────────────────────────────
 
 async function connectToChrome() {
     console.log(`🔌 Connecting to Chrome on port ${DEBUG_PORT}...`);
@@ -53,95 +46,104 @@ async function connectToChrome() {
     }
 }
 
-// ── Mode B: Copy profile to temp, launch isolated Puppeteer Chrome ────────────
-
-async function launchWithProfileCopy() {
-    const srcProfile = path.join(CHROME_USER_DATA, CHROME_PROFILE);
-    const dstProfile = path.join(TEMP_PROFILE_DIR, CHROME_PROFILE);
-    const dstUserData = TEMP_PROFILE_DIR;
-
-    // Copy only if not already recent (saves time on repeated runs)
-    const lockFile = path.join(dstProfile, 'lockfile');
-    const needsCopy = !fs.existsSync(dstProfile) ||
-                      (Date.now() - fs.statSync(dstProfile).ctimeMs > 30 * 60 * 1000);
-
-    if (needsCopy) {
-        console.log(`📋 Copying Chrome profile to temp dir...`);
-        console.log(`   From: ${srcProfile}`);
-        console.log(`   To:   ${dstProfile}`);
-        if (fs.existsSync(dstProfile)) {
-            fs.rmSync(dstProfile, { recursive: true, force: true });
-        }
-        // Use robocopy on Windows for fast directory copy
-        try {
-            execSync(`robocopy "${srcProfile}" "${dstProfile}" /E /NFL /NDL /NJH /NJS /nc /ns /np`, 
-                     { stdio: 'ignore' });
-        } catch (_) {
-            // robocopy returns exit code 1 on success (at least 1 file copied), ignore
-        }
-        // Remove the lock file so Chrome can start fresh
-        if (fs.existsSync(lockFile)) fs.unlinkSync(lockFile);
-        console.log(`✅ Profile copied`);
-    } else {
-        console.log(`✅ Using cached profile copy (< 30 min old)`);
-    }
-
-    const browser = await puppeteer.launch({
-        headless: false,
-        executablePath: CHROME_EXE,
-        userDataDir: dstUserData,
-        args: [
-            `--profile-directory=${CHROME_PROFILE}`,
-            '--no-sandbox',
-            '--disable-blink-features=AutomationControlled',
-            '--start-maximized'
-        ],
-        defaultViewport: null
-    });
-
-    return browser;
-}
-
-// ── Main export: getPage() ────────────────────────────────────────────────────
+// ── Main export: getBrowser() ────────────────────────────────────────────────
 
 let cachedBrowser = null;
 
 async function getBrowser() {
+    // Health check: verify cached browser is still alive
     if (cachedBrowser) {
-        console.log('✅ Reusing cached browser instance');
-        return cachedBrowser;
+        try {
+            if (cachedBrowser.connected) {
+                await cachedBrowser.pages(); // Throws if truly dead
+                console.log('✅ Reusing cached browser instance');
+                return cachedBrowser;
+            }
+        } catch (_) {
+            console.log('⚠️  Cached browser is dead, reconnecting...');
+            cachedBrowser = null;
+        }
     }
 
-    // Try Mode A first (fastest, preserves live session)
+    // Try connecting to already-running automation Chrome
     const connected = await connectToChrome();
     if (connected) {
-        console.log('✅ Mode A: Connected to your running Chrome');
+        console.log('✅ Connected to running automation Chrome');
         cachedBrowser = connected;
         return connected;
     }
 
-    // Fall back to Mode B (profile copy)
-    console.log('🔄 Mode B: Launching isolated Chrome with profile copy...');
-    cachedBrowser = await launchWithProfileCopy();
+    // Auto-launch a new automation Chrome
+    console.log('🔄 Automation Chrome not running. Launching...');
+    const launched = await relaunchChromeWithDebugPort();
+    if (!launched) {
+        throw new Error('Failed to launch automation Chrome. Check that Chrome is installed and .automation_profile/ exists.');
+    }
+
+    const retryConnected = await connectToChrome();
+    if (!retryConnected) {
+        throw new Error('Automation Chrome launched but could not connect via debug port.');
+    }
+    console.log('✅ Connected to freshly launched automation Chrome');
+    cachedBrowser = retryConnected;
     return cachedBrowser;
 }
+
+// ── getPage(): Get a Puppeteer page for NotebookLM ──────────────────────────
 
 async function getPage() {
     const browser = await getBrowser();
     const pages   = await browser.pages();
-    
+
     // 1. Try to find an existing NotebookLM tab
     let page = pages.find(p => p.url().includes('notebooklm.google.com'));
-    
+
     if (page) {
         console.log('✅ Reusing existing NotebookLM tab');
         await page.bringToFront();
     } else {
-        console.log('🆕 Opening new NotebookLM tab');
-        page = await browser.newPage();
-        await page.goto('https://notebooklm.google.com', { waitUntil: 'domcontentloaded', timeout: 30000 });
+        // Reuse first blank page if available to avoid extra tabs
+        if (pages.length > 0 && pages[0].url() === 'about:blank') {
+            page = pages[0];
+        } else {
+            console.log('🆕 Opening new NotebookLM tab');
+            page = await browser.newPage();
+        }
+
+        await page.setDefaultNavigationTimeout(90000);
+
+        // Pre-emptive "Restore" dismissal (Aggressive)
+        console.log('🧹 Brushing away startup bubbles...');
+        await new Promise(r => setTimeout(r, 5000)); // Let bubbles appear
+        try { await page.evaluate(() => {
+            const allElements = Array.from(document.querySelectorAll('button, div, span'));
+            const restore = allElements.find(el => el.innerText && el.innerText.includes('Restore'));
+            const close = allElements.find(el => el.getAttribute('aria-label')?.includes('Close') || el.innerText === '✕');
+            if (restore) { restore.click(); console.log('Killed Restore bubble'); }
+            if (close) { close.click(); }
+        }).catch(() => {}); } catch(_) {}
+
+        // Navigation with Retry for "Site can't be reached"
+        let success = false;
+        for (let i = 0; i < 3; i++) {
+            try {
+                await page.goto('https://notebooklm.google.com', { waitUntil: 'domcontentloaded', timeout: 90000 });
+                // Second pass dismissal
+                await page.evaluate(() => {
+                    const all = Array.from(document.querySelectorAll('button, div, span'));
+                    const r = all.find(el => el.innerText && el.innerText.includes('Restore'));
+                    if (r) r.click();
+                }).catch(() => {});
+                success = true;
+                break;
+            } catch (e) {
+                console.warn(`⚠️  Navigation attempt ${i+1} failed: ${e.message}. Retrying...`);
+                await new Promise(r => setTimeout(r, 8000));
+            }
+        }
+        if (!success) throw new Error('Could not reach NotebookLM after 3 attempts.');
     }
-    
+
     // Set download behaviour via CDP
     try {
         const client = await page.createCDPSession();
@@ -155,42 +157,57 @@ async function getPage() {
     return { page, browser };
 }
 
-// ── Helper: Relaunch Chrome with debug port ───────────────────────────────────
-// Run this ONCE before the pipeline starts — it opens a regular Chrome window
-// with remote debugging enabled so Puppeteer can control it.
+// ── Launch automation Chrome with debug port ─────────────────────────────────
+// Uses .automation_profile/ (non-default dir) so Chrome allows remote debugging.
+// Does NOT kill the user's regular Chrome — runs as a separate instance.
 
 async function relaunchChromeWithDebugPort() {
-    console.log('\n🔄 Relaunching Chrome with remote debugging enabled...');
-    
-    // Kill all existing Chrome instances
-    try { execSync('taskkill /F /IM chrome.exe', { stdio: 'ignore' }); } catch (_) {}
-    await new Promise(r => setTimeout(r, 2000));
+    console.log('\n🔄 Launching automation Chrome with remote debugging...');
+    console.log(`   Profile: ${AUTO_USER_DATA}`);
 
-    // Relaunch with the debug port + your profile
+    // Only kill automation Chrome instances on port 9222, not the user's browser.
+    // We do this by checking if port 9222 is in use and killing that specific process.
+    try {
+        const netstat = execSync('netstat -ano | findstr :9222 | findstr LISTENING', { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'] });
+        const pidMatch = netstat.match(/\s(\d+)\s*$/m);
+        if (pidMatch) {
+            console.log(`   Killing stale automation Chrome (PID ${pidMatch[1]})...`);
+            try { execSync(`taskkill /F /PID ${pidMatch[1]}`, { stdio: 'ignore' }); } catch (_) {}
+            await new Promise(r => setTimeout(r, 2000));
+        }
+    } catch (_) {
+        // No process on port 9222 — good
+    }
+
     const chromeArgs = [
         `--remote-debugging-port=${DEBUG_PORT}`,
-        `--user-data-dir=${CHROME_USER_DATA}`,
-        `--profile-directory=${CHROME_PROFILE}`,
+        `--user-data-dir=${AUTO_USER_DATA}`,
+        `--profile-directory=${AUTO_PROFILE}`,
         '--no-first-run',
         '--no-default-browser-check'
     ];
-    spawn(CHROME_EXE, chromeArgs, { detached: true, stdio: 'ignore' }).unref();
-    
+
+    const proc = spawn(CHROME_EXE, chromeArgs, {
+        detached: true, stdio: 'ignore', shell: false, windowsHide: false
+    });
+    proc.on('error', e => console.error('Chrome spawn error:', e.message));
+    proc.unref();
+
     // Wait for Chrome to boot up
-    console.log('⏳ Waiting for Chrome to start...');
-    for (let i = 0; i < 15; i++) {
+    console.log('⏳ Waiting for automation Chrome to start...');
+    for (let i = 0; i < 30; i++) {
         await new Promise(r => setTimeout(r, 1000));
         try {
             const res = await fetch(`http://localhost:${DEBUG_PORT}/json/version`, {
                 signal: AbortSignal.timeout(2000)
             });
             if (res.ok) {
-                console.log('✅ Chrome debug port is ready!');
+                console.log('✅ Automation Chrome debug port is ready!');
                 return true;
             }
         } catch (_) {}
     }
-    console.error('❌ Chrome did not start in time');
+    console.error('❌ Automation Chrome did not start in time');
     return false;
 }
 
