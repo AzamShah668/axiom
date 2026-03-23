@@ -141,15 +141,26 @@ async function uploadToYouTube(videoFilePath, info) {
     console.log(`\n📤 Starting YouTube Upload Process for: "${title}"`);
     console.log(`File: ${videoFilePath}`);
 
-    const auth = await authorize();
+    // Retry auth up to 3 times (flaky network to oauth2.googleapis.com)
+    let auth;
+    for (let i = 1; i <= 3; i++) {
+        try {
+            auth = await authorize();
+            break;
+        } catch (err) {
+            if (i === 3) throw err;
+            console.log(`   Auth attempt ${i} failed (${err.message}), retrying in 5s...`);
+            await new Promise(r => setTimeout(r, 5000));
+        }
+    }
     const youtube = google.youtube({ version: 'v3', auth });
 
     // 1. Upload the Video
     console.log('Uploading video (this may take a while)...');
-    
+
     // Use provided SEO enhanced tags, or fall back to default broad tags
     const tags = info.tags || ["education", stream, subject, chapter, "notebooklm", "lecture", "study"];
-    
+
     const res = await youtube.videos.insert({
         part: 'snippet,status',
         notifySubscribers: false,

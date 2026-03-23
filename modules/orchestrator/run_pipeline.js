@@ -29,6 +29,8 @@ const { processVideo }               = require('../../video/post_processor');
 const { generateSEOMetadata }        = require('../../scripts/seo_generator');
 const { enhanceTranscript }          = require('../../scripts/transcript_enhancer');
 const { enhanceWithEmotions }        = require('../../scripts/emotion_enhancer');
+const { generateAndSave: generateProsodyMap } = require('../../scripts/gemini_prosody_director');
+const { polishAudio }               = require('../../scripts/audio_postprocess');
 const { segmentTTSAudio }           = require('../../scripts/tts_segmenter');
 const { generateIntroVideo, generateOutroVideo } = require('../../video/intro_generator');
 
@@ -248,11 +250,21 @@ async function runFullPipeline({ topic, subject, chapter, notionPageId, notionDb
         fs.writeFileSync(emotionalScriptPath, emotionalScript, 'utf8');
 
         // ══════════════════════════════════════════════════════════════════════
+        // STEP 4F.5: Gemini Prosody Director (per-chunk speaking instructions)
+        // Analyzes transcript chunks and generates CosyVoice 2 instruct_text
+        // directions for tone, pacing, and emotion. Words stay unchanged.
+        // ══════════════════════════════════════════════════════════════════════
+        console.log('\n--- STEP 4F.5: Prosody Director (Gemini AI) ---');
+        const prosodyMapPath = path.join(topicDataDir, 'prosody_map.json');
+        await generateProsodyMap(emotionalScript, prosodyMapPath);
+
+        // ══════════════════════════════════════════════════════════════════════
         // STEP 4G: TTS Generation + Whisper Timestamps
         // Uses Python-native script (tts_full_generate.py) to avoid Node exec() failures.
         // 45-min timeout: ~7 chunks × 3-5 min each on Colab T4 GPU.
+        // Passes prosody_map.json for per-chunk speaking instructions (CosyVoice 2).
         // ══════════════════════════════════════════════════════════════════════
-        console.log('\n--- STEP 4G: TTS Voice Clone (Qwen3) ---');
+        console.log('\n--- STEP 4G: TTS Voice Clone (CosyVoice 2) ---');
         const fullTtsWav = path.join(topicDataDir, 'full_tts.wav');
         const fullTtsTimestamps = path.join(topicDataDir, 'full_tts_timestamps.json');
         {
@@ -264,16 +276,27 @@ async function runFullPipeline({ topic, subject, chapter, notionPageId, notionDb
                 + `"${emotionalScriptPath.replace(/\\/g, '/')}" `
                 + `"${fullTtsWav.replace(/\\/g, '/')}" `
                 + `"${fullTtsTimestamps.replace(/\\/g, '/')}" `
-                + `"${gradioUrl}"`;
+                + `"${gradioUrl}" `
+                + `"${prosodyMapPath.replace(/\\/g, '/')}"`;
             console.log(`   $ python tts_full_generate.py ...`);
             execSync(cmd, { stdio: 'inherit', maxBuffer: 1024 * 1024 * 50, timeout: 45 * 60 * 1000 });
         }
 
         // ══════════════════════════════════════════════════════════════════════
+        // STEP 4G.5: Audio Post-Processing (EQ + Compression + Loudness)
+        // Polishes raw TTS audio with broadcast-quality FFmpeg filters.
+        // No word/timing changes — pure audio quality improvement.
+        // ══════════════════════════════════════════════════════════════════════
+        console.log('\n--- STEP 4G.5: Audio Post-Processing ---');
+        const polishedTtsWav = path.join(topicDataDir, 'full_tts_polished.wav');
+        polishAudio(fullTtsWav, polishedTtsWav);
+
+        // ══════════════════════════════════════════════════════════════════════
         // STEP 4H: Segment TTS Audio (Intro / Main / Outro)
+        // Uses polished audio for better final quality.
         // ══════════════════════════════════════════════════════════════════════
         console.log('\n--- STEP 4H: TTS Audio Segmentation ---');
-        const segments = segmentTTSAudio(fullTtsWav, fullTtsTimestamps, enhancedJsonPath, topicDataDir);
+        const segments = segmentTTSAudio(polishedTtsWav, fullTtsTimestamps, enhancedJsonPath, topicDataDir);
 
         // ══════════════════════════════════════════════════════════════════════
         // STEP 4I: Per-Slide Video Sync (Main Track)

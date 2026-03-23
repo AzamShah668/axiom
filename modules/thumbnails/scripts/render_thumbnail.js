@@ -64,7 +64,7 @@ async function renderThumbnail(config) {
             html = html.split(placeholder).join(value);
         }
 
-        await page.setContent(html, { waitUntil: 'networkidle2' });
+        await page.setContent(html, { waitUntil: 'domcontentloaded', timeout: 60000 });
         
         // Wait for the background removal script to finish
         console.log("⏳ Waiting for canvas processing...");

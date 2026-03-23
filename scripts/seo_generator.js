@@ -108,13 +108,25 @@ In this video, we go deep into ${chapter}, covering ${topic} from the absolute b
         "study tips",
     ];
 
-    // Deduplicate + enforce YouTube 30-char-per-tag limit
-    const uniqueTags = [...new Set(tags)].map(t => t.substring(0, 30));
+    // Deduplicate + strip commas (YouTube uses commas as tag separators) + enforce 30-char limit
+    const uniqueTags = [...new Set(tags)].map(t => t.replace(/,/g, '').replace(/\s{2,}/g, ' ').trim().substring(0, 30));
+
+    // YouTube enforces a 500-character total limit on tags. Internally it counts
+    // each tag as "tag" (quoted) separated by commas: "tag1","tag2",...
+    // So the real cost per tag = tag.length + 3 (2 quotes + 1 comma).
+    const finalTags = [];
+    let totalLen = 0;
+    for (const tag of uniqueTags) {
+        const cost = tag.length + 3; // 2 quotes + comma
+        if (totalLen + cost > 495) break;
+        finalTags.push(tag);
+        totalLen += cost;
+    }
 
     return {
         title,
         description: description.substring(0, 4900), // YouTube limit: 5000 chars
-        tags: uniqueTags,
+        tags: finalTags,
     };
 }
 

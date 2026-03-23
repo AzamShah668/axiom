@@ -1,0 +1,12 @@
+node_modules/
+output/
+logs/
+.automation_profile/
+assets/
+dashboard/
+.git/
+*.m4a
+*.mp4
+*.wav
+*.png
+*.jpg

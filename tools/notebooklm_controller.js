@@ -200,9 +200,19 @@ async function runNotebookLM({ topic, subject, chapter, strategy, branches, rese
                 const match = text.match(/\d+/);
                 if (match) return parseInt(match[0], 10);
             }
-            // Fallback: check if Sources panel lists any items or has "more sources"
+            // Fallback: check Sources panel for actual source items (NOT Studio buttons)
+            // Look for "Saved sources will appear here" = 0 sources
             const body = document.body.innerText;
-            if (body.includes('more sources') || body.includes('Audio Overview') || body.includes('Video Overview')) return 1;
+            if (body.includes('Saved sources will appear here')) return 0;
+            // Check for actual source cards in the sources panel
+            const sourcePanel = document.querySelector('[class*="sources"], [aria-label*="Sources"]');
+            if (sourcePanel) {
+                const cards = sourcePanel.querySelectorAll('[class*="source-item"], [class*="source_card"], .source-card');
+                if (cards.length > 0) return cards.length;
+            }
+            // Check for "N sources" text near the notebook title area
+            const srcMatch = body.match(/(\d+)\s+sources?/);
+            if (srcMatch) return parseInt(srcMatch[1], 10);
             return 0;
         });
         
@@ -262,9 +272,9 @@ async function runNotebookLM({ topic, subject, chapter, strategy, branches, rese
             // NotebookLM shows source titles under the "Sources" heading
             if (body.includes('Sources') && (body.includes('Deep Research Brief') || body.includes('more sources'))) return true;
 
-            // Method 4: Check if the right panel has "Audio Overview" or "Notebook guide"
-            // These only appear when a notebook has at least one source
-            if (body.includes('Audio Overview') || body.includes('Video Overview') || body.includes('Notebook guide')) return true;
+            // Method 4: Check if "Saved sources will appear here" is absent (= has sources)
+            // and the page is NOT showing the empty notebook state
+            if (!body.includes('Saved sources will appear here') && body.includes('Notebook guide')) return true;
 
             return false;
         });
@@ -377,7 +387,7 @@ Ensure the tone is enthusiastic and keeps the audience hooked!`;
     console.log('🧪 Waiting for overview to be ready...');
     let isReady = existingOverview === 'ready';
     if (!isReady) {
-        for (let i = 0; i < 60; i++) { // Up to 5 minutes
+        for (let i = 0; i < 120; i++) { // Up to 10 minutes
             await new Promise(r => setTimeout(r, 5000));
             const status = await page.evaluate(() => {
                 const body = document.body.innerText.toLowerCase();

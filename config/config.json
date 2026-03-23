@@ -1,6 +1,6 @@
 {
   "youtube": {
-    "api_key": "YOUR_YOUTUBE_API_KEY",
+    "api_key": "AIzaSyD_dBHsmsYFswp7ySeWeV4bXj93CjcCbZk",
     "max_results_per_topic": 10,
     "region_code": "IN",
     "relevance_language": "en"
@@ -33,7 +33,7 @@
     "use_native_video": true
   },
   "postprocessing": {
-    "tts_engine": "QUEN TTS",
+    "tts_engine": "CosyVoice 2",
     "use_custom_voice_clone": true,
     "crop_watermark": true,
     "trim_outro": true,

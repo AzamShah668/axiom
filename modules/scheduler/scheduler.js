@@ -168,21 +168,24 @@ function init(onLog) {
     const scheduledTodayUTC = new Date(now);
     scheduledTodayUTC.setUTCHours(utcHour, utcMin, 0, 0);
 
-    const didRunToday     = state.lastRun && isSameDayIST(state.lastRun, now.toISOString());
+    // Only treat today as "done" if the last run was SUCCESSFUL — failed runs should be retried
+    const didRunSuccessToday = state.lastRun &&
+        isSameDayIST(state.lastRun, now.toISOString()) &&
+        state.lastStatus === 'success';
     const scheduledPassed = now > scheduledTodayUTC;
 
     // Schedule today's reminder whether or not we're doing a catch-up
-    if (!didRunToday) {
+    if (!didRunSuccessToday) {
         slack.scheduleReminder(state.uploadHourIST).catch(() => {});
     }
 
-    if (!didRunToday && scheduledPassed) {
+    if (!didRunSuccessToday && scheduledPassed) {
         log('Missed upload detected — catch-up run will start in 60 seconds...');
         setTimeout(async () => {
             // Re-read state: guard against disable between startup and this callback
             const s = loadState();
             if (!s.enabled) { log('Catch-up cancelled — Auto-Pilot was disabled.'); return; }
-            if (s.lastRun && isSameDayIST(s.lastRun, new Date().toISOString())) {
+            if (s.lastRun && isSameDayIST(s.lastRun, new Date().toISOString()) && s.lastStatus === 'success') {
                 log('Catch-up cancelled — already uploaded today.');
                 return;
             }

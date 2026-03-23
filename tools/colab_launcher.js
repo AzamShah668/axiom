@@ -1,6 +1,8 @@
 /**
  * colab_launcher.js
- * Automates launching the Qwen TTS Colab notebook using the automation Chrome profile.
+ * Automates launching the TTS Colab notebook using the automation Chrome profile.
+ * Supports both Qwen3 (legacy) and CosyVoice 2 (instruct mode) notebooks.
+ * Set TTS_COLAB_URL in config/.env to switch between notebooks.
  *
  * Flow:
  *  1. Check if existing Gradio URL is still alive → skip if yes
@@ -11,13 +13,16 @@
  *  6. Write it to video/colab_url.json for the TTS pipeline to use
  */
 
+require('dotenv').config({ path: `${__dirname}/../config/.env` });
+
 const fs   = require('fs');
 const path = require('path');
 const https = require('https');
 const http  = require('http');
 const { getBrowser } = require('./chrome_bridge');
 
-const COLAB_URL      = 'https://colab.research.google.com/drive/1uV6ZIqg3M9mwi-9Leplkmntn94rKEh9S';
+// Default: Qwen3 notebook. Set TTS_COLAB_URL in .env to switch to CosyVoice 2.
+const COLAB_URL      = process.env.TTS_COLAB_URL || 'https://colab.research.google.com/drive/1uV6ZIqg3M9mwi-9Leplkmntn94rKEh9S';
 const COLAB_URL_JSON = path.join(__dirname, '../video/colab_url.json');
 
 // How long to wait for Colab to generate the Gradio URL (max 12 min)

@@ -1,8 +1,8 @@
 // tts_generator.js
-// Integrates with the Qwen3 TTS GPU server running on Google Colab.
-// SINGLE-PASS: Sends the entire transcript in ONE call to keep the voice
-// perfectly consistent. AUTOMATIC: The Colab URL is health-checked and
-// auto-renewed via colab_manager.js — no manual link updates ever needed.
+// Node.js TTS wrapper — standalone usage and backward compatibility.
+// The main pipeline (run_pipeline.js) calls tts_full_generate.py directly,
+// which supports both Qwen3 and CosyVoice 2 with per-chunk prosody instructions.
+// This file is kept for standalone CLI usage and legacy integrations.
 
 const { exec } = require('child_process');
 const path = require('path');
