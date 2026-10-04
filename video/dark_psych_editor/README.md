@@ -48,6 +48,15 @@ python3 mix.py
 `remotion/src/edit.json` and everything under `assets/`, `audio/`, `out/`, `review/` and
 `remotion/public/a/` are generated and not committed.
 
+## QA (run on each rendered part before finishing)
+
+- `python3 darkscan.py remotion/out/part_N.mp4 <first frame>`: media scenes that came out nearly black
+  (outside the caption band). The red grade crushes dark images; switch those to `color` or `ink`.
+- `python3 aligncheck.py remotion/out/part_N.mp4 <first frame>`: every hard cut must land on its
+  scheduled frame. A render once emitted a duplicate frame, which put the rest of that part
+  one frame behind the audio.
+- `render_chunks.sh` also refuses a part whose frame count is off.
+
 ## Components (`remotion/src`)
 
 - `common.tsx`: `Media` (grades: ink, red, cold, sepia, gray, color; motion: in, out, left, right, up, down, shake),
