@@ -34,7 +34,7 @@ R = {
     76: ('gen', 'light_switch'), 77: ('gen', 'angel_devil'), 78: ('gen', 'microphone'), 79: ('gen', 'megaphone'),
     80: ('gen', 'shadow_wall'), 81: ('img', 1), 82: ('img', 2), 83: ('gen', 'stop_hand'), 84: ('gen', 'pocket_notebook'),
     85: ('gen', 'empty_chair'), 86: ('img', 5), 87: ('gfx', 'puppet', {'mode': 'control'}), 88: ('clip', 'NUR:1620'),
-    89: ('img', 4), 90: ('img', 4), 92: ('gen', 'laptop_email'),
+    89: ('gen', 'vanishing_self'), 90: ('img', 4), 92: ('gen', 'laptop_email'),
     93: ('type', 'URGENT: MOVE YOUR MONEY NOW.', {'sub': 'FRAUD DEPARTMENT'}),
     94: ('img', 4),
     95: ('gfx', 'staircase', {'marks': [580.8, 581.2, 581.6, 582.3, 582.7], 'sfx': 'stepclicks'}),
@@ -47,7 +47,7 @@ R = {
 }
 
 # wiki beats whose files are rate-limited: beat_time -> replacement
-WIKI_R = {13.9: ('gen', 'yale'), 14.9: ('clip', 'MDE:816')}
+WIKI_R = {13.9: ('gen', 'yale'), 14.9: ('clip', 'MDE:816'), 624.9: ('gen', 'yale')}
 
 # background overrides for title/typewriter beats: beat_time -> bg spec
 BG_R = {293.5: 'MDE:828', 563.2: 'gen:date_stamp'}

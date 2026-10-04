@@ -546,7 +546,7 @@ export const Prediction: React.FC<{actualAtF: number}> = ({actualAtF}) => {
 const VARS = [
 	{label: 'YALE LAB (BASELINE)', val: 65, txt: '65%'},
 	{label: 'TWO PEERS REFUSE', val: 10, txt: '10%'},
-	{label: 'ORDERS BY PHONE', val: 20.5, txt: '20%'},
+	{label: 'ORDERS BY PHONE', val: 20, txt: '20%'},
 	{label: 'BRIDGEPORT OFFICE', val: 47.5, txt: '48%'},
 ];
 export const Variations: React.FC<{step: number}> = ({step}) => {

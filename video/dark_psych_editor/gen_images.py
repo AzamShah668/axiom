@@ -76,6 +76,7 @@ PROMPTS = {
     'hospital_corridor': 'an empty 1960s hospital corridor at night, a single flickering ceiling light' + PHOTO,
     'fading_person': 'a faceless person fading away into darkness, dissolving at the edges, black background' + ART,
     'gloved_hands': 'close up of hands pulling on surgical gloves, dark background, single hard light' + PHOTO,
+    'vanishing_self': 'a man in a suit whose body dissolves into drifting black smoke, strong rim light, grey background' + PHOTO,
     'yale': 'the gothic stone buildings of Yale University old campus, 1960s' + PHOTO,
 }
 
