@@ -13,23 +13,19 @@ This Hindi documentary follows the story of dark matter. It begins with Fritz Zw
 
 It ends with the biggest open question in physics. What is dark matter made of? And did the LZ detector, 1.5 km underground, catch its first hint in 2026?
 
-Image credits:
-- Coma cluster of galaxies (NASA image library, 2MASS, PIA04210)
-- Hubble Sees 'Island Universe' in the Coma Cluster (NASA image library, GSFC, GSFC_20171208_Archive_e002070)
-- Andromeda Galaxy (NASA image library, NASA/JPL/California Institute of Technology, PIA04921)
-- AM 0500-620 - Spiral Arms and Bright Knots (NASA image library, NASA, ESA, the Hubble Heritage Team STScI/AURA-ESA/Hubble Collaboration, and W. Keel University of Alabama, Tuscaloosa, PIA10388)
+Footage credits:
+- ESO (eso.org), CC BY 4.0: eso1138a, eso1319a, eso1426a, eso1514a, eso1612a, eso1612b, eso1709b, eso1714b, eso1812b, eso1833b, eso1836b, eso2110f, eso2203b, eso2304b, eso2415b
+- ESA/Hubble (esahubble.org), CC BY 4.0: Hubblecast 133c and ESA/Hubble space footage
+- NASA's Goddard Space Flight Center Scientific Visualization Studio (svs.gsfc.nasa.gov): gravitational lensing, Andromeda, M101, NGC 253, supernova remnant, Big Bang, galaxy cluster, Milky Way fly-through, Earth and Moon visualizations
+- NASA: telescope, Sun and Solar System footage
+Image credits (graphics):
 - Hustle and Bustle at Center of Milky Way (NASA image library, ESA/C. Carreau, PIA17009)
-- Hubble Goes to the eXtreme to Assemble Farthest-Ever View of the Universe (NASA image library, GSFC, GSFC_20171208_Archive_e001651)
-- Onboard view from STS-61 of the Hubble Space Telescope and moon together (NASA image library, JSC, sts061-57-021)
-- Webb_first_deep_field_SMACS_0723 (NASA image library, NASA ESA CSA STScI, webb_first_deep_field)
-- Bent Galactic Jets (NASA image library, NASA/JPL-Caltech, PIA13638)
 - Great Observatories Unique Views of the Milky Way (NASA image library, NASA/JPL-Caltech/ESA/CXC/STScI, PIA12348)
-- Hubble Sees A Smiling Lens (NASA image library, GSFC, GSFC_20171208_Archive_e000791)
-- Webb Data Reveals Dark Matter (NASA image library, NASA/STScI/J. DePasquale/A. Pagan, PIA26702)
-- Bullet Cluster 1E 0657-56 (Chandra X-ray Observatory): X-ray NASA/CXC/CfA/M.Markevitch et al.; Optical NASA/STScI, Magellan/U.Arizona/D.Clowe et al.; Lensing map NASA/STScI, ESO WFI, Magellan/U.Arizona/D.Clowe et al.
-- Planck and the Cosmic Microwave Background Artist Concept (NASA image library, ESA and the Planck Collaboration - D. Ducros, PIA17449)
 - Most Amazing High Definition Image of Earth - Blue Marble 2012 (NASA image library, GSFC, GSFC_20171208_Archive_e001386)
-Graphics, animation and music: original.
+Graphics and animation: original.
+
+Music by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 License (http://creativecommons.org/licenses/by/4.0/):
+"Lightless Dawn", "Dark Fog", "Long Note Two", "Phantasm", "Long Note Four", "Ossuary 5 - Rest"
 
 #darkmatter #hindidocumentary #space #universe #science
 ```

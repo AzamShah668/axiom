@@ -30,3 +30,13 @@
 
 ## Edit method
 The Science Time method: see `docs/research/science-time/01-how-big-is-the-universe.md`.
+
+Fast-cut rules (from the v1 review, used from production 01 v2 on):
+- **Always moving footage.** Real 4K-sourced video (ESO, ESA/Hubble, NASA SVS, Drive `clip-library/sleep-into-cosmos/footage-library`), never static photos. Explanatory graphics are drawn over dimmed, moving footage. Any image gets a Ken Burns zoom in or out.
+- **New scene every ~2–3 s.** Visual beats change on sentence boundaries; each beat is cut into ~2.3 s scenes from different clips.
+- **What is said is on screen.** One English caption per sentence (lower third). Key names and numbers get a big centred caption.
+- **Transitions.** Crossfade between scenes; zoom, flash, whip or blur on topic changes, each with a whoosh.
+- **Sound.** Dark-ambient music bed (Kevin MacLeod, CC BY 4.0) ducked about 22 dB under the voice and rising in pauses, a low drone, whooshes, and booms on big moments.
+- **No text in footage.** `scripts/video/clip_qc.py` finds burned-in text and black frames. Corner labels are cropped out automatically; any other part with text is never used.
+
+Pipeline: `make_proxies.sh` (1080p30 proxies) → `clip_qc.py` (catalog of clean ranges and crops) → `edit.json` (pools, beats, captions, music) → `render_v2.py`.

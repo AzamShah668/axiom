@@ -1,0 +1,1576 @@
+{
+ "lead_in": 2.0,
+ "title_card": "10 FACTS ABOUT DARK MATTER",
+ "cards": {
+  "fact10": [
+   "FACT #10",
+   "DISCOVERED IN 1933, IGNORED FOR 40 YEARS"
+  ],
+  "fact9": [
+   "FACT #9",
+   "THE WOMAN WHO PROVED IT"
+  ],
+  "fact8": [
+   "FACT #8",
+   "EVERY GALAXY HAS A HIDDEN HALO"
+  ],
+  "fact7": [
+   "FACT #7",
+   "INVISIBLE AT EVERY WAVELENGTH"
+  ],
+  "fact6": [
+   "FACT #6",
+   "IT BENDS LIGHT"
+  ],
+  "fact5": [
+   "FACT #5",
+   "THE COLLISION THAT REVEALED IT"
+  ],
+  "fact4": [
+   "FACT #4",
+   "5 TIMES MORE THAN NORMAL MATTER"
+  ],
+  "fact3": [
+   "FACT #3",
+   "IT BUILT THE UNIVERSE"
+  ],
+  "fact2": [
+   "FACT #2",
+   "IT'S FLOWING THROUGH EARTH RIGHT NOW"
+  ],
+  "fact1": [
+   "FACT #1",
+   "NOBODY KNOWS WHAT IT IS"
+  ]
+ },
+ "music": [
+  {
+   "from": "cold_open",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "fact10",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "fact8",
+   "track": "Long_Note_Two.mp3"
+  },
+  {
+   "from": "fact6",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "fact4",
+   "track": "Long_Note_Four.mp3"
+  },
+  {
+   "from": "fact2",
+   "track": "Ossuary_5_-_Rest.mp3"
+  }
+ ],
+ "pools": {
+  "space": [
+   "svs_galaxy_traverse",
+   "eso1714b",
+   "eso1836b",
+   "eso1612b",
+   "eso1138a",
+   "svs_lensing_05",
+   "svs_lensing_14",
+   "eso2415b",
+   "esahubble_galaxy_01"
+  ],
+  "nebula": [
+   "eso1138a",
+   "svs_supernova_01",
+   "eso1319a",
+   "eso2203b"
+  ],
+  "deep": [
+   "eso1612b",
+   "eso2415b",
+   "eso1836b",
+   "eso1612a",
+   "esahubble_galaxy_01",
+   "svs_lensing_12",
+   "svs_lensing_02"
+  ],
+  "cluster": [
+   "eso1514a",
+   "esahubble_galaxy_01",
+   "eso1812b",
+   "svs_cluster_01",
+   "eso2304b"
+  ],
+  "galaxy": [
+   "svs_m101",
+   "svs_ngc253",
+   "eso1709b",
+   "svs_andromeda_1x",
+   "eso2110f"
+  ],
+  "spin": [
+   "eso1709b",
+   "eso2110f",
+   "svs_m101"
+  ],
+  "andromeda": [
+   "svs_andromeda_1x",
+   "svs_andromeda_2x"
+  ],
+  "milkyway": [
+   "eso1714b",
+   "svs_galaxy_traverse"
+  ],
+  "lens": [
+   "svs_lensing_01",
+   "svs_lensing_02",
+   "svs_lensing_03",
+   "svs_lensing_04",
+   "svs_lensing_05",
+   "svs_lensing_06",
+   "svs_lensing_07",
+   "svs_lensing_08",
+   "svs_lensing_09",
+   "svs_lensing_10",
+   "svs_lensing_11",
+   "svs_lensing_12",
+   "svs_lensing_13",
+   "svs_lensing_14"
+  ],
+  "dmmap": [
+   "eso2304b",
+   "eso1833b",
+   "svs_cluster_01"
+  ],
+  "hubble": [
+   "hub_hc133c",
+   "esahubble_deepspace_01"
+  ],
+  "telescope": [
+   "hub_hc133c",
+   "nasa_telescope_01",
+   "esahubble_deepspace_01"
+  ],
+  "earth": [
+   "earthrise_over_lunar_limb",
+   "svs_earth_equinox",
+   "moon_recedes_earth_appears_starfield"
+  ],
+  "earthrise": [
+   "earthrise_over_lunar_limb",
+   "moon_recedes_earth_appears_starfield"
+  ],
+  "bigbang": [
+   "svs_bigbang_01",
+   "eso1426a"
+  ],
+  "solar": [
+   "solar_system_orbits_drawing_01",
+   "elliptical_orbits_drawing_around_star_01"
+  ],
+  "sun": [
+   "sun_closeup_views_montage_01"
+  ],
+  "blackhole": [
+   "eso2203b",
+   "eso1319a"
+  ],
+  "bg": [
+   "svs_lensing_05",
+   "eso1612a",
+   "eso2415b",
+   "eso1426a",
+   "svs_lensing_12"
+  ]
+ },
+ "sections": {
+  "cold_open": {
+   "v": [
+    {
+     "at": null,
+     "pool": "space"
+    },
+    {
+     "at": "California",
+     "pool": "telescope"
+    },
+    {
+     "at": "लगभग तीस",
+     "pool": "cluster"
+    },
+    {
+     "at": "Galaxies इतनी",
+     "gfx": "flyapart",
+     "bg": "bg"
+    },
+    {
+     "at": "Cluster को",
+     "pool": "cluster"
+    },
+    {
+     "at": "जैसे कोई",
+     "pool": "nebula"
+    },
+    {
+     "at": "Zwicky ने उस",
+     "pool": "deep"
+    },
+    {
+     "at": "डुंकले",
+     "pool": "galaxy"
+    },
+    {
+     "at": "लगभग सौ",
+     "pool": "space"
+    },
+    {
+     "at": "और दो हज़ार",
+     "pool": "earth"
+    },
+    {
+     "at": "ज़मीन से",
+     "gfx": "lz_flash",
+     "bg": "space"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "1933",
+     "big": true
+    },
+    {
+     "at": "California",
+     "text": "CALTECH, CALIFORNIA"
+    },
+    {
+     "at": "Swiss",
+     "text": "Swiss astronomer Fritz Zwicky was stuck on a strange calculation"
+    },
+    {
+     "at": "लगभग तीस",
+     "text": "About 300 million light-years away..."
+    },
+    {
+     "at": "हज़ार से",
+     "text": "...a giant swarm of more than 1,000 galaxies"
+    },
+    {
+     "at": "Coma Cluster",
+     "text": "THE COMA CLUSTER",
+     "big": true
+    },
+    {
+     "at": "Zwicky ने इन",
+     "text": "He calculated how fast its galaxies were moving"
+    },
+    {
+     "at": "और कुछ गड़बड़",
+     "text": "...and something didn't add up"
+    },
+    {
+     "at": "Galaxies इतनी",
+     "text": "The galaxies were racing far too fast"
+    },
+    {
+     "at": "कि दिखने",
+     "text": "Even the gravity of all the visible stars couldn't hold them"
+    },
+    {
+     "at": "Cluster को",
+     "text": "The cluster should have flown apart long ago"
+    },
+    {
+     "at": "फिर भी वह",
+     "text": "Yet it held together..."
+    },
+    {
+     "at": "जैसे कोई",
+     "text": "...as if an invisible hand was holding it"
+    },
+    {
+     "at": "Zwicky ने उस",
+     "text": "Zwicky gave the unknown stuff a name..."
+    },
+    {
+     "at": "डुंकले",
+     "text": "\"DUNKLE MATERIE\"",
+     "big": true
+    },
+    {
+     "at": "Dark Matter.",
+     "text": "DARK MATTER",
+     "big": true
+    },
+    {
+     "at": "लगभग सौ",
+     "text": "Almost 100 years later, the mystery is still unsolved"
+    },
+    {
+     "at": "और दो हज़ार",
+     "text": "2026",
+     "big": true
+    },
+    {
+     "at": "ज़मीन से",
+     "text": "1.5 km underground, a detector recorded a collision..."
+    },
+    {
+     "at": "जिसे अब तक",
+     "text": "...that no one has been able to explain"
+    }
+   ],
+   "sfx": [
+    {
+     "type": "boom",
+     "at": "टक्कर"
+    }
+   ]
+  },
+  "fact10": {
+   "v": [
+    {
+     "at": null,
+     "pool": "cluster"
+    },
+    {
+     "at": "यह संख्या",
+     "pool": "telescope"
+    },
+    {
+     "at": "Zwicky अपने",
+     "pool": "space"
+    },
+    {
+     "at": "धीरे-धीरे",
+     "pool": "deep"
+    },
+    {
+     "at": "Coma Cluster अपनी",
+     "pool": "cluster"
+    },
+    {
+     "at": "अगले लगभग",
+     "gfx": "year_counter",
+     "bg": "bg"
+    },
+    {
+     "at": "दुनिया इस",
+     "pool": "nebula"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "To hold the Coma Cluster together, Zwicky's numbers needed..."
+    },
+    {
+     "at": "सौ गुना",
+     "text": "100 TIMES THE VISIBLE MASS",
+     "big": true
+    },
+    {
+     "at": "यह संख्या",
+     "text": "The number was so strange..."
+    },
+    {
+     "at": "ज़्यादातर astronomers",
+     "text": "...most astronomers dismissed it as a measurement error"
+    },
+    {
+     "at": "Zwicky अपने",
+     "text": "Zwicky was also famous for his fiery temper"
+    },
+    {
+     "at": "और उनकी बातों",
+     "text": "...and he was often not taken seriously"
+    },
+    {
+     "at": "धीरे-धीरे",
+     "text": "Slowly, the idea was buried in the pages of an old research paper"
+    },
+    {
+     "at": "Coma Cluster अपनी",
+     "text": "The Coma Cluster kept quietly turning..."
+    },
+    {
+     "at": "और उसके साथ",
+     "text": "...and with it, a question nobody could answer"
+    },
+    {
+     "at": "अगले लगभग",
+     "text": "For the next 40 years..."
+    },
+    {
+     "at": "दुनिया इस",
+     "text": "...the world almost forgot this hidden mass"
+    }
+   ],
+   "sfx": []
+  },
+  "fact9": {
+   "v": [
+    {
+     "at": null,
+     "pool": "telescope"
+    },
+    {
+     "at": "इस बार American",
+     "pool": "space"
+    },
+    {
+     "at": "Rubin और",
+     "pool": "andromeda"
+    },
+    {
+     "at": "Solar system में",
+     "pool": "solar"
+    },
+    {
+     "at": "Earth लगभग",
+     "gfx": "orbits",
+     "bg": "bg"
+    },
+    {
+     "at": "Galaxies में भी",
+     "pool": "galaxy"
+    },
+    {
+     "at": "लेकिन Rubin",
+     "gfx": "rotation_curve",
+     "bg": "bg"
+    },
+    {
+     "at": "इतनी रफ़्तार",
+     "pool": "spin"
+    },
+    {
+     "at": "एक galaxy के बाद",
+     "pool": "galaxy"
+    },
+    {
+     "at": "हर galaxy के अंदर",
+     "gfx": "halo_full",
+     "bg": "bg"
+    },
+    {
+     "at": "Zwicky सही",
+     "pool": "cluster"
+    },
+    {
+     "at": "Vera Rubin का",
+     "pool": "space"
+    },
+    {
+     "at": "आज Chile",
+     "pool": "telescope"
+    },
+    {
+     "at": "Vera C. Rubin",
+     "gfx": "observatory",
+     "bg": "bg"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "THE 1970s",
+     "big": true
+    },
+    {
+     "at": "यह भूला",
+     "text": "The forgotten question came back to life..."
+    },
+    {
+     "at": "इस बार American",
+     "text": "...this time through American astronomer Vera Rubin"
+    },
+    {
+     "at": "Rubin और",
+     "text": "Rubin and her colleague Kent Ford were measuring how fast galaxies spin"
+    },
+    {
+     "at": "शुरुआत",
+     "text": "...starting with the neighbouring galaxy, ANDROMEDA"
+    },
+    {
+     "at": "Solar system में",
+     "text": "In the Solar System, the rule is simple"
+    },
+    {
+     "at": "Sun से",
+     "text": "The farther a planet is from the Sun, the slower it moves"
+    },
+    {
+     "at": "Earth लगभग",
+     "text": "EARTH: ~30 km/s"
+    },
+    {
+     "at": "जबकि दूर",
+     "text": "NEPTUNE: only ~5 km/s"
+    },
+    {
+     "at": "Galaxies में भी",
+     "text": "Galaxies should work the same way..."
+    },
+    {
+     "at": "center के पास",
+     "text": "...fast stars near the center, slow ones at the edge"
+    },
+    {
+     "at": "लेकिन Rubin",
+     "text": "But Rubin's data told a different story"
+    },
+    {
+     "at": "Galaxy के बिल्कुल",
+     "text": "Stars at the very edge moved just as fast as those near the center"
+    },
+    {
+     "at": "इतनी रफ़्तार",
+     "text": "At that speed, they should have been flung out of the galaxy"
+    },
+    {
+     "at": "फिर भी galaxy",
+     "text": "Yet the galaxy stayed intact"
+    },
+    {
+     "at": "एक galaxy के बाद",
+     "text": "Galaxy after galaxy, the same result"
+    },
+    {
+     "at": "इसका एक ही",
+     "text": "It could only mean one thing"
+    },
+    {
+     "at": "हर galaxy के अंदर",
+     "text": "Something heavy and invisible fills and surrounds every galaxy"
+    },
+    {
+     "at": "Zwicky सही",
+     "text": "ZWICKY WAS RIGHT",
+     "big": true
+    },
+    {
+     "at": "Vera Rubin का",
+     "text": "Vera Rubin died in 2016..."
+    },
+    {
+     "at": "और उन्हें कभी",
+     "text": "...without ever receiving a Nobel Prize"
+    },
+    {
+     "at": "आज Chile",
+     "text": "Today, one of the world's most advanced observatories, in Chile, bears her name"
+    },
+    {
+     "at": "Vera C. Rubin",
+     "text": "VERA C. RUBIN OBSERVATORY",
+     "big": true
+    }
+   ],
+   "sfx": []
+  },
+  "fact8": {
+   "v": [
+    {
+     "at": null,
+     "pool": "galaxy"
+    },
+    {
+     "at": "Milky Way लगभग",
+     "pool": "milkyway"
+    },
+    {
+     "at": "लेकिन यह चमकती",
+     "gfx": "mw_spiral",
+     "bg": "bg"
+    },
+    {
+     "at": "इसके चारों",
+     "gfx": "halo_expand",
+     "bg": "bg"
+    },
+    {
+     "at": "यह halo",
+     "pool": "space"
+    },
+    {
+     "at": "अनुमान है",
+     "gfx": "halo_full",
+     "bg": "bg"
+    },
+    {
+     "at": "अरबों तारों",
+     "pool": "milkyway"
+    },
+    {
+     "at": "और यह अकेली",
+     "pool": "galaxy"
+    },
+    {
+     "at": "ब्रह्मांड की लगभग",
+     "pool": "deep"
+    },
+    {
+     "at": "और उसी के अंदर",
+     "pool": "galaxy"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "After Rubin's discovery, the picture of galaxies changed forever"
+    },
+    {
+     "at": "Milky Way लगभग",
+     "text": "THE MILKY WAY: about 100,000 light-years across"
+    },
+    {
+     "at": "और उसमें सौ",
+     "text": "100+ BILLION STARS",
+     "big": true
+    },
+    {
+     "at": "लेकिन यह चमकती",
+     "text": "But this glowing disk is only the inner part of the galaxy"
+    },
+    {
+     "at": "इसके चारों",
+     "text": "Around it spreads a vast, invisible sphere..."
+    },
+    {
+     "at": "dark matter halo",
+     "text": "THE DARK MATTER HALO",
+     "big": true
+    },
+    {
+     "at": "यह halo",
+     "text": "More than 10 times wider than the visible galaxy"
+    },
+    {
+     "at": "अनुमान है",
+     "text": "About 90% of the Milky Way's mass is in this halo"
+    },
+    {
+     "at": "अरबों तारों",
+     "text": "This galaxy of billions of stars..."
+    },
+    {
+     "at": "असल में एक",
+     "text": "...is really a small disc of light, floating in an invisible ocean"
+    },
+    {
+     "at": "और यह अकेली",
+     "text": "And it's not just the Milky Way"
+    },
+    {
+     "at": "ब्रह्मांड की लगभग",
+     "text": "Almost every big galaxy was born inside a halo like this..."
+    },
+    {
+     "at": "और उसी के अंदर",
+     "text": "...and grew up inside it"
+    }
+   ],
+   "sfx": []
+  },
+  "fact7": {
+   "v": [
+    {
+     "at": null,
+     "pool": "space"
+    },
+    {
+     "at": "Hubble,",
+     "pool": "telescope"
+    },
+    {
+     "at": "इंसान के बनाए",
+     "gfx": "spectrum",
+     "bg": "bg"
+    },
+    {
+     "at": "लेकिन dark matter इनमें",
+     "pool": "deep"
+    },
+    {
+     "at": "वह रोशनी",
+     "pool": "nebula"
+    },
+    {
+     "at": "उसकी मौजूदगी",
+     "pool": "galaxy"
+    },
+    {
+     "at": "बिल्कुल हवा",
+     "pool": "earth"
+    },
+    {
+     "at": "Dark matter की कहानी",
+     "pool": "spin"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "So vast, yet completely invisible"
+    },
+    {
+     "at": "Hubble,",
+     "text": "HUBBLE · JAMES WEBB · RADIO DISHES · X-RAY TELESCOPES"
+    },
+    {
+     "at": "इंसान के बनाए",
+     "text": "These machines can see the universe in every wavelength of light"
+    },
+    {
+     "at": "radio waves से",
+     "text": "...from radio waves to gamma rays"
+    },
+    {
+     "at": "लेकिन dark matter इनमें",
+     "text": "But none of them can see dark matter"
+    },
+    {
+     "at": "वह रोशनी",
+     "text": "It has no connection with light at all"
+    },
+    {
+     "at": "न चमकता",
+     "text": "It doesn't shine. It doesn't absorb light. It doesn't reflect it."
+    },
+    {
+     "at": "उसकी मौजूदगी",
+     "text": "There's only one sign that it exists..."
+    },
+    {
+     "at": "gravity",
+     "text": "GRAVITY",
+     "big": true
+    },
+    {
+     "at": "बिल्कुल हवा",
+     "text": "Just like the wind: never seen itself..."
+    },
+    {
+     "at": "लेकिन पेड़ों",
+     "text": "...but swaying branches tell its story"
+    },
+    {
+     "at": "Dark matter की कहानी",
+     "text": "Dark matter's story is written by moving galaxies and racing stars"
+    }
+   ],
+   "sfx": []
+  },
+  "fact6": {
+   "v": [
+    {
+     "at": null,
+     "pool": "galaxy"
+    },
+    {
+     "at": "उन्नीस सौ पंद्रह",
+     "pool": "space"
+    },
+    {
+     "at": "कि भारी",
+     "gfx": "spacetime",
+     "bg": "bg"
+    },
+    {
+     "at": "इसे कहते हैं",
+     "pool": "lens"
+    },
+    {
+     "at": "जब किसी दूर",
+     "pool": "lens"
+    },
+    {
+     "at": "Galaxy खिंची",
+     "pool": "lens"
+    },
+    {
+     "at": "इन टेढ़ी",
+     "pool": "dmmap"
+    },
+    {
+     "at": "दो हज़ार सात",
+     "pool": "hubble"
+    },
+    {
+     "at": "dark matter का एक विशाल",
+     "pool": "lens"
+    },
+    {
+     "at": "पहली बार",
+     "pool": "dmmap"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "But gravity leaves one more mark"
+    },
+    {
+     "at": "उन्नीस सौ पंद्रह",
+     "text": "1915: ALBERT EINSTEIN",
+     "big": true
+    },
+    {
+     "at": "कि भारी",
+     "text": "Heavy objects bend space and time..."
+    },
+    {
+     "at": "और उस मुड़े",
+     "text": "...and light travelling along that curve bends too"
+    },
+    {
+     "at": "इसे कहते हैं",
+     "text": "GRAVITATIONAL LENSING",
+     "big": true
+    },
+    {
+     "at": "जब किसी दूर",
+     "text": "When light from a distant galaxy passes dark matter, it bends"
+    },
+    {
+     "at": "Galaxy खिंची",
+     "text": "The galaxy looks stretched, warped, or even like a glowing ring"
+    },
+    {
+     "at": "इन टेढ़ी",
+     "text": "By reading these distortions backwards..."
+    },
+    {
+     "at": "astronomers ने यह",
+     "text": "...astronomers learned to map where dark matter is, and how much"
+    },
+    {
+     "at": "दो हज़ार सात",
+     "text": "2007",
+     "big": true
+    },
+    {
+     "at": "Hubble Space",
+     "text": "Hubble images of a galaxy cluster 5 billion light-years away..."
+    },
+    {
+     "at": "dark matter का एक विशाल",
+     "text": "...revealed a giant RING of dark matter"
+    },
+    {
+     "at": "पहली बार",
+     "text": "For the first time, something invisible had been mapped"
+    }
+   ],
+   "sfx": []
+  },
+  "fact5": {
+   "v": [
+    {
+     "at": null,
+     "pool": "space"
+    },
+    {
+     "at": "क्या पता",
+     "pool": "deep"
+    },
+    {
+     "at": "इस बहस",
+     "pool": "cluster"
+    },
+    {
+     "at": "अरबों light-years",
+     "gfx": "collision",
+     "bg": "bg"
+    },
+    {
+     "at": "टक्कर के बाद",
+     "pool": "cluster"
+    },
+    {
+     "at": "इस जोड़ी",
+     "pool": "hubble"
+    },
+    {
+     "at": "किसी भी cluster",
+     "pool": "cluster"
+    },
+    {
+     "at": "टक्कर में यह",
+     "pool": "dmmap"
+    },
+    {
+     "at": "लेकिन जब gravitational",
+     "pool": "lens"
+    },
+    {
+     "at": "वह बिना रुके",
+     "pool": "cluster"
+    },
+    {
+     "at": "दो हज़ार छह",
+     "pool": "hubble"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Still, some scientists had doubts"
+    },
+    {
+     "at": "क्या पता",
+     "text": "What if dark matter doesn't exist at all..."
+    },
+    {
+     "at": "और gravity के",
+     "text": "...and gravity itself works differently on huge scales?"
+    },
+    {
+     "at": "इस बहस",
+     "text": "The biggest answer came from a cosmic collision"
+    },
+    {
+     "at": "अरबों light-years",
+     "text": "Billions of light-years away, two giant galaxy clusters collided"
+    },
+    {
+     "at": "टक्कर के बाद",
+     "text": "After the crash, the smaller cluster is racing away at..."
+    },
+    {
+     "at": "चार हज़ार",
+     "text": "~4,700 KM PER SECOND",
+     "big": true
+    },
+    {
+     "at": "इस जोड़ी",
+     "text": "The pair was named..."
+    },
+    {
+     "at": "Bullet Cluster",
+     "text": "THE BULLET CLUSTER",
+     "big": true
+    },
+    {
+     "at": "किसी भी cluster",
+     "text": "Most normal matter in a cluster is extremely hot gas..."
+    },
+    {
+     "at": "इतनी गरम",
+     "text": "...so hot that it glows in X-rays"
+    },
+    {
+     "at": "टक्कर में यह",
+     "text": "In the crash, the gas slowed down and got stuck in the middle"
+    },
+    {
+     "at": "लेकिन जब gravitational",
+     "text": "But when lensing mapped the real mass..."
+    },
+    {
+     "at": "तो ज़्यादातर mass",
+     "text": "...most of it wasn't with the gas at all"
+    },
+    {
+     "at": "वह बिना रुके",
+     "text": "It had passed straight through, without stopping"
+    },
+    {
+     "at": "दो हज़ार छह",
+     "text": "When the image was released in 2006..."
+    },
+    {
+     "at": "तो इसे dark matter",
+     "text": "...it became the most direct proof that dark matter exists"
+    }
+   ],
+   "sfx": [
+    {
+     "type": "boom",
+     "at": "टकराए"
+    }
+   ]
+  },
+  "fact4": {
+   "v": [
+    {
+     "at": null,
+     "pool": "deep"
+    },
+    {
+     "at": "इसका जवाब",
+     "pool": "bigbang"
+    },
+    {
+     "at": "दो हज़ार तेरह",
+     "pool": "telescope"
+    },
+    {
+     "at": "नतीजा",
+     "pool": "space"
+    },
+    {
+     "at": "हर एक किलो",
+     "gfx": "balance",
+     "bg": "bg"
+    },
+    {
+     "at": "तारे, ग्रह",
+     "pool": "earth"
+    },
+    {
+     "at": "सब मिलकर",
+     "pool": "galaxy"
+    },
+    {
+     "at": "और जब ब्रह्मांड",
+     "gfx": "pie",
+     "bg": "bg"
+    },
+    {
+     "at": "एक बिल्कुल अलग",
+     "pool": "deep"
+    },
+    {
+     "at": "Dark matter चीज़ों",
+     "pool": "spin"
+    },
+    {
+     "at": "इंसान ने",
+     "pool": "space"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Now the question was: how much of it is there?"
+    },
+    {
+     "at": "इसका जवाब",
+     "text": "The answer was hidden in the Big Bang's leftover light..."
+    },
+    {
+     "at": "cosmic microwave",
+     "text": "THE COSMIC MICROWAVE BACKGROUND",
+     "big": true
+    },
+    {
+     "at": "दो हज़ार तेरह",
+     "text": "From 2013 to 2018..."
+    },
+    {
+     "at": "European Space",
+     "text": "...ESA's Planck satellite measured it in extreme detail"
+    },
+    {
+     "at": "नतीजा",
+     "text": "The result was stunning"
+    },
+    {
+     "at": "ब्रह्मांड के कुल",
+     "text": "85% OF ALL MATTER IS DARK MATTER",
+     "big": true
+    },
+    {
+     "at": "हर एक किलो",
+     "text": "For every 1 kg of normal matter, about 5 kg of dark matter"
+    },
+    {
+     "at": "तारे, ग्रह",
+     "text": "Stars, planets, gas, dust and every living thing..."
+    },
+    {
+     "at": "सब मिलकर",
+     "text": "...all together, just 15%"
+    },
+    {
+     "at": "और जब ब्रह्मांड",
+     "text": "Counting all the energy in the universe..."
+    },
+    {
+     "at": "तो normal matter",
+     "text": "...normal matter is only 5%"
+    },
+    {
+     "at": "Dark matter लगभग",
+     "text": "Dark matter: about 27%"
+    },
+    {
+     "at": "और बाक़ी",
+     "text": "The other 68%: DARK ENERGY"
+    },
+    {
+     "at": "एक बिल्कुल अलग",
+     "text": "A completely different mystery, speeding up the universe's expansion"
+    },
+    {
+     "at": "Dark matter चीज़ों",
+     "text": "Dark matter pulls things together. Dark energy pushes them apart."
+    },
+    {
+     "at": "इंसान ने",
+     "text": "The universe humans watched and measured for centuries..."
+    },
+    {
+     "at": "वह पूरी तस्वीर",
+     "text": "...is only 5% of the whole picture"
+    }
+   ],
+   "sfx": []
+  },
+  "fact3": {
+   "v": [
+    {
+     "at": null,
+     "pool": "galaxy"
+    },
+    {
+     "at": "उसी ने",
+     "pool": "deep"
+    },
+    {
+     "at": "Big Bang के बाद",
+     "pool": "bigbang"
+    },
+    {
+     "at": "Dark matter पर",
+     "pool": "space"
+    },
+    {
+     "at": "इसलिए वह",
+     "pool": "deep"
+    },
+    {
+     "at": "और पूरे ब्रह्मांड",
+     "gfx": "cosmic_web",
+     "bg": "bg"
+    },
+    {
+     "at": "जब normal matter",
+     "gfx": "cosmic_web_glow",
+     "bg": "bg"
+    },
+    {
+     "at": "वहीं gas",
+     "pool": "nebula"
+    },
+    {
+     "at": "James Webb",
+     "pool": "deep"
+    },
+    {
+     "at": "Dark matter के बिना",
+     "pool": "galaxy"
+    },
+    {
+     "at": "शायद आज",
+     "pool": "milkyway"
+    },
+    {
+     "at": "न Sun",
+     "pool": "sun"
+    },
+    {
+     "at": "न Earth",
+     "pool": "earth"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "But dark matter doesn't just hold galaxies together"
+    },
+    {
+     "at": "उसी ने",
+     "text": "IT BUILT THEM",
+     "big": true
+    },
+    {
+     "at": "Big Bang के बाद",
+     "text": "For about 380,000 years after the Big Bang..."
+    },
+    {
+     "at": "normal matter रोशनी",
+     "text": "...normal matter was so tangled with light, it couldn't clump anywhere"
+    },
+    {
+     "at": "Dark matter पर",
+     "text": "Light had no effect on dark matter"
+    },
+    {
+     "at": "इसलिए वह",
+     "text": "So gravity started pulling it together first..."
+    },
+    {
+     "at": "और पूरे ब्रह्मांड",
+     "text": "...weaving a giant web of threads and knots across the universe"
+    },
+    {
+     "at": "cosmic web",
+     "text": "THE COSMIC WEB",
+     "big": true
+    },
+    {
+     "at": "जब normal matter",
+     "text": "When normal matter broke free, it fell into these dark matter wells"
+    },
+    {
+     "at": "वहीं gas",
+     "text": "There, gas gathered. The first stars lit up. The first galaxies formed."
+    },
+    {
+     "at": "James Webb",
+     "text": "JWST has found galaxies shining just 300 million years after the Big Bang"
+    },
+    {
+     "at": "Dark matter के बिना",
+     "text": "Without dark matter, galaxies would have taken far longer to form"
+    },
+    {
+     "at": "शायद आज",
+     "text": "Maybe there would be no Milky Way, no Sun, no Earth..."
+    },
+    {
+     "at": "और न ही",
+     "text": "...and no life"
+    }
+   ],
+   "sfx": []
+  },
+  "fact2": {
+   "v": [
+    {
+     "at": null,
+     "pool": "space"
+    },
+    {
+     "at": "वह यहीं",
+     "pool": "earth"
+    },
+    {
+     "at": "Sun, Milky Way",
+     "gfx": "galactic_orbit",
+     "bg": "bg"
+    },
+    {
+     "at": "और उसके साथ पूरा",
+     "pool": "solar"
+    },
+    {
+     "at": "लेकिन dark matter halo",
+     "pool": "milkyway"
+    },
+    {
+     "at": "इसलिए galaxy",
+     "gfx": "wind",
+     "bg": "bg"
+    },
+    {
+     "at": "यह हवा",
+     "pool": "earth"
+    },
+    {
+     "at": "बिना किसी",
+     "pool": "space"
+    },
+    {
+     "at": "Earth के आस-पास",
+     "pool": "earth"
+    },
+    {
+     "at": "लेकिन जब यही",
+     "pool": "milkyway"
+    },
+    {
+     "at": "एक trillion",
+     "pool": "galaxy"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "And this invisible web isn't far away"
+    },
+    {
+     "at": "वह यहीं",
+     "text": "IT'S RIGHT HERE",
+     "big": true
+    },
+    {
+     "at": "Sun, Milky Way",
+     "text": "The Sun orbits the Milky Way's center at about 230 km/s..."
+    },
+    {
+     "at": "और उसके साथ पूरा",
+     "text": "...carrying the whole Solar System with it"
+    },
+    {
+     "at": "लेकिन dark matter halo",
+     "text": "But the dark matter halo doesn't rotate like that"
+    },
+    {
+     "at": "इसलिए galaxy",
+     "text": "So as it moves, Earth is constantly passing through..."
+    },
+    {
+     "at": "एक dark matter की हवा",
+     "text": "A DARK MATTER WIND",
+     "big": true
+    },
+    {
+     "at": "यह हवा",
+     "text": "Right now it flows through walls, mountains, oceans and every human body..."
+    },
+    {
+     "at": "बिना किसी",
+     "text": "...without hitting anything, without leaving a trace"
+    },
+    {
+     "at": "Earth के आस-पास",
+     "text": "Near Earth, dark matter is spread so thin..."
+    },
+    {
+     "at": "कि Earth जितने",
+     "text": "...an Earth-sized ball of it would weigh less than 1 kg"
+    },
+    {
+     "at": "लेकिन जब यही",
+     "text": "But across the whole galaxy, it adds up to..."
+    },
+    {
+     "at": "एक trillion",
+     "text": "~1 TRILLION SUNS",
+     "big": true
+    }
+   ],
+   "sfx": []
+  },
+  "fact1": {
+   "v": [
+    {
+     "at": null,
+     "pool": "deep"
+    },
+    {
+     "at": "उसे पकड़ने",
+     "pool": "telescope"
+    },
+    {
+     "at": "America के",
+     "pool": "earth"
+    },
+    {
+     "at": "ज़मीन से लगभग",
+     "gfx": "lz_tank",
+     "bg": "bg"
+    },
+    {
+     "at": "इतनी गहराई",
+     "pool": "nebula"
+    },
+    {
+     "at": "अगर dark matter का",
+     "gfx": "lz_flash",
+     "bg": "bg"
+    },
+    {
+     "at": "एक September",
+     "pool": "deep"
+    },
+    {
+     "at": "LZ की team",
+     "pool": "telescope"
+    },
+    {
+     "at": "दो सौ बीस",
+     "gfx": "lz_flash",
+     "bg": "bg"
+    },
+    {
+     "at": "इसके सिर्फ़",
+     "gfx": "probability",
+     "bg": "bg"
+    },
+    {
+     "at": "Team ने साफ़",
+     "pool": "space"
+    },
+    {
+     "at": "अगर यह dark",
+     "pool": "deep"
+    },
+    {
+     "at": "Axions",
+     "pool": "nebula"
+    },
+    {
+     "at": "Big Bang के समय",
+     "pool": "blackhole"
+    },
+    {
+     "at": "और कुछ scientists",
+     "pool": "galaxy"
+    },
+    {
+     "at": "ब्रह्मांड का पचासी",
+     "pool": "deep"
+    },
+    {
+     "at": "हर galaxy को",
+     "pool": "spin"
+    },
+    {
+     "at": "हर इंसान के",
+     "pool": "earth"
+    },
+    {
+     "at": "और अब तक कोई",
+     "pool": "space"
+    },
+    {
+     "at": "शायद ब्रह्मांड",
+     "pool": "milkyway"
+    },
+    {
+     "at": "और जिस दिन",
+     "pool": "galaxy"
+    },
+    {
+     "at": "उस दिन इंसान",
+     "pool": "earthrise"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "After almost 100 years of searching, the biggest question remains..."
+    },
+    {
+     "at": "dark matter असल",
+     "text": "WHAT IS DARK MATTER?",
+     "big": true
+    },
+    {
+     "at": "उसे पकड़ने",
+     "text": "The hunt to catch it never stops"
+    },
+    {
+     "at": "America के",
+     "text": "SOUTH DAKOTA, USA"
+    },
+    {
+     "at": "ज़मीन से लगभग",
+     "text": "1.5 km underground sits a detector called LZ"
+    },
+    {
+     "at": "जिसमें लगभग दस",
+     "text": "...filled with about 10 tonnes of liquid xenon"
+    },
+    {
+     "at": "इतनी गहराई",
+     "text": "At that depth, radiation from above can't reach it"
+    },
+    {
+     "at": "अगर dark matter का",
+     "text": "If a single dark matter particle hits a xenon atom..."
+    },
+    {
+     "at": "तो रोशनी की",
+     "text": "...a faint flash of light could catch it"
+    },
+    {
+     "at": "एक September",
+     "text": "1 SEPTEMBER 2026",
+     "big": true
+    },
+    {
+     "at": "LZ की team",
+     "text": "The LZ team announced a strange result"
+    },
+    {
+     "at": "दो सौ बीस",
+     "text": "220 days of data. Just ONE collision..."
+    },
+    {
+     "at": "जिसे कोई भी",
+     "text": "...that nothing known can explain"
+    },
+    {
+     "at": "इसके सिर्फ़",
+     "text": "The chance it's a fluke: about 1 in 200"
+    },
+    {
+     "at": "लेकिन physics",
+     "text": "A confirmed discovery needs about 1 in 3.5 million"
+    },
+    {
+     "at": "Team ने साफ़",
+     "text": "The team was clear: it is NOT claiming to have seen dark matter"
+    },
+    {
+     "at": "अगर यह dark",
+     "text": "If it isn't dark matter, the list of candidates is still long"
+    },
+    {
+     "at": "विम्प्स",
+     "text": "WIMPs: heavy particles"
+    },
+    {
+     "at": "Axions",
+     "text": "AXIONS: maybe billions of times lighter than an electron"
+    },
+    {
+     "at": "Big Bang के समय",
+     "text": "Tiny black holes born in the Big Bang"
+    },
+    {
+     "at": "और कुछ scientists",
+     "text": "Or maybe dark matter doesn't exist at all..."
+    },
+    {
+     "at": "और gravity के नियम",
+     "text": "...and the laws of gravity are incomplete at the scale of galaxies"
+    },
+    {
+     "at": "ब्रह्मांड का पचासी",
+     "text": "85% of the universe's matter is everywhere..."
+    },
+    {
+     "at": "हर galaxy को",
+     "text": "...holding every galaxy together..."
+    },
+    {
+     "at": "हर इंसान के",
+     "text": "...passing through every human being..."
+    },
+    {
+     "at": "और अब तक कोई",
+     "text": "NOBODY KNOWS WHAT IT IS",
+     "big": true
+    },
+    {
+     "at": "शायद ब्रह्मांड",
+     "text": "Perhaps the universe's greatest discovery is still to come"
+    },
+    {
+     "at": "और जिस दिन",
+     "text": "And the day the secret of dark matter is revealed..."
+    },
+    {
+     "at": "उस दिन इंसान",
+     "text": "...humanity may finally understand its true place in this vast universe"
+    }
+   ],
+   "sfx": [
+    {
+     "type": "boom",
+     "at": "जानी-पहचानी"
+    }
+   ]
+  }
+ }
+}
