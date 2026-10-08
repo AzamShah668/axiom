@@ -52,3 +52,7 @@ obj/
 dist/
 build/
 out/
+
+# Python bytecode
+__pycache__/
+*.pyc
