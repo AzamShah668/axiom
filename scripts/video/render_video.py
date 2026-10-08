@@ -194,10 +194,22 @@ def starfield(t, speed=12.0, dim=1.0):
     return f if dim == 1.0 else (f * dim).astype(np.uint8)
 
 
+def remove_hlines(im, min_len=41):
+    """Inpaint thin horizontal annotation lines (diagram pointers) out of a still."""
+    g = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY).astype(np.float32)
+    nb = (np.roll(g, 4, 0) + np.roll(g, -4, 0)) / 2
+    mask = ((g - nb) > 35).astype(np.uint8) * 255
+    mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, np.ones((1, min_len), np.uint8))
+    mask = cv2.dilate(mask, np.ones((5, 5), np.uint8))
+    return cv2.inpaint(im, mask, 3, cv2.INPAINT_TELEA) if mask.any() else im
+
+
 def load_img(name, crop=None):
     key = (name, tuple(crop) if crop else None)
     if key not in G["imgs"]:
         im = cv2.imread(os.path.join(G["assets"], f"{name}.jpg"))
+        if name == "milkyway":  # the ESA diagram has a pointer line from the core to a side panel
+            im = remove_hlines(im)
         if crop:
             h, w = im.shape[:2]
             im = im[int(crop[1] * h):int(crop[3] * h), int(crop[0] * w):int(crop[2] * w)]
@@ -294,7 +306,7 @@ def gfx(name, t, D, sh):
                 draw_text(f, lab, 52, ((pts[-1][0] - 90) / W, (pts[-1][1] - 50) / H), color=col[::-1])
         return f
     if name == "mw_spiral":
-        mw = load_img("milkyway", [0.0, 0.08, 0.46, 0.92])
+        mw = load_img("milkyway", [0.0, 0.08, 0.43, 0.92])
         z = 0.95 + 0.12 * ease(p)
         ih, iw = mw.shape[:2]
         s = min(W / iw, H / ih) * z
@@ -303,7 +315,7 @@ def gfx(name, t, D, sh):
         layer = cv2.warpAffine(mw, M, (W, H), flags=cv2.INTER_LINEAR, borderValue=(0, 0, 0))
         return np.maximum(f, layer)
     if name in ("halo_expand", "halo_full"):
-        mw = load_img("milkyway", [0.0, 0.08, 0.46, 0.92])
+        mw = load_img("milkyway", [0.0, 0.08, 0.43, 0.92])
         if name == "halo_expand":
             disk = 760 - 640 * ease((p - 0.15) / 0.7)
             ratio = 1.15 + 9.35 * ease((p - 0.1) / 0.75)
@@ -405,7 +417,7 @@ def gfx(name, t, D, sh):
                 add_glow(f, x * W, y * H, 14, (255, 240, 220), ease(p * 1.5) * 0.9)
         return f
     if name == "galactic_orbit":
-        mw = load_img("milkyway", [0.0, 0.08, 0.46, 0.92])
+        mw = load_img("milkyway", [0.0, 0.08, 0.43, 0.92])
         ih, iw = mw.shape[:2]
         s = H * 0.95 / ih
         M = cv2.getRotationMatrix2D((iw / 2, ih / 2), -4 * t, s)
