@@ -191,22 +191,14 @@ About 90% are **hard cuts**. Special transitions only appear at scale boundaries
 
 ## 6. Recipe for our Hindi version
 
+**Approach:** take the same topics and the same method, narrate them in Hindi, and build every shot from our own materials. Their footage, music and script text are never reused.
+
 ### Script
-- Use the same 14-rung ladder and 5-beat formula, with about 11 minutes of narration. Time it from the TTS output, not from word count, because Hindi runs longer than English for the same content.
-- **Numbers, spoken the Indian way:**
-  - 3 लाख 84 हज़ार किमी
-  - 15 करोड़ किमी
-  - साढ़े चार अरब किमी
-  - 41 लाख करोड़ किमी
-  - Then switch to प्रकाश-वर्ष (light-year) and say why, exactly like the original does.
-- **Localised comparisons** (this is an edge the English channel cannot copy):
-  - Chandrayaan-3: launched 14 Jul 2023, landed 23 Aug 2023
-  - Mangalyaan: about 10.5 months to Mars
-  - Aditya-L1: about 4 months to L1
-  - A car on the expressway at 100 km/h, a jet at 900 km/h
-  - "Delhi–Mumbai × N"
-- Hook: a Hindi paraphrase of Pale Blue Dot, then the promise ("ब्रह्मांड का असली आकार…"), then the title card at about 0:30–0:40.
-- Fact-check every number; the original has slips.
+- **Same topic, same structure, same content, in Hindi.** Keep the same 14 rungs, the same order, the same 5-beat formula, the same comparisons (car at 100 km/h, jet at 900 km/h, light speed, Voyager at 17 km/s), the same wow facts, the same hook and the same ending. Do not add new angles. We only change the language and the materials.
+- Write the Hindi narration in our own words (not a word-for-word translation), so the script is ours while the method is theirs.
+- Aim for about 11 minutes of narration. Time it from the TTS output, not from word count, because Hindi runs longer than English for the same content.
+- Say numbers the way a Hindi narrator naturally would (for example, 384,000 km = 3 लाख 84 हज़ार किलोमीटर). Switch units at the same points the original does (km → AU → प्रकाश-वर्ष), and say why.
+- Fact-check every number; the original has slips (Oort Cloud ≈ 1.6 ly, not 1.9 ly; "10 Million Years" should be light-years).
 
 ### On-screen text (Hindi)
 - Labels: **Teko SemiBold/Bold** (Google Fonts). It is a condensed font with both Devanagari and Latin, which makes it the closest match to their Oswald look. Use white with a soft shadow, and **km only** (no miles).
