@@ -21,5 +21,12 @@
 - The narration runs as one continuous story with a cold open. List and countdown structure lives **only on screen** (chapter cards); the voice flows from one fact into the next.
 - Calm, awe-filled documentary tone with steady pacing and no hype.
 
+## Voice
+- **Locked voice:** ElevenLabs library voice **Neel – Paranormal Story Narrator** (Hindi), model `eleven_multilingual_v2`, stability 0.5, similarity 0.75, style 0, speed 1.0. See `voice-preset.json`.
+- Narration source for TTS: `productions/<NN-topic>/tts/narration.hi.md` (Devanagari, one `## <section>` per chapter).
+  - English names and science words stay in English letters.
+  - Numbers are written as Hindi words.
+- Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir>`. This produces the narration, the timeline and per-character timings.
+
 ## Edit method
 The Science Time method: see `docs/research/science-time/01-how-big-is-the-universe.md`.
