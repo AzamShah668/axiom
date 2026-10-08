@@ -229,9 +229,11 @@ def overlay(frame, kind, p):
         add_glow(frame, W / 2, H / 2, 620, PURPLE, 0.55 * ease(p * 1.6), power=1.6)
     elif kind == "ring":
         a = 0.75 * ease(p * 2)
-        ring = np.zeros_like(frame)
-        cv2.circle(ring, (W // 2, H // 2), 300, (255, 170, 80), 38, cv2.LINE_AA)
-        ring = cv2.GaussianBlur(ring, (0, 0), 26)
+        if "ring" not in G:
+            ring = np.zeros((H, W, 3), np.uint8)
+            cv2.circle(ring, (W // 2, H // 2), 300, (255, 170, 80), 38, cv2.LINE_AA)
+            G["ring"] = cv2.GaussianBlur(ring, (0, 0), 26).astype(np.float32)
+        ring = G["ring"]
         np.copyto(frame, np.clip(frame.astype(np.float32) + ring * a, 0, 255).astype(np.uint8))
 
 
@@ -439,9 +441,11 @@ def gfx(name, t, D, sh):
     if name in ("lz_tank", "lz_flash"):
         f = (starfield(t, dim=0.15) * 0 + G["rock"]).astype(np.uint8)
         cx, top, bot, rw = W // 2, 250, 860, 250
-        fill = np.zeros_like(f)
-        cv2.rectangle(fill, (cx - rw, top + 60), (cx + rw, bot), (140, 70, 20), -1)
-        f = np.clip(f.astype(np.float32) + cv2.GaussianBlur(fill, (0, 0), 6) * (0.75 + 0.1 * math.sin(t * 2)), 0, 255).astype(np.uint8)
+        if "lzfill" not in G:
+            fill = np.zeros((H, W, 3), np.uint8)
+            cv2.rectangle(fill, (cx - rw, top + 60), (cx + rw, bot), (140, 70, 20), -1)
+            G["lzfill"] = cv2.GaussianBlur(fill, (0, 0), 6).astype(np.float32)
+        f = np.clip(f.astype(np.float32) + G["lzfill"] * (0.75 + 0.1 * math.sin(t * 2)), 0, 255).astype(np.uint8)
         for y in (top, bot):
             cv2.ellipse(f, (cx, y), (rw, 45), 0, 0, 360, (255, 220, 140), 3, cv2.LINE_AA)
         cv2.line(f, (cx - rw, top), (cx - rw, bot), (255, 220, 140), 3, cv2.LINE_AA)
@@ -523,6 +527,7 @@ def card_frame(sh, t, D):
 
 # ---------------------------------------------------------------- rendering
 def init_worker(assets, fonts):
+    cv2.setNumThreads(1)  # 1 thread per worker process: avoids heavy oversubscription
     G.update(assets=assets, fonts=fonts, imgs={}, stars=starfield_canvas())
     rng = np.random.default_rng(9)
     rock = cv2.GaussianBlur(rng.random((H // 4, W // 4)).astype(np.float32), (0, 0), 2)
