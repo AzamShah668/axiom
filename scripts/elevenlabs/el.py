@@ -1,6 +1,6 @@
 """Minimal ElevenLabs client for the Hindi documentary pipeline.
 
-Needs ELEVENLABS_API_KEY in the environment.
+Needs ELEVENLABS_API_KEY in the environment or in config/.env (gitignored).
 
   python el.py whoami
   python el.py voices                                   # list voices in the account
@@ -12,6 +12,23 @@ import argparse, json, os, sys
 import requests
 
 API = "https://api.elevenlabs.io/v1"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+
+def _load_env():
+    """Fill missing env vars from config/.env (then .env) at the repo root."""
+    for path in (os.path.join(ROOT, "config", ".env"), os.path.join(ROOT, ".env")):
+        if not os.path.exists(path):
+            continue
+        for line in open(path, encoding="utf-8"):
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                if v.strip() and not os.environ.get(k.strip()):
+                    os.environ[k.strip()] = v.strip().strip('"').strip("'")
+
+
+_load_env()
 
 
 def _h():
