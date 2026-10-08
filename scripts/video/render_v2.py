@@ -9,7 +9,8 @@ edit.json per section:
   "c": captions       [{"at": trigger|null, "text": "...", "big": true?}]
   "sfx": extra sounds [{"type": "boom", "at": trigger}]
 Top level: "pools" {name: [clip, ...]}, "music" [{"from": section, "track": file}], "cards", "title_card",
-"crops" {clip: [x0, y0, x1, y1]} (manual crop, overrides the one clip_qc.py chose).
+"crops" {clip: [x0, y0, x1, y1]} (manual crop, overrides the one clip_qc.py chose),
+"exclude" {clip: [[from_s, to_s], ...]} (manual cuts: insets, flashes, overlays the text scan can't see).
 Each visual beat is split into scenes of ~SCENE_LEN seconds, each scene a fresh clean-range segment
 of the next clip in the pool (clean = no burned-in text / black, from clip_qc.py).
 """
@@ -99,6 +100,12 @@ def assign_clips(items, edit, catalog):
     """Give every item a clean (text-free) segment: least-used clip of its pool first, never the clip of
     the previous few items, segments of a clip consumed in order (wrapping only when it is used up)."""
     pools = edit["pools"]
+    for name, cut in edit.get("exclude", {}).items():  # manual cuts on top of clip_qc.py's
+        if name in catalog:
+            rng = catalog[name]["clean"]
+            for x0, x1 in cut:
+                rng = [r for a, z in rng for r in ([a, min(z, x0)], [max(a, x1), z]) if r[1] - r[0] >= 1.5]
+            catalog[name] = dict(catalog[name], clean=rng)
     cursor, used, recent = {}, {}, []
     for it in items:
         need = (it["t1"] - it["t0"]) + 0.8  # include transition overlap

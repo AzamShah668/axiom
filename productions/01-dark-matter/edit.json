@@ -105,12 +105,10 @@
    "svs_m101",
    "svs_ngc253",
    "eso1709b",
-   "svs_andromeda_1x",
-   "eso2110f"
+   "svs_andromeda_1x"
   ],
   "spin": [
    "eso1709b",
-   "eso2110f",
    "svs_m101"
   ],
   "andromeda": [
@@ -180,6 +178,32 @@
    0.0,
    0.94,
    0.88
+  ]
+ },
+ "exclude": {
+  "eso2415b": [
+   [
+    36,
+    60
+   ]
+  ],
+  "svs_m101": [
+   [
+    11,
+    70
+   ]
+  ],
+  "svs_bigbang_01": [
+   [
+    1,
+    4
+   ]
+  ],
+  "esahubble_galaxy_01": [
+   [
+    0,
+    13
+   ]
   ]
  },
  "sections": {
