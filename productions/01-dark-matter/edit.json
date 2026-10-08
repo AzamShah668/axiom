@@ -76,10 +76,9 @@
    "eso1836b",
    "eso1612b",
    "eso1138a",
-   "svs_lensing_05",
-   "svs_lensing_14",
    "eso2415b",
-   "esahubble_galaxy_01"
+   "esahubble_galaxy_01",
+   "eso1612a"
   ],
   "nebula": [
    "eso1138a",
@@ -93,8 +92,7 @@
    "eso1836b",
    "eso1612a",
    "esahubble_galaxy_01",
-   "svs_lensing_12",
-   "svs_lensing_02"
+   "svs_lensing_04"
   ],
   "cluster": [
    "eso1514a",
@@ -125,19 +123,7 @@
   ],
   "lens": [
    "svs_lensing_01",
-   "svs_lensing_02",
-   "svs_lensing_03",
-   "svs_lensing_04",
-   "svs_lensing_05",
-   "svs_lensing_06",
-   "svs_lensing_07",
-   "svs_lensing_08",
-   "svs_lensing_09",
-   "svs_lensing_10",
-   "svs_lensing_11",
-   "svs_lensing_12",
-   "svs_lensing_13",
-   "svs_lensing_14"
+   "svs_lensing_02"
   ],
   "dmmap": [
    "eso2304b",
@@ -174,15 +160,26 @@
    "sun_closeup_views_montage_01"
   ],
   "blackhole": [
+   "svs_lensing_05",
+   "svs_lensing_10",
    "eso2203b",
-   "eso1319a"
+   "svs_lensing_12"
   ],
   "bg": [
-   "svs_lensing_05",
    "eso1612a",
    "eso2415b",
    "eso1426a",
-   "svs_lensing_12"
+   "eso1836b",
+   "svs_lensing_03",
+   "svs_lensing_04"
+  ]
+ },
+ "crops": {
+  "svs_earth_equinox": [
+   0.06,
+   0.0,
+   0.94,
+   0.88
   ]
  },
  "sections": {

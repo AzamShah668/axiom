@@ -273,7 +273,7 @@ def gfx(name, t, D, sh):
         return f
     if name == "rotation_curve":
         f = starfield(t, dim=0.45)
-        x0, y0, x1, y1 = 300, 860, 1640, 230
+        x0, y0, x1, y1 = 300, 790, 1640, 190
         cv2.line(f, (x0, y0), (x1, y0), (200, 200, 200), 2, cv2.LINE_AA)
         cv2.line(f, (x0, y0), (x0, y1), (200, 200, 200), 2, cv2.LINE_AA)
         draw_text(f, "DISTANCE FROM CENTER", 34, ((x0 + x1) / 2 / W, (y0 + 45) / H), font="Montserrat")
@@ -368,10 +368,10 @@ def gfx(name, t, D, sh):
     if name == "balance":
         f = starfield(t, dim=0.5)
         ang = math.radians(13 * ease((p - 0.2) / 0.5))
-        px, py, L = W / 2, 470, 520
+        px, py, L = W / 2, 400, 520
         lx, ly = px - L * math.cos(ang), py - L * math.sin(ang)
         rx, ry = px + L * math.cos(ang), py + L * math.sin(ang)
-        cv2.line(f, (int(px), int(py)), (int(px), 930), (200, 200, 200), 6, cv2.LINE_AA)
+        cv2.line(f, (int(px), int(py)), (int(px), 860), (200, 200, 200), 6, cv2.LINE_AA)
         cv2.line(f, (int(lx), int(ly)), (int(rx), int(ry)), (230, 230, 230), 8, cv2.LINE_AA)
         for x, y, kg, nm, col in ((lx, ly, "1 kg", "NORMAL MATTER", (255, 220, 150)), (rx, ry, "5 kg", "DARK MATTER", PURPLE)):
             cv2.line(f, (int(x), int(y)), (int(x), int(y + 170)), (200, 200, 200), 2, cv2.LINE_AA)

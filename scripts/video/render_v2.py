@@ -8,6 +8,8 @@ edit.json per section:
   "v": visual beats   [{"at": trigger|null, "pool": name} | {"at": ..., "gfx": name, "bg": pool}]
   "c": captions       [{"at": trigger|null, "text": "...", "big": true?}]
   "sfx": extra sounds [{"type": "boom", "at": trigger}]
+Top level: "pools" {name: [clip, ...]}, "music" [{"from": section, "track": file}], "cards", "title_card",
+"crops" {clip: [x0, y0, x1, y1]} (manual crop, overrides the one clip_qc.py chose).
 Each visual beat is split into scenes of ~SCENE_LEN seconds, each scene a fresh clean-range segment
 of the next clip in the pool (clean = no burned-in text / black, from clip_qc.py).
 """
@@ -173,7 +175,7 @@ def item_frame(it, f):
         if t < 0.2:  # flash in
             fr = cv2.addWeighted(fr, 1.0, np.full_like(fr, 255), 0.6 * (1 - t / 0.2), 0)
         return fr
-    G["bgframe"] = (dark * 0.5).astype(np.uint8)
+    G["bgframe"] = (dark * 0.4).astype(np.uint8)
     it.setdefault("flash_t", D * 0.45)  # lz_flash: when the detector lights up
     fr = rv.gfx(it["gfx"], t, D, it)
     G["bgframe"] = None
@@ -377,7 +379,7 @@ def main():
         its = [dict(it) for it in items if it["sec"] == sid]
         jobs.append((sid, its, caps, work, total_f))
     jobs.sort(key=lambda j: -(j[1][-1]["f1"] - j[1][0]["f0"]))
-    with Pool(a.workers, initializer=init, initargs=(a.clips, a.fonts, a.assets, {k: v.get("crop") for k, v in catalog.items()})) as pool:
+    with Pool(a.workers, initializer=init, initargs=(a.clips, a.fonts, a.assets, {**{k: v.get("crop") for k, v in catalog.items()}, **edit.get("crops", {})})) as pool:
         for k, pth in enumerate(pool.imap_unordered(render_chunk, jobs)):
             print(f"  [{k + 1}/{len(jobs)}] {os.path.basename(pth)}", flush=True)
     if only:
