@@ -1,0 +1,186 @@
+{
+ "title_card": "10 FACTS ABOUT DARK MATTER",
+ "lead_in": 2.0,
+ "cards": {
+  "fact10": ["FACT #10", "DISCOVERED IN 1933, IGNORED FOR 40 YEARS"],
+  "fact9": ["FACT #9", "THE WOMAN WHO PROVED IT"],
+  "fact8": ["FACT #8", "EVERY GALAXY HAS A HIDDEN HALO"],
+  "fact7": ["FACT #7", "INVISIBLE AT EVERY WAVELENGTH"],
+  "fact6": ["FACT #6", "IT BENDS LIGHT"],
+  "fact5": ["FACT #5", "THE COLLISION THAT REVEALED IT"],
+  "fact4": ["FACT #4", "5 TIMES MORE THAN NORMAL MATTER"],
+  "fact3": ["FACT #3", "IT BUILT THE UNIVERSE"],
+  "fact2": ["FACT #2", "IT'S FLOWING THROUGH EARTH RIGHT NOW"],
+  "fact1": ["FACT #1", "NOBODY KNOWS WHAT IT IS"]
+ },
+ "sections": {
+  "cold_open": [
+   {"gfx": "starfield", "labels": [
+     {"text": "1933", "at": "साल", "pos": "center", "size": 170},
+     {"text": "California Institute of Technology", "at": "California", "pos": "bottom", "size": 56},
+     {"text": "Fritz Zwicky", "at": "Fritz", "pos": "bottom", "size": 56}]},
+   {"at": "लगभग तीस करोड़", "img": "coma2", "motion": "in", "labels": [
+     {"text": "~300 million light-years away", "at": "लगभग तीस", "pos": "tl", "size": 60},
+     {"text": "1,000+ galaxies", "at": "हज़ार से", "pos": "tl", "size": 60},
+     {"text": "COMA CLUSTER", "at": "Coma Cluster", "pos": "center", "size": 120}]},
+   {"at": "Galaxies इतनी", "gfx": "flyapart", "labels": [
+     {"text": "Moving far too fast", "at": "Galaxies इतनी", "pos": "bottom", "size": 64}]},
+   {"at": "फिर भी वह टिका", "img": "coma", "crop": [0.1, 0.12, 0.9, 0.88], "motion": "in", "overlay": "halo"},
+   {"at": "Zwicky ने उस अनजान", "gfx": "starfield", "labels": [
+     {"text": "\"Dunkle Materie\"", "at": "डुंकले", "pos": "center", "size": 100},
+     {"text": "DARK MATTER", "at": "Dark Matter", "pos": "lower", "size": 150}]},
+   {"at": "लगभग सौ साल बाद", "img": "deepfield", "motion": "out", "labels": [
+     {"text": "~100 years later: still unsolved", "at": "सुलझा", "pos": "bottom", "size": 60}]},
+   {"at": "और दो हज़ार छब्बीस", "gfx": "lz_tank", "labels": [
+     {"text": "2026", "at": "दो हज़ार छब्बीस", "pos": "tl", "size": 110},
+     {"text": "1.5 km underground", "at": "डेढ़ किलोमीटर", "pos": "bottom", "size": 60}],
+    "sfx": [{"type": "boom", "at": "टक्कर"}]}
+  ],
+  "fact10": [
+   {"img": "coma2", "motion": "out", "labels": [
+     {"text": "100 times more mass needed", "at": "सौ गुना", "pos": "bottom", "size": 72}]},
+   {"at": "यह संख्या इतनी अजीब", "img": "coma", "crop": [0.1, 0.12, 0.9, 0.88], "motion": "left", "labels": [
+     {"text": "Dismissed as a measurement error", "at": "नाप-तोल", "pos": "bottom", "size": 60}]},
+   {"at": "धीरे-धीरे", "img": "coma2", "motion": "right"},
+   {"at": "अगले लगभग चालीस", "gfx": "year_counter", "labels": [
+     {"text": "40 YEARS", "at": "चालीस", "pos": "bottom", "size": 70}]}
+  ],
+  "fact9": [
+   {"img": "andromeda", "motion": "in", "labels": [
+     {"text": "1970s", "at": "उन्नीस सौ सत्तर", "pos": "tl", "size": 110},
+     {"text": "Vera Rubin & Kent Ford", "at": "Vera Rubin", "pos": "bottom", "size": 64},
+     {"text": "ANDROMEDA", "at": "Andromeda", "pos": "tr", "size": 80}]},
+   {"at": "Solar system में", "gfx": "orbits", "labels": [
+     {"text": "Earth: 30 km/s", "at": "Earth लगभग", "pos": "tl", "size": 64},
+     {"text": "Neptune: 5 km/s", "at": "Neptune", "pos": "tl", "size": 64}]},
+   {"at": "Galaxies में भी यही", "gfx": "rotation_curve"},
+   {"at": "एक galaxy के बाद दूसरी", "img": "spiral", "motion": "in", "labels": [
+     {"text": "Galaxy after galaxy: the same result", "at": "एक galaxy के बाद", "pos": "bottom", "size": 60}]},
+   {"at": "इसका एक ही मतलब", "img": "andromeda", "motion": "out", "overlay": "halo", "labels": [
+     {"text": "Something heavy and invisible", "at": "अदृश्य चीज़", "pos": "bottom", "size": 64},
+     {"text": "ZWICKY WAS RIGHT", "at": "Zwicky सही", "pos": "center", "size": 110}]},
+   {"at": "Vera Rubin का दो हज़ार सोलह", "gfx": "starfield", "labels": [
+     {"text": "VERA RUBIN", "at": "Vera Rubin का", "pos": "center", "size": 140},
+     {"text": "1928 – 2016", "at": "दो हज़ार सोलह", "pos": "lower", "size": 70},
+     {"text": "Never received a Nobel Prize", "at": "Nobel", "pos": "bottom", "size": 60}]},
+   {"at": "आज Chile", "gfx": "observatory", "labels": [
+     {"text": "Vera C. Rubin Observatory, Chile", "at": "Vera C. Rubin Observatory", "pos": "top", "size": 70}]}
+  ],
+  "fact8": [
+   {"gfx": "mw_spiral", "labels": [
+     {"text": "THE MILKY WAY", "at": "Milky Way", "pos": "tl", "size": 90},
+     {"text": "100,000 light-years", "at": "एक लाख", "pos": "bottom", "size": 64},
+     {"text": "100+ billion stars", "at": "सौ अरब", "pos": "tr", "size": 64}]},
+   {"at": "इसके चारों तरफ़", "gfx": "halo_expand", "labels": [
+     {"text": "DARK MATTER HALO", "at": "dark matter halo", "pos": "tl", "size": 90},
+     {"text": "10 times wider", "at": "दस गुना", "pos": "tr", "size": 80},
+     {"text": "~90% of the Milky Way's mass", "at": "नब्बे", "pos": "bottom", "size": 64}]},
+   {"at": "और यह अकेली", "img": "deepfield", "motion": "out", "labels": [
+     {"text": "Every large galaxy has one", "at": "हर बड़ी", "pos": "bottom", "size": 64}]}
+  ],
+  "fact7": [
+   {"img": "hubble_tel", "motion": "in", "labels": [{"text": "HUBBLE", "at": "Hubble", "pos": "tl", "size": 90}]},
+   {"at": "James Webb", "img": "smacs", "motion": "in", "labels": [{"text": "JAMES WEBB", "at": "James Webb", "pos": "tl", "size": 90}]},
+   {"at": "radio dishes", "img": "vla", "motion": "out", "labels": [{"text": "RADIO", "at": "radio dishes", "pos": "tl", "size": 90}]},
+   {"at": "X-ray telescopes", "img": "chandra_tel", "motion": "in", "labels": [{"text": "X-RAY", "at": "X-ray", "pos": "tl", "size": 90}]},
+   {"at": "radio waves से लेकर", "gfx": "spectrum", "labels": [
+     {"text": "Invisible at every wavelength", "at": "दिखाई नहीं देता", "pos": "top", "size": 70}]},
+   {"at": "उसकी मौजूदगी", "img": "andromeda", "motion": "out", "labels": [
+     {"text": "Detected only through GRAVITY", "at": "gravity", "pos": "bottom", "size": 72}]},
+   {"at": "Dark matter की कहानी भी", "img": "spiral", "motion": "right"}
+  ],
+  "fact6": [
+   {"gfx": "spacetime", "labels": [
+     {"text": "Einstein, 1915", "at": "उन्नीस सौ पंद्रह", "pos": "tl", "size": 80},
+     {"text": "GRAVITATIONAL LENSING", "at": "gravitational lensing", "pos": "bottom", "size": 80}]},
+   {"at": "जब किसी दूर की", "img": "smacs", "motion": "in", "labels": [
+     {"text": "Stretched, bent galaxies", "at": "खिंची हुई", "pos": "bottom", "size": 60}]},
+   {"at": "एक चमकते छल्ले", "img": "einstein_ring", "motion": "in", "labels": [
+     {"text": "Einstein ring", "at": "छल्ले", "pos": "bottom", "size": 64}]},
+   {"at": "इन टेढ़ी-मेढ़ी", "img": "cl0024", "motion": "out", "labels": [
+     {"text": "Dark matter mapped (blue)", "at": "नक्शा", "pos": "bottom", "size": 64}]},
+   {"at": "दो हज़ार सात", "img": "deepfield", "motion": "in", "overlay": "ring", "labels": [
+     {"text": "HUBBLE, 2007", "at": "दो हज़ार सात", "pos": "tl", "size": 90},
+     {"text": "~5 billion light-years away", "at": "पाँच अरब", "pos": "tl", "size": 60},
+     {"text": "A ring of dark matter", "at": "छल्ला", "pos": "bottom", "size": 64}]}
+  ],
+  "fact5": [
+   {"img": "spiral", "motion": "out", "labels": [
+     {"text": "Or is gravity wrong?", "at": "gravity के नियम", "pos": "bottom", "size": 70}]},
+   {"at": "अरबों light-years दूर", "gfx": "collision", "labels": [
+     {"text": "~4,700 km/s", "at": "चार हज़ार सात सौ", "pos": "tr", "size": 80}],
+    "sfx": [{"type": "boom", "at": "टकराए"}]},
+   {"at": "Bullet Cluster", "img": "bullet", "motion": "in", "labels": [
+     {"text": "BULLET CLUSTER", "at": "Bullet Cluster", "pos": "tl", "size": 90}]},
+   {"at": "किसी भी cluster", "img": "bullet", "crop": [0.25, 0.1, 0.85, 0.9], "motion": "in", "labels": [
+     {"text": "Hot gas (X-ray)", "at": "X-rays", "pos": "bottom", "size": 70, "color": [255, 120, 200]}]},
+   {"at": "लेकिन जब gravitational", "img": "bullet", "crop": [0.05, 0.05, 0.95, 0.95], "motion": "out", "labels": [
+     {"text": "Mass (lensing)", "at": "lensing", "pos": "bottom", "size": 70, "color": [120, 170, 255]}]},
+   {"at": "दो हज़ार छह", "img": "bullet", "motion": "out", "labels": [
+     {"text": "2006", "at": "दो हज़ार छह", "pos": "tl", "size": 110},
+     {"text": "The most direct proof of dark matter", "at": "सबसे सीधा", "pos": "bottom", "size": 60}]}
+  ],
+  "fact4": [
+   {"img": "cmb", "fit": "contain", "motion": "in", "labels": [
+     {"text": "Cosmic Microwave Background", "at": "cosmic microwave", "pos": "bottom", "size": 60},
+     {"text": "PLANCK (ESA)", "at": "Planck", "pos": "tl", "size": 90},
+     {"text": "2013 – 2018", "at": "दो हज़ार तेरह", "pos": "tr", "size": 70}]},
+   {"at": "नतीजा चौंका", "gfx": "balance", "labels": [
+     {"text": "Dark matter ≈ 85% of all matter", "at": "पचासी", "pos": "top", "size": 70}]},
+   {"at": "और जब ब्रह्मांड की पूरी", "gfx": "pie"},
+   {"at": "इंसान ने जिस", "img": "deepfield", "motion": "out", "labels": [
+     {"text": "We have seen only 5%", "at": "पाँच percent निकला", "pos": "bottom", "size": 70}]}
+  ],
+  "fact3": [
+   {"img": "spiral", "motion": "in"},
+   {"at": "Big Bang के बाद लगभग", "gfx": "cosmic_web", "labels": [
+     {"text": "380,000 years after the Big Bang", "at": "तीन लाख", "pos": "top", "size": 64},
+     {"text": "THE COSMIC WEB", "at": "cosmic web", "pos": "bottom", "size": 100}]},
+   {"at": "जब normal matter आज़ाद", "gfx": "cosmic_web_glow", "labels": [
+     {"text": "First stars and galaxies", "at": "पहले तारे", "pos": "bottom", "size": 64}]},
+   {"at": "James Webb Telescope", "img": "smacs", "motion": "out", "labels": [
+     {"text": "JWST", "at": "James Webb", "pos": "tl", "size": 90},
+     {"text": "~300 million years after the Big Bang", "at": "तीस करोड़", "pos": "bottom", "size": 60}]},
+   {"at": "Dark matter के बिना", "img": "andromeda", "motion": "in"},
+   {"at": "न Sun", "img": "earth", "fit": "contain", "motion": "in"}
+  ],
+  "fact2": [
+   {"img": "earth", "fit": "contain", "motion": "out"},
+   {"at": "Sun, Milky Way के center", "gfx": "galactic_orbit", "labels": [
+     {"text": "230 km/s", "at": "दो सौ तीस", "pos": "tr", "size": 90}]},
+   {"at": "इसलिए galaxy में आगे", "gfx": "wind", "labels": [
+     {"text": "DARK MATTER WIND", "at": "dark matter की हवा", "pos": "top", "size": 90}]},
+   {"at": "Earth के आस-पास", "gfx": "starfield", "labels": [
+     {"text": "Dark matter in an Earth-sized volume", "at": "Earth जितने", "pos": "center", "size": 70},
+     {"text": "< 1 kg", "at": "एक किलो", "pos": "lower", "size": 150}]},
+   {"at": "लेकिन जब यही पतला", "gfx": "halo_full", "labels": [
+     {"text": "The Milky Way's dark matter: ~1 trillion Suns", "at": "trillion", "pos": "bottom", "size": 64}]}
+  ],
+  "fact1": [
+   {"img": "deepfield", "motion": "in", "labels": [
+     {"text": "What IS dark matter?", "at": "असल में है क्या", "pos": "center", "size": 110}]},
+   {"at": "उसे पकड़ने की कोशिश", "gfx": "lz_tank", "labels": [
+     {"text": "South Dakota, USA", "at": "South Dakota", "pos": "tl", "size": 64},
+     {"text": "~1.5 km underground", "at": "डेढ़", "pos": "tl", "size": 64},
+     {"text": "LZ DETECTOR", "at": "LZ नाम", "pos": "tr", "size": 90},
+     {"text": "~10 tonnes of liquid xenon", "at": "दस टन", "pos": "bottom", "size": 64}]},
+   {"at": "एक September", "gfx": "lz_flash", "labels": [
+     {"text": "1 September 2026", "at": "एक September", "pos": "tl", "size": 80},
+     {"text": "1 unexplained event in 220 days", "at": "दो सौ बीस", "pos": "bottom", "size": 64}],
+    "sfx": [{"type": "boom", "at": "जानी-पहचानी"}]},
+   {"at": "इसके सिर्फ़ इत्तेफ़ाक़", "gfx": "probability"},
+   {"at": "Team ने साफ़ कहा", "gfx": "starfield", "labels": [
+     {"text": "\"We are not claiming to have seen dark matter.\"", "at": "Team ने", "pos": "center", "size": 66},
+     {"text": "LZ collaboration, 2026", "at": "साफ़ कहा", "pos": "lower", "size": 48}]},
+   {"at": "अगर यह dark matter नहीं", "gfx": "starfield", "labels": [
+     {"text": "WIMPs", "at": "विम्प्स", "pos": "tl", "size": 90},
+     {"text": "AXIONS", "at": "Axions", "pos": "tr", "size": 90},
+     {"text": "PRIMORDIAL BLACK HOLES", "at": "छोटे black holes", "pos": "center", "size": 90},
+     {"text": "MODIFIED GRAVITY?", "at": "gravity के नियम", "pos": "bottom", "size": 90}]},
+   {"at": "ब्रह्मांड का पचासी", "img": "andromeda", "motion": "out", "overlay": "halo"},
+   {"at": "शायद ब्रह्मांड की सबसे", "img": "deepfield", "motion": "out", "dim": 0.55, "labels": [
+     {"text": "85% OF ALL MATTER.", "at": "शायद ब्रह्मांड", "pos": "center", "size": 120},
+     {"text": "STILL UNKNOWN.", "at": "रहस्य खुलेगा", "pos": "lower", "size": 120}]}
+  ]
+ }
+}
