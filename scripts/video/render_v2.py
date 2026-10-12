@@ -1,18 +1,16 @@
-"""Fast-cut documentary editor (v2): constant 4K-sourced footage, a scene every ~2.3 s,
-a caption for every sentence, transitions between topics, music bed + SFX.
+"""Fast-cut documentary editor: moving 4K-sourced footage, a new shot every ~2.5 s (never the same shot
+twice), a caption for every sentence, transitions between topics, music bed + SFX.
 
-  python render_v2.py <edit.json> <timeline.json> <narration.wav> <clips_dir> <catalog.json>
-                      <music_dir> <fonts_dir> <assets_dir> <out.mp4> [--check] [--only sec1,sec2] [--workers 4]
+  python render_v2.py <cutlist.json> <narration.wav> <edit.json> <timeline.json> <music_dir> <fonts_dir>
+                      <assets_dir> <out.mp4> [--only sec1,sec2] [--workers 4]
 
-edit.json per section:
-  "v": visual beats   [{"at": trigger|null, "pool": name} | {"at": ..., "gfx": name, "bg": pool}]
+The cut list comes from scripts/footage/assign_shots.py, which runs plan() below on edit.json + timeline.json
+and gives every footage item its own shot from the library (clip, start second, crop).
+edit.json per section (built from edit.spec by make_edit.py):
+  "v": visual beats   [{"at": trigger|null, "q": [visual query, ...]} | {"at": ..., "gfx": name}]
   "c": captions       [{"at": trigger|null, "text": "...", "big": true?}]
   "sfx": extra sounds [{"type": "boom", "at": trigger}]
-Top level: "pools" {name: [clip, ...]}, "music" [{"from": section, "track": file}], "cards", "title_card",
-"crops" {clip: [x0, y0, x1, y1]} (manual crop, overrides the one clip_qc.py chose),
-"exclude" {clip: [[from_s, to_s], ...]} (manual cuts: insets, flashes, overlays the text scan can't see).
-Each visual beat is split into scenes of ~SCENE_LEN seconds, each scene a fresh clean-range segment
-of the next clip in the pool (clean = no burned-in text / black, from clip_qc.py).
+Top level: "music" [{"from": section, "track": file}], "cards", "title_card", "card_query", "bg_query".
 """
 import argparse, json, math, os, subprocess, sys
 from multiprocessing import Pool
@@ -22,7 +20,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import render_video as rv  # noqa: E402  (text, glow and graphics helpers)
 
 W, H, FPS, SR = rv.W, rv.H, rv.FPS, rv.SR
-SCENE_LEN = 2.3
+SCENE_LEN = 2.5
 G = rv.G
 TRANS = ["zoom", "flash", "whip", "blur"]
 
@@ -55,10 +53,10 @@ def plan(edit, tl):
             prev_end = secs[order[k - 1]]["end"] + off
             c0 = prev_end
             if k == 1:
-                items.append({"kind": "title", "sec": sid, "t0": prev_end, "t1": prev_end + 2.6, "text": edit["title_card"], "pool": "space"})
+                items.append({"kind": "title", "sec": sid, "t0": prev_end, "t1": prev_end + 2.6, "text": edit["title_card"], "q": edit["card_query"]})
                 sfx += [("boom", prev_end + 0.05), ("whoosh_big", prev_end)]
                 c0 = prev_end + 2.6
-            items.append({"kind": "card", "sec": sid, "t0": c0, "t1": start + 0.9, "text": edit["cards"][sid], "pool": "space"})
+            items.append({"kind": "card", "sec": sid, "t0": c0, "t1": start + 0.9, "text": edit["cards"][sid], "q": edit["card_query"]})
             sfx.append(("whoosh_big", c0))
             first = start + 0.9
         spec = edit["sections"][sid]
@@ -73,12 +71,12 @@ def plan(edit, tl):
                 trans_i += 1
                 sfx.append(("whoosh", b0))
             if "gfx" in b:
-                items.append({"kind": "gfx", "sec": sid, "t0": b0, "t1": b1, "gfx": b["gfx"], "pool": b.get("bg", "space"), "trans": tr})
+                items.append({"kind": "gfx", "sec": sid, "t0": b0, "t1": b1, "gfx": b["gfx"], "q": edit["bg_query"], "trans": tr})
                 continue
             n = max(1, round((b1 - b0) / SCENE_LEN))
             for q in range(n):
                 items.append({"kind": "clip", "sec": sid, "t0": b0 + (b1 - b0) * q / n, "t1": b0 + (b1 - b0) * (q + 1) / n,
-                              "pool": b["pool"], "trans": tr if q == 0 else "xfade", "zoom": "in" if len(items) % 2 else "out"})
+                              "q": b["q"], "trans": tr if q == 0 else "xfade", "zoom": "in" if len(items) % 2 else "out"})
         for c in spec.get("c", []):
             t = first if c["at"] is None else max(first, t_of(sid, c["at"]))
             caps.append({"sec": sid, "t": t, "end": end, "text": c["text"], "big": c.get("big", False)})
@@ -94,42 +92,6 @@ def plan(edit, tl):
         it["f0"], it["f1"] = round(it["t0"] * FPS), round(it["t1"] * FPS)
     items[-1]["f1"] = round(total * FPS)
     return items, caps, sfx, total, off
-
-
-def assign_clips(items, edit, catalog):
-    """Give every item a clean (text-free) segment: least-used clip of its pool first, never the clip of
-    the previous few items, segments of a clip consumed in order (wrapping only when it is used up)."""
-    pools = edit["pools"]
-    for name, cut in edit.get("exclude", {}).items():  # manual cuts on top of clip_qc.py's
-        if name in catalog:
-            rng = catalog[name]["clean"]
-            for x0, x1 in cut:
-                rng = [r for a, z in rng for r in ([a, min(z, x0)], [max(a, x1), z]) if r[1] - r[0] >= 1.5]
-            catalog[name] = dict(catalog[name], clean=rng)
-    cursor, used, recent = {}, {}, []
-    for it in items:
-        need = (it["t1"] - it["t0"]) + 0.8  # include transition overlap
-        best = None
-        for k, name in enumerate(pools[it["pool"]]):
-            ok = [r for r in catalog.get(name, {}).get("clean", []) if r[1] - r[0] >= need]
-            if not ok:
-                continue
-            have = sum(r[1] - r[0] for r in ok)
-            score = 1 - used.get(name, 0.0) / have - (2.0 if name in recent[-3:] else 0) - 0.001 * k
-            if best is None or score > best[0]:
-                best = (score, name, ok)
-        if best is None:
-            raise SystemExit(f"pool {it['pool']} has no clip with {need:.1f}s clean footage")
-        _, name, ok = best
-        cur = cursor.get(name, 0.0)
-        seg = next((r for r in ok if max(cur, r[0]) + need <= r[1]), None)
-        if seg is None:  # used up: wrap around
-            seg, cur = ok[0], ok[0][0]
-        s0 = max(cur, seg[0])
-        it["clip"], it["ss"] = name, round(s0, 2)
-        cursor[name] = s0 + need + 0.5
-        used[name] = used.get(name, 0.0) + need + 0.5
-        recent.append(name)
 
 
 # ------------------------------------------------------------------ frames
@@ -158,7 +120,7 @@ def kb(fr, p, mode):
 def bg_frame(it, f):
     rd = it.setdefault("_rd", None)
     if rd is None:
-        it["_rd"] = rd = ClipReader(os.path.join(G["clips"], it["clip"] + ".mp4"), it["ss"], G["crops"].get(it["clip"]))
+        it["_rd"] = rd = ClipReader(os.path.join(G["clips"], it["clip"] + ".mp4"), it["ss"], it.get("crop"))
     return rd.read()
 
 
@@ -240,9 +202,9 @@ def draw_caps(fr, caps, f):
                 rv.draw_text(fr, c["text"], size, (0.5, 0.875 + 0.02 * (1 - min(1, dt / 0.25))), op)
 
 
-def init(clips, fonts, assets, crops):
+def init(clips, fonts, assets):
     rv.init_worker(assets, fonts)
-    G["clips"], G["crops"] = clips, crops
+    G["clips"] = clips
     G["bgframe"] = None
     g = np.linspace(0, 1, 280) ** 1.6 * 0.65
     G["band"] = np.repeat(g[:, None, None], W, 1).astype(np.float32)
@@ -357,25 +319,16 @@ def mix(narr, sfx, total, off, edit, tl, music_dir):
 
 def main():
     ap = argparse.ArgumentParser()
-    for a in ("edit", "timeline", "narration", "clips", "catalog", "music", "fonts", "assets", "out"):
+    for a in ("cutlist", "narration", "edit", "timeline", "music", "fonts", "assets", "out"):
         ap.add_argument(a)
-    ap.add_argument("--check", action="store_true")
     ap.add_argument("--only", default="")
     ap.add_argument("--workers", type=int, default=4)
     a = ap.parse_args()
-    edit, tl, catalog = json.load(open(a.edit)), json.load(open(a.timeline)), json.load(open(a.catalog))
-    items, caps, sfx, total, off = plan(edit, tl)
-    assign_clips(items, edit, catalog)
+    cl, edit, tl = json.load(open(a.cutlist)), json.load(open(a.edit)), json.load(open(a.timeline))
+    items, caps, sfx, total, off = cl["items"], cl["caps"], [tuple(x) for x in cl["sfx"]], cl["total"], cl["off"]
     total_f = round(total * FPS)
-    lens = [it["t1"] - it["t0"] for it in items]
-    print(f"{len(items)} items, {len(caps)} captions, {len(sfx)} sfx, {total:.1f}s, median item {np.median(lens):.2f}s")
-    if a.check:
-        from collections import Counter
-        print("clip uses:", Counter(it.get("clip") for it in items).most_common(12))
-        for it in items[:40]:
-            print(f"{it['t0']:7.2f} {it['kind']:5s} {it.get('gfx') or it.get('clip')} @{it.get('ss')} {it.get('trans')}")
-        return
-    work = os.path.splitext(a.out)[0] + "_v2work"
+    print(f"{len(items)} items, {len(caps)} captions, {len(sfx)} sfx, {total:.1f}s")
+    work = os.path.splitext(a.out)[0] + "_work"
     os.makedirs(work, exist_ok=True)
     only = set(filter(None, a.only.split(",")))
     order = [s["id"] for s in tl["sections"]]
@@ -386,7 +339,7 @@ def main():
         its = [dict(it) for it in items if it["sec"] == sid]
         jobs.append((sid, its, caps, work, total_f))
     jobs.sort(key=lambda j: -(j[1][-1]["f1"] - j[1][0]["f0"]))
-    with Pool(a.workers, initializer=init, initargs=(a.clips, a.fonts, a.assets, {**{k: v.get("crop") for k, v in catalog.items()}, **edit.get("crops", {})})) as pool:
+    with Pool(a.workers, initializer=init, initargs=(cl["clips_dir"], a.fonts, a.assets)) as pool:
         for k, pth in enumerate(pool.imap_unordered(render_chunk, jobs)):
             print(f"  [{k + 1}/{len(jobs)}] {os.path.basename(pth)}", flush=True)
     if only:

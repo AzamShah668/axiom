@@ -21,8 +21,12 @@ data/
 logs/
 *.log
 
-# Claude Code internals
-.claude/
+# Claude Code internals (project skills are versioned)
+.claude/*
+!.claude/skills/
+
+# Heavy per-production working files (footage library, renders) - rebuilt by the pipeline
+work/
 
 # Chrome automation profile
 .automation_profile/

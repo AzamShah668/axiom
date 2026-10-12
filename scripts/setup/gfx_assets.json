@@ -1,0 +1,23 @@
+{
+ "milkyway": {
+  "src": "nasa",
+  "q": "Milky Way galaxy artist concept",
+  "must": [
+   "milky way"
+  ]
+ },
+ "chandra_tel": {
+  "src": "nasa",
+  "q": "Chandra X-ray Observatory illustration",
+  "must": [
+   "chandra"
+  ]
+ },
+ "earth": {
+  "src": "nasa",
+  "q": "Blue Marble Earth",
+  "must": [
+   "blue marble"
+  ]
+ }
+}

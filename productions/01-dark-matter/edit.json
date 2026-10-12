@@ -69,191 +69,116 @@
    "track": "Ossuary_5_-_Rest.mp3"
   }
  ],
- "pools": {
-  "space": [
-   "svs_galaxy_traverse",
-   "eso1714b",
-   "eso1836b",
-   "eso1612b",
-   "eso1138a",
-   "eso2415b",
-   "esahubble_galaxy_01",
-   "eso1612a"
-  ],
-  "nebula": [
-   "eso1138a",
-   "svs_supernova_01",
-   "eso1319a",
-   "eso2203b"
-  ],
-  "deep": [
-   "eso1612b",
-   "eso2415b",
-   "eso1836b",
-   "eso1612a",
-   "esahubble_galaxy_01",
-   "svs_lensing_04"
-  ],
-  "cluster": [
-   "eso1514a",
-   "esahubble_galaxy_01",
-   "eso1812b",
-   "svs_cluster_01",
-   "eso2304b"
-  ],
-  "galaxy": [
-   "svs_m101",
-   "svs_ngc253",
-   "eso1709b",
-   "svs_andromeda_1x"
-  ],
-  "spin": [
-   "eso1709b",
-   "svs_m101"
-  ],
-  "andromeda": [
-   "svs_andromeda_1x",
-   "svs_andromeda_2x"
-  ],
-  "milkyway": [
-   "eso1714b",
-   "svs_galaxy_traverse"
-  ],
-  "lens": [
-   "svs_lensing_01",
-   "svs_lensing_02"
-  ],
-  "dmmap": [
-   "eso2304b",
-   "eso1833b",
-   "svs_cluster_01"
-  ],
-  "hubble": [
-   "hub_hc133c",
-   "esahubble_deepspace_01"
-  ],
-  "telescope": [
-   "hub_hc133c",
-   "nasa_telescope_01",
-   "esahubble_deepspace_01"
-  ],
-  "earth": [
-   "earthrise_over_lunar_limb",
-   "svs_earth_equinox",
-   "moon_recedes_earth_appears_starfield"
-  ],
-  "earthrise": [
-   "earthrise_over_lunar_limb",
-   "moon_recedes_earth_appears_starfield"
-  ],
-  "bigbang": [
-   "svs_bigbang_01",
-   "eso1426a"
-  ],
-  "solar": [
-   "solar_system_orbits_drawing_01",
-   "elliptical_orbits_drawing_around_star_01"
-  ],
-  "sun": [
-   "sun_closeup_views_montage_01"
-  ],
-  "blackhole": [
-   "svs_lensing_05",
-   "svs_lensing_10",
-   "eso2203b",
-   "svs_lensing_12"
-  ],
-  "bg": [
-   "eso1612a",
-   "eso2415b",
-   "eso1426a",
-   "eso1836b",
-   "svs_lensing_03",
-   "svs_lensing_04"
-  ]
- },
- "crops": {
-  "svs_earth_equinox": [
-   0.06,
-   0.0,
-   0.94,
-   0.88
-  ]
- },
- "exclude": {
-  "eso2415b": [
-   [
-    36,
-    60
-   ]
-  ],
-  "svs_m101": [
-   [
-    11,
-    70
-   ]
-  ],
-  "svs_bigbang_01": [
-   [
-    1,
-    4
-   ]
-  ],
-  "esahubble_galaxy_01": [
-   [
-    0,
-    13
-   ]
-  ]
- },
+ "card_query": [
+  "slow flight through a star field",
+  "deep space with distant galaxies drifting"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [],
+ "crops": {},
+ "exclude": {},
  "sections": {
   "cold_open": {
    "v": [
     {
      "at": null,
-     "pool": "space"
+     "q": [
+      "the Milky Way over an observatory at night",
+      "starry night sky timelapse over telescopes"
+     ]
     },
     {
      "at": "California",
-     "pool": "telescope"
+     "q": [
+      "a large telescope inside an observatory dome",
+      "observatory dome opening at dusk"
+     ]
+    },
+    {
+     "at": "Swiss",
+     "q": [
+      "an astronomer's telescope pointed at the night sky",
+      "telescope moving under the stars"
+     ]
     },
     {
      "at": "लगभग तीस",
-     "pool": "cluster"
+     "q": [
+      "a huge cluster of hundreds of galaxies",
+      "zooming into a galaxy cluster"
+     ]
+    },
+    {
+     "at": "Coma Cluster",
+     "q": [
+      "a rich cluster of elliptical galaxies in deep space"
+     ]
+    },
+    {
+     "at": "Zwicky ने इन",
+     "q": [
+      "pan across a cluster of galaxies",
+      "galaxies in a cluster"
+     ]
     },
     {
      "at": "Galaxies इतनी",
-     "gfx": "flyapart",
-     "bg": "bg"
+     "gfx": "flyapart"
     },
     {
      "at": "Cluster को",
-     "pool": "cluster"
+     "q": [
+      "galaxies flying apart in space",
+      "galaxies colliding"
+     ]
+    },
+    {
+     "at": "फिर भी वह",
+     "q": [
+      "giant elliptical galaxy at the centre of a cluster",
+      "galaxy group"
+     ]
     },
     {
      "at": "जैसे कोई",
-     "pool": "nebula"
+     "q": [
+      "dark nebula with glowing edges",
+      "mysterious dark cloud in space"
+     ]
     },
     {
      "at": "Zwicky ने उस",
-     "pool": "deep"
+     "q": [
+      "faint galaxies in dark empty space"
+     ]
     },
     {
      "at": "डुंकले",
-     "pool": "galaxy"
+     "q": [
+      "simulation of dark matter around galaxies",
+      "visualization of invisible dark matter"
+     ]
     },
     {
      "at": "लगभग सौ",
-     "pool": "space"
+     "q": [
+      "deep field full of distant galaxies"
+     ]
     },
     {
      "at": "और दो हज़ार",
-     "pool": "earth"
+     "q": [
+      "planet Earth seen from space at night",
+      "the Earth from orbit"
+     ]
     },
     {
      "at": "ज़मीन से",
-     "gfx": "lz_flash",
-     "bg": "space"
+     "gfx": "lz_flash"
     }
    ],
    "c": [
@@ -354,32 +279,61 @@
    "v": [
     {
      "at": null,
-     "pool": "cluster"
+     "q": [
+      "zooming into a galaxy cluster",
+      "galaxy cluster in deep space"
+     ]
+    },
+    {
+     "at": "सौ गुना",
+     "q": [
+      "glowing giant galaxies in a cluster"
+     ]
     },
     {
      "at": "यह संख्या",
-     "pool": "telescope"
+     "q": [
+      "telescopes on a mountain under the stars",
+      "observatory at night"
+     ]
+    },
+    {
+     "at": "ज़्यादातर astronomers",
+     "q": [
+      "astronomers at an observatory",
+      "telescope dome at night"
+     ]
     },
     {
      "at": "Zwicky अपने",
-     "pool": "space"
+     "q": [
+      "glowing red nebula",
+      "turbulent cosmic gas cloud"
+     ]
     },
     {
      "at": "धीरे-धीरे",
-     "pool": "deep"
+     "q": [
+      "slow zoom into a dark sky",
+      "faint distant galaxies in darkness"
+     ]
     },
     {
      "at": "Coma Cluster अपनी",
-     "pool": "cluster"
+     "q": [
+      "elliptical galaxies in a cluster",
+      "galaxy cluster"
+     ]
     },
     {
      "at": "अगले लगभग",
-     "gfx": "year_counter",
-     "bg": "bg"
+     "gfx": "year_counter"
     },
     {
      "at": "दुनिया इस",
-     "pool": "nebula"
+     "q": [
+      "dark empty space with faint stars"
+     ]
     }
    ],
    "c": [
@@ -435,63 +389,98 @@
    "v": [
     {
      "at": null,
-     "pool": "telescope"
+     "q": [
+      "observatory dome under a starry sky timelapse"
+     ]
     },
     {
      "at": "इस बार American",
-     "pool": "space"
+     "q": [
+      "telescope pointing at the night sky"
+     ]
     },
     {
      "at": "Rubin और",
-     "pool": "andromeda"
+     "q": [
+      "the Andromeda galaxy",
+      "a large spiral galaxy"
+     ]
+    },
+    {
+     "at": "शुरुआत",
+     "q": [
+      "the Andromeda galaxy close-up",
+      "neighbouring spiral galaxy"
+     ]
     },
     {
      "at": "Solar system में",
-     "pool": "solar"
+     "q": [
+      "planets orbiting the Sun animation",
+      "solar system"
+     ]
     },
     {
      "at": "Earth लगभग",
-     "gfx": "orbits",
-     "bg": "bg"
+     "gfx": "orbits"
     },
     {
      "at": "Galaxies में भी",
-     "pool": "galaxy"
+     "q": [
+      "a spiral galaxy seen face-on",
+      "rotating spiral galaxy"
+     ]
     },
     {
      "at": "लेकिन Rubin",
-     "gfx": "rotation_curve",
-     "bg": "bg"
+     "gfx": "rotation_curve"
     },
     {
      "at": "इतनी रफ़्तार",
-     "pool": "spin"
+     "q": [
+      "spinning spiral galaxy animation",
+      "rotating galaxy simulation"
+     ]
+    },
+    {
+     "at": "फिर भी galaxy",
+     "q": [
+      "a spiral galaxy in space"
+     ]
     },
     {
      "at": "एक galaxy के बाद",
-     "pool": "galaxy"
+     "q": [
+      "different spiral galaxies",
+      "edge-on galaxy"
+     ]
     },
     {
      "at": "हर galaxy के अंदर",
-     "gfx": "halo_full",
-     "bg": "bg"
+     "gfx": "halo_full"
     },
     {
      "at": "Zwicky सही",
-     "pool": "cluster"
+     "q": [
+      "a galaxy cluster in deep space"
+     ]
     },
     {
      "at": "Vera Rubin का",
-     "pool": "space"
+     "q": [
+      "the Milky Way over an observatory at night"
+     ]
     },
     {
      "at": "आज Chile",
-     "pool": "telescope"
+     "q": [
+      "observatory on a mountaintop in the Atacama desert",
+      "telescopes in Chile at night"
+     ]
     },
     {
      "at": "Vera C. Rubin",
-     "gfx": "observatory",
-     "bg": "bg"
+     "gfx": "observatory"
     }
    ],
    "c": [
@@ -597,46 +586,74 @@
    "v": [
     {
      "at": null,
-     "pool": "galaxy"
+     "q": [
+      "spiral galaxy close-up"
+     ]
     },
     {
      "at": "Milky Way लगभग",
-     "pool": "milkyway"
+     "q": [
+      "the Milky Way band across the night sky",
+      "flying through the Milky Way"
+     ]
+    },
+    {
+     "at": "और उसमें सौ",
+     "q": [
+      "dense star field with billions of stars"
+     ]
     },
     {
      "at": "लेकिन यह चमकती",
-     "gfx": "mw_spiral",
-     "bg": "bg"
+     "gfx": "mw_spiral"
     },
     {
      "at": "इसके चारों",
-     "gfx": "halo_expand",
-     "bg": "bg"
+     "gfx": "halo_expand"
     },
     {
      "at": "यह halo",
-     "pool": "space"
+     "q": [
+      "visualization of a dark matter halo around a galaxy",
+      "glowing halo surrounding a galaxy"
+     ]
     },
     {
      "at": "अनुमान है",
-     "gfx": "halo_full",
-     "bg": "bg"
+     "gfx": "halo_full"
     },
     {
      "at": "अरबों तारों",
-     "pool": "milkyway"
+     "q": [
+      "the centre of the Milky Way",
+      "the Milky Way seen from outside"
+     ]
+    },
+    {
+     "at": "असल में एक",
+     "q": [
+      "a small glowing galaxy in vast dark space"
+     ]
     },
     {
      "at": "और यह अकेली",
-     "pool": "galaxy"
+     "q": [
+      "spiral galaxy",
+      "elliptical galaxy"
+     ]
     },
     {
      "at": "ब्रह्मांड की लगभग",
-     "pool": "deep"
+     "q": [
+      "galaxy formation simulation",
+      "young galaxies forming"
+     ]
     },
     {
      "at": "और उसी के अंदर",
-     "pool": "galaxy"
+     "q": [
+      "galaxies growing over time"
+     ]
     }
    ],
    "c": [
@@ -701,36 +718,86 @@
    "v": [
     {
      "at": null,
-     "pool": "space"
+     "q": [
+      "dark empty space with faint stars"
+     ]
     },
     {
      "at": "Hubble,",
-     "pool": "telescope"
+     "q": [
+      "the Hubble Space Telescope in orbit"
+     ]
+    },
+    {
+     "at": "James Webb",
+     "q": [
+      "the James Webb Space Telescope in space"
+     ]
+    },
+    {
+     "at": "radio dishes",
+     "q": [
+      "radio telescope dishes at night",
+      "ALMA antennas"
+     ]
+    },
+    {
+     "at": "X-ray",
+     "q": [
+      "X-ray space telescope in orbit",
+      "space telescope"
+     ]
     },
     {
      "at": "इंसान के बनाए",
-     "gfx": "spectrum",
-     "bg": "bg"
+     "gfx": "spectrum"
     },
     {
      "at": "लेकिन dark matter इनमें",
-     "pool": "deep"
+     "q": [
+      "dark space with faint galaxies"
+     ]
     },
     {
      "at": "वह रोशनी",
-     "pool": "nebula"
+     "q": [
+      "dark nebula blocking starlight",
+      "black void in space"
+     ]
+    },
+    {
+     "at": "न चमकता",
+     "q": [
+      "dark cloud silhouette against stars"
+     ]
     },
     {
      "at": "उसकी मौजूदगी",
-     "pool": "galaxy"
+     "q": [
+      "spiral galaxy",
+      "galaxy held by gravity"
+     ]
     },
     {
      "at": "बिल्कुल हवा",
-     "pool": "earth"
+     "q": [
+      "clouds moving over the Earth seen from space",
+      "Earth atmosphere"
+     ]
+    },
+    {
+     "at": "लेकिन पेड़ों",
+     "q": [
+      "aurora seen from orbit",
+      "clouds on Earth from orbit"
+     ]
     },
     {
      "at": "Dark matter की कहानी",
-     "pool": "spin"
+     "q": [
+      "stars orbiting the centre of a galaxy",
+      "rotating galaxy"
+     ]
     }
    ],
    "c": [
@@ -790,44 +857,80 @@
    "v": [
     {
      "at": null,
-     "pool": "galaxy"
+     "q": [
+      "massive galaxy warping space"
+     ]
     },
     {
      "at": "उन्नीस सौ पंद्रह",
-     "pool": "space"
+     "q": [
+      "starlight passing near the Sun",
+      "solar eclipse"
+     ]
     },
     {
      "at": "कि भारी",
-     "gfx": "spacetime",
-     "bg": "bg"
+     "gfx": "spacetime"
     },
     {
      "at": "इसे कहते हैं",
-     "pool": "lens"
+     "q": [
+      "gravitational lensing of a distant galaxy",
+      "Einstein ring"
+     ]
     },
     {
      "at": "जब किसी दूर",
-     "pool": "lens"
+     "q": [
+      "light from a distant galaxy bent by a galaxy cluster",
+      "lensed arcs in a galaxy cluster"
+     ]
     },
     {
      "at": "Galaxy खिंची",
-     "pool": "lens"
+     "q": [
+      "stretched arcs of light around a galaxy cluster",
+      "Einstein ring"
+     ]
     },
     {
      "at": "इन टेढ़ी",
-     "pool": "dmmap"
+     "q": [
+      "zooming into a galaxy cluster with arcs",
+      "lensing galaxy cluster"
+     ]
+    },
+    {
+     "at": "astronomers ने यह",
+     "q": [
+      "map of dark matter overlaid on a galaxy cluster",
+      "blue dark matter map"
+     ]
     },
     {
      "at": "दो हज़ार सात",
-     "pool": "hubble"
+     "q": [
+      "the Hubble Space Telescope in orbit"
+     ]
+    },
+    {
+     "at": "Hubble Space",
+     "q": [
+      "Hubble image of a galaxy cluster"
+     ]
     },
     {
      "at": "dark matter का एक विशाल",
-     "pool": "lens"
+     "q": [
+      "ring of dark matter in a galaxy cluster",
+      "dark matter distribution map"
+     ]
     },
     {
      "at": "पहली बार",
-     "pool": "dmmap"
+     "q": [
+      "visualization of dark matter distribution"
+     ]
     }
    ],
    "c": [
@@ -893,48 +996,92 @@
    "v": [
     {
      "at": null,
-     "pool": "space"
+     "q": [
+      "astronomer at a telescope at night",
+      "observatory"
+     ]
     },
     {
      "at": "क्या पता",
-     "pool": "deep"
+     "q": [
+      "simulation of gravity in the universe",
+      "warped space"
+     ]
     },
     {
      "at": "इस बहस",
-     "pool": "cluster"
+     "q": [
+      "two galaxy clusters colliding"
+     ]
     },
     {
      "at": "अरबों light-years",
-     "gfx": "collision",
-     "bg": "bg"
+     "gfx": "collision"
     },
     {
      "at": "टक्कर के बाद",
-     "pool": "cluster"
+     "q": [
+      "galaxy cluster merger simulation",
+      "colliding clusters"
+     ]
+    },
+    {
+     "at": "चार हज़ार",
+     "q": [
+      "shock wave in hot gas",
+      "fast moving gas in space"
+     ]
     },
     {
      "at": "इस जोड़ी",
-     "pool": "hubble"
+     "q": [
+      "the Bullet Cluster",
+      "colliding galaxy clusters in X-ray pink and blue"
+     ]
     },
     {
      "at": "किसी भी cluster",
-     "pool": "cluster"
+     "q": [
+      "hot glowing gas in a galaxy cluster",
+      "X-ray gas"
+     ]
+    },
+    {
+     "at": "इतनी गरम",
+     "q": [
+      "X-ray glowing pink gas"
+     ]
     },
     {
      "at": "टक्कर में यह",
-     "pool": "dmmap"
+     "q": [
+      "gas collision shock in space"
+     ]
     },
     {
      "at": "लेकिन जब gravitational",
-     "pool": "lens"
+     "q": [
+      "blue dark matter map on a galaxy cluster"
+     ]
     },
     {
      "at": "वह बिना रुके",
-     "pool": "cluster"
+     "q": [
+      "galaxies passing through each other"
+     ]
     },
     {
      "at": "दो हज़ार छह",
-     "pool": "hubble"
+     "q": [
+      "X-ray observatory spacecraft",
+      "space telescope in orbit"
+     ]
+    },
+    {
+     "at": "तो इसे dark matter",
+     "q": [
+      "deep image of a galaxy cluster"
+     ]
     }
    ],
    "c": [
@@ -1020,49 +1167,96 @@
    "v": [
     {
      "at": null,
-     "pool": "deep"
+     "q": [
+      "zoom out across the universe"
+     ]
     },
     {
      "at": "इसका जवाब",
-     "pool": "bigbang"
+     "q": [
+      "the Big Bang",
+      "early universe glowing"
+     ]
+    },
+    {
+     "at": "cosmic microwave",
+     "q": [
+      "cosmic microwave background map",
+      "afterglow of the Big Bang"
+     ]
     },
     {
      "at": "दो हज़ार तेरह",
-     "pool": "telescope"
+     "q": [
+      "satellite spacecraft in space",
+      "space observatory spacecraft"
+     ]
+    },
+    {
+     "at": "European Space",
+     "q": [
+      "spacecraft observing the sky"
+     ]
     },
     {
      "at": "नतीजा",
-     "pool": "space"
+     "q": [
+      "deep field of galaxies"
+     ]
+    },
+    {
+     "at": "ब्रह्मांड के कुल",
+     "q": [
+      "dark matter simulation",
+      "cosmic web simulation"
+     ]
     },
     {
      "at": "हर एक किलो",
-     "gfx": "balance",
-     "bg": "bg"
+     "gfx": "balance"
     },
     {
      "at": "तारे, ग्रह",
-     "pool": "earth"
+     "q": [
+      "planets and stars",
+      "Earth from space"
+     ]
     },
     {
      "at": "सब मिलकर",
-     "pool": "galaxy"
+     "q": [
+      "star field with nebula"
+     ]
     },
     {
      "at": "और जब ब्रह्मांड",
-     "gfx": "pie",
-     "bg": "bg"
+     "gfx": "pie"
     },
     {
      "at": "एक बिल्कुल अलग",
-     "pool": "deep"
+     "q": [
+      "expanding universe",
+      "galaxies moving apart"
+     ]
     },
     {
      "at": "Dark matter चीज़ों",
-     "pool": "spin"
+     "q": [
+      "galaxies merging",
+      "interacting galaxies"
+     ]
     },
     {
      "at": "इंसान ने",
-     "pool": "space"
+     "q": [
+      "telescope at night under the Milky Way"
+     ]
+    },
+    {
+     "at": "वह पूरी तस्वीर",
+     "q": [
+      "zoom out from a galaxy to the whole universe"
+     ]
     }
    ],
    "c": [
@@ -1147,57 +1341,100 @@
    "v": [
     {
      "at": null,
-     "pool": "galaxy"
+     "q": [
+      "galaxy formation"
+     ]
     },
     {
      "at": "उसी ने",
-     "pool": "deep"
+     "q": [
+      "simulation of the universe forming galaxies"
+     ]
     },
     {
      "at": "Big Bang के बाद",
-     "pool": "bigbang"
+     "q": [
+      "the early universe after the Big Bang",
+      "glowing hot gas fog"
+     ]
+    },
+    {
+     "at": "normal matter रोशनी",
+     "q": [
+      "glowing plasma"
+     ]
     },
     {
      "at": "Dark matter पर",
-     "pool": "space"
+     "q": [
+      "dark matter clumping simulation"
+     ]
     },
     {
      "at": "इसलिए वह",
-     "pool": "deep"
+     "q": [
+      "dark matter filaments forming simulation"
+     ]
     },
     {
      "at": "और पूरे ब्रह्मांड",
-     "gfx": "cosmic_web",
-     "bg": "bg"
+     "gfx": "cosmic_web"
+    },
+    {
+     "at": "cosmic web",
+     "q": [
+      "cosmic web simulation filaments"
+     ]
     },
     {
      "at": "जब normal matter",
-     "gfx": "cosmic_web_glow",
-     "bg": "bg"
+     "gfx": "cosmic_web_glow"
     },
     {
      "at": "वहीं gas",
-     "pool": "nebula"
+     "q": [
+      "gas clouds collapsing to form stars",
+      "star formation nebula"
+     ]
     },
     {
      "at": "James Webb",
-     "pool": "deep"
+     "q": [
+      "the James Webb Space Telescope",
+      "Webb deep field"
+     ]
     },
     {
      "at": "Dark matter के बिना",
-     "pool": "galaxy"
+     "q": [
+      "early galaxies forming",
+      "first galaxies"
+     ]
     },
     {
      "at": "शायद आज",
-     "pool": "milkyway"
+     "q": [
+      "the Milky Way"
+     ]
     },
     {
      "at": "न Sun",
-     "pool": "sun"
+     "q": [
+      "the Sun close-up"
+     ]
     },
     {
      "at": "न Earth",
-     "pool": "earth"
+     "q": [
+      "the Earth from space"
+     ]
+    },
+    {
+     "at": "और न ही",
+     "q": [
+      "Earth at night with city lights",
+      "life on Earth"
+     ]
     }
    ],
    "c": [
@@ -1266,49 +1503,73 @@
    "v": [
     {
      "at": null,
-     "pool": "space"
+     "q": [
+      "cosmic web"
+     ]
     },
     {
      "at": "वह यहीं",
-     "pool": "earth"
+     "q": [
+      "planet Earth from space"
+     ]
     },
     {
      "at": "Sun, Milky Way",
-     "gfx": "galactic_orbit",
-     "bg": "bg"
+     "gfx": "galactic_orbit"
     },
     {
      "at": "और उसके साथ पूरा",
-     "pool": "solar"
+     "q": [
+      "solar system planets orbiting the Sun"
+     ]
     },
     {
      "at": "लेकिन dark matter halo",
-     "pool": "milkyway"
+     "q": [
+      "halo around the Milky Way visualization"
+     ]
     },
     {
      "at": "इसलिए galaxy",
-     "gfx": "wind",
-     "bg": "bg"
+     "gfx": "wind"
     },
     {
      "at": "यह हवा",
-     "pool": "earth"
+     "q": [
+      "Earth from orbit mountains and oceans",
+      "Earth clouds"
+     ]
     },
     {
      "at": "बिना किसी",
-     "pool": "space"
+     "q": [
+      "particles streaming through space"
+     ]
     },
     {
      "at": "Earth के आस-पास",
-     "pool": "earth"
+     "q": [
+      "Earth and Moon in space"
+     ]
+    },
+    {
+     "at": "कि Earth जितने",
+     "q": [
+      "Earth rotating"
+     ]
     },
     {
      "at": "लेकिन जब यही",
-     "pool": "milkyway"
+     "q": [
+      "the Milky Way galaxy"
+     ]
     },
     {
      "at": "एक trillion",
-     "pool": "galaxy"
+     "q": [
+      "bright galactic centre",
+      "dense star cluster"
+     ]
     }
    ],
    "c": [
@@ -1374,95 +1635,151 @@
    "v": [
     {
      "at": null,
-     "pool": "deep"
+     "q": [
+      "deep field of galaxies"
+     ]
+    },
+    {
+     "at": "dark matter असल",
+     "q": [
+      "mysterious dark space"
+     ]
     },
     {
      "at": "उसे पकड़ने",
-     "pool": "telescope"
+     "q": [
+      "scientists in a laboratory",
+      "detector experiment"
+     ]
     },
     {
      "at": "America के",
-     "pool": "earth"
+     "q": [
+      "North America from space"
+     ]
     },
     {
      "at": "ज़मीन से लगभग",
-     "gfx": "lz_tank",
-     "bg": "bg"
+     "gfx": "lz_tank"
     },
     {
      "at": "इतनी गहराई",
-     "pool": "nebula"
+     "q": [
+      "cosmic rays hitting the Earth's atmosphere",
+      "particles"
+     ]
     },
     {
      "at": "अगर dark matter का",
-     "gfx": "lz_flash",
-     "bg": "bg"
+     "gfx": "lz_flash"
     },
     {
      "at": "एक September",
-     "pool": "deep"
+     "q": [
+      "deep field"
+     ]
     },
     {
      "at": "LZ की team",
-     "pool": "telescope"
+     "q": [
+      "scientists working at a detector",
+      "laboratory"
+     ]
     },
     {
      "at": "दो सौ बीस",
-     "gfx": "lz_flash",
-     "bg": "bg"
+     "gfx": "lz_flash"
     },
     {
      "at": "इसके सिर्फ़",
-     "gfx": "probability",
-     "bg": "bg"
+     "gfx": "probability"
     },
     {
      "at": "Team ने साफ़",
-     "pool": "space"
+     "q": [
+      "dark space"
+     ]
     },
     {
      "at": "अगर यह dark",
-     "pool": "deep"
+     "q": [
+      "many galaxies in a deep field"
+     ]
+    },
+    {
+     "at": "विम्प्स",
+     "q": [
+      "glowing particles in space"
+     ]
     },
     {
      "at": "Axions",
-     "pool": "nebula"
+     "q": [
+      "faint glowing waves"
+     ]
     },
     {
      "at": "Big Bang के समय",
-     "pool": "blackhole"
+     "q": [
+      "black hole",
+      "primordial black holes"
+     ]
     },
     {
      "at": "और कुछ scientists",
-     "pool": "galaxy"
+     "q": [
+      "gravity warping space",
+      "spiral galaxy"
+     ]
+    },
+    {
+     "at": "और gravity के नियम",
+     "q": [
+      "rotating galaxy"
+     ]
     },
     {
      "at": "ब्रह्मांड का पचासी",
-     "pool": "deep"
+     "q": [
+      "zoom out of the universe"
+     ]
     },
     {
      "at": "हर galaxy को",
-     "pool": "spin"
+     "q": [
+      "galaxies"
+     ]
     },
     {
      "at": "हर इंसान के",
-     "pool": "earth"
+     "q": [
+      "Earth from space"
+     ]
     },
     {
      "at": "और अब तक कोई",
-     "pool": "space"
+     "q": [
+      "dark mysterious space"
+     ]
     },
     {
      "at": "शायद ब्रह्मांड",
-     "pool": "milkyway"
+     "q": [
+      "the Milky Way over a telescope"
+     ]
     },
     {
      "at": "और जिस दिन",
-     "pool": "galaxy"
+     "q": [
+      "zoom into deep space"
+     ]
     },
     {
      "at": "उस दिन इंसान",
-     "pool": "earthrise"
+     "q": [
+      "Earthrise",
+      "Earth seen from the Moon"
+     ]
     }
    ],
    "c": [

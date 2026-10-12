@@ -1,0 +1,84 @@
+{
+ "lead_in": 2.0,
+ "title_card": "10 FACTS ABOUT DARK MATTER",
+ "cards": {
+  "fact10": [
+   "FACT #10",
+   "DISCOVERED IN 1933, IGNORED FOR 40 YEARS"
+  ],
+  "fact9": [
+   "FACT #9",
+   "THE WOMAN WHO PROVED IT"
+  ],
+  "fact8": [
+   "FACT #8",
+   "EVERY GALAXY HAS A HIDDEN HALO"
+  ],
+  "fact7": [
+   "FACT #7",
+   "INVISIBLE AT EVERY WAVELENGTH"
+  ],
+  "fact6": [
+   "FACT #6",
+   "IT BENDS LIGHT"
+  ],
+  "fact5": [
+   "FACT #5",
+   "THE COLLISION THAT REVEALED IT"
+  ],
+  "fact4": [
+   "FACT #4",
+   "5 TIMES MORE THAN NORMAL MATTER"
+  ],
+  "fact3": [
+   "FACT #3",
+   "IT BUILT THE UNIVERSE"
+  ],
+  "fact2": [
+   "FACT #2",
+   "IT'S FLOWING THROUGH EARTH RIGHT NOW"
+  ],
+  "fact1": [
+   "FACT #1",
+   "NOBODY KNOWS WHAT IT IS"
+  ]
+ },
+ "music": [
+  {
+   "from": "cold_open",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "fact10",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "fact8",
+   "track": "Long_Note_Two.mp3"
+  },
+  {
+   "from": "fact6",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "fact4",
+   "track": "Long_Note_Four.mp3"
+  },
+  {
+   "from": "fact2",
+   "track": "Ossuary_5_-_Rest.mp3"
+  }
+ ],
+ "card_query": [
+  "slow flight through a star field",
+  "deep space with distant galaxies drifting"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [],
+ "crops": {},
+ "exclude": {}
+}
