@@ -34,8 +34,18 @@ number, `section/n`, score and query.
 
 Re-run `assign` after every change. It is fast and deterministic.
 
-To make review rounds converge, use `--keep <previous cutlist>` (approved items keep their shot unless now
-banned) and `--changed <previous cutlist>` (sheets show only the items that changed).
+Review rounds converge automatically: `pipeline.sh ... assign` keeps every previously reviewed shot unless
+it is now banned (`--keep`), and the sheets show only the items that changed (`--changed`).
+Use `FRESH=1` for a clean re-solve, e.g. after the footage library grew.
+Typical round 1 bans:
+- graphic overlays, inset boxes and collages
+- split screens and in-shot wipes
+- data-map globes and flat maps
+- presenters and lab talking heads
+- pillarboxed or letterboxed images
+- washed-out white frames
+
+Main footage also gets a penalty for near-black or washed-out frames.
 
 ## 2. Render
 ```bash

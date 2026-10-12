@@ -25,7 +25,9 @@ One command runs the scripted parts (stages 2-6 except writing):
 export PY=<venv python> WORK=<work dir> LIB=<shared library dir> MEDIA=<shared media dir>   # defaults: work/...
 scripts/science/pipeline.sh productions/NN-slug setup            # once per machine: fonts, music, stills
 scripts/science/pipeline.sh productions/NN-slug narration edit footage assign
-#   -> look at $WORK/review_assign/*.jpg, fix with pins/bans/queries, re-run assign
+scripts/science/pipeline.sh productions/NN-slug topup assign     # more 4K footage for weakly matched scenes
+#   -> look at $WORK/review_assign/*.jpg, ban/pin/requery in edit.base.json / edit.spec, then
+#      `pipeline.sh ... edit assign` again (reviewed shots are kept; sheets show only what changed)
 scripts/science/pipeline.sh productions/NN-slug render review
 #   -> look at $WORK/review_render/sheet_*.jpg, fix, re-render the affected sections
 scripts/science/pipeline.sh productions/NN-slug preview credits

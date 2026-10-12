@@ -185,9 +185,9 @@ def main():
     qi = {q: i for i, q in enumerate(qs)}
     SQ = 0.75 * (Q @ E.T) + 0.25 * (Q @ Tshot.T)
     S = np.stack([SQ[[qi[q] for q in it["q"]]].max(0) for it in items])  # items x shots
-    # near-black star fields are dull as main footage (fine behind cards and graphics): small penalty
+    # near-black star fields and washed-out white frames are poor main footage (fine behind cards/graphics)
     lum = np.array([luma(a.lib, s) for s in pool])
-    dull = DARK_PENALTY * np.clip((28 - lum) / 20, 0, 1)
+    dull = DARK_PENALTY * np.clip((28 - lum) / 20, 0, 1) + DARK_PENALTY * np.clip((lum - 120) / 40, 0, 1)  # or washed out
     S = S - np.array([[1.0] if it["kind"] == "clip" else [0.0] for it in items]) * dull[None, :]
     need = np.array([it["t1"] - it["t0"] + PAD for it in items])
     cost = -S + 100.0 * (L[None, :] < need[:, None])

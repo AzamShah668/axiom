@@ -8,7 +8,9 @@
 #   narration  ElevenLabs render of tts/narration.hi.md -> $WORK/voice (narration.wav, timeline.json)
 #   edit       edit.spec + edit.base.json -> edit.json, then check every trigger against the narration
 #   footage    4K search -> CLIP pick -> 1080p proxies -> shots + QC   (shared library $LIB, grows over time)
+#   topup      more 4K candidates for items that matched weakly (score < 0.37) -> fetch -> shots
 #   assign     one unique shot per footage item -> $WORK/cutlist.json + review sheets $WORK/review_assign
+#              (re-runs keep reviewed shots: previous cutlist is kept as $WORK/cutlist_prev.json)
 #   render     master video -> $WORK/out/<name>.mp4
 #   review     contact sheets of the master -> $WORK/review_render
 #   preview    720p parts under 30 MB -> $WORK/out/preview
@@ -16,7 +18,8 @@
 #   all        everything from narration to credits
 #
 # Environment: PY (python with scripts/requirements-science.txt), WORK (default work/<production>),
-#              LIB (default work/library), MEDIA (default work/media), JOBS (default 3), WORKERS (default 4)
+#              LIB (default work/library), MEDIA (default work/media), JOBS (default 3), WORKERS (default 4),
+#              FRESH=1 (assign from scratch instead of keeping the previously reviewed shots)
 set -euo pipefail
 ROOT=$(cd "$(dirname "$0")/../.." && pwd)
 P=$(cd "$1" && pwd); shift
@@ -47,9 +50,20 @@ stage() {
       "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks.json" "$LIB" --jobs "$JOBS" \
         --limit 400 --cap-single 12 --cap-multi 60 --preset ultrafast --from-end
       "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS" ;;
+    topup)
+      "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks_topup.json" \
+        --weak "$WORK/cutlist.json" --below 0.37 --per-item 3 --max 160 --skip "$WORK/picks.json"
+      "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks_topup.json" "$LIB" --jobs "$JOBS" \
+        --cap-single 12 --cap-multi 60 --preset ultrafast --from-end
+      "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS" ;;
     assign)
+      keep=()
+      if [ -f "$WORK/cutlist.json" ] && [ "${FRESH:-0}" != 1 ]; then
+        cp "$WORK/cutlist.json" "$WORK/cutlist_prev.json"
+        keep=(--keep "$WORK/cutlist_prev.json" --changed "$WORK/cutlist_prev.json")
+      fi
       "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" \
-        --review "$WORK/review_assign" --avoid "$ROOT/productions" ;;
+        --review "$WORK/review_assign" --avoid "$ROOT/productions" ${keep[@]+"${keep[@]}"} ;;
     render)
       mkdir -p "$WORK/out"
       "$PY" "$ROOT/scripts/video/render_v2.py" "$WORK/cutlist.json" "$WORK/voice/narration.wav" "$P/edit.json" "$TL" \
@@ -61,7 +75,7 @@ stage() {
       bash "$ROOT/scripts/video/preview_parts.sh" "$MASTER" "$WORK/out/preview" 3 ;;
     credits)
       "$PY" "$ROOT/scripts/footage/credits.py" "$WORK/cutlist.json" "$LIB" "$P/edit.json" --assets "$MEDIA/assets/credits.json" \
-        | tee "$P/credits.txt" ;;
+        --full "$P/credits_full.txt" | tee "$P/credits.txt" ;;
     all)
       for s in narration edit footage assign render review preview credits; do stage "$s"; done ;;
     *)

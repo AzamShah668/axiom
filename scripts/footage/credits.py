@@ -23,6 +23,7 @@ def main():
     ap.add_argument("lib")
     ap.add_argument("edit")
     ap.add_argument("--assets", default="")
+    ap.add_argument("--full", default="", help="also write the complete video-id list here (for a pinned comment)")
     a = ap.parse_args()
     cl = json.load(open(a.cutlist))
     src = json.load(open(os.path.join(a.lib, "sources.json")))
@@ -31,11 +32,14 @@ def main():
     for it in cl["items"]:
         s = src[it["clip"]]
         by.setdefault(s["source"], {})[s["key"].split(":", 1)[1]] = s["title"]
-    lines = ["Footage credits:"]
+    full = ["Footage used in this video (archive video IDs):"]
     for k in ("eso", "esahubble", "esawebb", "svs"):
         if k in by:
-            ids = sorted(by[k])
-            lines.append(f"- {ARCHIVE[k]}: " + ", ".join(ids))
+            full.append(f"- {ARCHIVE[k]}: " + ", ".join(sorted(by[k])))
+    if a.full:
+        open(a.full, "w").write("\n".join(full) + "\n")
+    lines = ["Footage credits: " + "; ".join(f"{ARCHIVE[k]} ({len(by[k])} videos)" for k in ("eso", "esahubble", "esawebb", "svs")
+                                             if k in by) + ". Full list of videos in the pinned comment."]
     imgs = sorted({GFX_IMAGES[it["gfx"]] for it in cl["items"] if it.get("gfx") in GFX_IMAGES})
     if imgs and a.assets and os.path.exists(a.assets):
         cred = json.load(open(a.assets))
