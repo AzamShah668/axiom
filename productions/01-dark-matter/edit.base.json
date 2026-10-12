@@ -78,7 +78,32 @@
   "faint distant galaxies in dark space"
  ],
  "pin": {},
- "ban": [],
+ "ban": [
+  "esahubble_heic1803c",
+  "esahubble_heic2605b",
+  "eso_cs0012a",
+  "eso_eso1545a",
+  "eso_eso1817b",
+  "eso_eso1825f",
+  "eso_eso1907o",
+  "eso_eso2110a",
+  "eso_eso2110b",
+  "eso_eso2110c",
+  "eso_eso2110d",
+  "eso_eso2110e",
+  "eso_eso2110f",
+  "eso_eso2116a#2",
+  "eso_eso2117a#4",
+  "eso_eso2203c",
+  "eso_eso2408d",
+  "eso_eso2510c",
+  "svs_12019",
+  "svs_14399",
+  "svs_14802",
+  "svs_20409",
+  "svs_31376",
+  "svs_31400"
+ ],
  "crops": {},
  "exclude": {}
 }

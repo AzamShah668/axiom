@@ -78,7 +78,32 @@
   "faint distant galaxies in dark space"
  ],
  "pin": {},
- "ban": [],
+ "ban": [
+  "esahubble_heic1803c",
+  "esahubble_heic2605b",
+  "eso_cs0012a",
+  "eso_eso1545a",
+  "eso_eso1817b",
+  "eso_eso1825f",
+  "eso_eso1907o",
+  "eso_eso2110a",
+  "eso_eso2110b",
+  "eso_eso2110c",
+  "eso_eso2110d",
+  "eso_eso2110e",
+  "eso_eso2110f",
+  "eso_eso2116a#2",
+  "eso_eso2117a#4",
+  "eso_eso2203c",
+  "eso_eso2408d",
+  "eso_eso2510c",
+  "svs_12019",
+  "svs_14399",
+  "svs_14802",
+  "svs_20409",
+  "svs_31376",
+  "svs_31400"
+ ],
  "crops": {},
  "exclude": {},
  "sections": {
@@ -108,8 +133,8 @@
     {
      "at": "लगभग तीस",
      "q": [
-      "a huge cluster of hundreds of galaxies",
-      "zooming into a galaxy cluster"
+      "zooming into a galaxy cluster",
+      "a rich cluster of galaxies"
      ]
     },
     {
@@ -153,7 +178,8 @@
     {
      "at": "Zwicky ने उस",
      "q": [
-      "faint galaxies in dark empty space"
+      "a field of faint distant galaxies",
+      "mysterious glowing gas in deep space"
      ]
     },
     {
@@ -314,8 +340,8 @@
     {
      "at": "धीरे-धीरे",
      "q": [
-      "slow zoom into a dark sky",
-      "faint distant galaxies in darkness"
+      "zooming into a field of distant galaxies",
+      "faint galaxies drifting in deep space"
      ]
     },
     {
@@ -332,7 +358,8 @@
     {
      "at": "दुनिया इस",
      "q": [
-      "dark empty space with faint stars"
+      "faint galaxies drifting in deep space",
+      "a lonely galaxy in deep space"
      ]
     }
    ],
@@ -719,7 +746,8 @@
     {
      "at": null,
      "q": [
-      "dark empty space with faint stars"
+      "a vast field of stars and dust",
+      "the Milky Way galaxy"
      ]
     },
     {
@@ -755,7 +783,7 @@
     {
      "at": "लेकिन dark matter इनमें",
      "q": [
-      "dark space with faint galaxies"
+      "a field of faint distant galaxies"
      ]
     },
     {
@@ -1642,7 +1670,8 @@
     {
      "at": "dark matter असल",
      "q": [
-      "mysterious dark space"
+      "dark nebula silhouette",
+      "mysterious glowing gas in deep space"
      ]
     },
     {
@@ -1697,7 +1726,8 @@
     {
      "at": "Team ने साफ़",
      "q": [
-      "dark space"
+      "observatory at dawn",
+      "telescope dome closing"
      ]
     },
     {
@@ -1741,7 +1771,8 @@
     {
      "at": "ब्रह्मांड का पचासी",
      "q": [
-      "zoom out of the universe"
+      "zooming out from a galaxy cluster",
+      "the cosmic web of galaxies"
      ]
     },
     {
@@ -1759,7 +1790,8 @@
     {
      "at": "और अब तक कोई",
      "q": [
-      "dark mysterious space"
+      "dark nebula silhouette against stars",
+      "the vast Milky Way"
      ]
     },
     {

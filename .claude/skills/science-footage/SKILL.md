@@ -29,9 +29,16 @@ The four steps can also be run alone (all in `scripts/footage/`):
   (`-FD`, `dome`, `360`).
 
 ## Budget
-- Transcoding 4K costs ~2 CPU-seconds per video second. 480 picks (~10,000 s) take ~1.5-2.5 h on 4 cores.
-- Run `build_shots.py` in a loop while proxies arrive (it skips finished clips).
-- The edit needs ~250 different shots. Aim for 2x that many usable unique shots, so every item has a real choice.
+- Decoding 4K costs ~2 CPU-seconds per video second; 4 cores manage ~2.5 videos a minute.
+- Keep proxies short: `--cap-single 12 --cap-multi 60 --preset ultrafast --limit 400`. Each shot is used
+  once for ~3 s, and only graphics backgrounds need ~10-14 s.
+- `build_shots.py` saves after every clip. Run it in a loop while proxies arrive; it resumes where it stopped.
+- In Claude Code cloud sessions, background commands stop at their timeout. Start long stages with
+  `run_in_background` and `timeout: 7200000`. Every step is resumable, so just start it again.
+- The edit needs ~250 different shots. Aim for 1.5-2x that many usable unique shots, so every item has a real choice.
+- Top-up for weak matches after a first assignment:
+  `select_candidates.py ... --weak $WORK/cutlist.json --below 0.22 --skip $WORK/picks.json`,
+  then fetch, shots and assign again.
 
 ## Gaps
 If the assignment review shows weak matches for a beat (no 4K footage of the thing exists):

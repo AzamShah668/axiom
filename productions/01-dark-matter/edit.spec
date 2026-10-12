@@ -5,14 +5,14 @@
 V - @ the Milky Way over an observatory at night | starry night sky timelapse over telescopes
 V California @ a large telescope inside an observatory dome | observatory dome opening at dusk
 V Swiss @ an astronomer's telescope pointed at the night sky | telescope moving under the stars
-V लगभग तीस @ a huge cluster of hundreds of galaxies | zooming into a galaxy cluster
+V लगभग तीस @ zooming into a galaxy cluster | a rich cluster of galaxies
 V Coma Cluster @ a rich cluster of elliptical galaxies in deep space
 V Zwicky ने इन @ pan across a cluster of galaxies | galaxies in a cluster
 G Galaxies इतनी @ flyapart
 V Cluster को @ galaxies flying apart in space | galaxies colliding
 V फिर भी वह @ giant elliptical galaxy at the centre of a cluster | galaxy group
 V जैसे कोई @ dark nebula with glowing edges | mysterious dark cloud in space
-V Zwicky ने उस @ faint galaxies in dark empty space
+V Zwicky ने उस @ a field of faint distant galaxies | mysterious glowing gas in deep space
 V डुंकले @ simulation of dark matter around galaxies | visualization of invisible dark matter
 V लगभग सौ @ deep field full of distant galaxies
 V और दो हज़ार @ planet Earth seen from space at night | the Earth from orbit
@@ -45,10 +45,10 @@ V सौ गुना @ glowing giant galaxies in a cluster
 V यह संख्या @ telescopes on a mountain under the stars | observatory at night
 V ज़्यादातर astronomers @ astronomers at an observatory | telescope dome at night
 V Zwicky अपने @ glowing red nebula | turbulent cosmic gas cloud
-V धीरे-धीरे @ slow zoom into a dark sky | faint distant galaxies in darkness
+V धीरे-धीरे @ zooming into a field of distant galaxies | faint galaxies drifting in deep space
 V Coma Cluster अपनी @ elliptical galaxies in a cluster | galaxy cluster
 G अगले लगभग @ year_counter
-V दुनिया इस @ dark empty space with faint stars
+V दुनिया इस @ faint galaxies drifting in deep space | a lonely galaxy in deep space
 C - | To hold the Coma Cluster together, Zwicky's numbers needed...
 C सौ गुना | 100 TIMES THE VISIBLE MASS | big
 C यह संख्या | The number was so strange...
@@ -130,13 +130,13 @@ C ब्रह्मांड की लगभग | Almost every big galaxy was 
 C और उसी के अंदर | ...and grew up inside it
 
 == fact7
-V - @ dark empty space with faint stars
+V - @ a vast field of stars and dust | the Milky Way galaxy
 V Hubble, @ the Hubble Space Telescope in orbit
 V James Webb @ the James Webb Space Telescope in space
 V radio dishes @ radio telescope dishes at night | ALMA antennas
 V X-ray @ X-ray space telescope in orbit | space telescope
 G इंसान के बनाए @ spectrum
-V लेकिन dark matter इनमें @ dark space with faint galaxies
+V लेकिन dark matter इनमें @ a field of faint distant galaxies
 V वह रोशनी @ dark nebula blocking starlight | black void in space
 V न चमकता @ dark cloud silhouette against stars
 V उसकी मौजूदगी @ spiral galaxy | galaxy held by gravity
@@ -313,7 +313,7 @@ C एक trillion | ~1 TRILLION SUNS | big
 
 == fact1
 V - @ deep field of galaxies
-V dark matter असल @ mysterious dark space
+V dark matter असल @ dark nebula silhouette | mysterious glowing gas in deep space
 V उसे पकड़ने @ scientists in a laboratory | detector experiment
 V America के @ North America from space
 G ज़मीन से लगभग @ lz_tank
@@ -323,17 +323,17 @@ V एक September @ deep field
 V LZ की team @ scientists working at a detector | laboratory
 G दो सौ बीस @ lz_flash
 G इसके सिर्फ़ @ probability
-V Team ने साफ़ @ dark space
+V Team ने साफ़ @ observatory at dawn | telescope dome closing
 V अगर यह dark @ many galaxies in a deep field
 V विम्प्स @ glowing particles in space
 V Axions @ faint glowing waves
 V Big Bang के समय @ black hole | primordial black holes
 V और कुछ scientists @ gravity warping space | spiral galaxy
 V और gravity के नियम @ rotating galaxy
-V ब्रह्मांड का पचासी @ zoom out of the universe
+V ब्रह्मांड का पचासी @ zooming out from a galaxy cluster | the cosmic web of galaxies
 V हर galaxy को @ galaxies
 V हर इंसान के @ Earth from space
-V और अब तक कोई @ dark mysterious space
+V और अब तक कोई @ dark nebula silhouette against stars | the vast Milky Way
 V शायद ब्रह्मांड @ the Milky Way over a telescope
 V और जिस दिन @ zoom into deep space
 V उस दिन इंसान @ Earthrise | Earth seen from the Moon

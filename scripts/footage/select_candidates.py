@@ -60,6 +60,9 @@ def main():
         ap.add_argument(x)
     ap.add_argument("--per-item", type=int, default=2)
     ap.add_argument("--max", type=int, default=420)
+    ap.add_argument("--weak", default="", help="top-up: cutlist.json; only items whose shot scored below --below")
+    ap.add_argument("--below", type=float, default=0.22)
+    ap.add_argument("--skip", default="", help="comma-separated picks.json files whose keys are already fetched")
     a = ap.parse_args()
     from PIL import Image
     cand = json.load(open(a.candidates))
@@ -85,6 +88,14 @@ def main():
     I = np.stack([have[k][0] for k in keys])
     T = np.stack([have[k][1] for k in keys])
     items = [it for it in item_queries(edit, tl)]
+    if a.weak:  # top-up round: more candidates only for the items that got weak matches
+        cl = json.load(open(a.weak))["items"]
+        weak = {(c["sec"], round(c["t0"], 2)) for c in cl if c.get("score", 1) < a.below}
+        items = [it for it in items if (it["sec"], round(it["t0"], 2)) in weak]
+        print(f"top-up for {len(items)} weak items", flush=True)
+    skip = set()
+    for f in filter(None, a.skip.split(",")):
+        skip |= {x["key"] for x in json.load(open(f))}
     qs = sorted({q for it in items for q in it["q"]})
     Q = clip_model.embed_texts([f"a photo of {q}" for q in qs])
     qi = {q: i for i, q in enumerate(qs)}
@@ -96,7 +107,7 @@ def main():
         n = 0
         for j in np.argsort(-sc):
             k = keys[j]
-            if k in picked:
+            if k in picked or k in skip:
                 continue
             picked[k], why[k] = float(sc[j]), it["q"][0]
             n += 1

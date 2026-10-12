@@ -18,6 +18,15 @@ import clip_model  # noqa: E402
 import render_v2  # noqa: E402
 
 PAD = 0.8          # extra seconds of footage per item (transition overlap)
+DARK_PENALTY = 0.05
+
+
+def luma(lib, s):
+    """Mean brightness (0-255) of the shot's 3 review frames."""
+    if s.get("luma") is not None:
+        return s["luma"]
+    im = cv2.imread(os.path.join(lib, "shot_thumbs", s["id"].replace("#", "_") + ".jpg"), cv2.IMREAD_GRAYSCALE)
+    return float(im.mean()) if im is not None else 40.0
 SAME = 0.93        # CLIP image similarity above which two shots count as the same footage
 
 
@@ -54,6 +63,8 @@ def main():
         if s["clip"] in edit.get("crops", {}):
             s["crop"] = edit["crops"][s["clip"]]
     pool = [s for s in shots if s["usable"] and not s["dup_of"] and s["id"] not in ban and s["clip"] not in ban]
+    if len(pool) < len(items):
+        raise SystemExit(f"library has {len(pool)} usable shots but the edit needs {len(items)} different ones: add footage")
     E = np.stack([emb[s["id"]] for s in pool])
     L = np.array([max(r[1] - r[0] for r in s["usable"]) for s in pool])
     titles = sorted({sources[s["clip"]]["title"] for s in pool})
@@ -65,6 +76,10 @@ def main():
     qi = {q: i for i, q in enumerate(qs)}
     SQ = 0.75 * (Q @ E.T) + 0.25 * (Q @ Tshot.T)
     S = np.stack([SQ[[qi[q] for q in it["q"]]].max(0) for it in items])  # items x shots
+    # near-black star fields are dull as main footage (fine behind cards and graphics): small penalty
+    lum = np.array([luma(a.lib, s) for s in pool])
+    dull = DARK_PENALTY * np.clip((28 - lum) / 20, 0, 1)
+    S = S - np.array([[1.0] if it["kind"] == "clip" else [0.0] for it in items]) * dull[None, :]
     need = np.array([it["t1"] - it["t0"] + PAD for it in items])
     cost = -S + 100.0 * (L[None, :] < need[:, None])
     # pins

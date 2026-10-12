@@ -102,7 +102,8 @@ def scan_clip(path):
         thumbs = [cv2.resize(f, (224, 126)) for f in pick]
         out.append({"id": f"{name}#{k}", "clip": name, "start": round(a, 2), "end": round(b, 2), "crop": crop,
                     "usable": usable, "text_secs": len(bad_text), "still_secs": len(still), "dark_secs": len(dark),
-                    "phash": ph, "_thumbs": thumbs})
+                    "phash": ph, "_thumbs": thumbs,
+                    "luma": round(float(np.mean([cv2.cvtColor(t, cv2.COLOR_BGR2GRAY).mean() for t in thumbs])), 1) if thumbs else 0.0})
     cap.release()
     return name, out
 
@@ -155,6 +156,8 @@ def main():
                 if th:
                     cv2.imwrite(os.path.join(a.lib, "shot_thumbs", s["id"].replace("#", "_") + ".jpg"), np.hstack(th), [cv2.IMWRITE_JPEG_QUALITY, 80])
             new += ss
+            json.dump(shots + new, open(spath + ".part", "w"))  # survive interruption: resume skips saved clips
+            os.replace(spath + ".part", spath)
             print(f"[{k + 1}/{len(todo)}] {name:40s} shots {len(ss):3d}  usable {sum(len(s['usable']) > 0 for s in ss):3d}", flush=True)
     # duplicates: same footage reused in another video (perceptual hash of 3 frames)
     allshots = shots + new

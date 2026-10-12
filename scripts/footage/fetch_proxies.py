@@ -10,6 +10,8 @@ import argparse, json, os, re, subprocess, sys, threading
 from concurrent.futures import ThreadPoolExecutor
 
 LOCK = threading.Lock()
+CAPS = [16.0, 90.0]     # max seconds per proxy: [single-shot video, multi-shot episode]
+PRESET = ["veryfast"]
 
 
 def probe(url):
@@ -36,10 +38,15 @@ def work(p, lib, minw, sources):
     if w < minw:
         return name, f"skip {w}x{h}"
     ss = 1.0 if dur > 8 else 0.0  # skip fade-in from black
-    t = max(2.0, min(p["cap_s"], dur - ss - 0.5))
+    t = max(2.0, min(p["cap_s"], CAPS[p["cap_s"] > 30], dur - ss - 0.5))
+    if os.path.exists(out):  # finished earlier but not yet recorded (interrupted run)
+        with LOCK:
+            sources[name] = {"key": p["key"], "url": p["url"], "page": p.get("page", ""), "title": p["title"],
+                             "source": p["source"], "src_w": w, "src_h": h, "src_dur": round(dur, 2), "ss": ss, "cap_s": None}
+        return name, "recorded"
     cmd = ["ffmpeg", "-v", "error", "-y", "-ss", str(ss), "-t", f"{t:.2f}", "-i", p["url"], "-an",
            "-vf", "scale=1920:1080:force_original_aspect_ratio=increase:flags=bilinear,crop=1920:1080,fps=30",
-           "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-g", "30", out + ".part.mp4"]
+           "-c:v", "libx264", "-preset", PRESET[0], "-crf", "20", "-pix_fmt", "yuv420p", "-g", "30", out + ".part.mp4"]
     for attempt in range(2):
         r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode == 0 and os.path.getsize(out + ".part.mp4") > 10000:
@@ -58,11 +65,17 @@ def main():
     ap.add_argument("lib")
     ap.add_argument("--jobs", type=int, default=3)
     ap.add_argument("--min-width", type=int, default=3840)
+    ap.add_argument("--cap-single", type=float, default=16.0)
+    ap.add_argument("--cap-multi", type=float, default=90.0)
+    ap.add_argument("--preset", default="veryfast", help="x264 preset for proxies (ultrafast = quicker, bigger files)")
+    ap.add_argument("--limit", type=int, default=0, help="only the first N picks")
     a = ap.parse_args()
+    CAPS[:] = [a.cap_single, a.cap_multi]
+    PRESET[0] = a.preset
     os.makedirs(os.path.join(a.lib, "clips"), exist_ok=True)
     spath = os.path.join(a.lib, "sources.json")
     sources = json.load(open(spath)) if os.path.exists(spath) else {}
-    picks = json.load(open(a.picks))
+    picks = json.load(open(a.picks))[:a.limit or None]
     done = 0
     with ThreadPoolExecutor(a.jobs) as ex:
         for name, msg in ex.map(lambda p: work(p, a.lib, a.min_width, sources), picks):

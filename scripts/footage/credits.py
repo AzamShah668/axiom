@@ -1,11 +1,11 @@
-"""Credits block for the YouTube description from what the final cut actually uses.
+"""Credits block (and YouTube chapters) for the description, from what the final cut actually uses.
 
   python credits.py <cutlist.json> <library_dir> <edit.json> [--assets credits.json]
 
 ESO, ESA/Hubble and ESA/Webb footage is CC BY 4.0 (credit + licence link); NASA SVS footage is credited to
 NASA's Goddard Space Flight Center. Kevin MacLeod music is CC BY 4.0 and needs the exact title list.
 """
-import argparse, json, os
+import argparse, json, os, string
 
 ARCHIVE = {
     "eso": "ESO (eso.org), CC BY 4.0",
@@ -46,7 +46,13 @@ def main():
     if tracks:
         lines += ["", "Music by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 License "
                       "(http://creativecommons.org/licenses/by/4.0/):", ", ".join(f'"{t}"' for t in tracks)]
-    print("\n".join(lines))
+    chapters = ["", "Chapters:", "0:00 Intro"]
+    for it in cl["items"]:
+        if it["kind"] == "card":
+            t = int(it["t0"])
+            num, title = it["text"]
+            chapters.append(f"{t // 60}:{t % 60:02d} {num.title()}: {string.capwords(title.lower())}")
+    print("\n".join(lines + chapters))
 
 
 if __name__ == "__main__":

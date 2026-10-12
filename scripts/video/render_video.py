@@ -451,7 +451,7 @@ def gfx(name, t, D, sh):
             cv2.circle(ov, (int(x), int(y)), 3, (255, 180, 240), -1, cv2.LINE_AA)
         return np.clip(f.astype(np.float32) + cv2.GaussianBlur(ov, (0, 0), 1.2) * 0.8, 0, 255).astype(np.uint8)
     if name in ("lz_tank", "lz_flash"):
-        f = (starfield(t, dim=0.15) * 0 + G["rock"]).astype(np.uint8)
+        f = starfield(t, dim=0.35)  # dimmed moving footage when rendered by render_v2
         cx, top, bot, rw = W // 2, 250, 860, 250
         if "lzfill" not in G:
             fill = np.zeros((H, W, 3), np.uint8)
