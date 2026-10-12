@@ -15,7 +15,11 @@ scripts/science/pipeline.sh productions/NN-slug assign
 - Solves one global assignment (Hungarian). Rules:
   - every item gets a different shot
   - no two chosen shots show the same image: 3 frames from each shot's used part are compared, and a match
-    means CLIP > 0.95 and phash distance <= 14 (this catches the same picture re-zoomed in another video)
+    means CLIP > 0.95 with phash distance <= 14, or CLIP > 0.975 with distance <= 26 (this catches the same
+    picture re-zoomed or re-cropped in another video)
+  - **text gate:** the frames each item will actually show are OCR'd at 768 px. A shot with any text is
+    dropped and only that item is re-solved. This catches small labels such as "Artist's impression" and
+    subtitles that the 2-second library scan misses
   - each shot must have enough text-free, moving seconds
   - `--avoid` leaves out shots that other productions' `cutlist.json` already used
 

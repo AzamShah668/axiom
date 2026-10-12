@@ -61,6 +61,10 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
   `youtube.md`, `credits.txt`.
 
 ## Lessons already learned (don't repeat them)
+- Many ESO zoom videos open on the same all-sky Milky Way panorama. Cut long videos from their end
+  (`--from-end`), or "different" shots will look repeated.
+- Review sheets catch what QC can't: graphic overlays, inset boxes, split screens, wipes, data-map globes,
+  presenters, pillarboxed 4:3 images. Ban those clips in `edit.base.json` (production 01 has a long list to learn from).
 - Archive "lensing" folders are mostly black-hole visualisations: check the review sheets, not titles.
 - Graphic stills can carry diagram lines (the ESA Milky Way has a pointer line; `render_video.remove_hlines`).
 - `pkill -f <pattern>` kills your own shell when the pattern is in the command line; stop jobs by task id or PID.

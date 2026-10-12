@@ -32,7 +32,7 @@ def luma(lib, s):
 
 # Two shots count as the same footage when any frame of the part that will be shown looks the same: CLIP
 # similarity above SAME_CLIP and perceptual-hash distance within SAME_HASH (same image, maybe re-zoomed).
-SAME_CLIP, SAME_HASH = 0.95, 14
+SAME_RULES = ((0.95, 14), (0.975, 26))   # (min CLIP similarity, max hash distance): either one = same footage
 
 
 def segment_signatures(lib, pool, cache_path):
@@ -80,7 +80,61 @@ def same_footage(SE, SH, j, others):
     sim = np.einsum("ad,nbd->nab", SE[j], SE[o]).reshape(len(o), -1).max(1)
     x = SH[j][:, None, None] ^ SH[o].T[None, :, :]                         # (3, 3, n) xor of hashes
     ham = np.vectorize(lambda v: bin(int(v)).count("1"))(x).reshape(9, len(o)).min(0)
-    return list(o[(sim > SAME_CLIP) & (ham <= SAME_HASH)])
+    hit = np.zeros(len(o), bool)
+    for c_min, h_max in SAME_RULES:
+        hit |= (sim > c_min) & (ham <= h_max)
+    return list(o[hit])
+
+
+_OCR = {}
+
+
+def _ocr_init():
+    import torch, easyocr
+    torch.set_num_threads(1)
+    cv2.setNumThreads(1)
+    _OCR["r"] = easyocr.Reader(["en"], gpu=False, verbose=False)
+
+
+def _ocr_job(job):
+    """True if any of the frames that will actually be shown carries text (finer than the library scan)."""
+    path, times, crop = job
+    cap = cv2.VideoCapture(path)
+    for t in times:
+        cap.set(cv2.CAP_PROP_POS_MSEC, t * 1000)
+        ok, f = cap.read()
+        if not ok:
+            continue
+        if crop:
+            x0, y0, x1, y1 = crop
+            f = f[int(y0 * 1080):int(y1 * 1080), int(x0 * 1920):int(x1 * 1920)]
+        horiz, free = _OCR["r"].detect(cv2.resize(f, (768, 432)), min_size=10, text_threshold=0.7, low_text=0.45)
+        if (horiz and horiz[0]) or (free and free[0]):
+            return True
+    return False
+
+
+def text_gate(lib, items, pool, r, c, need, cache_path, workers=4):
+    """Indices k (into r/c) whose shown segment has text. Results cached per (shot, start, length)."""
+    from multiprocessing import Pool
+    cache = json.load(open(cache_path)) if os.path.exists(cache_path) else {}
+    jobs, keys = [], []
+    for k, (i, j) in enumerate(zip(r, c)):
+        s = pool[j]
+        r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
+        ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
+        d = need[i] - 0.8
+        key = f"{s['id']}@{ss:.2f}+{d:.2f}"
+        keys.append(key)
+        if key not in cache:
+            jobs.append((key, (os.path.join(lib, "clips", s["clip"] + ".mp4"),
+                               [ss + 0.1 + d * q for q in (0, 0.25, 0.5, 0.75, 1.0)][:-1] + [ss + d - 0.1], s.get("crop"))))
+    if jobs:
+        with Pool(workers, initializer=_ocr_init) as p:
+            for (key, _), hit in zip(jobs, p.map(_ocr_job, [j for _, j in jobs])):
+                cache[key] = hit
+        json.dump(cache, open(cache_path, "w"))
+    return [k for k, key in enumerate(keys) if cache[key]]
 
 
 def main():
@@ -175,7 +229,44 @@ def main():
         print(f"round {rnd}: {clash} near-identical clashes", flush=True)
         if not clash:
             break
-    bad = [i for i, j in zip(r, c) if cost[i, j] > 50]
+    else:  # still clashing: give the remaining items the best free shot that shows nothing already chosen
+        r, c = list(r), list(c)
+        order = sorted(range(len(r)), key=lambda k: cost[r[k], c[k]])
+        chosen, used = [], set()
+        for k in order:
+            i, j = r[k], c[k]
+            if same_footage(SE, SH, j, chosen):
+                for j2 in np.argsort(cost[i] + blocked[i]):
+                    if j2 not in used and j2 not in c and cost[i, j2] < 50 and not same_footage(SE, SH, j2, chosen):
+                        c[k] = j = int(j2)
+                        break
+            chosen.append(j)
+            used.add(j)
+        print("greedy pass resolved the remaining clashes", flush=True)
+    # final gate: OCR the frames each item will really show; text -> that shot is out, re-solve the rest in place
+    for rnd in range(6):
+        hits = text_gate(a.lib, items, pool, r, c, need, os.path.join(a.lib, "text_gate.json"))
+        print(f"text gate {rnd}: {len(hits)} shown segments with text", flush=True)
+        if not hits:
+            break
+        for k in hits:
+            cost[:, c[k]] += 100.0  # the shot is out for every item
+        for k in range(len(r)):
+            if k not in hits:  # everyone else keeps their shot
+                cost[r[k], :] += 50.0
+                cost[r[k], c[k]] -= 50.0
+        r, c = linear_sum_assignment(cost + blocked)
+        r, c = list(r), list(c)
+        chosen = []
+        for k in sorted(range(len(r)), key=lambda k: cost[r[k], c[k]]):
+            i, j = r[k], c[k]
+            if same_footage(SE, SH, j, chosen):
+                for j2 in np.argsort(cost[i] + blocked[i]):
+                    if j2 not in c and cost[i, j2] < 50 and not same_footage(SE, SH, j2, chosen):
+                        c[k] = j = int(j2)
+                        break
+            chosen.append(j)
+    bad = [i for i, j in zip(r, c) if L[j] < need[i]]
     if bad:
         raise SystemExit(f"{len(bad)} items have no shot long enough, e.g. {[sec_n[i] for i in bad[:5]]}: add footage")
     for i, j in zip(r, c):
