@@ -12,6 +12,7 @@ from concurrent.futures import ThreadPoolExecutor
 LOCK = threading.Lock()
 CAPS = [16.0, 90.0]     # max seconds per proxy: [single-shot video, multi-shot episode]
 PRESET = ["veryfast"]
+FROM_END = [False]
 
 
 def probe(url):
@@ -39,6 +40,10 @@ def work(p, lib, minw, sources):
         return name, f"skip {w}x{h}"
     ss = 1.0 if dur > 8 else 0.0  # skip fade-in from black
     t = max(2.0, min(p["cap_s"], CAPS[p["cap_s"] > 30], dur - ss - 0.5))
+    if FROM_END[0] and p["cap_s"] <= 30 and dur > 25:
+        # long single-shot zooms/pans: take the END, where the video shows its own target (the start of many
+        # ESO zooms is the same all-sky Milky Way panorama, which would look like a repeated shot)
+        ss = max(1.0, dur - t - 1.5)
     if os.path.exists(out):  # finished earlier but not yet recorded (interrupted run)
         with LOCK:
             sources[name] = {"key": p["key"], "url": p["url"], "page": p.get("page", ""), "title": p["title"],
@@ -69,7 +74,9 @@ def main():
     ap.add_argument("--cap-multi", type=float, default=90.0)
     ap.add_argument("--preset", default="veryfast", help="x264 preset for proxies (ultrafast = quicker, bigger files)")
     ap.add_argument("--limit", type=int, default=0, help="only the first N picks")
+    ap.add_argument("--from-end", action="store_true", help="cut long single-shot videos from their end")
     a = ap.parse_args()
+    FROM_END[0] = a.from_end
     CAPS[:] = [a.cap_single, a.cap_multi]
     PRESET[0] = a.preset
     os.makedirs(os.path.join(a.lib, "clips"), exist_ok=True)

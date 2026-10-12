@@ -325,8 +325,8 @@ G दो सौ बीस @ lz_flash
 G इसके सिर्फ़ @ probability
 V Team ने साफ़ @ observatory at dawn | telescope dome closing
 V अगर यह dark @ many galaxies in a deep field
-V विम्प्स @ glowing particles in space
-V Axions @ faint glowing waves
+V विम्प्स @ glowing particles in space | a swarm of glowing dots in space
+V Axions @ faint glowing nebula | glowing particles drifting in space
 V Big Bang के समय @ black hole | primordial black holes
 V और कुछ scientists @ gravity warping space | spiral galaxy
 V और gravity के नियम @ rotating galaxy

@@ -174,7 +174,8 @@ def main():
         else:
             seen.append((s["id"], hs))
     old = dict(np.load(epath, allow_pickle=True)) if os.path.exists(epath) and shots else {}
-    have = {i: e for i, e in zip(old.get("ids", []), old.get("emb", []))}
+    current = {s["id"] for s in shots}  # embeddings of re-cut clips must not be reused
+    have = {i: e for i, e in zip(old.get("ids", []), old.get("emb", [])) if i in current}
     need = [s for s in allshots if s["id"] not in have]
     if need:
         E = embed(need, clips_dir)

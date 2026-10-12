@@ -14,7 +14,7 @@ The four steps can also be run alone (all in `scripts/footage/`):
 |------|--------|--------------|
 | search | `search_sources.py terms.txt $LIB/candidates.json [--sources eso,esahubble,esawebb,svs]` | archive search per term; keeps only videos with a verified 4K file (ultra_hd on ESO/ESA CDNs, >= 3840 px mp4 on NASA SVS) |
 | pick | `select_candidates.py ... $WORK/picks.json [--per-item 2]` | CLIP-scores each candidate's preview frame and title against every item's queries; keeps each item's best unclaimed candidates |
-| fetch | `fetch_proxies.py picks.json $LIB [--jobs 3]` | ffprobe check (>= 3840 px or skipped), streams the 4K file into a 1080p30 proxy (16 s for single shots, 90 s for multi-shot episodes) |
+| fetch | `fetch_proxies.py picks.json $LIB [--jobs 3] --from-end` | ffprobe check (>= 3840 px or skipped), streams the 4K file into a 1080p30 proxy (12 s for single shots, 60 s for multi-shot episodes). `--from-end` cuts long zooms/pans from their end: that's the target the archive's preview frame shows, while many ESO zooms share the same all-sky Milky Way opening |
 | shots | `build_shots.py $LIB [--workers 4]` | PySceneDetect shots; per second: OCR text (auto-crop for corner labels), black, frozen (motion < 0.6); perceptual-hash duplicates; CLIP embedding |
 
 - `$LIB` is shared across productions and only grows; every step is incremental and resumable.

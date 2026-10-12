@@ -14,7 +14,8 @@ scripts/science/pipeline.sh productions/NN-slug assign
 - Scores each library shot: 0.75 x CLIP(image, query) + 0.25 x CLIP(source title, query).
 - Solves one global assignment (Hungarian). Rules:
   - every item gets a different shot
-  - no two chosen shots are near-identical (CLIP similarity > 0.93)
+  - no two chosen shots show the same image: 3 frames from each shot's used part are compared, and a match
+    means CLIP > 0.95 and phash distance <= 14 (this catches the same picture re-zoomed in another video)
   - each shot must have enough text-free, moving seconds
   - `--avoid` leaves out shots that other productions' `cutlist.json` already used
 
@@ -28,6 +29,9 @@ number, `section/n`, score and query.
 - Scores below ~0.20 usually mean no relevant footage exists. See science-footage "Gaps".
 
 Re-run `assign` after every change. It is fast and deterministic.
+
+To make review rounds converge, use `--keep <previous cutlist>` (approved items keep their shot unless now
+banned) and `--changed <previous cutlist>` (sheets show only the items that changed).
 
 ## 2. Render
 ```bash

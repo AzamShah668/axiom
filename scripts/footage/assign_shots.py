@@ -1,5 +1,6 @@
 """Give every footage item of the edit its own shot: CLIP match between the item's visual queries and the
-library shots, solved as one global assignment so no shot (and no near-identical shot) is used twice.
+library shots, solved as one global assignment so no shot - and no other shot showing the same image - is
+used twice.
 
   python assign_shots.py <edit.json> <timeline.json> <library_dir> <out cutlist.json> [--review <dir>]
 
@@ -27,7 +28,59 @@ def luma(lib, s):
         return s["luma"]
     im = cv2.imread(os.path.join(lib, "shot_thumbs", s["id"].replace("#", "_") + ".jpg"), cv2.IMREAD_GRAYSCALE)
     return float(im.mean()) if im is not None else 40.0
-SAME = 0.93        # CLIP image similarity above which two shots count as the same footage
+
+
+# Two shots count as the same footage when any frame of the part that will be shown looks the same: CLIP
+# similarity above SAME_CLIP and perceptual-hash distance within SAME_HASH (same image, maybe re-zoomed).
+SAME_CLIP, SAME_HASH = 0.95, 14
+
+
+def segment_signatures(lib, pool, cache_path):
+    """3 frames around the middle of each shot's longest usable range (the part assign uses):
+    CLIP embeddings (n, 3, 512) and 64-bit phashes (n, 3)."""
+    import imagehash
+    from PIL import Image
+    cache = dict(np.load(cache_path, allow_pickle=True)) if os.path.exists(cache_path) else {}
+    old = {k: (e, h) for k, e, h in zip(cache.get("keys", []), cache.get("emb", []), cache.get("hash", []))}
+    keys, todo, frames = [], [], []
+    for s in pool:
+        r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
+        m = (r0 + r1) / 2
+        key = f"{s['id']}@{m:.2f}@{s.get('crop')}"
+        keys.append(key)
+        if key in old:
+            continue
+        cap = cv2.VideoCapture(os.path.join(lib, "clips", s["clip"] + ".mp4"))
+        for t in (max(r0, m - 1.2), m, min(r1, m + 1.2)):
+            cap.set(cv2.CAP_PROP_POS_MSEC, t * 1000)
+            ok, f = cap.read()
+            f = f if ok else np.zeros((1080, 1920, 3), np.uint8)
+            if s.get("crop"):
+                x0, y0, x1, y1 = s["crop"]
+                f = f[int(y0 * 1080):int(y1 * 1080), int(x0 * 1920):int(x1 * 1920)]
+            frames.append(cv2.cvtColor(cv2.resize(f, (384, 216)), cv2.COLOR_BGR2RGB))
+        cap.release()
+        todo.append(key)
+    if todo:
+        E = clip_model.embed_images(frames).reshape(len(todo), 3, -1)
+        H = np.array([[int(str(imagehash.phash(Image.fromarray(frames[3 * k + q]))), 16) for q in range(3)]
+                      for k in range(len(todo))], dtype=np.uint64)
+        for k, key in enumerate(todo):
+            old[key] = (E[k], H[k])
+        np.savez(cache_path, keys=np.array(list(old)), emb=np.stack([v[0] for v in old.values()]),
+                 hash=np.stack([v[1] for v in old.values()]))
+    return np.stack([old[k][0] for k in keys]), np.stack([old[k][1] for k in keys])
+
+
+def same_footage(SE, SH, j, others):
+    """Indices in `others` whose shown frames look like shot j's."""
+    if not others:
+        return []
+    o = np.array(others)
+    sim = np.einsum("ad,nbd->nab", SE[j], SE[o]).reshape(len(o), -1).max(1)
+    x = SH[j][:, None, None] ^ SH[o].T[None, :, :]                         # (3, 3, n) xor of hashes
+    ham = np.vectorize(lambda v: bin(int(v)).count("1"))(x).reshape(9, len(o)).min(0)
+    return list(o[(sim > SAME_CLIP) & (ham <= SAME_HASH)])
 
 
 def main():
@@ -35,6 +88,8 @@ def main():
     for x in ("edit", "timeline", "lib", "out"):
         ap.add_argument(x)
     ap.add_argument("--review", default="")
+    ap.add_argument("--changed", default="", help="previous cutlist.json: review sheets show only items whose shot changed")
+    ap.add_argument("--keep", default="", help="previous (reviewed) cutlist.json: items keep their shot unless it is now banned")
     ap.add_argument("--avoid", default="", help="productions dir: never reuse shots other productions' cutlist.json used")
     ap.add_argument("--plan-only", action="store_true", help="only check the edit against the narration")
     a = ap.parse_args()
@@ -93,20 +148,31 @@ def main():
             if sid in ids:
                 cost[i, :] += 50.0
                 cost[i, ids.index(sid)] -= 50.0
-    sim = E @ E.T
+    if a.keep and os.path.exists(a.keep):  # converge review rounds: only re-solve items whose shot was banned
+        old = {(o["sec"], round(o["t0"], 2)): o.get("shot") for o in json.load(open(a.keep))["items"]}
+        kept = 0
+        for i, it in enumerate(items):
+            sid = old.get((it["sec"], round(it["t0"], 2)))
+            if sid in ids and sec_n[i] not in edit.get("pin", {}):
+                cost[i, :] += 50.0
+                cost[i, ids.index(sid)] -= 50.0
+                kept += 1
+        print(f"kept {kept} reviewed items")
+    SE, SH = segment_signatures(a.lib, pool, os.path.join(a.lib, "segments_sig.npz"))
     blocked = np.zeros_like(cost)
-    for rnd in range(8):
+    for rnd in range(30):
         r, c = linear_sum_assignment(cost + blocked)
         clash = 0
         order = sorted(range(len(r)), key=lambda k: cost[r[k], c[k]])  # best matches keep their shot
-        kept = []
+        chosen = []
         for k in order:
             i, j = r[k], c[k]
-            if any(sim[j, j2] > SAME for j2 in kept):
+            if same_footage(SE, SH, j, chosen):
                 blocked[i, j] = 100.0
                 clash += 1
             else:
-                kept.append(j)
+                chosen.append(j)
+        print(f"round {rnd}: {clash} near-identical clashes", flush=True)
         if not clash:
             break
     bad = [i for i, j in zip(r, c) if cost[i, j] > 50]
@@ -126,13 +192,23 @@ def main():
     print(f"{len(items)} items -> {len(set(used))} different shots from {len({it['clip'] for it in items})} videos "
           f"(library {len(pool)} usable shots); clip score median {np.median(sc):.3f}, lowest {np.sort(sc)[:5].round(3)}")
     if a.review:
-        review(items, os.path.join(a.lib, "clips"), a.review)
+        keep = None
+        if a.changed and os.path.exists(a.changed):
+            old = {(o["sec"], round(o["t0"], 2)): o.get("shot") for o in json.load(open(a.changed))["items"]}
+            keep = {n for n, it in enumerate(items) if old.get((it["sec"], round(it["t0"], 2))) != it["shot"]}
+            print(f"review: {len(keep)} changed items")
+        review(items, os.path.join(a.lib, "clips"), a.review, keep=keep)
 
 
-def review(items, clips_dir, out_dir, per=48, cols=6):
+def review(items, clips_dir, out_dir, per=48, cols=6, keep=None):
     os.makedirs(out_dir, exist_ok=True)
+    for f in os.listdir(out_dir):
+        if f.startswith("review_"):
+            os.remove(os.path.join(out_dir, f))
     tiles = []
     for n, it in enumerate(items):
+        if keep is not None and n not in keep:
+            continue
         cap = cv2.VideoCapture(os.path.join(clips_dir, it["clip"] + ".mp4"))
         cap.set(cv2.CAP_PROP_POS_MSEC, (it["ss"] + (it["t1"] - it["t0"]) / 2) * 1000)
         ok, f = cap.read()
@@ -147,6 +223,8 @@ def review(items, clips_dir, out_dir, per=48, cols=6):
         cv2.putText(band, f"{n} {it['ref']} {it['score']:.2f}", (3, 14), cv2.FONT_HERSHEY_SIMPLEX, 0.42, (0, 255, 255), 1)
         cv2.putText(band, label[:46], (3, 34), cv2.FONT_HERSHEY_SIMPLEX, 0.38, (255, 255, 255), 1)
         tiles.append(np.vstack([f, band]))
+    if not tiles:
+        return
     for p in range(0, len(tiles), per):
         page = tiles[p:p + per]
         while len(page) % cols:
