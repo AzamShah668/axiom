@@ -7,6 +7,8 @@ Credentials live in config/.env (gitignored), never in the repo:
   python upload_youtube.py auth-url                         # print the consent link (sign in with the CHANNEL's account)
   python upload_youtube.py exchange "<code or full redirect URL>"   # store YT_REFRESH_TOKEN in config/.env
   python upload_youtube.py whoami                           # which channel the token belongs to
+  python upload_youtube.py channel [--description productions/channel/description.txt] [--keywords "a b \"c d\""]
+                                                            # show (no options) or update the channel's About text
   python upload_youtube.py publish <video_id> [--comment credits_full.txt]   # private -> public (+ credits comment)
   python upload_youtube.py delete <video_id>
   python upload_youtube.py upload <video.mp4> <youtube.md> [--thumbnail t.jpg] [--comment credits_full.txt]
@@ -126,6 +128,37 @@ def upload(a, e):
     return vid
 
 
+def channel(a, e):
+    """Show the channel's About description/keywords, or update them (read-modify-write of brandingSettings,
+    so the country, banner and other settings are sent back unchanged)."""
+    tok = access_token(e)
+    hdr = {"Authorization": f"Bearer {tok}"}
+    ch = requests.get("https://www.googleapis.com/youtube/v3/channels?part=snippet,brandingSettings&mine=true",
+                      headers=hdr, timeout=30).json()["items"][0]
+    b = ch["brandingSettings"]
+    if not (a.description or a.keywords):
+        print(ch["id"], ch["snippet"]["title"], ch["snippet"].get("customUrl", ""))
+        print("keywords:", b["channel"].get("keywords", ""))
+        print(b["channel"].get("description", ""))
+        return
+    c = {k: v for k, v in b["channel"].items() if k != "title"}
+    if a.description:
+        desc = open(a.description, encoding="utf-8").read().strip()
+        if len(desc) > 1000 or "<" in desc or ">" in desc:
+            raise SystemExit(f"channel description must be <= 1000 characters with no < or > (got {len(desc)})")
+        c["description"] = desc
+    if a.keywords:
+        c["keywords"] = a.keywords
+    body = {"id": ch["id"], "brandingSettings": {"channel": c}}
+    if "image" in b:
+        body["brandingSettings"]["image"] = b["image"]
+    r = requests.put("https://www.googleapis.com/youtube/v3/channels?part=brandingSettings",
+                     headers={**hdr, "Content-Type": "application/json"}, data=json.dumps(body), timeout=60)
+    if r.status_code != 200:
+        raise SystemExit(f"channel update failed: {r.status_code} {r.text[:500]}")
+    print("channel updated:", ", ".join(k for k in ("description", "keywords") if getattr(a, k)))
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -133,6 +166,9 @@ def main():
     ex = sub.add_parser("exchange")
     ex.add_argument("code")
     sub.add_parser("whoami")
+    cp = sub.add_parser("channel")
+    cp.add_argument("--description", default="", help="text file with the new About description")
+    cp.add_argument("--keywords", default="", help='space-separated, multi-word ones in quotes')
     pb = sub.add_parser("publish")
     pb.add_argument("video_id")
     pb.add_argument("--comment", default="")
@@ -179,6 +215,8 @@ def main():
         r = requests.delete(f"https://www.googleapis.com/youtube/v3/videos?id={a.video_id}",
                             headers={"Authorization": f"Bearer {access_token(e)}"}, timeout=60)
         print("deleted" if r.status_code == 204 else f"{r.status_code} {r.text[:300]}")
+    elif a.cmd == "channel":
+        channel(a, e)
     elif a.cmd == "whoami":
         tok = access_token(e)
         r = requests.get("https://www.googleapis.com/youtube/v3/channels?part=snippet,status&mine=true",

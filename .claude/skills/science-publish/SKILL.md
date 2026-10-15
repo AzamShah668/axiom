@@ -32,6 +32,19 @@ python scripts/video/thumbnail.py <4K still or frame.jpg> $MEDIA/fonts productio
 ## Upload checklist
 - The master plays end to end and is 1080p30 at -14 LUFS (`ffmpeg -i master.mp4 -af ebur128 -f null -`).
 - Title, thumbnail, description, credits, tags and chapters are all in English.
-- Uploading itself is a manual step, or goes through `modules/uploader/youtube_uploader.js` once it is set
-  up for this channel.
 - Commit `productions/NN-slug` (text files only) and push.
+
+## Upload (`scripts/youtube/upload_youtube.py`)
+Needs `YT_CLIENT_ID`, `YT_CLIENT_SECRET` and `YT_REFRESH_TOKEN` in `config/.env` (gitignored, never committed).
+```bash
+python scripts/youtube/upload_youtube.py whoami          # must print the Science Guy channel (UC6-6ZqXKuT7BQSx-c6zbNBg)
+python scripts/youtube/upload_youtube.py upload $WORK/out/NN-slug.mp4 productions/NN-slug/youtube.md \
+  --thumbnail thumbnail.jpg --privacy private            # check it in YouTube Studio, then:
+python scripts/youtube/upload_youtube.py publish <video_id> --comment productions/NN-slug/credits_full.txt
+```
+- The credits comment must be pinned by hand in YouTube Studio (the API can't pin).
+- `invalid_grant` means the refresh token expired. Tokens expire after 7 days while the OAuth consent screen
+  is in "Testing". Fix: `auth-url`, sign in with the channel's account, `exchange "<redirect URL>"`.
+- The channel About text lives in `productions/channel/description.txt` (max 1000 characters, no `<` or `>`).
+  Apply it with `upload_youtube.py channel --description productions/channel/description.txt`.
+  Run `channel` with no options to show the current text.
