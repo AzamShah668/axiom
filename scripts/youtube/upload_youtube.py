@@ -7,6 +7,8 @@ Credentials live in config/.env (gitignored), never in the repo:
   python upload_youtube.py auth-url                         # print the consent link (sign in with the CHANNEL's account)
   python upload_youtube.py exchange "<code or full redirect URL>"   # store YT_REFRESH_TOKEN in config/.env
   python upload_youtube.py whoami                           # which channel the token belongs to
+  python upload_youtube.py publish <video_id> [--comment credits_full.txt]   # private -> public (+ credits comment)
+  python upload_youtube.py delete <video_id>
   python upload_youtube.py upload <video.mp4> <youtube.md> [--thumbnail t.jpg] [--comment credits_full.txt]
                                   [--privacy public|unlisted|private] [--publish-at 2026-10-16T12:00:00Z]
 
@@ -131,6 +133,11 @@ def main():
     ex = sub.add_parser("exchange")
     ex.add_argument("code")
     sub.add_parser("whoami")
+    pb = sub.add_parser("publish")
+    pb.add_argument("video_id")
+    pb.add_argument("--comment", default="")
+    dl = sub.add_parser("delete")
+    dl.add_argument("video_id")
     up = sub.add_parser("upload")
     up.add_argument("video")
     up.add_argument("package")
@@ -155,6 +162,23 @@ def main():
             raise SystemExit(f"exchange failed: {r.status_code} {r.text[:300]}")
         save_env("YT_REFRESH_TOKEN", r.json()["refresh_token"])
         print("refresh token saved to config/.env")
+    elif a.cmd == "publish":  # flip an uploaded (private) video to public, then post the credits comment
+        tok = access_token(e)
+        r = requests.put("https://www.googleapis.com/youtube/v3/videos?part=status",
+                         headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json"},
+                         data=json.dumps({"id": a.video_id, "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False,
+                                                                      "embeddable": True}}), timeout=60)
+        print("status:", r.json().get("status", {}).get("privacyStatus") if r.status_code == 200 else f"{r.status_code} {r.text[:300]}")
+        if a.comment and r.status_code == 200:
+            c = requests.post("https://www.googleapis.com/youtube/v3/commentThreads?part=snippet",
+                              headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json"},
+                              data=json.dumps({"snippet": {"videoId": a.video_id, "topLevelComment": {"snippet": {
+                                  "textOriginal": open(a.comment, encoding="utf-8").read().strip()}}}}), timeout=60)
+            print("credits comment:", "posted (pin it in YouTube Studio)" if c.status_code == 200 else f"{c.status_code} {c.text[:200]}")
+    elif a.cmd == "delete":
+        r = requests.delete(f"https://www.googleapis.com/youtube/v3/videos?id={a.video_id}",
+                            headers={"Authorization": f"Bearer {access_token(e)}"}, timeout=60)
+        print("deleted" if r.status_code == 204 else f"{r.status_code} {r.text[:300]}")
     elif a.cmd == "whoami":
         tok = access_token(e)
         r = requests.get("https://www.googleapis.com/youtube/v3/channels?part=snippet,status&mine=true",
