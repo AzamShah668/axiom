@@ -20,7 +20,7 @@ import requests
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 ENV = os.path.join(ROOT, "config", ".env")
 SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.force-ssl"
-REDIRECT = "http://localhost:8080/"
+REDIRECT = "http://localhost"
 
 
 def env():
