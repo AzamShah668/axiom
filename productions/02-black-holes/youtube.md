@@ -1,5 +1,8 @@
 # YouTube upload: Production 02
 
+Uploaded 2026-10-19 to Science Guy (UC6-6ZqXKuT7BQSx-c6zbNBg) as **private**: https://youtu.be/OVmFrJzqTuU
+Publish: `python scripts/youtube/upload_youtube.py publish OVmFrJzqTuU --comment productions/02-black-holes/credits_full.txt`
+
 **Title**
 10 Facts You Don't Know About Black Holes | Hindi Documentary
 
