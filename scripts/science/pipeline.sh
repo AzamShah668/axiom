@@ -16,6 +16,12 @@
 #   preview    720p parts under 30 MB -> $WORK/out/preview
 #   credits    description credits from the final cut -> <production_dir>/credits.txt
 #   all        everything from narration to credits
+#   archive    after the video is published: push $WORK, $LIB and $MEDIA to Google Drive (folder
+#              axiom-science-channel) and delete them here. Nothing heavy stays in the container.
+#   restore    pull media, the whole footage library and this production's work dir back from Drive
+#              (needed before footage/assign for a new production)
+#   restore-render  pull only what a re-render needs: media, library metadata, the clips in cutlist.json
+#              and the work dir (voice, renders)
 #
 # Environment: PY (python with scripts/requirements-science.txt), WORK (default work/<production>),
 #              LIB (default work/library), MEDIA (default work/media), JOBS (default 3), WORKERS (default 4),
@@ -37,6 +43,7 @@ CAP_MULTI=${CAP_MULTI:-40}
 LIMIT=${LIMIT:-330}
 mkdir -p "$WORK" "$LIB" "$MEDIA"
 TL=$WORK/voice/timeline.json
+DRIVE=$ROOT/scripts/storage/drive_sync.py
 MASTER=$WORK/out/$NAME.mp4
 
 stage() {
@@ -84,6 +91,21 @@ stage() {
         --full "$P/credits_full.txt" | tee "$P/credits.txt" ;;
     all)
       for s in narration edit footage assign render review preview credits; do stage "$s"; done ;;
+    archive)
+      "$PY" "$DRIVE" push "$WORK" "work/$NAME" --delete
+      "$PY" "$DRIVE" push "$LIB" library --pack thumbs,shot_thumbs --delete
+      "$PY" "$DRIVE" push "$MEDIA" media --delete ;;
+    restore)
+      "$PY" "$DRIVE" pull media "$MEDIA"
+      "$PY" "$DRIVE" pull library "$LIB"
+      "$PY" "$DRIVE" pull "work/$NAME" "$WORK" || echo "(no work dir on Drive yet for $NAME)" ;;
+    restore-render)
+      "$PY" "$DRIVE" pull media "$MEDIA"
+      "$PY" "$DRIVE" pull library "$LIB" --exclude clips
+      "$PY" -c "import json,sys; print('\n'.join(sorted({i['clip'] + '.mp4' for i in json.load(open(sys.argv[1]))['items'] if i.get('clip')})))" \
+        "$P/cutlist.json" > "$WORK/clips_needed.txt"
+      "$PY" "$DRIVE" pull library/clips "$LIB/clips" --only-list "$WORK/clips_needed.txt"
+      "$PY" "$DRIVE" pull "work/$NAME" "$WORK" ;;
     *)
       echo "unknown stage: $1"; exit 2 ;;
   esac

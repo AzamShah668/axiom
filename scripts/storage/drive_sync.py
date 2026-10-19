@@ -110,16 +110,20 @@ class Drive:
                 data = f.read(CHUNK)
                 end = pos + len(data) - 1
                 rng = f"bytes {pos}-{end}/{size}" if data else f"bytes */{size}"
-                for attempt in range(6):
+                last = ""
+                for attempt in range(7):
                     try:
                         r = requests.put(url, data=data, timeout=600, headers={**self.h(), "Content-Range": rng})
                         if r.status_code in (200, 201, 308):
                             break
-                    except requests.RequestException:
-                        pass
+                        last = f"{r.status_code} {r.text[:200]}"
+                        if r.status_code == 404:  # upload session expired: start this file again
+                            return self.upload(local, name, parent)
+                    except requests.RequestException as ex:
+                        last = repr(ex)[:200]
                     time.sleep(2 ** attempt)
                 else:
-                    raise SystemExit(f"upload failed: {local}")
+                    raise SystemExit(f"upload failed: {local}: {last}")
                 md5.update(data)
                 pos += len(data)
                 if r.status_code in (200, 201):
@@ -130,13 +134,21 @@ class Drive:
                 if not data:
                     raise SystemExit(f"upload did not finish: {local}")
 
-    def download(self, fid, local):
+    def download(self, fid, local, md5=None):
         os.makedirs(os.path.dirname(local) or ".", exist_ok=True)
-        with requests.get(f"{API}/files/{fid}?alt=media", headers=self.h(), stream=True, timeout=600) as r:
-            r.raise_for_status()
-            with open(local + ".part", "wb") as f:
-                shutil.copyfileobj(r.raw, f, 8 * 1024 * 1024)
-        os.replace(local + ".part", local)
+        for attempt in range(4):
+            m = hashlib.md5()
+            with requests.get(f"{API}/files/{fid}?alt=media", headers=self.h(), stream=True, timeout=600) as r:
+                r.raise_for_status()
+                with open(local + ".part", "wb") as f:
+                    for b in r.iter_content(8 * 1024 * 1024):
+                        f.write(b)
+                        m.update(b)
+            if md5 is None or m.hexdigest() == md5:
+                os.replace(local + ".part", local)
+                return
+            time.sleep(2 ** attempt)
+        raise SystemExit(f"checksum mismatch after download: {local}")
 
 
 def md5sum(path):
@@ -218,7 +230,7 @@ def pull(d, a):
             else:
                 dst = os.path.join(a.local, rel, name)
                 if not (os.path.exists(dst) and os.path.getsize(dst) == int(f.get("size", -1))):
-                    jobs.append((f["id"], dst))
+                    jobs.append((f["id"], dst, f.get("md5Checksum")))
     walk(d.folder(a.remote, create=False), "", True)
     with cf.ThreadPoolExecutor(4) as ex:
         for k, _ in enumerate(ex.map(lambda j: d.download(*j), jobs), 1):
@@ -228,7 +240,7 @@ def pull(d, a):
         for fn in files:
             if fn.endswith(".pack.tar"):
                 with tarfile.open(os.path.join(cur, fn)) as t:
-                    t.extractall(cur)
+                    t.extractall(cur, filter="data")
                 os.remove(os.path.join(cur, fn))
 
 

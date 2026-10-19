@@ -6,8 +6,9 @@ Follow `.claude/skills/science-video/SKILL.md` and its stage skills in `.claude/
 Channel rules: `productions/README.md`. Scripted stages:
 
 ```bash
-scripts/science/pipeline.sh productions/NN-slug setup
+scripts/science/pipeline.sh productions/NN-slug restore setup                  # library + media from Google Drive
 scripts/science/pipeline.sh productions/NN-slug narration edit footage assign   # then review $WORK/review_assign
 scripts/science/pipeline.sh productions/NN-slug render review                   # then review $WORK/review_render
 scripts/science/pipeline.sh productions/NN-slug preview credits
+scripts/science/pipeline.sh productions/NN-slug archive                         # after publishing: all heavy files -> Drive
 ```

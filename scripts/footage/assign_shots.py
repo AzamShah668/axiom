@@ -159,19 +159,29 @@ def main():
     sources = json.load(open(os.path.join(a.lib, "sources.json")))
     z = np.load(os.path.join(a.lib, "shots_emb.npz"), allow_pickle=True)
     emb = dict(zip(z["ids"], z["emb"]))
-    ban = set(edit.get("ban", []))
+    ban, avoided = set(edit.get("ban", [])), set()
     if a.avoid:  # footage already published in other productions stays out of this one
         here = os.path.dirname(os.path.abspath(a.edit))
         for d in sorted(os.listdir(a.avoid)):
             f = os.path.join(a.avoid, d, "cutlist.json")
             if os.path.exists(f) and os.path.abspath(os.path.join(a.avoid, d)) != here:
-                ban |= {it["shot"] for it in json.load(open(f))["items"] if it.get("shot")}
+                avoided |= {it["shot"] for it in json.load(open(f))["items"] if it.get("shot")}
+        ban |= avoided
     for s in shots:  # manual fixes from edit.base.json: cut seconds out of a clip, force a crop
         for x0, x1 in edit.get("exclude", {}).get(s["clip"], []):
             s["usable"] = [r for a_, z in s["usable"] for r in ([a_, min(z, x0)], [max(a_, x1), z]) if r[1] - r[0] >= 1.5]
         if s["clip"] in edit.get("crops", {}):
             s["crop"] = edit["crops"][s["clip"]]
     pool = [s for s in shots if s["usable"] and not s["dup_of"] and s["id"] not in ban and s["clip"] not in ban]
+    if avoided:  # near-identical copies of footage earlier productions showed (same image, re-zoomed) stay out too
+        prev = [s for s in shots if s["id"] in avoided and s["usable"]]
+        sig = os.path.join(a.lib, "segments_sig.npz")
+        PE, PH = segment_signatures(a.lib, prev, sig)
+        CE, CH = segment_signatures(a.lib, pool, sig)
+        AE, AH = np.concatenate([CE, PE]), np.concatenate([CH, PH])
+        keep = [k for k in range(len(pool)) if not same_footage(AE, AH, k, range(len(pool), len(pool) + len(prev)))]
+        print(f"avoid: {len(prev)} shots from earlier productions; {len(pool) - len(keep)} look-alikes removed")
+        pool = [pool[k] for k in keep]
     if len(pool) < len(items):
         raise SystemExit(f"library has {len(pool)} usable shots but the edit needs {len(items)} different ones: add footage")
     E = np.stack([emb[s["id"]] for s in pool])

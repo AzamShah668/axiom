@@ -23,6 +23,7 @@ doing the stage. Do not skip the review gates.
 One command runs the scripted parts (stages 2-6 except writing):
 ```bash
 export PY=<venv python> WORK=<work dir> LIB=<shared library dir> MEDIA=<shared media dir>   # defaults: work/...
+scripts/science/pipeline.sh productions/NN-slug restore          # fresh container: library + media back from Drive
 scripts/science/pipeline.sh productions/NN-slug setup            # once per machine: fonts, music, stills
 scripts/science/pipeline.sh productions/NN-slug narration edit footage assign
 scripts/science/pipeline.sh productions/NN-slug topup assign     # more 4K footage for weakly matched scenes
@@ -31,6 +32,8 @@ scripts/science/pipeline.sh productions/NN-slug topup assign     # more 4K foota
 scripts/science/pipeline.sh productions/NN-slug render review
 #   -> look at $WORK/review_render/sheet_*.jpg, fix, re-render the affected sections
 scripts/science/pipeline.sh productions/NN-slug preview credits
+#   -> publish (science-publish), commit the production folder, then:
+scripts/science/pipeline.sh productions/NN-slug archive          # everything heavy -> Google Drive, deleted here
 ```
 Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELEVENLABS_API_KEY` in
 `config/.env` (gitignored). Never commit keys, audio, video, or other people's transcripts (the repo is public).
@@ -56,9 +59,20 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
 - **Sound:** Kevin MacLeod dark-ambient bed ducked ~22 dB under the voice and rising in pauses, a low drone,
   whooshes, and booms on big moments. Master at -14 LUFS.
 
+## Storage: Google Drive, not the container (owner's rule)
+- After every video, `pipeline.sh ... archive` pushes `$WORK` (voice, renders, previews, review sheets), the footage
+  library `$LIB` and `$MEDIA` to the Drive folder `axiom-science-channel` and deletes them locally. Every file is
+  MD5-checked on Drive before its local copy is removed. Nothing heavy stays in the cloud container.
+- Before working on a production in a fresh container: `restore` (full library, for footage/assign of a new video)
+  or `restore-render` (only the clips in `cutlist.json`, for re-rendering a finished one).
+- Tool: `scripts/storage/drive_sync.py` (`quota`, `ls`, `push`, `pull`). Credentials: `DRIVE_REFRESH_TOKEN` +
+  the YouTube OAuth client in `config/.env`; scope `drive.file`, so it only sees the files it created. If the token
+  stops working, run `drive_sync.py auth-url`, have the owner sign in, then `exchange "<redirect URL>"`.
+- The Python venv is not archived; rebuild it from `scripts/requirements-science.txt`.
+
 ## Delivery
 - The master is 1080p (~500 MB) and too large for chat. Send `preview_parts.sh` output: 3 x 720p, under 30 MB each.
-- Offer the full file through a connected Drive or YouTube upload.
+- The full master goes to YouTube (`scripts/youtube/upload_youtube.py`, see science-publish) and to Drive with `archive`.
 - Commit and push the production folder: script, narration text, `edit.spec`, `edit.json`, `cutlist.json`,
   `youtube.md`, `credits.txt`.
 
@@ -71,3 +85,6 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
 - Graphic stills can carry diagram lines (the ESA Milky Way has a pointer line; `render_video.remove_hlines`).
 - `pkill -f <pattern>` kills your own shell when the pattern is in the command line; stop jobs by task id or PID.
 - Render with one OpenCV thread per worker (`cv2.setNumThreads(1)`), or the render takes 5x longer.
+- The 4K archives overlap a lot between topics: production 02's first 330 picks were 252 clips already in the
+  library. `--avoid` removes every shot an earlier production used *and* its look-alikes, so plan on a `topup`.
+- Drive downloads can arrive gzip-encoded; `drive_sync.py` decodes and MD5-checks every download.
