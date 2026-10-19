@@ -18,6 +18,9 @@ The four steps can also be run alone (all in `scripts/footage/`):
 | shots | `build_shots.py $LIB [--workers 4]` | PySceneDetect shots; per second: OCR text (auto-crop for corner labels), black, frozen (motion < 0.6); perceptual-hash duplicates; CLIP embedding |
 
 - `$LIB` is shared across productions and only grows; every step is incremental and resumable.
+- Between videos `$LIB` lives on Google Drive (`footage-library/`, see science-video "Storage"). `pipeline.sh ... restore`
+  brings it back. `productions/footage-catalog.csv` says what every clip shows (CLIP category/tags, archive title,
+  usable seconds, which video used it): grep it before searching the archives again.
 - `$LIB/shot_thumbs/` has 3 frames per shot for checking by eye.
 
 ## Sources and licences

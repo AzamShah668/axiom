@@ -16,8 +16,10 @@
 #   preview    720p parts under 30 MB -> $WORK/out/preview
 #   credits    description credits from the final cut -> <production_dir>/credits.txt
 #   all        everything from narration to credits
-#   archive    after the video is published: push $WORK, $LIB and $MEDIA to Google Drive (folder
-#              axiom-science-channel) and delete them here. Nothing heavy stays in the container.
+#   archive    after the video is published: catalogue the footage library (descriptive clip names,
+#              productions/footage-catalog.csv), copy the master + thumbnail to Drive videos/ under the real
+#              title, then push $WORK -> productions/<name>, $LIB -> footage-library, $MEDIA -> media on
+#              Google Drive (folder axiom-science-channel) and delete them here. Nothing heavy stays local.
 #   restore    pull media, the whole footage library and this production's work dir back from Drive
 #              (needed before footage/assign for a new production)
 #   restore-render  pull only what a re-render needs: media, library metadata, the clips in cutlist.json
@@ -92,20 +94,29 @@ stage() {
     all)
       for s in narration edit footage assign render review preview credits; do stage "$s"; done ;;
     archive)
-      "$PY" "$DRIVE" push "$WORK" "work/$NAME" --delete
-      "$PY" "$DRIVE" push "$LIB" library --pack thumbs,shot_thumbs --delete
+      "$PY" "$ROOT/scripts/footage/catalog.py" "$LIB" --csv "$ROOT/productions/footage-catalog.csv"
+      if [ -f "$MASTER" ]; then  # the finished video under its real title, easy to find on Drive
+        title=$("$PY" -c "import re,sys; m=re.search(r'\*\*Title\*\*\s*\n(.+)', open(sys.argv[1]).read()); print(m.group(1).strip().replace(' | ', ' (').replace('/', '-') + ')' if m else '')" "$P/youtube.md" 2>/dev/null || true)
+        n=${NAME%%-*}
+        "$PY" "$DRIVE" put "$MASTER" videos --as "$n - ${title:-$NAME} 1080p.mp4"
+        for th in "$WORK/thumbnail.jpg" "$WORK/thumb/thumbnail.jpg"; do
+          if [ -f "$th" ]; then "$PY" "$DRIVE" put "$th" videos --as "$n - ${title:-$NAME} thumbnail.jpg"; break; fi
+        done
+      fi
+      "$PY" "$DRIVE" push "$WORK" "productions/$NAME" --delete
+      "$PY" "$DRIVE" push "$LIB" footage-library --pack thumbs,shot_thumbs --names "$LIB/drive_names.json" --delete
       "$PY" "$DRIVE" push "$MEDIA" media --delete ;;
     restore)
       "$PY" "$DRIVE" pull media "$MEDIA"
-      "$PY" "$DRIVE" pull library "$LIB"
-      "$PY" "$DRIVE" pull "work/$NAME" "$WORK" || echo "(no work dir on Drive yet for $NAME)" ;;
+      "$PY" "$DRIVE" pull footage-library "$LIB"
+      "$PY" "$DRIVE" pull "productions/$NAME" "$WORK" || echo "(no work dir on Drive yet for $NAME)" ;;
     restore-render)
       "$PY" "$DRIVE" pull media "$MEDIA"
-      "$PY" "$DRIVE" pull library "$LIB" --exclude clips
-      "$PY" -c "import json,sys; print('\n'.join(sorted({i['clip'] + '.mp4' for i in json.load(open(sys.argv[1]))['items'] if i.get('clip')})))" \
+      "$PY" "$DRIVE" pull footage-library "$LIB" --exclude clips
+      "$PY" -c "import json,sys; print('\\n'.join(sorted({i['clip'] + '.mp4' for i in json.load(open(sys.argv[1]))['items'] if i.get('clip')})))" \
         "$P/cutlist.json" > "$WORK/clips_needed.txt"
-      "$PY" "$DRIVE" pull library/clips "$LIB/clips" --only-list "$WORK/clips_needed.txt"
-      "$PY" "$DRIVE" pull "work/$NAME" "$WORK" ;;
+      "$PY" "$DRIVE" pull footage-library/clips "$LIB/clips" --only-list "$WORK/clips_needed.txt"
+      "$PY" "$DRIVE" pull "productions/$NAME" "$WORK" ;;
     *)
       echo "unknown stage: $1"; exit 2 ;;
   esac

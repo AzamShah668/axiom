@@ -13,11 +13,18 @@ Credentials live in config/.env (gitignored), never in the repo:
   python drive_sync.py quota                            # account, used / total storage
   python drive_sync.py ls <remote/path>
   python drive_sync.py push <local_dir> <remote/path> [--pack thumbs,shot_thumbs] [--exclude clips] [--delete]
+                                [--names names.json]
   python drive_sync.py pull <remote/path> <local_dir> [--only a.mp4,b.mp4 | --only-list names.txt] [--exclude clips]
+  python drive_sync.py put <local_file> <remote/dir> [--as "Name on Drive.mp4"]
+  python drive_sync.py copy <remote/file> <remote/dir> --as "New name"     # server-side copy, nothing downloaded
+  python drive_sync.py rename <remote/path> <new name>
 
 push uploads every file under local_dir that is not already on Drive with the same size. Sub-directories named in
 --pack go up as one "<name>.pack.tar" each (thousands of small thumbnails would take one API call per file).
 --delete removes each local file after Drive reports the same MD5 as the local copy.
+--names maps local paths (relative to local_dir) to descriptive Drive names, e.g. footage clips get
+"<category>__<title>__<clip>.mp4" (scripts/footage/catalog.py writes that map). pull reverses it: any
+"...__<id>.mp4" on Drive is saved locally as "<id>.mp4", so the pipeline keeps its short clip ids.
 pull downloads into local_dir (unpacking *.pack.tar); --only / --only-list limit it to some top-level names,
 e.g. just the clips a cutlist uses.
 """
@@ -159,7 +166,13 @@ def md5sum(path):
     return m.hexdigest()
 
 
+def local_name(name):
+    """Drive name -> local name: descriptive clip names "<category>__<title>__<id>.mp4" become "<id>.mp4"."""
+    return name.rsplit("__", 1)[1] if name.endswith(".mp4") and "__" in name else name
+
+
 def push(d, a):
+    names = json.load(open(a.names)) if a.names else {}
     pack = {p for p in a.pack.split(",") if p}
     exclude = {p for p in a.exclude.split(",") if p}
     jobs, total = [], 0
@@ -177,7 +190,7 @@ def push(d, a):
         for fn in files:
             if fn.endswith(".pack.tar") and fn.startswith("."):
                 continue
-            jobs.append((os.path.join(cur, fn), rel, fn, None))
+            jobs.append((os.path.join(cur, fn), rel, names.get(os.path.join(rel, fn), fn), None))
     listing = {}
 
     def one(job):
@@ -187,6 +200,11 @@ def push(d, a):
         if remote not in listing:
             listing[remote] = d.children(parent)
         have = listing[remote].get(name)
+        if have is None:  # uploaded earlier under another name (e.g. before it got a descriptive one): rename it
+            old = next((f for n, f in listing[remote].items() if n != name and local_name(n) == os.path.basename(local)), None)
+            if old:
+                d.call("PATCH", f"{API}/files/{old['id']}?fields=id,name,size,md5Checksum", json={"name": name})
+                have = old
         size = os.path.getsize(local)
         if have and int(have.get("size", -1)) == size:
             ok = have.get("md5Checksum") == md5sum(local) if a.delete else True
@@ -223,12 +241,13 @@ def pull(d, a):
 
     def walk(fid, rel, top):
         for name, f in d.children(fid).items():
-            if top and ((only and name not in only and name.replace(".pack.tar", "") not in only) or name in exclude):
+            lname = local_name(name)
+            if top and ((only and lname not in only and lname.replace(".pack.tar", "") not in only) or lname in exclude):
                 continue
             if f["mimeType"] == FOLDER:
                 walk(f["id"], os.path.join(rel, name), False)
             else:
-                dst = os.path.join(a.local, rel, name)
+                dst = os.path.join(a.local, rel, lname)
                 if not (os.path.exists(dst) and os.path.getsize(dst) == int(f.get("size", -1))):
                     jobs.append((f["id"], dst, f.get("md5Checksum")))
     walk(d.folder(a.remote, create=False), "", True)
@@ -259,6 +278,18 @@ def main():
     ps.add_argument("--pack", default="")
     ps.add_argument("--exclude", default="")
     ps.add_argument("--delete", action="store_true")
+    ps.add_argument("--names", default="", help="json {local relative path: name on Drive}")
+    pt = sub.add_parser("put")
+    pt.add_argument("local")
+    pt.add_argument("remote")
+    pt.add_argument("--as", dest="name", default="")
+    cp = sub.add_parser("copy")
+    cp.add_argument("remote")
+    cp.add_argument("dest")
+    cp.add_argument("--as", dest="name", required=True)
+    rn = sub.add_parser("rename")
+    rn.add_argument("remote")
+    rn.add_argument("name")
     pl = sub.add_parser("pull")
     pl.add_argument("remote")
     pl.add_argument("local")
@@ -295,6 +326,31 @@ def main():
             print(f"{int(f.get('size', 0)) / 1e6:10.1f} MB  {name}{'/' if f['mimeType'] == FOLDER else ''}")
     elif a.cmd == "push":
         push(d, a)
+    elif a.cmd == "put":
+        parent = d.folder(a.remote)
+        name = a.name or os.path.basename(a.local)
+        old = d.children(parent).get(name)
+        if old and int(old.get("size", -1)) == os.path.getsize(a.local) and old.get("md5Checksum") == md5sum(a.local):
+            print(f"already on Drive: {a.remote}/{name}")
+        else:
+            d.upload(a.local, name, parent)
+            print(f"uploaded {a.remote}/{name}")
+    elif a.cmd in ("copy", "rename"):
+        head, _, tail = a.remote.rstrip("/").rpartition("/")
+        f = d.children(d.folder(head, create=False)).get(tail)
+        if not f:
+            raise SystemExit(f"not on Drive: {a.remote}")
+        if a.cmd == "rename":
+            d.call("PATCH", f"{API}/files/{f['id']}", json={"name": a.name})
+            d.ids = {}
+            print(f"renamed {a.remote} -> {a.name}")
+        else:
+            dest = d.folder(a.dest)
+            if a.name in d.children(dest):
+                print(f"already on Drive: {a.dest}/{a.name}")
+            else:
+                d.call("POST", f"{API}/files/{f['id']}/copy", json={"name": a.name, "parents": [dest]})
+                print(f"copied {a.remote} -> {a.dest}/{a.name}")
     else:
         pull(d, a)
 

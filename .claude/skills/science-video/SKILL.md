@@ -60,14 +60,32 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
   whooshes, and booms on big moments. Master at -14 LUFS.
 
 ## Storage: Google Drive, not the container (owner's rule)
-- After every video, `pipeline.sh ... archive` pushes `$WORK` (voice, renders, previews, review sheets), the footage
-  library `$LIB` and `$MEDIA` to the Drive folder `axiom-science-channel` and deletes them locally. Every file is
-  MD5-checked on Drive before its local copy is removed. Nothing heavy stays in the cloud container.
-- Before working on a production in a fresh container: `restore` (full library, for footage/assign of a new video)
-  or `restore-render` (only the clips in `cutlist.json`, for re-rendering a finished one).
-- Tool: `scripts/storage/drive_sync.py` (`quota`, `ls`, `push`, `pull`). Credentials: `DRIVE_REFRESH_TOKEN` +
-  the YouTube OAuth client in `config/.env`; scope `drive.file`, so it only sees the files it created. If the token
-  stops working, run `drive_sync.py auth-url`, have the owner sign in, then `exchange "<redirect URL>"`.
+Drive folder `axiom-science-channel` (README.txt there explains it):
+| Drive folder | Contents |
+|---|---|
+| `videos/` | finished masters + thumbnails named `NN - <YouTube title> 1080p.mp4` |
+| `productions/NN-slug/` | the work dir: voice/, out/ (master, previews), cutlists, review sheets |
+| `footage-library/` | the shared library; `clips/` named `<category>__<archive-title>__<id>.mp4`, plus catalog.csv and the shot metadata |
+| `media/` | fonts, music, graphic stills |
+| `misc/` | session scratch |
+
+- After every video, `pipeline.sh ... archive`:
+  - catalogues the library (`scripts/footage/catalog.py`): CLIP category and tags, usable seconds, used-in.
+    It writes `productions/footage-catalog.csv` (committed, searchable without downloading anything) and the
+    descriptive Drive names.
+  - copies the master and thumbnail into `videos/`.
+  - pushes `$WORK`, `$LIB` and `$MEDIA`, then deletes them locally. Each file's MD5 is checked on Drive before its
+    local copy is removed. Nothing heavy stays in the cloud container.
+- Fresh container:
+  - `restore`: the full library, for footage/assign of a new video.
+  - `restore-render`: only the clips in `cutlist.json`, for re-rendering a finished one.
+  - Downloads turn `<...>__<id>.mp4` back into `<id>.mp4`, so cutlists, bans and pins keep working.
+- Picking footage by hand: `grep -i "accretion" productions/footage-catalog.csv` gives clip ids for `pin` / `ban`.
+  The `used_in` column shows footage earlier videos already showed.
+- Tool: `scripts/storage/drive_sync.py` (`quota`, `ls`, `push`, `pull`, `put`, `copy`, `rename`).
+  - Credentials: `DRIVE_REFRESH_TOKEN` plus the YouTube OAuth client in `config/.env`.
+  - Scope `drive.file`: it only sees the files it created.
+  - If the token stops working: run `drive_sync.py auth-url`, have the owner sign in, then `exchange "<redirect URL>"`.
 - The Python venv is not archived; rebuild it from `scripts/requirements-science.txt`.
 
 ## Delivery
