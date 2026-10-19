@@ -124,7 +124,7 @@ def text_gate(lib, items, pool, r, c, need, cache_path, workers=4):
         r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
         ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
         d = need[i] - 0.8
-        key = f"{s['id']}@{ss:.2f}+{d:.2f}"
+        key = f"{s['id']}@{ss:.2f}+{d:.2f}" + (f"/crop{list(s['crop'])}" if s.get("crop") else "")
         keys.append(key)
         if key not in cache:
             jobs.append((key, (os.path.join(lib, "clips", s["clip"] + ".mp4"),
