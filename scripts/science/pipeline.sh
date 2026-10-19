@@ -90,7 +90,7 @@ stage() {
     review)
       "$PY" "$ROOT/scripts/video/review_sheet.py" "$MASTER" "$WORK/review_render" ;;
     preview)
-      bash "$ROOT/scripts/video/preview_parts.sh" "$MASTER" "$WORK/out/preview" 3 ;;
+      bash "$ROOT/scripts/video/preview_parts.sh" "$MASTER" "$WORK/out/preview" ;;
     credits)
       "$PY" "$ROOT/scripts/footage/credits.py" "$WORK/cutlist.json" "$LIB" "$P/edit.json" --assets "$MEDIA/assets/credits.json" \
         --full "$P/credits_full.txt" | tee "$P/credits.txt" ;;
