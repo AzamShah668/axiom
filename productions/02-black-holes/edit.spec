@@ -16,7 +16,7 @@ G Sun के लिए @ bh_shrink
 V पाँच महीने @ a dark nebula in deep space | lonely stars in dark space
 V वह कभी नहीं @ zooming into the dark centre of a galaxy | slow zoom into a galaxy core
 V Black Hole. @ close-up of a black hole with a bright ring of light | black hole bending light around it
-V और सौ साल @ the James Webb Space Telescope in space | Webb telescope against the stars
+V और सौ साल @ the James Webb Space Telescope in space | Webb telescope sunshield unfolding in space | a Webb deep field full of galaxies
 V जो शायद @ a faint red galaxy in the early universe | deep field with distant red galaxies
 C - | DECEMBER 1915 | big
 C Russia के | On the Russian front, a German army lieutenant...
@@ -111,7 +111,7 @@ C Black Hole. | "BLACK HOLE" | big
 V - @ a dark region of space with faint stars | black hole hidden among stars
 V Astronomers के सामने @ a space telescope orbiting Earth | X-ray observatory in space
 V जवाब X-rays @ glowing X-ray view of hot gas in space | X-ray image of the sky
-V उन्नीस सौ चौंसठ में @ a rocket launching into the sky | rocket lift-off
+V उन्नीस सौ चौंसठ में @ a rocket launching into the sky | rocket lift-off from a launch pad | the X-ray sky glowing
 V Cygnus तारामंडल @ the Milky Way in the constellation Cygnus | rich star field along the Milky Way
 V Cygnus X-One. @ X-ray binary with a black hole pulling gas from a star | black hole feeding on a companion star
 V उन्नीस सौ बहत्तर में @ a blue supergiant star | bright blue star
@@ -373,7 +373,7 @@ V पहले तारे बनते @ a young galaxy forming stars | galaxi
 V भारी तारे मरते @ a massive star exploding as a supernova | supernova explosion
 V black holes बनते @ black hole forming from a collapsed star | stellar black hole
 V और अरबों सालों @ black hole growing as it feeds on gas | accretion disk around a growing black hole
-V James Webb Space Telescope ने @ the James Webb Space Telescope in space | Webb telescope
+V James Webb Space Telescope ने @ the James Webb Space Telescope in space | Webb telescope launching on a rocket | a Webb deep field full of galaxies
 V ब्रह्मांड के शुरुआती @ Webb deep field full of distant galaxies | deep field
 V Webb को छोटे @ tiny red galaxies in a deep field | little red dots
 V Little Red Dots. @ a compact red galaxy in the early universe | red glowing object in deep space

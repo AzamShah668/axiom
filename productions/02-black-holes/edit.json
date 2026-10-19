@@ -140,7 +140,36 @@
   "svs_5505",
   "svs_5519",
   "svs_5552",
-  "svs_5668"
+  "svs_5668",
+  "eso_eso1741b",
+  "svs_13237",
+  "svs_4807#0",
+  "eso_eso2513a",
+  "esawebb_potm2603a",
+  "esawebb_potm2511a",
+  "eso_eso1641a",
+  "svs_12854",
+  "svs_14970",
+  "eso_eso2601b",
+  "esawebb_weic2517c",
+  "esahubble_heic1711a#0",
+  "svs_14818#0",
+  "eso_eso2609b",
+  "svs_14719#0",
+  "svs_14544#0",
+  "eso_eso1637a",
+  "eso_eso2117b",
+  "svs_14404",
+  "eso_uhd_comp_vlt_2014#0",
+  "esawebb_weic2219b#1",
+  "eso_eso1835a#2",
+  "esahubble_heic2208b",
+  "eso_eso2305a#5",
+  "eso_eso2305a#3",
+  "eso_eso2210c",
+  "eso_eso1509a",
+  "eso_mars_4k",
+  "esahubble_heic1916c"
  ],
  "crops": {},
  "exclude": {},
@@ -243,7 +272,8 @@
      "at": "और सौ साल",
      "q": [
       "the James Webb Space Telescope in space",
-      "Webb telescope against the stars"
+      "Webb telescope sunshield unfolding in space",
+      "a Webb deep field full of galaxies"
      ]
     },
     {
@@ -714,7 +744,8 @@
      "at": "उन्नीस सौ चौंसठ में",
      "q": [
       "a rocket launching into the sky",
-      "rocket lift-off"
+      "rocket lift-off from a launch pad",
+      "the X-ray sky glowing"
      ]
     },
     {
@@ -2088,7 +2119,8 @@
      "at": "James Webb Space Telescope ने",
      "q": [
       "the James Webb Space Telescope in space",
-      "Webb telescope"
+      "Webb telescope launching on a rocket",
+      "a Webb deep field full of galaxies"
      ]
     },
     {
