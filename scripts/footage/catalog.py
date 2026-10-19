@@ -2,7 +2,7 @@
 
   python catalog.py <lib> [--productions productions] [--csv productions/footage-catalog.csv]
 
-For every clip in <lib>/clips:
+For every clip in <lib>/sources.json (the clip files themselves may already be on Drive):
 - category + tags: CLIP zero-shot over a fixed vocabulary (black-hole, galaxy-cluster, observatory, ...):
   the mean image embedding of its usable shots (what is actually on screen), helped by the archive title
   (z-scored over the vocabulary, title weighted 0.6)
@@ -88,16 +88,16 @@ def main():
     for s in shots:
         by.setdefault(s["clip"], []).append(s)
     rows, drive = [], {}
-    clips = sorted(f[:-4] for f in os.listdir(os.path.join(a.lib, "clips")) if f.endswith(".mp4"))
+    clips = sorted(src)  # every fetched clip (works after the clip files themselves went to Drive)
     TT = clip_model.embed_texts([f"a video of {src.get(c, {}).get('title', c)}" for c in clips])
     z = lambda x: (x - x.mean()) / (x.std() + 1e-6)
     for ci, clip in enumerate(clips):
         ss = by.get(clip, [])
         good = [s for s in ss if s["usable"] and not s.get("dup_of")]
-        es = [emb[s["id"]] for s in (good or ss) if s["id"] in emb]
+        es = [emb[s["id"]] for s in (good or ss) if s["id"] in emb and np.linalg.norm(emb[s["id"]]) > 0]
         sims = 0.6 * z(V @ TT[ci])
-        if es:
-            e = np.mean(es, 0)
+        e = np.mean(es, 0) if es else None
+        if e is not None and np.isfinite(e).all() and np.linalg.norm(e) > 0:
             sims = sims + z(V @ (e / np.linalg.norm(e)))
         top = [names[i] for i in np.argsort(-sims)[:3]]
         meta = src.get(clip, {})

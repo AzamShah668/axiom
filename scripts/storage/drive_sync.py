@@ -18,6 +18,7 @@ Credentials live in config/.env (gitignored), never in the repo:
   python drive_sync.py put <local_file> <remote/dir> [--as "Name on Drive.mp4"]
   python drive_sync.py copy <remote/file> <remote/dir> --as "New name"     # server-side copy, nothing downloaded
   python drive_sync.py rename <remote/path> <new name>
+  python drive_sync.py rename-map <remote/dir> <names.json>   # {"<id>.mp4": "<new Drive name>"}, renames in place
 
 push uploads every file under local_dir that is not already on Drive with the same size. Sub-directories named in
 --pack go up as one "<name>.pack.tar" each (thousands of small thumbnails would take one API call per file).
@@ -287,6 +288,9 @@ def main():
     cp.add_argument("remote")
     cp.add_argument("dest")
     cp.add_argument("--as", dest="name", required=True)
+    rm_ = sub.add_parser("rename-map")
+    rm_.add_argument("remote")
+    rm_.add_argument("names")
     rn = sub.add_parser("rename")
     rn.add_argument("remote")
     rn.add_argument("name")
@@ -335,6 +339,14 @@ def main():
         else:
             d.upload(a.local, name, parent)
             print(f"uploaded {a.remote}/{name}")
+    elif a.cmd == "rename-map":
+        names, n = json.load(open(a.names)), 0
+        for name, f in d.children(d.folder(a.remote, create=False)).items():
+            want = names.get(local_name(name))
+            if want and want != name:
+                d.call("PATCH", f"{API}/files/{f['id']}", json={"name": want})
+                n += 1
+        print(f"renamed {n} files in {a.remote}")
     elif a.cmd in ("copy", "rename"):
         head, _, tail = a.remote.rstrip("/").rpartition("/")
         f = d.children(d.folder(head, create=False)).get(tail)

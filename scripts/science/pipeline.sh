@@ -107,6 +107,7 @@ stage() {
         done
       fi
       "$PY" "$DRIVE" push "$WORK" "productions/$NAME" --delete
+      "$PY" "$DRIVE" put "$ROOT/productions/footage-catalog.csv" footage-library --as catalog.csv
       "$PY" "$DRIVE" push "$LIB" footage-library --pack thumbs,shot_thumbs --names "$LIB/drive_names.json" --delete
       "$PY" "$DRIVE" push "$MEDIA" media --delete ;;
     restore)
