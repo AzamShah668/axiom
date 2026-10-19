@@ -12,6 +12,7 @@ edit.json per section (built from edit.spec by make_edit.py):
   "sfx": extra sounds [{"type": "boom", "at": trigger}]
 Top level: "music" [{"from": section, "track": file}], "cards", "title_card", "card_query", "bg_query".
 """
+from functools import lru_cache
 import argparse, json, math, os, subprocess, sys
 from multiprocessing import Pool
 import numpy as np, cv2
@@ -186,6 +187,25 @@ def transition(a, b, p, kind):
 TDUR = {"xfade": 7, "blur": 10, "zoom": 10, "flash": 9, "whip": 9}
 
 
+@lru_cache(maxsize=64)
+def _backdrop_mask(w):
+    """Soft dark ellipse behind a big centre caption (w = text width rounded to 40 px)."""
+    rx, ry = w / 2 + 160, 170
+    yy, xx = np.mgrid[-ry:ry, -int(rx):int(rx)]
+    d = (xx / rx) ** 2 + (yy / ry) ** 2
+    return (np.clip(1 - d, 0, 1) ** 0.7).astype(np.float32)[..., None]
+
+
+def backdrop(fr, text_w, op, strength=0.7):
+    """Darken the footage behind a big caption so it stays readable on bright frames."""
+    m = _backdrop_mask(int(round(text_w / 40)) * 40)
+    h, w = m.shape[:2]
+    y0, x0 = H // 2 - h // 2, max(0, W // 2 - w // 2)
+    m = m[:, max(0, w // 2 - W // 2):max(0, w // 2 - W // 2) + min(w, W)]
+    reg = fr[y0:y0 + h, x0:x0 + m.shape[1]].astype(np.float32)
+    fr[y0:y0 + h, x0:x0 + m.shape[1]] = (reg * (1 - strength * op * m)).astype(np.uint8)
+
+
 def draw_caps(fr, caps, f):
     t = f / FPS
     for c in caps:
@@ -194,6 +214,7 @@ def draw_caps(fr, caps, f):
             op = min(1, dt / 0.25) * min(1, (c["t1"] - t) / 0.2)
             if c["big"]:
                 size = fit(c["text"], 132, 1700)
+                backdrop(fr, rv.text_rgba(c["text"], size, "Anton", (255, 255, 255))[1].shape[1], op)
                 rv.draw_text(fr, c["text"], size, (0.5, 0.5 - 0.02 * (1 - min(1, dt / 0.25))), op)
             else:
                 band = G["band"]

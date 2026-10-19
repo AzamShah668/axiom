@@ -102,7 +102,6 @@ C दुनिया का ध्यान | The world's attention was elsewher
 C कुछ साल बाद | Oppenheimer went on to lead the atomic bomb project...
 C और इस विषय | ...and never returned to the subject
 C इन चीज़ों को | It took 28 more years for them to get a name
-C उन्नीस सौ सड़सठ में | 1967 | big
 C American physicist | JOHN WHEELER | big
 C एक lecture में | In a lecture, he gave them a short name that stuck...
 C Black Hole. | "BLACK HOLE" | big
