@@ -19,7 +19,9 @@
 #
 # Environment: PY (python with scripts/requirements-science.txt), WORK (default work/<production>),
 #              LIB (default work/library), MEDIA (default work/media), JOBS (default 3), WORKERS (default 4),
-#              FRESH=1 (assign from scratch instead of keeping the previously reviewed shots)
+#              FRESH=1 (assign from scratch instead of keeping the previously reviewed shots),
+#              PRESET (x264 preset for proxies, default veryfast: ~1/3 smaller than ultrafast at the same CRF),
+#              CAP_MULTI (seconds kept from multi-shot videos, default 40), LIMIT (max new videos, default 330)
 set -euo pipefail
 ROOT=$(cd "$(dirname "$0")/../.." && pwd)
 P=$(cd "$1" && pwd); shift
@@ -30,6 +32,9 @@ LIB=${LIB:-$ROOT/work/library}
 MEDIA=${MEDIA:-$ROOT/work/media}
 JOBS=${JOBS:-3}
 WORKERS=${WORKERS:-4}
+PRESET=${PRESET:-veryfast}
+CAP_MULTI=${CAP_MULTI:-40}
+LIMIT=${LIMIT:-330}
 mkdir -p "$WORK" "$LIB" "$MEDIA"
 TL=$WORK/voice/timeline.json
 MASTER=$WORK/out/$NAME.mp4
@@ -46,15 +51,16 @@ stage() {
       "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" --plan-only ;;
     footage)
       "$PY" "$ROOT/scripts/footage/search_sources.py" "$P/footage/terms.txt" "$LIB/candidates.json"
-      "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks.json"
+      "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks.json" \
+        --max "$LIMIT"
       "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks.json" "$LIB" --jobs "$JOBS" \
-        --limit 400 --cap-single 12 --cap-multi 60 --preset ultrafast --from-end
+        --limit "$LIMIT" --cap-single 12 --cap-multi "$CAP_MULTI" --preset "$PRESET" --from-end
       "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS" ;;
     topup)
       "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks_topup.json" \
         --weak "$WORK/cutlist.json" --below 0.37 --per-item 3 --max 160 --skip "$WORK/picks.json"
       "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks_topup.json" "$LIB" --jobs "$JOBS" \
-        --cap-single 12 --cap-multi 60 --preset ultrafast --from-end
+        --cap-single 12 --cap-multi "$CAP_MULTI" --preset "$PRESET" --from-end
       "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS" ;;
     assign)
       keep=()

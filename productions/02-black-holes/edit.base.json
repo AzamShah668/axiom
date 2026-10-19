@@ -1,0 +1,147 @@
+{
+ "lead_in": 2.0,
+ "title_card": "10 FACTS ABOUT BLACK HOLES",
+ "cards": {
+  "fact10": [
+   "FACT #10",
+   "PREDICTED IN 1783, BY A VILLAGE PRIEST"
+  ],
+  "fact9": [
+   "FACT #9",
+   "EVEN EINSTEIN DIDN'T BELIEVE IN THEM"
+  ],
+  "fact8": [
+   "FACT #8",
+   "THE FIRST ONE WAS FOUND BY ITS X-RAYS"
+  ],
+  "fact7": [
+   "FACT #7",
+   "BLACK HOLES ARE NOT COMPLETELY BLACK"
+  ],
+  "fact6": [
+   "FACT #6",
+   "THEY STRETCH STARS LIKE SPAGHETTI"
+  ],
+  "fact5": [
+   "FACT #5",
+   "A MONSTER AT THE HEART OF THE MILKY WAY"
+  ],
+  "fact4": [
+   "FACT #4",
+   "WHEN THEY COLLIDE, SPACE ITSELF SHAKES"
+  ],
+  "fact3": [
+   "FACT #3",
+   "A TELESCOPE THE SIZE OF EARTH"
+  ],
+  "fact2": [
+   "FACT #2",
+   "HAWKING WAS RIGHT, 54 YEARS LATER"
+  ],
+  "fact1": [
+   "FACT #1",
+   "SOME MAY BE OLDER THAN GALAXIES"
+  ]
+ },
+ "music": [
+  {
+   "from": "cold_open",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "fact10",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "fact8",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "fact6",
+   "track": "Long_Note_One.mp3"
+  },
+  {
+   "from": "fact4",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "fact2",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "card_query": [
+  "slow flight through a star field",
+  "glowing disk around a black hole in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [
+  "esahubble_heic1506a",
+  "esahubble_heic1801a",
+  "esahubble_heic1803c",
+  "esahubble_heic1819a",
+  "esahubble_heic2016a",
+  "esahubble_heic2018a",
+  "esahubble_heic2103b",
+  "esahubble_heic2603b",
+  "esahubble_heic2605b",
+  "esawebb_potm2209a",
+  "esawebb_potm2509a",
+  "eso_adaptiveopticsandmask",
+  "eso_bt_lasilla_crux",
+  "eso_cs0012a",
+  "eso_eso1545a",
+  "eso_eso1606b",
+  "eso_eso1608a",
+  "eso_eso1708c",
+  "eso_eso1709b",
+  "eso_eso1709c",
+  "eso_eso1815b",
+  "eso_eso1817b",
+  "eso_eso1825c",
+  "eso_eso1825f",
+  "eso_eso1907o",
+  "eso_eso2002b",
+  "eso_eso2110a",
+  "eso_eso2110b",
+  "eso_eso2110c",
+  "eso_eso2110d",
+  "eso_eso2110e",
+  "eso_eso2110f",
+  "eso_eso2110g",
+  "eso_eso2116a#2",
+  "eso_eso2117a#4",
+  "eso_eso2203c",
+  "eso_eso2408d",
+  "eso_eso2509c#1",
+  "eso_eso2510c",
+  "eso_eso2612d",
+  "eso_lasillatimelapseeulerntt",
+  "svs_12019",
+  "svs_14309",
+  "svs_14399",
+  "svs_14802",
+  "svs_20409",
+  "svs_31365",
+  "svs_31376",
+  "svs_31399",
+  "svs_31400",
+  "svs_4986",
+  "svs_5186",
+  "svs_5273",
+  "svs_5424",
+  "svs_5436",
+  "svs_5479",
+  "svs_5481",
+  "svs_5503",
+  "svs_5505",
+  "svs_5519",
+  "svs_5552",
+  "svs_5668"
+ ],
+ "crops": {},
+ "exclude": {}
+}

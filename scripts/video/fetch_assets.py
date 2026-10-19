@@ -3,9 +3,11 @@
   python fetch_assets.py <assets.json> <out_dir>
 
 assets.json: {"key": {"src": "nasa"|"wiki", "q": "search query", "must": ["word", ...]}, ...}
+          or {"key": {"src": "url", "url": "https://...jpg", "credit": "credit line"}}
 - nasa: images-api.nasa.gov (generally public domain); picks the first hit whose title contains
   every "must" word, downloads ~large/~orig jpg.
 - wiki: Wikimedia Commons; only CC0 / Public domain / CC BY / CC BY-SA files are accepted.
+- url: a fixed file with a known free licence (e.g. ESO / ESA images, CC BY 4.0); give the credit line.
 Writes <out_dir>/<key>.jpg and <out_dir>/credits.json. Existing files are skipped.
 """
 import json, os, re, sys
@@ -57,7 +59,10 @@ def main():
         if os.path.exists(dst):
             continue
         try:
-            url, credit = (nasa if s["src"] == "nasa" else wiki)(s["q"], s.get("must", []))
+            if s["src"] == "url":
+                url, credit = s["url"], s["credit"]
+            else:
+                url, credit = (nasa if s["src"] == "nasa" else wiki)(s["q"], s.get("must", []))
         except Exception as e:  # rate limits / bad JSON: skip this asset, keep going
             url, credit = None, None
             print(f"ERR  {key}: {e}")

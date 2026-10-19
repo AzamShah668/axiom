@@ -19,5 +19,15 @@
   "must": [
    "blue marble"
   ]
+ },
+ "eht_m87": {
+  "src": "url",
+  "url": "https://cdn.eso.org/images/large/eso1907a.jpg",
+  "credit": "First image of a black hole, M87* (EHT Collaboration, ESO eso1907a), CC BY 4.0"
+ },
+ "eht_sgra": {
+  "src": "url",
+  "url": "https://cdn.eso.org/images/large/eso2208-eht-mwa.jpg",
+  "credit": "First image of Sagittarius A* (EHT Collaboration, ESO eso2208-eht-mwa), CC BY 4.0"
  }
 }

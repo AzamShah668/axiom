@@ -1,0 +1,2402 @@
+{
+ "lead_in": 2.0,
+ "title_card": "10 FACTS ABOUT BLACK HOLES",
+ "cards": {
+  "fact10": [
+   "FACT #10",
+   "PREDICTED IN 1783, BY A VILLAGE PRIEST"
+  ],
+  "fact9": [
+   "FACT #9",
+   "EVEN EINSTEIN DIDN'T BELIEVE IN THEM"
+  ],
+  "fact8": [
+   "FACT #8",
+   "THE FIRST ONE WAS FOUND BY ITS X-RAYS"
+  ],
+  "fact7": [
+   "FACT #7",
+   "BLACK HOLES ARE NOT COMPLETELY BLACK"
+  ],
+  "fact6": [
+   "FACT #6",
+   "THEY STRETCH STARS LIKE SPAGHETTI"
+  ],
+  "fact5": [
+   "FACT #5",
+   "A MONSTER AT THE HEART OF THE MILKY WAY"
+  ],
+  "fact4": [
+   "FACT #4",
+   "WHEN THEY COLLIDE, SPACE ITSELF SHAKES"
+  ],
+  "fact3": [
+   "FACT #3",
+   "A TELESCOPE THE SIZE OF EARTH"
+  ],
+  "fact2": [
+   "FACT #2",
+   "HAWKING WAS RIGHT, 54 YEARS LATER"
+  ],
+  "fact1": [
+   "FACT #1",
+   "SOME MAY BE OLDER THAN GALAXIES"
+  ]
+ },
+ "music": [
+  {
+   "from": "cold_open",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "fact10",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "fact8",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "fact6",
+   "track": "Long_Note_One.mp3"
+  },
+  {
+   "from": "fact4",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "fact2",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "card_query": [
+  "slow flight through a star field",
+  "glowing disk around a black hole in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [
+  "esahubble_heic1506a",
+  "esahubble_heic1801a",
+  "esahubble_heic1803c",
+  "esahubble_heic1819a",
+  "esahubble_heic2016a",
+  "esahubble_heic2018a",
+  "esahubble_heic2103b",
+  "esahubble_heic2603b",
+  "esahubble_heic2605b",
+  "esawebb_potm2209a",
+  "esawebb_potm2509a",
+  "eso_adaptiveopticsandmask",
+  "eso_bt_lasilla_crux",
+  "eso_cs0012a",
+  "eso_eso1545a",
+  "eso_eso1606b",
+  "eso_eso1608a",
+  "eso_eso1708c",
+  "eso_eso1709b",
+  "eso_eso1709c",
+  "eso_eso1815b",
+  "eso_eso1817b",
+  "eso_eso1825c",
+  "eso_eso1825f",
+  "eso_eso1907o",
+  "eso_eso2002b",
+  "eso_eso2110a",
+  "eso_eso2110b",
+  "eso_eso2110c",
+  "eso_eso2110d",
+  "eso_eso2110e",
+  "eso_eso2110f",
+  "eso_eso2110g",
+  "eso_eso2116a#2",
+  "eso_eso2117a#4",
+  "eso_eso2203c",
+  "eso_eso2408d",
+  "eso_eso2509c#1",
+  "eso_eso2510c",
+  "eso_eso2612d",
+  "eso_lasillatimelapseeulerntt",
+  "svs_12019",
+  "svs_14309",
+  "svs_14399",
+  "svs_14802",
+  "svs_20409",
+  "svs_31365",
+  "svs_31376",
+  "svs_31399",
+  "svs_31400",
+  "svs_4986",
+  "svs_5186",
+  "svs_5273",
+  "svs_5424",
+  "svs_5436",
+  "svs_5479",
+  "svs_5481",
+  "svs_5503",
+  "svs_5505",
+  "svs_5519",
+  "svs_5552",
+  "svs_5668"
+ ],
+ "crops": {},
+ "exclude": {},
+ "sections": {
+  "cold_open": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a starry night sky over a dark landscape",
+      "Milky Way rising over mountains at night"
+     ]
+    },
+    {
+     "at": "तोप के",
+     "q": [
+      "a bright meteor streaking across the night sky",
+      "shooting star over an observatory"
+     ]
+    },
+    {
+     "at": "उसका नाम",
+     "q": [
+      "star trails circling over an observatory",
+      "telescope dome under the stars"
+     ]
+    },
+    {
+     "at": "Germany के सबसे",
+     "q": [
+      "an old observatory telescope at night",
+      "astronomer's telescope under the night sky"
+     ]
+    },
+    {
+     "at": "जंग के शोर",
+     "q": [
+      "dramatic clouds over a mountain observatory at night",
+      "storm clouds under the stars"
+     ]
+    },
+    {
+     "at": "Einstein की बिल्कुल",
+     "gfx": "spacetime"
+    },
+    {
+     "at": "Einstein ख़ुद",
+     "q": [
+      "light bent around a massive galaxy cluster",
+      "gravitational lensing arcs"
+     ]
+    },
+    {
+     "at": "लेकिन उस हल",
+     "q": [
+      "black hole with a glowing accretion disk",
+      "visualization of a black hole"
+     ]
+    },
+    {
+     "at": "अगर किसी",
+     "q": [
+      "a star collapsing under its own gravity",
+      "matter swirling into a black hole"
+     ]
+    },
+    {
+     "at": "रोशनी भी नहीं",
+     "q": [
+      "light swallowed by a black hole",
+      "dark shadow of a black hole"
+     ]
+    },
+    {
+     "at": "Sun के लिए",
+     "gfx": "bh_shrink"
+    },
+    {
+     "at": "पाँच महीने",
+     "q": [
+      "a dark nebula in deep space",
+      "lonely stars in dark space"
+     ]
+    },
+    {
+     "at": "वह कभी नहीं",
+     "q": [
+      "zooming into the dark centre of a galaxy",
+      "slow zoom into a galaxy core"
+     ]
+    },
+    {
+     "at": "Black Hole.",
+     "q": [
+      "close-up of a black hole with a bright ring of light",
+      "black hole bending light around it"
+     ]
+    },
+    {
+     "at": "और सौ साल",
+     "q": [
+      "the James Webb Space Telescope in space",
+      "Webb telescope against the stars"
+     ]
+    },
+    {
+     "at": "जो शायद",
+     "q": [
+      "a faint red galaxy in the early universe",
+      "deep field with distant red galaxies"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "DECEMBER 1915",
+     "big": true
+    },
+    {
+     "at": "Russia के",
+     "text": "On the Russian front, a German army lieutenant..."
+    },
+    {
+     "at": "तोप के",
+     "text": "...worked out the paths of artillery shells"
+    },
+    {
+     "at": "उसका नाम",
+     "text": "KARL SCHWARZSCHILD",
+     "big": true
+    },
+    {
+     "at": "Germany के सबसे",
+     "text": "One of Germany's most famous astronomers"
+    },
+    {
+     "at": "जंग के शोर",
+     "text": "Amid the noise of war..."
+    },
+    {
+     "at": "General Relativity",
+     "text": "EINSTEIN'S GENERAL RELATIVITY",
+     "big": true
+    },
+    {
+     "at": "के equations",
+     "text": "...he found the first exact solution of its equations"
+    },
+    {
+     "at": "Einstein ख़ुद",
+     "text": "Einstein himself was amazed"
+    },
+    {
+     "at": "लेकिन उस हल",
+     "text": "But the solution hid a strange boundary"
+    },
+    {
+     "at": "अगर किसी",
+     "text": "If all of an object's mass is squeezed into a small ball..."
+    },
+    {
+     "at": "तो उस गोले",
+     "text": "...nothing can ever come back out of it"
+    },
+    {
+     "at": "रोशनी भी नहीं",
+     "text": "NOT EVEN LIGHT",
+     "big": true
+    },
+    {
+     "at": "Sun के लिए",
+     "text": "For the Sun, that ball would be just 6 km wide"
+    },
+    {
+     "at": "Earth के लिए",
+     "text": "For Earth, the size of a marble"
+    },
+    {
+     "at": "पाँच महीने",
+     "text": "Five months later, Schwarzschild was dead"
+    },
+    {
+     "at": "वह कभी नहीं",
+     "text": "He never knew what his calculation was hiding..."
+    },
+    {
+     "at": "Black Hole.",
+     "text": "BLACK HOLE",
+     "big": true
+    },
+    {
+     "at": "और सौ साल",
+     "text": "More than 100 years later..."
+    },
+    {
+     "at": "दो हज़ार छब्बीस",
+     "text": "2026",
+     "big": true
+    },
+    {
+     "at": "James Webb Space Telescope ने",
+     "text": "The James Webb Space Telescope found a black hole..."
+    },
+    {
+     "at": "जो शायद",
+     "text": "...that may be older than its own galaxy"
+    }
+   ],
+   "sfx": [
+    {
+     "type": "boom",
+     "at": "Black Hole."
+    }
+   ]
+  },
+  "fact10": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a starry night sky slowly drifting",
+      "stars over a quiet landscape at night"
+     ]
+    },
+    {
+     "at": "सत्रह सौ",
+     "q": [
+      "the Milky Way over a dark countryside",
+      "night sky timelapse over hills"
+     ]
+    },
+    {
+     "at": "John Michell",
+     "q": [
+      "a bright star field",
+      "stars twinkling in the night sky"
+     ]
+    },
+    {
+     "at": "Michell भूकंपों",
+     "q": [
+      "planet Earth rotating in space",
+      "Earth seen from space"
+     ]
+    },
+    {
+     "at": "Michell ने Newton",
+     "q": [
+      "the glowing surface of the Sun",
+      "a bright star in space"
+     ]
+    },
+    {
+     "at": "अगर कोई तारा",
+     "q": [
+      "a giant red star",
+      "a huge glowing star"
+     ]
+    },
+    {
+     "at": "जवाब चौंकाने",
+     "q": [
+      "a supergiant star with a glowing atmosphere",
+      "red supergiant star"
+     ]
+    },
+    {
+     "at": "उस तारे की gravity",
+     "gfx": "dark_star"
+    },
+    {
+     "at": "Michell ने इन्हें",
+     "q": [
+      "a dark shadow among the stars",
+      "black hole in front of a star field"
+     ]
+    },
+    {
+     "at": "और लिखा",
+     "gfx": "hidden_companion"
+    },
+    {
+     "at": "लगभग दो सौ",
+     "q": [
+      "a telescope observing the night sky",
+      "large telescope moving at night"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "But the idea was even older than Schwarzschild"
+    },
+    {
+     "at": "सत्रह सौ",
+     "text": "1783",
+     "big": true
+    },
+    {
+     "at": "Thornhill",
+     "text": "The village priest of Thornhill, England..."
+    },
+    {
+     "at": "John Michell",
+     "text": "JOHN MICHELL",
+     "big": true
+    },
+    {
+     "at": "Henry Cavendish",
+     "text": "...wrote a long letter to his friend Henry Cavendish"
+    },
+    {
+     "at": "Michell भूकंपों",
+     "text": "Michell also studied earthquakes..."
+    },
+    {
+     "at": "और उनका बनाया",
+     "text": "...and his balance was later used to weigh the Earth"
+    },
+    {
+     "at": "Michell ने Newton",
+     "text": "Using Newton's gravity, he asked a simple question"
+    },
+    {
+     "at": "अगर कोई तारा",
+     "text": "What if a star were as dense as the Sun..."
+    },
+    {
+     "at": "लेकिन उससे पाँच",
+     "text": "...but 500 times wider?"
+    },
+    {
+     "at": "जवाब चौंकाने",
+     "text": "The answer was shocking"
+    },
+    {
+     "at": "उस तारे की gravity",
+     "text": "Even light would be too slow to escape its gravity"
+    },
+    {
+     "at": "ऐसा तारा पूरी",
+     "text": "Such a star would be completely invisible"
+    },
+    {
+     "at": "Michell ने इन्हें",
+     "text": "\"DARK STARS\"",
+     "big": true
+    },
+    {
+     "at": "और लिखा",
+     "text": "They could be found only by the stars orbiting them"
+    },
+    {
+     "at": "लगभग दो सौ",
+     "text": "About 200 years later, astronomers did exactly that"
+    }
+   ],
+   "sfx": []
+  },
+  "fact9": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "warped light around a massive object in space",
+      "gravitational lens distorting background galaxies"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ उनतालीस में",
+     "q": [
+      "a spiral galaxy slowly rotating",
+      "stars drifting in deep space"
+     ]
+    },
+    {
+     "at": "कि ऐसी चीज़ें",
+     "q": [
+      "a black hole visualization",
+      "dark sphere surrounded by glowing gas"
+     ]
+    },
+    {
+     "at": "उसी साल",
+     "q": [
+      "a massive blue star shining",
+      "giant star surrounded by gas"
+     ]
+    },
+    {
+     "at": "J. Robert",
+     "q": [
+      "a cluster of massive young stars",
+      "bright star cluster"
+     ]
+    },
+    {
+     "at": "उन्होंने दिखाया",
+     "gfx": "collapse"
+    },
+    {
+     "at": "आख़िर में वह",
+     "q": [
+      "a black hole cut off in dark space",
+      "black hole alone in deep space"
+     ]
+    },
+    {
+     "at": "उनका paper",
+     "q": [
+      "a dark nebula with glowing edges",
+      "turbulent cosmic clouds"
+     ]
+    },
+    {
+     "at": "उसी दिन Germany",
+     "q": [
+      "dark clouds of gas and dust in space",
+      "violent turbulent nebula"
+     ]
+    },
+    {
+     "at": "दुनिया का ध्यान",
+     "q": [
+      "planet Earth at night from space",
+      "city lights on Earth from orbit"
+     ]
+    },
+    {
+     "at": "कुछ साल बाद",
+     "q": [
+      "a bright flash of light in space",
+      "brilliant burst of light from a star"
+     ]
+    },
+    {
+     "at": "इन चीज़ों को",
+     "gfx": "year_counter:1939:1967"
+    },
+    {
+     "at": "उन्नीस सौ सड़सठ में",
+     "q": [
+      "a radio telescope under the night sky",
+      "observatory at night"
+     ]
+    },
+    {
+     "at": "Black Hole.",
+     "q": [
+      "black hole with a glowing ring of light",
+      "visualization of a black hole bending light"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Even Einstein didn't believe in Schwarzschild's boundary"
+    },
+    {
+     "at": "उन्नीस सौ उनतालीस में",
+     "text": "1939",
+     "big": true
+    },
+    {
+     "at": "उन्होंने एक research",
+     "text": "He wrote a paper to prove such things could not exist"
+    },
+    {
+     "at": "उसी साल",
+     "text": "The same year, in California..."
+    },
+    {
+     "at": "J. Robert",
+     "text": "J. ROBERT OPPENHEIMER",
+     "big": true
+    },
+    {
+     "at": "और उनके student",
+     "text": "...and his student Hartland Snyder found the opposite"
+    },
+    {
+     "at": "उन्होंने दिखाया",
+     "text": "When a very massive star runs out of fuel..."
+    },
+    {
+     "at": "तो वह अपने",
+     "text": "...it collapses under its own weight, and never stops"
+    },
+    {
+     "at": "आख़िर में",
+     "text": "In the end, it is cut off from the universe forever"
+    },
+    {
+     "at": "उनका paper",
+     "text": "1 SEPTEMBER 1939",
+     "big": true
+    },
+    {
+     "at": "उसी दिन Germany",
+     "text": "The same day, Germany invaded Poland..."
+    },
+    {
+     "at": "और दूसरा विश्व",
+     "text": "...and World War II began"
+    },
+    {
+     "at": "दुनिया का ध्यान",
+     "text": "The world's attention was elsewhere"
+    },
+    {
+     "at": "कुछ साल बाद",
+     "text": "Oppenheimer went on to lead the atomic bomb project..."
+    },
+    {
+     "at": "और इस विषय",
+     "text": "...and never returned to the subject"
+    },
+    {
+     "at": "इन चीज़ों को",
+     "text": "It took 28 more years for them to get a name"
+    },
+    {
+     "at": "उन्नीस सौ सड़सठ में",
+     "text": "1967",
+     "big": true
+    },
+    {
+     "at": "American physicist",
+     "text": "JOHN WHEELER",
+     "big": true
+    },
+    {
+     "at": "एक lecture में",
+     "text": "In a lecture, he gave them a short name that stuck..."
+    },
+    {
+     "at": "Black Hole.",
+     "text": "\"BLACK HOLE\"",
+     "big": true
+    }
+   ],
+   "sfx": []
+  },
+  "fact8": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a dark region of space with faint stars",
+      "black hole hidden among stars"
+     ]
+    },
+    {
+     "at": "Astronomers के सामने",
+     "q": [
+      "a space telescope orbiting Earth",
+      "X-ray observatory in space"
+     ]
+    },
+    {
+     "at": "जवाब X-rays",
+     "q": [
+      "glowing X-ray view of hot gas in space",
+      "X-ray image of the sky"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ चौंसठ में",
+     "q": [
+      "a rocket launching into the sky",
+      "rocket lift-off"
+     ]
+    },
+    {
+     "at": "Cygnus तारामंडल",
+     "q": [
+      "the Milky Way in the constellation Cygnus",
+      "rich star field along the Milky Way"
+     ]
+    },
+    {
+     "at": "Cygnus X-One.",
+     "q": [
+      "X-ray binary with a black hole pulling gas from a star",
+      "black hole feeding on a companion star"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ बहत्तर में",
+     "q": [
+      "a blue supergiant star",
+      "bright blue star"
+     ]
+    },
+    {
+     "at": "किसी अदृश्य साथी",
+     "q": [
+      "a star orbiting a black hole",
+      "binary star system orbiting"
+     ]
+    },
+    {
+     "at": "वह साथी Sun",
+     "q": [
+      "black hole beside a blue star",
+      "black hole and companion star"
+     ]
+    },
+    {
+     "at": "उसकी gravity नीले",
+     "q": [
+      "gas stream flowing from a star into a black hole",
+      "accretion stream from a star"
+     ]
+    },
+    {
+     "at": "और गिरती हुई",
+     "q": [
+      "hot glowing accretion disk around a black hole",
+      "swirling disk of hot gas"
+     ]
+    },
+    {
+     "at": "ठीक वैसे ही",
+     "q": [
+      "a black hole and its companion star",
+      "binary system with a black hole"
+     ]
+    },
+    {
+     "at": "Stephen Hawking ने",
+     "q": [
+      "black hole visualization with a warped disk",
+      "black hole bending light"
+     ]
+    },
+    {
+     "at": "बाद में Hawking",
+     "q": [
+      "glowing gas spiralling into a black hole",
+      "matter falling into a black hole"
+     ]
+    },
+    {
+     "at": "अगर black holes न",
+     "q": [
+      "deep space with distant galaxies",
+      "star field drifting"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ नब्बे में",
+     "q": [
+      "black hole with jets",
+      "X-ray binary system"
+     ]
+    },
+    {
+     "at": "आज की नाप",
+     "q": [
+      "radio telescope dishes at night",
+      "array of radio antennas"
+     ]
+    },
+    {
+     "at": "और Sun से इक्कीस",
+     "q": [
+      "massive black hole swallowing gas",
+      "accretion disk around a stellar black hole"
+     ]
+    },
+    {
+     "at": "इंसानियत का पहला",
+     "q": [
+      "zooming out from a black hole to the Milky Way",
+      "Milky Way star field"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "How do you find something not even light escapes?"
+    },
+    {
+     "at": "Astronomers के सामने",
+     "text": "That was the question facing astronomers"
+    },
+    {
+     "at": "जवाब X-rays",
+     "text": "The answer came in X-rays"
+    },
+    {
+     "at": "उन्नीस सौ चौंसठ में",
+     "text": "1964",
+     "big": true
+    },
+    {
+     "at": "America के New Mexico",
+     "text": "A small rocket launched from New Mexico..."
+    },
+    {
+     "at": "Cygnus तारामंडल",
+     "text": "...caught a bright X-ray source in the constellation Cygnus"
+    },
+    {
+     "at": "Cygnus X-One.",
+     "text": "CYGNUS X-1",
+     "big": true
+    },
+    {
+     "at": "उन्नीस सौ बहत्तर में",
+     "text": "In 1972, astronomers found a giant blue star..."
+    },
+    {
+     "at": "किसी अदृश्य",
+     "text": "...circling an invisible companion every 5.6 days"
+    },
+    {
+     "at": "वह साथी Sun",
+     "text": "The companion was many Suns heavy, yet invisible"
+    },
+    {
+     "at": "उसकी gravity नीले",
+     "text": "Its gravity was pulling gas off the blue star"
+    },
+    {
+     "at": "और गिरती हुई",
+     "text": "The falling gas got so hot it glowed in X-rays"
+    },
+    {
+     "at": "ठीक वैसे ही",
+     "text": "Just as Michell wrote, the invisible object gave itself away"
+    },
+    {
+     "at": "Stephen Hawking ने",
+     "text": "STEPHEN HAWKING vs KIP THORNE",
+     "big": true
+    },
+    {
+     "at": "कि Cygnus X-One black",
+     "text": "Hawking bet that Cygnus X-1 was NOT a black hole"
+    },
+    {
+     "at": "बाद में Hawking",
+     "text": "He later called it an \"insurance policy\""
+    },
+    {
+     "at": "अगर black holes न",
+     "text": "If black holes didn't exist, at least he'd win the bet"
+    },
+    {
+     "at": "उन्नीस सौ नब्बे में",
+     "text": "1990: HAWKING CONCEDED",
+     "big": true
+    },
+    {
+     "at": "आज की नाप",
+     "text": "Today: about 7,200 light-years away..."
+    },
+    {
+     "at": "और Sun से इक्कीस",
+     "text": "...and 21 times the mass of the Sun"
+    },
+    {
+     "at": "इंसानियत का पहला",
+     "text": "THE FIRST BLACK HOLE EVER IDENTIFIED",
+     "big": true
+    }
+   ],
+   "sfx": []
+  },
+  "fact7": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a black hole in empty space",
+      "dark sphere with a ring of light"
+     ]
+    },
+    {
+     "at": "कम से कम",
+     "q": [
+      "matter falling into a black hole",
+      "gas swirling into darkness"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ चौहत्तर में",
+     "q": [
+      "glowing edge of a black hole",
+      "black hole with bright photon ring"
+     ]
+    },
+    {
+     "at": "Hawking ने Einstein",
+     "q": [
+      "warped spacetime around a black hole",
+      "light bending around a black hole"
+     ]
+    },
+    {
+     "at": "बहुत छोटी चीज़ों",
+     "q": [
+      "glowing particles in space",
+      "sparkling cosmic dust"
+     ]
+    },
+    {
+     "at": "नतीजा चौंकाने",
+     "q": [
+      "black hole with a faint glow",
+      "black hole visualization close-up"
+     ]
+    },
+    {
+     "at": "Black hole के किनारे",
+     "gfx": "evaporate"
+    },
+    {
+     "at": "इसका मतलब था",
+     "q": [
+      "a black hole slowly fading",
+      "dim glowing remnant in space"
+     ]
+    },
+    {
+     "at": "वह धीरे-धीरे",
+     "q": [
+      "wisps of gas drifting away into space",
+      "glowing gas dispersing"
+     ]
+    },
+    {
+     "at": "लेकिन बहुत",
+     "q": [
+      "slow drift through a dark star field",
+      "faint stars in deep space"
+     ]
+    },
+    {
+     "at": "Sun जितने भारी",
+     "gfx": "zeros"
+    },
+    {
+     "at": "Hawking radiation आज",
+     "q": [
+      "a lonely black hole in deep space",
+      "dark empty space with distant galaxies"
+     ]
+    },
+    {
+     "at": "इतनी धीमी चमक",
+     "q": [
+      "a large telescope observing at night",
+      "space telescope in orbit"
+     ]
+    },
+    {
+     "at": "शायद इसी वजह",
+     "q": [
+      "black hole with a glowing ring fading into darkness",
+      "dark nebula"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Nothing can escape a black hole..."
+    },
+    {
+     "at": "कम से कम",
+     "text": "...or so everyone believed"
+    },
+    {
+     "at": "उन्नीस सौ चौहत्तर में",
+     "text": "1974",
+     "big": true
+    },
+    {
+     "at": "Stephen Hawking ने इस",
+     "text": "Stephen Hawking found a crack in that rule"
+    },
+    {
+     "at": "Hawking ने Einstein",
+     "text": "He combined Einstein's gravity..."
+    },
+    {
+     "at": "बहुत छोटी",
+     "text": "...with the physics of the very small: quantum physics"
+    },
+    {
+     "at": "नतीजा चौंकाने",
+     "text": "The result was astonishing"
+    },
+    {
+     "at": "Black hole के किनारे",
+     "text": "A faint glow leaks out from the edge, the event horizon"
+    },
+    {
+     "at": "आज इसे कहते हैं",
+     "text": "HAWKING RADIATION",
+     "big": true
+    },
+    {
+     "at": "इसका मतलब था",
+     "text": "So black holes don't last forever"
+    },
+    {
+     "at": "वह धीरे-धीरे",
+     "text": "They slowly lose energy, and one day evaporate"
+    },
+    {
+     "at": "लेकिन बहुत",
+     "text": "But very, very slowly"
+    },
+    {
+     "at": "Sun जितने भारी",
+     "text": "A Sun-mass black hole would take this many years"
+    },
+    {
+     "at": "Hawking radiation आज",
+     "text": "Hawking radiation has never been observed"
+    },
+    {
+     "at": "इतनी धीमी चमक",
+     "text": "No machine today can catch such a faint glow"
+    },
+    {
+     "at": "शायद इसी वजह",
+     "text": "Perhaps that is why Hawking never won a Nobel Prize"
+    }
+   ],
+   "sfx": []
+  },
+  "fact6": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "powerful gravity around a black hole",
+      "black hole warping the light of stars behind it"
+     ]
+    },
+    {
+     "at": "वह बराबर भी",
+     "q": [
+      "gas being stretched near a black hole",
+      "swirling gas pulled into a black hole"
+     ]
+    },
+    {
+     "at": "गिरती हुई किसी",
+     "gfx": "tidal"
+    },
+    {
+     "at": "वह चीज़ लंबी",
+     "q": [
+      "a star stretched into a long stream of gas",
+      "tidal disruption of a star by a black hole"
+     ]
+    },
+    {
+     "at": "Scientists इसे",
+     "q": [
+      "a stream of stellar debris wrapping around a black hole",
+      "star being shredded by a black hole"
+     ]
+    },
+    {
+     "at": "और दूर से",
+     "gfx": "redshift_fall"
+    },
+    {
+     "at": "दो हज़ार उन्नीस में",
+     "q": [
+      "zooming into a distant spiral galaxy",
+      "galaxy in deep space"
+     ]
+    },
+    {
+     "at": "लगभग इक्कीस",
+     "q": [
+      "a spiral galaxy seen from far away",
+      "distant galaxy zoom"
+     ]
+    },
+    {
+     "at": "Sun जैसा एक",
+     "q": [
+      "a star approaching a supermassive black hole",
+      "star moving toward a black hole"
+     ]
+    },
+    {
+     "at": "Black hole ने उसे",
+     "q": [
+      "a star torn apart by a black hole",
+      "tidal disruption event animation"
+     ]
+    },
+    {
+     "at": "और उसका लगभग",
+     "q": [
+      "black hole swallowing the remains of a star",
+      "debris disk around a black hole"
+     ]
+    },
+    {
+     "at": "Chile के Very",
+     "q": [
+      "the Very Large Telescope at night",
+      "VLT telescopes in Chile"
+     ]
+    },
+    {
+     "at": "छह महीने तक",
+     "q": [
+      "telescope domes opening at dusk",
+      "observatory on a mountain at night"
+     ]
+    },
+    {
+     "at": "किसी तारे की",
+     "q": [
+      "the bright flare from a star being destroyed",
+      "glowing debris around a black hole"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Near a black hole, gravity isn't just strong..."
+    },
+    {
+     "at": "वह बराबर भी",
+     "text": "...it's uneven"
+    },
+    {
+     "at": "गिरती हुई किसी",
+     "text": "The side closer to the black hole is pulled much harder"
+    },
+    {
+     "at": "वह चीज़ लंबी",
+     "text": "So it gets stretched long and thin, like spaghetti"
+    },
+    {
+     "at": "Scientists इसे",
+     "text": "\"SPAGHETTIFICATION\"",
+     "big": true
+    },
+    {
+     "at": "और दूर से",
+     "text": "Seen from far away, a falling object seems to slow..."
+    },
+    {
+     "at": "जैसे समय",
+     "text": "...as if time itself has stopped"
+    },
+    {
+     "at": "उसकी रोशनी लाल",
+     "text": "Its light turns red, then dim, then vanishes"
+    },
+    {
+     "at": "दो हज़ार उन्नीस में",
+     "text": "2019",
+     "big": true
+    },
+    {
+     "at": "लगभग इक्कीस",
+     "text": "About 215 million light-years away..."
+    },
+    {
+     "at": "Sun जैसा एक",
+     "text": "...a Sun-like star passed too close to a giant black hole"
+    },
+    {
+     "at": "Black hole ने उसे",
+     "text": "It was ripped into a long stream..."
+    },
+    {
+     "at": "और उसका लगभग",
+     "text": "...and about half of its mass was swallowed"
+    },
+    {
+     "at": "Chile के Very",
+     "text": "VERY LARGE TELESCOPE, CHILE",
+     "big": true
+    },
+    {
+     "at": "छह महीने तक",
+     "text": "Telescopes recorded its death for six months"
+    },
+    {
+     "at": "किसी तारे की",
+     "text": "A star's death had never been seen this close"
+    }
+   ],
+   "sfx": []
+  },
+  "fact5": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "the glowing centre of the Milky Way",
+      "zooming into the centre of the Milky Way"
+     ]
+    },
+    {
+     "at": "Milky Way के ठीक",
+     "q": [
+      "zooming into the Galactic Centre",
+      "dense star clouds at the heart of the galaxy"
+     ]
+    },
+    {
+     "at": "लगभग छब्बीस",
+     "q": [
+      "the band of the Milky Way across the night sky",
+      "Milky Way over a mountain"
+     ]
+    },
+    {
+     "at": "नाम है",
+     "q": [
+      "the supermassive black hole at the centre of the Milky Way",
+      "Sagittarius A* region"
+     ]
+    },
+    {
+     "at": "उसके और Earth",
+     "q": [
+      "dark dust lanes across the Milky Way",
+      "dark clouds of dust in the galaxy"
+     ]
+    },
+    {
+     "at": "लेकिन infrared",
+     "q": [
+      "infrared view of the Galactic Centre",
+      "infrared image of stars behind dust"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ नब्बे के",
+     "q": [
+      "stars orbiting the centre of the galaxy",
+      "stars moving around the Galactic Centre"
+     ]
+    },
+    {
+     "at": "एक की अगुवाई",
+     "q": [
+      "the Very Large Telescope with laser beams",
+      "laser guide star from a telescope"
+     ]
+    },
+    {
+     "at": "Chile के telescopes",
+     "q": [
+      "telescopes on a mountain in Chile at night",
+      "Paranal observatory"
+     ]
+    },
+    {
+     "at": "दूसरी की",
+     "q": [
+      "large telescope domes on a mountain top",
+      "twin telescope domes at night"
+     ]
+    },
+    {
+     "at": "Hawaii के Keck",
+     "q": [
+      "observatory domes above the clouds",
+      "telescopes on a high mountain at sunset"
+     ]
+    },
+    {
+     "at": "तीन दशक तक",
+     "q": [
+      "star positions changing around the Galactic Centre",
+      "animation of stars orbiting Sgr A*"
+     ]
+    },
+    {
+     "at": "एक तारा सबसे",
+     "gfx": "s2_orbit"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "q": [
+      "a star racing close to a black hole",
+      "star near a supermassive black hole"
+     ]
+    },
+    {
+     "at": "इतनी रफ़्तार",
+     "q": [
+      "the heart of the Milky Way",
+      "dense star field at the Galactic Centre"
+     ]
+    },
+    {
+     "at": "और वह भी",
+     "q": [
+      "supermassive black hole visualization",
+      "black hole in the centre of a galaxy"
+     ]
+    },
+    {
+     "at": "दो हज़ार बीस में",
+     "q": [
+      "the Very Large Telescope at night under the Milky Way",
+      "VLT observing"
+     ]
+    },
+    {
+     "at": "उनके साथ Roger",
+     "q": [
+      "black hole forming visualization",
+      "gas falling into a black hole"
+     ]
+    },
+    {
+     "at": "Andrea Ghez, Physics",
+     "q": [
+      "the Milky Way over an observatory",
+      "starry sky timelapse over telescopes"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "The nearest supermassive black hole..."
+    },
+    {
+     "at": "Milky Way के ठीक",
+     "text": "...sits at the very centre of the Milky Way"
+    },
+    {
+     "at": "लगभग छब्बीस",
+     "text": "26,000 LIGHT-YEARS AWAY",
+     "big": true
+    },
+    {
+     "at": "नाम है",
+     "text": "SAGITTARIUS A*",
+     "big": true
+    },
+    {
+     "at": "उसके और Earth",
+     "text": "Thick walls of dust lie between it and Earth..."
+    },
+    {
+     "at": "लेकिन infrared",
+     "text": "...but infrared light passes straight through"
+    },
+    {
+     "at": "उन्नीस सौ नब्बे के",
+     "text": "From the 1990s, two teams tracked stars near the centre"
+    },
+    {
+     "at": "एक की अगुवाई",
+     "text": "REINHARD GENZEL",
+     "big": true
+    },
+    {
+     "at": "Chile के telescopes",
+     "text": "...using telescopes in Chile"
+    },
+    {
+     "at": "दूसरी की",
+     "text": "ANDREA GHEZ",
+     "big": true
+    },
+    {
+     "at": "Hawaii के Keck",
+     "text": "...using the Keck telescopes in Hawaii"
+    },
+    {
+     "at": "तीन दशक तक",
+     "text": "For three decades, they tracked the stars year after year"
+    },
+    {
+     "at": "एक तारा सबसे",
+     "text": "One star stood out: S2"
+    },
+    {
+     "at": "वह एक अदृश्य",
+     "text": "It circles something invisible every 16 years"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "text": "2018: OVER 25 MILLION KM/H",
+     "big": true
+    },
+    {
+     "at": "इतनी रफ़्तार",
+     "text": "That speed needs about 4 million times the Sun's mass..."
+    },
+    {
+     "at": "और वह भी",
+     "text": "...in a space so small, it can only be a black hole"
+    },
+    {
+     "at": "दो हज़ार बीस में",
+     "text": "NOBEL PRIZE 2020",
+     "big": true
+    },
+    {
+     "at": "उनके साथ Roger",
+     "text": "Shared with Roger Penrose..."
+    },
+    {
+     "at": "जिन्होंने दिखाया",
+     "text": "...who showed Einstein's theory makes black holes inevitable"
+    },
+    {
+     "at": "Andrea Ghez, Physics",
+     "text": "Ghez became only the 4th woman to win the Physics Nobel"
+    }
+   ],
+   "sfx": []
+  },
+  "fact4": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "planet Earth seen from space",
+      "North America from orbit at night"
+     ]
+    },
+    {
+     "at": "America में",
+     "q": [
+      "North America at night seen from space",
+      "Earth rotating from orbit"
+     ]
+    },
+    {
+     "at": "दो विशाल detectors",
+     "q": [
+      "gravitational waves rippling from merging black holes",
+      "ripples in spacetime"
+     ]
+    },
+    {
+     "at": "यह थे LIGO",
+     "q": [
+      "two black holes spiralling together",
+      "binary black hole merger simulation"
+     ]
+    },
+    {
+     "at": "Einstein ने सौ",
+     "q": [
+      "warped spacetime grid",
+      "gravitational waves spreading through space"
+     ]
+    },
+    {
+     "at": "कि भारी चीज़ें",
+     "gfx": "ripples"
+    },
+    {
+     "at": "लेकिन यह लहरें",
+     "q": [
+      "faint ripples spreading through space",
+      "gravitational waves visualization"
+     ]
+    },
+    {
+     "at": "कि Einstein को शक",
+     "q": [
+      "distant galaxies in deep space",
+      "deep field"
+     ]
+    },
+    {
+     "at": "यह लहर एक अरब",
+     "q": [
+      "zooming out to distant galaxies",
+      "deep space with galaxies"
+     ]
+    },
+    {
+     "at": "जब Sun से छत्तीस",
+     "gfx": "inspiral"
+    },
+    {
+     "at": "एक second के",
+     "q": [
+      "a blinding flash of light in space",
+      "brilliant burst of energy"
+     ]
+    },
+    {
+     "at": "दिखने वाले",
+     "q": [
+      "the whole sky full of galaxies",
+      "deep field with thousands of galaxies"
+     ]
+    },
+    {
+     "at": "Earth तक पहुँच",
+     "gfx": "ligo"
+    },
+    {
+     "at": "फिर भी वह पकड़ी",
+     "q": [
+      "gravitational waves reaching Earth",
+      "Earth from space"
+     ]
+    },
+    {
+     "at": "दो हज़ार सत्रह में",
+     "q": [
+      "merging black holes simulation",
+      "binary black holes orbiting"
+     ]
+    },
+    {
+     "at": "पाने वालों में",
+     "q": [
+      "black hole merger with gravitational waves",
+      "two black holes circling each other"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "14 SEPTEMBER 2015",
+     "big": true
+    },
+    {
+     "at": "America में",
+     "text": "In America, two giant detectors 3,000 km apart..."
+    },
+    {
+     "at": "दो विशाल detectors",
+     "text": "...caught the same trembling wave"
+    },
+    {
+     "at": "यह थे LIGO",
+     "text": "LIGO",
+     "big": true
+    },
+    {
+     "at": "Einstein ने सौ",
+     "text": "Einstein predicted it 100 years earlier..."
+    },
+    {
+     "at": "कि भारी चीज़ें",
+     "text": "...when heavy objects whirl, space and time ripple"
+    },
+    {
+     "at": "gravitational waves.",
+     "text": "GRAVITATIONAL WAVES",
+     "big": true
+    },
+    {
+     "at": "लेकिन यह लहरें",
+     "text": "But the waves are so weak..."
+    },
+    {
+     "at": "कि Einstein को शक",
+     "text": "...Einstein doubted they could ever be measured"
+    },
+    {
+     "at": "यह लहर एक अरब",
+     "text": "This wave set out 1.3 billion years ago"
+    },
+    {
+     "at": "जब Sun से छत्तीस",
+     "text": "Two black holes, 36 and 29 Suns heavy, merged"
+    },
+    {
+     "at": "आख़िरी पल में",
+     "text": "In the last moment, 3 Suns of mass became pure energy"
+    },
+    {
+     "at": "एक second के",
+     "text": "For a split second, it outshone..."
+    },
+    {
+     "at": "दिखने वाले",
+     "text": "...all the stars in the observable universe combined"
+    },
+    {
+     "at": "Earth तक पहुँच",
+     "text": "At Earth, it stretched LIGO's 4 km arms..."
+    },
+    {
+     "at": "एक proton की",
+     "text": "...by 1/1000 of the width of a proton"
+    },
+    {
+     "at": "फिर भी वह",
+     "text": "And still, it was caught"
+    },
+    {
+     "at": "दो हज़ार सत्रह में",
+     "text": "NOBEL PRIZE 2017",
+     "big": true
+    },
+    {
+     "at": "पाने वालों में",
+     "text": "Among the winners: Kip Thorne..."
+    },
+    {
+     "at": "वही, जिन्होंने",
+     "text": "...the man who won his bet against Hawking"
+    }
+   ],
+   "sfx": [
+    {
+     "type": "boom",
+     "at": "आख़िरी पल में"
+    }
+   ]
+  },
+  "fact3": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "glowing jet from the centre of a giant galaxy",
+      "giant elliptical galaxy with a jet"
+     ]
+    },
+    {
+     "at": "इतनी दूर की",
+     "q": [
+      "zooming into a distant galaxy core",
+      "galaxy centre zoom"
+     ]
+    },
+    {
+     "at": "Earth जितना बड़ा",
+     "q": [
+      "planet Earth rotating in space",
+      "Earth from orbit"
+     ]
+    },
+    {
+     "at": "Scientists ने ठीक",
+     "q": [
+      "radio telescope dishes under the night sky",
+      "ALMA antennas at night"
+     ]
+    },
+    {
+     "at": "Hawaii से Chile",
+     "gfx": "eht_globe"
+    },
+    {
+     "at": "जैसे वह एक",
+     "q": [
+      "array of radio antennas on a high plateau",
+      "ALMA observatory antennas moving"
+     ]
+    },
+    {
+     "at": "Data इतना",
+     "q": [
+      "radio dish pointing at the Milky Way",
+      "radio telescope at night"
+     ]
+    },
+    {
+     "at": "लगभग एक हज़ार",
+     "q": [
+      "radio telescope under the stars timelapse",
+      "observatory at sunset above the clouds"
+     ]
+    },
+    {
+     "at": "दस April",
+     "q": [
+      "zooming into the giant galaxy Messier 87",
+      "giant elliptical galaxy M87"
+     ]
+    },
+    {
+     "at": "दुनिया ने पहली",
+     "q": [
+      "the first image of a black hole, a glowing orange ring",
+      "zoom into the black hole image of M87"
+     ]
+    },
+    {
+     "at": "Galaxy M सत्तासी",
+     "q": [
+      "the jet of galaxy M87",
+      "elliptical galaxy with a glowing jet"
+     ]
+    },
+    {
+     "at": "चमकती gas का",
+     "gfx": "eht_m87"
+    },
+    {
+     "at": "दो हज़ार बाईस",
+     "gfx": "eht_sgra"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Until now, only a black hole's effects had been seen..."
+    },
+    {
+     "at": "black hole नहीं",
+     "text": "...never the black hole itself"
+    },
+    {
+     "at": "इतनी दूर की",
+     "text": "Photographing something so small, so far away..."
+    },
+    {
+     "at": "Earth जितना बड़ा",
+     "text": "...needed a telescope as big as the Earth"
+    },
+    {
+     "at": "Scientists ने ठीक",
+     "text": "So scientists built one"
+    },
+    {
+     "at": "Event Horizon Telescope.",
+     "text": "EVENT HORIZON TELESCOPE",
+     "big": true
+    },
+    {
+     "at": "Hawaii से Chile",
+     "text": "From Hawaii to Chile, from Spain to the South Pole..."
+    },
+    {
+     "at": "radio telescopes ने",
+     "text": "...radio telescopes watched one spot on the same night"
+    },
+    {
+     "at": "जैसे वह एक",
+     "text": "...as if they were one giant telescope"
+    },
+    {
+     "at": "Data इतना",
+     "text": "There was too much data to send over the internet"
+    },
+    {
+     "at": "लगभग एक हज़ार",
+     "text": "About 1,000 hard drives were flown in by plane"
+    },
+    {
+     "at": "दस April",
+     "text": "10 APRIL 2019",
+     "big": true
+    },
+    {
+     "at": "दुनिया ने पहली",
+     "text": "The world saw a black hole for the first time"
+    },
+    {
+     "at": "Galaxy M सत्तासी",
+     "text": "At the centre of galaxy M87..."
+    },
+    {
+     "at": "साढ़े पाँच करोड़",
+     "text": "...55 million light-years away..."
+    },
+    {
+     "at": "Sun से साढ़े",
+     "text": "...a black hole 6.5 billion times the Sun's mass"
+    },
+    {
+     "at": "चमकती gas का",
+     "text": "A ring of glowing gas around deep darkness..."
+    },
+    {
+     "at": "black hole की परछाईं",
+     "text": "...the black hole's shadow"
+    },
+    {
+     "at": "दो हज़ार बाईस",
+     "text": "2022: the Milky Way's own black hole..."
+    },
+    {
+     "at": "Sagittarius A-star की",
+     "text": "...Sagittarius A*, was photographed too"
+    }
+   ],
+   "sfx": []
+  },
+  "fact2": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "black hole visualization",
+      "glowing disk around a black hole"
+     ]
+    },
+    {
+     "at": "जब दो black holes",
+     "q": [
+      "two black holes approaching each other",
+      "binary black holes"
+     ]
+    },
+    {
+     "at": "तो नए black hole",
+     "q": [
+      "a large black hole with a glowing ring",
+      "supermassive black hole"
+     ]
+    },
+    {
+     "at": "पुराने दोनों",
+     "q": [
+      "black holes merging",
+      "merger of two black holes"
+     ]
+    },
+    {
+     "at": "इसे परखने",
+     "q": [
+      "black hole pair orbiting",
+      "two black holes circling"
+     ]
+    },
+    {
+     "at": "दशकों तक",
+     "q": [
+      "deep space star field drifting",
+      "distant galaxies"
+     ]
+    },
+    {
+     "at": "चौदह January",
+     "q": [
+      "Earth seen from space",
+      "the Earth rotating"
+     ]
+    },
+    {
+     "at": "LIGO ने अब तक",
+     "q": [
+      "gravitational waves spreading out from colliding black holes",
+      "ripples from merging black holes"
+     ]
+    },
+    {
+     "at": "एक अरब से",
+     "q": [
+      "zoom into deep space galaxies",
+      "distant galaxy field"
+     ]
+    },
+    {
+     "at": "Sun से तीस",
+     "q": [
+      "two black holes spiralling and merging",
+      "binary black hole merger"
+     ]
+    },
+    {
+     "at": "Signal दो हज़ार",
+     "q": [
+      "ripples in spacetime",
+      "gravitational wave visualization"
+     ]
+    },
+    {
+     "at": "इतना कि टक्कर",
+     "q": [
+      "merged black hole ringing",
+      "black hole after a merger"
+     ]
+    },
+    {
+     "at": "और बाद में नए",
+     "q": [
+      "a newly formed black hole",
+      "glowing black hole"
+     ]
+    },
+    {
+     "at": "टक्कर से पहले कुल",
+     "gfx": "area_theorem"
+    },
+    {
+     "at": "चौवन साल बाद",
+     "q": [
+      "black hole with a bright ring of light",
+      "black hole in deep space"
+     ]
+    },
+    {
+     "at": "लेकिन Hawking यह",
+     "q": [
+      "a quiet star field",
+      "stars slowly drifting"
+     ]
+    },
+    {
+     "at": "उनका देहांत",
+     "q": [
+      "a dark nebula",
+      "Milky Way at night"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "1971",
+     "big": true
+    },
+    {
+     "at": "Stephen Hawking ने एक",
+     "text": "Stephen Hawking proposed a rule"
+    },
+    {
+     "at": "जब दो black holes",
+     "text": "When two black holes merge..."
+    },
+    {
+     "at": "तो नए black hole",
+     "text": "...the new black hole's surface area..."
+    },
+    {
+     "at": "पुराने दोनों",
+     "text": "...can never be smaller than the two old ones combined"
+    },
+    {
+     "at": "इसे परखने",
+     "text": "To test it, a collision had to be measured before and after"
+    },
+    {
+     "at": "दशकों तक",
+     "text": "For decades, that was impossible"
+    },
+    {
+     "at": "चौदह January",
+     "text": "14 JANUARY 2025",
+     "big": true
+    },
+    {
+     "at": "LIGO ने अब तक",
+     "text": "LIGO caught the clearest gravitational wave ever"
+    },
+    {
+     "at": "एक अरब से",
+     "text": "Over a billion light-years away..."
+    },
+    {
+     "at": "Sun से तीस",
+     "text": "...two black holes, each over 30 Suns, merged"
+    },
+    {
+     "at": "Signal दो हज़ार",
+     "text": "The signal was 4 times clearer than in 2015"
+    },
+    {
+     "at": "इतना कि टक्कर",
+     "text": "Clear enough to measure the waves before the collision..."
+    },
+    {
+     "at": "और बाद में नए",
+     "text": "...and the final \"ringing\" of the new black hole"
+    },
+    {
+     "at": "टक्कर से पहले कुल",
+     "text": "Total area before: about 240,000 km²"
+    },
+    {
+     "at": "टक्कर के बाद",
+     "text": "After: about 400,000 km²"
+    },
+    {
+     "at": "चौवन साल बाद",
+     "text": "54 YEARS LATER, HAWKING WAS RIGHT",
+     "big": true
+    },
+    {
+     "at": "लेकिन Hawking यह",
+     "text": "But Hawking didn't live to see it"
+    },
+    {
+     "at": "उनका देहांत",
+     "text": "STEPHEN HAWKING 1942–2018",
+     "big": true
+    }
+   ],
+   "sfx": []
+  },
+  "fact1": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "young stars forming in a glowing nebula",
+      "star-forming region"
+     ]
+    },
+    {
+     "at": "पहले तारे बनते",
+     "q": [
+      "a young galaxy forming stars",
+      "galaxies forming in the early universe"
+     ]
+    },
+    {
+     "at": "भारी तारे मरते",
+     "q": [
+      "a massive star exploding as a supernova",
+      "supernova explosion"
+     ]
+    },
+    {
+     "at": "black holes बनते",
+     "q": [
+      "black hole forming from a collapsed star",
+      "stellar black hole"
+     ]
+    },
+    {
+     "at": "और अरबों सालों",
+     "q": [
+      "black hole growing as it feeds on gas",
+      "accretion disk around a growing black hole"
+     ]
+    },
+    {
+     "at": "James Webb Space Telescope ने",
+     "q": [
+      "the James Webb Space Telescope in space",
+      "Webb telescope"
+     ]
+    },
+    {
+     "at": "ब्रह्मांड के शुरुआती",
+     "q": [
+      "Webb deep field full of distant galaxies",
+      "deep field"
+     ]
+    },
+    {
+     "at": "Webb को छोटे",
+     "q": [
+      "tiny red galaxies in a deep field",
+      "little red dots"
+     ]
+    },
+    {
+     "at": "Little Red Dots.",
+     "q": [
+      "a compact red galaxy in the early universe",
+      "red glowing object in deep space"
+     ]
+    },
+    {
+     "at": "इनके अंदर",
+     "q": [
+      "black hole inside a young galaxy",
+      "early universe black hole"
+     ]
+    },
+    {
+     "at": "May दो हज़ार छब्बीस",
+     "q": [
+      "galaxy cluster Abell 2744",
+      "Pandora's Cluster deep field"
+     ]
+    },
+    {
+     "at": "इनमें से एक",
+     "q": [
+      "zoom into a distant lensed galaxy",
+      "gravitational lensing by a galaxy cluster"
+     ]
+    },
+    {
+     "at": "उसकी रोशनी तब",
+     "q": [
+      "the early universe with the first galaxies",
+      "cosmic dawn"
+     ]
+    },
+    {
+     "at": "Black hole, Sun से",
+     "q": [
+      "a supermassive black hole in the early universe",
+      "quasar in the early universe"
+     ]
+    },
+    {
+     "at": "और उसके चारों",
+     "q": [
+      "black hole with almost no galaxy around it",
+      "lonely black hole in dark space"
+     ]
+    },
+    {
+     "at": "पूरे system का",
+     "gfx": "bh_share"
+    },
+    {
+     "at": "वहाँ की gas",
+     "q": [
+      "pristine gas clouds in the early universe",
+      "primordial gas cloud"
+     ]
+    },
+    {
+     "at": "जैसी Big Bang",
+     "q": [
+      "the Big Bang",
+      "expanding early universe"
+     ]
+    },
+    {
+     "at": "Scientists के मुताबिक़",
+     "q": [
+      "black hole forming in the early universe",
+      "early black hole growing"
+     ]
+    },
+    {
+     "at": "शायद gas के",
+     "q": [
+      "a giant gas cloud collapsing",
+      "gas cloud collapsing into a black hole"
+     ]
+    },
+    {
+     "at": "या शायद",
+     "q": [
+      "the Big Bang flash",
+      "birth of the universe"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ पंद्रह में",
+     "q": [
+      "a starry night sky over a dark landscape",
+      "Milky Way rising over mountains"
+     ]
+    },
+    {
+     "at": "आज इंसान उस",
+     "q": [
+      "the first image of a black hole",
+      "black hole shadow with a glowing ring"
+     ]
+    },
+    {
+     "at": "black holes की टक्करों",
+     "q": [
+      "two black holes merging",
+      "gravitational waves from merging black holes"
+     ]
+    },
+    {
+     "at": "और उन्हें ब्रह्मांड",
+     "q": [
+      "distant galaxies in the early universe",
+      "deep field"
+     ]
+    },
+    {
+     "at": "लेकिन सबसे बड़ा",
+     "q": [
+      "slow push into a black hole",
+      "approaching the event horizon of a black hole"
+     ]
+    },
+    {
+     "at": "उसके बिल्कुल center",
+     "q": [
+      "falling into a black hole",
+      "dark centre of a black hole"
+     ]
+    },
+    {
+     "at": "और जिस दिन",
+     "q": [
+      "deep darkness of a black hole",
+      "black hole with a glowing ring of light"
+     ]
+    },
+    {
+     "at": "कि यह ब्रह्मांड",
+     "q": [
+      "zooming out across the universe",
+      "cosmic web of galaxies"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "For a long time, black holes had one story"
+    },
+    {
+     "at": "पहले तारे",
+     "text": "First stars form, then galaxies"
+    },
+    {
+     "at": "भारी तारे",
+     "text": "Massive stars die and become black holes..."
+    },
+    {
+     "at": "और अरबों",
+     "text": "...growing slowly over billions of years"
+    },
+    {
+     "at": "James Webb Space Telescope ने",
+     "text": "The James Webb Space Telescope shook that story"
+    },
+    {
+     "at": "ब्रह्मांड के शुरुआती",
+     "text": "In the early universe, Webb saw small, red, glowing dots"
+    },
+    {
+     "at": "Little Red Dots.",
+     "text": "\"LITTLE RED DOTS\"",
+     "big": true
+    },
+    {
+     "at": "इनके अंदर",
+     "text": "Inside them: black holes far bigger than expected"
+    },
+    {
+     "at": "May दो हज़ार छब्बीस",
+     "text": "MAY 2026",
+     "big": true
+    },
+    {
+     "at": "University of Cambridge",
+     "text": "A team led by the University of Cambridge..."
+    },
+    {
+     "at": "इनमें से एक",
+     "text": "...weighed the black hole in one of them, QSO1, directly"
+    },
+    {
+     "at": "उसकी रोशनी तब",
+     "text": "Its light set out when the universe..."
+    },
+    {
+     "at": "जब ब्रह्मांड सिर्फ़",
+     "text": "...was only about 700 million years old"
+    },
+    {
+     "at": "Black hole, Sun से",
+     "text": "50 MILLION TIMES THE SUN'S MASS",
+     "big": true
+    },
+    {
+     "at": "और उसके चारों",
+     "text": "And around it, almost no galaxy at all"
+    },
+    {
+     "at": "पूरे system का",
+     "text": "The black hole alone was 2/3 of all the mass"
+    },
+    {
+     "at": "वहाँ की gas",
+     "text": "Its gas was almost pure hydrogen and helium..."
+    },
+    {
+     "at": "जैसी Big Bang",
+     "text": "...just like right after the Big Bang"
+    },
+    {
+     "at": "Scientists के मुताबिक़",
+     "text": "The simplest explanation:"
+    },
+    {
+     "at": "कि यह black hole अपनी",
+     "text": "THE BLACK HOLE CAME BEFORE ITS GALAXY",
+     "big": true
+    },
+    {
+     "at": "शायद gas के",
+     "text": "Perhaps a giant gas cloud collapsed directly..."
+    },
+    {
+     "at": "या शायद",
+     "text": "...or perhaps..."
+    },
+    {
+     "at": "Big Bang के पहले",
+     "text": "...IN THE FIRST SECOND OF THE BIG BANG",
+     "big": true
+    },
+    {
+     "at": "उन्नीस सौ पंद्रह में",
+     "text": "1915",
+     "big": true
+    },
+    {
+     "at": "जंग के मैदान",
+     "text": "On a battlefield, Schwarzschild found a strange boundary"
+    },
+    {
+     "at": "आज इंसान उस",
+     "text": "Today, humanity has photographed that boundary..."
+    },
+    {
+     "at": "black holes की टक्करों",
+     "text": "...heard black holes collide..."
+    },
+    {
+     "at": "और उन्हें ब्रह्मांड",
+     "text": "...and seen them at the dawn of the universe"
+    },
+    {
+     "at": "लेकिन सबसे बड़ा",
+     "text": "But the biggest question remains:"
+    },
+    {
+     "at": "event horizon के उस पार",
+     "text": "WHAT LIES BEYOND THE EVENT HORIZON?",
+     "big": true
+    },
+    {
+     "at": "उसके बिल्कुल center",
+     "text": "At its very centre, even Einstein's laws break down"
+    },
+    {
+     "at": "और जिस दिन",
+     "text": "The day humanity can look inside that darkness..."
+    },
+    {
+     "at": "कि यह ब्रह्मांड",
+     "text": "...it may finally learn where the universe came from"
+    }
+   ],
+   "sfx": [
+    {
+     "type": "boom",
+     "at": "Big Bang के पहले"
+    }
+   ]
+  }
+ }
+}

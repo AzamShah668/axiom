@@ -167,6 +167,39 @@ def add_glow(frame, cx, cy, r, color, op=1.0, power=2.0):
     frame[y0:y1, x0:x1] = np.clip(reg + bgr[y0 - y:y1 - y, x0 - x:x1 - x] * aa, 0, 255).astype(np.uint8)
 
 
+def paste(frame, bgr, alpha, x, y):
+    """Alpha-blend bgr (h,w,3) with alpha (h,w) at (x, y), clipped to the frame."""
+    h, w = alpha.shape[:2]
+    x, y = int(x), int(y)
+    x0, y0, x1, y1 = max(x, 0), max(y, 0), min(x + w, W), min(y + h, H)
+    if x1 <= x0 or y1 <= y0:
+        return
+    a = alpha[y0 - y:y1 - y, x0 - x:x1 - x, None]
+    reg = frame[y0:y1, x0:x1].astype(np.float32)
+    frame[y0:y1, x0:x1] = (reg * (1 - a) + bgr[y0 - y:y1 - y, x0 - x:x1 - x] * a).astype(np.uint8)
+
+
+def bh(frame, cx, cy, r, op=1.0, hot=(255, 170, 80)):
+    """A black hole: warm haze, a bright photon ring and a black shadow."""
+    if r < 2 or op <= 0:
+        return
+    add_glow(frame, cx, cy, r * 3.0, hot, 0.32 * op, 2.2)
+    R = int(r * 1.6) + 6
+    layer = np.zeros((2 * R, 2 * R, 3), np.float32)
+    cv2.circle(layer, (R, R), int(r * 1.12), tuple(float(c) for c in hot[::-1]), max(2, int(r * 0.14)), cv2.LINE_AA)
+    layer = cv2.GaussianBlur(layer, (0, 0), max(1.5, r * 0.07))
+    x, y = int(cx - R), int(cy - R)
+    x0, y0, x1, y1 = max(x, 0), max(y, 0), min(x + 2 * R, W), min(y + 2 * R, H)
+    if x1 <= x0 or y1 <= y0:
+        return
+    reg = frame[y0:y1, x0:x1].astype(np.float32) + layer[y0 - y:y1 - y, x0 - x:x1 - x] * 1.6 * op
+    m = np.zeros((2 * R, 2 * R), np.float32)
+    cv2.circle(m, (R, R), int(r), 1.0, -1, cv2.LINE_AA)
+    reg *= 1 - m[y0 - y:y1 - y, x0 - x:x1 - x, None] * op
+    frame[y0:y1, x0:x1] = np.clip(reg, 0, 255).astype(np.uint8)
+
+
+
 def starfield_canvas(seed=7):
     rng = np.random.default_rng(seed)
     c = np.zeros((H * 2, W * 2, 3), np.float32)
@@ -269,8 +302,9 @@ def gfx(name, t, D, sh):
             cv2.arrowedLine(f, (int(x + 12 * math.cos(a_)), int(y + 12 * math.sin(a_))), (int(x2), int(y2)),
                             (120, 200, 255), 2, cv2.LINE_AA, tipLength=0.25)
         return f
-    if name == "year_counter":
-        year = 1933 + int(round(37 * ease(p * 1.15)))
+    if name.startswith("year_counter"):  # year_counter or year_counter:<from>:<to>
+        y0, y1 = (int(v) for v in name.split(":")[1:3]) if ":" in name else (1933, 1970)
+        year = y0 + int(round((y1 - y0) * ease(p * 1.15)))
         draw_text(f, str(year), 260, "center")
         return f
     if name == "orbits":
@@ -492,6 +526,284 @@ def gfx(name, t, D, sh):
         py = int(y[px])
         cv2.rectangle(f, (px - 60, py - 70), (px + 60, py), (14, 14, 14), -1)
         cv2.ellipse(f, (px, py - 70), (60, 55), 0, 180, 360, (18, 18, 18), -1)
+        return f
+    # ---- production 02: black holes
+    if name == "bh_shrink":  # Sun -> a 6 km black hole, then Earth -> a marble-sized one
+        for k, (cx, lab, small, img) in enumerate(((W * 0.3, "SUN", "6 km", None), (W * 0.7, "EARTH", "1.8 cm", "earth"))):
+            q = ease((p - 0.08 - 0.45 * k) / 0.3)
+            if p < 0.45 * k:
+                continue
+            r = 230 * (1 - q) + 6
+            cy = H * 0.42
+            if img is None:
+                add_glow(f, cx, cy, r * 1.9, (255, 190, 90), 0.8 * (1 - q) + 0.1, 1.6)
+                cv2.circle(f, (int(cx), int(cy)), int(r), (110, 215, 255), -1, cv2.LINE_AA)
+            else:
+                d = max(int(2 * r), 4)
+                e = cv2.resize(load_img("earth", [0.08, 0.08, 0.92, 0.92]), (d, d), interpolation=cv2.INTER_AREA)
+                m = np.zeros((d, d), np.float32)
+                cv2.circle(m, (d // 2, d // 2), d // 2 - 1, 1.0, -1, cv2.LINE_AA)
+                paste(f, e, m * (1 - q * 0.9), cx - d / 2, cy - d / 2)
+            if q > 0.85:
+                bh(f, cx, cy, 18 if k == 0 else 12, ease((q - 0.85) / 0.15))
+            draw_text(f, lab, 40, (cx / W, (cy - 290) / H), font="Montserrat")
+            if q > 0.9:
+                draw_text(f, small, 64, (cx / W, (cy + 120) / H), op=ease((q - 0.9) / 0.1))
+        return f
+    if name == "dark_star":  # Michell: light leaves the star and falls back
+        cx, cy, R = W / 2, H * 0.78, 190
+        dim = 1 - 0.75 * ease((p - 0.35) / 0.5)
+        add_glow(f, cx, cy, R * 2.2, (255, 150, 80), 0.6 * dim, 1.5)
+        cv2.circle(f, (int(cx), int(cy)), R, tuple(int(c * dim) for c in (80, 150, 255)), -1, cv2.LINE_AA)
+        rng = np.random.default_rng(21)
+        for i in range(26):
+            ang = math.radians(rng.uniform(-70, 70))
+            period, ph = rng.uniform(1.6, 2.6), rng.uniform(0, 1)
+            for trail in range(6):
+                s = ((t - trail * 0.03) / period + ph) % 1.0
+                h = 4 * s * (1 - s)  # rises, slows, falls back
+                x = cx + math.sin(ang) * (R + 330 * h * 0.55) + math.sin(ang) * 120 * s
+                y = cy - math.cos(ang) * R - 520 * h * math.cos(ang) ** 0.5
+                add_glow(f, x, y, 16 - 2 * trail, (255, 245, 200), (1.0 - trail * 0.14) * (0.5 + 0.5 * dim), 1.2)
+        return f
+    if name == "hidden_companion":  # a bright star circling something that cannot be seen
+        cx, cy = W / 2, H * 0.43
+        a_, b_ = 540, 210
+        cv2.ellipse(f, (int(cx), int(cy)), (a_, b_), 0, 0, 360, (120, 120, 120), 1, cv2.LINE_AA)
+        for k in range(0, 360, 24):
+            cv2.ellipse(f, (int(cx), int(cy)), (34, 34), 0, k, k + 12, (200, 200, 200), 2, cv2.LINE_AA)
+        draw_text(f, "?", 54, (cx / W, cy / H), op=0.8)
+        ang = 0.9 * t
+        for trail in range(10, -1, -1):
+            a2 = ang - trail * 0.05
+            add_glow(f, cx + a_ * math.cos(a2), cy + b_ * math.sin(a2), 40 - 2.5 * trail, (150, 200, 255), 1.0 - trail * 0.09, 1.2)
+        return f
+    if name == "collapse":  # a dying giant star collapses into a black hole
+        cx, cy = W / 2, H * 0.44
+        q = ease((p - 0.15) / 0.5)
+        if p < 0.68:
+            r = 300 * (1 - q) + 8
+            add_glow(f, cx, cy, r * 1.8 + 20, (255, 140, 60), 0.75, 1.5)
+            add_glow(f, cx, cy, r, (255, 230, 170), 1.0, 0.8)
+        else:
+            k = ease((p - 0.68) / 0.25)
+            bh(f, cx, cy, 30 + 90 * k, 1.0)
+        if 0.6 < p < 0.8:
+            add_glow(f, cx, cy, 520, (255, 255, 255), (1 - abs(p - 0.68) / 0.12) * 0.7, 1.4)
+        return f
+    if name == "zeros":  # 10^67 years written out
+        n = int(round(67 * ease((p - 0.05) / 0.75)))
+        digits = "1" + "0" * n
+        per, size = 23, 92
+        fw = text_rgba("0" * per, size, "Anton", (255, 255, 255))[1].shape[1]
+        for li in range(3):
+            seg = digits[li * per:(li + 1) * per]
+            if seg:
+                draw_text(f, seg, size, ((W - fw) / 2 / W + 0.012, (0.24 + 0.15 * li)), align="left")
+        if p > 0.82:
+            draw_text(f, "YEARS", 70, (0.5, 0.72), op=ease((p - 0.82) / 0.1), color=(255, 200, 120))
+        return f
+    if name == "evaporate":  # Hawking radiation: particles leak away, the hole slowly shrinks
+        cx, cy = W / 2, H * 0.44
+        r = 170 - 70 * ease(p)
+        rng = np.random.default_rng(8)
+        for i in range(70):
+            ang, t0, sp = rng.uniform(0, 2 * np.pi), rng.uniform(0, D), rng.uniform(90, 200)
+            s = (t - t0) % 3.0
+            d = r * 1.08 + sp * s
+            add_glow(f, cx + d * math.cos(ang), cy + d * math.sin(ang), 13, (220, 235, 255), max(0, 1.0 - s / 3.0), 1.3)
+        bh(f, cx, cy, r, 1.0)
+        return f
+    if name == "tidal":  # the near side is pulled harder: spaghettification
+        bx, by = 330, H * 0.43
+        e = ease(p / 0.9)
+        ox = 1380 - 560 * e
+        rng = np.random.default_rng(12)
+        pts = rng.normal(0, 1, (160, 2))
+        pts /= np.maximum(np.linalg.norm(pts, axis=1, keepdims=True), 1e-6)
+        pts *= rng.uniform(0, 1, (160, 1)) ** 0.5 * 120
+        bh(f, bx, by, 95, 1.0)
+        for dx, dy in pts:
+            sx = dx * (1 + 3.2 * e) - 140 * e * (dx < 0) * (abs(dx) / 120) ** 2
+            add_glow(f, ox + sx, by + dy * (1 - 0.7 * e), 9, (255, 220, 160), 0.9)
+        for fx, ln in ((-1, 1.0), (0, 0.6), (1, 0.35)):
+            x = ox + fx * 120 * (1 + 3.2 * e)
+            L = 70 + 130 * ln * (0.5 + e)
+            cv2.arrowedLine(f, (int(x), int(by - 210)), (int(x - L), int(by - 210)), (120, 200, 255), 4, cv2.LINE_AA, tipLength=0.25)
+        return f
+    if name == "redshift_fall":  # seen from far away, a falling light slows, reddens and fades at the horizon
+        cx, cy, r = 700, H * 0.44, 150
+        edge = cx + r * 1.06
+        for trail in range(14, -1, -1):
+            tt = max(t - trail * 0.06, 0)
+            x = edge + (1700 - edge) * math.exp(-tt / (D * 0.38))
+            q = min(1.0, tt / D)
+            col = (int(200 + 55 * q), int(230 - 190 * q), int(255 - 225 * q))
+            add_glow(f, x, cy, 30 - 1.5 * trail, col, (1 - q ** 1.5) * (1 - trail / 15), 1.2)
+        bh(f, cx, cy, r, 1.0)
+        return f
+    if name == "s2_orbit":  # S2 on its 16-year orbit around Sagittarius A*
+        e_, a_ = 0.88, 440
+        b_ = a_ * math.sqrt(1 - e_ ** 2)
+        fx, fy = W / 2 - 240, H * 0.43
+        ocx = fx + a_ * e_
+        rng = np.random.default_rng(31)
+        for k in range(4):  # other S-stars
+            aa, ee, rot = rng.uniform(180, 380), rng.uniform(0.3, 0.8), rng.uniform(0, 180)
+            bb = aa * math.sqrt(1 - ee ** 2)
+            M = 2 * math.pi * (t / rng.uniform(7, 14) + rng.uniform(0, 1))
+            E = M
+            for _ in range(8):
+                E = M + ee * math.sin(E)
+            x, y = aa * (math.cos(E) - ee), bb * math.sin(E)
+            c, s = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+            add_glow(f, fx + c * x - s * y, fy + s * x + c * y, 12, (200, 210, 255), 0.7)
+        cv2.ellipse(f, (int(ocx), int(fy)), (int(a_), int(b_)), 0, 0, 360, (150, 150, 150), 1, cv2.LINE_AA)
+        add_glow(f, fx, fy, 60, (230, 170, 255), 0.9, 1.4)
+        draw_text(f, "SGR A*", 38, (fx / W, (fy + 70) / H), font="Montserrat", color=(230, 190, 255))
+        for trail in range(12, -1, -1):
+            M = math.pi + 2 * math.pi * max(t - trail * 0.05, 0) / max(D, 1)
+            E = M
+            for _ in range(12):
+                E = M + e_ * math.sin(E)
+            x, y = ocx + a_ * math.cos(E), fy + b_ * math.sin(E)
+            add_glow(f, x, y, 26 - 1.5 * trail, (170, 210, 255), 1 - trail * 0.075, 1.2)
+        draw_text(f, "S2", 40, (x / W, (y - 55) / H), font="Montserrat")
+        return f
+    if name == "ripples":  # spacetime itself ripples outward
+        f = starfield(t, dim=0.5)
+        cx, cy = W / 2, H / 2 + 20
+        for i in range(-12, 13):
+            for horiz in (True, False):
+                u = np.linspace(-1, 1, 140)
+                gx, gz = (u, np.full_like(u, i / 12)) if horiz else (np.full_like(u, i / 12), u)
+                rr = np.sqrt(gx ** 2 + (gz * 1.2) ** 2)
+                dz = 60 * np.sin(rr * 22 - t * 5.0) / (0.4 + rr * 2.0)
+                sx = cx + gx * 900 / (1.6 + gz * 0.6)
+                sy = cy + gz * 300 + dz
+                cv2.polylines(f, [np.stack([sx, sy], 1).astype(np.int32)], False, (230, 170, 90), 1, cv2.LINE_AA)
+        for k in (0, 1):
+            a2 = t * 3.0 + k * math.pi
+            add_glow(f, cx + 34 * math.cos(a2), cy + 12 * math.sin(a2), 26, (255, 200, 140), 0.9, 1.2)
+        return f
+    if name == "inspiral":  # two black holes spiral in, merge and ring down; the chirp is drawn on top
+        cx, cy = W / 2, H * 0.52
+        Tm = D * 0.72
+        tau = max(Tm - t, 0.0)
+        x0, x1, yc = 260, 1660, 175
+
+        def wave(tt):
+            ta = np.maximum(Tm - tt, Tm * 0.015)
+            ph = -2.6 * Tm ** 0.375 * ta ** 0.625 / 0.625
+            amp = (Tm / ta) ** 0.25
+            h = np.where(tt < Tm, amp * np.cos(2 * ph), (Tm / (Tm * 0.015)) ** 0.25 * np.exp(-(tt - Tm) / 0.12) * np.cos(40 * (tt - Tm)))
+            return h / (Tm / (Tm * 0.015)) ** 0.25
+        ts = np.linspace(0, t, max(2, int(500 * t / D)))
+        ys = yc - 80 * wave(ts)
+        xs = x0 + (x1 - x0) * ts / D
+        cv2.polylines(f, [np.stack([xs, ys], 1).astype(np.int32)], False, (255, 230, 150), 3, cv2.LINE_AA)
+        if tau > 0:
+            sep = 330 * (tau / Tm) ** 0.25 + 50
+            ph = -2.6 * Tm ** 0.375 * max(tau, 1e-3) ** 0.625 / 0.625
+            for k in range(1, 7):  # outgoing ripples
+                rr = ((t * 140) + k * 120) % 720
+                cv2.ellipse(f, (int(cx), int(cy)), (int(rr), int(rr * 0.42)), 0, 0, 360, (200, 160, 90), 2, cv2.LINE_AA)
+            for m, sgn in ((36, 1), (29, -1)):
+                rr = sep * (65 - m) / 65
+                bh(f, cx + sgn * rr * math.cos(ph), cy + sgn * rr * math.sin(ph) * 0.42, m * 1.25, 1.0)
+        else:
+            k = t - Tm
+            bh(f, cx, cy, 62 * (1 + 0.12 * math.exp(-k / 0.3) * math.sin(k * 30)), 1.0)
+            if k < 0.6:
+                add_glow(f, cx, cy, 560, (255, 255, 255), (1 - k / 0.6) * 0.8, 1.3)
+        return f
+    if name == "ligo":  # an L-shaped detector; a passing wave stretches one arm and squeezes the other
+        f = starfield(t, dim=0.5)
+        ox, oy, Lx, Ly = 560, 740, 900, 520
+        env = math.exp(-((p - 0.5) / 0.22) ** 2)
+        s = 0.1 * env * math.sin(t * 9)
+        ax, ay = int(ox + Lx * (1 + s)), int(oy - Ly * (1 - s))
+        for (x2, y2) in ((ax, oy), (ox, ay)):
+            cv2.line(f, (ox, oy), (x2, y2), (150, 150, 150), 26, cv2.LINE_AA)
+            cv2.line(f, (ox, oy), (x2, y2), (60, 60, 255), 3, cv2.LINE_AA)
+            add_glow(f, x2, y2, 30, (255, 230, 200), 0.9)
+        add_glow(f, ox, oy, 40, (255, 120, 120), 0.9)
+        draw_text(f, "4 km", 46, ((ox + Lx / 2) / W, (oy - 60) / H), font="Montserrat")
+        draw_text(f, "4 km", 46, ((ox - 40) / W, (oy - Ly / 2) / H), font="Montserrat", align="right")
+        for k in range(5):
+            xx = (t * 260 + k * 420) % (W + 400) - 200
+            cv2.ellipse(f, (int(xx), int(H * 0.45)), (60, 520), 0, -60, 60, (200, 160, 90), 2, cv2.LINE_AA)
+        return f
+    if name == "eht_globe":  # radio dishes across the Earth act as one Earth-sized telescope (glass globe, chords)
+        cx, cy, R = W / 2, 460, 320
+        lam0, phi0 = math.radians(-115 + 60 * ease(p)), math.radians(-12)
+
+        def proj(lat, lon):
+            la, lo = math.radians(lat), math.radians(lon)
+            cosc = math.sin(phi0) * math.sin(la) + math.cos(phi0) * math.cos(la) * math.cos(lo - lam0)
+            x = math.cos(la) * math.sin(lo - lam0)
+            y = math.cos(phi0) * math.sin(la) - math.sin(phi0) * math.cos(la) * math.cos(lo - lam0)
+            return cx + R * x, cy - R * y, cosc
+        add_glow(f, cx, cy, R * 1.25, (80, 140, 255), 0.3, 1.2)
+        tint = np.zeros_like(f)
+        cv2.circle(tint, (int(cx), int(cy)), R, (90, 50, 20), -1, cv2.LINE_AA)
+        f = cv2.add(f, tint)
+        cv2.circle(f, (int(cx), int(cy)), R, (200, 150, 90), 2, cv2.LINE_AA)
+        grid = [[proj(lat, lo) for lo in range(-180, 181, 4)] for lat in range(-60, 90, 30)] + \
+               [[proj(la, lon) for la in range(-90, 91, 4)] for lon in range(-180, 180, 30)]
+        for pts in grid:
+            for (x1_, y1_, c1), (x2_, y2_, c2) in zip(pts, pts[1:]):
+                col = (150, 110, 70) if c1 > 0 and c2 > 0 else (70, 50, 35)
+                cv2.line(f, (int(x1_), int(y1_)), (int(x2_), int(y2_)), col, 1, cv2.LINE_AA)
+        sites = [("HAWAII", 19.8, -155.5), ("ARIZONA", 32.7, -109.9), ("MEXICO", 19.0, -97.3),
+                 ("CHILE", -23.0, -67.8), ("SPAIN", 37.1, -3.4), ("SOUTH POLE", -89.9, 0.0)]
+        vis = [(n, *proj(la, lo)) for n, la, lo in sites]
+        lk = ease((p - 0.2) / 0.4)
+        if lk > 0:
+            for i in range(len(vis)):
+                for j in range(i + 1, len(vis)):
+                    cv2.line(f, (int(vis[i][1]), int(vis[i][2])), (int(vis[j][1]), int(vis[j][2])),
+                             (int(140 * lk), int(230 * lk), int(255 * lk)), 2, cv2.LINE_AA)
+        for n, x, y, c in vis:
+            op = 1.0 if c > 0 else 0.45
+            add_glow(f, x, y, 22, (255, 230, 120), op, 1.0)
+            draw_text(f, n, 28, (x / W, (y - 34) / H), op=op, font="Montserrat")
+        return f
+    if name in ("eht_m87", "eht_sgra"):
+        img = load_img(name, [0.2, 0.0, 0.8, 1.0] if name == "eht_m87" else None)
+        layer = ken_burns(img, p, "in", fit="contain")
+        if "vignette" not in G:  # fade the square image edges into the background
+            yy, xx = np.mgrid[0:H, 0:W]
+            d = np.sqrt((xx - W / 2) ** 2 + (yy - H / 2) ** 2)
+            G["vignette"] = np.clip((540 - d) / 200, 0, 1).astype(np.float32)[..., None]
+        layer = (layer * G["vignette"]).astype(np.uint8)
+        return np.maximum((f * 0.6).astype(np.uint8), layer)
+    if name == "area_theorem":  # two horizons merge into one with a larger total area
+        cx, cy = W / 2, H * 0.47
+        m = ease((p - 0.42) / 0.16)
+        if p < 0.55:
+            for sgn in (-1, 1):
+                bh(f, cx + sgn * 420 * (1 - m), cy, 95, 1.0)
+            draw_text(f, "BEFORE: ~240,000 km²", 56, (0.5, 0.16), op=1 - m, font="Montserrat")
+        else:
+            k = ease((p - 0.55) / 0.2)
+            bh(f, cx, cy, 95 + 78 * k, 1.0)
+            draw_text(f, "AFTER: ~400,000 km²", 56, (0.5, 0.16), op=k, font="Montserrat", color=(255, 210, 130))
+        if 0.5 < p < 0.66:
+            add_glow(f, cx, cy, 520, (255, 255, 255), (1 - abs(p - 0.56) / 0.1) * 0.75, 1.3)
+        return f
+    if name == "bh_share":  # QSO1: the black hole is two-thirds of all the mass
+        cx, cy, r = 640, 470, 300
+        sweep = 360 * ease(p / 0.6)
+        cv2.circle(f, (cx, cy), r, (60, 60, 60), 2, cv2.LINE_AA)
+        if sweep > 0:
+            cv2.ellipse(f, (cx, cy), (r, r), 0, -90, -90 + min(sweep, 240), (10, 10, 10), -1, cv2.LINE_AA)
+            cv2.ellipse(f, (cx, cy), (r, r), 0, -90, -90 + min(sweep, 240), (80, 170, 255), 6, cv2.LINE_AA)
+        if sweep > 240:
+            cv2.ellipse(f, (cx, cy), (r, r), 0, 150, -90 + sweep, (230, 170, 120), -1, cv2.LINE_AA)
+        op = ease((p - 0.55) / 0.2)
+        draw_text(f, "BLACK HOLE  2/3", 62, (1080 / W, 380 / H), op=op, align="left", color=(255, 180, 90))
+        draw_text(f, "STARS + GAS  1/3", 62, (1080 / W, 520 / H), op=op, align="left", color=(130, 180, 240))
         return f
     raise SystemExit(f"unknown gfx {name}")
 
