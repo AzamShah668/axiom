@@ -16,6 +16,7 @@ The four steps can also be run alone (all in `scripts/footage/`):
 | pick | `select_candidates.py ... $WORK/picks.json [--per-item 2]` | CLIP-scores each candidate's preview frame and title against every item's queries; keeps each item's best unclaimed candidates |
 | fetch | `fetch_proxies.py picks.json $LIB [--jobs 3] --from-end` | ffprobe check (>= 3840 px or skipped), streams the 4K file into a 1080p30 proxy (12 s for single shots, 60 s for multi-shot episodes). `--from-end` cuts long zooms/pans from their end: that's the target the archive's preview frame shows, while many ESO zooms share the same all-sky Milky Way opening |
 | shots | `build_shots.py $LIB [--workers 4]` | PySceneDetect shots; per second: OCR text (auto-crop for corner labels), black, frozen (motion < 0.6); perceptual-hash duplicates; CLIP embedding |
+| people | `people_scan.py $LIB` | CLIP people-vs-space score for every usable second; presenters, interviews, lab and control-room crews are cut out of the usable ranges (scene detection misses some cuts to a presenter). Run after every `build_shots.py` pass (cached) |
 
 - `$LIB` is shared across productions and only grows; every step is incremental and resumable.
 - Between videos `$LIB` lives on Google Drive (`footage-library/`, see science-video "Storage"). `pipeline.sh ... restore`

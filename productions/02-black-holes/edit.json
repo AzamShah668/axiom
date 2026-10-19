@@ -77,7 +77,20 @@
   "dark star field slowly drifting",
   "faint distant galaxies in dark space"
  ],
- "pin": {},
+ "pin": {
+  "cold_open/10": "svs_14905#1",
+  "cold_open/20": "svs_14905#5",
+  "cold_open/21": "svs_20342#0",
+  "cold_open/23": "svs_20339#0",
+  "cold_open/24": "svs_14034#0",
+  "fact1/7": "svs_13553#0",
+  "fact1/8": "svs_14064#0",
+  "fact10/7": "svs_30878#0",
+  "fact8/4": "svs_14666#1",
+  "fact8/5": "svs_20253#0",
+  "fact9/25": "svs_13483#3",
+  "fact5/4": "eso_eso2212b#0"
+ },
  "ban": [
   "esahubble_heic1506a",
   "esahubble_heic1801a",
@@ -169,7 +182,20 @@
   "eso_eso2210c",
   "eso_eso1509a",
   "eso_mars_4k",
-  "esahubble_heic1916c"
+  "esahubble_heic1916c",
+  "svs_13483#0",
+  "svs_13483#1",
+  "svs_13483#2",
+  "svs_14905#0",
+  "svs_14905#6",
+  "svs_20333",
+  "svs_14087",
+  "svs_14062",
+  "svs_13967",
+  "svs_5136",
+  "svs_13322",
+  "svs_13834",
+  "eso_eso2408a"
  ],
  "crops": {},
  "exclude": {},

@@ -7,7 +7,8 @@
 #   setup      fonts, music, graphic stills -> $MEDIA            (once per machine)
 #   narration  ElevenLabs render of tts/narration.hi.md -> $WORK/voice (narration.wav, timeline.json)
 #   edit       edit.spec + edit.base.json -> edit.json, then check every trigger against the narration
-#   footage    4K search -> CLIP pick -> 1080p proxies -> shots + QC   (shared library $LIB, grows over time)
+#   footage    4K search -> CLIP pick -> 1080p proxies -> shots + QC (text, black, frozen, people)
+#              (shared library $LIB, grows over time)
 #   topup      more 4K candidates for items that matched weakly (score < 0.37) -> fetch -> shots
 #   assign     one unique shot per footage item -> $WORK/cutlist.json + review sheets $WORK/review_assign
 #              (re-runs keep reviewed shots: previous cutlist is kept as $WORK/cutlist_prev.json)
@@ -64,13 +65,15 @@ stage() {
         --max "$LIMIT"
       "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks.json" "$LIB" --jobs "$JOBS" \
         --limit "$LIMIT" --cap-single 12 --cap-multi "$CAP_MULTI" --preset "$PRESET" --from-end
-      "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS" ;;
+      "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS"
+      "$PY" "$ROOT/scripts/footage/people_scan.py" "$LIB" ;;
     topup)
       "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks_topup.json" \
         --weak "$WORK/cutlist.json" --below 0.37 --per-item 3 --max 160 --skip "$WORK/picks.json"
       "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks_topup.json" "$LIB" --jobs "$JOBS" \
         --cap-single 12 --cap-multi "$CAP_MULTI" --preset "$PRESET" --from-end
-      "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS" ;;
+      "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS"
+      "$PY" "$ROOT/scripts/footage/people_scan.py" "$LIB" ;;
     assign)
       keep=()
       if [ -f "$WORK/cutlist.json" ] && [ "${FRESH:-0}" != 1 ]; then
