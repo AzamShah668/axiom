@@ -14,7 +14,7 @@ ARCHIVE = {
     "svs": "NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov)",
 }
 GFX_IMAGES = {"mw_spiral": "milkyway", "halo_expand": "milkyway", "halo_full": "milkyway", "galactic_orbit": "milkyway",
-              "spectrum": "chandra_tel", "wind": "earth"}
+              "spectrum": "chandra_tel", "wind": "earth", "bh_shrink": "earth", "eht_m87": "eht_m87", "eht_sgra": "eht_sgra"}
 
 
 def main():
