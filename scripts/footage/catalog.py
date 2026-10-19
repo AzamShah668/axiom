@@ -41,7 +41,7 @@ VOCAB = {
     "gravitational-lens": "gravitational lensing arcs around a galaxy cluster",
     "galactic-centre": "the dense glowing centre of the Milky Way",
     "milky-way-sky": "the Milky Way arching across the night sky over a landscape",
-    "night-sky": "a starry night sky timelapse",
+    "night-sky": "a starry night sky timelapse above a horizon or landscape on Earth",
     "starfield": "a dark field of stars",
     "cosmic-web": "a simulation of the cosmic web of filaments",
     "early-universe": "the early universe with the first galaxies forming",
@@ -54,7 +54,7 @@ VOCAB = {
     "space-telescope": "a space telescope in orbit",
     "rocket": "a rocket launching",
     "lab-instrument": "a scientific instrument in a laboratory",
-    "people": "people, a presenter or scientists at work",
+    "people": "a human person, a presenter or scientists working, faces and bodies",
     "diagram": "a diagram or chart with labels",
     "spacetime-grid": "a warped grid representing spacetime",
 }
