@@ -12,7 +12,7 @@
 #   topup      more 4K candidates for items that matched weakly (score < 0.37) -> fetch -> shots
 #   assign     one unique shot per footage item -> $WORK/cutlist.json + review sheets $WORK/review_assign
 #              (re-runs keep reviewed shots: previous cutlist is kept as $WORK/cutlist_prev.json)
-#   render     master video -> $WORK/out/<name>.mp4
+#   render     master video -> $WORK/out/<name>.mp4 (+ English caption track <name>.en.srt for v3 -> captions.en.srt)
 #   review     contact sheets of the master -> $WORK/review_render
 #   preview    720p parts under 30 MB -> $WORK/out/preview
 #   credits    description credits from the final cut -> <production_dir>/credits.txt
@@ -55,7 +55,8 @@ stage() {
     setup)
       bash "$ROOT/scripts/setup/fetch_media.sh" "$MEDIA" ;;
     narration)
-      "$PY" "$ROOT/scripts/elevenlabs/render_narration.py" "$P/tts/narration.hi.md" "$WORK/voice" --open-gap 3.5 --gap 2.0 ;;
+      "$PY" "$ROOT/scripts/elevenlabs/render_narration.py" "$P/tts/narration.hi.md" "$WORK/voice" --open-gap 3.5 --gap 2.0 \
+        --gap-after "${HOOK_GAP:-hook=1.2}" ;;
     edit)
       "$PY" "$ROOT/scripts/video/make_edit.py" "$P/edit.spec" "$P/edit.base.json" "$P/edit.json"
       "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" --plan-only ;;
@@ -82,11 +83,13 @@ stage() {
       fi
       "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" \
         --review "$WORK/review_assign" --avoid "$ROOT/productions" ${keep[@]+"${keep[@]}"} ;;
-    render)
+    render)  # edit.json "style": "v3" -> render_v3.py (docs/style-guide.md), else the v2 renderer
       mkdir -p "$WORK/out"
-      "$PY" "$ROOT/scripts/video/render_v2.py" "$WORK/cutlist.json" "$WORK/voice/narration.wav" "$P/edit.json" "$TL" \
+      style=$("$PY" -c "import json,sys; print(json.load(open(sys.argv[1])).get('style', 'v2'))" "$P/edit.json")
+      "$PY" "$ROOT/scripts/video/render_${style}.py" "$WORK/cutlist.json" "$WORK/voice/narration.wav" "$P/edit.json" "$TL" \
         "$MEDIA/music" "$MEDIA/fonts" "$MEDIA/assets" "$MASTER" --workers "$WORKERS"
-      cp "$WORK/cutlist.json" "$P/cutlist.json" ;;
+      cp "$WORK/cutlist.json" "$P/cutlist.json"
+      [ -f "${MASTER%.mp4}.en.srt" ] && cp "${MASTER%.mp4}.en.srt" "$P/captions.en.srt" || true ;;
     review)
       "$PY" "$ROOT/scripts/video/review_sheet.py" "$MASTER" "$WORK/review_render" ;;
     preview)

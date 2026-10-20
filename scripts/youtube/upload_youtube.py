@@ -12,7 +12,10 @@ Credentials live in config/.env (gitignored) or in environment variables of the 
   python upload_youtube.py publish <video_id> [--comment credits_full.txt]   # private -> public (+ credits comment)
   python upload_youtube.py delete <video_id>
   python upload_youtube.py upload <video.mp4> <youtube.md> [--thumbnail t.jpg] [--comment credits_full.txt]
-                                  [--privacy public|unlisted|private] [--publish-at 2026-10-16T12:00:00Z]
+                                  [--captions captions.en.srt] [--privacy public|unlisted|private]
+                                  [--publish-at 2026-10-16T12:00:00Z]
+  python upload_youtube.py captions <video_id> <captions.en.srt> [--language en] [--name English]
+                                                            # add the English CC track (v3 style)
 
 youtube.md is the production's package file: **Title** line, **Description** ``` block, **Tags** line.
 Note: projects that have not passed YouTube's API audit get uploads locked to private; custom thumbnails need
@@ -125,7 +128,23 @@ def upload(a, e):
                           timeout=60)
         print("credits comment:", "posted (pin it in YouTube Studio)" if c.status_code == 200 else
               f"not posted ({c.status_code}: {c.text[:200]})")
+    if a.captions:
+        captions(vid, a.captions, e)
     return vid
+
+
+def captions(vid, srt, e, language="en", name="English"):
+    """Upload a caption track (captions.insert, multipart: JSON snippet + the SRT file)."""
+    tok = access_token(e)
+    meta = json.dumps({"snippet": {"videoId": vid, "language": language, "name": name, "isDraft": False}})
+    b = "axiom-captions-boundary"
+    body = (f"--{b}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n{meta}\r\n"
+            f"--{b}\r\nContent-Type: application/octet-stream\r\n\r\n").encode() + open(srt, "rb").read() + f"\r\n--{b}--".encode()
+    r = requests.post("https://www.googleapis.com/upload/youtube/v3/captions?uploadType=multipart&part=snippet",
+                      headers={"Authorization": f"Bearer {tok}", "Content-Type": f"multipart/related; boundary={b}"},
+                      data=body, timeout=120)
+    print("captions:", f"added ({language}, id {r.json().get('id')})" if r.status_code == 200 else
+          f"not added ({r.status_code}: {r.text[:300]})")
 
 
 def channel(a, e):
@@ -179,8 +198,14 @@ def main():
     up.add_argument("package")
     up.add_argument("--thumbnail", default="")
     up.add_argument("--comment", default="")
+    up.add_argument("--captions", default="", help="English caption track (.srt) to add after the upload")
     up.add_argument("--privacy", default="public", choices=["public", "unlisted", "private"])
     up.add_argument("--publish-at", default="")
+    cc = sub.add_parser("captions")
+    cc.add_argument("video_id")
+    cc.add_argument("srt")
+    cc.add_argument("--language", default="en")
+    cc.add_argument("--name", default="English")
     a = ap.parse_args()
     e = env()
     if a.cmd == "auth-url":
@@ -217,6 +242,8 @@ def main():
         print("deleted" if r.status_code == 204 else f"{r.status_code} {r.text[:300]}")
     elif a.cmd == "channel":
         channel(a, e)
+    elif a.cmd == "captions":
+        captions(a.video_id, a.srt, e, a.language, a.name)
     elif a.cmd == "whoami":
         tok = access_token(e)
         r = requests.get("https://www.googleapis.com/youtube/v3/channels?part=snippet,status&mine=true",

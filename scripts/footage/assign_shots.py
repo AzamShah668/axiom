@@ -17,6 +17,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "video"))
 import clip_model  # noqa: E402
 import render_v2  # noqa: E402
+import render_v3  # noqa: E402
 
 PAD = 0.8          # extra seconds of footage per item (transition overlap)
 DARK_PENALTY = 0.05
@@ -146,14 +147,24 @@ def main():
     ap.add_argument("--keep", default="", help="previous (reviewed) cutlist.json: items keep their shot unless it is now banned")
     ap.add_argument("--avoid", default="", help="productions dir: never reuse shots other productions' cutlist.json used")
     ap.add_argument("--plan-only", action="store_true", help="only check the edit against the narration")
+    ap.add_argument("--local-only", action="store_true", help="use only shots whose clip file is on disk (re-renders)")
     a = ap.parse_args()
     edit, tl = json.load(open(a.edit)), json.load(open(a.timeline))
-    items, caps, sfx, total, off = render_v2.plan(edit, tl)
+    v3 = edit.get("style") == "v3"
+    if v3:  # v3 plan: scenes snapped to the voice, overlays, moments (scripts/video/render_v3.py)
+        P = render_v3.plan(edit, tl, os.path.join(os.path.dirname(os.path.abspath(a.timeline)), "narration.wav"))
+        items, caps, sfx, total, off = P["items"], P["caps"], P["sfx"], P["total"], P["off"]
+    else:
+        items, caps, sfx, total, off = render_v2.plan(edit, tl)
     if a.plan_only:
-        kinds = {k: sum(1 for it in items if it["kind"] == k) for k in ("clip", "gfx", "card", "title")}
+        kinds = {k: sum(1 for it in items if it["kind"] == k) for k in ("clip", "gfx", "num", "card", "title")}
         lens = np.array([it["t1"] - it["t0"] for it in items if it["kind"] == "clip"])
         print(f"edit OK: {len(items)} items {kinds}, {len(caps)} captions, {total:.1f}s; "
               f"scene length median {np.median(lens):.2f}s, max {lens.max():.2f}s -> needs {len(items)} different shots")
+        if v3:
+            print(f"  v3: {len(P['ovl'])} overlays {dict((k, sum(o['kind'] == k for o in P['ovl'])) for k in ('headline', 'keyline', 'num', 'footer'))}, "
+                  f"{len(P['breaths'])} breaths, {len(sfx)} sfx ({len(sfx) / total * 60:.0f}/min), "
+                  f"cuts/min {60 * (len(items) - 1) / total:.1f}, scene p10-p90 {np.percentile(lens, 10):.1f}-{np.percentile(lens, 90):.1f}s")
         return
     shots = json.load(open(os.path.join(a.lib, "shots.json")))
     sources = json.load(open(os.path.join(a.lib, "sources.json")))
@@ -173,6 +184,9 @@ def main():
         if s["clip"] in edit.get("crops", {}):
             s["crop"] = edit["crops"][s["clip"]]
     pool = [s for s in shots if s["usable"] and not s["dup_of"] and s["id"] not in ban and s["clip"] not in ban]
+    if a.local_only:
+        pool = [s for s in pool if os.path.exists(os.path.join(a.lib, "clips", s["clip"] + ".mp4"))]
+        print(f"local only: {len(pool)} usable shots with their clip on disk")
     if avoided:  # near-identical copies of footage earlier productions showed (same image, re-zoomed) stay out too
         prev = [s for s in shots if s["id"] in avoided and s["usable"]]
         sig = os.path.join(a.lib, "segments_sig.npz")
@@ -287,8 +301,9 @@ def main():
                   ref=sec_n[i], title=sources[s["clip"]]["title"])
     used = [it["shot"] for it in items]
     assert len(used) == len(set(used)), "a shot was used twice"
-    json.dump({"total": total, "off": off, "clips_dir": os.path.abspath(os.path.join(a.lib, "clips")),
-               "items": items, "caps": caps, "sfx": sfx}, open(a.out, "w"), indent=1, ensure_ascii=False)
+    out = {**(P if v3 else {}), "total": total, "off": off, "clips_dir": os.path.abspath(os.path.join(a.lib, "clips")),
+           "items": items, "caps": caps, "sfx": sfx}
+    json.dump(out, open(a.out, "w"), indent=1, ensure_ascii=False)
     sc = np.array([it["score"] for it in items if it["kind"] == "clip"])
     print(f"{len(items)} items -> {len(set(used))} different shots from {len({it['clip'] for it in items})} videos "
           f"(library {len(pool)} usable shots); clip score median {np.median(sc):.3f}, lowest {np.sort(sc)[:5].round(3)}")

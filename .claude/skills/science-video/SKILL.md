@@ -15,9 +15,9 @@ doing the stage. Do not skip the review gates.
 |---|-------|-------|--------|
 | 1 | Topic, research, story script, Devanagari narration, title/thumbnail/description | `science-script` | `script.md`, `tts/narration.hi.md` |
 | 2 | Hindi voice-over with the locked voice | `science-narration` | `$WORK/voice/narration.wav`, `timeline.json` |
-| 3 | Edit plan: a visual query for every sentence, captions, graphics, music | `science-edit-plan` | `edit.spec`, `edit.base.json`, `edit.json` |
+| 3 | Edit plan (v3 style, `docs/style-guide.md`): a visual query for every sentence, headlines, number cards, moments, CC captions, music | `science-edit-plan` | `edit.spec`, `edit.base.json`, `edit.json` |
 | 4 | 4K footage library for the topic | `science-footage` | `$LIB` shots (QC'd, embedded) |
-| 5 | Shot assignment (no repeats) -> render -> review -> fixes -> preview | `science-render` | master `.mp4`, preview parts, `cutlist.json` |
+| 5 | Shot assignment (no repeats) -> render -> review -> fixes -> preview | `science-render` | master `.mp4`, `captions.en.srt`, preview parts, `cutlist.json` |
 | 6 | Thumbnail, description with credits, upload checklist | `science-publish` | `thumbnail.jpg`, `youtube.md`, `credits.txt` |
 
 One command runs the scripted parts (stages 2-6 except writing):
@@ -52,12 +52,22 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
     enforces this, and `--avoid` keeps footage from earlier productions out.
   - **No text, logos or labels inside footage**: OCR-checked, corner labels auto-cropped, the rest excluded.
   - No static photos. Stills only appear inside explanatory graphics, always moving.
-- **Pace and on-screen text:**
-  - A new shot every ~2.5 s.
-  - An English caption for every sentence; key names and numbers get big centre captions.
-  - Transitions on topic changes, with a whoosh.
-- **Sound:** Kevin MacLeod dark-ambient bed ducked ~22 dB under the voice and rising in pauses, a low drone,
-  whooshes, and booms on big moments. Master at -14 LUFS.
+- **Editing style v3** (`docs/style-guide.md`, the owner's decisions of 2026-10-20). Every video from 03 on.
+  - **Intro:** a 15-30 s hook that names the topic in its first sentence, then the story cold open, then the
+    title card.
+  - **Pace:** cuts follow the voice (pauses, word starts), about 3 s scenes, holds for awe, 15-19 cuts/min.
+  - **On-screen text:** key phrases only:
+    - kinetic headlines and key lines on the spoken words
+    - every number as an animated card that lands on the spoken number
+    - the full English text as a CC track (`captions.en.srt`), not burned in
+    - a `SCIENCE GUY` logo bug top right
+  - **Look:** one colour grade per video, camera moves by energy, transitions by meaning (hard cut default,
+    dips at idea breaks, flares on reveals).
+  - **Sound:**
+    - a Kevin MacLeod bed you can hear (16 LU under the voice, flat)
+    - 3-5 designed moments (breath, riser, impact, swell or silence)
+    - synthesised SFX by rule
+    - master at -14 LUFS
 
 ## Storage: Google Drive, not the container (owner's rule)
 Drive folder `axiom-science-channel` (README.txt there explains it):
@@ -95,6 +105,8 @@ Drive folder `axiom-science-channel` (README.txt there explains it):
   `youtube.md`, `credits.txt`.
 
 ## Lessons already learned (don't repeat them)
+- `assign_shots.py` writes the shot's source title into each item's `title` key. Plan items must not use `title`
+  for their own text (v3 uses `ttl` / `ctitle`).
 - Many ESO zoom videos open on the same all-sky Milky Way panorama. Cut long videos from their end
   (`--from-end`), or "different" shots will look repeated.
 - Review sheets catch what QC can't: graphic overlays, inset boxes, split screens, wipes, data-map globes,

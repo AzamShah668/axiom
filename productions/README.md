@@ -29,18 +29,33 @@
 - Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir>`. This produces the narration, the timeline and per-character timings.
 
 ## Edit method
-The Science Time method: see `docs/research/science-time/01-how-big-is-the-universe.md`.
+Since production 03: the **v3 style**, `docs/style-guide.md`. It was measured against Curious Space and
+production 02 (`docs/research/curious-space/`), and its changes were approved by the owner on 2026-10-20:
+- a hook before the cold open
+- key phrases plus a CC track instead of a running subtitle
+- an audible music bed with designed pauses
+- a logo bug
 
-Fast-cut rules (from the owner's reviews of v1 and v2; enforced by the pipeline):
+Productions 01-02 used the Science Time method (`docs/research/science-time/01-how-big-is-the-universe.md`).
+
+Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pipeline):
 - **4K, moving, relevant, never repeated footage.**
   - Every shot comes from a 4K source (ESO, ESA/Hubble, ESA/Webb, NASA SVS) and is continuously moving.
   - It is matched to the sentence being spoken.
   - No shot (or near-identical copy) appears twice in a video, and shots used by earlier productions are avoided.
   - No static photos. Stills only appear inside explanatory graphics, always moving.
-- **New shot every ~2.5 s.** A visual beat per sentence, cut into ~2.5 s scenes, each scene a different shot.
-- **What is said is on screen.** One English caption per sentence (lower third). Key names and numbers get a big centred caption.
-- **Transitions.** Crossfade between scenes; zoom, flash, whip or blur on topic changes, each with a whoosh.
-- **Sound.** Dark-ambient music bed (Kevin MacLeod, CC BY 4.0) ducked about 22 dB under the voice and rising in pauses, a low drone, whooshes, and booms on big moments.
+- **Pace that follows the voice.** A visual beat per sentence, cut into scenes of about 3 s, each a different
+  shot. Cuts sit in pauses or on word starts. (v2: every ~2.5 s.)
+- **What is said is readable in English.**
+  - v3: every sentence is in the English CC track; key phrases, names, years and numbers are on screen as
+    kinetic text and number cards.
+  - v2: one caption per sentence.
+- **Transitions with meaning.** Hard cut by default, dip to black at idea breaks, warm flare on reveals.
+- **Sound.**
+  - Kevin MacLeod music (CC BY 4.0, credited), 16 LU under the voice and steady.
+  - 3-5 designed moments.
+  - Synthesised, licence-clean SFX.
+  - Never another channel's music, footage or graphics.
 - **No text in footage.** OCR finds burned-in text. Corner labels are cropped out automatically; any other part with text is never used.
 
 ## Workflow
@@ -48,8 +63,8 @@ The whole process is the `science-video` skill (`.claude/skills/science-video/SK
 per stage, and `scripts/science/pipeline.sh` for the scripted stages:
 `narration -> edit -> footage -> assign -> render -> review -> preview -> credits`.
 Production folder contents:
-- `script.md`, `tts/narration.hi.md`
+- `script.md`, `tts/narration.hi.md` (sections `hook`, `cold_open`, `fact10` … `fact1`)
 - `edit.spec` + `edit.base.json` -> `edit.json`
 - `footage/terms.txt`
-- `cutlist.json` (the shots used)
+- `cutlist.json` (the shots used), `captions.en.srt` (v3 CC track)
 - `youtube.md`, `credits.txt`

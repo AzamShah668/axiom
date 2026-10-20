@@ -1,6 +1,6 @@
 ---
 name: science-render
-description: Assign a unique, relevant 4K shot to every scene of a science-channel edit, review the choices, render the master (footage, captions, graphics, transitions, music, SFX), review the render, fix problems and make chat-size previews. Use for stage 5 of science-video or whenever a render needs fixing.
+description: Assign a unique, relevant 4K shot to every scene of a science-channel edit, review the choices, render the master in the v3 style (graded footage with camera moves, kinetic type, number cards, transitions, music bed, designed moments, SFX, CC track), review the render, fix problems and make chat-size previews. Use for stage 5 of science-video or whenever a render needs fixing.
 ---
 
 # Assign, render, review (stage 5)
@@ -10,7 +10,13 @@ description: Assign a unique, relevant 4K shot to every scene of a science-chann
 scripts/science/pipeline.sh productions/NN-slug assign
 ```
 `assign_shots.py`:
-- Runs `render_v2.plan()` (edit.json + timeline) to get every item (scenes, graphics, cards).
+- Runs the plan (edit.json + timeline) to get every item (scenes, graphics, number cards, chapter cards).
+  For `"style": "v3"` this is `render_v3.plan()`:
+  - breaths are spliced in
+  - cuts are snapped to the pauses and word starts of `narration.wav`
+  - overlays, SFX and music events are placed
+
+  For older productions it is `render_v2.plan()`. The whole plan is stored in `cutlist.json`.
 - Scores each library shot: 0.75 x CLIP(image, query) + 0.25 x CLIP(source title, query).
 - Solves one global assignment (Hungarian). Rules:
   - every item gets a different shot
@@ -33,6 +39,7 @@ number, `section/n`, score and query.
 - Scores below ~0.20 usually mean no relevant footage exists. See science-footage "Gaps".
 
 Re-run `assign` after every change. It is fast and deterministic.
+`--local-only` uses only shots whose clip is on disk, for re-cuts after `restore-render`.
 
 Review rounds converge automatically: `pipeline.sh ... assign` keeps every previously reviewed shot unless
 it is now banned (`--keep`), and the sheets show only the items that changed (`--changed`).
@@ -49,31 +56,46 @@ Main footage also gets a penalty for near-black or washed-out frames.
 
 ## 2. Render
 ```bash
-scripts/science/pipeline.sh productions/NN-slug render      # ~15-20 min on 4 cores for 12 min of 1080p
+scripts/science/pipeline.sh productions/NN-slug render      # v3: about 20 min on 4 cores for 12 min of 1080p
+# quick look at a part: render_v3.py <same args> --range 20,45   (renders only those seconds)
 ```
-`render_v2.py` renders one chunk per section in parallel, then mixes the audio and concatenates. Per item:
-- **Footage:** a Ken Burns zoom (1.0-1.07) on the proxy segment, with the crop applied.
-- **Graphics:** drawn over the item's footage, blurred and dimmed to 40%.
-- **Cards:** text over dimmed footage, with a flash-in.
-- **Transitions:** xfade inside a beat; zoom / flash / whip / blur between beats.
-- **Captions:** lower-third band (62 px Anton) or big centre caption.
-- **Audio:**
-  - narration
-  - music bed per `edit.music`, 3 s crossfades, ducked -22 dB under speech / -13 dB in pauses
-  - drone at -32 dB
-  - SFX: whoosh -24, whoosh_big -15, pop -30 on big captions, boom -7
-  - loudnorm -14 LUFS
-- Sections are cached in `<out>_work/v2_<section>.mp4`. To re-render one section, delete its file and run
-  render again (`--only <ids>` renders only those chunks without the final mux).
+`render_v3.py` (`docs/style-guide.md` has the rules and numbers) renders 10 s chunks in parallel (one OpenCV
+thread per worker), then mixes and muxes. Per frame:
+- **Footage:**
+  - the proxy segment with its crop, graded by `grade.py` (preset from `edit.base.json`)
+  - a camera move on top: push / drift / pull / roll; slow push on `{hold}`; impact push + shake on moments
+- **Number cards and diagrams:** over blurred, dimmed footage (`mograph.card`, `render_video.gfx`).
+  Chapter and title cards come from `mograph.chapter` / `mograph.title`.
+- **Transitions:** hard cut, dip, flare, flash, whip, zoom, soft (rules in the style guide).
+- **Overlays** in video time:
+  - headlines, key lines, `over` number cards, the footer
+  - the logo bug on every frame
+- **Audio** (`mix()`):
+  - the narration with the breaths spliced in
+  - the music cues levelled to 16 LU under the voice while speaking, +3 dB in pauses, plus swells and drops
+    at moments and the title
+  - the synthesised SFX (`sfx.py`), levelled against the voice
+  - a linear gain to -14 LUFS plus a peak limiter (no dynamic loudnorm)
+  - stems are written to `<out>_work/stem_*.wav` for checks
+- **Captions:** `<out>.en.srt` from the C lines; `pipeline.sh` copies it to `captions.en.srt`.
+- Chunks are cached in `<out>_work/v3_<f0>_<f1>.mp4`. After a change, delete the chunks it touches (or the
+  whole `_work` dir if the plan changed) and render again.
+
+v2 productions (01, 02) still render with `render_v2.py`: running captions, 2.5 s scenes, Ken Burns zoom,
+xfade/zoom/flash/whip/blur transitions, a bed 22 dB under the voice.
 
 ## 3. Review the render
 ```bash
 scripts/science/pipeline.sh productions/NN-slug review     # one frame / 6 s -> $WORK/review_render/sheet_*.jpg
 ```
-View every sheet. Look for:
+View every sheet. Also play the opening minute of the master (or its preview).
+
+Look for:
 - text/logos/insets/diagram lines inside footage
 - white or black frames (the tool flags them)
-- captions overlapping graphic labels
+- captions overlapping graphic labels; a headline or number covering the subject
+- a count that doesn't land on the spoken number (fix `land=`)
+- music that is too loud in one cue (`"gain": -3` on that cue)
 - irrelevant shots
 - anything that looks like a repeat
 

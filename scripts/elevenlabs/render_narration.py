@@ -1,6 +1,7 @@
 """Render a sectioned Hindi narration with the locked voice preset.
 
   python render_narration.py <narration.hi.md> <out_dir> [--only cold_open,fact10] [--gap 1.2] [--open-gap 1.6]
+                             [--title-after cold_open] [--gap-after hook=1.0,...]
 
 For every "## <id>" section: calls ElevenLabs /with-timestamps (with neighbour text as context so
 prosody flows across joins), saves <id>.mp3 + <id>.align.json. Then joins all sections with gaps
@@ -68,6 +69,9 @@ def main():
     p.add_argument("--only", default="")
     p.add_argument("--gap", type=float, default=1.2, help="silence before each chapter (s)")
     p.add_argument("--open-gap", type=float, default=1.6, help="silence after the cold open (title card) (s)")
+    p.add_argument("--title-after", default="cold_open",
+                   help="section the open gap follows (default cold_open; the first section if there is none)")
+    p.add_argument("--gap-after", default="", help="per-section gaps, e.g. hook=1.0,fact5=3.0 (silence after it)")
     a = p.parse_args()
     os.makedirs(a.out_dir, exist_ok=True)
     secs = parse(a.narration)
@@ -85,13 +89,16 @@ def main():
 
     # join sections with gaps -> raw track + timeline
     concat, timeline, t = [], [], 0.0
+    ids = [s["id"] for s in secs]
+    title_i = ids.index(a.title_after) + 1 if a.title_after in ids else 1
+    after = {k: float(v) for k, v in (x.split("=") for x in a.gap_after.split(",") if x)}
     sr = 44100
     for i, s in enumerate(secs):
         mp3 = os.path.join(a.out_dir, f"{s['id']}.mp3")
         if not os.path.exists(mp3):
             sys.exit(f"missing {mp3}")
         if i:
-            g = a.open_gap if i == 1 else a.gap
+            g = after.get(secs[i - 1]["id"], a.open_gap if i == title_i else a.gap)
             sil = os.path.join(a.out_dir, f"_gap{i}.wav")
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", f"anullsrc=r={sr}:cl=mono",
                             "-t", str(g), sil], check=True)

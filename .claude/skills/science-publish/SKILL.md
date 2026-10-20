@@ -5,11 +5,19 @@ description: Package a finished science-channel video for YouTube - Science Time
 
 # Publish package (stage 6)
 
+## English captions (v3)
+`pipeline.sh … render` writes `captions.en.srt` (every `C` line, timed to the voice). Upload it with the video
+(`--captions`) so the whole story is readable in English. It also helps search and accessibility.
+
 ## Thumbnail
 ```bash
 python scripts/video/thumbnail.py <4K still or frame.jpg> $MEDIA/fonts productions/NN-slug/thumbnail.jpg "10 FACTS" "about" "DARK MATTER" [--halo]
 ```
 - Science Time look: black left half, huge rounded Fredoka title (3 lines), one striking space image on the right.
+- From video 03 (owner's OK, 2026-10-20), test the gap-list variant:
+  - a full-bleed hero image with a 2-line English hook
+  - one keyword in yellow ("SOME ARE *OLDER THAN GALAXIES*")
+  - "Hindi Documentary" kept in the title
 - 1280x720.
 - Use a frame from a shot in the cut (`ffmpeg -ss <t> -i master.mp4 -frames:v 1`) or an archive still with
   a CC BY / public-domain licence.
@@ -32,6 +40,7 @@ python scripts/video/thumbnail.py <4K still or frame.jpg> $MEDIA/fonts productio
 ## Upload checklist
 - The master plays end to end and is 1080p30 at -14 LUFS (`ffmpeg -i master.mp4 -af ebur128 -f null -`).
 - Title, thumbnail, description, credits, tags and chapters are all in English.
+- `captions.en.srt` is uploaded (v3).
 - Commit `productions/NN-slug` (text files only) and push.
 
 ## Upload (`scripts/youtube/upload_youtube.py`)
@@ -39,7 +48,7 @@ Needs `YT_CLIENT_ID`, `YT_CLIENT_SECRET` and `YT_REFRESH_TOKEN` in `config/.env`
 ```bash
 python scripts/youtube/upload_youtube.py whoami          # must print the Science Guy channel (UC6-6ZqXKuT7BQSx-c6zbNBg)
 python scripts/youtube/upload_youtube.py upload $WORK/out/NN-slug.mp4 productions/NN-slug/youtube.md \
-  --thumbnail thumbnail.jpg --privacy private            # check it in YouTube Studio, then:
+  --thumbnail thumbnail.jpg --captions productions/NN-slug/captions.en.srt --privacy private   # check it in Studio, then:
 python scripts/youtube/upload_youtube.py publish <video_id> --comment productions/NN-slug/credits_full.txt
 ```
 - The credits comment must be pinned by hand in YouTube Studio (the API can't pin).

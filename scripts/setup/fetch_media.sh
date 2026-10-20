@@ -11,8 +11,9 @@ get() { [ -s "$2" ] || curl -sfL --retry 3 -o "$2" "$1" || { echo "failed: $1"; 
 get "$gf/anton/Anton-Regular.ttf" "$dir/fonts/Anton.ttf"
 get "$gf/montserrat/Montserrat%5Bwght%5D.ttf" "$dir/fonts/Montserrat.ttf"
 get "$gf/fredoka/Fredoka%5Bwdth,wght%5D.ttf" "$dir/fonts/Fredoka.ttf"
+get "$gf/cinzel/Cinzel%5Bwght%5D.ttf" "$dir/fonts/Cinzel.ttf"
 tracks=("$@")
-[ ${#tracks[@]} -gt 0 ] || tracks=("Lightless Dawn" "Dark Fog" "Long Note Two" "Phantasm" "Long Note Four" "Ossuary 5 - Rest")
+[ ${#tracks[@]} -gt 0 ] || tracks=("Lightless Dawn" "Dark Fog" "Long Note One" "Long Note Two" "Long Note Three" "Long Note Four" "Phantasm" "Ossuary 5 - Rest" "Interloper" "Echoes of Time v2")
 for t in "${tracks[@]}"; do
   f="$dir/music/${t// /_}.mp3"
   get "https://incompetech.com/music/royalty-free/mp3-royaltyfree/$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$t").mp3" "$f"
