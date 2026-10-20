@@ -1,0 +1,802 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "title": {
+  "kicker": "10 facts about",
+  "main": "Black Holes"
+ },
+ "cards": {
+  "fact10": [
+   "FACT #10",
+   "PREDICTED IN *1783*, BY A VILLAGE PRIEST"
+  ]
+ },
+ "count_total": 10,
+ "music": [
+  {
+   "from": "hook",
+   "track": "Interloper.mp3"
+  },
+  {
+   "from": "cold_open",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "fact10",
+   "track": "Dark_Fog.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "glowing disk around a black hole in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {
+  "hook/2": "eso_eso2212b#0",
+  "cold_open/16": "svs_14905#5",
+  "cold_open/17": "svs_20342#0",
+  "cold_open/18": "svs_20339#0",
+  "cold_open/19": "svs_14034#0",
+  "fact10/7": "svs_30878#0"
+ },
+ "ban": [
+  "esahubble_heic1506a",
+  "esahubble_heic1801a",
+  "esahubble_heic1803c",
+  "esahubble_heic1819a",
+  "esahubble_heic2016a",
+  "esahubble_heic2018a",
+  "esahubble_heic2103b",
+  "esahubble_heic2603b",
+  "esahubble_heic2605b",
+  "esawebb_potm2209a",
+  "esawebb_potm2509a",
+  "eso_adaptiveopticsandmask",
+  "eso_bt_lasilla_crux",
+  "eso_cs0012a",
+  "eso_eso1545a",
+  "eso_eso1606b",
+  "eso_eso1608a",
+  "eso_eso1708c",
+  "eso_eso1709b",
+  "eso_eso1709c",
+  "eso_eso1815b",
+  "eso_eso1817b",
+  "eso_eso1825c",
+  "eso_eso1825f",
+  "eso_eso1907o",
+  "eso_eso2002b",
+  "eso_eso2110a",
+  "eso_eso2110b",
+  "eso_eso2110c",
+  "eso_eso2110d",
+  "eso_eso2110e",
+  "eso_eso2110f",
+  "eso_eso2110g",
+  "eso_eso2116a#2",
+  "eso_eso2117a#4",
+  "eso_eso2203c",
+  "eso_eso2408d",
+  "eso_eso2509c#1",
+  "eso_eso2510c",
+  "eso_eso2612d",
+  "eso_lasillatimelapseeulerntt",
+  "svs_12019",
+  "svs_14309",
+  "svs_14399",
+  "svs_14802",
+  "svs_20409",
+  "svs_31365",
+  "svs_31376",
+  "svs_31399",
+  "svs_31400",
+  "svs_4986",
+  "svs_5186",
+  "svs_5273",
+  "svs_5424",
+  "svs_5436",
+  "svs_5479",
+  "svs_5481",
+  "svs_5503",
+  "svs_5505",
+  "svs_5519",
+  "svs_5552",
+  "svs_5668",
+  "eso_eso1741b",
+  "svs_13237",
+  "svs_4807#0",
+  "eso_eso2513a",
+  "esawebb_potm2603a",
+  "esawebb_potm2511a",
+  "eso_eso1641a",
+  "svs_12854",
+  "svs_14970",
+  "eso_eso2601b",
+  "esawebb_weic2517c",
+  "esahubble_heic1711a#0",
+  "svs_14818#0",
+  "eso_eso2609b",
+  "svs_14719#0",
+  "svs_14544#0",
+  "eso_eso1637a",
+  "eso_eso2117b",
+  "svs_14404",
+  "eso_uhd_comp_vlt_2014#0",
+  "esawebb_weic2219b#1",
+  "eso_eso1835a#2",
+  "esahubble_heic2208b",
+  "eso_eso2305a#5",
+  "eso_eso2305a#3",
+  "eso_eso2210c",
+  "eso_eso1509a",
+  "eso_mars_4k",
+  "esahubble_heic1916c",
+  "svs_13483#0",
+  "svs_13483#1",
+  "svs_13483#2",
+  "svs_14905#0",
+  "svs_14905#6",
+  "svs_20333",
+  "svs_14087",
+  "svs_14062",
+  "svs_13967",
+  "svs_5136",
+  "svs_13322",
+  "svs_13834",
+  "eso_eso2408a",
+  "eso_eltu_Lasers#2",
+  "eso_eso2117a#2",
+  "svs_14893#1",
+  "eso_eso1614a",
+  "svs_14347#7",
+  "svs_14893",
+  "svs_14347#0"
+ ],
+ "crops": {
+  "svs_14905": [
+   0.05,
+   0.0,
+   0.95,
+   0.9
+  ]
+ },
+ "exclude": {
+  "svs_14905": [
+   [
+    33.0,
+    35.2
+   ]
+  ]
+ },
+ "sections": {
+  "hook": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "black hole with a glowing accretion disk",
+      "visualization of a black hole"
+     ]
+    },
+    {
+     "at": "Milky Way",
+     "q": [
+      "the centre of the Milky Way galaxy",
+      "dense star clouds at the core of the Milky Way"
+     ]
+    },
+    {
+     "at": "और जब दो",
+     "q": [
+      "two black holes spiralling into each other",
+      "simulation of merging black holes"
+     ]
+    },
+    {
+     "at": "उन्होंने",
+     "q": [
+      "gravitational waves rippling through space",
+      "a blinding flash of light in space"
+     ]
+    },
+    {
+     "at": "लेकिन इनकी",
+     "opt": "hold",
+     "q": [
+      "a dark nebula slowly drifting",
+      "lonely stars in dark space"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Black holes: places in the universe where not even light can escape"
+    },
+    {
+     "at": "Milky Way",
+     "text": "At the heart of the Milky Way sits a black hole..."
+    },
+    {
+     "at": "जिसका वज़न",
+     "text": "...as heavy as about 4 million Suns"
+    },
+    {
+     "at": "और जब दो",
+     "text": "And when two black holes collided..."
+    },
+    {
+     "at": "उन्होंने",
+     "text": "...for an instant they released more power than all the stars in the universe"
+    },
+    {
+     "at": "लेकिन इनकी",
+     "text": "But their story begins... on a battlefield"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": null,
+     "lines": [
+      {
+       "text": "BLACK HOLE",
+       "at": null
+      },
+      {
+       "text": "NOTHING ESCAPES",
+       "at": "जहाँ से"
+      },
+      {
+       "text": "*NOT EVEN LIGHT*",
+       "at": "रोशनी"
+      }
+     ]
+    },
+    {
+     "at": "उन्होंने",
+     "lines": [
+      {
+       "text": "MORE POWER THAN",
+       "at": "उन्होंने"
+      },
+      {
+       "text": "*ALL THE STARS*",
+       "at": "सारे तारों"
+      }
+     ],
+     "kicker": "for an instant",
+     "sub": "in the universe, combined",
+     "sub_at": "ताक़त"
+    }
+   ],
+   "n": [
+    {
+     "at": "black hole बैठा",
+     "num": {
+      "template": "callout",
+      "x": "0.5",
+      "y": "0.5",
+      "r": "130",
+      "label": "Sagittarius A*",
+      "sub": "the Milky Way's black hole",
+      "dur": "1.35"
+     }
+    },
+    {
+     "at": "जिसका वज़न",
+     "num": {
+      "template": "hero",
+      "value": "4,000,000",
+      "from": "0",
+      "unit": "suns",
+      "kicker": "Sagittarius A*",
+      "foot": "at the heart of the Milky Way",
+      "land": "चालीस"
+     }
+    }
+   ],
+   "m": [
+    {
+     "at": "उन्होंने",
+     "breath": 1.0,
+     "riser": 1.4,
+     "impact": "impact",
+     "trans": "flare"
+    }
+   ]
+  },
+  "cold_open": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a starry night sky over a dark landscape",
+      "Milky Way rising over mountains at night"
+     ]
+    },
+    {
+     "at": "तोप के",
+     "q": [
+      "a bright meteor streaking across the night sky",
+      "shooting star over an observatory"
+     ]
+    },
+    {
+     "at": "उसका नाम",
+     "q": [
+      "star trails circling over an observatory",
+      "telescope dome under the stars"
+     ]
+    },
+    {
+     "at": "Germany के सबसे",
+     "q": [
+      "an old observatory telescope at night",
+      "astronomer's telescope under the night sky"
+     ]
+    },
+    {
+     "at": "जंग के शोर",
+     "q": [
+      "dramatic clouds over a mountain observatory at night",
+      "storm clouds under the stars"
+     ]
+    },
+    {
+     "at": "Einstein की बिल्कुल",
+     "gfx": "spacetime"
+    },
+    {
+     "at": "Einstein ख़ुद",
+     "q": [
+      "light bent around a massive galaxy cluster",
+      "gravitational lensing arcs"
+     ]
+    },
+    {
+     "at": "लेकिन उस हल",
+     "q": [
+      "black hole with a glowing accretion disk",
+      "visualization of a black hole"
+     ]
+    },
+    {
+     "at": "अगर किसी",
+     "q": [
+      "a star collapsing under its own gravity",
+      "matter swirling into a black hole"
+     ]
+    },
+    {
+     "at": "रोशनी भी नहीं",
+     "q": [
+      "light swallowed by a black hole",
+      "dark shadow of a black hole"
+     ]
+    },
+    {
+     "at": "Sun के लिए",
+     "num": {
+      "template": "hero",
+      "value": "6",
+      "from": "1,392,000",
+      "count": "1.6",
+      "unit": "km wide",
+      "kicker": "the Sun, squeezed",
+      "foot": "Earth: the size of a marble",
+      "land": "छह",
+      "log": true
+     },
+     "q": [
+      "the glowing surface of the Sun",
+      "a bright star in space"
+     ]
+    },
+    {
+     "at": "पाँच महीने",
+     "q": [
+      "a dark nebula in deep space",
+      "lonely stars in dark space"
+     ]
+    },
+    {
+     "at": "वह कभी नहीं",
+     "opt": "hold",
+     "q": [
+      "zooming into the dark centre of a galaxy",
+      "slow zoom into a galaxy core"
+     ]
+    },
+    {
+     "at": "Black Hole.",
+     "q": [
+      "close-up of a black hole with a bright ring of light",
+      "black hole bending light around it"
+     ]
+    },
+    {
+     "at": "और सौ साल",
+     "q": [
+      "the James Webb Space Telescope in space",
+      "Webb telescope sunshield unfolding in space",
+      "a Webb deep field full of galaxies"
+     ]
+    },
+    {
+     "at": "जो शायद",
+     "q": [
+      "a faint red galaxy in the early universe",
+      "deep field with distant red galaxies"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "DECEMBER 1915",
+     "big": true
+    },
+    {
+     "at": "Russia के",
+     "text": "On the Russian front, a German army lieutenant..."
+    },
+    {
+     "at": "तोप के",
+     "text": "...worked out the paths of artillery shells"
+    },
+    {
+     "at": "उसका नाम",
+     "text": "His name was Karl Schwarzschild..."
+    },
+    {
+     "at": "Germany के सबसे",
+     "text": "One of Germany's most famous astronomers"
+    },
+    {
+     "at": "जंग के शोर",
+     "text": "Amid the noise of war..."
+    },
+    {
+     "at": "General Relativity",
+     "text": "EINSTEIN'S GENERAL RELATIVITY",
+     "big": true
+    },
+    {
+     "at": "के equations",
+     "text": "...he found the first exact solution of its equations"
+    },
+    {
+     "at": "Einstein ख़ुद",
+     "text": "Einstein himself was amazed"
+    },
+    {
+     "at": "लेकिन उस हल",
+     "text": "But the solution hid a strange boundary"
+    },
+    {
+     "at": "अगर किसी",
+     "text": "If all of an object's mass is squeezed into a small ball..."
+    },
+    {
+     "at": "तो उस गोले",
+     "text": "...nothing can ever come back out of it"
+    },
+    {
+     "at": "रोशनी भी नहीं",
+     "text": "Not even light"
+    },
+    {
+     "at": "Sun के लिए",
+     "text": "For the Sun, that ball would be just 6 km wide"
+    },
+    {
+     "at": "Earth के लिए",
+     "text": "For Earth, the size of a marble"
+    },
+    {
+     "at": "पाँच महीने",
+     "text": "Five months later, Schwarzschild was dead"
+    },
+    {
+     "at": "वह कभी नहीं",
+     "text": "He never knew what his calculation was hiding..."
+    },
+    {
+     "at": "Black Hole.",
+     "text": "BLACK HOLE",
+     "big": true
+    },
+    {
+     "at": "और सौ साल",
+     "text": "More than 100 years later..."
+    },
+    {
+     "at": "दो हज़ार छब्बीस",
+     "text": "2026",
+     "big": true
+    },
+    {
+     "at": "James Webb Space Telescope ने",
+     "text": "The James Webb Space Telescope found a black hole..."
+    },
+    {
+     "at": "जो शायद",
+     "text": "...that may be older than its own galaxy"
+    }
+   ],
+   "sfx": [],
+   "m": [
+    {
+     "at": "Black Hole.",
+     "breath": 1.4,
+     "riser": 1.6,
+     "impact": "impact",
+     "trans": "flare"
+    }
+   ],
+   "k": [
+    {
+     "at": "जो शायद",
+     "lines": [
+      {
+       "text": "OLDER THAN",
+       "at": "जो शायद"
+      },
+      {
+       "text": "*ITS OWN GALAXY?*",
+       "at": "galaxy"
+      }
+     ],
+     "kicker": "a black hole that may be"
+    }
+   ],
+   "n": [
+    {
+     "at": "Karl",
+     "num": {
+      "template": "name",
+      "value": "KARL SCHWARZSCHILD",
+      "sub": "German astronomer · 1873-1916"
+     }
+    }
+   ]
+  },
+  "fact10": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a starry night sky slowly drifting",
+      "stars over a quiet landscape at night"
+     ]
+    },
+    {
+     "at": "सत्रह सौ",
+     "opt": "hold",
+     "q": [
+      "the Milky Way over a dark countryside",
+      "night sky timelapse over hills"
+     ]
+    },
+    {
+     "at": "John Michell",
+     "q": [
+      "a bright star field",
+      "stars twinkling in the night sky"
+     ]
+    },
+    {
+     "at": "Michell भूकंपों",
+     "q": [
+      "planet Earth rotating in space",
+      "Earth seen from space"
+     ]
+    },
+    {
+     "at": "Michell ने Newton",
+     "q": [
+      "the glowing surface of the Sun",
+      "a bright star in space"
+     ]
+    },
+    {
+     "at": "लेकिन उससे पाँच",
+     "num": {
+      "template": "scale",
+      "value": "500",
+      "from": "1",
+      "unit": "times wider than the Sun",
+      "kicker": "as dense as the Sun",
+      "land": "पाँच सौ"
+     },
+     "q": [
+      "a giant red star",
+      "a huge glowing star"
+     ]
+    },
+    {
+     "at": "जवाब चौंकाने",
+     "q": [
+      "a supergiant star with a glowing atmosphere",
+      "red supergiant star"
+     ]
+    },
+    {
+     "at": "उस तारे की gravity",
+     "gfx": "dark_star"
+    },
+    {
+     "at": "ऐसा तारा पूरी",
+     "q": [
+      "a black void among the stars",
+      "a star fading into darkness"
+     ]
+    },
+    {
+     "at": "Michell ने इन्हें",
+     "q": [
+      "a dark shadow among the stars",
+      "black hole in front of a star field"
+     ]
+    },
+    {
+     "at": "और लिखा",
+     "gfx": "hidden_companion"
+    },
+    {
+     "at": "लगभग दो सौ",
+     "q": [
+      "a telescope observing the night sky",
+      "large telescope moving at night"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "But the idea was even older than Schwarzschild"
+    },
+    {
+     "at": "सत्रह सौ",
+     "text": "1783",
+     "big": true
+    },
+    {
+     "at": "Thornhill",
+     "text": "The village priest of Thornhill, England..."
+    },
+    {
+     "at": "John Michell",
+     "text": "...John Michell"
+    },
+    {
+     "at": "Henry Cavendish",
+     "text": "...wrote a long letter to his friend Henry Cavendish"
+    },
+    {
+     "at": "Michell भूकंपों",
+     "text": "Michell also studied earthquakes..."
+    },
+    {
+     "at": "और उनका बनाया",
+     "text": "...and his balance was later used to weigh the Earth"
+    },
+    {
+     "at": "Michell ने Newton",
+     "text": "Using Newton's gravity, he asked a simple question"
+    },
+    {
+     "at": "अगर कोई तारा",
+     "text": "What if a star were as dense as the Sun..."
+    },
+    {
+     "at": "लेकिन उससे पाँच",
+     "text": "...but 500 times wider?"
+    },
+    {
+     "at": "जवाब चौंकाने",
+     "text": "The answer was shocking"
+    },
+    {
+     "at": "उस तारे की gravity",
+     "text": "Even light would be too slow to escape its gravity"
+    },
+    {
+     "at": "ऐसा तारा पूरी",
+     "text": "Such a star would be completely invisible"
+    },
+    {
+     "at": "Michell ने इन्हें",
+     "text": "Michell called them..."
+    },
+    {
+     "at": "dark stars",
+     "text": "DARK STARS",
+     "big": true
+    },
+    {
+     "at": "और लिखा",
+     "text": "They could be found only by the stars orbiting them"
+    },
+    {
+     "at": "लगभग दो सौ",
+     "text": "About 200 years later, astronomers did exactly that"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "बाद में",
+     "lines": [
+      {
+       "text": "LATER USED TO",
+       "at": "बाद में"
+      },
+      {
+       "text": "*WEIGH THE EARTH*",
+       "at": "Earth का वज़न"
+      }
+     ],
+     "kicker": "Michell's balance"
+    },
+    {
+     "at": "ऐसा तारा पूरी",
+     "lines": [
+      {
+       "text": "COMPLETELY",
+       "at": "ऐसा तारा पूरी"
+      },
+      {
+       "text": "*INVISIBLE*",
+       "at": "अदृश्य"
+      }
+     ]
+    }
+   ],
+   "m": [
+    {
+     "at": "ऐसा तारा पूरी",
+     "breath": 1.2,
+     "riser": 1.2,
+     "impact": "hit",
+     "trans": "dip",
+     "drop": true
+    }
+   ],
+   "n": [
+    {
+     "at": "लगभग दो सौ",
+     "num": {
+      "template": "line",
+      "value": "200",
+      "from": "0",
+      "unit": "years later",
+      "left": "Michell, 1783",
+      "right": "astronomers",
+      "land": "सौ"
+     }
+    },
+    {
+     "at": "John Michell",
+     "num": {
+      "template": "name",
+      "value": "JOHN MICHELL",
+      "sub": "village priest of Thornhill · 1724-1793"
+     }
+    }
+   ]
+  }
+ }
+}
