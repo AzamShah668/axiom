@@ -15,7 +15,7 @@ import numpy as np, cv2
 sys.path.insert(0, os.path.dirname(__file__))
 from visual_stats import frames, probe  # noqa: E402
 
-FW, FH = 1280, 720
+FW, FH = 1280, 720   # OCR frame size; set from the video in main() (never upscaled: that only costs time)
 S1080 = 1080 / FH
 
 
@@ -173,7 +173,10 @@ def animation(video, box, t_ref, t_edge, entering):
             cm.append((region[m, c].mean() - region[~m, c].mean()) / dn > 0.6 if abs(dn) > 10 else False)
         colfrac.append(np.array(cm))
     vis = np.array(vis)
-    present = np.array([v > 0.15 or b[0] > 0.6 for v, b in zip(vis, best)])
+    # visible: the text's contrast is up, a copy of it is found (moved / scaled), or some of its columns are in
+    # place (a wipe or typewriter shows a few full-contrast letters first)
+    present = np.array([v > 0.15 or b[0] > 0.6 or (c is not None and len(c) and c.mean() > 0.08)
+                        for v, b, c in zip(vis, best, colfrac)])
     settled = np.array([v > 0.85 and abs(b[1] - 1) < 0.06 and abs(b[2]) < 0.2 * bh + 3 for v, b in zip(vis, best)])
     times = t0 + np.arange(len(seq)) / 10
     out = {}
@@ -279,13 +282,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("video")
     ap.add_argument("an")
-    ap.add_argument("--step", type=float, default=0.5)
+    ap.add_argument("--step", type=float, default=1.0)
     ap.add_argument("--langs", default="hi,en")
     a = ap.parse_args()
     import torch, easyocr
     torch.set_num_threads(max(1, os.cpu_count() or 1))
     reader = easyocr.Reader(a.langs.split(","), gpu=False, verbose=False)
-    dur = probe(a.video)[0]
+    global FW, FH, S1080
+    dur, _, vw, vh = probe(a.video)
+    if vh < FH:
+        FW, FH = vw - vw % 2, vh - vh % 2
+        S1080 = 1080 / FH
     cache = f"{a.an}/ocr_raw.json"
     if os.path.exists(cache):
         dets = json.load(open(cache))

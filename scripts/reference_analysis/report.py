@@ -88,7 +88,24 @@ def main():
     dur = V.get("duration_s") or A.get("duration_s")
     shots, cuts = V.get("shots", []), V.get("cuts", [])
     texts = T.get("events", [])
+    md, S = [], {}
     sfx = A.get("sfx_events", [])
+    # SFX candidates also catch details of the music. Keep the level band that is synced to the picture: the
+    # lowest 4 dB peak-level band from which candidates land on a cut or text entry >= 1.5x as often as chance
+    vis = np.sort(np.r_[[c["t"] for c in V.get("cuts", [])], [e.get("entry", {}).get("t_visible", e["t_first"]) for e in T.get("events", [])]])
+    near_v = lambda t: float(np.min(np.abs(vis - t))) if len(vis) else 9.0
+    sync_t = lambda e: e["peak_t"] if e["type"] in ("whoosh", "riser") else e["t"]
+    sfx_floor = -36.0
+    if len(vis) and sfx and V.get("duration_s"):
+        chance = float(np.mean([near_v(t) <= 0.2 for t in np.arange(0, V["duration_s"], 0.05)]))
+        for lo in range(-60, -28, 2):
+            band = [e for e in sfx if lo <= e["peak_dbfs"] < lo + 4]
+            if len(band) >= 15 and np.mean([near_v(sync_t(e)) <= 0.2 for e in band]) >= 1.5 * chance:
+                sfx_floor = float(lo)
+                break
+        S["sfx_calibration"] = {"chance_on_visual_event": round(chance, 2), "peak_floor_dbfs": sfx_floor,
+                                "candidates": len(sfx), "kept": sum(1 for e in sfx if e["peak_dbfs"] >= sfx_floor)}
+    sfx = [e for e in sfx if e["peak_dbfs"] >= sfx_floor]
     # beat-aligned transients that land on a cut or a text pop are edit sounds laid on the music's beat
     cut0 = sorted(c["t"] for c in V.get("cuts", []))
     for e in A.get("music_beat_transients", []):
@@ -98,7 +115,6 @@ def main():
     segs = A.get("speech_segments", [])
     cut_t = sorted(c["t"] for c in cuts)
     tv = lambda e: e.get("entry", {}).get("t_visible", e["t_first"])
-    md, S = [], {}
 
     # ---- summary
     L = np.array([s["dur"] for s in shots]) if shots else np.zeros(1)
@@ -108,6 +124,8 @@ def main():
     tr_count = Counter(c["type"].split(" (")[0] for c in cuts)
     on_screen = np.zeros(int(dur * 10) + 1, bool)
     for e in texts:
+        if e.get("on_screen_s", 1) > 0.5 * dur:
+            continue  # a logo bug or watermark, not a text the edit puts up
         on_screen[int(tv(e) * 10):int((tv(e) + e.get("on_screen_s", 1)) * 10)] = True
     lv, dk, vo = A.get("levels", {}), A.get("ducking", {}), A.get("voice", {})
     S["summary"] = {
@@ -157,6 +175,7 @@ def main():
     S["sfx_on_cuts_pct"] = round(100 * cuts_with_sfx / max(1, len(cuts)), 1)
     S["sfx_on_text_pct"] = round(100 * text_with_sfx / max(1, len(texts)), 1)
     md.append(f"\n## SFX ({len(sfx)} events; {S['sfx_on_cuts_pct']}% of cuts and {S['sfx_on_text_pct']}% of text events carry one)\n")
+    md.append(f"Calibration: {json.dumps(S.get('sfx_calibration'))}\n")
     md.append("| Type <- trigger | Count |\n|---|---|")
     for k, v in S["sfx_triggers"].items():
         md.append(f"| {k} | {v} |")

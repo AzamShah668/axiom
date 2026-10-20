@@ -3,25 +3,36 @@
 # downloads from cloud IPs). Pulls: metadata + subtitles, the channel's recent uploads (optional), the MP4
 # and the thumbnail.
 #
-# Usage: APIFY_TOKEN=... fetch_video.sh <videoId> <outdir> [quality]
+# Usage: fetch_video.sh <videoId> <outdir> [quality]      (APIFY_TOKEN from the environment or config/.env)
 #   quality: 360 | 480 | 720 | auto (default: the best quality the budget pays for)
 # Env: BUDGET_USD   spend limit for the download run (default: what is left of the Apify plan's monthly credit,
 #                   and at most 0.20 on the free plan, whose actor runs are capped there)
-#      SUBS_LANG    subtitle language for the metadata scraper (default en)
+#      SUBS_LANG    subtitle language for the metadata scraper: any, en, de, es, fr, it, ja, ko, nl, pt, ru (default en;
+#                   "any" for a Hindi video)
 #      CHANNEL_VIDEOS=N  also list the channel's N latest videos (titles, views, dates) -> channel_videos.json
 #
 # Cost (epctex/youtube-video-downloader, per second of video): 360p $0.00015, 480p $0.00025,
 # 720p $0.00045. On the free plan: 720p up to ~7 min, 480p up to ~13 min, 360p up to ~22 min.
 set -euo pipefail
 ID="$1"; OUT="$2"; Q="${3:-auto}"
-: "${APIFY_TOKEN:?set APIFY_TOKEN}"
+ENVF="$(cd "$(dirname "$0")/../.." && pwd)/config/.env"  # gitignored; env vars win
+if [ -z "${APIFY_TOKEN:-}" ] && [ -f "$ENVF" ]; then
+  APIFY_TOKEN=$(sed -n 's/^APIFY_TOKEN=//p' "$ENVF" | tail -1)
+fi
+: "${APIFY_TOKEN:?set APIFY_TOKEN (environment or config/.env)}"
 API=https://api.apify.com/v2
 AUTH=(-H "Authorization: Bearer $APIFY_TOKEN")
 mkdir -p "$OUT"
 
-start_run() { # actor input-json max-usd -> run id
-  curl -sS -X POST "${AUTH[@]}" -H "Content-Type: application/json" \
-    "$API/acts/$1/runs?maxTotalChargeUsd=${3:-0.5}" -d "$2" | python3 -c "import sys,json;print(json.load(sys.stdin)['data']['id'])"
+start_run() { # actor input-json max-usd -> run id (retries: the API sometimes answers with an empty body)
+  local r i
+  for i in 1 2 3 4; do
+    r=$(curl -sS -X POST "${AUTH[@]}" -H "Content-Type: application/json" "$API/acts/$1/runs?maxTotalChargeUsd=${3:-0.5}" -d "$2" || true)
+    if python3 -c "import sys,json;print(json.loads(sys.argv[1])['data']['id'])" "$r" 2>/dev/null; then return 0; fi
+    echo "start $1 failed (try $i): $(echo "$r" | head -c 300)" >&2
+    sleep $((2 ** i))
+  done
+  return 1
 }
 wait_run() { # runId -> datasetId
   local st

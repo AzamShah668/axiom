@@ -8,7 +8,7 @@
 #   music_map.jpg), transcript/ (words.json, transcript.txt), visual.json + shots/, text_events.json + text/,
 #   report.md + summary.json + sequences/ (10 fps x 2 s strips of every event type).
 # Env: PY (venv python: scripts/requirements-science.txt + requirements-analysis.txt), WHISPER_MODEL (medium),
-#      LANG_CODE (whisper language, default detect), OCR_LANGS (hi,en), OCR_STEP (0.5 s).
+#      LANG_CODE (whisper language, default detect), OCR_LANGS (hi,en), OCR_STEP (1.0 s).
 # Never commit anything in <outdir>: it is other people's video, audio and words. Keep it on Drive.
 set -euo pipefail
 V="$1"; O="$2"; shift 2
@@ -58,7 +58,7 @@ todo "$O/audio/audio_stats.json" "audio stats" && "$PY" "$H/audio_stats.py" "$O/
 todo "$O/visual.json" "visual stats" && "$PY" "$H/visual_stats.py" "$V" "$O"
 
 # 7) on-screen text
-todo "$O/text_events.json" "text tracking" && "$PY" "$H/text_track.py" "$V" "$O" --langs "${OCR_LANGS:-hi,en}" --step "${OCR_STEP:-0.5}"
+todo "$O/text_events.json" "text tracking" && "$PY" "$H/text_track.py" "$V" "$O" --langs "${OCR_LANGS:-hi,en}" --step "${OCR_STEP:-1.0}"
 
 # 8) report + frame strips (always re-run: cheap, and options may change)
 echo "=== report"
