@@ -3,7 +3,7 @@
 Everything big (footage library, narration audio, renders, thumbnails, media) is pushed to one Drive folder,
 "axiom-science-channel", after each video and deleted locally; a later render pulls back only what it needs.
 
-Credentials live in config/.env (gitignored), never in the repo:
+Credentials live in config/.env (gitignored) or in environment variables of the same name, never in the repo:
   YT_CLIENT_ID, YT_CLIENT_SECRET   the same OAuth client as the YouTube uploader
                                    (the Google Drive API must be enabled in its Cloud project)
   DRIVE_REFRESH_TOKEN              scope drive.file: the app only sees files it created itself

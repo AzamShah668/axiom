@@ -1,6 +1,6 @@
 """Upload a finished science-channel video to YouTube (YouTube Data API v3, resumable upload).
 
-Credentials live in config/.env (gitignored), never in the repo:
+Credentials live in config/.env (gitignored) or in environment variables of the same name, never in the repo:
   YT_CLIENT_ID, YT_CLIENT_SECRET   OAuth client of type "Desktop app" (the client_secret_*.json values)
   YT_REFRESH_TOKEN                 refresh token for the channel's Google account
 
@@ -34,7 +34,7 @@ def env():
             if "=" in ln and not ln.lstrip().startswith("#"):
                 k, v = ln.split("=", 1)
                 vals[k.strip()] = v.strip().strip('"')
-    vals.update({k: v for k, v in os.environ.items() if k.startswith("YT_")})
+    vals.update({k: v for k, v in os.environ.items() if k.startswith(("YT_", "DRIVE_"))})  # env vars win
     return vals
 
 
