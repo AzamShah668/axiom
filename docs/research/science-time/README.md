@@ -8,21 +8,9 @@ Goal: produce Hindi science videos in the same editing style, at a much higher u
 | 01 | [How Big is The Universe?](01-how-big-is-the-universe.md) | 15.2M | A 14-rung zoom-out ladder. Visuals are mostly free NASA/ESO/Wikimedia material plus space-sim flights plus simple scale infographics. Almost no music: just a sub-bass drone and SFX accents. |
 
 ## Analyzing the next video
-Video downloads go through Apify, because YouTube blocks direct downloads from cloud IPs.
+See `scripts/reference_analysis/README.md`: download through Apify (YouTube blocks direct downloads from cloud
+IPs), then `analyze_video.sh` measures cuts, transitions, camera moves, text styles and animations, music tracks,
+ducking, SFX events, voice and pacing, and `report.py` writes the tables and frame strips for the breakdown.
 
-```bash
-APIFY_TOKEN=... scripts/reference_analysis/fetch_video.sh <videoId> work/<videoId> 480
-PY=/path/to/venv/python scripts/reference_analysis/analyze_video.sh work/<videoId>/video.mp4 work/<videoId>/an
-/path/to/venv/python scripts/reference_analysis/audio_stats.py work/<videoId>/an/audio
-```
-
-Python deps: `scenedetect opencv-python-headless demucs librosa soundfile` (with CPU torch).
-
-Outputs:
-- shot lists: `an/scenes/*.csv`
-- a 2-second frame timeline as contact sheets: `an/sheets/`
-- voice/music stems: `an/audio/demucs/`
-- loudness: `an/audio/loudness.txt`
-- voice/music/SFX stats: `an/audio/audio_stats.json`
-
-Free-plan cost note: the downloader actor caps each run at $0.20. At 480p that is enough for videos up to about 13 minutes; use 360p for longer ones.
+Free-plan cost note: the downloader actor caps each run at $0.20. That pays for 720p up to about 7 minutes,
+480p up to about 13 minutes and 360p up to about 22 minutes; `fetch_video.sh` picks the best one that fits.
