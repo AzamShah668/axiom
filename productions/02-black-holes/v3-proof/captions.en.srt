@@ -1,0 +1,180 @@
+1
+00:00:00,000 --> 00:00:06,282
+Black holes: places in the universe where not even light can escape
+
+2
+00:00:06,282 --> 00:00:09,962
+At the heart of the Milky Way sits a black hole...
+
+3
+00:00:09,962 --> 00:00:13,898
+...as heavy as about 4 million Suns
+
+4
+00:00:13,898 --> 00:00:18,752
+And when two black holes collided...
+
+5
+00:00:18,752 --> 00:00:23,490
+...for an instant they released more power than all the stars in the universe
+
+6
+00:00:23,490 --> 00:00:29,478
+But their story begins... on a battlefield
+
+7
+00:00:29,495 --> 00:00:33,222
+DECEMBER 1915
+
+8
+00:00:33,222 --> 00:00:36,624
+On the Russian front, a German army lieutenant...
+
+9
+00:00:36,624 --> 00:00:40,107
+...worked out the paths of artillery shells
+
+10
+00:00:40,107 --> 00:00:43,068
+His name was Karl Schwarzschild...
+
+11
+00:00:43,068 --> 00:00:46,980
+One of Germany's most famous astronomers
+
+12
+00:00:46,980 --> 00:00:52,332
+Amid the noise of war...
+
+13
+00:00:52,332 --> 00:00:53,667
+EINSTEIN'S GENERAL RELATIVITY
+
+14
+00:00:53,667 --> 00:00:56,755
+...he found the first exact solution of its equations
+
+15
+00:00:56,755 --> 00:00:58,601
+Einstein himself was amazed
+
+16
+00:00:58,601 --> 00:01:01,597
+But the solution hid a strange boundary
+
+17
+00:01:01,597 --> 00:01:06,600
+If all of an object's mass is squeezed into a small ball...
+
+18
+00:01:06,600 --> 00:01:09,607
+...nothing can ever come back out of it
+
+19
+00:01:09,607 --> 00:01:10,838
+Not even light
+
+20
+00:01:10,838 --> 00:01:14,541
+For the Sun, that ball would be just 6 km wide
+
+21
+00:01:14,541 --> 00:01:17,165
+For Earth, the size of a marble
+
+22
+00:01:17,165 --> 00:01:20,811
+Five months later, Schwarzschild was dead
+
+23
+00:01:20,811 --> 00:01:27,811
+He never knew what his calculation was hiding...
+
+24
+00:01:28,550 --> 00:01:29,943
+BLACK HOLE
+
+25
+00:01:29,943 --> 00:01:32,614
+More than 100 years later...
+
+26
+00:01:32,614 --> 00:01:34,761
+2026
+
+27
+00:01:34,761 --> 00:01:39,080
+The James Webb Space Telescope found a black hole...
+
+28
+00:01:39,080 --> 00:01:42,713
+...that may be older than its own galaxy
+
+29
+00:01:47,113 --> 00:01:49,675
+But the idea was even older than Schwarzschild
+
+30
+00:01:49,675 --> 00:01:53,668
+1783
+
+31
+00:01:53,668 --> 00:01:55,247
+The village priest of Thornhill, England...
+
+32
+00:01:55,247 --> 00:01:57,035
+...John Michell
+
+33
+00:01:57,035 --> 00:02:00,496
+...wrote a long letter to his friend Henry Cavendish
+
+34
+00:02:00,496 --> 00:02:03,131
+Michell also studied earthquakes...
+
+35
+00:02:03,131 --> 00:02:08,181
+...and his balance was later used to weigh the Earth
+
+36
+00:02:08,181 --> 00:02:12,245
+Using Newton's gravity, he asked a simple question
+
+37
+00:02:12,245 --> 00:02:14,996
+What if a star were as dense as the Sun...
+
+38
+00:02:14,996 --> 00:02:18,329
+...but 500 times wider?
+
+39
+00:02:18,329 --> 00:02:20,117
+The answer was shocking
+
+40
+00:02:20,117 --> 00:02:25,717
+Even light would be too slow to escape its gravity
+
+41
+00:02:25,717 --> 00:02:28,411
+Such a star would be completely invisible
+
+42
+00:02:28,411 --> 00:02:29,699
+Michell called them...
+
+43
+00:02:29,699 --> 00:02:30,976
+DARK STARS
+
+44
+00:02:30,976 --> 00:02:37,954
+They could be found only by the stars orbiting them
+
+45
+00:02:37,954 --> 00:02:43,884
+About 200 years later, astronomers did exactly that
+
