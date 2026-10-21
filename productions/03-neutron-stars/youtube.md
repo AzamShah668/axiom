@@ -17,10 +17,24 @@ It ends with a 2025 discovery: twenty years after a magnetar flare hit Earth's s
 
 English captions: turn on CC.
 
-{credits}
+Footage credits: ESO (eso.org), CC BY 4.0 (95 videos); ESA/Hubble (esahubble.org), CC BY 4.0 (41 videos); ESA/Webb (esawebb.org), CC BY 4.0 (19 videos); NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov) (39 videos). Full list of videos in the pinned comment.
+Graphics and animation: original.
+
+Music by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 License (http://creativecommons.org/licenses/by/4.0/):
+"Interloper", "Echoes of Time v2", "Dark Fog", "Lightless Dawn", "Phantasm", "Long Note One", "Long Note Four"
 
 Chapters:
-{chapters}
+0:00 Intro
+1:38 Fact #10: Predicted In 1934, Before Anyone Saw One
+2:36 Fact #9: A Student Found The First, LGM-1
+4:13 Fact #8: The First Planets Circled A Dead Star
+5:16 Fact #7: A City-Sized Star Spinning 716 Times A Second
+6:14 Fact #6: The Strongest Magnets In The Universe
+7:19 Fact #5: When They Collide, They Make Gold
+8:17 Fact #4: A Radio Flash From Inside Our Galaxy
+9:17 Fact #3: The Heaviest One Is Eating Its Partner
+10:12 Fact #2: Pulsars Turned The Galaxy Into A Detector
+11:00 Fact #1: One Flare Forged Gold
 
 #neutronstars #hindidocumentary #space #universe
 ```

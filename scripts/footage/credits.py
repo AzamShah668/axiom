@@ -5,7 +5,13 @@
 ESO, ESA/Hubble and ESA/Webb footage is CC BY 4.0 (credit + licence link); NASA SVS footage is credited to
 NASA's Goddard Space Flight Center. Kevin MacLeod music is CC BY 4.0 and needs the exact title list.
 """
-import argparse, json, os, string
+import argparse, json, os, re
+
+
+def title_case(text):
+    """'A STUDENT FOUND THE FIRST, LGM-1' -> 'A Student Found The First, LGM-1' (codes with digits stay upper)."""
+    return re.sub(r"[A-Za-z0-9'-]+", lambda m: m[0] if any(ch.isdigit() for ch in m[0])
+                  else "-".join(p.capitalize() for p in m[0].split("-")), text)
 
 ARCHIVE = {
     "eso": "ESO (eso.org), CC BY 4.0",
@@ -55,7 +61,7 @@ def main():
         if it["kind"] == "card":
             t = int(it["t0"])
             num, title = it["text"] if "text" in it else (f"FACT #{it['num']}", it["ctitle"].replace("*", ""))  # v2 | v3
-            chapters.append(f"{t // 60}:{t % 60:02d} {num.title()}: {string.capwords(title.lower())}")
+            chapters.append(f"{t // 60}:{t % 60:02d} {num.title()}: {title_case(title)}")
     print("\n".join(lines + chapters))
 
 
