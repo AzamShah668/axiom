@@ -313,7 +313,7 @@ def plan(edit, tl, voice_wav=None):
         c["t1"] = min(nxt, c["t"] + 7.0, c["end"] + 0.3)
     busy = [(o["t0"], o["t_last"] + 1.6) if o["kind"] == "headline" else (o["t0"], o["t1"]) for o in ovl
             if o["kind"] == "headline" or (o["kind"] == "num" and o["num"].get("template") != "name")]
-    busy += [(it["t0"], it["t1"]) for it in items if it["kind"] in ("num", "card", "title")]
+    busy += [(it["t0"], it["t1"]) for it in items if it["kind"] in ("num", "card", "title", "gfx")]
     for i, c in enumerate(caps):
         if not c["big"]:
             continue
@@ -395,6 +395,11 @@ def plan(edit, tl, voice_wav=None):
                    p["num"].get("template") != "name")) and o["t_last"] < p["t0"] < o["t1"]]
             if nxt:  # make way for the next key line / number card
                 o["t1"] = max(o["t_last"] + 0.8, min(nxt) - 0.12)
+    full = [it["t0"] for it in items if it["kind"] in ("card", "title")]
+    for o in ovl:  # nothing runs over a chapter or title card: it is gone by the time the card cuts in
+        hit = [t for t in full if o["kind"] != "footer" and o["t0"] < t < o["t1"]]
+        if hit:
+            o["t1"] = min(hit) - 0.1
     for it in items:
         it["f0"], it["f1"] = round(it["t0"] * FPS), round(it["t1"] * FPS)
     items[-1]["f1"] = round(total * FPS)

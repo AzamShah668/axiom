@@ -37,7 +37,7 @@ N और जो आज भी @ hero | value=30 | from=0 | unit=spins every seco
 M एक neutron star. | breath=1.4 | riser=1.6 | impact=impact | trans=flare
 V एक neutron star. @ the pulsar spinning at the heart of the Crab Nebula | a spinning neutron star with beams {hold}
 V लगभग एक हज़ार साल बाद @ the glowing debris cloud of a kilonova | gold glowing in an explosion in space
-K लगभग एक हज़ार साल बाद @ WHERE DOES / *GOLD COME FROM* [सोना कहाँ]
+K लगभग एक हज़ार साल बाद @ WHERE DOES [सोना] / *GOLD COME FROM* [कहाँ से]
 C - | 4 JULY 1054 | big
 C China में | In China, the emperor's court astronomers saw a new star in the eastern sky at dawn
 C वह इतना चमकदार | It was so bright that for 23 days it could be seen even in daylight
@@ -199,8 +199,9 @@ C लेकिन उस flash के बाद | But after the flash, a faint g
 C बीस साल तक | For 20 years, nobody could explain it
 
 == fact5
-G - @ ligo
+V - @ two neutron stars spiralling around each other | a calm star field slowly drifting
 C - | 17 AUGUST 2017 | big
+G America के LIGO @ ligo
 C America के LIGO | America's LIGO and Italy's Virgo detectors caught a faint ripple in space
 V लगभग सौ second @ two neutron stars spiralling around each other | simulation of merging neutron stars
 N लगभग सौ second @ hero | value=100 | from=0 | unit=seconds of waves | land=सौ second | over

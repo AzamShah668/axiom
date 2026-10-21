@@ -86,12 +86,18 @@ xfade/zoom/flash/whip/blur transitions, a bed 22 dB under the voice.
 
 ## 3. Review the render
 ```bash
-scripts/science/pipeline.sh productions/NN-slug review     # one frame / 6 s -> $WORK/review_render/sheet_*.jpg
+scripts/science/pipeline.sh productions/NN-slug review     # one frame per item -> $WORK/review_render/sheet_*.jpg
 ```
-View every sheet. Also play the opening minute of the master (or its preview).
+View every sheet: each tile is one item as rendered (`<n> <section>/<k> <kind> m:ss`), so every shot is seen.
+Pull full-resolution frames (start, middle, end) of anything doubtful before deciding. Also play the opening
+minute of the master (or its preview).
 
 Look for:
-- text/logos/insets/diagram lines inside footage
+- text/logos/insets/diagram lines inside footage; split screens, mosaic edges, a lighter "plate" rectangle
+  behind a visualization
+- shapes that read as something silly (a "face" in a simulation)
+- a headline or key line running over a chapter card or a graphic (the renderer cuts headlines at cards and
+  skips key lines over graphics; if a key line is skipped, give the graphic its own later trigger)
 - white or black frames (the tool flags them)
 - captions overlapping graphic labels; a headline or number covering the subject
 - a count that doesn't land on the spoken number (fix `land=`)
@@ -103,8 +109,9 @@ Fix at the source:
 - `ban` the shot or `exclude` seconds of a clip
 - or move graphic labels in `render_video.gfx`
 
-Then re-assign. Re-render only the affected sections if the assignment didn't change elsewhere; otherwise
-re-render all.
+Then re-assign. Chunks are cached by frame range only (`<master>_work/v3_<f0>_<f1>.mp4`), so delete every
+chunk whose items or overlays changed before rendering again. Adding or removing a cut shifts the camera-move
+cycle of every later shot, so that means re-rendering from there on.
 
 ## 4. Preview and delivery
 ```bash

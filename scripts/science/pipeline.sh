@@ -109,7 +109,7 @@ stage() {
       cp "$WORK/cutlist.json" "$P/cutlist.json"
       [ -f "${MASTER%.mp4}.en.srt" ] && cp "${MASTER%.mp4}.en.srt" "$P/captions.en.srt" || true ;;
     review)
-      "$PY" "$ROOT/scripts/video/review_sheet.py" "$MASTER" "$WORK/review_render" ;;
+      "$PY" "$ROOT/scripts/video/review_sheet.py" "$MASTER" "$WORK/review_render" --cutlist "$WORK/cutlist.json" ;;
     preview)
       bash "$ROOT/scripts/video/preview_parts.sh" "$MASTER" "$WORK/out/preview" ;;
     credits)
