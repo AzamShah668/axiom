@@ -13,12 +13,12 @@ doing the stage. Do not skip the review gates.
 
 | # | Stage | Skill | Output |
 |---|-------|-------|--------|
-| 1 | Topic, research, story script, Devanagari narration, title/thumbnail/description | `science-script` | `script.md`, `tts/narration.hi.md` |
+| 1 | Topic, research, story script, Devanagari narration, title/description | `science-script` | `script.md`, `tts/narration.hi.md` |
 | 2 | Hindi voice-over with the locked voice | `science-narration` | `$WORK/voice/narration.wav`, `timeline.json` |
 | 3 | Edit plan (v3 style, `docs/style-guide.md`): a visual query for every sentence, headlines, number cards, moments, CC captions, music | `science-edit-plan` | `edit.spec`, `edit.base.json`, `edit.json` |
 | 4 | 4K footage library for the topic | `science-footage` | `$LIB` shots (QC'd, embedded) |
 | 5 | Shot assignment (no repeats) -> render -> review -> fixes -> preview | `science-render` | master `.mp4`, `captions.en.srt`, preview parts, `cutlist.json` |
-| 6 | Thumbnail, description with credits, upload checklist | `science-publish` | `thumbnail.jpg`, `youtube.md`, `credits.txt` |
+| 6 | Description with credits, upload checklist (no thumbnail: the owner makes it) | `science-publish` | `youtube.md`, `credits.txt` |
 
 One command runs the scripted parts (stages 2-6 except writing):
 ```bash
@@ -39,8 +39,9 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
 `config/.env` (gitignored). Never commit keys, audio, video, or other people's transcripts (the repo is public).
 
 ## Non-negotiable channel rules (from the owner's reviews)
-- **Packaging:** title `<Topic> | Hindi Documentary`. Everything written (title, thumbnail, captions, cards,
+- **Packaging:** title `<Topic> | Hindi Documentary`. Everything written (title, captions, cards,
   description, tags) is English; only the narration is Hindi.
+- **No thumbnail:** the owner makes every thumbnail. Never make one unless asked.
 - **Narration:** pure third-person storytelling. Never address the viewer: no "aap", commands, questions to
   the audience, "number 10..." announcements or subscribe requests. Countdown lives only on the chapter cards.
   No India-specific comparisons. Voice: ElevenLabs "Neel - Paranormal Story Narrator" (`productions/voice-preset.json`).
@@ -75,7 +76,7 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
 Drive folder `axiom-science-channel` (README.txt there explains it):
 | Drive folder | Contents |
 |---|---|
-| `videos/` | finished masters + thumbnails named `NN - <YouTube title> 1080p.mp4` |
+| `videos/` | finished masters named `NN - <YouTube title> 1080p.mp4` |
 | `productions/NN-slug/` | the work dir: voice/, out/ (master, previews), cutlists, review sheets |
 | `footage-library/` | the shared library; `clips/` named `<category>__<archive-title>__<id>.mp4`, plus catalog.csv and the shot metadata |
 | `media/` | fonts, music, graphic stills |
@@ -85,7 +86,7 @@ Drive folder `axiom-science-channel` (README.txt there explains it):
   - catalogues the library (`scripts/footage/catalog.py`): CLIP category and tags, usable seconds, used-in.
     It writes `productions/footage-catalog.csv` (committed, searchable without downloading anything) and the
     descriptive Drive names.
-  - copies the master and thumbnail into `videos/`.
+  - copies the master into `videos/`.
   - pushes `$WORK`, `$LIB` and `$MEDIA`, then deletes them locally. Each file's MD5 is checked on Drive before its
     local copy is removed. Nothing heavy stays in the cloud container.
 - Fresh container:

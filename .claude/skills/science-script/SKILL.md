@@ -27,7 +27,7 @@ Production 01 (`productions/01-dark-matter/script.md`) is the reference example.
 4. **Write `script.md`** in Hinglish for review, with one `## <section_id>` per section (`hook`, `cold_open`,
    `fact10` ... `fact1`). Also include:
    - chapter card titles (`FACT #n` + a short English line)
-   - the package: title, three-line thumbnail text, description, tags
+   - the package: title, description, tags (no thumbnail: the owner makes it)
 5. **Write `tts/narration.hi.md`:**
    - Same sections, in Devanagari.
    - English names and science terms stay in Latin letters (Coma Cluster, dark matter, Hubble).

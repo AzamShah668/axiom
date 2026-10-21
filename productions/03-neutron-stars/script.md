@@ -32,13 +32,7 @@ First video in the v3 style (`docs/style-guide.md`):
 **Title (A, used):** `10 Facts You Don't Know About Neutron Stars | Hindi Documentary`
 Question variant (B, for a later title test in YouTube Studio): `Where Does Gold Come From? Neutron Stars | Hindi Documentary`
 
-**Thumbnail (new full-bleed test):**
-- A full-bleed magnetar / pulsar visualization: a glowing blue-white sphere with beams and magnetic field
-  lines, taken from a NASA SVS frame in the cut.
-- A 2-line English hook, bottom-left, in heavy white condensed type: `A TEASPOON WEIGHS` / `1 BILLION TONS`, with
-  the keyword `1 BILLION TONS` in yellow.
-- A small `NEUTRON STARS` label top-left. No face, no arrows.
-- Fallback for an A/B test: the Science Time black-half layout `10 FACTS` / `about` / `NEUTRON STARS`.
+**Thumbnail:** made by the owner (owner's rule, 2026-10-21).
 
 **Description (English):**
 > 10 Facts You Don't Know About Neutron Stars | Hindi Documentary

@@ -1,6 +1,6 @@
 # YouTube upload: Production 03
 
-Not uploaded yet. It will be uploaded **private** with `captions.en.srt` (English CC) and the full-bleed thumbnail test.
+Not uploaded yet. It will be uploaded **private** with `captions.en.srt` (English CC). No thumbnail: the owner adds it in Studio.
 
 **Title**
 10 Facts You Don't Know About Neutron Stars | Hindi Documentary

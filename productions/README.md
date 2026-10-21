@@ -2,7 +2,8 @@
 
 ## Packaging
 - Title format: `<Topic> | Hindi Documentary`
-- **Everything written is in English**: the title, thumbnail, on-screen text, chapter cards, description and tags.
+- **Everything written is in English**: the title, on-screen text, chapter cards, description and tags.
+- **No thumbnail.** The owner makes every thumbnail; never make one unless asked (owner's rule, 2026-10-21).
 - **Only the narration is Hindi**, voiced with ElevenLabs.
   - Scripts are written in Hinglish (Hindi in English letters) for review.
   - They are converted to Devanagari only for the TTS input, because ElevenLabs pronounces Hindi better that way. Viewers never see either version.
