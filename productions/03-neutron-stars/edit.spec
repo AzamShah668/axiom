@@ -4,6 +4,7 @@
 == hook
 V - @ a spinning pulsar with radio beams sweeping through space | neutron star animation with glowing magnetic field lines {hold}
 K - @ NEUTRON STAR / *THE HEART OF A DEAD STAR* [बचा हुआ दिल]
+V सिर्फ़ एक शहर @ a neutron star compared with the size of a city | a neutron star above a city on Earth
 K सिर्फ़ एक शहर @ THE SIZE OF A CITY / *HEAVIER THAN THE SUN* [Sun से भी]
 V इसका सिर्फ़ एक चम्मच @ the glowing surface of a neutron star with hot spots | a close-up of a dense neutron star
 N इसका सिर्फ़ एक चम्मच @ hero | value=1,000,000,000 | from=0 | unit=tons | kicker=one teaspoon | land=अरब | over
