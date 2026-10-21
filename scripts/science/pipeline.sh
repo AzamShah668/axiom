@@ -79,7 +79,7 @@ stage() {
     footage)
       "$PY" "$ROOT/scripts/footage/search_sources.py" "$P/footage/terms.txt" "$LIB/candidates.json"
       "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks.json" \
-        --max "$LIMIT"
+        --max "$LIMIT" --avoid "$ROOT/productions" --lib "$LIB"
       library_pull "$WORK/picks.json"
       "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks.json" "$LIB" --jobs "$JOBS" \
         --limit "$LIMIT" --cap-single 12 --cap-multi "$CAP_MULTI" --preset "$PRESET" --from-end
@@ -87,7 +87,7 @@ stage() {
       "$PY" "$ROOT/scripts/footage/people_scan.py" "$LIB" ;;
     topup)
       "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks_topup.json" \
-        --weak "$WORK/cutlist.json" --below 0.37 --per-item 3 --max 160 --skip "$WORK/picks.json"
+        --weak "$WORK/cutlist.json" --below 0.37 --per-item 3 --max 160 --skip "$WORK/picks.json" --avoid "$ROOT/productions" --lib "$LIB"
       library_pull "$WORK/picks_topup.json"
       "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks_topup.json" "$LIB" --jobs "$JOBS" \
         --cap-single 12 --cap-multi "$CAP_MULTI" --preset "$PRESET" --from-end

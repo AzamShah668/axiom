@@ -107,6 +107,9 @@ Drive folder `axiom-science-channel` (README.txt there explains it):
   `youtube.md`, `credits.txt`.
 
 ## Lessons already learned (don't repeat them)
+- The library outgrew the container (20 GB by video 03). `restore-library` pulls only metadata. The footage
+  stage pulls picked library clips from Drive. `select_candidates.py --avoid` skips library clips whose shots
+  earlier videos already used: without it, half of video 03's first picks were spent footage.
 - `assign_shots.py` writes the shot's source title into each item's `title` key. Plan items must not use `title`
   for their own text (v3 uses `ttl` / `ctitle`).
 - Many ESO zoom videos open on the same all-sky Milky Way panorama. Cut long videos from their end

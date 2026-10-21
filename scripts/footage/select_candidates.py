@@ -66,6 +66,9 @@ def main():
     ap.add_argument("--weak", default="", help="top-up: cutlist.json; only items whose shot scored below --below")
     ap.add_argument("--below", type=float, default=0.22)
     ap.add_argument("--skip", default="", help="comma-separated picks.json files whose keys are already fetched")
+    ap.add_argument("--avoid", default="", help="productions dir: skip library clips whose usable shots earlier "
+                                                "productions already used (they can't be shown again)")
+    ap.add_argument("--lib", default="", help="library dir (with --avoid)")
     a = ap.parse_args()
     from PIL import Image
     cand = json.load(open(a.candidates))
@@ -99,6 +102,20 @@ def main():
     skip = set()
     for f in filter(None, a.skip.split(",")):
         skip |= {x["key"] for x in json.load(open(f))}
+    if a.avoid and a.lib and os.path.exists(os.path.join(a.lib, "shots.json")):
+        used = set()
+        here = os.path.dirname(os.path.abspath(a.edit))
+        for d in sorted(os.listdir(a.avoid)):
+            f = os.path.join(a.avoid, d, "cutlist.json")
+            if os.path.exists(f) and os.path.abspath(os.path.join(a.avoid, d)) != here:
+                used |= {it["shot"] for it in json.load(open(f))["items"] if it.get("shot")}
+        free = {}
+        for s in json.load(open(os.path.join(a.lib, "shots.json"))):
+            free[s["clip"]] = free.get(s["clip"], 0) + int(bool(s["usable"]) and not s["dup_of"] and s["id"] not in used)
+        name = lambda k: re.sub(r"[^A-Za-z0-9_-]", "_", k.replace(":", "_"))
+        spent = {k for k in keys if free.get(name(k), 1) == 0}
+        skip |= spent
+        print(f"avoid: {len(spent)} library clips have no unused shot left", flush=True)
     qs = sorted({q for it in items for q in it["q"]})
     Q = clip_model.embed_texts([f"a photo of {q}" for q in qs])
     qi = {q: i for i, q in enumerate(qs)}
