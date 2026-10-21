@@ -235,9 +235,10 @@ def main():
     if a.keep and os.path.exists(a.keep):  # converge review rounds: only re-solve items whose shot was banned
         old = {(o["sec"], round(o["t0"], 2)): o.get("shot") for o in json.load(open(a.keep))["items"]}
         kept = 0
+        pinned = set(edit.get("pin", {}).values())  # a pinned shot is never held by another item
         for i, it in enumerate(items):
             sid = old.get((it["sec"], round(it["t0"], 2)))
-            if sid in ids and sec_n[i] not in edit.get("pin", {}):
+            if sid in ids and sec_n[i] not in edit.get("pin", {}) and sid not in pinned:
                 cost[i, :] += 50.0
                 cost[i, ids.index(sid)] -= 50.0
                 kept += 1
