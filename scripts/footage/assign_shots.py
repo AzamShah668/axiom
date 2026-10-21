@@ -112,6 +112,12 @@ def _ocr_job(job):
         horiz, free = _OCR["r"].detect(cv2.resize(f, (768, 432)), min_size=10, text_threshold=0.7, low_text=0.45)
         if (horiz and horiz[0]) or (free and free[0]):
             return True
+        # small print (timestamps, credit lines) lives in the top and bottom strips: read them at full resolution
+        hh = f.shape[0]
+        for strip in (f[:int(hh * 0.16)], f[int(hh * 0.84):]):
+            horiz, free = _OCR["r"].detect(strip, min_size=8, text_threshold=0.7, low_text=0.4)
+            if (horiz and horiz[0]) or (free and free[0]):
+                return True
     return False
 
 
@@ -125,7 +131,7 @@ def text_gate(lib, items, pool, r, c, need, cache_path, workers=4):
         r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
         ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
         d = need[i] - 0.8
-        key = f"{s['id']}@{ss:.2f}+{d:.2f}" + (f"/crop{list(s['crop'])}" if s.get("crop") else "")
+        key = f"{s['id']}@{ss:.2f}+{d:.2f}" + (f"/crop{list(s['crop'])}" if s.get("crop") else "") + "/strips"
         keys.append(key)
         if key not in cache:
             jobs.append((key, (os.path.join(lib, "clips", s["clip"] + ".mp4"),

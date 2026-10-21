@@ -7,7 +7,7 @@ K - @ NEUTRON STAR / *THE HEART OF A DEAD STAR* [बचा हुआ दिल]
 K सिर्फ़ एक शहर @ THE SIZE OF A CITY / *HEAVIER THAN THE SUN* [Sun से भी]
 V इसका सिर्फ़ एक चम्मच @ the glowing surface of a neutron star with hot spots | a close-up of a dense neutron star
 N इसका सिर्फ़ एक चम्मच @ hero | value=1,000,000,000 | from=0 | unit=tons | kicker=one teaspoon | land=अरब | over
-V कुछ neutron stars @ a rapidly spinning millisecond pulsar | a neutron star spinning very fast
+V कुछ neutron stars @ an artist's animation of a pulsar with two beams | a neutron star rotating with magnetic field lines
 N कुछ neutron stars @ gauge | value=716 | from=0 | max=716 | unit=spins per second | kicker=up to | land=सात सौ | over
 V और जब दो @ two neutron stars spiralling together and merging | simulation of a neutron star collision
 M तो ब्रह्मांड में सोना | breath=0.9 | riser=1.2 | impact=impact | trans=flare
@@ -25,7 +25,7 @@ C आसमान में | ...with a "guest star" that suddenly woke up in th
 == cold_open
 V - @ the morning sky at dawn with a bright star | a starry sky over a dark landscape before sunrise {hold}
 L China में @ THE COURT ASTRONOMERS | China · Song dynasty · 1054
-V वह इतना चमकदार @ a very bright new star shining in the sky | a supernova lighting up the night sky
+V वह इतना चमकदार @ a supernova lighting up the night sky | a bright star exploding in space
 N वह इतना चमकदार @ hero | value=23 | from=0 | unit=days, even in daylight | kicker=it shone for | land=तेईस | over
 V लगभग दो साल @ the Crab Nebula | zooming into the Crab Nebula
 N लगभग साढ़े छह @ line | value=6,500 | from=0 | unit=light-years | left=Earth | right=Crab Nebula | land=साढ़े छह | over
@@ -88,7 +88,7 @@ N और उसमें दो हज़ार @ hero | value=2,048 | from=0 | 
 V Telescope हर दिन @ radio telescope dishes moving at night | radio dishes pointing at the starry sky
 N Telescope हर दिन @ hero | value=30 | from=0 | unit=metres of chart paper | kicker=every day | land=तीस मीटर | over
 C scruff. | "SCRUFF" | big
-V November में @ a pulsar sending out regular pulses | flashing beams from a spinning star
+V November में @ an artist's animation of a pulsar sweeping beams | a spinning neutron star with radio beams
 N हर एक दशमलव @ hero | value=1.337 | from=0 | unit=seconds between pulses | land=सात second | over
 M LGM-One. | breath=1.0 | riser=1.2 | impact=hit | trans=cut
 V LGM-One. @ radio telescopes pointing at the night sky | a strange signal from deep space
@@ -177,14 +177,14 @@ N उनका magnetic field @ scale | value=1,000,000,000,000,000 | from=1 | l
 V सत्ताईस December @ the Milky Way galaxy seen from far away | a spiral galaxy slowly rotating
 C सत्ताईस December | 27 DECEMBER 2004 | big
 M सिर्फ़ एक second के दसवें | breath=1.0 | riser=1.4 | impact=impact | trans=flash
-V सिर्फ़ एक second के दसवें @ a giant flare erupting from a magnetar | a blinding flash from a neutron star
+V सिर्फ़ एक second के दसवें @ an animation of a magnetar exploding with a bright flash | a neutron star bursting with energy
 N सिर्फ़ एक second के दसवें @ hero | value=150,000 | from=0 | unit=years of sunlight | kicker=in a tenth of a second | land=एक लाख पचास | over
 V वह flash इतना तेज़ @ a satellite in orbit above Earth | a gamma-ray space telescope in orbit
 K वह flash इतना तेज़ @ SATELLITES [satellites] / *BLINDED* [अंधे]
 V उसकी लहर ने @ Earth's atmosphere glowing seen from space | aurora over Earth seen from orbit
 V Scientists के मुताबिक़ @ planet Earth seen from space | Earth with its thin blue atmosphere
 N अगर ऐसा magnetar @ hero | value=10 | from=0 | unit=light-years | kicker=if it had been within | land=दस light-years | over
-V लेकिन उस flash के बाद @ a faint glow fading in space | the afterglow of a stellar explosion
+V लेकिन उस flash के बाद @ an explosion in space slowly fading away | a glowing cloud fading in space
 K लेकिन उस flash के बाद @ AN AFTERGLOW [हल्की सी चमक] / *NOBODY UNDERSTOOD* [मतलब]
 C - | Some neutron stars have another power. They are the strongest magnets in the universe...
 C उनका magnetic field | Their magnetic field is about a million billion times stronger than Earth's
@@ -209,7 +209,7 @@ V ग्यारह घंटे @ an observatory dome in Chile at night | tele
 N तेरह करोड़ @ line | value=130,000,000 | from=0 | unit=light-years | left=Earth | right=NGC 4993 | land=तेरह करोड़ | over
 V फिर लगभग सत्तर @ many telescopes observing the sky at night | the Very Large Telescope at night
 N फिर लगभग सत्तर @ hero | value=70 | from=0 | unit=observatories | land=सत्तर | over
-V जो दिखा @ a kilonova explosion glowing in space | artist's impression of a kilonova
+V जो दिखा @ an explosion after two neutron stars merge | artist's impression of a kilonova
 C एक kilonova. | KILONOVA | big
 M सोना था | breath=1.2 | riser=1.4 | impact=impact | trans=flare
 V सोना था @ glowing golden debris expanding in space | a bright golden explosion in space
@@ -281,7 +281,7 @@ V पंद्रह साल तक @ radio telescopes observing at night | a 
 N पंद्रह साल तक @ line | value=15 | from=0 | unit=years | left=2008 | right=2023 | land=पंद्रह | dur=2.0 | over
 N Milky Way में बिखरे @ hero | value=68 | from=0 | unit=pulsars | land=अड़सठ | over
 G अगर space में @ ripples
-V June दो हज़ार तेईस @ two supermassive black holes orbiting each other | merging galaxies
+V June दो हज़ार तेईस @ two black holes orbiting each other in a simulation | two colliding galaxies
 C June दो हज़ार तेईस | JUNE 2023 | big
 K यह लहरें सालों @ WAVES [लहरें] / *YEARS LONG* [सालों लंबी]
 C - | Pulsars are the most perfect clocks in the universe
@@ -292,8 +292,8 @@ C June दो हज़ार तेईस | In June 2023, NANOGrav and several 
 C यह लहरें सालों | These waves are years long, and probably come from pairs of giant black holes orbiting each other across the universe
 
 == fact1
-V - @ a faint glow fading after a stellar flare | the afterglow of a magnetar flare
-V दो हज़ार चौबीस @ the cracked surface of a neutron star | a magnetar's crust breaking apart
+V - @ a glowing cloud fading in space | the afterglow of an explosion in space
+V दो हज़ार चौबीस @ an animation of a glowing neutron star close-up | a neutron star with magnetic field lines
 L Anirudh Patel @ ANIRUDH PATEL & BRIAN METZGER | Columbia University
 V अगर magnetar के flash @ a magnetar ejecting material from its surface | a neutron star blasting out glowing matter
 N और उनकी radioactive @ hero | value=10 | from=0 | unit=minutes after the flash | land=दस मिनट | over

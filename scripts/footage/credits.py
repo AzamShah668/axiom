@@ -54,7 +54,7 @@ def main():
     for it in cl["items"]:
         if it["kind"] == "card":
             t = int(it["t0"])
-            num, title = it["text"]
+            num, title = it["text"] if "text" in it else (f"FACT #{it['num']}", it["ctitle"].replace("*", ""))  # v2 | v3
             chapters.append(f"{t // 60}:{t % 60:02d} {num.title()}: {string.capwords(title.lower())}")
     print("\n".join(lines + chapters))
 
