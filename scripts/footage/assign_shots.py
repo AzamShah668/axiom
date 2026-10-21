@@ -275,11 +275,13 @@ def main():
             used.add(j)
         print("greedy pass resolved the remaining clashes", flush=True)
     # final gate: OCR the frames each item will really show; text -> that shot is out, re-solve the rest in place
-    for rnd in range(6):
+    for rnd in range(40):  # every re-solve is checked again: the result never skips the gate
         hits = text_gate(a.lib, items, pool, r, c, need, os.path.join(a.lib, "text_gate.json"))
         print(f"text gate {rnd}: {len(hits)} shown segments with text", flush=True)
         if not hits:
             break
+        if rnd == 39:
+            raise SystemExit("text gate did not converge: ban the clips it keeps hitting or add footage")
         for k in hits:
             cost[:, c[k]] += 100.0  # the shot is out for every item
         for k in range(len(r)):

@@ -94,7 +94,8 @@
   "faint distant galaxies in dark space"
  ],
  "pin": {
-  "hook/1": "svs_20267-win1#0"
+  "hook/1": "svs_20267-win1#0",
+  "fact9/7": "eso_alma-array-uhd1#0"
  },
  "ban": [
   "esahubble_heic1711a#0",
@@ -107,6 +108,7 @@
   "esahubble_heic2108d#0",
   "esahubble_heic2208b#0",
   "esahubble_heic2603b#0",
+  "esahubble_potw2423a",
   "esahubble_potw2542a#0",
   "esawebb_potm2209a#0",
   "esawebb_potm2509a#0",
@@ -118,6 +120,7 @@
   "eso_eso1134b#0",
   "eso_eso1151e#0",
   "eso_eso1422b#0",
+  "eso_eso1614a",
   "eso_eso1637a#0",
   "eso_eso1641a#0",
   "eso_eso1708c#0",
@@ -141,6 +144,7 @@
   "eso_eso2112b#0",
   "eso_eso2112c#0",
   "eso_eso2112d#0",
+  "eso_eso2117a",
   "eso_eso2117b#0",
   "eso_eso2305a#5",
   "eso_eso2314c#0",
@@ -153,21 +157,32 @@
   "eso_lasillatimelapseeulerntt#0",
   "eso_mars_4k#0",
   "eso_moon_evolution_p1#0",
+  "eso_potw2443a",
   "eso_rossiter-mclaughlin#0",
+  "eso_wotu-supernovae-win2",
   "svs_12019-win1#0",
   "svs_12019-win2#0",
   "svs_12605#0",
   "svs_12605-win2#0",
   "svs_12605-win3#1",
+  "svs_12854",
   "svs_12854#0",
+  "svs_12854-win1",
   "svs_12854-win1#0",
+  "svs_12854-win2",
+  "svs_12854-win3",
   "svs_13483#1",
   "svs_13619#1",
   "svs_13778#0",
   "svs_14163#0",
   "svs_14309#0",
   "svs_14347#7",
+  "svs_14399",
+  "svs_14399-win1",
+  "svs_14399-win2",
+  "svs_14399-win3",
   "svs_14399-win3#0",
+  "svs_14402",
   "svs_14531#0",
   "svs_14666#0",
   "svs_14666#3",
@@ -178,7 +193,9 @@
   "svs_14921#2",
   "svs_14935#0",
   "svs_15041#3",
+  "svs_15051-win1",
   "svs_20310#0",
+  "svs_20315",
   "svs_20404#0",
   "svs_30020#0",
   "svs_31346#0",
@@ -193,6 +210,10 @@
   "svs_4557",
   "svs_4557#0",
   "svs_4649#0",
+  "svs_5157",
+  "svs_5157-win1",
+  "svs_5157-win2",
+  "svs_5157-win3",
   "svs_5503#2",
   "svs_5627#0"
  ],
@@ -725,15 +746,15 @@
      "at": null,
      "opt": "hold",
      "q": [
-      "a field of radio antennas under the sky",
-      "a radio telescope array at night"
+      "radio telescope dishes under the Milky Way",
+      "an observatory at night under the stars"
      ]
     },
     {
      "at": "Telescope हर दिन",
      "q": [
-      "radio telescope dishes moving at night",
-      "radio dishes pointing at the starry sky"
+      "a large telescope at night under the Milky Way",
+      "star trails over an observatory"
      ]
     },
     {

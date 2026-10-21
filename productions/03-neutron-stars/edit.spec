@@ -81,12 +81,12 @@ C एक तारा जो | A star as small as a city, and heavier than the S
 C अगले तैंतीस साल | For the next 33 years, nobody saw one
 
 == fact9
-V - @ a field of radio antennas under the sky | a radio telescope array at night {hold}
+V - @ radio telescope dishes under the Milky Way | an observatory at night under the stars {hold}
 C - | 1967 | big
 L Jocelyn Bell @ JOCELYN BELL | PhD student · Cambridge
 N वह सत्तावन @ hero | value=57 | from=0 | unit=tennis courts | kicker=the telescope covered | land=सत्तावन | dur=2.2 | over
 N और उसमें दो हज़ार @ hero | value=2,048 | from=0 | unit=antennas | land=दो हज़ार | over
-V Telescope हर दिन @ radio telescope dishes moving at night | radio dishes pointing at the starry sky
+V Telescope हर दिन @ a large telescope at night under the Milky Way | star trails over an observatory
 N Telescope हर दिन @ hero | value=30 | from=0 | unit=metres of chart paper | kicker=every day | land=तीस मीटर | over
 C scruff. | "SCRUFF" | big
 V November में @ an artist's animation of a pulsar sweeping beams | a spinning neutron star with radio beams
