@@ -1,0 +1,100 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "title": {
+  "kicker": "10 facts about",
+  "main": "Neutron Stars"
+ },
+ "cards": {
+  "fact10": [
+   "FACT #10",
+   "PREDICTED IN *1934*, BEFORE ANYONE SAW ONE"
+  ],
+  "fact9": [
+   "FACT #9",
+   "A STUDENT FOUND THE FIRST, *LGM-1*"
+  ],
+  "fact8": [
+   "FACT #8",
+   "THE FIRST PLANETS CIRCLED A *DEAD* STAR"
+  ],
+  "fact7": [
+   "FACT #7",
+   "A CITY-SIZED STAR SPINNING *716* TIMES A SECOND"
+  ],
+  "fact6": [
+   "FACT #6",
+   "THE STRONGEST *MAGNETS* IN THE UNIVERSE"
+  ],
+  "fact5": [
+   "FACT #5",
+   "WHEN THEY COLLIDE, THEY MAKE *GOLD*"
+  ],
+  "fact4": [
+   "FACT #4",
+   "A RADIO *FLASH* FROM INSIDE OUR GALAXY"
+  ],
+  "fact3": [
+   "FACT #3",
+   "THE HEAVIEST ONE IS *EATING* ITS PARTNER"
+  ],
+  "fact2": [
+   "FACT #2",
+   "PULSARS TURNED THE GALAXY INTO A *DETECTOR*"
+  ],
+  "fact1": [
+   "FACT #1",
+   "ONE FLARE FORGED *GOLD*"
+  ]
+ },
+ "count_total": 10,
+ "music": [
+  {
+   "from": "hook",
+   "track": "Interloper.mp3"
+  },
+  {
+   "from": "cold_open",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "fact10",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "fact8",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "fact6",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "fact4",
+   "track": "Long_Note_One.mp3"
+  },
+  {
+   "from": "fact2",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "a spinning pulsar with radio beams",
+  "slow flight through a star field"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [],
+ "crops": {},
+ "exclude": {}
+}

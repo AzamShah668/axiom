@@ -11,6 +11,7 @@
 #              (shared library $LIB, grows over time)
 #   topup      more 4K candidates for items that matched weakly (score < 0.37) -> fetch -> shots
 #   assign     one unique shot per footage item -> $WORK/cutlist.json + review sheets $WORK/review_assign
+#              (only clips on disk are used: --local-only)
 #              (re-runs keep reviewed shots: previous cutlist is kept as $WORK/cutlist_prev.json)
 #   render     master video -> $WORK/out/<name>.mp4 (+ English caption track <name>.en.srt for v3 -> captions.en.srt)
 #   review     contact sheets of the master -> $WORK/review_render
@@ -22,7 +23,9 @@
 #              title, then push $WORK -> productions/<name>, $LIB -> footage-library, $MEDIA -> media on
 #              Google Drive (folder axiom-science-channel) and delete them here. Nothing heavy stays local.
 #   restore    pull media, the whole footage library and this production's work dir back from Drive
-#              (needed before footage/assign for a new production)
+#   restore-library  pull media and the library metadata only (no clips): the footage stage then pulls the
+#              picked clips that the library already has and downloads the rest (the full library no longer
+#              fits the container next to new footage)
 #   restore-render  pull only what a re-render needs: media, library metadata, the clips in cutlist.json
 #              and the work dir (voice, renders)
 #
@@ -49,6 +52,19 @@ TL=$WORK/voice/timeline.json
 DRIVE=$ROOT/scripts/storage/drive_sync.py
 MASTER=$WORK/out/$NAME.mp4
 
+# picks that are already in the shared library (sources.json) but not on disk come back from Drive, not from
+# the archive again (the library can be restored partly: restore-library pulls only what an edit can use)
+library_pull() {
+  "$PY" -c "import json,os,re,sys; s=json.load(open(sys.argv[2]+'/sources.json')) if os.path.exists(sys.argv[2]+'/sources.json') else {}
+n=lambda k: re.sub(r'[^A-Za-z0-9_-]','_',k.replace(':','_'))
+print('\n'.join(sorted(n(p['key'])+'.mp4' for p in json.load(open(sys.argv[1])) if n(p['key']) in s and not os.path.exists(sys.argv[2]+'/clips/'+n(p['key'])+'.mp4'))))" \
+    "$1" "$LIB" > "$WORK/library_pull.txt"
+  if [ -s "$WORK/library_pull.txt" ]; then
+    echo "pulling $(wc -l < "$WORK/library_pull.txt") picked clips from the Drive library"
+    "$PY" "$DRIVE" pull footage-library/clips "$LIB/clips" --only-list "$WORK/library_pull.txt"
+  fi
+}
+
 stage() {
   echo "=== $1 ($NAME)"
   case $1 in
@@ -64,6 +80,7 @@ stage() {
       "$PY" "$ROOT/scripts/footage/search_sources.py" "$P/footage/terms.txt" "$LIB/candidates.json"
       "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks.json" \
         --max "$LIMIT"
+      library_pull "$WORK/picks.json"
       "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks.json" "$LIB" --jobs "$JOBS" \
         --limit "$LIMIT" --cap-single 12 --cap-multi "$CAP_MULTI" --preset "$PRESET" --from-end
       "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS"
@@ -71,6 +88,7 @@ stage() {
     topup)
       "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks_topup.json" \
         --weak "$WORK/cutlist.json" --below 0.37 --per-item 3 --max 160 --skip "$WORK/picks.json"
+      library_pull "$WORK/picks_topup.json"
       "$PY" "$ROOT/scripts/footage/fetch_proxies.py" "$WORK/picks_topup.json" "$LIB" --jobs "$JOBS" \
         --cap-single 12 --cap-multi "$CAP_MULTI" --preset "$PRESET" --from-end
       "$PY" "$ROOT/scripts/footage/build_shots.py" "$LIB" --workers "$WORKERS"
@@ -82,7 +100,7 @@ stage() {
         keep=(--keep "$WORK/cutlist_prev.json" --changed "$WORK/cutlist_prev.json")
       fi
       "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" \
-        --review "$WORK/review_assign" --avoid "$ROOT/productions" ${keep[@]+"${keep[@]}"} ;;
+        --review "$WORK/review_assign" --avoid "$ROOT/productions" --local-only ${keep[@]+"${keep[@]}"} ;;
     render)  # edit.json "style": "v3" -> render_v3.py (docs/style-guide.md), else the v2 renderer
       mkdir -p "$WORK/out"
       style=$("$PY" -c "import json,sys; print(json.load(open(sys.argv[1])).get('style', 'v2'))" "$P/edit.json")
@@ -116,6 +134,10 @@ stage() {
     restore)
       "$PY" "$DRIVE" pull media "$MEDIA"
       "$PY" "$DRIVE" pull footage-library "$LIB"
+      "$PY" "$DRIVE" pull "productions/$NAME" "$WORK" || echo "(no work dir on Drive yet for $NAME)" ;;
+    restore-library)
+      "$PY" "$DRIVE" pull media "$MEDIA"
+      "$PY" "$DRIVE" pull footage-library "$LIB" --exclude clips
       "$PY" "$DRIVE" pull "productions/$NAME" "$WORK" || echo "(no work dir on Drive yet for $NAME)" ;;
     restore-render)
       "$PY" "$DRIVE" pull media "$MEDIA"

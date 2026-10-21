@@ -48,7 +48,10 @@ def fetch(args):
     return key, False
 
 
-def item_queries(edit, tl):
+def item_queries(edit, tl, voice_wav=None):
+    if edit.get("style") == "v3":
+        import render_v3
+        return render_v3.plan(edit, tl, voice_wav)["items"]
     import render_v2
     items, *_ = render_v2.plan(edit, tl)
     return items
@@ -87,7 +90,7 @@ def main():
         np.savez(cache, keys=np.array(list(have)), img=np.stack([v[0] for v in have.values()]), txt=np.stack([v[1] for v in have.values()]))
     I = np.stack([have[k][0] for k in keys])
     T = np.stack([have[k][1] for k in keys])
-    items = [it for it in item_queries(edit, tl)]
+    items = [it for it in item_queries(edit, tl, os.path.join(os.path.dirname(os.path.abspath(a.timeline)), "narration.wav"))]
     if a.weak:  # top-up round: more candidates only for the items that got weak matches
         cl = json.load(open(a.weak))["items"]
         weak = {(c["sec"], round(c["t0"], 2)) for c in cl if c.get("score", 1) < a.below}

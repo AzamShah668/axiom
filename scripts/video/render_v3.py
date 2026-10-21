@@ -73,20 +73,26 @@ class Timing:
         self.pauses = pauses
         self.breaths = []  # (narration time, seconds)
 
-    def tn(self, sid, trig):
-        s = self.secs[sid]
+    def idx(self, sid, trig, after=0):
+        """Character index of the first occurrence of trig in the section at or after `after`."""
         if trig is None:
-            return s["start"]
-        i = "".join(s["chars"]).find(trig)
+            return after
+        i = "".join(self.secs[sid]["chars"]).find(trig, after)
         if i < 0:
-            raise SystemExit(f"[{sid}] trigger not found: {trig!r}")
-        return s["char_start"][i]
+            raise SystemExit(f"[{sid}] trigger not found{' after the line before' if after else ''}: {trig!r}")
+        return i
+
+    def tn(self, sid, trig, after=0):
+        s = self.secs[sid]
+        if trig is None and not after:
+            return s["start"]
+        return s["char_start"][self.idx(sid, trig, after)]
 
     def v(self, tn):
         return tn + self.off + sum(d for b, d in self.breaths if tn >= b - 1e-6)
 
-    def vt(self, sid, trig):
-        return self.v(self.tn(sid, trig))
+    def vt(self, sid, trig, after=0):
+        return self.v(self.tn(sid, trig, after))
 
     def pause_before(self, tn, look=0.3):
         """The pause that ends right at narration time tn (a word start), or None."""
@@ -201,8 +207,11 @@ def plan(edit, tl, voice_wav=None):
         heads_k = []
         for kk in spec.get("k", []):
             lines, t_prev = [], max(first, T.vt(sid, kk["at"])) if kk["at"] else first + 0.3
+            pos = T.idx(sid, kk["at"]) if kk["at"] else 0  # line triggers are found after the headline's own trigger
             for i, ln in enumerate(kk["lines"]):
-                t = max(first, T.vt(sid, ln["at"])) if ln.get("at") else (t_prev if i == 0 else t_prev + 0.22)
+                if ln.get("at"):
+                    pos = T.idx(sid, ln["at"], pos)
+                t = max(first, T.v(T.secs[sid]["char_start"][pos])) if ln.get("at") else (t_prev if i == 0 else t_prev + 0.22)
                 lines.append({"text": ln["text"], "t": t})
                 t_prev = t
                 sfx.append(("tick", t - 0.01, 0))
@@ -211,12 +220,14 @@ def plan(edit, tl, voice_wav=None):
             if hk["kicker"]:
                 hk["kicker_t"] = lines[0]["t"] - 0.08
             if hk["sub"]:
-                hk["sub_t"] = max(first, T.vt(sid, kk["sub_at"])) if kk.get("sub_at") else lines[-1]["t"] + 0.25
+                hk["sub_t"] = max(first, T.vt(sid, kk["sub_at"], pos)) if kk.get("sub_at") else lines[-1]["t"] + 0.25
             heads_k.append(hk)
         protect = [(hk["t0"] - 0.2, hk["t_last"] + 1.6) for hk in heads_k]
-        for nn in spec.get("n", []):  # number cards over footage: no cut under the count
+        for nn in spec.get("n", []):  # number cards over footage: no cut while the number counts
             t0 = max(first, T.vt(sid, nn["at"])) if nn["at"] else first
-            protect.append((t0 - 0.2, t0 + 3.4))
+            ld = nn["num"].get("land")
+            land = T.vt(sid, ld, T.idx(sid, nn["at"])) if ld else t0 + 1.3
+            protect.append((t0 - 0.2, max(t0 + 1.0, land + 0.5)))
         # beats -> scenes
         vb = spec["v"]
         starts = []
@@ -238,7 +249,7 @@ def plan(edit, tl, voice_wav=None):
                 continue
             if "num" in b:
                 ns = dict(b["num"])
-                land = T.vt(sid, ns["land"]) if ns.get("land") else b0 + 1.3
+                land = T.vt(sid, ns["land"], T.idx(sid, b["at"])) if ns.get("land") else b0 + 1.3
                 ns["land_t"] = max(0.35, land - b0)
                 ns["count_s"] = min(float(ns.get("count", 1.3)), ns["land_t"] - 0.15)
                 items.append({**base, "kind": "num", "t0": b0, "t1": b1, "num": ns, "q": b.get("q") or edit["bg_query"]})
@@ -267,7 +278,7 @@ def plan(edit, tl, voice_wav=None):
         for nn in spec.get("n", []):
             ns = dict(nn["num"])
             t0 = max(first, T.vt(sid, nn["at"])) if nn["at"] else first
-            land = T.vt(sid, ns["land"]) if ns.get("land") else t0 + 1.3
+            land = T.vt(sid, ns["land"], T.idx(sid, nn["at"])) if ns.get("land") else t0 + 1.3
             ns["land_t"] = max(0.35, land - t0)
             ns["count_s"] = min(float(ns.get("count", 1.3)), ns["land_t"] - 0.15)
             t1 = t0 + float(ns.get("dur", 3.5 if ns.get("template") == "name" else ns["land_t"] + 2.2))
@@ -362,12 +373,12 @@ def plan(edit, tl, voice_wav=None):
             mus.append({"kind": "swell", "t0": tm, "peak": tm + 0.05, "t1": tm + 2.5, "db": 4.0})
         else:
             mus.append({"kind": "swell", "t0": tb - 0.2, "peak": tm, "t1": tm + 1.8, "db": float(m.get("swell", 7.0))})
-    # headline end: the first cut after its last line has been read (1.6 s), at most 6 s after it
+    # headline end: the first cut after its last line has been read (1.6 s), at most 4 s after it
     bounds = [it["t0"] for it in items]
     for o in ovl:
         if o["kind"] == "headline":
             after = [b for b in bounds if b >= o["t_last"] + 1.6]
-            o["t1"] = min(after[0] if after else o["t_last"] + 3.0, o["t_last"] + 6.0)
+            o["t1"] = min(after[0] if after else o["t_last"] + 3.0, o["t_last"] + 4.0)
             nxt = [p["t0"] for p in ovl if (p["kind"] in ("keyline", "headline") or (p["kind"] == "num" and
                    p["num"].get("template") != "name")) and o["t_last"] < p["t0"] < o["t1"]]
             if nxt:  # make way for the next key line / number card
