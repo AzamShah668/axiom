@@ -18,6 +18,10 @@ python scripts/video/thumbnail.py <4K still or frame.jpg> $MEDIA/fonts productio
   - a full-bleed hero image with a 2-line English hook
   - one keyword in yellow ("SOME ARE *OLDER THAN GALAXIES*")
   - "Hindi Documentary" kept in the title
+  ```bash
+  python scripts/video/thumbnail.py <frame.jpg> $MEDIA/fonts thumbnail.jpg --fullbleed "A TEASPOON WEIGHS" "*1 BILLION TONS*" \
+    --label "Neutron Stars" --focus 0.6     # focus: where the subject sits horizontally (0-1)
+  ```
 - 1280x720.
 - Use a frame from a shot in the cut (`ffmpeg -ss <t> -i master.mp4 -frames:v 1`) or an archive still with
   a CC BY / public-domain licence.
