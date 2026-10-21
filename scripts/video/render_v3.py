@@ -32,6 +32,7 @@ W, H, FPS, SR = rv.W, rv.H, rv.FPS, rv.SR
 G = rv.G
 TARGET = {"default": 3.0, "hold": 5.5, "flash": 0.6}   # scene length by beat option (s)
 MIN_SCENE = {"default": 1.4, "hold": 3.0, "flash": 0.45}
+MAX_SCENE = {"default": 6.5, "hold": 8.0, "flash": 1.0}   # hard cap: may cut under a headline (overlays persist)
 MOVES = ["push", "drift", "pull", "push", "roll"]
 TD = {"dip": 12, "dissolve": 12, "flare": 10, "flash": 8, "whip": 9, "zoom": 10, "soft": 8}  # transition frames
 BED_LU = 16.0      # music bed under the voice while speaking (LU); pauses get +PAUSE_LIFT dB
@@ -272,6 +273,17 @@ def plan(edit, tl, voice_wav=None):
                 elif ideal - cuts[-1] >= mn and not any(a_ <= ideal <= z_ for a_, z_ in protect):
                     cuts.append(ideal)
             cuts.append(b1)
+            mx = MAX_SCENE.get(opt if opt in MAX_SCENE else "default", 6.5)
+            q = 0
+            while q < len(cuts) - 1:  # split anything still longer than the cap, protected windows or not
+                c0, c1 = cuts[q], cuts[q + 1]
+                if c1 - c0 <= mx:
+                    q += 1
+                    continue
+                mid = (c0 + c1) / 2
+                ok = [(t, d) for t, d in cands if c0 + mn <= t <= c1 - mn]
+                cut = min(ok, key=lambda c: abs(c[0] - mid) - (0.6 if c[1] >= 0.15 else 0))[0] if ok else mid
+                cuts.insert(q + 1, cut)
             for q in range(len(cuts) - 1):
                 items.append({**base, "kind": "clip", "t0": cuts[q], "t1": cuts[q + 1], "q": b["q"], "opt": opt})
         # number cards over the running footage
