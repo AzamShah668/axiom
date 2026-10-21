@@ -49,8 +49,19 @@ Production 01 (`productions/01-dark-matter/script.md`) is the reference example.
   बराबर है।"), so the count-up stops on the spoken word.
 - Plan 3-5 moments: a reveal word after a natural pause ("…छुपी थी… Black Hole."). The edit adds the breath.
 - English words a Hindi viewer knows (galaxy, gravity, telescope) stay English, which suits Neel's accent.
+- **Simple, spoken Hindi only (owner's rule).** The narration is heard once, so every word must be understood
+  on first hearing.
+  - Never use textbook, Sanskritised or literary-Urdu words such as कण, घनत्व, तत्व, चरम, नियमित, सटीक,
+    शक्तिशाली, वायुमंडल, साम्राज्य, माद्दा, केंद्र, घातक, कंपन, हैरत-अंगेज़, पेश करना.
+  - Use the everyday word (घने, ताक़तवर, सबसे तेज़, बीच में, ख़तरनाक, कमाल का, दिखाया), or the English word
+    viewers already use (particle, elements, atmosphere).
+  - Full list and the 15-year-old test: `productions/README.md`.
+- Lines must agree with each other: don't start a fact with "is kahaani ki shuruaat…" when the cold open
+  already started the story.
 
 ## Check before handing over
 - Read the Devanagari aloud mentally: no Latin-script Hindi words, no digits, no symbols ElevenLabs reads oddly (×, %, ~).
+- Plain-words pass: search the Devanagari for the formal words listed above and replace every one.
+  The edit stage is no place to discover them.
 - Numbers in captions and cards come from the fact-check table.
 - Commit `script.md` and `tts/narration.hi.md`.

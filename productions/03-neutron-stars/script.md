@@ -82,7 +82,7 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 
 ### HOOK (0:00-0:28)
 
-> Neutron star. Ek mare hue taare ka bacha hua dil. Sirf ek shehar jitna bada, lekin Sun se bhi bhaari. Iske maadde ka ek chammach, Earth par, lagbhag ek arab ton ka hoga. Kuch neutron stars, ek second mein saat sau baar se bhi zyaada ghoomte hain. Aur jab do neutron stars takraate hain, to brahmaand mein sona banta hai. Lekin in taaron ki kahaani shuru hoti hai, lagbhag ek hazaar saal pehle... aasmaan mein achaanak jaage, ek mehmaan taare se.
+> Neutron star. Ek mare hue taare ka bacha hua dil. Sirf ek shehar jitna bada, lekin Sun se bhi bhaari. Iska sirf ek chammach, Earth par, lagbhag ek arab ton ka hoga. Kuch neutron stars, ek second mein saat sau baar se bhi zyaada ghoomte hain. Aur jab do neutron stars takraate hain, to brahmaand mein sona banta hai. Lekin in taaron ki kahaani shuru hoti hai, lagbhag ek hazaar saal pehle... aasmaan mein achaanak jaage, ek mehmaan taare se.
 
 - **On-screen:**
   - **K** `NEUTRON STAR` / `THE HEART OF A DEAD STAR`
@@ -94,7 +94,7 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 
 ### COLD OPEN (0:28-1:30)
 
-> Chaar July, das sau chauvan. China ke Song saamraajya ki rajdhaani mein, darbaar ke jyotishiyon ne, subah-subah poorab ke aasmaan mein ek naya taara dekha. Woh itna chamakdaar tha, ki teyees din tak, din ki roshni mein bhi dikhta raha. Unhone use naam diya... ek mehmaan taara.
+> Chaar July, das sau chauvan. China mein, raja ke darbaar ke jyotishiyon ne, subah-subah poorab ke aasmaan mein ek naya taara dekha. Woh itna chamakdaar tha, ki teyees din tak, din ki roshni mein bhi dikhta raha. Unhone use naam diya... ek mehmaan taara.
 >
 > Lagbhag do saal baad, woh mehmaan taara gaayab ho gaya. Lekin jahaan woh chamka tha, wahaan aaj gas aur dhool ka ek vishaal, chamakta hua badal hai. Crab Nebula. Lagbhag saadhe chhah hazaar light-years door.
 >
@@ -112,7 +112,7 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 
 ### FACT #10: Predicted in 1934, before anyone saw one (1:30-2:30)
 
-> Is kahaani ki shuruaat ek naye kan se hui. Unnees sau battees mein, England ke James Chadwick ne atom ke andar ek naya kan khoja. Us par koi electric charge nahi tha... neutron.
+> Neutron star ka khayal, ek nayi khoj se paida hua. Unnees sau battees mein, England ke James Chadwick ne atom ke andar ek naya particle khoja. Us par koi electric charge nahi tha... neutron.
 >
 > Sirf do saal ke andar, California mein, do astronomers ne isse ek bahut badi baat jod di. Germany se aaye Walter Baade, aur Switzerland ke Fritz Zwicky. Unhone likha, ki jab ek bhaari taara phatta hai, to uska bacha hua core itna dab sakta hai, ki uske atom toot kar, lagbhag sirf neutrons ka ek gola ban jaayein. Ek neutron star.
 >
@@ -134,7 +134,7 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 >
 > Telescope har din lagbhag tees meter lamba chart paper chhaapta tha, aur Jocelyn use haath se padhti thin. August mein, unhe kaagaz par ek ajeeb sa nishaan dikha. Bas aadha inch lamba. Unhone use naam diya... scruff.
 >
-> November mein, jab us nishaan ko tezi se record kiya gaya, to usme lehrein thin. Bilkul niyamit. Har ek dashamlav teen teen saat second mein ek. Itni sateek, ki team ne mazaak mein us signal ka naam rakha... LGM-One. Little Green Men.
+> November mein, jab us nishaan ko tezi se record kiya gaya, to usme lehrein thin. Bilkul ghadi ki tik-tik jaisi. Har ek dashamlav teen teen saat second mein ek. Itni ek jaisi, ki team ne mazaak mein us signal ka naam rakha... LGM-One. Little Green Men.
 >
 > Lekin yeh koi aliens nahi the. Yeh pehla pulsar tha. Ek ghoomta hua neutron star, jo kisi lighthouse ki tarah, har chakkar mein radio lehron ki ek kiran Earth ki taraf phenkta tha. Agle hi saal, Crab Nebula ke beech bhi ek pulsar mila. Baade aur Zwicky sahi the.
 >
@@ -153,13 +153,13 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 
 ### FACT #8: The first planets circled a dead star (4:00-5:10)
 
-> Pulsars itni sateek ghadiyaan hain, ki unki lehron mein zara si bhi gadbad pakdi ja sakti hai. Unnees sau nabbe mein, Puerto Rico ke vishaal Arecibo telescope se, Polish astronomer Aleksander Wolszczan ne ek pulsar khoja, jo har second ek sau iksath baar ghoomta tha.
+> Pulsars itni sahi ghadiyaan hain, ki unki lehron mein zara si bhi gadbad pakdi ja sakti hai. Unnees sau nabbe mein, Puerto Rico ke vishaal Arecibo telescope se, Polish astronomer Aleksander Wolszczan ne ek pulsar khoja, jo har second ek sau iksath baar ghoomta tha.
 >
 > Uski lehrein kabhi thodi pehle aati thin, kabhi thodi der se. Ek dohraata hua pattern. Wolszczan aur unke saathi Dale Frail ne samjha, ki is pulsar ke charon taraf grah ghoom rahe hain, jo use halka sa kheench rahe hain.
 >
 > Unnees sau baanve mein yeh khoj chhapi. Sun ke alawa kisi bhi taare ke charon taraf, yeh pehle pakke grah the. Earth se lagbhag chaar guna bhaari do grah, aur baad mein mila ek teesra, Chaand se bas dugna bhaari.
 >
-> Lekin yeh grah ek mare hue taare ke charon taraf ghoomte hain, aur un par lagaataar pulsar ki ghaatak radiation barasti hai. Sun jaise kisi taare ke paas pehla grah, iske teen saal baad mila.
+> Lekin yeh grah ek mare hue taare ke charon taraf ghoomte hain, aur un par lagaataar pulsar ki khatarnaak radiation barasti hai. Sun jaise kisi taare ke paas pehla grah, iske teen saal baad mila.
 
 - **On-screen:**
   - `1990` · `ARECIBO OBSERVATORY` · L `ALEKSANDER WOLSZCZAN` / L `DALE FRAIL`
@@ -172,13 +172,13 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 
 ### FACT #7: A city-sized star spinning 716 times a second (5:10-6:15)
 
-> Neutron stars ki sabse ajeeb baat hai, unka ghanatva. Jab ek bhaari taare ka core dhehta hai, to Sun se bhi zyaada mass, sirf bees kilometer ke ek gole mein simat jaata hai.
+> Neutron stars ki sabse ajeeb baat hai, ki woh kitne ghane hote hain. Jab ek bhaari taare ka core dhehta hai, to Sun se bhi zyaada mass, sirf bees kilometer ke ek gole mein simat jaata hai.
 >
-> NASA ke mutaabik, neutron star ke maadde ka ek chammach, Earth par, lagbhag ek arab ton ka hoga.
+> NASA ke mutaabik, neutron star ka ek chammach, Earth par, lagbhag ek arab ton ka hoga.
 >
 > Aur yeh gole ghoomte bhi hain. Do hazaar chaar mein, America ke Green Bank Telescope ne, Terzan Five naam ke taaron ke ek ghane jhund ko record kiya. McGill University ke student Jason Hessels ko us data mein ek pulsar mila, jo har second saat sau solah baar ghoomta hai. Aaj tak koi bhi neutron star isse tez ghoomta nahi mila.
 >
-> Itni raftaar par, agar yeh taara thoda sa bhi bada hota, to uski satah ka maadda khud hi chhitak kar door ud jaata. Isliye scientists ke hisaab se, yeh battees kilometer se zyaada chauda ho hi nahi sakta.
+> Itni raftaar par, agar yeh taara thoda sa bhi bada hota, to uski satah khud hi bikhar kar door ud jaati. Isliye scientists ke hisaab se, yeh battees kilometer se zyaada chauda ho hi nahi sakta.
 
 - **On-screen:**
   - **N equation** `1.4 SUNS` → `20 KM`
@@ -191,11 +191,11 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 
 ### FACT #6: The strongest magnets in the universe (6:15-7:30)
 
-> Kuch neutron stars ke paas ek aur taakat hoti hai. Woh brahmaand ke sabse shaktishaali magnet hain... magnetars. Unka magnetic field, Earth ke magnetic field se lagbhag das laakh arab guna zyaada hota hai.
+> Kuch neutron stars ke paas ek aur taakat hoti hai. Woh brahmaand ke sabse taakatvar magnet hain... magnetars. Unka magnetic field, Earth ke magnetic field se lagbhag das laakh arab guna zyaada hota hai.
 >
 > Sattaees December, do hazaar chaar. Galaxy ke doosri taraf, hazaaron light-years door, ek magnetar ki satah achaanak phat padi. Sirf ek second ke dasve hisse mein, usne itni energy chhodi, jitni Sun ek laakh pachaas hazaar saal mein chhodta hai.
 >
-> Woh flash itna tez tha, ki kai satellites ke detectors kuch pal ke liye andhe ho gaye. Uski lehar ne Earth ke upari vaayumandal tak ko hila diya. Scientists ke mutaabik, agar aisa magnetar das light-years ke andar hota, to Earth ke vaayumandal ko bhaari nuksaan pahunch sakta tha.
+> Woh flash itna tez tha, ki kai satellites ke detectors kuch pal ke liye andhe ho gaye. Uski lehar ne Earth ke atmosphere ki upari paraton tak ko hila diya. Scientists ke mutaabik, agar aisa magnetar das light-years ke andar hota, to Earth ke atmosphere ko bhaari nuksaan pahunch sakta tha.
 >
 > Lekin us flash ke baad, ek halki si chamak ghanton tak bani rahi. Bees saal tak, koi uska matlab nahi samajh paaya.
 
@@ -211,11 +211,11 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 
 ### FACT #5: When they collide, they make gold (7:30-8:50)
 
-> Satrah August, do hazaar satrah. America ke LIGO aur Italy ke Virgo detectors ne space mein ek kampan pakda. Lagbhag sau second tak, do neutron stars ek doosre ke charon taraf ghoomte hue paas aate gaye, aur phir takra gaye.
+> Satrah August, do hazaar satrah. America ke LIGO aur Italy ke Virgo detectors ne space mein ek halki si lehar pakdi. Lagbhag sau second tak, do neutron stars ek doosre ke charon taraf ghoomte hue paas aate gaye, aur phir takra gaye.
 >
 > Sirf ek dashamlav saat second baad, NASA ke Fermi satellite ne usi disha se gamma rays ki ek chamak pakdi. Gyaarah ghante ke andar, Chile ke ek telescope ne takkar ki jagah dhoondh li. Terah crore light-years door, ek galaxy mein. Phir lagbhag sattar observatories ne us taraf dekha.
 >
-> Jo dikha, woh itihaas mein pehli baar tha. Takkar se nikla malba, naye bane bhaari tatvon ki roshni mein chamak raha tha... ek kilonova. Usme platinum tha. Aur... sona tha.
+> Jo dikha, woh itihaas mein pehli baar tha. Takkar se nikla malba, naye bane bhaari elements ki roshni mein chamak raha tha... ek kilonova. Usme platinum tha. Aur... sona tha.
 >
 > Ek anumaan ke mutaabik, is ek takkar mein, Earth se lagbhag das guna bhaari sona aur platinum bana.
 
@@ -263,11 +263,11 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 
 ### FACT #2: Pulsars turned the galaxy into a detector (11:00-12:00)
 
-> Pulsars brahmaand ki sabse sateek ghadiyaan hain. Isi baat ne scientists ko ek hairat-angez idea diya. Poori galaxy ko hi ek detector bana dena.
+> Pulsars brahmaand ki sabse sahi ghadiyaan hain. Isi baat ne scientists ko ek kamaal ka idea diya. Poori galaxy ko hi ek detector bana dena.
 >
 > Pandrah saal tak, NANOGrav team ne Milky Way mein bikhre adsath pulsars ki lehron ka samay, behad baareeki se naapa. Agar space mein gravitational waves ki bahut lambi lehrein guzar rahi hon, to in pulsars ki tik-tik ek khaas pattern mein aage-peeche hogi.
 >
-> June do hazaar teyees mein, NANOGrav aur duniya ki kai aur teams ne theek isi pattern ka saboot pesh kiya. Yeh lehrein saalon lambi hain, aur shayad brahmaand bhar mein ek doosre ke chakkar lagaate, vishaal black holes ke jodon se aati hain.
+> June do hazaar teyees mein, NANOGrav aur duniya ki kai aur teams ne theek isi pattern ka saboot dikhaya. Yeh lehrein saalon lambi hain, aur shayad brahmaand bhar mein ek doosre ke chakkar lagaate, vishaal black holes ke jodon se aati hain.
 
 - **On-screen:**
   - **K** `THE GALAXY` / `*AS A DETECTOR*`
@@ -280,13 +280,13 @@ About 2,000 words of narration. Real timing comes from the ElevenLabs render (ta
 
 > Do hazaar chaar ke us magnetar flash ke baad ki halki chamak, bees saal tak ek paheli rahi.
 >
-> Do hazaar chaubees mein, Columbia University ke PhD student Anirudh Patel, apne supervisor Brian Metzger ke saath, ek naye hisaab par kaam kar rahe the. Agar magnetar ke flash mein uski satah ka kuch hissa ukhad kar bahar ude, to usme bhaari tatva ban sakte hain. Aur unki radioactive chamak, flash ke lagbhag das minute baad, apne charam par hogi.
+> Do hazaar chaubees mein, Columbia University ke PhD student Anirudh Patel, apne supervisor Brian Metzger ke saath, ek naye hisaab par kaam kar rahe the. Agar magnetar ke flash mein uski satah ka kuch hissa ukhad kar bahar ude, to usme bhaari elements ban sakte hain. Aur unki radioactive chamak, flash ke lagbhag das minute baad, sabse tez hogi.
 >
 > Louisiana State University ke Eric Burns ko, ESA ke INTEGRAL satellite ke puraane data mein, theek aisi hi chamak mili. Do hazaar chaar ke flash ke, das minute baad.
 >
-> April do hazaar pachchees mein yeh nateeja chhapa. Us ek flash mein, sona, platinum aur uranium jaise bhaari tatva bane the. Kul milaakar... Earth ke lagbhag ek-tihaai mass jitne. Scientists ke anumaan se, Milky Way ke aise bhaari tatvon ka das percent tak hissa, magnetars ke flashes se aaya ho sakta hai.
+> April do hazaar pachchees mein yeh nateeja chhapa. Us ek flash mein, sona, platinum aur uranium jaise bhaari elements bane the. Kul milaakar... Earth ke lagbhag ek-tihaai mass jitne. Scientists ke anumaan se, Milky Way ke aise bhaari elements ka das percent tak hissa, magnetars ke flashes se aaya ho sakta hai.
 >
-> Lagbhag ek hazaar saal pehle, China ke jyotishiyon ne ek mehmaan taare ko chamakte dekha tha. Aaj insaan jaanta hai, ki us maut ne ek aisa taara peeche chhoda, jo ek shehar jitna bada hai, Sun se bhaari hai, aur sona tak bana sakta hai. Lekin sabse bada sawaal ab bhi wahin khada hai. Ek neutron star ke bilkul kendra mein, jahaan maadda kisi atom ke nucleus se bhi zyaada daba hai, wahaan asal mein kya hai? Shayad wahaan aisa maadda hai, jo brahmaand mein aur kahin nahi milta.
+> Lagbhag ek hazaar saal pehle, China ke jyotishiyon ne ek mehmaan taare ko chamakte dekha tha. Aaj insaan jaanta hai, ki us maut ne ek aisa taara peeche chhoda, jo ek shehar jitna bada hai, Sun se bhaari hai, aur sona tak bana sakta hai. Lekin sabse bada sawaal ab bhi wahin khada hai. Ek neutron star ke bilkul beech mein, jahaan har cheez kisi atom ke nucleus se bhi zyaada dabi hai, wahaan asal mein kya hai? Shayad wahaan kuch aisa hai, jo brahmaand mein aur kahin nahi milta.
 
 - **On-screen:**
   - `2024` · L `ANIRUDH PATEL` / `PhD student, Columbia` · L `BRIAN METZGER`

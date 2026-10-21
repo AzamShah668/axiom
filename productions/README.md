@@ -20,6 +20,16 @@
 - **Subjects are the characters of the story:** scientists, Earth, the galaxy, insaan / insaaniyat. Avoid "hum/hamara" as a way of addressing the viewer.
 - The narration runs as one continuous story with a cold open. List and countdown structure lives **only on screen** (chapter cards); the voice flows from one fact into the next.
 - Calm, awe-filled documentary tone with steady pacing and no hype.
+- **Simple, spoken Hindi (owner's rule, 2026-10-21).** Write the way people talk, not the way a textbook reads.
+  Every line is heard only once, so a viewer has to understand it on first hearing.
+  - Avoid formal, Sanskritised or literary Urdu words, for example कण (particle), घनत्व (density), तत्व
+    (elements), चरम (peak), नियमित (regular), सटीक (precise), शक्तिशाली (powerful), वायुमंडल (atmosphere),
+    साम्राज्य (empire), माद्दा (matter), केंद्र (centre), घातक (deadly), हैरत-अंगेज़ (amazing).
+  - Use the everyday word (घने, ताक़तवर, सबसे तेज़, बीच में, ख़तरनाक, कमाल का), or the English word that Hindi
+    viewers already use (particle, elements, atmosphere, density).
+  - Test: if a 15-year-old wouldn't get the line on first hearing, simplify it.
+- **Lines must agree with each other.** For example, a fact must not say "this story began with…" when the cold
+  open already began the story somewhere else.
 
 ## Voice
 - **Locked voice:** ElevenLabs library voice **Neel – Paranormal Story Narrator** (Hindi), model `eleven_multilingual_v2`, stability 0.5, similarity 0.75, style 0, speed 1.0. See `voice-preset.json`.

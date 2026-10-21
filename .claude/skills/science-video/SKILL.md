@@ -44,6 +44,8 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
 - **Narration:** pure third-person storytelling. Never address the viewer: no "aap", commands, questions to
   the audience, "number 10..." announcements or subscribe requests. Countdown lives only on the chapter cards.
   No India-specific comparisons. Voice: ElevenLabs "Neel - Paranormal Story Narrator" (`productions/voice-preset.json`).
+  **Simple spoken Hindi:** no textbook or literary words (कण, घनत्व, तत्व, चरम …). Use everyday words or the
+  English word viewers know; see `productions/README.md`.
 - **Footage:**
   - Every footage shot comes from a **4K source** (>= 3840 px wide; `fetch_proxies.py` refuses anything less).
   - It is **continuously moving**: frozen seconds are cut by `build_shots.py`.
