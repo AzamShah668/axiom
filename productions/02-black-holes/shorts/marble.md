@@ -1,6 +1,6 @@
 # YouTube Short: marble (video 02, own script)
 
-Not uploaded yet. Upload **private**; no thumbnail (the owner adds it), no caption track. In YouTube Studio set
+Uploaded 2026-10-22: https://youtu.be/ApxbLmi0Yts, scheduled public 2026-10-23 08:00 IST (02:30 UTC). no thumbnail (the owner adds it), no caption track. In YouTube Studio set
 **Related video** to the full video: "The Terrifying Truth About What Lies Inside a Black Hole | Hindi Documentary"
 (https://youtu.be/OVmFrJzqTuU).
 
