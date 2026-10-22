@@ -20,4 +20,5 @@ body: In 2019, this stopped .. A star had never been seen
 == marble | If Earth Became a Black Hole, It Would Be the Size of a Marble #shorts
 top: EARTH AS A BLACK HOLE / *THE SIZE OF A MARBLE*
 hook: If the whole Earth were squeezed
+captions: shorts/marble/tts/captions.hinglish.md
 body: But this calculation .. He never knew

@@ -543,6 +543,9 @@ def draw_ovl(fr, ovl, t):
             mg.footer(fr, o["left"], o["right"], op)
         elif k == "endcard":
             mg.endcard(fr, t, o["t0"], o["t1"])
+    for o in ovl:  # captions last: nothing covers the line being spoken
+        if o["kind"] == "captions":
+            mg.captions(fr, o, t)
 
 
 def init(clips, fonts, assets, grade):

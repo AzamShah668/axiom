@@ -714,6 +714,73 @@ def _name(fr, spec, t, D):
         paste(fr, sub, x + 26 - (sub.shape[1] - text_w(sub, 26)) / 2, y + 48, op=out * ease_out((t - 0.35) / 0.3), anchor="l")
 
 
+# ------------------------------------------------------------------ captions (Shorts)
+CAPTION = {"y": 0.8, "size": 76, "maxw": 0.8}  # centre line (of H), font px, widest line (of W)
+
+
+@lru_cache(maxsize=1024)
+def _cap_word(text, gold, size):
+    """One caption word as BGRA: Montserrat ExtraBold, white (or gold, the word being spoken), black outline."""
+    f = _font("Montserrat", size, "ExtraBold")
+    sw = max(3, size // 11)
+    b = f.getbbox(text, stroke_width=sw)
+    pad = int(size * 0.3)
+    tw, th = b[2] - b[0] + 2 * pad, b[3] - b[1] + 2 * pad
+    xy = (pad - b[0], pad - b[1])
+    full, fill = Image.new("L", (tw, th), 0), Image.new("L", (tw, th), 0)
+    ImageDraw.Draw(full).text(xy, text, font=f, fill=255, stroke_width=sw, stroke_fill=255)
+    ImageDraw.Draw(fill).text(xy, text, font=f, fill=255)
+    m, mf = np.array(full, np.float32) / 255, np.array(fill, np.float32) / 255
+    if gold:
+        rows = np.where(mf.max(1) > 0)[0]
+        y0, y1 = (rows[0], rows[-1]) if len(rows) else (0, th - 1)
+        k = np.clip((np.arange(th) - y0) / max(1, y1 - y0), 0, 1)[:, None, None]
+        top, bot = np.array(GOLD[0], np.float32)[::-1], np.array(GOLD[1], np.float32)[::-1]
+        col = np.broadcast_to(top + (bot - top) * k, (th, tw, 3))
+    else:
+        col = np.full((th, tw, 3), 255, np.float32)
+    rgb = col * mf[..., None]  # the outline is black: colour only where the letter fills
+    sh = cv2.GaussianBlur(np.roll(m, (int(size * 0.05), int(size * 0.03)), (0, 1)), (0, 0), size * 0.06) * 0.6
+    a = np.clip(m + sh * (1 - m), 0, 1)
+    return np.dstack([np.clip(rgb / np.maximum(a[..., None], 1e-4), 0, 255), a * 255]).astype(np.uint8)
+
+
+def captions(fr, spec, t):
+    """Burned-in captions: the line being spoken, a few words at a time, the current word gold with a small pop.
+    spec["chunks"] = [{"t0", "t1", "words": [[t, text], ...]}] on the video clock."""
+    ch = next((c for c in spec["chunks"] if c["t0"] <= t < c["t1"]), None)
+    if ch is None:
+        return
+    size = CAPTION["size"]
+    ws = ch["words"]
+    cur = max([i for i, (wt, _) in enumerate(ws) if wt <= t + 0.02] or [0])
+    lay = [_cap_word(x, False, size) for _, x in ws]
+    wid = [text_w(l_, size) for l_ in lay]
+    sp = size * 0.3
+    lines, row, wrow = [], [], 0.0  # one line, or two when the words do not fit
+    for i, w_ in enumerate(wid):
+        if row and wrow + sp + w_ > CAPTION["maxw"] * W:
+            lines.append(row)
+            row, wrow = [], 0.0
+        row.append(i)
+        wrow += (sp if len(row) > 1 else 0) + w_
+    lines.append(row)
+    lh = size * 1.18
+    yc = H * CAPTION["y"] - lh * (len(lines) - 1) / 2
+    e = ease_out((t - ch["t0"]) / 0.12)
+    wide = max(sum(wid[i] for i in r) + sp * (len(r) - 1) for r in lines)
+    shade_box(fr, W / 2, yc + lh * (len(lines) - 1) / 2, wide / 2 + 70, lh * len(lines) / 2 + 40, op=e, strength=0.4)
+    for k, r in enumerate(lines):
+        x = W / 2 - (sum(wid[i] for i in r) + sp * (len(r) - 1)) / 2
+        y = yc + k * lh + (1 - e) * 14
+        for i in r:
+            gold = i == cur
+            l_ = _cap_word(ws[i][1], True, size) if gold else lay[i]
+            pop = 1.0 + (0.1 * max(0.0, 1 - (t - ws[i][0]) / 0.16) if gold else 0.0)
+            paste(fr, l_, x + wid[i] / 2, y, op=e, scale=pop)
+            x += wid[i] + sp
+
+
 # ------------------------------------------------------------------ cards, title, footer, logo
 def chapter(fr, num, n_total, title, t, D):
     """FACT #n card: tracked 'FACT', a big gold number rising in, the title revealed word by word,

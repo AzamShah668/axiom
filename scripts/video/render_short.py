@@ -15,6 +15,12 @@ shorts.spec, one block per Short. Master lines are found by the start of their E
                                                 hook_shots.py. Without it the master hook line's shots are stretched
   body: <caption start> .. <caption start>      a run of master lines in story order (the hook line is left out)
   body: ...                                     further runs are joined in order
+  say_roman: <the say line in Roman letters>   its burned-in caption (Hinglish), word for word
+  captions: <file>                              the narration in Roman letters, word for word (relative to the
+                                                spec), e.g. shorts/marble/tts/captions.hinglish.md
+Every Short has burned-in captions (owner's rule, 2026-10-22): the words being spoken, in Roman letters, a few
+at a time, the current word gold. Each caption word stands for one spoken word ({1915|3} = for three); the
+render stops when the counts differ.
 Without say:, the hook is the master line itself. A spoken hook never waits: pauses inside it are cut to 0.15 s
 (0.3 s between sentences).
 
@@ -68,7 +74,7 @@ def parse_spec(path):
             shot, _, rest = val.partition("@")
             off, _, word = rest.partition("|")
             cur.setdefault("hook_shots", []).append((shot.strip(), float(off), word.strip()))
-        elif key in ("top", "hook", "say", "say_en", "land"):
+        elif key in ("top", "hook", "say", "say_en", "say_roman", "land", "captions"):
             cur[key] = val.strip()
     return shorts
 
@@ -199,7 +205,105 @@ def spoken_hook(spec, out_dir):
             words.setdefault(text[k:].split()[0].strip(",.?!।…"), at(cs[k]))
     if gaps:
         print(f"  hook: {len(gaps)} pauses cut ({sum(g1 - g0 for g0, g1 in gaps):.2f} s)")
-    return voice, at(b), at(cs[land] if land >= 0 else ce[-1]), words
+    order = [(at(t), w) for t, w in spoken_words(list(text), cs)]
+    return voice, at(b), at(cs[land] if land >= 0 else ce[-1]), words, order
+
+
+# ------------------------------------------------------------------ captions
+TOKEN = re.compile(r"\{([^|}]+)\|(\d+)\}([,.?!।…]*)|(\S+)")
+PUNCT = ",.?!।…"
+
+
+def roman_tokens(text):
+    """Caption tokens of a Roman-letter line: [(shown text, spoken words it stands for, ends a caption line)]."""
+    out = []
+    for m in TOKEN.finditer(text):
+        if m.group(1):
+            word, n, punct = m.group(1), int(m.group(2)), m.group(3)
+        else:
+            raw = m.group(4)
+            word, n, punct = raw.rstrip(PUNCT), 1, raw[len(raw.rstrip(PUNCT)):]
+        if word:
+            out.append((word + ("?" if "?" in punct else "!" if "!" in punct else ""), n, bool(punct)))
+    return out
+
+
+def spoken_words(chars, starts):
+    """[(start time, word)] of every spoken word: whitespace tokens with a letter or digit in them."""
+    out, i, n = [], 0, len(chars)
+    while i < n:
+        if chars[i].isspace():
+            i += 1
+            continue
+        j = i
+        while j < n and not chars[j].isspace():
+            j += 1
+        w = "".join(chars[i:j])
+        if any(c.isalnum() for c in w):
+            out.append((starts[i], w))
+        i = j
+    return out
+
+
+def match_words(name, spoken, tokens):
+    """Time each caption token by the first spoken word it stands for: [(t, text, ends a line)]."""
+    need = sum(n for _, n, _ in tokens)
+    if need != len(spoken):
+        pairs, k = [], 0
+        for text, n, _ in tokens:
+            pairs.append(f"{text}={' '.join(w for _, w in spoken[k:k + n])}")
+            k += n
+        raise SystemExit(f"captions [{name}]: {need} caption words for {len(spoken)} spoken words. "
+                         f"Pairs so far: {' | '.join(pairs)}")
+    out, k = [], 0
+    for text, n, brk in tokens:
+        out.append((spoken[k][0], text, brk))
+        k += n
+    return out
+
+
+def caption_words(path, timeline, P):
+    """Caption words of the plan's narration on the plan's clock (lead-in and breaths added like render_v3)."""
+    secs, cur = {}, None
+    for ln in open(path, encoding="utf-8"):
+        if ln.startswith("## "):
+            cur = secs.setdefault(ln[3:].strip(), [])
+        elif cur is not None and not ln.startswith("#"):
+            cur += roman_tokens(ln)
+
+    def v(tn):
+        return tn + P["off"] + sum(d for b, d in P["breaths"] if tn >= b - 1e-6)
+
+    out = []
+    for s in json.load(open(timeline))["sections"]:
+        if s["id"] in secs:
+            out += [(v(t), x, brk) for t, x, brk in match_words(s["id"], spoken_words(s["chars"], s["char_start"]), secs[s["id"]])]
+    return out
+
+
+def caption_chunks(ws, total, most=4, chars=20):
+    """Caption lines on the Short's clock: a few words each, broken at punctuation, no one-word orphans; a line
+    shows from just before its first word until the next line (or a little after its last word in a pause)."""
+    groups, cur = [], []
+    for w in ws:
+        cur.append(w)
+        if w[2] or len(cur) >= most or sum(len(x) for _, x, _ in cur) >= chars:
+            groups.append(cur)
+            cur = []
+    if cur:
+        groups.append(cur)
+    merged = []
+    for g in groups:
+        if merged and len(g) == 1 and not merged[-1][-1][2]:
+            merged[-1] = merged[-1] + g
+        else:
+            merged.append(g)
+    out = []
+    for i, g in enumerate(merged):
+        t0 = max(0.0, g[0][0] - 0.08)
+        nxt = merged[i + 1][0][0] - 0.08 if i + 1 < len(merged) else total
+        out.append({"t0": t0, "t1": min(nxt, g[-1][0] + 1.1, total), "words": [[t, x] for t, x, _ in g]})
+    return out
 
 
 # ------------------------------------------------------------------ plan
@@ -271,14 +375,14 @@ def hook_items(hs, Dh, words):
     return items
 
 
-def build(spec, P, L, hook=None):
+def build(spec, P, L, hook=None, capw=()):
     """Plan on the Short's clock at master speed (scale_plan() speeds it up). hook = (duration, land_t) of a
     spoken hook laid over the master hook line's shots, or None to use the master line itself."""
     segs = segments(spec, L)
     items, ovl, sfx, mus, caps = [], [], [], [], []
     a, b = segs[0]
     if hook:  # the spoken hook: its own footage (hook_shot:), else the master line's shots stretched to the new line
-        Dh, land_t, words = hook
+        Dh, land_t, words, order = hook
         w = Dh / (b - a)
         if spec.get("hook_shots"):
             items += hook_items(spec["hook_shots"], Dh, words)
@@ -307,11 +411,13 @@ def build(spec, P, L, hook=None):
                 continue
             ovl.append(o)
         caps.append({"t": 0.0, "t1": Dh, "text": spec.get("say_en", ""), "big": False})
+        cw = match_words("say_roman", order, roman_tokens(spec["say_roman"])) if spec.get("say_roman") else []
         T, body = Dh, segs[1:]
     else:
-        T, body = 0.0, segs
+        T, body, cw = 0.0, segs, []
     for si, (a, b) in enumerate(body):
         d = T - a
+        cw += [(t + d, x, brk) for t, x, brk in capw if a <= t < b]
         opening = not hook and si == 0
         for n, (it, x0, x1) in enumerate(pieces(P, a, b)):
             trans = ("cut" if opening else "flare" if si == (0 if hook else 1) else "cut") if n == 0 else None
@@ -343,7 +449,7 @@ def build(spec, P, L, hook=None):
     a_body = body[0][0]
     track = [c for c in P["music"] if c["t"] <= a_body][-1]
     sfx.append(["hit", 0.0, -4])
-    return segs, {"style": "v3", "items": items, "ovl": ovl, "caps": caps, "sfx": sfx, "mus": mus,
+    return segs, {"style": "v3", "items": items, "ovl": ovl, "caps": caps, "capwords": cw, "sfx": sfx, "mus": mus,
                   "music": [{"t": 0.0, "track": track["track"], "gain": track.get("gain", 0.0)}],
                   "breaths": [], "total": T, "off": 0.0, "grade": P.get("grade", {})}
 
@@ -372,6 +478,7 @@ def scale_plan(Ps, k):
                 e[key] /= k
     for c in Ps["caps"]:
         c["t"], c["t1"] = c["t"] / k, c["t1"] / k
+    Ps["capwords"] = [(t / k, x, brk) for t, x, brk in Ps["capwords"]]
     Ps["total"] /= k
 
 
@@ -447,7 +554,7 @@ def cut(v, x, y):
 def set_canvas():
     for m in (rv, render_v2, r3, mg, grade_mod):
         m.W, m.H = SW, SH
-    mg.LAYOUT.update(label_w=0.9)  # labels fit the 1080 px picture
+    mg.LAYOUT.update(label_w=0.9, name_y=0.62)  # labels fit the 1080 px picture; name cards clear the captions
     r3.G.update(fade_in=0, fade_out=0)  # the hook hits on frame 0, the end card loops into it
 
 
@@ -538,6 +645,8 @@ def main():
                                                             "(owner's rule: every Short, hook included, at 1.1)")
     ap.add_argument("--narration", default="", help="narration.wav, when there is no master render to take the voice "
                                                     "stem from (a plan made only for Shorts)")
+    ap.add_argument("--timeline", default="", help="the narration's timeline.json (default: next to --narration, "
+                                                   "else the master's voice folder)")
     a = ap.parse_args()
     global LIB
     LIB = os.path.dirname(os.path.abspath(a.sources))
@@ -565,13 +674,21 @@ def main():
         hook = spoken_hook(spec, a.out) if spec.get("say") else None
         if spec.get("hook_shots") and not hook:
             raise SystemExit(f"{spec['id']}: hook_shot: needs a spoken hook (say:)")
-        segs, Ps = build(spec, P, L, hook and hook[1:])
+        if not spec.get("captions") or (hook and not spec.get("say_roman")):
+            raise SystemExit(f"{sid}: every Short has burned-in captions (owner's rule): add captions:"
+                             f"{' and say_roman:' if hook else ''} to its block in the spec")
+        tl = a.timeline or (os.path.join(os.path.dirname(a.narration), "timeline.json") if a.narration
+                            else os.path.join(a.master_work, "..", "..", "voice", "timeline.json"))
+        capw = caption_words(os.path.join(os.path.dirname(os.path.abspath(a.spec)), spec["captions"]), tl, P)
+        segs, Ps = build(spec, P, L, hook and hook[1:], capw)
         voice_parts = ([hook[0]] if hook else []) + [cut(voice, x, y) for x, y in (segs[1:] if hook else segs)]
         raw, voice_wav = os.path.join(work, "voice_raw.wav"), os.path.join(work, "voice.wav")
         sf.write(raw, np.concatenate(voice_parts).astype(np.float32), SR)
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af", f"rubberband=tempo={a.speed}:pitchq=quality",
                         "-ar", str(SR), "-ac", "1", voice_wav], check=True)  # faster, same pitch
         scale_plan(Ps, a.speed)
+        Ps["ovl"].append({"kind": "captions", "t0": 0.0, "t1": Ps["total"],
+                          "chunks": caption_chunks(Ps["capwords"], Ps["total"])})
         v = r3._load(voice_wav, 1)
         sf.write(voice_wav, np.concatenate([v, np.zeros(int(END * SR) + SR)]).astype(np.float32), SR)
         add_end(Ps)
