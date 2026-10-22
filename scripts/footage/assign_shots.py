@@ -154,6 +154,7 @@ def main():
     ap.add_argument("--avoid", default="", help="productions dir: never reuse shots other productions' cutlist.json used")
     ap.add_argument("--plan-only", action="store_true", help="only check the edit against the narration")
     ap.add_argument("--local-only", action="store_true", help="use only shots whose clip file is on disk (re-renders)")
+    ap.add_argument("--clips-from", default="", help="cutlist.json: use only clips it used (a re-cut of a published video)")
     a = ap.parse_args()
     edit, tl = json.load(open(a.edit)), json.load(open(a.timeline))
     v3 = edit.get("style") == "v3"
@@ -193,6 +194,10 @@ def main():
     if a.local_only:
         pool = [s for s in pool if os.path.exists(os.path.join(a.lib, "clips", s["clip"] + ".mp4"))]
         print(f"local only: {len(pool)} usable shots with their clip on disk")
+    if a.clips_from:
+        own = {it["clip"] for it in json.load(open(a.clips_from))["items"] if it.get("clip")}
+        pool = [s for s in pool if s["clip"] in own]
+        print(f"clips from {a.clips_from}: {len(pool)} usable shots")
     if avoided:  # near-identical copies of footage earlier productions showed (same image, re-zoomed) stay out too
         prev = [s for s in shots if s["id"] in avoided and s["usable"]]
         sig = os.path.join(a.lib, "segments_sig.npz")

@@ -1,0 +1,896 @@
+{
+ "style": "v3",
+ "items": [
+  {
+   "sec": "fact6",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 0.0,
+   "t1": 2.3,
+   "q": [
+    "powerful gravity around a black hole",
+    "a glowing accretion disk around a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 0,
+   "f1": 69,
+   "shot": "svs_14619#0",
+   "clip": "svs_14619",
+   "ss": 2.48,
+   "crop": null,
+   "score": 0.4409,
+   "ref": "fact6/0",
+   "title": "Black Hole with Accretion Disk Visualization"
+  },
+  {
+   "sec": "fact6",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 2.3,
+   "t1": 4.833,
+   "q": [
+    "powerful gravity around a black hole",
+    "a glowing accretion disk around a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 69,
+   "f1": 145,
+   "shot": "svs_14576#0",
+   "clip": "svs_14576",
+   "ss": 22.83,
+   "crop": null,
+   "score": 0.4278,
+   "ref": "fact6/1",
+   "title": "NASA Black Hole Visualization Takes Viewers Beyond the Brink"
+  },
+  {
+   "sec": "fact6",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 4.833,
+   "t1": 7.629,
+   "q": [
+    "gas being stretched near a black hole",
+    "matter spiralling into a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 145,
+   "f1": 229,
+   "shot": "svs_4997#0",
+   "clip": "svs_4997",
+   "ss": 4.2,
+   "crop": null,
+   "score": 0.4053,
+   "ref": "fact6/2",
+   "title": "Black Holes and Their Companions Close Up"
+  },
+  {
+   "sec": "fact6",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 7.629,
+   "t1": 10.345,
+   "q": [
+    "gas being stretched near a black hole",
+    "matter spiralling into a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 229,
+   "f1": 310,
+   "shot": "svs_14335#0",
+   "clip": "svs_14335",
+   "ss": 1.69,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.445,
+   "ref": "fact6/3",
+   "title": "NASA Animation Sizes Up the Universe’s Biggest Black Holes"
+  },
+  {
+   "sec": "fact6",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 10.345,
+   "t1": 13.355,
+   "q": [
+    "gas being stretched near a black hole",
+    "matter spiralling into a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 310,
+   "f1": 401,
+   "shot": "svs_13086#0",
+   "clip": "svs_13086",
+   "ss": 0.75,
+   "crop": null,
+   "score": 0.4152,
+   "ref": "fact6/4",
+   "title": "Supermassive Black Hole Binary Simulation Visualizations in 4k"
+  },
+  {
+   "sec": "fact6",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 13.355,
+   "t1": 18.3475,
+   "q": [
+    "a star stretched into a long stream of gas",
+    "a stream of stellar debris wrapping around a black hole"
+   ],
+   "opt": "hold",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 401,
+   "f1": 550,
+   "shot": "esahubble_heic1913b#0",
+   "clip": "esahubble_heic1913b",
+   "ss": 3.1,
+   "crop": null,
+   "score": 0.4224,
+   "ref": "fact6/5",
+   "title": "Top-Down View of Artist’s Impression of NGC3147 black hole disc"
+  },
+  {
+   "sec": "fact6",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 18.3475,
+   "t1": 21.963,
+   "q": [
+    "a star torn apart by a black hole",
+    "a star stretched into a long stream of gas"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 550,
+   "f1": 659,
+   "shot": "svs_14148#0",
+   "clip": "svs_14148",
+   "ss": 3.79,
+   "crop": null,
+   "score": 0.4157,
+   "ref": "fact6/6",
+   "title": "Magnetic Flip Drives Flare-Up of Monster Black Hole"
+  },
+  {
+   "sec": "fact6",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 21.963,
+   "t1": 24.015,
+   "q": [
+    "the event horizon of a black hole",
+    "light bending around a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 659,
+   "f1": 720,
+   "shot": "eso_black-hole-material#0",
+   "clip": "eso_black-hole-material",
+   "ss": 4.57,
+   "crop": null,
+   "score": 0.4377,
+   "ref": "fact6/7",
+   "title": "Artist's impression of a black hole and the material surrounding it"
+  },
+  {
+   "sec": "fact6",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 24.015,
+   "t1": 28.11,
+   "q": [
+    "the event horizon of a black hole",
+    "light bending around a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 720,
+   "f1": 843,
+   "shot": "svs_13483#3",
+   "clip": "svs_13483",
+   "ss": 30.27,
+   "crop": [
+    0.0,
+    0.25,
+    0.75,
+    1.0
+   ],
+   "score": 0.4349,
+   "ref": "fact6/8",
+   "title": "5 Things: Black Holes"
+  },
+  {
+   "sec": "fact6",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 28.11,
+   "t1": 30.207,
+   "q": [
+    "the event horizon of a black hole",
+    "light bending around a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 843,
+   "f1": 906,
+   "shot": "eso_eso1907f#0",
+   "clip": "eso_eso1907f",
+   "ss": 4.55,
+   "crop": null,
+   "score": 0.4242,
+   "ref": "fact6/9",
+   "title": "Artist’s impression of the Black Hole at the heart of M87"
+  },
+  {
+   "sec": "fact6",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 30.207,
+   "t1": 32.385,
+   "q": [
+    "a dim red glow fading in dark space",
+    "a faint red star in a dark sky"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 906,
+   "f1": 972,
+   "shot": "esahubble_heic2204a#2",
+   "clip": "esahubble_heic2204a",
+   "ss": 27.66,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3628,
+   "ref": "fact6/10",
+   "title": "Space Sparks Episode 11 - Astronomers Detect Supermassive Black Hole Precursor Lurking in Archival Hubble Data"
+  },
+  {
+   "sec": "fact6",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 32.385,
+   "t1": 35.505,
+   "q": [
+    "a dim red glow fading in dark space",
+    "a faint red star in a dark sky"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 972,
+   "f1": 1065,
+   "shot": "eso_eso2305a#4",
+   "clip": "eso_eso2305a",
+   "ss": 28.32,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3402,
+   "ref": "fact6/11",
+   "title": "First image of a black hole expelling a powerful jet (ESOcast 260 Light)"
+  },
+  {
+   "sec": "fact6",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 35.505,
+   "t1": 38.619,
+   "q": [
+    "zooming into a distant spiral galaxy",
+    "a bright flare in a distant galaxy"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1065,
+   "f1": 1159,
+   "shot": "esahubble_heic1503a#0",
+   "clip": "esahubble_heic1503a",
+   "ss": 4.06,
+   "crop": null,
+   "score": 0.4107,
+   "ref": "fact6/12",
+   "title": "Panning across NGC 7714"
+  },
+  {
+   "sec": "fact6",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 38.619,
+   "t1": 41.502,
+   "q": [
+    "a spiral galaxy seen from far away",
+    "a bright galaxy core in deep space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1159,
+   "f1": 1245,
+   "shot": "eso_eso2510b#0",
+   "clip": "eso_eso2510b",
+   "ss": 0.31,
+   "crop": null,
+   "score": 0.4006,
+   "ref": "fact6/13",
+   "title": "Zooming into a thousand-colour image of the Sculptor Galaxy"
+  },
+  {
+   "sec": "fact6",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 41.502,
+   "t1": 43.375,
+   "q": [
+    "a star approaching a supermassive black hole",
+    "a bright star near a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1245,
+   "f1": 1301,
+   "shot": "eso_eso1907b#3",
+   "clip": "eso_eso1907b",
+   "ss": 30.88,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.4227,
+   "ref": "fact6/14",
+   "title": "ESOcast 199 Light: Astronomers Capture First Image of a Black Hole"
+  },
+  {
+   "sec": "fact6",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 43.375,
+   "t1": 46.5625,
+   "q": [
+    "a star approaching a supermassive black hole",
+    "a bright star near a black hole"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 1301,
+   "f1": 1397,
+   "shot": "esahubble_heic1913a#0",
+   "clip": "esahubble_heic1913a",
+   "ss": 4.01,
+   "crop": null,
+   "score": 0.4327,
+   "ref": "fact6/15",
+   "title": "Artist’s Impression of NGC3147 black hole disc"
+  },
+  {
+   "sec": "fact6",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 46.5625,
+   "t1": 53.961000000000006,
+   "q": [
+    "a star torn apart by a black hole",
+    "black hole swallowing the remains of a star"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 1397,
+   "f1": 1619,
+   "shot": "eso_eso2216a#0",
+   "clip": "eso_eso2216a",
+   "ss": 1.9,
+   "crop": null,
+   "score": 0.4747,
+   "ref": "fact6/16",
+   "title": "Animation of a black hole swallowing a star"
+  },
+  {
+   "sec": "fact6",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 53.961000000000006,
+   "t1": 56.333,
+   "q": [
+    "the Very Large Telescope at night",
+    "telescope domes opening at dusk"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 1619,
+   "f1": 1690,
+   "shot": "eso_pao-vlt2016#0",
+   "clip": "eso_pao-vlt2016",
+   "ss": 0.56,
+   "crop": null,
+   "score": 0.4137,
+   "ref": "fact6/17",
+   "title": "VLT at dusk II"
+  },
+  {
+   "sec": "fact6",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 56.333,
+   "t1": 59.63,
+   "q": [
+    "the Very Large Telescope at night",
+    "telescope domes opening at dusk"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 1690,
+   "f1": 1789,
+   "shot": "eso_gl_northwest_ut1_ut2_ut3#0",
+   "clip": "eso_gl_northwest_ut1_ut2_ut3",
+   "ss": 1.42,
+   "crop": null,
+   "score": 0.4255,
+   "ref": "fact6/18",
+   "title": "A busy night at the VLT"
+  },
+  {
+   "sec": "fact6",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 59.63,
+   "t1": 61.732000000000006,
+   "q": [
+    "the Very Large Telescope at night",
+    "telescope domes opening at dusk"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 1789,
+   "f1": 1852,
+   "shot": "eso_colosimo_paranal_03#0",
+   "clip": "eso_colosimo_paranal_03",
+   "ss": 4.55,
+   "crop": null,
+   "score": 0.4089,
+   "ref": "fact6/19",
+   "title": "Time-lapse of VLT"
+  },
+  {
+   "sec": "fact6",
+   "beat": 11,
+   "kind": "clip",
+   "t0": 61.732000000000006,
+   "t1": 66.166,
+   "q": [
+    "the bright flare from a star being destroyed",
+    "a bright flash in a distant galaxy"
+   ],
+   "opt": "hold",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 1852,
+   "f1": 1985,
+   "shot": "eso_eso1436c#0",
+   "clip": "eso_eso1436c",
+   "ss": 3.4,
+   "crop": null,
+   "score": 0.4073,
+   "ref": "fact6/20",
+   "title": "Artist's impression of the disc around a young star"
+  },
+  {
+   "sec": "fact6",
+   "beat": 11,
+   "kind": "clip",
+   "t0": 66.166,
+   "t1": 70.745,
+   "q": [
+    "the bright flare from a star being destroyed",
+    "a bright flash in a distant galaxy"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 1985,
+   "f1": 2122,
+   "shot": "eso_eso0943b#0",
+   "clip": "eso_eso0943b",
+   "ss": 0.46,
+   "crop": null,
+   "score": 0.4058,
+   "ref": "fact6/21",
+   "title": "Artist's impression of vampire star"
+  }
+ ],
+ "ovl": [
+  {
+   "kind": "num",
+   "t0": 38.825,
+   "t1": 42.151,
+   "num": {
+    "template": "hero",
+    "value": "210,000,000",
+    "from": "0",
+    "unit": "light-years away",
+    "kicker": "a Sun-like star",
+    "land": "करोड़",
+    "land_t": 1.1259999999999977,
+    "count_s": 0.9759999999999976,
+    "dur": 3.3260000000000005
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 58.411,
+   "t1": 60.971000000000004,
+   "num": {
+    "template": "hero",
+    "value": "6",
+    "from": "0",
+    "unit": "months of watching",
+    "land": "महीने",
+    "land_t": 0.35999999999999943,
+    "count_s": 0.20999999999999944,
+    "dur": 2.5600000000000023
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "NOT JUST STRONG",
+     "t": 3.414
+    },
+    {
+     "text": "*UNEVEN*",
+     "t": 3.6
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 3.314,
+   "t_last": 3.6,
+   "t1": 7.6
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "TORN APART",
+     "t": 47.823
+    },
+    {
+     "text": "*HALF ITS MASS SWALLOWED*",
+     "t": 52.141
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 47.723,
+   "t_last": 52.141,
+   "t1": 53.961000000000006
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "NEVER SEEN",
+     "t": 61.952
+    },
+    {
+     "text": "*THIS CLOSE*",
+     "t": 63.972
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 61.852,
+   "t_last": 63.972,
+   "t1": 66.166
+  },
+  {
+   "kind": "keyline",
+   "t0": 20.817,
+   "t1": 23.417,
+   "text": "SPAGHETTIFICATION"
+  }
+ ],
+ "caps": [
+  {
+   "sec": "fact6",
+   "t": 0.0,
+   "end": 67.745,
+   "text": "Near a black hole, gravity isn't just strong",
+   "big": false,
+   "t1": 3.414
+  },
+  {
+   "sec": "fact6",
+   "t": 3.414,
+   "end": 67.745,
+   "text": "It isn't even, either",
+   "big": false,
+   "t1": 5.074
+  },
+  {
+   "sec": "fact6",
+   "t": 5.074,
+   "end": 67.745,
+   "text": "Whatever part of a falling object is closer to the black hole is pulled much harder",
+   "big": false,
+   "t1": 12.074
+  },
+  {
+   "sec": "fact6",
+   "t": 13.666,
+   "end": 67.745,
+   "text": "The object gets longer and thinner, like spaghetti",
+   "big": false,
+   "t1": 18.553
+  },
+  {
+   "sec": "fact6",
+   "t": 18.553,
+   "end": 67.745,
+   "text": "Scientists call it exactly that... spaghettification",
+   "big": false,
+   "t1": 20.817
+  },
+  {
+   "sec": "fact6",
+   "t": 20.817,
+   "end": 67.745,
+   "text": "SPAGHETTIFICATION",
+   "big": true,
+   "t1": 22.176
+  },
+  {
+   "sec": "fact6",
+   "t": 22.176,
+   "end": 67.745,
+   "text": "Seen from far away, a falling object slows down near the event horizon, as if time itself stopped",
+   "big": false,
+   "t1": 29.176
+  },
+  {
+   "sec": "fact6",
+   "t": 30.349,
+   "end": 67.745,
+   "text": "Its light turns red, then dim, and finally disappears",
+   "big": false,
+   "t1": 35.76
+  },
+  {
+   "sec": "fact6",
+   "t": 35.76,
+   "end": 67.745,
+   "text": "In 2019, this stopped being just an idea",
+   "big": false,
+   "t1": 38.825
+  },
+  {
+   "sec": "fact6",
+   "t": 38.825,
+   "end": 67.745,
+   "text": "About 210 million light-years away, a Sun-like star passed very close to a supermassive black hole",
+   "big": false,
+   "t1": 45.825
+  },
+  {
+   "sec": "fact6",
+   "t": 46.824,
+   "end": 67.745,
+   "text": "The black hole tore it into a long stream and swallowed about half its mass",
+   "big": false,
+   "t1": 53.824
+  },
+  {
+   "sec": "fact6",
+   "t": 54.196,
+   "end": 67.745,
+   "text": "Telescopes including Chile's Very Large Telescope recorded this death for six months",
+   "big": false,
+   "t1": 61.196
+  },
+  {
+   "sec": "fact6",
+   "t": 61.952,
+   "end": 67.745,
+   "text": "A star had never been seen dying like this, so close",
+   "big": false,
+   "t1": 68.045
+  }
+ ],
+ "sfx": [
+  [
+   "tick",
+   3.4040000000000004,
+   0
+  ],
+  [
+   "tick",
+   3.5900000000000003,
+   0
+  ],
+  [
+   "whoosh",
+   13.155000000000001,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "pop",
+   20.807,
+   0
+  ],
+  [
+   "whoosh",
+   35.305,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   38.975,
+   0,
+   {
+    "d": 0.98
+   }
+  ],
+  [
+   "hit",
+   39.941,
+   0
+  ],
+  [
+   "tick",
+   47.813,
+   0
+  ],
+  [
+   "tick",
+   52.131,
+   0
+  ],
+  [
+   "whoosh",
+   53.761,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   58.561,
+   0,
+   {
+    "d": 0.21
+   }
+  ],
+  [
+   "hit",
+   58.761,
+   0
+  ],
+  [
+   "whoosh",
+   61.532000000000004,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "tick",
+   61.942,
+   0
+  ],
+  [
+   "tick",
+   63.962,
+   0
+  ]
+ ],
+ "mus": [],
+ "music": [
+  {
+   "t": 0.0,
+   "track": "Long_Note_One.mp3",
+   "gain": 0.0
+  }
+ ],
+ "breaths": [],
+ "total": 70.745,
+ "off": 0.5,
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "clips_dir": "/home/user/axiom/work/library/clips"
+}

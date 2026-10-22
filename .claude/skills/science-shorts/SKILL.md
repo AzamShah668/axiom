@@ -35,6 +35,20 @@ body: The strangest thing about neutron stars .. So scientists calculate
 - **Coverage:** one Short per fact, plus the cold open. Two facts may share a Short only when they tell one story.
 - **Title:** `<English hook> #shorts`, under 100 characters. Never Hindi in titles or on screen.
 
+### Shorts from a video published before v3 (e.g. video 02)
+Its master has no v3 plan, so re-plan just the facts the Shorts use, over the published narration:
+1. Pull the fact's `<section>.mp3` and `.align.json` from Drive `productions/NN-slug/voice/`.
+   An `--only-list` must name real files; an empty one pulls nothing.
+2. Write `productions/NN-slug/shorts-plan/`:
+   - `tts/narration.hi.md`: the section text, which must match the recording (check against the align file)
+   - `edit.spec` and `edit.base.json`: v3 style, the section's music track
+3. Join the cached voice: `render_narration.py ... --open-gap 0` (no new credits).
+4. `make_edit.py`, then
+   `assign_shots.py ... --local-only --clips-from productions/NN-slug/cutlist.json --review <dir>`.
+   This uses the published video's own footage.
+5. `render_short.py <spec> <plan cutlist> <no-master dir> ... --narration <voice>/narration.wav`. The voice is
+   laid on the plan's clock with `render_v3.voice_track`, because there is no master render to take a stem from.
+
 ## 2. Render
 ```bash
 ONLY=teaspoon scripts/science/pipeline.sh productions/NN-slug shorts   # one; without ONLY: every Short in the spec

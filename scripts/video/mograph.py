@@ -270,6 +270,9 @@ def headline(fr, spec, t):
     hs = [r[3].shape[0] - 2 * p for r, p in zip(rows, pad)]
     gap = 6
     total = sum(hs) + gap * (len(rows) - 1)
+    if pos != "left":  # centred: a soft dark ellipse keeps gold text readable on bright footage
+        wmax = max(text_w(r[3], 0) for r in rows)
+        shade_box(fr, W / 2, H * 0.5, wmax / 2 + 220, total / 2 + 110, op=min(1, (t - t_first + 0.05) / 0.3) * out, strength=0.55)
     y = H * 0.5 - total / 2
     for (kind, txt, t0, lay), h, p in zip(rows, hs, pad):
         cy = y + h / 2

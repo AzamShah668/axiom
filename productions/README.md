@@ -81,6 +81,9 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   the top bar says what the Short is about (English, one gold phrase). The bottom bar stays clear for YouTube's
   title and buttons.
 - **The end card is written, never said:** `FULL VIDEO BELOW ↓` on screen.
+- **Everyday comparisons are allowed in Shorts hooks and titles** (owner's exception, 2026-10-22), e.g. "Maggi
+  की तरह" for spaghettification. The science term stays, and the full videos stay universal (no India-specific
+  comparisons there).
 - **The full video is linked with YouTube Studio's "Related video"** on each Short (links typed into a Short's
   description don't click). The full video must be public first.
 - Uploads stay private until the owner says publish; the footage and music credits go in every Short's description.

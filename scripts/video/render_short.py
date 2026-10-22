@@ -86,6 +86,8 @@ class Lines:
         A section's first line is spoken under the chapter card, before its caption shows, so walk back through
         the speech to the last 0.15 s of silence (at most 2 s, never before `floor`)."""
         i = int(t * SR)
+        if i <= int(0.05 * SR):  # the very start of the track
+            return 0.0
         if self.env[i - int(0.05 * SR):i].max() < self.quiet:  # the caption starts on the first sound
             return t - 0.035
         lo = int(max(floor, t - 2.0) * SR)
@@ -230,12 +232,25 @@ def build(spec, P, L, hook=None):
             items.append(new_item(it, x0, (x0 - a) * w, (x1 - a) * w, "cut" if n == 0 else None))
             if items[-1]["kind"] == "num":
                 items[-1]["num"] = hook_count(items[-1]["num"], land_t - items[-1]["t0"])
+        t_on = land_t if spec.get("land") else 0.1  # key text appears on the `land` word
         for o in P["ovl"]:
-            if o["kind"] == "num" and a - 0.4 <= o["t0"] < b - 0.3 and o["num"].get("template") not in GEOMETRY:
-                o = copy.deepcopy(o)
+            if not (a - 0.4 <= o["t0"] < b - 0.3):
+                continue
+            o = copy.deepcopy(o)
+            if o["kind"] == "num" and o["num"].get("template") not in GEOMETRY:
                 o.update(t0=0.0, t1=Dh, num=dict(hook_count(o["num"], land_t), dur=Dh))
-                ovl.append(o)
                 sfx += [list(e) for e in r3.card_sfx(o["num"], 0.0)]
+            elif o["kind"] == "keyline":
+                o.update(t0=t_on, t1=Dh)
+                sfx.append(["pop", t_on - 0.01, 0])
+            elif o["kind"] == "headline":
+                d0 = o["lines"][0]["t"]
+                for ln in o["lines"]:
+                    ln["t"] = t_on + (ln["t"] - d0) * w
+                o.update(t0=t_on - 0.1, t_last=o["lines"][-1]["t"], t1=Dh, pos="center")
+            else:
+                continue
+            ovl.append(o)
         caps.append({"t": 0.0, "t1": Dh, "text": spec.get("say_en", ""), "big": False})
         T, body = Dh, segs[1:]
     else:
@@ -465,13 +480,19 @@ def main():
     ap.add_argument("--only", default="")
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--speed", type=float, default=1.1, help="Shorts play this much faster than the master")
+    ap.add_argument("--narration", default="", help="narration.wav, when there is no master render to take the voice "
+                                                    "stem from (a plan made only for Shorts)")
     a = ap.parse_args()
     import soundfile as sf
     P = json.load(open(a.cutlist))
     sources = json.load(open(a.sources))
-    voice, sr = sf.read(os.path.join(a.master_work, "stem_voice.wav"), always_2d=True)
-    voice = voice.mean(1)
-    assert sr == SR, f"voice stem at {sr} Hz"
+    stem = os.path.join(a.master_work, "stem_voice.wav")
+    if os.path.exists(stem):
+        voice, sr = sf.read(stem, always_2d=True)
+        voice = voice.mean(1)
+        assert sr == SR, f"voice stem at {sr} Hz"
+    else:  # no master render of this plan: lay the narration on the plan's clock the way the mix does
+        voice = r3.voice_track(a.narration, P)
     L = Lines(P, voice)
     vdir = os.path.join(a.out, "vclips")
     os.makedirs(vdir, exist_ok=True)

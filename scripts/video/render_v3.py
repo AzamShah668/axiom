@@ -631,7 +631,8 @@ def _level(x, keep=0.25, win=3.0):
     return y, fx.loudness(y)[1]
 
 
-def mix(narr, P, music_dir):
+def voice_track(narr, P):
+    """The narration on the video clock: breaths spliced in, shifted by the lead-in (mono, P["total"] long)."""
     total, off = P["total"], P["off"]
     n = int(total * SR)
     v = _load(narr, 1)
@@ -649,6 +650,13 @@ def mix(narr, P, music_dir):
     voice = np.zeros(n)
     o = int(off * SR)
     voice[o:o + len(v)] = v[:n - o]
+    return voice
+
+
+def mix(narr, P, music_dir):
+    total = P["total"]
+    n = int(total * SR)
+    voice = voice_track(narr, P)
     M, _ = fx.loudness(voice)
     speech = M[M > -45]
     # the mono voice plays on both channels: +3 dB in BS.1770 terms, which is what the music and SFX sit against

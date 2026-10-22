@@ -1,0 +1,239 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "music": [
+  {
+   "from": "fact6",
+   "track": "Long_Note_One.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "glowing disk around a black hole in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "ban": [],
+ "sections": {
+  "fact6": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "powerful gravity around a black hole",
+      "a glowing accretion disk around a black hole"
+     ]
+    },
+    {
+     "at": "गिरती हुई किसी",
+     "q": [
+      "gas being stretched near a black hole",
+      "matter spiralling into a black hole"
+     ]
+    },
+    {
+     "at": "वह चीज़ लंबी",
+     "opt": "hold",
+     "q": [
+      "a star stretched into a long stream of gas",
+      "a stream of stellar debris wrapping around a black hole"
+     ]
+    },
+    {
+     "at": "Scientists इसे",
+     "q": [
+      "a star torn apart by a black hole",
+      "a star stretched into a long stream of gas"
+     ]
+    },
+    {
+     "at": "और दूर से",
+     "q": [
+      "the event horizon of a black hole",
+      "light bending around a black hole"
+     ]
+    },
+    {
+     "at": "उसकी रोशनी",
+     "q": [
+      "a dim red glow fading in dark space",
+      "a faint red star in a dark sky"
+     ]
+    },
+    {
+     "at": "दो हज़ार उन्नीस",
+     "q": [
+      "zooming into a distant spiral galaxy",
+      "a bright flare in a distant galaxy"
+     ]
+    },
+    {
+     "at": "लगभग इक्कीस",
+     "q": [
+      "a spiral galaxy seen from far away",
+      "a bright galaxy core in deep space"
+     ]
+    },
+    {
+     "at": "Sun जैसा",
+     "q": [
+      "a star approaching a supermassive black hole",
+      "a bright star near a black hole"
+     ]
+    },
+    {
+     "at": "Black hole ने",
+     "opt": "hold",
+     "q": [
+      "a star torn apart by a black hole",
+      "black hole swallowing the remains of a star"
+     ]
+    },
+    {
+     "at": "Chile के",
+     "q": [
+      "the Very Large Telescope at night",
+      "telescope domes opening at dusk"
+     ]
+    },
+    {
+     "at": "किसी तारे की",
+     "opt": "hold",
+     "q": [
+      "the bright flare from a star being destroyed",
+      "a bright flash in a distant galaxy"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Near a black hole, gravity isn't just strong"
+    },
+    {
+     "at": "वह बराबर",
+     "text": "It isn't even, either"
+    },
+    {
+     "at": "गिरती हुई किसी",
+     "text": "Whatever part of a falling object is closer to the black hole is pulled much harder"
+    },
+    {
+     "at": "वह चीज़ लंबी",
+     "text": "The object gets longer and thinner, like spaghetti"
+    },
+    {
+     "at": "Scientists इसे",
+     "text": "Scientists call it exactly that... spaghettification"
+    },
+    {
+     "at": "spaghettification",
+     "text": "SPAGHETTIFICATION",
+     "big": true
+    },
+    {
+     "at": "और दूर से",
+     "text": "Seen from far away, a falling object slows down near the event horizon, as if time itself stopped"
+    },
+    {
+     "at": "उसकी रोशनी",
+     "text": "Its light turns red, then dim, and finally disappears"
+    },
+    {
+     "at": "दो हज़ार उन्नीस",
+     "text": "In 2019, this stopped being just an idea"
+    },
+    {
+     "at": "लगभग इक्कीस",
+     "text": "About 210 million light-years away, a Sun-like star passed very close to a supermassive black hole"
+    },
+    {
+     "at": "Black hole ने",
+     "text": "The black hole tore it into a long stream and swallowed about half its mass"
+    },
+    {
+     "at": "Chile के",
+     "text": "Telescopes including Chile's Very Large Telescope recorded this death for six months"
+    },
+    {
+     "at": "किसी तारे की",
+     "text": "A star had never been seen dying like this, so close"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "वह बराबर",
+     "lines": [
+      {
+       "text": "NOT JUST STRONG",
+       "at": "वह बराबर"
+      },
+      {
+       "text": "*UNEVEN*",
+       "at": "बराबर"
+      }
+     ]
+    },
+    {
+     "at": "Black hole ने",
+     "lines": [
+      {
+       "text": "TORN APART",
+       "at": "चीर"
+      },
+      {
+       "text": "*HALF ITS MASS SWALLOWED*",
+       "at": "आधा"
+      }
+     ]
+    },
+    {
+     "at": "किसी तारे की",
+     "lines": [
+      {
+       "text": "NEVER SEEN",
+       "at": "किसी तारे की"
+      },
+      {
+       "text": "*THIS CLOSE*",
+       "at": "इतने पास"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "लगभग इक्कीस",
+     "num": {
+      "template": "hero",
+      "value": "210,000,000",
+      "from": "0",
+      "unit": "light-years away",
+      "kicker": "a Sun-like star",
+      "land": "करोड़"
+     }
+    },
+    {
+     "at": "छह महीने",
+     "num": {
+      "template": "hero",
+      "value": "6",
+      "from": "0",
+      "unit": "months of watching",
+      "land": "महीने"
+     }
+    }
+   ]
+  }
+ }
+}
