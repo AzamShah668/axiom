@@ -110,6 +110,10 @@ stage() {
       [ -f "${MASTER%.mp4}.en.srt" ] && cp "${MASTER%.mp4}.en.srt" "$P/captions.en.srt" || true ;;
     review)
       "$PY" "$ROOT/scripts/video/review_sheet.py" "$MASTER" "$WORK/review_render" --cutlist "$WORK/cutlist.json" ;;
+    shorts)  # 9:16 Shorts from the finished master (productions/NN/shorts.spec); ONLY=<id> renders one
+      "$PY" "$ROOT/scripts/video/render_short.py" "$P/shorts.spec" "$WORK/cutlist.json" "${MASTER%.mp4}_work" \
+        "$LIB/sources.json" "$LIB/clips" "$MEDIA/music" "$MEDIA/fonts" "$MEDIA/assets" "$WORK/out/shorts" \
+        ${ONLY:+--only "$ONLY"} --workers "$WORKERS" ;;
     preview)
       bash "$ROOT/scripts/video/preview_parts.sh" "$MASTER" "$WORK/out/preview" ;;
     credits)

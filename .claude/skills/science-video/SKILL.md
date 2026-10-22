@@ -19,6 +19,7 @@ doing the stage. Do not skip the review gates.
 | 4 | 4K footage library for the topic | `science-footage` | `$LIB` shots (QC'd, embedded) |
 | 5 | Shot assignment (no repeats) -> render -> review -> fixes -> preview | `science-render` | master `.mp4`, `captions.en.srt`, preview parts, `cutlist.json` |
 | 6 | Description with credits, upload checklist (no thumbnail: the owner makes it) | `science-publish` | `youtube.md`, `credits.txt` |
+| 7 | Shorts: one per fact + the cold open, hook + body + written FULL VIDEO BELOW card, 9:16 from the 4K sources | `science-shorts` | `shorts.spec`, `$WORK/out/shorts/<id>.mp4` |
 
 One command runs the scripted parts (stages 2-6 except writing):
 ```bash
@@ -30,6 +31,7 @@ scripts/science/pipeline.sh productions/NN-slug topup assign     # more 4K foota
 #   -> look at $WORK/review_assign/*.jpg, ban/pin/requery in edit.base.json / edit.spec, then
 #      `pipeline.sh ... edit assign` again (reviewed shots are kept; sheets show only what changed)
 scripts/science/pipeline.sh productions/NN-slug render review
+scripts/science/pipeline.sh productions/NN-slug shorts               # after the owner approves shorts.spec
 #   -> look at $WORK/review_render/sheet_*.jpg, fix, re-render the affected sections
 scripts/science/pipeline.sh productions/NN-slug preview credits
 #   -> publish (science-publish), commit the production folder, then:

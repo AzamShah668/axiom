@@ -539,6 +539,8 @@ def draw_ovl(fr, ovl, t):
         elif k == "footer":
             op = 0.5 * mg.clamp01((t - o["t0"]) / 0.5) * mg.clamp01((o["t1"] - t) / 0.4)
             mg.footer(fr, o["left"], o["right"], op)
+        elif k == "endcard":
+            mg.endcard(fr, t, o["t0"], o["t1"])
 
 
 def init(clips, fonts, assets, grade):
@@ -566,11 +568,12 @@ def render_chunk(args):
             fr = transition(item_frame(items[k - 1], f), fr, (f - it["f0"] + 1) / (TD[tr] + 1), tr)
         t = f / FPS
         draw_ovl(fr, ovl, t)
-        mg.logo(fr, 0.8 * mg.clamp01((t - 0.6) / 0.5) * mg.clamp01((total_f - f) / 60))
-        if f < 12:
-            fr = (fr * (f / 12)).astype(np.uint8)
-        elif f > total_f - 75:
-            fr = (fr * max(0, (total_f - f) / 75)).astype(np.uint8)
+        fi, fo = G.get("fade_in", 12), G.get("fade_out", 75)  # Shorts: 0, 0 (the hook hits on frame 0, the end loops)
+        mg.logo(fr, 0.8 * mg.clamp01((t - 0.6) / 0.5) * (mg.clamp01((total_f - f) / 60) if fo else 1.0))
+        if f < fi:
+            fr = (fr * (f / fi)).astype(np.uint8)
+        elif fo and f > total_f - fo:
+            fr = (fr * max(0, (total_f - f) / fo)).astype(np.uint8)
         ff.stdin.write(np.ascontiguousarray(fr).tobytes())
     ff.stdin.close()
     ff.wait()

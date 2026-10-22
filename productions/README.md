@@ -69,6 +69,17 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   - Never another channel's music, footage or graphics.
 - **No text in footage.** OCR finds burned-in text. Corner labels are cropped out automatically; any other part with text is never used.
 
+## Shorts (owner's plan, 2026-10-22)
+- **Every video gets as many Shorts as it can carry**: roughly one per fact plus the cold open, cut from the
+  finished video (`shorts.spec`, pipeline stage `shorts`).
+- **Each Short is hook + body.** It opens on the fact's strongest line, usually one with a number card, then
+  tells the fact's story in order. Length 35-60 s, vertical 1080x1920, re-framed from the 4K sources.
+- **The end card is written, never said:** `FULL VIDEO BELOW ↓` on screen. The narration stays pure
+  third-person storytelling; nothing is recorded for Shorts.
+- **The full video is linked with YouTube Studio's "Related video"** on each Short (links typed into a Short's
+  description don't click). The full video must be public first.
+- Uploads stay private until the owner says publish; the footage and music credits go in every Short's description.
+
 ## Workflow
 The whole process is the `science-video` skill (`.claude/skills/science-video/SKILL.md`), with one sub-skill
 per stage, and `scripts/science/pipeline.sh` for the scripted stages:

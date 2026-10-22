@@ -1,6 +1,7 @@
 """Motion-graphics kit for the v3 science-channel style: typography, kinetic text and animated data cards.
 
-Everything is drawn on BGR uint8 1920x1080 frames. Fonts come from $MEDIA/fonts (fetch_media.sh):
+Everything is drawn on BGR uint8 W x H frames: 1920x1080, or 1080x1920 for Shorts (render_short.py sets W, H and
+LAYOUT before rendering). Fonts come from $MEDIA/fonts (fetch_media.sh):
 Anton (condensed display), Montserrat (variable: Light ... ExtraBold), Cinzel (serif, variable).
 
 Templates (see docs/style-guide.md for when to use which):
@@ -13,6 +14,7 @@ Templates (see docs/style-guide.md for when to use which):
   chapter(...)    FACT #n card with countdown progress
   title(...)      title card
   footer(...), logo(...)  persistent journey footer and channel bug
+  endcard(...)    Shorts end card: FULL VIDEO BELOW with a bouncing arrow (on screen only, never spoken)
 Counts ease out and land exactly on spec["land_t"] (seconds into the card): the renderer sets it from the
 narration timeline, so a number stops on the syllable that says it.
 """
@@ -23,6 +25,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 W, H = 1920, 1080
 FONTS = {"dir": ""}
+LAYOUT = {"name_y": 0.8, "logo": "right", "logo_y": 40, "label_w": 0.0}  # Shorts: name_y 0.62, logo left, labels fit
 
 WHITE = (255, 255, 255)
 GOLD = ((255, 214, 102), (236, 120, 30))       # top, bottom (RGB) for key words and hero numbers
@@ -341,17 +344,26 @@ def card(fr, spec, t, D):
     return fr
 
 
-def _labels(fr, spec, t, cy_num, size, cx=W / 2):
+def fit_layer(lay):
+    """Shrink a label layer that is wider than LAYOUT["label_w"] of the frame (Shorts: 1080 px wide)."""
+    if not LAYOUT["label_w"] or lay.shape[1] <= W * LAYOUT["label_w"]:
+        return lay
+    k = W * LAYOUT["label_w"] / lay.shape[1]
+    return cv2.resize(lay, None, fx=k, fy=k, interpolation=cv2.INTER_AREA)
+
+
+def _labels(fr, spec, t, cy_num, size, cx=None):
+    cx = W / 2 if cx is None else cx
     fade = ease_out((t - 0.1) / 0.35)
     if spec.get("kicker"):
-        paste(fr, layer(spec["kicker"].upper(), "Montserrat", 34, "SemiBold", WHITE, track=0.45, shadow=0.4),
+        paste(fr, fit_layer(layer(spec["kicker"].upper(), "Montserrat", 34, "SemiBold", WHITE, track=0.45, shadow=0.4)),
               cx, cy_num - size * 0.7, op=fade)
     _, p = _count(spec, t)
     if spec.get("unit"):
-        paste(fr, layer(spec["unit"].upper(), "Montserrat", 52, "Bold", WHITE, track=0.4, shadow=0.5),
+        paste(fr, fit_layer(layer(spec["unit"].upper(), "Montserrat", 52, "Bold", WHITE, track=0.4, shadow=0.5)),
               cx, cy_num + size * 0.58, op=ease_out((p - 0.35) / 0.3))
     if spec.get("foot"):
-        paste(fr, layer(spec["foot"].upper(), "Montserrat", 30, "SemiBold", (230, 230, 230), track=0.3, shadow=0.5),
+        paste(fr, fit_layer(layer(spec["foot"].upper(), "Montserrat", 30, "SemiBold", (230, 230, 230), track=0.3, shadow=0.5)),
               cx, cy_num + size * 0.58 + 74, op=0.9 * ease_out((t - spec.get("land_t", 1.3) - 0.1) / 0.4))
 
 
@@ -683,7 +695,7 @@ def _hud(fr, spec, t, D):
 
 def _name(fr, spec, t, D):
     """Lower third for a person: a gold bar grows, the name rises out of a mask, the role line fades in."""
-    x, y = W * 0.075, H * 0.8
+    x, y = W * 0.075, H * LAYOUT["name_y"]
     out = clamp01((float(spec.get("dur", D)) - t) / 0.3)
     shade_left(fr, 0.6 * ease_out(t / 0.3) * out, strength=0.55, reach=0.45)
     bar = ease_out(t / 0.35)
@@ -774,7 +786,37 @@ def _logo():
 
 def logo(fr, op=0.85):
     img, a, b, wa, wb = _logo()
-    x, y = W - 48 - img.shape[1], 40
+    x, y = (W - 48 - img.shape[1] if LAYOUT["logo"] == "right" else 48), LAYOUT["logo_y"]
     paste(fr, img, x + img.shape[1] / 2, y + img.shape[0] / 2, op=op)
     paste(fr, a, x + 11 + wa / 2 + 1, y + img.shape[0] / 2 + 1, op=op)
     paste(fr, b, x + wa + 34 + wb / 2, y + img.shape[0] / 2 + 1, op=op)
+
+
+def endcard(fr, t, t0, t1, top="FULL VIDEO", bottom="*BELOW*"):
+    """Shorts end card: two stacked lines rise in, a chevron arrow bounces under them toward the related-video link.
+    Written only: the narration never says it (channel rule)."""
+    if t < t0:
+        return
+    out = clamp01((t1 - t) / 0.2) if t1 - t < 0.2 else 1.0
+    e = ease_out((t - t0) / 0.3)
+    cy = H * 0.5
+    shade_box(fr, W / 2, cy + 40, W * 0.48, 330, op=e * out, strength=0.6)
+    y = cy - 130
+    for txt in (top, bottom):
+        word, gold = _line_spec(txt)
+        size = fit_size(word.upper(), "Anton", 170, W * 0.8)
+        lay = layer(word.upper(), "Anton", size, None, grad=GOLD if gold else SILVER, shadow=0.55)
+        h = lay.shape[0] * 0.64
+        k = ease_out((t - t0 - (0.12 if txt is bottom else 0)) / 0.25)
+        paste(fr, lay, W / 2, y + h / 2 + (1 - k) * h * 0.9, op=out * k, clip=(0, y - 6, W, y + h + 8))
+        y += h + 8
+    bounce = abs(math.sin((t - t0) * math.pi * 1.6)) * 26
+    ay, aw = y + 70 + bounce, 64
+    ov = np.zeros_like(fr)
+    for dy in (0, 44):
+        pts = np.array([[W / 2 - aw, ay + dy - aw * 0.55], [W / 2, ay + dy], [W / 2 + aw, ay + dy - aw * 0.55]], np.int32)
+        cv2.polylines(ov, [pts], False, (40, 190, 255) if dy else (255, 255, 255), 14, cv2.LINE_AA)
+    a = ease_out((t - t0 - 0.3) / 0.3) * out
+    if a > 0:
+        m = ov.any(2)
+        fr[m] = (fr[m] * (1 - a) + ov[m] * a).astype(np.uint8)
