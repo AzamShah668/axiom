@@ -2,10 +2,90 @@
  "style": "v3",
  "lead_in": 0.5,
  "music": [
-  {"from": "fact6", "track": "Long_Note_One.mp3"}
+  {
+   "from": "cold_open",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "fact6",
+   "track": "Long_Note_One.mp3"
+  }
  ],
- "grade": {"preset": "amber_teal", "contrast": 0.25, "sat": 1.3, "vignette": 0.35, "grain": 3},
- "card_query": ["slow flight through a star field", "glowing disk around a black hole in deep space"],
- "bg_query": ["dark star field slowly drifting", "faint distant galaxies in dark space"],
- "ban": []
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "glowing disk around a black hole in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "ban": [],
+ "pin": {
+  "cold_open/0": "eso_gl_west_moonset#0",
+  "cold_open/1": "eso_la_silla_horalek_1#0",
+  "cold_open/2": "eso_pao-ngtsmw1#0",
+  "cold_open/3": "eso_eso1803b#0",
+  "cold_open/4": "eso_uhd_yb_paranal_02#0",
+  "cold_open/5": "eso_santerne_2016-01-11#0",
+  "cold_open/6": "eso_eso1624b#0",
+  "cold_open/7": "esahubble_heic1711b#0",
+  "cold_open/8": "eso_eso1907f#0",
+  "cold_open/9": "svs_14576#0",
+  "cold_open/10": "eso_eso2216a#0",
+  "cold_open/11": "svs_14335#0",
+  "cold_open/12": "svs_14905#5",
+  "cold_open/13": "svs_5649#0",
+  "cold_open/14": "esawebb_weic2425b#0",
+  "cold_open/15": "esahubble_heic1503a#0",
+  "cold_open/16": "eso_black-hole-material#0",
+  "cold_open/17": "svs_20342#0",
+  "cold_open/18": "svs_20339#0",
+  "cold_open/19": "svs_14034#0",
+  "cold_open/20": "esahubble_heic2204a#2",
+  "fact6/0": "svs_14619#0",
+  "fact6/1": "svs_14576#0",
+  "fact6/2": "svs_4997#0",
+  "fact6/3": "svs_14335#0",
+  "fact6/4": "svs_13086#0",
+  "fact6/5": "esahubble_heic1913b#0",
+  "fact6/6": "svs_14148#0",
+  "fact6/7": "eso_black-hole-material#0",
+  "fact6/8": "svs_13483#3",
+  "fact6/9": "eso_eso1907f#0",
+  "fact6/10": "esahubble_heic2204a#2",
+  "fact6/11": "eso_eso2305a#4",
+  "fact6/12": "esahubble_heic1503a#0",
+  "fact6/13": "eso_eso2510b#0",
+  "fact6/14": "eso_eso1907b#3",
+  "fact6/15": "esahubble_heic1913a#0",
+  "fact6/16": "eso_eso2216a#0",
+  "fact6/17": "eso_pao-vlt2016#0",
+  "fact6/18": "eso_gl_northwest_ut1_ut2_ut3#0",
+  "fact6/19": "eso_colosimo_paranal_03#0",
+  "fact6/20": "eso_eso1436c#0",
+  "fact6/21": "eso_eso0943b#0"
+ },
+ "crops": {
+  "svs_14905": [
+   0.05,
+   0.0,
+   0.95,
+   0.9
+  ]
+ },
+ "exclude": {
+  "svs_14905": [
+   [
+    33.0,
+    35.2
+   ]
+  ]
+ }
 }
