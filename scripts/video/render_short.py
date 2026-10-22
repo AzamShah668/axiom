@@ -116,6 +116,13 @@ def shift_ovl(o, d, a, b):
     return o
 
 
+def hook_count(num, lead):
+    """A number that opens a Short counts from its first frame to the spoken word (the master waits for the line)."""
+    land = num.get("land_t", 1.3) + lead
+    return dict(num, land_t=land, count_s=max(num.get("count_s", 1.3), land - 0.1),
+                **({"dur": float(num["dur"]) + lead} if "dur" in num else {}))
+
+
 def build(spec, P, L):
     segs = segments(spec, L)
     items, ovl, sfx, mus, caps, T = [], [], [], [], [], 0.0
@@ -140,6 +147,8 @@ def build(spec, P, L):
                 new["trans"] = "flare" if si == 1 else "cut"
             if it["kind"] == "num" and x0 > it["t0"]:
                 new["num"] = dict(it["num"], land_t=it["num"].get("land_t", 1.3) - (x0 - it["t0"]))
+            if it["kind"] == "num" and si == 0 and n == 0:
+                new["num"] = hook_count(new["num"], 0.0)
             items.append(new)
         for o in P["ovl"]:
             if o["kind"] == "footer" or not (a - 0.4 <= o["t0"] < b - 0.3):  # a line's first word can lead the cut
@@ -150,6 +159,10 @@ def build(spec, P, L):
             o = shift_ovl(o, d, a, b)
             if o["kind"] == "headline":
                 o["pos"] = "center"
+            if si == 0 and o["kind"] == "num" and o["t0"] - T < 0.8:  # the hook's number is up and moving on frame 0
+                lead = o["t0"] - T
+                o["t0"] = T
+                o["num"] = hook_count(o["num"], lead)
             ovl.append(o)
         sfx += [[e[0], e[1] + d] + list(e[2:]) for e in P["sfx"] if a - 0.02 <= e[1] < b - 0.05]
         mus += [dict(e, t0=e["t0"] + d, t1=min(e["t1"], b) + d, **({"peak": e["peak"] + d} if "peak" in e else {}))

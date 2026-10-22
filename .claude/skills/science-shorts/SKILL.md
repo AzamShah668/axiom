@@ -18,8 +18,8 @@ The rules are in `productions/README.md` ("Shorts"):
 hook: According to NASA, one teaspoon
 body: The strangest thing about neutron stars .. So scientists calculate
 ```
-- **hook:** the line that wins the first second. Pick a line with a number card or a reveal: the count starts on
-  frame 0, so the number is the hook.
+- **hook:** the line that wins the first second. Pick a line with a number card or a reveal. A number card that
+  opens the hook is moved to frame 0 and counts all the way to its spoken word, so the moving number is the hook.
 - **body:** one or more runs of lines, `first .. last`, in story order. The hook line is left out of the run
   automatically, so the run can cover the whole fact.
 - **Length:** aim for 35-60 s. Trim setup lines rather than the payoff.

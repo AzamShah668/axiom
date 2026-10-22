@@ -38,13 +38,15 @@ def per_item(video, out, cutlist):
         ok, im = cap.read()
         if not ok:
             continue
-        im = cv2.resize(im, (480, 270))
+        tw, th = (480, 270) if im.shape[1] >= im.shape[0] else (300, 533)  # Shorts: portrait tiles
+        im = cv2.resize(im, (tw, th))
         flag(im, t, flags)
-        cv2.rectangle(im, (0, 0), (480, 22), (0, 0, 0), -1)
+        cv2.rectangle(im, (0, 0), (tw, 22), (0, 0, 0), -1)
         cv2.putText(im, f"{n} {it['sec']}/{k} {it['kind']} {int(t // 60)}:{t % 60:04.1f}", (4, 16),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1)
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.5 if tw > 300 else 0.42, (0, 255, 255), 1)
         ims.append(im)
-    return len(ims), write_sheets(ims, out, 24, 4, 85), flags
+    cols = 4 if ims and ims[0].shape[1] >= ims[0].shape[0] else 7
+    return len(ims), write_sheets(ims, out, cols * 6 if cols == 4 else 14, cols, 85), flags
 
 
 def every(video, out, step):
