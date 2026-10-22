@@ -41,7 +41,7 @@ ONLY=teaspoon scripts/science/pipeline.sh productions/NN-slug shorts   # one; wi
 ```
 `scripts/video/render_short.py` re-uses the master's reviewed plan, re-timed onto the Short's clock:
 - the cuts, shots, camera moves, headlines, key lines, number cards and sound design
-- each shot fetched again from its 4K source (`sources.json`) and framed 9:16 around its brightest subject
+- each shot fetched again from its 4K source (`sources.json`) and cropped square around its brightest subject
   (cached in `$WORK/out/shorts/vclips/`)
 - audio: the master's voice stem (`<master>_work/stem_voice.wav`), a fresh bed of the section's music track,
   the plan's sounds, a whoosh at the hook -> story join
@@ -69,6 +69,12 @@ Output: `$WORK/out/shorts/<id>.mp4`, `<id>.en.srt` and `<id>.plan.json`.
 - Send the Short to the owner with SendUserFile (one file, under 30 MB; re-encode at 720x1280 if bigger).
 
 ## 4. Upload (private) and link
+Package file per Short: `productions/NN-slug/shorts/<id>.md` (same **Title** / **Description** / **Tags**
+format as `youtube.md`; credits list every archive video ID the Short uses, no pinned comment needed).
+```bash
+python scripts/youtube/upload_youtube.py upload $WORK/out/shorts/<id>.mp4 productions/NN-slug/shorts/<id>.md --privacy private
+```
+`--privacy private` is required: the uploader's default is public.
 - Upload each Short **private** with `scripts/youtube/upload_youtube.py`. The description carries:
   - 2 lines on the fact
   - "Full video: <link>"
