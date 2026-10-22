@@ -6,7 +6,11 @@
 top: BLACK HOLES STRETCH STARS / *LIKE MAGGI*
 hook: Scientists call it exactly that
 say: क्या आपको पता है, कि black hole किसी तारे को Maggi की तरह खींच कर लंबा कर देता है? Scientists इसे कहते हैं... spaghettification.
-say_en: Did you know a black hole can stretch a star out like Maggi? Scientists call it... spaghettification.
+say_en: Did you know a black hole can stretch a star out like Maggi? Scientists call it spaghettification.
 land: spaghettification
+# the hook moves from frame 0: gas streaming round a black hole, a star shredding, then the stream up close
+hook_shot: eso_eso1907f#0 @ 0.3
+hook_shot: svs_11530#0 @ 4.2 | Maggi
+hook_shot: eso_eso1907f#0 @ 8.0 | Scientists
 body: Near a black hole, gravity .. The object gets longer
 body: In 2019, this stopped .. A star had never been seen

@@ -76,7 +76,10 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   "क्या आपको पता है, कि neutron star का सिर्फ़ एक चम्मच…" (owner's exception to the no-addressing rule,
   Shorts hooks only, 2026-10-22). It plays over the fact's strongest shot and number card, and the number lands
   on its word. Then the fact's story follows in order, in the master's narration.
-- **Pace:** Shorts play 1.1x faster than the master (pitch kept). Length 35-60 s.
+- **The hook moves from frame 0** (owner's rule, 2026-10-22): fast-moving footage (animations, flows, streams;
+  never a still or a slow drift), a cut every 2-3 s, chosen with `hook_shots.py`. A spoken hook never waits:
+  no pause inside it longer than 0.15 s (0.3 s between sentences); the key word follows straight on.
+- **Pace: every Short plays at 1.1x, hook included** (owner's rule, 2026-10-22; pitch kept). Length 35-60 s.
 - **Layout:** 1080x1920 with the picture as a 1080x1080 square in the middle, black above and below. A title in
   the top bar says what the Short is about (English, one gold phrase). The bottom bar stays clear for YouTube's
   title and buttons.

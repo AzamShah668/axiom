@@ -29,6 +29,16 @@ body: The strangest thing about neutron stars .. So scientists calculate
   letters. It is rendered with the locked voice and cached in `$WORK/out/shorts/tts/` (about 90 credits each).
 - **say_en:** its English line (the Short's caption file).
 - **land:** the word in `say` where the count stops. The number is up and counting from frame 0.
+- **hook_shot:** the hook's own footage, one line per cut: `hook_shot: <shot id> @ <clip seconds> | <word>`
+  (the first cut is at 0, each next one on its word of `say`). The hook must move from frame 0 (owner's rule):
+  ```bash
+  python scripts/video/hook_shots.py work/library <sheet.jpg> --q "<what the hook says>" [--q ...] \
+      --clips-from productions/NN-slug/cutlist.json --skip $WORK/out/shorts/<id>.plan.json
+  ```
+  It ranks shots by CLIP match x optical-flow motion and prints the best 3 s of each (`best@`, the clip seconds
+  to give `@`). Take 2-4 shots with motion above ~0.8, a cut every 2-3 s, none the body already shows. A shot
+  under ~0.3 looks frozen in a hook. Without hook_shot the master hook line's shots are stretched over the new
+  line, which is fine only when they move.
 - **body:** one or more runs of lines, `first .. last`, in story order. The hook line is left out of the run
   automatically, so the run can cover the whole fact.
 - **Length:** aim for 35-60 s. Trim setup lines rather than the payoff.
@@ -61,8 +71,11 @@ ONLY=teaspoon scripts/science/pipeline.sh productions/NN-slug shorts   # one; wi
   the plan's sounds, a whoosh at the hook -> story join
 - layout: a 1080x1080 square picture in the middle, black bars of 420 px above and below. The `top` title is
   in the top bar; the bottom bar is left for YouTube's title and buttons. Headlines are centred.
-- pace: `--speed 1.1` by default. The voice is time-stretched with rubberband (pitch kept) and every time on
-  the plan is scaled to match; footage plays at normal speed.
+- pace: **1.1x for every Short, hook included** (owner's rule; `--speed 1.1` is the default, never change
+  it). The voice is time-stretched with rubberband (pitch kept) and every time on the plan is scaled to match;
+  footage plays at normal speed.
+- the spoken hook's pauses are cut to 0.15 s (0.3 s between sentences) from its alignment, so no word waits
+  (Scientists इसे कहते हैं… spaghettification had a 1.06 s gap)
 - cut points come from the voice track: a section's first line starts under its chapter card, before its
   caption does, so the cut walks back to the silence before the first word
 - no fade-in (the hook hits on frame 0) and no fade-out (the end card loops into the hook)
@@ -72,7 +85,10 @@ Output: `$WORK/out/shorts/<id>.mp4`, `<id>.en.srt` and `<id>.plan.json`.
 ## 3. Review
 - `python scripts/video/review_sheet.py $WORK/out/shorts/<id>.mp4 <dir> --cutlist $WORK/out/shorts/<id>.plan.json`
   gives one frame per shot.
-- Check the spoken hook and every join with speech recognition (faster-whisper medium): no clipped first word.
+- Check the spoken hook and every join with speech recognition (faster-whisper medium, `word_timestamps`): no
+  clipped first word, no gap over 0.3 s inside the hook.
+- Measure the hook's motion (optical flow over its first 8 s): every second should move; the 02 Maggi hook
+  runs 1.2-2.6 px/frame, the frozen shot it replaced measured 0.03.
 - Look for:
   - a subject cut off by the square window
   - text running off the 1080 px width

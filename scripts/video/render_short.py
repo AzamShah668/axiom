@@ -10,9 +10,13 @@ shorts.spec, one block per Short. Master lines are found by the start of their E
   say: <Devanagari hook line>                   new spoken hook (ElevenLabs, locked preset), e.g. "क्या आपको पता है…"
   say_en: <English of the hook line>            its caption
   land: <word in the say line>                  the hook's number lands on this word
+  hook_shot: <shot id> @ <clip s> [| <word>]    the hook's own footage, one line per cut (the first at 0, the next
+                                                on <word>, or evenly split on words); pick moving shots with
+                                                hook_shots.py. Without it the master hook line's shots are stretched
   body: <caption start> .. <caption start>      a run of master lines in story order (the hook line is left out)
   body: ...                                     further runs are joined in order
-Without say:, the hook is the master line itself.
+Without say:, the hook is the master line itself. A spoken hook never waits: pauses inside it are cut to 0.15 s
+(0.3 s between sentences).
 
 Layout: the picture is a 1080x1080 square in the middle of the frame, black above and below; the title sits in the
 top bar; the bottom bar stays clear for the Shorts title and buttons. The Short plays --speed times faster than
@@ -42,6 +46,7 @@ BAND_Y = (CH - SH) // 2      # top of the picture; the title bar is above it
 END = 2.6                    # end card length (s)
 SLIVER = 0.4                 # a shot piece shorter than this at a join is given to its neighbour
 GEOMETRY = ("callout", "route", "hud")  # overlays pinned to positions in the 16:9 frame: left out of Shorts
+LIB = ""                     # footage library (the folder of sources.json), set by main()
 
 
 def parse_spec(path):
@@ -59,6 +64,10 @@ def parse_spec(path):
         if key == "body":
             a, _, b = val.partition("..")
             cur["body"].append((a.strip(), (b or a).strip()))
+        elif key == "hook_shot":
+            shot, _, rest = val.partition("@")
+            off, _, word = rest.partition("|")
+            cur.setdefault("hook_shots", []).append((shot.strip(), float(off), word.strip()))
         elif key in ("top", "hook", "say", "say_en", "land"):
             cur[key] = val.strip()
     return shorts
@@ -158,19 +167,39 @@ def tts_line(text, cache_dir):
                        capture_output=True)
         print(f"  hook TTS: {len(text)} characters")
     al = json.load(open(al_p))
-    return r3._load(wav, 1), al["character_start_times_seconds"], al["character_end_times_seconds"]
+    return (r3._load(wav, 1), "".join(al["characters"]), al["character_start_times_seconds"],
+            al["character_end_times_seconds"])
+
+
+PAUSE, BREAK = 0.15, 0.3     # longest pause inside a spoken hook: between words, between sentences (s)
 
 
 def spoken_hook(spec, out_dir):
-    """(voice, duration, land_t): trimmed to start on the first syllable, 0.3 s of air after the last."""
-    text = spec["say"]
-    v, cs, ce = tts_line(text, os.path.join(out_dir, "tts"))
+    """(voice, duration, land_t, word starts): from the first syllable to 0.3 s after the last, long pauses cut."""
+    v, text, cs, ce = tts_line(spec["say"], os.path.join(out_dir, "tts"))
     first = next(i for i, ch in enumerate(text) if not ch.isspace())
     a = max(0.0, cs[first] - 0.04)
     b = min(len(v) / SR, ce[-1] + 0.3)
-    land = text.find(spec.get("land", "")) if spec.get("land") else -1
-    land_t = (cs[land] if land >= 0 else ce[-1]) - a
-    return cut(v, a, b), b - a, land_t
+    vis = [i for i, ch in enumerate(text) if ch.strip() and ch not in ",.?!।…"]
+    gaps = []  # silences cut out of the middle of each long pause (the alignment says nobody speaks there)
+    for i, j in zip(vis, vis[1:]):
+        keep = BREAK if any(ch in "?!।" for ch in text[i + 1:j]) else PAUSE
+        if cs[j] - ce[i] > keep + 0.05:
+            gaps.append((ce[i] + keep / 2, cs[j] - keep / 2))
+
+    def at(t):  # time in the TTS file -> time in the hook
+        return t - a - sum(min(max(t - g0, 0.0), g1 - g0) for g0, g1 in gaps)
+
+    edges = [a] + [x for g in gaps for x in g] + [b]
+    voice = np.concatenate([cut(v, x, y) for x, y in zip(edges[::2], edges[1::2])])
+    land = text.find(spec["land"]) if spec.get("land") else -1
+    words = {}
+    for k in range(first, len(text)):
+        if text[k].strip() and (k == first or text[k - 1].isspace()):
+            words.setdefault(text[k:].split()[0].strip(",.?!।…"), at(cs[k]))
+    if gaps:
+        print(f"  hook: {len(gaps)} pauses cut ({sum(g1 - g0 for g0, g1 in gaps):.2f} s)")
+    return voice, at(b), at(cs[land] if land >= 0 else ce[-1]), words
 
 
 # ------------------------------------------------------------------ plan
@@ -219,19 +248,45 @@ def new_item(it, x0, t0, t1, trans=None):
     return new
 
 
+def hook_items(hs, Dh, words):
+    """Clip items for the hook's own shots: each cut on its word (or evenly, snapped to the nearest word)."""
+    shots = {s["id"]: s for s in json.load(open(os.path.join(LIB, "shots.json")))}
+    starts = [0.0]
+    for k, (_, _, word) in enumerate(hs[1:], 1):
+        if word:
+            if word not in words:
+                raise SystemExit(f"hook_shot: '{word}' is not a word of the say: line")
+            starts.append(words[word])
+        else:
+            starts.append(min(words.values(), key=lambda t: abs(t - k * Dh / len(hs))))
+    items = []
+    for k, ((sid, off, _), t0) in enumerate(zip(hs, starts)):
+        s = shots[sid]
+        t1 = starts[k + 1] if k + 1 < len(hs) else Dh
+        if not any(s["start"] + u0 <= off and off + t1 - t0 <= s["start"] + u1 for u0, u1 in s["usable"]):
+            raise SystemExit(f"hook_shot {sid} @ {off}: {t1 - t0:.1f} s from there is not all usable {s['usable']}")
+        items.append({"kind": "clip", "t0": t0, "t1": t1, "trans": "cut", "move": "push", "rate": 0.032,
+                      "dir": 1 if k % 2 == 0 else -1, "shot": sid, "clip": s["clip"], "ss": off, "src_off": off,
+                      "crop": s.get("crop"), "title": ""})
+    return items
+
+
 def build(spec, P, L, hook=None):
     """Plan on the Short's clock at master speed (scale_plan() speeds it up). hook = (duration, land_t) of a
     spoken hook laid over the master hook line's shots, or None to use the master line itself."""
     segs = segments(spec, L)
     items, ovl, sfx, mus, caps = [], [], [], [], []
     a, b = segs[0]
-    if hook:  # the spoken hook: the master line's shots stretched to the new line, its number landing on `land`
-        Dh, land_t = hook
+    if hook:  # the spoken hook: its own footage (hook_shot:), else the master line's shots stretched to the new line
+        Dh, land_t, words = hook
         w = Dh / (b - a)
-        for n, (it, x0, x1) in enumerate(pieces(P, a, b)):
-            items.append(new_item(it, x0, (x0 - a) * w, (x1 - a) * w, "cut" if n == 0 else None))
-            if items[-1]["kind"] == "num":
-                items[-1]["num"] = hook_count(items[-1]["num"], land_t - items[-1]["t0"])
+        if spec.get("hook_shots"):
+            items += hook_items(spec["hook_shots"], Dh, words)
+        else:
+            for n, (it, x0, x1) in enumerate(pieces(P, a, b)):
+                items.append(new_item(it, x0, (x0 - a) * w, (x1 - a) * w, "cut" if n == 0 else None))
+                if items[-1]["kind"] == "num":
+                    items[-1]["num"] = hook_count(items[-1]["num"], land_t - items[-1]["t0"])
         t_on = land_t if spec.get("land") else 0.1  # key text appears on the `land` word
         for o in P["ovl"]:
             if not (a - 0.4 <= o["t0"] < b - 0.3):
@@ -479,10 +534,13 @@ def main():
         ap.add_argument(x)
     ap.add_argument("--only", default="")
     ap.add_argument("--workers", type=int, default=4)
-    ap.add_argument("--speed", type=float, default=1.1, help="Shorts play this much faster than the master")
+    ap.add_argument("--speed", type=float, default=1.1, help="Shorts play this much faster than the master "
+                                                            "(owner's rule: every Short, hook included, at 1.1)")
     ap.add_argument("--narration", default="", help="narration.wav, when there is no master render to take the voice "
                                                     "stem from (a plan made only for Shorts)")
     a = ap.parse_args()
+    global LIB
+    LIB = os.path.dirname(os.path.abspath(a.sources))
     import soundfile as sf
     P = json.load(open(a.cutlist))
     sources = json.load(open(a.sources))
@@ -505,6 +563,8 @@ def main():
         work = os.path.join(a.out, f"{sid}_work")
         os.makedirs(work, exist_ok=True)
         hook = spoken_hook(spec, a.out) if spec.get("say") else None
+        if spec.get("hook_shots") and not hook:
+            raise SystemExit(f"{spec['id']}: hook_shot: needs a spoken hook (say:)")
         segs, Ps = build(spec, P, L, hook and hook[1:])
         voice_parts = ([hook[0]] if hook else []) + [cut(voice, x, y) for x, y in (segs[1:] if hook else segs)]
         raw, voice_wav = os.path.join(work, "voice_raw.wav"), os.path.join(work, "voice.wav")
