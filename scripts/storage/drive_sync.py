@@ -237,6 +237,9 @@ def pull(d, a):
     only = {x for x in a.only.split(",") if x}
     if a.only_list:
         only |= {ln.strip() for ln in open(a.only_list) if ln.strip()}
+        if not only:  # an empty list means nothing to pull, never "everything" (that once filled the disk)
+            print("  --only-list is empty: nothing to pull")
+            return
     exclude = {p for p in a.exclude.split(",") if p}
     jobs = []
 
