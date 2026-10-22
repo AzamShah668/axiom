@@ -641,8 +641,8 @@ def main():
         ap.add_argument(x)
     ap.add_argument("--only", default="")
     ap.add_argument("--workers", type=int, default=4)
-    ap.add_argument("--speed", type=float, default=1.1, help="Shorts play this much faster than the master "
-                                                            "(owner's rule: every Short, hook included, at 1.1)")
+    ap.add_argument("--speed", type=float, default=1.2, help="Shorts play this much faster than the master "
+                                                            "(owner's rule: every Short, hook included, at 1.2)")
     ap.add_argument("--narration", default="", help="narration.wav, when there is no master render to take the voice "
                                                     "stem from (a plan made only for Shorts)")
     ap.add_argument("--timeline", default="", help="the narration's timeline.json (default: next to --narration, "
@@ -687,8 +687,12 @@ def main():
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af", f"rubberband=tempo={a.speed}:pitchq=quality",
                         "-ar", str(SR), "-ac", "1", voice_wav], check=True)  # faster, same pitch
         scale_plan(Ps, a.speed)
-        Ps["ovl"].append({"kind": "captions", "t0": 0.0, "t1": Ps["total"],
-                          "chunks": caption_chunks(Ps["capwords"], Ps["total"])})
+        # no caption while other text is on screen: a name, a date, a headline already says it (owner's rule)
+        busy = [(o["t0"], o["t1"]) for o in Ps["ovl"] if o["kind"] in ("headline", "keyline", "num", "endcard")]
+        busy += [(it["t0"], it["t1"]) for it in Ps["items"] if it["kind"] == "num"]
+        chunks = [c for c in caption_chunks(Ps["capwords"], Ps["total"])
+                  if not any(c["t0"] < y and x < c["t1"] for x, y in busy)]
+        Ps["ovl"].append({"kind": "captions", "t0": 0.0, "t1": Ps["total"], "chunks": chunks})
         v = r3._load(voice_wav, 1)
         sf.write(voice_wav, np.concatenate([v, np.zeros(int(END * SR) + SR)]).astype(np.float32), SR)
         add_end(Ps)

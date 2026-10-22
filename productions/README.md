@@ -82,8 +82,8 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   4. **Payoff (38-48 s):** the ironic or emotional end, landing on the name or term ("...The Black Hole").
   - Conversational Hinglish: English words where people say them (officer, calculate, exact solution, size,
     gate), simple spoken Hindi otherwise; "hamara Suraj", not "the Sun".
-  - **Word budget:** Neel at 1.1x speaks about 2.7 words a second (Devanagari count), so a 48 s Short holds
-    about 120 words. The first one ran 166 words, 64.5 s.
+  - **Word budget:** Neel at 1.2x speaks about 2.9 words a second (Devanagari count), so a 48 s Short holds
+    about 130 words. The first one ran 166 words, 64.5 s.
   - The owner writes or approves it in Hinglish; it is recorded from Devanagari (English words in Latin
     letters, numbers in Hindi words), one section per beat, pauses capped at 0.3 s.
 - **The older form** (still used by the 03 teaspoon and 02 Maggi Shorts) is hook + body: the hook is a new spoken line in the same voice that asks the viewer, e.g.
@@ -93,12 +93,13 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
 - **The hook moves from frame 0** (owner's rule, 2026-10-22): fast-moving footage (animations, flows, streams;
   never a still or a slow drift), a cut every 2-3 s, chosen with `hook_shots.py`. A spoken hook never waits:
   no pause inside it longer than 0.15 s (0.3 s between sentences); the key word follows straight on.
-- **Pace: every Short plays at 1.1x, hook included** (owner's rule, 2026-10-22; pitch kept). Length 35-60 s.
+- **Pace: every Short plays at 1.2x, hook included** (owner's rule, 2026-10-22, raised from 1.1x; pitch kept). Length 35-60 s.
 - **Layout:** 1080x1920 with the picture as a 1080x1080 square in the middle, black above and below. A title in
   the top bar says what the Short is about (English, one gold phrase). The bottom bar stays clear for YouTube's
   title and buttons.
 - **Burned-in captions on every Short** (owner's rule, 2026-10-22): the spoken words in Roman letters (Hinglish),
-  one word at a time (owner, 2026-10-22), in gold as it is spoken. `captions:` file per Short (`say_roman:` for a spoken hook).
+  one word at a time (owner, 2026-10-22), in gold as it is spoken. No caption while other text is on
+  screen (a name card, a date, a headline or number card already says it). `captions:` file per Short (`say_roman:` for a spoken hook).
 - **The end card is written, never said:** `FULL VIDEO BELOW ↓` on screen.
 - **Everyday comparisons are allowed in Shorts hooks and titles** (owner's exception, 2026-10-22), e.g. "Maggi
   की तरह" for spaghettification. The science term stays, and the full videos stay universal (no India-specific

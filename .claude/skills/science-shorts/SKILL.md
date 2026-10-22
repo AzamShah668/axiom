@@ -88,7 +88,7 @@ ONLY=teaspoon scripts/science/pipeline.sh productions/NN-slug shorts   # one; wi
   the plan's sounds, a whoosh at the hook -> story join
 - layout: a 1080x1080 square picture in the middle, black bars of 420 px above and below. The `top` title is
   in the top bar; the bottom bar is left for YouTube's title and buttons. Headlines are centred.
-- pace: **1.1x for every Short, hook included** (owner's rule; `--speed 1.1` is the default, never change
+- pace: **1.2x for every Short, hook included** (owner's rule; `--speed 1.2` is the default, never change
   it). The voice is time-stretched with rubberband (pitch kept) and every time on the plan is scaled to match;
   footage plays at normal speed.
 - the spoken hook's pauses are cut to 0.15 s (0.3 s between sentences) from its alignment, so no word waits
