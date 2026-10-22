@@ -281,7 +281,7 @@ def caption_words(path, timeline, P):
     return out
 
 
-def caption_chunks(ws, total, most=4, chars=20):
+def caption_chunks(ws, total, most=1, chars=20):  # owner: one word at a time
     """Caption lines on the Short's clock: a few words each, broken at punctuation, no one-word orphans; a line
     shows from just before its first word until the next line (or a little after its last word in a pause)."""
     groups, cur = [], []
@@ -294,7 +294,7 @@ def caption_chunks(ws, total, most=4, chars=20):
         groups.append(cur)
     merged = []
     for g in groups:
-        if merged and len(g) == 1 and not merged[-1][-1][2]:
+        if most > 1 and merged and len(g) == 1 and not merged[-1][-1][2]:
             merged[-1] = merged[-1] + g
         else:
             merged.append(g)
@@ -302,7 +302,7 @@ def caption_chunks(ws, total, most=4, chars=20):
     for i, g in enumerate(merged):
         t0 = max(0.0, g[0][0] - 0.08)
         nxt = merged[i + 1][0][0] - 0.08 if i + 1 < len(merged) else total
-        out.append({"t0": t0, "t1": min(nxt, g[-1][0] + 1.1, total), "words": [[t, x] for t, x, _ in g]})
+        out.append({"t0": t0, "t1": min(nxt, g[-1][0] + (0.7 if most == 1 else 1.1), total), "words": [[t, x] for t, x, _ in g]})
     return out
 
 

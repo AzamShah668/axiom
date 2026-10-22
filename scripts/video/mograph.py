@@ -715,7 +715,7 @@ def _name(fr, spec, t, D):
 
 
 # ------------------------------------------------------------------ captions (Shorts)
-CAPTION = {"y": 0.8, "size": 76, "maxw": 0.8}  # centre line (of H), font px, widest line (of W)
+CAPTION = {"y": 0.88, "size": 96, "maxw": 0.8}  # centre line (of H), font px, widest line (of W)
 
 
 @lru_cache(maxsize=1024)

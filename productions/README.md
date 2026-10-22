@@ -98,7 +98,7 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   the top bar says what the Short is about (English, one gold phrase). The bottom bar stays clear for YouTube's
   title and buttons.
 - **Burned-in captions on every Short** (owner's rule, 2026-10-22): the spoken words in Roman letters (Hinglish),
-  a few at a time, the word being spoken in gold. `captions:` file per Short (`say_roman:` for a spoken hook).
+  one word at a time (owner, 2026-10-22), in gold as it is spoken. `captions:` file per Short (`say_roman:` for a spoken hook).
 - **The end card is written, never said:** `FULL VIDEO BELOW ↓` on screen.
 - **Everyday comparisons are allowed in Shorts hooks and titles** (owner's exception, 2026-10-22), e.g. "Maggi
   की तरह" for spaghettification. The science term stays, and the full videos stay universal (no India-specific
