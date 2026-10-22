@@ -1,6 +1,6 @@
 ---
 name: science-shorts
-description: Cut YouTube Shorts (1080x1920, 35-60 s) from a finished science-channel video - one per fact plus the cold open, each opening on its strongest line, telling the fact's story and ending on a written FULL VIDEO BELOW card - re-framed from the 4K sources, reviewed, previewed and uploaded private. Use for stage 7 of science-video or when asked for Shorts from a video.
+description: Cut YouTube Shorts (1080x1920, 35-60 s) from a finished science-channel video - one per fact plus the cold open, each opening on a spoken "क्या आपको पता है…" hook over its strongest shot and number card, then the fact's story at 1.1x, a square picture between black bars with a title on top, and a written FULL VIDEO BELOW card - reviewed, previewed and uploaded private. Use for stage 7 of science-video or when asked for Shorts from a video.
 ---
 
 # Shorts (stage 7)
@@ -15,11 +15,20 @@ The rules are in `productions/README.md` ("Shorts"):
 `productions/NN-slug/shorts.spec`, one block per Short. Lines are named by the start of their English `C` caption:
 ```
 == teaspoon | A Teaspoon of This Star Weighs a Billion Tons #shorts
+top: ONE TEASPOON OF A NEUTRON STAR / WEIGHS *A BILLION TONS*
 hook: According to NASA, one teaspoon
+say: क्या आपको पता है, कि neutron star का सिर्फ़ एक चम्मच, Earth पर लगभग एक अरब टन का होता है?
+say_en: Did you know that just one teaspoon of neutron star weighs about a billion tons on Earth?
+land: अरब
 body: The strangest thing about neutron stars .. So scientists calculate
 ```
-- **hook:** the line that wins the first second. Pick a line with a number card or a reveal. A number card that
-  opens the hook is moved to frame 0 and counts all the way to its spoken word, so the moving number is the hook.
+- **top:** the title bar above the picture, in English. ` / ` sets the line break; `*gold*` marks the payoff phrase.
+- **hook:** the master line whose shots and number card the spoken hook plays over. Pick a number or a reveal.
+- **say:** the new spoken hook. It asks the viewer ("क्या आपको पता है, कि…"; the owner's exception for Shorts
+  hooks only) and ends on the number. Simple spoken Hindi; numbers in Hindi words; English terms in Latin
+  letters. It is rendered with the locked voice and cached in `$WORK/out/shorts/tts/` (about 90 credits each).
+- **say_en:** its English line (the Short's caption file).
+- **land:** the word in `say` where the count stops. The number is up and counting from frame 0.
 - **body:** one or more runs of lines, `first .. last`, in story order. The hook line is left out of the run
   automatically, so the run can cover the whole fact.
 - **Length:** aim for 35-60 s. Trim setup lines rather than the payoff.
@@ -36,8 +45,12 @@ ONLY=teaspoon scripts/science/pipeline.sh productions/NN-slug shorts   # one; wi
   (cached in `$WORK/out/shorts/vclips/`)
 - audio: the master's voice stem (`<master>_work/stem_voice.wav`), a fresh bed of the section's music track,
   the plan's sounds, a whoosh at the hook -> story join
-- layout: headlines centred, number cards in the middle, the name tag at 62% height, the logo top-left, so
-  nothing sits under the Shorts buttons (right side) or the title (bottom fifth)
+- layout: a 1080x1080 square picture in the middle, black bars of 420 px above and below. The `top` title is
+  in the top bar; the bottom bar is left for YouTube's title and buttons. Headlines are centred.
+- pace: `--speed 1.1` by default. The voice is time-stretched with rubberband (pitch kept) and every time on
+  the plan is scaled to match; footage plays at normal speed.
+- cut points come from the voice track: a section's first line starts under its chapter card, before its
+  caption does, so the cut walks back to the silence before the first word
 - no fade-in (the hook hits on frame 0) and no fade-out (the end card loops into the hook)
 
 Output: `$WORK/out/shorts/<id>.mp4`, `<id>.en.srt` and `<id>.plan.json`.
@@ -45,8 +58,9 @@ Output: `$WORK/out/shorts/<id>.mp4`, `<id>.en.srt` and `<id>.plan.json`.
 ## 3. Review
 - `python scripts/video/review_sheet.py $WORK/out/shorts/<id>.mp4 <dir> --cutlist $WORK/out/shorts/<id>.plan.json`
   gives one frame per shot.
+- Check the spoken hook and every join with speech recognition (faster-whisper medium): no clipped first word.
 - Look for:
-  - a subject cut off by the 9:16 window
+  - a subject cut off by the square window
   - text running off the 1080 px width
   - anything under the right-side buttons or the bottom title area
   - a flash frame at a join

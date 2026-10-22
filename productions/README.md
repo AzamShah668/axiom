@@ -72,10 +72,15 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
 ## Shorts (owner's plan, 2026-10-22)
 - **Every video gets as many Shorts as it can carry**: roughly one per fact plus the cold open, cut from the
   finished video (`shorts.spec`, pipeline stage `shorts`).
-- **Each Short is hook + body.** It opens on the fact's strongest line, usually one with a number card, then
-  tells the fact's story in order. Length 35-60 s, vertical 1080x1920, re-framed from the 4K sources.
-- **The end card is written, never said:** `FULL VIDEO BELOW ↓` on screen. The narration stays pure
-  third-person storytelling; nothing is recorded for Shorts.
+- **Each Short is hook + body.** The hook is a new spoken line in the same voice that asks the viewer, e.g.
+  "क्या आपको पता है, कि neutron star का सिर्फ़ एक चम्मच…" (owner's exception to the no-addressing rule,
+  Shorts hooks only, 2026-10-22). It plays over the fact's strongest shot and number card, and the number lands
+  on its word. Then the fact's story follows in order, in the master's narration.
+- **Pace:** Shorts play 1.1x faster than the master (pitch kept). Length 35-60 s.
+- **Layout:** 1080x1920 with the picture as a 1080x1080 square in the middle, black above and below. A title in
+  the top bar says what the Short is about (English, one gold phrase). The bottom bar stays clear for YouTube's
+  title and buttons.
+- **The end card is written, never said:** `FULL VIDEO BELOW ↓` on screen.
 - **The full video is linked with YouTube Studio's "Related video"** on each Short (links typed into a Short's
   description don't click). The full video must be public first.
 - Uploads stay private until the owner says publish; the footage and music credits go in every Short's description.
