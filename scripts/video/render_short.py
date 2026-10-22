@@ -263,7 +263,7 @@ def hook_items(hs, Dh, words):
     for k, ((sid, off, _), t0) in enumerate(zip(hs, starts)):
         s = shots[sid]
         t1 = starts[k + 1] if k + 1 < len(hs) else Dh
-        if not any(s["start"] + u0 <= off and off + t1 - t0 <= s["start"] + u1 for u0, u1 in s["usable"]):
+        if not any(u0 <= off and off + t1 - t0 <= u1 for u0, u1 in s["usable"]):  # usable: clip seconds
             raise SystemExit(f"hook_shot {sid} @ {off}: {t1 - t0:.1f} s from there is not all usable {s['usable']}")
         items.append({"kind": "clip", "t0": t0, "t1": t1, "trans": "cut", "move": "push", "rate": 0.032,
                       "dir": 1 if k % 2 == 0 else -1, "shot": sid, "clip": s["clip"], "ss": off, "src_off": off,

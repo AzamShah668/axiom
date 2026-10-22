@@ -45,6 +45,23 @@ body: The strangest thing about neutron stars .. So scientists calculate
 - **Coverage:** one Short per fact, plus the cold open. Two facts may share a Short only when they tell one story.
 - **Title:** `<English hook> #shorts`, under 100 characters. Never Hindi in titles or on screen.
 
+### Shorts with their own script (the standard from 2026-10-22)
+The owner's format (`productions/README.md`, "Shorts get their own script"): hook / conflict & discovery /
+core concept / payoff, conversational Hinglish, about 120 words for 48 s. Example: `productions/02-black-holes/shorts/marble/`.
+1. Show the owner the script in Hinglish; they approve or rewrite it.
+2. `shorts/<id>/tts/narration.hi.md`: the approved script in Devanagari, one `## <id>_<beat>` section per beat
+   (one beat can then be re-recorded alone).
+   - Write it as its own file: neighbouring sections are sent as context and would colour the read.
+   - Use commas instead of "..." and dashes; ElevenLabs holds "..." for about a second.
+3. `shorts/<id>/edit.spec` and `edit.base.json`: a normal v3 plan over that narration. `ban` every clip the
+   same video's other Shorts show, so Shorts of one video never repeat footage.
+   Give the hook beats short scenes over moving shots (check them with `hook_shots.py`; pin with `pin`).
+4. Record and plan:
+   `render_narration.py shorts/<id>/tts/narration.hi.md $W/voice --open-gap 0 --gap 0.3 --max-pause 0.3`,
+   then `make_edit.py` and `assign_shots.py ... --local-only --clips-from productions/NN-slug/cutlist.json`.
+5. shorts.spec block with no `say:`: `hook:` = the first line, `body:` = the second line to the last.
+   Render with `render_short.py ... <its cutlist> <no-master dir> ... --narration $W/voice/narration.wav`.
+
 ### Shorts from a video published before v3 (e.g. video 02)
 Its master has no v3 plan, so re-plan just the facts the Shorts use, over the published narration:
 1. Pull the fact's `<section>.mp3` and `.align.json` from Drive `productions/NN-slug/voice/`.

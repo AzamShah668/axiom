@@ -1,0 +1,338 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "music": [
+  {
+   "from": "marble_hook",
+   "track": "Long_Note_Three.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "glowing disk around a black hole in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "ban": [
+  "esahubble_heic1503a",
+  "esahubble_heic1913a",
+  "esahubble_heic1913b",
+  "eso_colosimo_paranal_03",
+  "eso_eso0943b",
+  "eso_eso1436c",
+  "eso_eso1825g",
+  "eso_eso1907b",
+  "eso_eso1907f",
+  "eso_eso2216a",
+  "eso_eso2305a",
+  "eso_eso2510b",
+  "eso_gl_northwest_ut1_ut2_ut3",
+  "eso_pao-vlt2016",
+  "svs_11530",
+  "svs_13086",
+  "svs_14335",
+  "svs_14576",
+  "svs_14619",
+  "svs_4997"
+ ],
+ "pin": {
+  "marble_hook/0": "svs_5425#0",
+  "marble_hook/1": "svs_14719-win2#0",
+  "marble_hook/2": "esahubble_heic1606a#0",
+  "marble_hook/3": "esahubble_heic1907b#0",
+  "marble_hook/4": "eso_la_silla_horalek_1#0",
+  "marble_end/5": "eso_black-hole-material#0"
+ },
+ "sections": {
+  "marble_hook": {
+   "v": [
+    {
+     "at": null,
+     "opt": "shrink",
+     "q": [
+      "the whole Earth seen from space",
+      "planet Earth rotating in space"
+     ]
+    },
+    {
+     "at": "Black Hole बना",
+     "q": [
+      "gas churning around a black hole",
+      "a glowing accretion disk around a black hole"
+     ]
+    },
+    {
+     "at": "तो उसका",
+     "q": [
+      "zooming into the centre of the galaxy",
+      "rushing through a dense star field"
+     ]
+    },
+    {
+     "at": "लेकिन यह हिसाब",
+     "q": [
+      "rushing through a dense star field",
+      "a bright meteor streaking across the night sky"
+     ]
+    },
+    {
+     "at": "एक जंग",
+     "q": [
+      "a starry night sky over a dark landscape",
+      "storm clouds under the stars"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "If the whole Earth were squeezed into a black hole, it would be just the size of a marble"
+    },
+    {
+     "at": "लेकिन यह हिसाब",
+     "text": "But this calculation was first made not in a lab, but on a battlefield"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "तो उसका",
+     "lines": [
+      {
+       "text": "THE WHOLE EARTH",
+       "at": "तो उसका"
+      },
+      {
+       "text": "*A MARBLE*",
+       "at": "कंचे"
+      }
+     ]
+    }
+   ]
+  },
+  "marble_war": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a starry night sky over a dark landscape",
+      "Milky Way rising over mountains at night"
+     ]
+    },
+    {
+     "at": "World War",
+     "q": [
+      "a bright meteor streaking across the night sky",
+      "shooting star over an observatory"
+     ]
+    },
+    {
+     "at": "Karl",
+     "q": [
+      "star trails circling over an observatory",
+      "telescope dome under the stars"
+     ]
+    },
+    {
+     "at": "जंग के उसी",
+     "q": [
+      "an old observatory telescope at night",
+      "astronomer's telescope under the night sky"
+     ]
+    },
+    {
+     "at": "Einstein की बिल्कुल",
+     "q": [
+      "light bent around a massive galaxy cluster",
+      "gravitational lensing arcs"
+     ]
+    },
+    {
+     "at": "Einstein ख़ुद",
+     "q": [
+      "a dense galaxy cluster in deep space",
+      "galaxies distorted by gravity"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "December",
+     "text": "DECEMBER 1915",
+     "big": true
+    },
+    {
+     "at": "World War",
+     "text": "During World War One, a German officer was calculating the paths of artillery shells..."
+    },
+    {
+     "at": "Karl",
+     "text": "...Karl Schwarzschild"
+    },
+    {
+     "at": "जंग के उसी",
+     "text": "Amid that same noise and mud of war..."
+    },
+    {
+     "at": "General Relativity",
+     "text": "EINSTEIN'S GENERAL RELATIVITY",
+     "big": true
+    },
+    {
+     "at": "का पहला",
+     "text": "...he found the first exact solution of Einstein's brand-new theory, General Relativity"
+    },
+    {
+     "at": "Einstein ख़ुद",
+     "text": "Einstein himself was stunned"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Karl",
+     "num": {
+      "template": "name",
+      "value": "KARL SCHWARZSCHILD",
+      "sub": "German astronomer · 1873-1916"
+     }
+    }
+   ]
+  },
+  "marble_limit": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "black hole with a glowing accretion disk",
+      "visualization of a black hole"
+     ]
+    },
+    {
+     "at": "अगर किसी",
+     "q": [
+      "a star collapsing under its own gravity",
+      "matter swirling into a black hole"
+     ]
+    },
+    {
+     "at": "तो वहाँ से",
+     "q": [
+      "light swallowed by a black hole",
+      "dark shadow of a black hole"
+     ]
+    },
+    {
+     "at": "हमारे सूरज",
+     "num": {
+      "template": "hero",
+      "value": "6",
+      "from": "1,392,000",
+      "count": "1.6",
+      "unit": "km wide",
+      "kicker": "our Sun, squeezed",
+      "land": "छह",
+      "log": true
+     },
+     "q": [
+      "the glowing surface of the Sun",
+      "a bright star in space"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "But Schwarzschild's calculations hid a strange secret"
+    },
+    {
+     "at": "अगर किसी",
+     "text": "If all of an object's mass is squeezed into a ball smaller than a limit..."
+    },
+    {
+     "at": "तो वहाँ से",
+     "text": "...not even light can get out"
+    },
+    {
+     "at": "हमारे सूरज",
+     "text": "For our Sun, that ball would be just 6 km wide"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "तो वहाँ से",
+     "lines": [
+      {
+       "text": "NOTHING ESCAPES",
+       "at": "तो वहाँ से"
+      },
+      {
+       "text": "*NOT EVEN LIGHT*",
+       "at": "रोशनी"
+      }
+     ]
+    }
+   ]
+  },
+  "marble_end": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a dark nebula in deep space",
+      "lonely stars in dark space"
+     ]
+    },
+    {
+     "at": "वह कभी",
+     "q": [
+      "zooming into the dark centre of a galaxy",
+      "slow zoom into a galaxy core"
+     ]
+    },
+    {
+     "at": "The Black Hole",
+     "q": [
+      "close-up of a black hole with a bright ring of light",
+      "black hole bending light around it"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Just five months after this calculation, Schwarzschild was dead"
+    },
+    {
+     "at": "वह कभी",
+     "text": "He never knew he had found the gate to the most dangerous thing in the universe..."
+    },
+    {
+     "at": "The Black Hole",
+     "text": "THE BLACK HOLE",
+     "big": true
+    }
+   ],
+   "sfx": [],
+   "m": [
+    {
+     "at": "The Black Hole",
+     "breath": 0.3,
+     "riser": 1.2,
+     "impact": "impact",
+     "trans": "flare"
+    }
+   ]
+  }
+ }
+}

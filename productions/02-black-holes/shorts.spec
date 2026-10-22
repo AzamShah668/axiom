@@ -14,3 +14,10 @@ hook_shot: svs_11530#0 @ 4.2 | Maggi
 hook_shot: eso_eso1907f#0 @ 8.0 | Scientists
 body: Near a black hole, gravity .. The object gets longer
 body: In 2019, this stopped .. A star had never been seen
+
+# Own script and plan (owner's format, 2026-10-22): shorts/marble/. Render with work/02-shorts/marble/cutlist.json
+# and --narration work/02-shorts/marble/voice/narration.wav.
+== marble | If Earth Became a Black Hole, It Would Be the Size of a Marble #shorts
+top: EARTH AS A BLACK HOLE / *THE SIZE OF A MARBLE*
+hook: If the whole Earth were squeezed
+body: But this calculation .. He never knew

@@ -72,7 +72,21 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
 ## Shorts (owner's plan, 2026-10-22)
 - **Every video gets as many Shorts as it can carry**: roughly one per fact plus the cold open, cut from the
   finished video (`shorts.spec`, pipeline stage `shorts`).
-- **Each Short is hook + body.** The hook is a new spoken line in the same voice that asks the viewer, e.g.
+- **Shorts get their own script** (owner's rule, 2026-10-22, first used for the 02 "marble" Short): written
+  for the Short and recorded fresh, not cut from the master narration. Four beats with time targets:
+  1. **Hook (0-8 s):** the fact as a statement ("Agar poori Earth ko daba kar ek Black Hole bana diya jaaye, to
+     uska size bas ek kanche jitna reh jaayega"), then a bridge that opens the story ("Lekin yeh hisaab sabse
+     pehle kisi lab mein nahi, ek jung ke maidan mein nikla tha"). No "Kya aapko pata hai" needed.
+  2. **Conflict & Discovery (8-24 s):** when, who, what happened, with one sensory detail ("shor aur mitti").
+  3. **Core Concept (24-38 s):** the science in one idea and one number ("Hamare Suraj ke liye... 6 km").
+  4. **Payoff (38-48 s):** the ironic or emotional end, landing on the name or term ("...The Black Hole").
+  - Conversational Hinglish: English words where people say them (officer, calculate, exact solution, size,
+    gate), simple spoken Hindi otherwise; "hamara Suraj", not "the Sun".
+  - **Word budget:** Neel at 1.1x speaks about 2.7 words a second (Devanagari count), so a 48 s Short holds
+    about 120 words. The first one ran 166 words, 64.5 s.
+  - The owner writes or approves it in Hinglish; it is recorded from Devanagari (English words in Latin
+    letters, numbers in Hindi words), one section per beat, pauses capped at 0.3 s.
+- **The older form** (still used by the 03 teaspoon and 02 Maggi Shorts) is hook + body: the hook is a new spoken line in the same voice that asks the viewer, e.g.
   "क्या आपको पता है, कि neutron star का सिर्फ़ एक चम्मच…" (owner's exception to the no-addressing rule,
   Shorts hooks only, 2026-10-22). It plays over the fact's strongest shot and number card, and the number lands
   on its word. Then the fact's story follows in order, in the master's narration.

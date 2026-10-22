@@ -356,6 +356,8 @@ def plan(edit, tl, voice_wav=None):
             opt = it.get("opt", "default")
             if hit_m or opt == "flash":
                 it["move"], it["rate"] = "impact", 0.12
+            elif opt == "shrink":  # a fast pull-back: the subject visibly shrinks ("squeeze the whole Earth")
+                it["move"], it["rate"] = "pull", 0.22
             else:
                 it["move"] = MOVES[mv % len(MOVES)]
                 it["rate"] = 0.015 if opt == "hold" else 0.032

@@ -1,0 +1,55 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "music": [
+  {
+   "from": "marble_hook",
+   "track": "Long_Note_Three.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "glowing disk around a black hole in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "ban": [
+  "esahubble_heic1503a",
+  "esahubble_heic1913a",
+  "esahubble_heic1913b",
+  "eso_colosimo_paranal_03",
+  "eso_eso0943b",
+  "eso_eso1436c",
+  "eso_eso1825g",
+  "eso_eso1907b",
+  "eso_eso1907f",
+  "eso_eso2216a",
+  "eso_eso2305a",
+  "eso_eso2510b",
+  "eso_gl_northwest_ut1_ut2_ut3",
+  "eso_pao-vlt2016",
+  "svs_11530",
+  "svs_13086",
+  "svs_14335",
+  "svs_14576",
+  "svs_14619",
+  "svs_4997"
+ ],
+ "pin": {
+  "marble_hook/0": "svs_5425#0",
+  "marble_hook/1": "svs_14719-win2#0",
+  "marble_hook/2": "esahubble_heic1606a#0",
+  "marble_hook/3": "esahubble_heic1907b#0",
+  "marble_hook/4": "eso_la_silla_horalek_1#0",
+  "marble_end/5": "eso_black-hole-material#0"
+ }
+}

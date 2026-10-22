@@ -1,7 +1,7 @@
 """Render a sectioned Hindi narration with the locked voice preset.
 
   python render_narration.py <narration.hi.md> <out_dir> [--only cold_open,fact10] [--gap 1.2] [--open-gap 1.6]
-                             [--title-after cold_open] [--gap-after hook=1.0,...]
+                             [--title-after cold_open] [--gap-after hook=1.0,...] [--max-pause 0.3]
 
 For every "## <id>" section: calls ElevenLabs /with-timestamps (with neighbour text as context so
 prosody flows across joins), saves <id>.mp3 + <id>.align.json. Then joins all sections with gaps
@@ -9,6 +9,8 @@ prosody flows across joins), saves <id>.mp3 + <id>.align.json. Then joins all se
   narration.wav / narration.mp3   final voice track
   timeline.json                   section start/end + character timings on the final timeline
 Re-running skips sections that already exist (delete a section's mp3 to re-render it).
+--max-pause cuts every pause inside a section down to that length (and its tail to 0.25 s), from the section's
+character timings: a Short with its own script never waits (owner's rule). The timeline follows the cut audio.
 """
 import argparse, base64, json, os, subprocess, sys, time
 from concurrent.futures import ThreadPoolExecutor
@@ -57,6 +59,34 @@ def render(sec, prev_text, next_text, out_dir):
     return sec["id"], f"{len(sec['text'])} chars"
 
 
+def tighten(wav, al, cap):
+    """Cut pauses longer than cap (s) between a section's words down to cap, its tail to 0.25 s.
+    Rewrites wav; returns (alignment on the new clock, seconds removed)."""
+    import numpy as np
+    import soundfile as sf
+    v, sr = sf.read(wav)
+    ch, cs, ce = al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
+    vis = [i for i, c in enumerate(ch) if c.strip() and c not in ",.?!।…-—"]
+    gaps = [(ce[i] + cap / 2, cs[j] - cap / 2) for i, j in zip(vis, vis[1:]) if cs[j] - ce[i] > cap + 0.05]
+    end = min(len(v) / sr, ce[vis[-1]] + 0.25)
+
+    def at(t):
+        return t - sum(min(max(t - g0, 0.0), g1 - g0) for g0, g1 in gaps)
+
+    edges = [0.0] + [x for g in gaps for x in g] + [end]
+    parts, n = [], int(0.01 * sr)
+    for k, (x, y) in enumerate(zip(edges[::2], edges[1::2])):
+        seg = v[int(x * sr):int(y * sr)].copy()
+        m = min(n, len(seg) // 2)
+        if k:  # 10 ms fades at the joins only stop clicks; the joins sit in silence
+            seg[:m] *= np.linspace(0, 1, m)
+        seg[len(seg) - m:] *= np.linspace(1, 0, m)
+        parts.append(seg)
+    sf.write(wav, np.concatenate(parts), sr)
+    return (dict(al, character_start_times_seconds=[at(t) for t in cs], character_end_times_seconds=[at(t) for t in ce]),
+            len(v) / sr - end + sum(g1 - g0 for g0, g1 in gaps))
+
+
 def duration(path):
     return float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                           "-of", "csv=p=0", path]).decode().strip())
@@ -72,6 +102,7 @@ def main():
     p.add_argument("--title-after", default="cold_open",
                    help="section the open gap follows (default cold_open; the first section if there is none)")
     p.add_argument("--gap-after", default="", help="per-section gaps, e.g. hook=1.0,fact5=3.0 (silence after it)")
+    p.add_argument("--max-pause", type=float, default=0.0, help="cut pauses inside sections to this (s); 0 = keep")
     a = p.parse_args()
     os.makedirs(a.out_dir, exist_ok=True)
     secs = parse(a.narration)
@@ -106,8 +137,11 @@ def main():
             t += g
         wav = os.path.join(a.out_dir, f"_{s['id']}.wav")
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp3, "-ar", str(sr), "-ac", "1", wav], check=True)
-        dur = duration(wav)
         al = json.load(open(os.path.join(a.out_dir, f"{s['id']}.align.json")))
+        if a.max_pause and al:
+            al, cut_s = tighten(wav, al, a.max_pause)
+            print(f"  {s['id']}: pauses cut by {cut_s:.2f} s")
+        dur = duration(wav)
         timeline.append({"id": s["id"], "start": round(t, 3), "end": round(t + dur, 3),
                          "chars": al["characters"] if al else [],
                          "char_start": [round(t + x, 3) for x in (al["character_start_times_seconds"] if al else [])]})

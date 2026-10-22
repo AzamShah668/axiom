@@ -6,6 +6,7 @@ edit.spec, one line per item, grouped by "== <section_id>" (section ids = "## " 
 A trigger is the first occurrence of that exact text in the section's narration ("-" = section start).
   V <trigger|-> @ <visual query> [| <alternative> ...] [{opt}]   footage beat, cut into scenes from different shots
                                        v3 {opt}: hold (5.5 s scenes, slow push) | flash (0.6 s montage) | 4s (length)
+                                       | shrink (fast pull-back: the subject visibly shrinks)
   G <trigger|-> @ <graphic name>       explanatory diagram (render_video.gfx) over dark footage
   C <trigger|-> | <English sentence> [| big]
                                        v2: caption on screen. v3: the English CC track; "big" also shows the phrase

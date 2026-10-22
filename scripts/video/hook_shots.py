@@ -72,7 +72,7 @@ def main():
     for i in order:
         s = shots[i]
         x0, x1 = max(s["usable"], key=lambda r: r[1] - r[0])
-        sp, t = motion(os.path.join(a.lib, "clips", s["clip"] + ".mp4"), s["start"] + x0, s["start"] + x1)
+        sp, t = motion(os.path.join(a.lib, "clips", s["clip"] + ".mp4"), x0, x1)  # usable = clip seconds
         rows.append((float(sim[i]) * min(sp, 3.0) ** 0.5, float(sim[i]), sp, t, s))
     rows.sort(key=lambda r: -r[0])
     rows = rows[:a.n]

@@ -196,7 +196,8 @@ def main():
         print(f"local only: {len(pool)} usable shots with their clip on disk")
     if a.clips_from:
         own = {it["clip"] for it in json.load(open(a.clips_from))["items"] if it.get("clip")}
-        pool = [s for s in pool if s["clip"] in own]
+        pinned = set(edit.get("pin", {}).values())  # a pin is a deliberate choice: it may come from elsewhere
+        pool = [s for s in pool if s["clip"] in own or s["id"] in pinned]
         print(f"clips from {a.clips_from}: {len(pool)} usable shots")
     if avoided:  # near-identical copies of footage earlier productions showed (same image, re-zoomed) stay out too
         prev = [s for s in shots if s["id"] in avoided and s["usable"]]
