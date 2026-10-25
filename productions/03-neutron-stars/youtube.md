@@ -1,6 +1,8 @@
 # YouTube upload: Production 03
 
-Not uploaded yet. It will be uploaded **private** with `captions.en.srt` (English CC). No thumbnail: the owner adds it in Studio.
+Uploaded 2026-10-25 as **private**: https://youtu.be/fv9M4nmAEeM
+Publish: `python scripts/youtube/upload_youtube.py publish fv9M4nmAEeM --comment productions/03-neutron-stars/credits_full.txt`
+No CC track for now (the owner's caption change is pending), no thumbnail (the owner adds it in Studio).
 
 **Title**
 10 Facts You Don't Know About Neutron Stars | Hindi Documentary
@@ -15,9 +17,7 @@ This Hindi documentary follows neutron stars from a 1934 prediction to the stude
 
 It ends with a 2025 discovery: twenty years after a magnetar flare hit Earth's sky, scientists found that it had forged gold.
 
-English captions: turn on CC.
-
-Footage credits: ESO (eso.org), CC BY 4.0 (95 videos); ESA/Hubble (esahubble.org), CC BY 4.0 (41 videos); ESA/Webb (esawebb.org), CC BY 4.0 (19 videos); NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov) (39 videos). Full list of videos in the pinned comment.
+Footage credits: ESO (eso.org), CC BY 4.0 (97 videos); ESA/Hubble (esahubble.org), CC BY 4.0 (45 videos); ESA/Webb (esawebb.org), CC BY 4.0 (20 videos); NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov) (36 videos). Full list of videos in the pinned comment.
 Graphics and animation: original.
 
 Music by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 License (http://creativecommons.org/licenses/by/4.0/):
