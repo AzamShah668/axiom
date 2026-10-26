@@ -103,6 +103,11 @@ F <footer text>                          (default: the chapter card title)
 - Music: about one cue per act (2 facts), from `$MEDIA/music` (`fetch_media.sh <dir> "<Track Name>"` adds
   Kevin MacLeod tracks). Pick a pulsing track for the hook and darker beds for the story.
 - Grade preset: by the topic's colour world (style guide §7).
+- **Chapter cards without a number** (videos titled as a question, e.g. 04): `"cards": {"ch1": ["", "THE UNIVERSE
+  HAS A *BIRTHDAY*"]}`. A non-numeric first entry (empty, or a kicker such as "PART ONE") gives a title card with
+  a progress bar instead of FACT #n; the footer shows the video title. `*gold*` may span several words.
+- `G <trigger> @ zeros:<n>:<label>` writes 1 followed by n zeros (e.g. `zeros:43:pieces of one second`).
+  Anton has superscript digits (10²⁶) but no superscript minus, so write 10⁻⁴³ another way.
 - `*word*` in card titles turns it gold.
 
 **Footage search terms:** `footage/terms.txt`, one archive search term per line. Cover every concrete thing

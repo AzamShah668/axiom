@@ -91,7 +91,10 @@ is 100 quota units, so stay under ~30 searches a day).
 - **Length:** Neel reads about 147 words a minute at 1.0x, so about 1,600 words is 11 minutes.
 - **Record at normal pace.** Before planning the edit, send the owner a 60 s sample at 1.0x and 1.2x
   (rubberband time-stretch of the recording, no credits). Build the edit at the chosen speed, so the master
-  renders only once.
+  renders only once. Video 04: the owner chose **1.0x** for full videos (2026-10-26); Shorts stay at 1.2x.
+- **Check the recording with speech recognition** (faster-whisper medium, `work/venv`) on the chapters with
+  names and numbers. Re-record a chapter (delete its `<id>.mp3`, run the narration stage again) when a word
+  comes out wrong. Video 04: "BICEP" read as "B-sep" until written बाइसेप; "नए idea" sounded like "नहीं".
 
 ## 6. Review loop with the owner
 1. Propose the topic and an outline of the key points. Get an OK.

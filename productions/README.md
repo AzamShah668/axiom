@@ -38,6 +38,7 @@
   - English names and science words stay in English letters.
   - Numbers are written as Hindi words.
 - Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir>`. This produces the narration, the timeline and per-character timings.
+- **Pace: full videos at 1.0x** (owner, 2026-10-26, after a 1.0x vs 1.2x sample of video 04). Shorts at 1.2x.
 
 ## Edit method
 Since production 03: the **v3 style**, `docs/style-guide.md`. It was measured against Curious Space and
