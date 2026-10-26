@@ -43,13 +43,13 @@
    "dir": 1,
    "f0": 62,
    "f1": 159,
-   "shot": "eso_alma2011chajtimelapse1#0",
-   "clip": "eso_alma2011chajtimelapse1",
-   "ss": 3.63,
+   "shot": "eso_bt_alma2#0",
+   "clip": "eso_bt_alma2",
+   "ss": 1.41,
    "crop": null,
-   "score": 0.3382,
+   "score": 0.3038,
    "ref": "opening/1",
-   "title": "ALMA time-lapse 2011 (part 1)"
+   "title": "Colour clouds swirl over ALMA"
   },
   {
    "sec": "opening",
@@ -118,18 +118,13 @@
    "dir": 1,
    "f0": 373,
    "f1": 427,
-   "shot": "eso_esocast176a#2",
-   "clip": "eso_esocast176a",
-   "ss": 34.73,
-   "crop": [
-    0.0,
-    0.0,
-    0.75,
-    0.75
-   ],
-   "score": 0.3274,
+   "shot": "eso_alma2011chajtimelapse1#0",
+   "clip": "eso_alma2011chajtimelapse1",
+   "ss": 4.36,
+   "crop": null,
+   "score": 0.354,
    "ref": "opening/4",
-   "title": "ESOcast 176 Light: Building the Biggest Optical Telescope in the World (4K UHD)"
+   "title": "ALMA time-lapse 2011 (part 1)"
   },
   {
    "sec": "opening",
@@ -2017,8 +2012,8 @@
    "t0": 301.19599999999997,
    "t1": 304.448,
    "q": [
-    "rapid expansion of space from a point",
-    "space stretching outward fast"
+    "an explosion of light filling space",
+    "a bright flash expanding in space"
    ],
    "opt": "default",
    "trans": "dip",
@@ -2027,13 +2022,13 @@
    "dir": 1,
    "f0": 9036,
    "f1": 9133,
-   "shot": "eso_eso1509a#0",
-   "clip": "eso_eso1509a",
-   "ss": 3.97,
+   "shot": "esawebb_weic2513c#0",
+   "clip": "esawebb_weic2513c",
+   "ss": 3.99,
    "crop": null,
-   "score": 0.3066,
+   "score": 0.2828,
    "ref": "ch5/6",
-   "title": "Artist’s impression of Mars four billion years ago"
+   "title": "Pan video - Cat’s Paw Nebula"
   },
   {
    "sec": "ch5",
@@ -2042,8 +2037,8 @@
    "t0": 304.448,
    "t1": 307.65299999999996,
    "q": [
-    "rapid expansion of space from a point",
-    "space stretching outward fast"
+    "an explosion of light filling space",
+    "a bright flash expanding in space"
    ],
    "opt": "default",
    "trans": "cut",
@@ -2056,7 +2051,7 @@
    "clip": "esawebb_weic2330a",
    "ss": 4.01,
    "crop": null,
-   "score": 0.3567,
+   "score": 0.3264,
    "ref": "ch5/7",
    "title": "Pan of Cas A"
   },
@@ -2067,8 +2062,8 @@
    "t0": 307.65299999999996,
    "t1": 310.96299999999997,
    "q": [
-    "rapid expansion of space from a point",
-    "space stretching outward fast"
+    "an explosion of light filling space",
+    "a bright flash expanding in space"
    ],
    "opt": "default",
    "trans": "cut",
@@ -2081,7 +2076,7 @@
    "clip": "esahubble_heic1819b",
    "ss": 2.59,
    "crop": null,
-   "score": 0.3553,
+   "score": 0.3393,
    "ref": "ch5/8",
    "title": "Zoom on HBC 672"
   },
@@ -2372,8 +2367,8 @@
    "t0": 347.779,
    "t1": 350.289,
    "q": [
-    "glowing particles moving in a simulation",
-    "abstract swarm of tiny glowing particles"
+    "a dense star cluster sparkling",
+    "countless stars in a globular cluster"
    ],
    "opt": "default",
    "trans": "cut",
@@ -2386,7 +2381,7 @@
    "clip": "eso_potw2529a",
    "ss": 4.36,
    "crop": null,
-   "score": 0.3692,
+   "score": 0.2701,
    "ref": "ch6/4",
    "title": "The 4MOST optical fibres in action"
   },
@@ -2397,8 +2392,8 @@
    "t0": 350.289,
    "t1": 352.924,
    "q": [
-    "glowing particles moving in a simulation",
-    "abstract swarm of tiny glowing particles"
+    "a dense star cluster sparkling",
+    "countless stars in a globular cluster"
    ],
    "opt": "default",
    "trans": "cut",
@@ -2411,7 +2406,7 @@
    "clip": "svs_4885",
    "ss": 4.28,
    "crop": null,
-   "score": 0.3363,
+   "score": 0.2135,
    "ref": "ch6/5",
    "title": "Antarctic Ocean Flows: an excerpt from Atlas of a Changing Earth (Dome Master format)"
   },
@@ -2422,8 +2417,8 @@
    "t0": 352.924,
    "t1": 355.757,
    "q": [
-    "glowing particles moving in a simulation",
-    "abstract swarm of tiny glowing particles"
+    "a dense star cluster sparkling",
+    "countless stars in a globular cluster"
    ],
    "opt": "default",
    "trans": "cut",
@@ -2432,13 +2427,13 @@
    "dir": -1,
    "f0": 10588,
    "f1": 10673,
-   "shot": "svs_13078#0",
-   "clip": "svs_13078",
-   "ss": 0.33,
+   "shot": "eso_eso1510b#0",
+   "clip": "eso_eso1510b",
+   "ss": 4.2,
    "crop": null,
-   "score": 0.2519,
+   "score": 0.3377,
    "ref": "ch6/6",
-   "title": "Water Released from Moon During Meteor Showers"
+   "title": "Close-up view of the star cluster NGC 6193 and nebula NGC 6188"
   },
   {
    "sec": "ch6",
@@ -2447,8 +2442,8 @@
    "t0": 355.757,
    "t1": 358.311,
    "q": [
-    "glowing particles moving in a simulation",
-    "abstract swarm of tiny glowing particles"
+    "a dense star cluster sparkling",
+    "countless stars in a globular cluster"
    ],
    "opt": "default",
    "trans": "cut",
@@ -2466,7 +2461,7 @@
     0.85,
     1.0
    ],
-   "score": 0.2555,
+   "score": 0.3247,
    "ref": "ch6/7",
    "title": "Pan of the Tarantula Nebula (MIRI Image)"
   },
@@ -3128,8 +3123,8 @@
    "t0": 448.336,
    "t1": 453.5795,
    "q": [
-    "a black hole with swirling light",
-    "warped spacetime animation"
+    "a spiral galaxy rotating slowly",
+    "a galaxy turning in deep space"
    ],
    "opt": "default",
    "trans": "cut",
@@ -3138,13 +3133,13 @@
    "dir": 1,
    "f0": 13450,
    "f1": 13607,
-   "shot": "svs_20398#0",
-   "clip": "svs_20398",
-   "ss": 2.39,
+   "shot": "esahubble_heic1808c#0",
+   "clip": "esahubble_heic1808c",
+   "ss": 1.63,
    "crop": null,
-   "score": 0.2886,
+   "score": 0.3201,
    "ref": "ch8/2",
-   "title": "Habitable Worlds Observatory (HWO) EAC 2 Design Animations"
+   "title": "Diving into the Lagoon Nebula"
   },
   {
    "sec": "ch8",
