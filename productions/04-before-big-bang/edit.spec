@@ -124,8 +124,7 @@ N अब वह microwaves @ thermo | value=-270 | from=0 | unit=°C | kicker=th
 C और उसका तापमान | ...at just minus 270 degrees Celsius
 V उन्नीस सौ अठहत्तर में @ a radio telescope at dusk | radio antenna under the evening sky
 C उन्नीस सौ अठहत्तर में | In 1978, Penzias and Wilson won the Nobel Prize for this discovery
-V और पुराने TV की @ static noise flickering | a glowing grainy field of noise
-N और पुराने TV की @ progress | value=1 | from=0 | max=100 | unit=% | kicker=old TV static | foot=was the echo of the Big Bang | land=एक percent | over
+G और पुराने TV की @ tv_static
 C और पुराने TV की | And about 1 percent of the black-and-white static on old TVs, with no channel tuned...
 C यही रोशनी थी | ...was this very light
 K Big Bang की गूँज, घर @ THE BIG BANG [गूँज] / *ON YOUR TV* [TV पर]
@@ -137,7 +136,7 @@ C एक ऐसी पहेली | ...one that troubled scientists for years
 == ch5
 V - @ the cosmic microwave background all-sky map | a smooth glow across the whole sky {hold}
 C - | The universe looks the same in every direction
-V उसके दूर दूर @ two distant galaxies far apart | opposite sides of the sky
+G उसके दूर दूर @ horizon
 C उसके दूर दूर | Its far-apart regions never touched each other, yet they are exactly alike
 C यही थी पहेली | That was the puzzle
 V सात December @ stars over a dark landscape at night | a starry night sky timelapse
@@ -152,9 +151,8 @@ M एक के आगे छब्बीस | breath=1.0 | riser=1.4 | impact=i
 V एक के आगे छब्बीस @ an explosion of light filling space | a flash of light expanding {hold}
 N एक के आगे छब्बीस @ hero | value=10²⁶ | unit=times bigger | kicker=in a flash | land=छब्बीस | over
 C एक के आगे छब्बीस | 10²⁶ times
-V जितना ब्रह्मांड हम @ zooming out from a tiny point to the cosmos | the universe growing from a speck
+G जितना ब्रह्मांड हम @ inflate
 C जितना ब्रह्मांड हम | The whole universe we can see today was then smaller than a proton...
-K जितना ब्रह्मांड हम @ SMALLER THAN A PROTON [proton] / *TO THE SIZE OF AN ORANGE* [संतरे] | kicker=the observable universe
 C और पलक झपकने | ...and in less than the blink of an eye, it grew to the size of a large orange
 V इस फैलाव को @ space expanding with galaxies moving apart | the cosmic web expanding
 C इस फैलाव को | The expansion got a name: inflation
@@ -229,9 +227,8 @@ K मतलब ब्रह्मांड की @ THE BEGINNING / *HAS NO EDGE
 C वह एक गेंद | Like a ball, it simply rounds off and closes
 V दो हज़ार अठारह में @ the Earth turning in space | Earth seen from orbit
 C दो हज़ार अठारह में | In 2018, a few weeks before he died, Hawking explained it with an example
-V Big Bang से पहले क्या @ Antarctica seen from space | the South Pole from orbit
+G Big Bang से पहले क्या @ south_pole
 C Big Bang से पहले क्या | Asking what came before the Big Bang is like asking what lies south of the South Pole
-K Big Bang से पहले क्या @ WHAT LIES / *SOUTH OF THE SOUTH POLE?* [दक्षिण] | kicker=Hawking · 2018
 C वहाँ कुछ नहीं | There is nothing there, because the South Pole itself is the end point
 V अगर Hawking सही @ the Earth slowly rotating | a planet turning in sunlight
 C अगर Hawking सही | If Hawking was right, the word "before" has no meaning
@@ -242,7 +239,7 @@ C कुछ कहते हैं | Some say there was a whole universe before 
 == ch9
 V - @ a collapsing cloud of matter in space | matter falling inward in a simulation {hold}
 C - | In this idea, there was another universe before ours
-V वह सिकुड़ता गया @ matter collapsing to a point | a star collapsing inward
+G वह सिकुड़ता गया @ bounce
 C वह सिकुड़ता गया | It shrank and shrank, then bounced back like a ball...
 V Big Bounce @ an explosion of light outward from a point | a bright burst expanding in space {hold}
 C Big Bounce | BIG BOUNCE | big
@@ -266,7 +263,7 @@ V - @ glowing bubbles of gas in space | a nebula with bubbles {hold}
 C - | Inflation has a strange consequence
 V कुछ scientists के @ space expanding rapidly | expanding cosmic web
 C कुछ scientists के | Some scientists think the rapid expansion never stopped everywhere at once
-V जहाँ रुका @ a glowing bubble expanding in space | a bubble nebula
+G जहाँ रुका @ bubbles
 C जहाँ रुका | Where it stopped, a bubble formed: a universe. Elsewhere, expansion carried on
 C बिल्कुल वैसे ही | Just like bubbles rising here and there in boiling water
 V इस idea को कहते @ many glowing bubbles in space | clusters of nebula bubbles
@@ -297,7 +294,7 @@ V तब तक, सवाल @ a person under the Milky Way | the Milky Way ove
 C तब तक, सवाल | Until then, the question stays open
 K Hawking सही थे @ HAWKING [Hawking] / OR *PENROSE?* [Penrose] | kicker=science hasn't decided
 C Hawking सही थे | Was Hawking right, or Penrose?
-V वक़्त की सच @ a slow flight through a star field | stars drifting in deep space
+G वक़्त की सच @ three_answers
 C वक़्त की सच | Did time really have a beginning, is the universe an endless cycle...
 C या हमारा ब्रह्मांड | ...or is our universe just one of countless bubbles?
 C Science अभी तक | Science has not decided yet

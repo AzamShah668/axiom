@@ -815,10 +815,7 @@
     },
     {
      "at": "और पुराने TV की",
-     "q": [
-      "static noise flickering",
-      "a glowing grainy field of noise"
-     ]
+     "gfx": "tv_static"
     },
     {
      "at": "लेकिन इस रोशनी",
@@ -901,19 +898,6 @@
       "kicker": "the oldest light today",
       "land": "सत्तर"
      }
-    },
-    {
-     "at": "और पुराने TV की",
-     "num": {
-      "template": "progress",
-      "value": "1",
-      "from": "0",
-      "max": "100",
-      "unit": "%",
-      "kicker": "old TV static",
-      "foot": "was the echo of the Big Bang",
-      "land": "एक percent"
-     }
     }
    ],
    "k": [
@@ -944,10 +928,7 @@
     },
     {
      "at": "उसके दूर दूर",
-     "q": [
-      "two distant galaxies far apart",
-      "opposite sides of the sky"
-     ]
+     "gfx": "horizon"
     },
     {
      "at": "सात December",
@@ -973,10 +954,7 @@
     },
     {
      "at": "जितना ब्रह्मांड हम",
-     "q": [
-      "zooming out from a tiny point to the cosmos",
-      "the universe growing from a speck"
-     ]
+     "gfx": "inflate"
     },
     {
      "at": "इस फैलाव को",
@@ -1084,20 +1062,6 @@
       }
      ],
      "kicker": "Guth's notebook · 1979"
-    },
-    {
-     "at": "जितना ब्रह्मांड हम",
-     "lines": [
-      {
-       "text": "SMALLER THAN A PROTON",
-       "at": "proton"
-      },
-      {
-       "text": "*TO THE SIZE OF AN ORANGE*",
-       "at": "संतरे"
-      }
-     ],
-     "kicker": "the observable universe"
     }
    ],
    "m": [
@@ -1436,10 +1400,7 @@
     },
     {
      "at": "Big Bang से पहले क्या",
-     "q": [
-      "Antarctica seen from space",
-      "the South Pole from orbit"
-     ]
+     "gfx": "south_pole"
     },
     {
      "at": "अगर Hawking सही",
@@ -1547,20 +1508,6 @@
        "at": "किनारा"
       }
      ]
-    },
-    {
-     "at": "Big Bang से पहले क्या",
-     "lines": [
-      {
-       "text": "WHAT LIES",
-       "at": "Big Bang से पहले क्या"
-      },
-      {
-       "text": "*SOUTH OF THE SOUTH POLE?*",
-       "at": "दक्षिण"
-      }
-     ],
-     "kicker": "Hawking · 2018"
     }
    ],
    "n": [
@@ -1586,10 +1533,7 @@
     },
     {
      "at": "वह सिकुड़ता गया",
-     "q": [
-      "matter collapsing to a point",
-      "a star collapsing inward"
-     ]
+     "gfx": "bounce"
     },
     {
      "at": "Big Bounce",
@@ -1724,10 +1668,7 @@
     },
     {
      "at": "जहाँ रुका",
-     "q": [
-      "a glowing bubble expanding in space",
-      "a bubble nebula"
-     ]
+     "gfx": "bubbles"
     },
     {
      "at": "इस idea को कहते",
@@ -1875,10 +1816,7 @@
     },
     {
      "at": "वक़्त की सच",
-     "q": [
-      "a slow flight through a star field",
-      "stars drifting in deep space"
-     ]
+     "gfx": "three_answers"
     },
     {
      "at": "उन्नीस सौ चौंसठ में",

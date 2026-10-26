@@ -807,6 +807,167 @@ def gfx(name, t, D, sh):
         draw_text(f, "BLACK HOLE  2/3", 62, (1080 / W, 380 / H), op=op, align="left", color=(255, 180, 90))
         draw_text(f, "STARS + GAS  1/3", 62, (1080 / W, 520 / H), op=op, align="left", color=(130, 180, 240))
         return f
+    if name == "tv_static":  # an old TV's snow: about 1 % of it is the Big Bang's light
+        f = (f * 0.35).astype(np.uint8)
+        x0, y0, tw, th = 510, 150, 900, 600
+        snow = np.random.default_rng(int(t * 25)).integers(0, 256, (th // 4, tw // 4), dtype=np.uint8)
+        tv = cv2.cvtColor(cv2.resize(snow, (tw, th), interpolation=cv2.INTER_NEAREST), cv2.COLOR_GRAY2BGR).astype(np.float32) * 0.8
+        e = ease((p - 0.3) / 0.25)
+        if e > 0:
+            m = np.random.default_rng(5).random((th // 10, tw // 10)) < 0.01
+            m = cv2.resize(m.astype(np.uint8), (tw, th), interpolation=cv2.INTER_NEAREST).astype(bool)
+            tv *= 1 - 0.75 * e
+            tv[m] = tv[m] * (1 - e) + np.array([60, 175, 255], np.float32) * e
+            glow = cv2.GaussianBlur(m.astype(np.float32), (0, 0), 6)[..., None] * np.array([40, 120, 255], np.float32) * 1.5 * e
+            tv = tv + glow
+        f[y0:y0 + th, x0:x0 + tw] = np.clip(tv, 0, 255).astype(np.uint8)
+        cv2.rectangle(f, (x0 - 14, y0 - 14), (x0 + tw + 14, y0 + th + 14), (70, 70, 70), 10, cv2.LINE_AA)
+        op = ease((p - 0.5) / 0.15)
+        draw_text(f, "ABOUT 1% OF THE STATIC", 64, (0.5, 0.85), op=op, color=(255, 190, 110))
+        draw_text(f, "WAS THE ECHO OF THE BIG BANG", 40, (0.5, 0.92), op=op, color=(235, 235, 235))
+        return f
+    if name == "horizon":  # opposite sides of the sky never touched, yet read the same temperature
+        cx, cy, R = W / 2, H * 0.47, 400
+        cv2.circle(f, (int(cx), int(cy)), R, (120, 110, 90), 2, cv2.LINE_AA)
+        add_glow(f, cx, cy, 14, (140, 200, 255), 1.0)
+        draw_text(f, "EARTH", 30, (0.5, (cy + 40) / H), color=(200, 220, 255), font="Montserrat")
+        for sx in (-1, 1):
+            px = cx + sx * R
+            add_glow(f, px, cy, 60, (255, 170, 90), ease(p / 0.15))
+            rr = int(30 + R * 0.55 * ease((p - 0.15) / 0.5))  # as far as anything from there could have reached
+            cv2.circle(f, (int(px), int(cy)), rr, (90, 170, 255), 2, cv2.LINE_AA)
+            draw_text(f, "-270 °C", 48, (px / W, (cy - 110) / H), op=ease((p - 0.25) / 0.15), color=(255, 200, 130), align="center")
+        op = ease((p - 0.6) / 0.15)
+        draw_text(f, "NEVER IN CONTACT", 64, (0.5, 0.85), op=op)
+        draw_text(f, "YET EXACTLY THE SAME", 40, (0.5, 0.92), op=op, color=(255, 190, 110))
+        return f
+    if name == "inflate":  # the observable universe: smaller than a proton -> a large orange
+        cx, cy = W / 2, H * 0.44
+        g = ease((p - 0.3) / 0.35)
+        r = 3 * (150 / 3) ** g
+        add_glow(f, cx, cy, max(30, r * 3), (255, 160, 70), 0.6 * (1 - g) + 0.15)
+        col = tuple(int(a + (b - a) * g) for a, b in zip((220, 245, 255), (40, 140, 255)))  # BGR white-hot -> orange
+        cv2.circle(f, (int(cx), int(cy)), max(2, int(r)), col, -1, cv2.LINE_AA)
+        if g > 0.6:
+            add_glow(f, cx - r * 0.35, cy - r * 0.35, r * 0.5, (255, 225, 180), 0.45 * ease((g - 0.6) / 0.4))
+        draw_text(f, "SMALLER THAN A PROTON", 60, (0.5, 0.8), op=ease(p / 0.12) * (1 - ease((p - 0.3) / 0.1)), color=(235, 235, 235))
+        op = ease((p - 0.68) / 0.12)
+        draw_text(f, "THE SIZE OF A LARGE ORANGE", 60, (0.5, 0.8), op=op, color=(255, 175, 80))
+        draw_text(f, "IN LESS THAN A BLINK", 38, (0.5, 0.87), op=op, color=(220, 220, 220))
+        return f
+    if name == "south_pole":  # Hawking's example: nothing lies south of the South Pole
+        cx, cy, R, ph0, lam0 = W / 2, H * 0.44, 330, math.radians(-40), t * 0.15
+
+        def proj(ph, la):
+            ph, la = np.asarray(ph, float), np.asarray(la, float)
+            c = math.sin(ph0) * np.sin(ph) + math.cos(ph0) * np.cos(ph) * np.cos(la - lam0)
+            x = cx + R * np.cos(ph) * np.sin(la - lam0)
+            y = cy - R * (math.cos(ph0) * np.sin(ph) - math.sin(ph0) * np.cos(ph) * np.cos(la - lam0))
+            return x, y, c > 0
+
+        def curve(ph, la, col):
+            x, y, vis = proj(ph, la)
+            pts, run = np.stack([x, y], 1).astype(np.int32), []
+            for i, v in enumerate(list(vis) + [False]):
+                if v:
+                    run.append(i)
+                elif len(run) > 1:
+                    cv2.polylines(f, [pts[run[0]:run[-1] + 1]], False, col, 1, cv2.LINE_AA)
+                    run = []
+                else:
+                    run = []
+        cv2.circle(f, (int(cx), int(cy)), R, (55, 40, 25), -1, cv2.LINE_AA)
+        for k in range(18):
+            curve(np.linspace(-np.pi / 2, np.pi / 2, 80), np.full(80, k * np.pi / 9), (170, 140, 100))
+        for lat in (-60, -30, 0, 30, 60):
+            curve(np.full(160, math.radians(lat)), np.linspace(0, 2 * np.pi, 160), (120, 100, 75))
+        cv2.circle(f, (int(cx), int(cy)), R, (200, 170, 120), 2, cv2.LINE_AA)
+        e = ease(p / 0.55)
+        for back in np.linspace(0, 0.12, 7):  # the traveller and a short trail
+            ph = math.radians(25 - 115 * max(0.0, e - back))
+            x, y, _ = proj(ph, lam0)
+            add_glow(f, float(x), float(y), 16 if back == 0 else 8, (255, 200, 110), 1.0 if back == 0 else 0.35)
+        px, py, _ = proj(-np.pi / 2, lam0)
+        if p > 0.55:
+            q = (p - 0.55) / 0.45
+            cv2.circle(f, (int(px), int(py)), int(10 + 60 * (q * 3 % 1)), (90, 180, 255), 2, cv2.LINE_AA)
+            draw_text(f, "SOUTH POLE", 34, (0.5, (float(py) + 60) / H), op=ease(q / 0.2), color=(255, 200, 120), font="Montserrat")
+        draw_text(f, "WHAT LIES SOUTH OF THE SOUTH POLE?", 54, (0.5, 0.09), op=ease(p / 0.1))
+        draw_text(f, "NOTHING. IT IS THE END POINT", 50, (0.5, 0.88), op=ease((p - 0.7) / 0.12), color=(255, 190, 110))
+        return f
+    if name == "bounce":  # a universe shrinks, bounces and expands again
+        rng = np.random.default_rng(11)
+        d = rng.normal(size=(500, 3))
+        d *= (rng.uniform(0.05, 1.0, 500) ** 0.5 / np.linalg.norm(d, axis=1))[:, None]
+        s = 1 - 0.96 * ease(p / 0.5) if p < 0.5 else 0.04 + 1.25 * ease((p - 0.5) / 0.5)
+        cx, cy, R, a = W / 2, H * 0.47, 420, t * 0.3
+        x = d[:, 0] * math.cos(a) + d[:, 2] * math.sin(a)
+        heat = max(0.0, 1 - s * 2.5)
+        col = tuple(int(c0 + (c1 - c0) * heat) for c0, c1 in zip((255, 220, 190), (80, 170, 255)))
+        for xx, yy in zip(cx + x * R * s, cy + d[:, 1] * R * s * 0.9):
+            cv2.circle(f, (int(xx), int(yy)), 2, col, -1, cv2.LINE_AA)
+        add_glow(f, cx, cy, 80 + 260 * (1 - s), (255, 190, 120), 0.25 + 0.5 * heat)
+        add_glow(f, cx, cy, 320, (255, 235, 200), max(0.0, 1 - abs(p - 0.5) / 0.07) * 0.9, 1.3)
+        for txt, a0, a1 in (("IT SHRINKS", 0.05, 0.42), ("IT BOUNCES", 0.47, 0.62), ("AND EXPANDS AGAIN", 0.66, 1.1)):
+            draw_text(f, txt, 58, (0.5, 0.86), op=ease((p - a0) / 0.06) * (1 - ease((p - a1) / 0.05)), color=(255, 190, 110))
+        return f
+    if name == "bubbles":  # eternal inflation: bubble universes form in a sea that keeps expanding
+        f = starfield(t, dim=0.35)
+        cx, cy = W / 2, H * 0.47
+        add_glow(f, cx, cy, 900, (120, 80, 200), 0.3, 1.2)
+        rng = np.random.default_rng(21)
+        nb = 18
+        t0s = np.sort(rng.uniform(0.12, 0.85, nb))
+        t0s[0] = 0.04
+        pos = rng.uniform([-0.42, -0.34], [0.42, 0.34], (nb, 2))
+        pos[0] = (-0.16, -0.06)
+        grow = rng.uniform(0.6, 1.0, nb)
+        stretch = 1 + 0.3 * p  # the space between them keeps stretching
+        for i in range(nb):
+            age = p - t0s[i]
+            if age <= 0:
+                continue
+            r = 12 + 300 * age * grow[i]
+            x, y = cx + pos[i, 0] * W * stretch, cy + pos[i, 1] * H * stretch
+            add_glow(f, x, y, r * 0.8, (255, 190, 120), 0.22)
+            cv2.circle(f, (int(x), int(y)), int(r), (110, 190, 255) if i == 0 else (200, 170, 140), 2, cv2.LINE_AA)
+            if i == 0:
+                draw_text(f, "A UNIVERSE", 34, (x / W, (y + r + 34) / H), op=ease(age / 0.1), color=(255, 200, 120),
+                          font="Montserrat", align="center")
+        draw_text(f, "LIKE BUBBLES IN BOILING WATER", 54, (0.5, 0.9), op=ease((p - 0.55) / 0.12))
+        return f
+    if name == "three_answers":  # the ending: three answers, none chosen yet
+        cy = H * 0.45
+        for k, (x, lab, st) in enumerate(zip((W * 0.2, W * 0.5, W * 0.8), ("TIME BEGAN", "ENDLESS CYCLES", "ONE BUBBLE OF MANY"),
+                                             (0.02, 0.28, 0.52))):
+            e = ease((p - st) / 0.1)
+            if e <= 0:
+                continue
+            q = t - st * D
+            if k == 0:  # a point that flashes and spreads
+                add_glow(f, x, cy, 34 + 8 * math.sin(q * 3), (255, 230, 190), e)
+                for j in range(3):
+                    rr = (q * 60 + j * 50) % 150 + 10
+                    cv2.circle(f, (int(x), int(cy)), int(rr), tuple(int(c * e * (1 - rr / 165)) for c in (120, 190, 255)), 2, cv2.LINE_AA)
+            elif k == 1:  # a loop that keeps turning
+                a0 = (q * 90) % 360
+                col = tuple(int(c * e) for c in (120, 190, 255))
+                cv2.ellipse(f, (int(x), int(cy)), (110, 110), 0, a0, a0 + 300, col, 4, cv2.LINE_AA)
+                ah = math.radians(a0 + 300)
+                hx, hy = x + 110 * math.cos(ah), cy + 110 * math.sin(ah)
+                tip = (hx - 22 * math.sin(ah), hy + 22 * math.cos(ah))
+                cv2.fillPoly(f, [np.array([(hx + 16 * math.cos(ah), hy + 16 * math.sin(ah)), (hx - 16 * math.cos(ah), hy - 16 * math.sin(ah)),
+                                           tip], np.int32)], col, cv2.LINE_AA)
+            else:  # bubbles, one of them gold
+                for j, (dx, dy, r) in enumerate([(-60, -40, 38), (40, -62, 30), (72, 18, 44), (-22, 44, 34), (-84, 52, 24), (8, -4, 22)]):
+                    gold = j == 5
+                    cv2.circle(f, (int(x + dx), int(cy + dy)), r, tuple(int(c * e) for c in ((90, 190, 255) if gold else (190, 160, 130))),
+                               -1 if gold else 2, cv2.LINE_AA)
+            draw_text(f, lab, 46, (x / W, (cy + 175) / H), op=e, color=(235, 235, 235), align="center")
+        op = ease((p - 0.78) / 0.1)
+        draw_text(f, "?", 200, (0.5, 0.17), op=op, color=(255, 190, 90))
+        draw_text(f, "SCIENCE HAS NOT DECIDED YET", 46, (0.5, 0.86), op=op, color=(255, 190, 110))
+        return f
     raise SystemExit(f"unknown gfx {name}")
 
 
