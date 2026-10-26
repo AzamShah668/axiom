@@ -34,7 +34,7 @@ C और उन टुकड़ों | ...and inside those pieces, new heavy at
 V - @ a gamma-ray space telescope in orbit | the INTEGRAL satellite in space
 C - | Then one PhD student's calculation solved the puzzle
 V वह चमक @ glowing golden debris expanding in space | a bright golden explosion in space
-K वह चमक @ GOLD [सोना] / *PLATINUM* [platinum] | kicker=the glow was new heavy elements
+K वह चमक @ GOLD [सोना] / *PLATINUM* [platinum] | kicker=freshly made
 C वह चमक | The glow came from newly made heavy elements, like gold and platinum
 V Earth के एक @ the Earth seen from space | planet Earth rotating
 N Earth के एक @ hero | value=1/3 | unit=of Earth's mass | kicker=heavy elements made | land=तिहाई | over
