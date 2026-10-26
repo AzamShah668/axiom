@@ -339,234 +339,234 @@ No equation can yet say what lies beyond that wall
 But scientists have not stopped trying to reach it
 
 86
-00:06:33,412 --> 00:06:36,448
+00:06:33,412 --> 00:06:36,401
 17 MARCH 2014
 
 87
-00:06:36,448 --> 00:06:43,135
+00:06:36,401 --> 00:06:43,205
 On 17 March 2014, the BICEP2 team in Antarctica announced it had found direct traces of inflation
 
 88
-00:06:43,135 --> 00:06:45,422
+00:06:43,205 --> 00:06:45,469
 Scientists around the world celebrated
 
 89
-00:06:45,422 --> 00:06:51,958
+00:06:45,469 --> 00:06:51,634
 But months later it turned out the signal had been made by dust in our own galaxy
 
 90
-00:06:51,958 --> 00:06:55,000
+00:06:51,634 --> 00:06:54,652
 Then came the James Webb Space Telescope
 
 91
-00:06:55,000 --> 00:07:02,000
+00:06:54,652 --> 00:07:01,652
 In 2025, Webb saw the most distant galaxy yet, its light leaving just 280 million years after the Big Bang
 
 92
-00:07:04,648 --> 00:07:08,932
+00:07:04,672 --> 00:07:09,119
 The closer Webb gets to the beginning, the clearer it becomes...
 
 93
-00:07:08,932 --> 00:07:13,193
+00:07:09,119 --> 00:07:13,333
 ...that telescopes alone can't get past the wall
 
 94
-00:07:13,193 --> 00:07:16,502
+00:07:13,333 --> 00:07:16,433
 New ideas are needed now...
 
 95
-00:07:16,502 --> 00:07:21,156
+00:07:16,433 --> 00:07:20,460
 ...and the most startling idea came from Stephen Hawking
 
 96
-00:07:23,756 --> 00:07:27,969
+00:07:23,060 --> 00:07:27,273
 Maybe there was nothing before the Big Bang...
 
 97
-00:07:27,969 --> 00:07:29,072
+00:07:27,273 --> 00:07:28,376
 ...not even time
 
 98
-00:07:29,072 --> 00:07:34,528
+00:07:28,376 --> 00:07:33,832
 In 1983, Stephen Hawking and James Hartle proposed an idea
 
 99
-00:07:34,528 --> 00:07:39,625
+00:07:33,832 --> 00:07:38,929
 Near the beginning, time does not run the way we know it
 
 100
-00:07:39,625 --> 00:07:43,073
+00:07:38,929 --> 00:07:42,377
 Time becomes just like length and width
 
 101
-00:07:43,073 --> 00:07:46,556
+00:07:42,377 --> 00:07:45,860
 So the beginning of the universe has no edge at all
 
 102
-00:07:46,556 --> 00:07:50,492
+00:07:45,860 --> 00:07:49,796
 Like a ball, it simply rounds off and closes
 
 103
-00:07:50,492 --> 00:07:57,017
+00:07:49,796 --> 00:07:56,321
 In 2018, a few weeks before he died, Hawking explained it with an example
 
 104
-00:07:57,017 --> 00:08:03,739
+00:07:56,321 --> 00:08:03,043
 Asking what came before the Big Bang is like asking what lies south of the South Pole
 
 105
-00:08:03,739 --> 00:08:07,675
+00:08:03,043 --> 00:08:06,979
 There is nothing there, because the South Pole itself is the end point
 
 106
-00:08:07,675 --> 00:08:11,738
+00:08:06,979 --> 00:08:11,042
 If Hawking was right, the word "before" has no meaning
 
 107
-00:08:11,738 --> 00:08:15,047
+00:08:11,042 --> 00:08:14,351
 But not every scientist agrees with Hawking
 
 108
-00:08:15,047 --> 00:08:20,456
+00:08:14,351 --> 00:08:19,759
 Some say there was a whole universe before the Big Bang
 
 109
-00:08:23,056 --> 00:08:26,974
+00:08:22,359 --> 00:08:26,277
 In this idea, there was another universe before ours
 
 110
-00:08:26,974 --> 00:08:33,638
+00:08:26,277 --> 00:08:32,941
 It shrank and shrank, then bounced back like a ball...
 
 111
-00:08:33,638 --> 00:08:35,449
+00:08:32,941 --> 00:08:34,752
 BIG BOUNCE
 
 112
-00:08:35,449 --> 00:08:40,837
+00:08:34,752 --> 00:08:40,140
 Nobel Prize-winning British scientist Roger Penrose goes even further
 
 113
-00:08:40,837 --> 00:08:47,362
+00:08:40,140 --> 00:08:46,665
 In his view, the universe runs in endless cycles, one after another
 
 114
-00:08:47,362 --> 00:08:54,362
+00:08:46,665 --> 00:08:53,665
 In 2018, Penrose's team claimed traces of the previous universe in the echo of the Big Bang
 
 115
-00:08:56,138 --> 00:09:01,305
+00:08:55,441 --> 00:09:00,608
 Most scientists don't accept the claim; they say it's just noise
 
 116
-00:09:01,305 --> 00:09:07,841
+00:09:00,608 --> 00:09:07,144
 But if Penrose is right, the Big Bang was not the start of the story, just a new chapter
 
 117
-00:09:07,841 --> 00:09:13,855
+00:09:07,144 --> 00:09:13,158
 And one idea goes further still...
 
 118
-00:09:13,855 --> 00:09:15,537
+00:09:13,158 --> 00:09:14,840
 ...that our Big Bang was not alone
 
 119
-00:09:18,137 --> 00:09:19,640
+00:09:17,440 --> 00:09:18,943
 Inflation has a strange consequence
 
 120
-00:09:19,640 --> 00:09:25,712
+00:09:18,943 --> 00:09:25,015
 Some scientists think the rapid expansion never stopped everywhere at once
 
 121
-00:09:25,712 --> 00:09:32,435
+00:09:25,015 --> 00:09:31,738
 Where it stopped, a bubble formed: a universe. Elsewhere, expansion carried on
 
 122
-00:09:32,435 --> 00:09:37,439
+00:09:31,738 --> 00:09:36,742
 Just like bubbles rising here and there in boiling water
 
 123
-00:09:37,439 --> 00:09:38,693
+00:09:36,742 --> 00:09:37,996
 The idea is called eternal inflation
 
 124
-00:09:38,693 --> 00:09:40,132
+00:09:37,996 --> 00:09:39,435
 ETERNAL INFLATION
 
 125
-00:09:40,132 --> 00:09:43,720
+00:09:39,435 --> 00:09:43,023
 It keeps making countless bubbles, one after another
 
 126
-00:09:43,720 --> 00:09:48,468
+00:09:43,023 --> 00:09:47,771
 Every bubble, a separate universe, each with its own Big Bang
 
 127
-00:09:48,468 --> 00:09:53,975
+00:09:47,771 --> 00:09:53,278
 Our universe may be just one bubble...
 
 128
-00:09:53,975 --> 00:09:56,378
+00:09:53,278 --> 00:09:55,681
 ...a tiny part of a multiverse
 
 129
-00:09:56,378 --> 00:10:02,079
+00:09:55,681 --> 00:10:01,382
 Scientists have searched that ancient light for marks of collisions with other bubbles
 
 130
-00:10:02,079 --> 00:10:05,084
+00:10:01,382 --> 00:10:04,387
 So far, no firm sign has been found
 
 131
-00:10:05,686 --> 00:10:09,988
+00:10:04,986 --> 00:10:09,291
 The wait for an answer may not be long
 
 132
-00:10:09,988 --> 00:10:15,503
+00:10:09,291 --> 00:10:14,806
 Japan's LiteBIRD satellite is being prepared to launch around 2032
 
 133
-00:10:15,503 --> 00:10:20,402
+00:10:14,806 --> 00:10:19,705
 Its job: to find the real traces of inflation in that echo
 
 134
-00:10:20,402 --> 00:10:23,120
+00:10:19,705 --> 00:10:22,423
 It may finally tell how the beginning happened
 
 135
-00:10:23,120 --> 00:10:25,082
+00:10:22,423 --> 00:10:24,385
 Until then, the question stays open
 
 136
-00:10:25,082 --> 00:10:27,717
+00:10:24,385 --> 00:10:27,020
 Was Hawking right, or Penrose?
 
 137
-00:10:27,717 --> 00:10:33,278
+00:10:27,020 --> 00:10:32,581
 Did time really have a beginning, is the universe an endless cycle...
 
 138
-00:10:33,278 --> 00:10:37,202
+00:10:32,581 --> 00:10:36,505
 ...or is our universe just one of countless bubbles?
 
 139
-00:10:37,202 --> 00:10:39,501
+00:10:36,505 --> 00:10:38,804
 Science has not decided yet
 
 140
-00:10:39,501 --> 00:10:45,399
+00:10:38,804 --> 00:10:44,702
 In 1964, Penzias and Wilson thought that hiss was a fault...
 
 141
-00:10:45,399 --> 00:10:50,414
+00:10:44,702 --> 00:10:49,717
 ...today it is the biggest clue to the biggest puzzle of all
 
 142
-00:10:50,414 --> 00:10:53,526
+00:10:49,717 --> 00:10:52,829
 Where the universe came from, and what came before it...
 
 143
-00:10:53,526 --> 00:10:58,864
+00:10:52,829 --> 00:10:58,168
 ...the answer still hides behind that oldest light
 

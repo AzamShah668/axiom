@@ -60,8 +60,12 @@ def main():
     for it in cl["items"]:
         if it["kind"] == "card":
             t = int(it["t0"])
-            num, title = it["text"] if "text" in it else (f"FACT #{it['num']}", it["ctitle"].replace("*", ""))  # v2 | v3
-            chapters.append(f"{t // 60}:{t % 60:02d} {num.title()}: {title_case(title)}")
+            if "text" in it:  # v2
+                num, title = it["text"]
+            else:  # v3: a FACT #n card, or a chapter card without a number (its kicker, if any)
+                n = it["num"]
+                num, title = (f"FACT #{n}" if isinstance(n, int) or str(n).isdigit() else str(n)), it["ctitle"].replace("*", "")
+            chapters.append(f"{t // 60}:{t % 60:02d} " + (f"{num.title()}: " if num else "") + title_case(title))
     print("\n".join(lines + chapters))
 
 
