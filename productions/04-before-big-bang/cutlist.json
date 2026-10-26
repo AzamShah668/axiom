@@ -43,13 +43,13 @@
    "dir": 1,
    "f0": 62,
    "f1": 159,
-   "shot": "eso_bt_alma2#0",
-   "clip": "eso_bt_alma2",
-   "ss": 1.41,
+   "shot": "eso_alma2011chajtimelapse1#0",
+   "clip": "eso_alma2011chajtimelapse1",
+   "ss": 3.63,
    "crop": null,
-   "score": 0.3038,
+   "score": 0.3382,
    "ref": "opening/1",
-   "title": "Colour clouds swirl over ALMA"
+   "title": "ALMA time-lapse 2011 (part 1)"
   },
   {
    "sec": "opening",
@@ -118,13 +118,18 @@
    "dir": 1,
    "f0": 373,
    "f1": 427,
-   "shot": "eso_alma2011chajtimelapse1#0",
-   "clip": "eso_alma2011chajtimelapse1",
-   "ss": 4.36,
-   "crop": null,
-   "score": 0.354,
+   "shot": "eso_esocast176a#2",
+   "clip": "eso_esocast176a",
+   "ss": 34.73,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3274,
    "ref": "opening/4",
-   "title": "ALMA time-lapse 2011 (part 1)"
+   "title": "ESOcast 176 Light: Building the Biggest Optical Telescope in the World (4K UHD)"
   },
   {
    "sec": "opening",
@@ -375,13 +380,13 @@
    "dir": 1,
    "f0": 1201,
    "f1": 1314,
-   "shot": "eso_eso1701c#0",
-   "clip": "eso_eso1701c",
-   "ss": 2.36,
+   "shot": "esawebb_potm2211a#0",
+   "clip": "esawebb_potm2211a",
+   "ss": 3.73,
    "crop": null,
-   "score": 0.366,
+   "score": 0.3367,
    "ref": "opening/14",
-   "title": "Zooming in on a new VISTA image of the Orion A molecular cloud"
+   "title": "Zoom Into II ZW 96"
   },
   {
    "sec": "opening",
@@ -923,18 +928,13 @@
    "dir": -1,
    "f0": 3918,
    "f1": 4012,
-   "shot": "esahubble_v-r-aquarii_2#0",
-   "clip": "esahubble_v-r-aquarii_2",
-   "ss": 7.18,
-   "crop": [
-    0.0,
-    0.0,
-    0.9,
-    0.9
-   ],
-   "score": 0.3417,
+   "shot": "esahubble_heic1915a#0",
+   "clip": "esahubble_heic1915a",
+   "ss": 4.03,
+   "crop": null,
+   "score": 0.3115,
    "ref": "ch2/2",
-   "title": "Time-lapse: Evolution of R Aquarii (2014 to 2023)"
+   "title": "Animation of Blue Stragglers"
   },
   {
    "sec": "ch2",
@@ -1125,13 +1125,18 @@
    "dir": -1,
    "f0": 4739,
    "f1": 4843,
-   "shot": "eso_uhd_vlt6_2014#0",
-   "clip": "eso_uhd_vlt6_2014",
-   "ss": 3.87,
-   "crop": null,
-   "score": 0.3468,
+   "shot": "svs_31197#0",
+   "clip": "svs_31197",
+   "ss": 3.5,
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    1.0
+   ],
+   "score": 0.3176,
    "ref": "ch2/10",
-   "title": "CRIRES mounted on Antu"
+   "title": "Carina Nebula Webb vs Hubble"
   },
   {
    "sec": "ch2",
@@ -2022,13 +2027,13 @@
    "dir": 1,
    "f0": 9036,
    "f1": 9133,
-   "shot": "eso_eso2502d#0",
-   "clip": "eso_eso2502d",
-   "ss": 3.97,
+   "shot": "eso_uhd-cm-vlt2014-2#0",
+   "clip": "eso_uhd-cm-vlt2014-2",
+   "ss": 3.99,
    "crop": null,
-   "score": 0.3506,
+   "score": 0.3161,
    "ref": "ch5/6",
-   "title": "Interpreting the velocity profile of exoplanet atmospheres"
+   "title": "On the mountaintop"
   },
   {
    "sec": "ch5",
@@ -2248,18 +2253,13 @@
    "dir": 1,
    "f0": 10051,
    "f1": 10132,
-   "shot": "svs_20395#0",
-   "clip": "svs_20395",
-   "ss": 3.58,
-   "crop": [
-    0.0,
-    0.0,
-    0.8,
-    0.8
-   ],
-   "score": 0.3637,
+   "shot": "esawebb_weic2212d#0",
+   "clip": "esawebb_weic2212d",
+   "ss": 4.27,
+   "crop": null,
+   "score": 0.3125,
    "ref": "ch5/15",
-   "title": "Habitable Worlds Observatory Additional Spacecraft Designs"
+   "title": "Pan of the Tarantula Nebula (NIRCam Image)"
   },
   {
    "kind": "card",
@@ -2432,13 +2432,13 @@
    "dir": -1,
    "f0": 10588,
    "f1": 10673,
-   "shot": "svs_5552#0",
-   "clip": "svs_5552",
-   "ss": 4.18,
+   "shot": "eso_eso2205b#0",
+   "clip": "eso_eso2205b",
+   "ss": 4.2,
    "crop": null,
-   "score": 0.3325,
+   "score": 0.2886,
    "ref": "ch6/6",
-   "title": "Science On A Sphere: Aerosols in the Air"
+   "title": "Artist’s animation of the dust trap in IRS 48"
   },
   {
    "sec": "ch6",
@@ -2457,13 +2457,13 @@
    "dir": -1,
    "f0": 10673,
    "f1": 10749,
-   "shot": "eso_eso2111c#0",
-   "clip": "eso_eso2111c",
-   "ss": 1.97,
+   "shot": "eso_eso1601a#0",
+   "clip": "eso_eso1601a",
+   "ss": 0.47,
    "crop": null,
-   "score": 0.2899,
+   "score": 0.2853,
    "ref": "ch6/7",
-   "title": "Zooming in on the PDS 70 system"
+   "title": "GRAVITY discovers new double star in Orion Trapezium Cluster"
   },
   {
    "sec": "ch6",
@@ -2482,18 +2482,13 @@
    "dir": -1,
    "f0": 10749,
    "f1": 10870,
-   "shot": "svs_4807#0",
-   "clip": "svs_4807",
-   "ss": 0.24,
-   "crop": [
-    0.0,
-    0.125,
-    0.75,
-    0.875
-   ],
-   "score": 0.3604,
+   "shot": "esawebb_weic2621a#0",
+   "clip": "esawebb_weic2621a",
+   "ss": 3.6,
+   "crop": null,
+   "score": 0.3073,
    "ref": "ch6/8",
-   "title": "M87: Telescopes Unite in Unprecedented Observations of Famous Black Hole"
+   "title": "Pan video: FRB 20240304B (NIRCam image)"
   },
   {
    "sec": "ch6",
@@ -2512,13 +2507,13 @@
    "dir": 1,
    "f0": 10870,
    "f1": 10956,
-   "shot": "eso_esocast82b#0",
-   "clip": "eso_esocast82b",
-   "ss": 11.32,
+   "shot": "esahubble_heic2112c#0",
+   "clip": "esahubble_heic2112c",
+   "ss": 4.19,
    "crop": null,
-   "score": 0.3294,
+   "score": 0.3067,
    "ref": "ch6/9",
-   "title": "Excerpt from ESOcast 82"
+   "title": "Zoom Into CW Leonis"
   },
   {
    "sec": "ch6",
@@ -2884,13 +2879,13 @@
    "dir": 1,
    "f0": 12345,
    "f1": 12433,
-   "shot": "eso_assembly-1-mtr-01-cc-am_iris2#0",
-   "clip": "eso_assembly-1-mtr-01-cc-am_iris2",
-   "ss": 3.29,
+   "shot": "esawebb_weic2212b#0",
+   "clip": "esawebb_weic2212b",
+   "ss": 2.79,
    "crop": null,
-   "score": 0.2935,
+   "score": 0.265,
    "ref": "ch7/6",
-   "title": "Assembly of the ESO 1-metre telescope"
+   "title": "Zoom Into the Tarantula Nebula"
   },
   {
    "sec": "ch7",
@@ -3138,13 +3133,13 @@
    "dir": 1,
    "f0": 13450,
    "f1": 13607,
-   "shot": "eso_eso2612d#0",
-   "clip": "eso_eso2612d",
-   "ss": 2.56,
+   "shot": "svs_4580#0",
+   "clip": "svs_4580",
+   "ss": 2.98,
    "crop": null,
-   "score": 0.4166,
+   "score": 0.3205,
    "ref": "ch8/2",
-   "title": "Animation of the Lense-Thirring effect"
+   "title": "Electromagnetic Waves and Polarization"
   },
   {
    "sec": "ch8",
