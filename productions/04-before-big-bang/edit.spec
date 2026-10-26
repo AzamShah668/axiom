@@ -14,14 +14,14 @@ K उनके antenna में @ A STRANGE HISS [सरसराहट] / *THA
 C उनके antenna में | Their antenna picked up a strange hiss that would not go away
 V दिन हो या रात @ day turning to night over an observatory timelapse | the sky rotating over radio telescopes
 C दिन हो या रात | Day or night, wherever the antenna pointed, the sound stayed the same
-V उन्हें लगा @ close-up of a radio telescope dish surface | the receiver of a radio antenna
+V उन्हें लगा @ close-up of a telescope structure | an observatory dome closing at dawn
 C उन्हें लगा | They thought the pigeons and their nests were to blame
 C कबूतर हटाए गए | The pigeons were removed. The antenna was scrubbed clean
 C सरसराहट फिर भी | The hiss was still there
 V वह सरसराहट कोई @ slow flight through a star field | stars drifting in deep space
 C वह सरसराहट कोई | The hiss was not a fault. It was the oldest light in the universe...
 M Big Bang की गूँज | breath=1.2 | riser=1.6 | impact=impact | trans=flare
-V Big Bang की गूँज @ the cosmic microwave background all-sky map | the Big Bang explosion animation {hold}
+G Big Bang की गूँज @ cmb_sphere
 K Big Bang की गूँज @ *THE ECHO OF THE BIG BANG* | kicker=the oldest light in the universe
 C Big Bang की गूँज | ...the echo of the Big Bang
 V इसी गूँज ने @ zooming out from galaxies to the large-scale universe | flight through thousands of galaxies
@@ -32,7 +32,7 @@ C आज हम जानते | Today we know that beginning was 13.8 billion 
 V और scientists के हिसाब @ a flash of light expanding in space | rapid expansion of the early universe
 N उसके पहले ही @ hero | value=10²⁶ | unit=times bigger | kicker=in its first instant | land=छब्बीस | over
 C और scientists के हिसाब | And according to scientists, in its very first instant, it grew 10²⁶ times bigger
-V इस खोज ने @ a radio telescope at sunset | radio antenna silhouette at dusk
+V इस खोज ने @ telescope domes at sunset | an observatory at dusk timelapse
 C इस खोज ने | The discovery later won a Nobel Prize
 V लेकिन इंसान के @ observatory under the Milky Way timelapse | the Milky Way rising over a dark landscape
 C लेकिन इंसान के | But it also left humanity with its biggest question
@@ -41,14 +41,14 @@ K ब्रह्मांड शुरू होने @ WHAT WAS THERE / *BEFO
 C ब्रह्मांड शुरू होने | What was there before the universe began?
 
 == ch1
-V - @ the all-sky map of the cosmic microwave background | the oldest light in the universe map {hold}
+G - @ cmb_map
 C - | The universe has a birthday, and scientists know it precisely
 V दो हज़ार नौ में @ the Planck satellite in space | a satellite launch on a rocket
 L Planck @ PLANCK | ESA space telescope · 2009-2013
 C दो हज़ार नौ में | In 2009, the European Space Agency launched a satellite: Planck
-V चार साल तक @ a satellite scanning the sky animation | the Planck satellite observing space
+G चार साल तक @ cmb_scan
 C चार साल तक | For four years it mapped the whole sky in the same light the New Jersey antenna had caught
-V उस रोशनी में @ the cosmic microwave background map rotating | fluctuations in the oldest light
+G उस रोशनी में @ cmb_zoom
 C उस रोशनी में | Faint patterns hidden in that light tell the age of the universe
 V दो हज़ार अठारह में @ zooming into the deep field of distant galaxies | the Hubble Ultra Deep Field
 N दो हज़ार अठारह में @ hero | value=13.8 | from=0 | unit=billion years | kicker=planck's final result · 2018 | land=आठ अरब | over
@@ -90,7 +90,7 @@ C इस idea को | The idea needed a name...
 C और वह नाम दिया | ...and the name came from its biggest critic
 
 == ch3
-V - @ a radio telescope dish at night | antennas under a starry sky {hold}
+V - @ a starry night sky over a dark landscape timelapse | the Milky Way over mountains {hold}
 C - | 28 MARCH 1949 | big
 L Fred Hoyle @ FRED HOYLE | British astronomer · 1915-2001
 C BBC radio पर | On BBC radio, British astronomer Fred Hoyle was speaking
@@ -106,7 +106,7 @@ C Hoyle ने कभी | Hoyle never accepted the theory
 V लेकिन उनका दिया @ flight through a field of galaxies | zooming through the cosmos
 C लेकिन उनका दिया | But the name he gave it stuck forever
 C आज दुनिया का | Today every child knows the start of the universe by the name its critic gave it
-V और Hoyle को ग़लत @ the cosmic microwave background all-sky map | the glow of the oldest light
+G और Hoyle को ग़लत @ cmb_out
 C और Hoyle को ग़लत | And Hoyle was proved wrong by the same hiss that is still all around us
 
 == ch4
@@ -117,24 +117,24 @@ N लगभग तीन लाख @ hero | value=380,000 | from=0 | unit=years 
 C लगभग तीन लाख | About 380,000 years later, it cooled enough for light to break free for the first time
 V वही रोशनी @ light travelling across the universe | flight through space past galaxies
 C वही रोशनी | That same light has been travelling for 13.8 billion years
-V सफ़र में वह @ the cosmic microwave background map | a map of the microwave sky
+V सफ़र में वह @ light stretching as space expands | light travelling across the expanding universe
 C सफ़र में वह | On the way it was stretched so much that it is no longer visible light
 C अब वह microwaves | Now it is microwaves...
 N अब वह microwaves @ thermo | value=-270 | from=0 | unit=°C | kicker=the oldest light today | land=सत्तर | over
 C और उसका तापमान | ...at just minus 270 degrees Celsius
-V उन्नीस सौ अठहत्तर में @ a radio telescope at dusk | radio antenna under the evening sky
+V उन्नीस सौ अठहत्तर में @ an observatory at dusk timelapse | telescope domes under the evening sky
 C उन्नीस सौ अठहत्तर में | In 1978, Penzias and Wilson won the Nobel Prize for this discovery
 G और पुराने TV की @ tv_static
 C और पुराने TV की | And about 1 percent of the black-and-white static on old TVs, with no channel tuned...
 C यही रोशनी थी | ...was this very light
 K Big Bang की गूँज, घर @ THE BIG BANG [गूँज] / *ON YOUR TV* [TV पर]
 C Big Bang की गूँज, घर | The echo of the Big Bang, on the TV at home
-V लेकिन इस रोशनी @ the cosmic microwave background rotating sphere | patterns in the oldest light
+G लेकिन इस रोशनी @ cmb_map
 C लेकिन इस रोशनी | But this light hid a puzzle...
 C एक ऐसी पहेली | ...one that troubled scientists for years
 
 == ch5
-V - @ the cosmic microwave background all-sky map | a smooth glow across the whole sky {hold}
+G - @ cmb_sphere
 C - | The universe looks the same in every direction
 G उसके दूर दूर @ horizon
 C उसके दूर दूर | Its far-apart regions never touched each other, yet they are exactly alike
@@ -192,7 +192,7 @@ V - @ a telescope in Antarctica under the sky | a telescope on snow at the South
 C - | 17 MARCH 2014 | big
 L बाइसेप two @ BICEP2 | telescope · South Pole, Antarctica
 C बाइसेप two | On 17 March 2014, the BICEP2 team in Antarctica announced it had found direct traces of inflation
-V दुनिया भर में @ the cosmic microwave background map | swirls of polarised light in the sky
+G दुनिया भर में @ cmb_polar
 C दुनिया भर में | Scientists around the world celebrated
 V लेकिन कुछ महीनों @ dust in the Milky Way | dark dust lanes in our galaxy
 K लेकिन कुछ महीनों @ THE SIGNAL [निशान] / *WAS DUST* [धूल] | kicker=months later
@@ -249,7 +249,7 @@ C Nobel Prize जीतने | Nobel Prize-winning British scientist Roger Penr
 V उनके हिसाब से @ a cycle of galaxies forming and fading | a slow spiral of stars
 K उनके हिसाब से @ ONE UNIVERSE AFTER ANOTHER [एक के बाद एक] / *ENDLESS CYCLES* [चक्करों]
 C उनके हिसाब से | In his view, the universe runs in endless cycles, one after another
-V दो हज़ार अठारह में @ the cosmic microwave background map | rings in the microwave sky
+G दो हज़ार अठारह में @ cmb_rings
 C दो हज़ार अठारह में | In 2018, Penrose's team claimed traces of the previous universe in the echo of the Big Bang
 C ज़्यादातर scientists | Most scientists don't accept the claim; they say it's just noise
 V लेकिन अगर Penrose @ the birth of stars in a nebula | a star-forming nebula glowing
@@ -278,7 +278,7 @@ V हमारा ब्रह्मांड, शायद @ zooming out from t
 C हमारा ब्रह्मांड, शायद | Our universe may be just one bubble...
 C multiverse का | ...a tiny part of a multiverse
 K multiverse का @ *THE MULTIVERSE* | kicker=our universe, one bubble of many
-V Scientists ने उसी @ the cosmic microwave background map | the glow of the oldest light
+G Scientists ने उसी @ cmb_bubbles
 C Scientists ने उसी | Scientists have searched that ancient light for marks of collisions with other bubbles
 C अभी तक, कोई | So far, no firm sign has been found
 
@@ -287,7 +287,7 @@ V - @ a satellite in orbit around Earth | a spacecraft in space {hold}
 C - | The wait for an answer may not be long
 L LiteBird @ LITEBIRD | JAXA satellite · planned for about 2032
 C Japan का LiteBird | Japan's LiteBIRD satellite is being prepared to launch around 2032
-V उसका काम है @ the cosmic microwave background map | the oldest light across the sky
+G उसका काम है @ cmb_polar
 C उसका काम है | Its job: to find the real traces of inflation in that echo
 C शायद वही बताएगा | It may finally tell how the beginning happened
 V तब तक, सवाल @ a person under the Milky Way | the Milky Way over an observatory timelapse
@@ -301,6 +301,6 @@ C Science अभी तक | Science has not decided yet
 V उन्नीस सौ चौंसठ में @ a radio telescope dish at night | radio antennas under the stars
 C उन्नीस सौ चौंसठ में | In 1964, Penzias and Wilson thought that hiss was a fault...
 C वही आज इस | ...today it is the biggest clue to the biggest puzzle of all
-V ब्रह्मांड कहाँ से @ the cosmic microwave background all-sky map | the glow of the oldest light {hold}
+G ब्रह्मांड कहाँ से @ cmb_out
 C ब्रह्मांड कहाँ से | Where the universe came from, and what came before it...
 C इसका जवाब | ...the answer still hides behind that oldest light

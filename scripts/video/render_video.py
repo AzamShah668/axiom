@@ -968,7 +968,146 @@ def gfx(name, t, D, sh):
         draw_text(f, "?", 200, (0.5, 0.17), op=op, color=(255, 190, 90))
         draw_text(f, "SCIENCE HAS NOT DECIDED YET", 46, (0.5, 0.86), op=op, color=(255, 190, 110))
         return f
+    if name.startswith("cmb_"):
+        return cmb(name[4:], t, D, f)
     raise SystemExit(f"unknown gfx {name}")
+
+
+# ---------------------------------------------------------------- the oldest light (our own CMB graphics, video 04)
+CMB_STOPS = [(0.0, (110, 10, 5)), (0.2, (220, 90, 10)), (0.4, (250, 190, 120)), (0.5, (225, 240, 250)),
+             (0.62, (80, 190, 255)), (0.8, (20, 90, 240)), (1.0, (10, 10, 130))]  # BGR: Planck-style blue -> cream -> red
+
+
+def cmb_tex():
+    """An equirectangular sky of CMB-like spots, made once and cached in the assets folder. The spots come from a
+    3-D Gaussian random field sampled on a sphere, so they look alike everywhere (no streaks at the poles)."""
+    if "cmb" not in G:
+        path = os.path.join(G["assets"], "cmb_sky.png")
+        if not os.path.exists(path):
+            from scipy.ndimage import gaussian_filter, map_coordinates
+            n = np.random.default_rng(1978).normal(size=(200, 200, 200)).astype(np.float32)
+            fld = np.zeros_like(n)
+            for s_, a_ in ((1.0, 0.35), (2.0, 1.0), (4.5, 0.7)):
+                g_ = gaussian_filter(n, s_, mode="wrap")
+                fld += a_ * g_ / g_.std()
+            h, w = 1024, 2048
+            lat = (0.5 - (np.arange(h) + 0.5) / h) * np.pi
+            lon = ((np.arange(w) + 0.5) / w - 0.5) * 2 * np.pi
+            lo_, la_ = np.meshgrid(lon, lat)
+            xyz = np.stack([np.cos(la_) * np.cos(lo_), np.cos(la_) * np.sin(lo_), np.sin(la_)]) * 90 + 100
+            v = map_coordinates(fld, xyz.reshape(3, -1), order=1).reshape(h, w)
+            lo, hi = np.percentile(v, [1, 99])
+            v = np.clip((v - lo) / (hi - lo), 0, 1)
+            xs = [s_[0] for s_ in CMB_STOPS]
+            img = np.dstack([np.interp(v, xs, [s_[1][c] for s_ in CMB_STOPS]) for c in range(3)]).astype(np.uint8)
+            cv2.imwrite(path + ".tmp.png", img)
+            os.replace(path + ".tmp.png", path)
+        G["cmb"] = cv2.imread(path)
+    return G["cmb"]
+
+
+def cmb_moll(scale=1.0, cx=W / 2, cy=H * 0.5, ew=1560):
+    """The whole sky as a Mollweide ellipse (the classic Planck map), with its alpha mask."""
+    key = ("moll", round(scale, 3), int(cx), int(cy))
+    if key not in G.setdefault("cmb_cache", {}):
+        if len(G["cmb_cache"]) > 64:
+            G["cmb_cache"].clear()
+        tex = cmb_tex()
+        a = ew * scale / 2
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        x, y = (xx - cx) / a * 2 * math.sqrt(2), -(yy - cy) / a * 2 * math.sqrt(2)
+        th = np.arcsin(np.clip(y / math.sqrt(2), -1, 1))
+        lat = np.arcsin(np.clip((2 * th + np.sin(2 * th)) / math.pi, -1, 1))
+        lon = math.pi * x / (2 * math.sqrt(2) * np.maximum(np.cos(th), 1e-4))
+        ok = (np.abs(y) <= math.sqrt(2)) & (np.abs(lon) <= math.pi)
+        mx = ((lon / (2 * math.pi) + 0.5) % 1.0) * (tex.shape[1] - 1)
+        my = (0.5 - lat / math.pi) * (tex.shape[0] - 1)
+        img = cv2.remap(tex, mx.astype(np.float32), my.astype(np.float32), cv2.INTER_LINEAR)
+        m = cv2.GaussianBlur(ok.astype(np.float32), (0, 0), 1.2)[..., None]
+        G["cmb_cache"][key] = (img, m)
+    return G["cmb_cache"][key]
+
+
+def cmb_patch(t, z0, z1, D, ox=0.3, oy=0.45, drift=(0.02, 0.0)):
+    """A close-up of the sky that fills the frame, slowly zooming from z0 to z1 (z = frame widths per texture width)."""
+    tex = cmb_tex()
+    p = t / D
+    z = z0 + (z1 - z0) * ease(p)
+    tw = tex.shape[1] / z
+    th_ = tw * H / W
+    x0 = (ox + drift[0] * p) * tex.shape[1] - tw / 2
+    y0 = (oy + drift[1] * p) * tex.shape[0] - th_ / 2
+    M = np.float32([[tw / W, 0, x0], [0, th_ / H, y0]])
+    return cv2.warpAffine(tex, M, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_WRAP)
+
+
+def cmb(kind, t, D, f):
+    p = t / D
+    if kind in ("map", "out", "scan"):
+        s = {"map": 0.96 + 0.1 * ease(p), "out": 1.25 - 0.3 * ease(p), "scan": 1.0}[kind]
+        img, m = cmb_moll(round(s * 200) / 200)
+        if kind == "scan":  # a satellite sweeping the sky, revealing it strip by strip
+            xs = W * (0.06 + 0.9 * ease(p / 0.9))
+            reveal = np.clip((xs - np.arange(W, dtype=np.float32)) / 40.0, 0, 1)[None, :, None]
+            m = m * reveal
+            line = np.exp(-((np.arange(W, dtype=np.float32) - xs) / 6.0) ** 2)[None, :, None] * cmb_moll(1.0)[1]
+            f = np.clip(f + line * np.array([200, 230, 255], np.float32), 0, 255).astype(np.uint8)
+        return (f * (1 - m) + img * m).astype(np.uint8)
+    if kind == "sphere":  # the oldest light all around us: a turning sky-sphere
+        if "cmb_sph" not in G:
+            R, ph0 = 400, math.radians(20)
+            yy, xx = np.mgrid[-R:R, -R:R].astype(np.float32)
+            rho = np.sqrt(xx ** 2 + yy ** 2)
+            c = np.arcsin(np.clip(rho / R, 0, 1))
+            lat = np.arcsin(np.clip(np.cos(c) * math.sin(ph0) - yy * np.sin(c) * math.cos(ph0) / np.maximum(rho, 1e-3), -1, 1))
+            lon = np.arctan2(xx * np.sin(c), rho * np.cos(c) * math.cos(ph0) + yy * np.sin(c) * math.sin(ph0))
+            G["cmb_sph"] = (R, lat, lon, (rho < R).astype(np.float32), np.clip(np.cos(c), 0, 1) ** 0.35)
+        R, lat, lon, ok, shade = G["cmb_sph"]
+        tex = cmb_tex()
+        mx = (((lon + t * 0.22) / (2 * math.pi) + 0.5) % 1.0) * (tex.shape[1] - 1)
+        my = (0.5 - lat / math.pi) * (tex.shape[0] - 1)
+        img = cv2.remap(tex, mx.astype(np.float32), my.astype(np.float32), cv2.INTER_LINEAR) * shade[..., None]
+        m = cv2.GaussianBlur(ok, (0, 0), 1.2)[..., None]
+        x0, y0 = int(W / 2 - R), int(H * 0.5 - R)
+        add_glow(f, W / 2, H * 0.5, R * 1.35, (255, 200, 150), 0.25, 1.4)
+        reg = f[y0:y0 + 2 * R, x0:x0 + 2 * R].astype(np.float32)
+        f[y0:y0 + 2 * R, x0:x0 + 2 * R] = (reg * (1 - m) + img * m).astype(np.uint8)
+        return f
+    if kind == "zoom":  # into the faint spots that tell the universe's age
+        return cmb_patch(t, 2.2, 3.4, D)
+    if kind == "polar":  # swirls in the light's polarisation (what BICEP2 and LiteBIRD look for)
+        g = cmb_patch(t, 3.0, 3.6, D, ox=0.62, oy=0.4)
+        g = (g * 0.55).astype(np.uint8)
+        v = cv2.GaussianBlur(cmb_tex()[..., 0].astype(np.float32), (0, 0), 3)
+        step, z = 46, 3.0 + 0.6 * ease(p)
+        for yy in range(step // 2, H, step):
+            for xx in range(step // 2, W, step):
+                a = math.atan2(yy - H / 2, xx - W / 2) + math.pi / 4 + 0.6 * math.sin(xx * 0.004 + yy * 0.003 + t * 0.4)
+                L = 15
+                cv2.line(g, (int(xx - L * math.cos(a)), int(yy - L * math.sin(a))), (int(xx + L * math.cos(a)), int(yy + L * math.sin(a))),
+                         (235, 235, 235), 2, cv2.LINE_AA)
+        return g
+    if kind in ("rings", "bubbles"):
+        g = cmb_patch(t, 2.6, 3.0, D, ox=0.45, oy=0.5)
+        e = ease((p - 0.15) / 0.3)
+        spots = [(0.3, 0.42, 150), (0.66, 0.36, 120), (0.55, 0.7, 100)]
+        for k, (sx, sy, r) in enumerate(spots):
+            ek = ease((p - 0.15 - 0.12 * k) / 0.25)
+            if ek <= 0:
+                continue
+            cxy = (int(sx * W), int(sy * H))
+            if kind == "rings":  # Penrose's claimed circles from a previous universe
+                for j, rr in enumerate((r * 0.45, r * 0.75, r)):
+                    cv2.circle(g, cxy, int(rr), tuple(int(c * ek) for c in (255, 255, 255)), 2, cv2.LINE_AA)
+            else:  # where a neighbouring bubble would have bumped into ours
+                ov = g.copy()
+                cv2.circle(ov, cxy, int(r), (255, 230, 200), -1, cv2.LINE_AA)
+                g = cv2.addWeighted(ov, 0.18 * ek * (1 - ease((p - 0.75) / 0.2)), g, 1 - 0.18 * ek * (1 - ease((p - 0.75) / 0.2)), 0)
+                cv2.circle(g, cxy, int(r), tuple(int(c * ek) for c in (120, 200, 255)), 3, cv2.LINE_AA)
+        if kind == "bubbles":
+            draw_text(g, "NO FIRM SIGN YET", 54, (0.5, 0.88), op=ease((p - 0.75) / 0.12), color=(255, 230, 200))
+        return g
+    raise SystemExit(f"unknown cmb graphic {kind}")
 
 
 def make_web():

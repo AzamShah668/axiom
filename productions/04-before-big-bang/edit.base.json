@@ -90,15 +90,41 @@
   "grain": 3
  },
  "card_query": [
-  "the cosmic microwave background all-sky map",
-  "slow flight through a star field"
+  "slow flight through a star field",
+  "faint distant galaxies in deep space"
  ],
  "bg_query": [
   "dark star field slowly drifting",
   "faint distant galaxies in dark space"
  ],
- "pin": {},
- "ban": [],
+ "pin": {
+  "opening/0": "eso_uhd_alma3_2014#0",
+  "opening/1": "eso_alma-array-uhd1#0",
+  "opening/4": "eso_almatimelapse12k#0"
+ },
+ "ban": [
+  "eso_adaptiveopticsandmask#0",
+  "eso_eso1814b#0",
+  "eso_eso1824b#0",
+  "eso_eso2011a#2",
+  "eso_eso2117b#0",
+  "eso_eso2305a#5",
+  "eso_eso2609b#0",
+  "svs_12605#0",
+  "svs_12605-win2#0",
+  "svs_12854#0",
+  "svs_12854-win1#0",
+  "svs_12854-win3#0",
+  "svs_13991#0",
+  "svs_14103#0",
+  "svs_14921#2",
+  "svs_14960#0",
+  "svs_14961#0",
+  "svs_15095#0",
+  "svs_31365#0",
+  "svs_5273#0",
+  "svs_5627#0"
+ ],
  "crops": {},
  "exclude": {}
 }

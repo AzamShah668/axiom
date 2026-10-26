@@ -90,15 +90,41 @@
   "grain": 3
  },
  "card_query": [
-  "the cosmic microwave background all-sky map",
-  "slow flight through a star field"
+  "slow flight through a star field",
+  "faint distant galaxies in deep space"
  ],
  "bg_query": [
   "dark star field slowly drifting",
   "faint distant galaxies in dark space"
  ],
- "pin": {},
- "ban": [],
+ "pin": {
+  "opening/0": "eso_uhd_alma3_2014#0",
+  "opening/1": "eso_alma-array-uhd1#0",
+  "opening/4": "eso_almatimelapse12k#0"
+ },
+ "ban": [
+  "eso_adaptiveopticsandmask#0",
+  "eso_eso1814b#0",
+  "eso_eso1824b#0",
+  "eso_eso2011a#2",
+  "eso_eso2117b#0",
+  "eso_eso2305a#5",
+  "eso_eso2609b#0",
+  "svs_12605#0",
+  "svs_12605-win2#0",
+  "svs_12854#0",
+  "svs_12854-win1#0",
+  "svs_12854-win3#0",
+  "svs_13991#0",
+  "svs_14103#0",
+  "svs_14921#2",
+  "svs_14960#0",
+  "svs_14961#0",
+  "svs_15095#0",
+  "svs_31365#0",
+  "svs_5273#0",
+  "svs_5627#0"
+ ],
  "crops": {},
  "exclude": {},
  "sections": {
@@ -136,8 +162,8 @@
     {
      "at": "उन्हें लगा",
      "q": [
-      "close-up of a radio telescope dish surface",
-      "the receiver of a radio antenna"
+      "close-up of a telescope structure",
+      "an observatory dome closing at dawn"
      ]
     },
     {
@@ -149,11 +175,7 @@
     },
     {
      "at": "Big Bang की गूँज",
-     "opt": "hold",
-     "q": [
-      "the cosmic microwave background all-sky map",
-      "the Big Bang explosion animation"
-     ]
+     "gfx": "cmb_sphere"
     },
     {
      "at": "इसी गूँज ने",
@@ -179,8 +201,8 @@
     {
      "at": "इस खोज ने",
      "q": [
-      "a radio telescope at sunset",
-      "radio antenna silhouette at dusk"
+      "telescope domes at sunset",
+      "an observatory at dusk timelapse"
      ]
     },
     {
@@ -350,11 +372,7 @@
    "v": [
     {
      "at": null,
-     "opt": "hold",
-     "q": [
-      "the all-sky map of the cosmic microwave background",
-      "the oldest light in the universe map"
-     ]
+     "gfx": "cmb_map"
     },
     {
      "at": "दो हज़ार नौ में",
@@ -365,17 +383,11 @@
     },
     {
      "at": "चार साल तक",
-     "q": [
-      "a satellite scanning the sky animation",
-      "the Planck satellite observing space"
-     ]
+     "gfx": "cmb_scan"
     },
     {
      "at": "उस रोशनी में",
-     "q": [
-      "the cosmic microwave background map rotating",
-      "fluctuations in the oldest light"
-     ]
+     "gfx": "cmb_zoom"
     },
     {
      "at": "दो हज़ार अठारह में",
@@ -663,8 +675,8 @@
      "at": null,
      "opt": "hold",
      "q": [
-      "a radio telescope dish at night",
-      "antennas under a starry sky"
+      "a starry night sky over a dark landscape timelapse",
+      "the Milky Way over mountains"
      ]
     },
     {
@@ -697,10 +709,7 @@
     },
     {
      "at": "और Hoyle को ग़लत",
-     "q": [
-      "the cosmic microwave background all-sky map",
-      "the glow of the oldest light"
-     ]
+     "gfx": "cmb_out"
     }
    ],
    "c": [
@@ -802,15 +811,15 @@
     {
      "at": "सफ़र में वह",
      "q": [
-      "the cosmic microwave background map",
-      "a map of the microwave sky"
+      "light stretching as space expands",
+      "light travelling across the expanding universe"
      ]
     },
     {
      "at": "उन्नीस सौ अठहत्तर में",
      "q": [
-      "a radio telescope at dusk",
-      "radio antenna under the evening sky"
+      "an observatory at dusk timelapse",
+      "telescope domes under the evening sky"
      ]
     },
     {
@@ -819,10 +828,7 @@
     },
     {
      "at": "लेकिन इस रोशनी",
-     "q": [
-      "the cosmic microwave background rotating sphere",
-      "patterns in the oldest light"
-     ]
+     "gfx": "cmb_map"
     }
    ],
    "c": [
@@ -920,11 +926,7 @@
    "v": [
     {
      "at": null,
-     "opt": "hold",
-     "q": [
-      "the cosmic microwave background all-sky map",
-      "a smooth glow across the whole sky"
-     ]
+     "gfx": "cmb_sphere"
     },
     {
      "at": "उसके दूर दूर",
@@ -1240,10 +1242,7 @@
     },
     {
      "at": "दुनिया भर में",
-     "q": [
-      "the cosmic microwave background map",
-      "swirls of polarised light in the sky"
-     ]
+     "gfx": "cmb_polar"
     },
     {
      "at": "लेकिन कुछ महीनों",
@@ -1559,10 +1558,7 @@
     },
     {
      "at": "दो हज़ार अठारह में",
-     "q": [
-      "the cosmic microwave background map",
-      "rings in the microwave sky"
-     ]
+     "gfx": "cmb_rings"
     },
     {
      "at": "लेकिन अगर Penrose",
@@ -1694,10 +1690,7 @@
     },
     {
      "at": "Scientists ने उसी",
-     "q": [
-      "the cosmic microwave background map",
-      "the glow of the oldest light"
-     ]
+     "gfx": "cmb_bubbles"
     }
    ],
    "c": [
@@ -1802,10 +1795,7 @@
     },
     {
      "at": "उसका काम है",
-     "q": [
-      "the cosmic microwave background map",
-      "the oldest light across the sky"
-     ]
+     "gfx": "cmb_polar"
     },
     {
      "at": "तब तक, सवाल",
@@ -1827,11 +1817,7 @@
     },
     {
      "at": "ब्रह्मांड कहाँ से",
-     "opt": "hold",
-     "q": [
-      "the cosmic microwave background all-sky map",
-      "the glow of the oldest light"
-     ]
+     "gfx": "cmb_out"
     }
    ],
    "c": [
