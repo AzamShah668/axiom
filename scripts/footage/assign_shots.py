@@ -225,7 +225,8 @@ def main():
     lum = np.array([luma(a.lib, s) for s in pool])
     dull = DARK_PENALTY * np.clip((28 - lum) / 20, 0, 1) + DARK_PENALTY * np.clip((lum - 120) / 40, 0, 1)  # or washed out
     S = S - np.array([[1.0] if it["kind"] == "clip" else [0.0] for it in items]) * dull[None, :]
-    need = np.array([it["t1"] - it["t0"] + PAD for it in items])
+    # our own full-frame graphics show no footage: any shot will do as their (unseen) placeholder
+    need = np.array([(min(it["t1"] - it["t0"], 1.0) if render_v3.own_gfx(it) else it["t1"] - it["t0"]) + PAD for it in items])
     cost = -S + 100.0 * (L[None, :] < need[:, None])
     # pins
     sec_n = {}

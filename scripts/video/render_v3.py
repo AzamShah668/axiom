@@ -470,6 +470,12 @@ def camera(fr, it, t, D):
 OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros"}
 
 
+def own_gfx(it):
+    """Full-frame motion graphics drawn on a clean star field: their scene shows no footage."""
+    g = it.get("gfx") if it.get("kind") == "gfx" else None
+    return bool(g) and (g.split(":")[0] in OWN_GFX or g.startswith("cmb_"))
+
+
 def dim(fr, k=0.45, blur=2.5):
     return (cv2.GaussianBlur(fr, (0, 0), blur) * k).astype(np.uint8)
 
@@ -477,6 +483,9 @@ def dim(fr, k=0.45, blur=2.5):
 def item_frame(it, f):
     t = (f - it["f0"]) / FPS
     D = max((it["f1"] - it["f0"]) / FPS, 0.1)
+    if own_gfx(it):
+        it.setdefault("flash_t", D * 0.45)
+        return rv.gfx(it["gfx"], t, D, it)
     src = G["grade"](G["rd"].get(it, f), f)
     if it["kind"] == "clip":
         return camera(src, it, t, D)
@@ -492,8 +501,7 @@ def item_frame(it, f):
         fr = dim(bg, 0.42)
         mg.title(fr, it["ttl"].get("kicker", ""), it["ttl"]["main"], t, D)
         return fr
-    own = it["gfx"].split(":")[0] in OWN_GFX or it["gfx"].startswith("cmb_")  # full-frame motion graphics: clean star field
-    G["bgframe"] = None if own else dim(bg, 0.4)
+    G["bgframe"] = dim(bg, 0.4)
     it.setdefault("flash_t", D * 0.45)
     fr = rv.gfx(it["gfx"], t, D, it)
     G["bgframe"] = None
