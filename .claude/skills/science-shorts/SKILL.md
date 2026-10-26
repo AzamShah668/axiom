@@ -54,7 +54,8 @@ core concept / payoff, conversational Hinglish, about 120 words for 48 s. Exampl
    - Write it as its own file: neighbouring sections are sent as context and would colour the read.
    - Use commas instead of "..." and dashes; ElevenLabs holds "..." for about a second.
 3. `shorts/<id>/edit.spec` and `edit.base.json`: a normal v3 plan over that narration. `ban` every clip the
-   same video's other Shorts show, so Shorts of one video never repeat footage.
+   same video's other Shorts show, so Shorts of one video never repeat footage. Ban by clip, including every
+   `-winN` crop of it: a crop is the same footage (the gold Short nearly repeated teaspoon's `potw2136a`).
    Give the hook beats short scenes over moving shots (check them with `hook_shots.py`; pin with `pin`).
 4. Record and plan:
    `render_narration.py shorts/<id>/tts/narration.hi.md $W/voice --open-gap 0 --gap 0.3 --max-pause 0.3`,
