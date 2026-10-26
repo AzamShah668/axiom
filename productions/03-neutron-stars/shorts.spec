@@ -9,3 +9,10 @@ say: क्या आपको पता है, कि neutron star का स�
 say_en: Did you know that just one teaspoon of neutron star weighs about a billion tons on Earth?
 land: अरब
 body: The strangest thing about neutron stars .. So scientists calculate
+
+# Own script (owner's 4-beat format, hook by the owner, 2026-10-26): its own narration and plan in shorts/gold/.
+== gold | One Flash From a Dead Star Made Gold #shorts
+top: ONE FLASH FROM A DEAD STAR / *MADE GOLD*
+hook: Did you know that our planet's gold
+captions: shorts/gold/tts/captions.hinglish.md
+body: The proof came twenty years later .. That dead star was a gold factory

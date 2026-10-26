@@ -21,7 +21,7 @@ C सरसराहट फिर भी | The hiss was still there
 V वह सरसराहट कोई @ slow flight through a star field | stars drifting in deep space
 C वह सरसराहट कोई | The hiss was not a fault. It was the oldest light in the universe...
 M Big Bang की गूँज | breath=1.2 | riser=1.6 | impact=impact | trans=flare
-G Big Bang की गूँज @ cmb_sphere
+G Big Bang की गूँज @ cmb_sphere_r
 K Big Bang की गूँज @ *THE ECHO OF THE BIG BANG* | kicker=the oldest light in the universe
 C Big Bang की गूँज | ...the echo of the Big Bang
 V इसी गूँज ने @ zooming out from galaxies to the large-scale universe | flight through thousands of galaxies
@@ -72,7 +72,7 @@ C वह फैल रहा है | It is expanding
 K वह फैल रहा है @ THE UNIVERSE / *IS EXPANDING*
 V उसी साल Brussels में @ a spiral galaxy rotating | a slow zoom into a spiral galaxy
 C उसी साल Brussels में | That same year in Brussels, Einstein told Lemaître...
-K आपके calculations @ "YOUR CALCULATIONS ARE CORRECT [सही हैं] / BUT YOUR PHYSICS IS *ABOMINABLE*" [बेकार] | kicker=Einstein · 1927
+K आपके calculations @ "YOUR CALCULATIONS ARE CORRECT [सही हैं] / BUT YOUR PHYSICS [लेकिन] / *IS ABOMINABLE"* [बेकार] | kicker=Einstein · 1927
 C आपके calculations | "Your calculations are correct, but your physics is abominable"
 V दो साल बाद @ the Hubble Space Telescope in orbit | a large telescope pointing at the sky
 L Edwin Hubble @ EDWIN HUBBLE | astronomer · USA · 1929

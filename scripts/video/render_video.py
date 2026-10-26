@@ -1053,7 +1053,7 @@ def cmb(kind, t, D, f):
             line = np.exp(-((np.arange(W, dtype=np.float32) - xs) / 6.0) ** 2)[None, :, None] * cmb_moll(1.0)[1]
             f = np.clip(f + line * np.array([200, 230, 255], np.float32), 0, 255).astype(np.uint8)
         return (f * (1 - m) + img * m).astype(np.uint8)
-    if kind == "sphere":  # the oldest light all around us: a turning sky-sphere
+    if kind in ("sphere", "sphere_r"):  # the oldest light all around us: a turning sky-sphere (_r: right of centre)
         if "cmb_sph" not in G:
             R, ph0 = 400, math.radians(20)
             yy, xx = np.mgrid[-R:R, -R:R].astype(np.float32)
@@ -1068,8 +1068,9 @@ def cmb(kind, t, D, f):
         my = (0.5 - lat / math.pi) * (tex.shape[0] - 1)
         img = cv2.remap(tex, mx.astype(np.float32), my.astype(np.float32), cv2.INTER_LINEAR) * shade[..., None]
         m = cv2.GaussianBlur(ok, (0, 0), 1.2)[..., None]
-        x0, y0 = int(W / 2 - R), int(H * 0.5 - R)
-        add_glow(f, W / 2, H * 0.5, R * 1.35, (255, 200, 150), 0.25, 1.4)
+        cx = W * 0.68 if kind == "sphere_r" else W / 2
+        x0, y0 = int(cx - R), int(H * 0.5 - R)
+        add_glow(f, cx, H * 0.5, R * 1.35, (255, 200, 150), 0.25, 1.4)
         reg = f[y0:y0 + 2 * R, x0:x0 + 2 * R].astype(np.float32)
         f[y0:y0 + 2 * R, x0:x0 + 2 * R] = (reg * (1 - m) + img * m).astype(np.uint8)
         return f
