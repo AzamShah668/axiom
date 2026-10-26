@@ -1,8 +1,8 @@
 # Production 04: What Was There Before the Big Bang? | Hindi Documentary
 
 Hinglish for review. The narration is recorded from the Devanagari version (`tts/narration.hi.md`, written after
-approval). Style: the owner's new style (statement hook + bridge, conversational Hinglish, simple spoken words),
-third person, no viewer address in the full video. About 1,750 words, about 12 minutes.
+approval). Style: the owner's new style (conversational Hinglish, simple spoken words), third person, no viewer address
+in the full video; chapters, not a countdown. Recorded at normal pace; 1.0x vs 1.2x chosen from a sample.
 
 ## Package
 **Title:** `What Was There Before the Big Bang? | Hindi Documentary`
@@ -22,148 +22,65 @@ brahmand ki shuruat, cosmic microwave background, cosmic inflation, multiverse h
 georges lemaitre, roger penrose, james webb, hindi documentary, space documentary hindi, science in hindi
 
 ## Script
+Revised 2026-10-26 after review: merged opening, chapters without countdown numbers, bridge lines, clues before the theories, accuracy fixes (space itself faster than light; the observable universe was orange-sized; 10⁻⁴³ s wording), simpler words. Copy-paste version: `script.txt`.
 
-## hook
-Har cheez ki ek shuruaat hoti hai. Brahmaand ki bhi.
-13.8 arab saal pehle, sab kuch ek bindu se shuru hua. Aur ek second ke ek chhote se hisse mein, brahmaand 10 ke
-aage 26 zero guna bada ho gaya.
-Lekin ek sawaal aaj bhi duniya ke sabse bade scientists ke paas khada hai. Us se pehle kya tha?
-Aur is sawaal ka pehla suraag, kisi lab mein nahi... kabootaron ke ek ghonsle mein mila.
+## opening
+1964. America ke New Jersey mein, do scientists ek giant radio antenna ke andar, kabootaron ki beet saaf kar rahe the. Arno Penzias aur Robert Wilson. Unke antenna mein ek ajeeb si sarsarahat thi, jo jaati hi nahi thi. Din ho ya raat, antenna kisi bhi taraf mude, awaaz wahi rehti. Unhe laga, yeh sab kabootaron ki wajah se hai. Kabootar hataaye gaye. Antenna chamka diya gaya. Sarsarahat phir bhi wahi. Woh sarsarahat koi kharaabi nahi thi. Woh brahmaand ki sabse purani roshni thi... Big Bang ki goonj. Isi goonj ne bataya, ki brahmaand 13.8 arab saal pehle shuru hua. Aur ek second ke ek chhote se hisse mein, 10 ke aage 26 zero guna bada ho gaya. Is khoj ne aage chal kar Nobel Prize jeeta. Lekin insaan ke saamne sabse bada sawaal bhi khada kar diya. Brahmaand shuru hone se pehle, aakhir kya tha?
 
-## cold_open
-1964. America ke New Jersey mein, Bell Labs ke do engineer, Arno Penzias aur Robert Wilson, ek bahut bada radio
-antenna chala rahe the.
-Lekin antenna mein ek ajeeb si sarsarahat thi, jo jaati hi nahi thi.
-Din ho ya raat, antenna kisi bhi taraf mude, awaaz wahi rehti.
-Dono ne har taar check kiya. Antenna ke andar kabootaron ka ghonsla mila, aur unki beet. Sab saaf kar diya gaya.
-Sarsarahat phir bhi wahi.
-Woh sarsarahat koi kharaabi nahi thi. Woh brahmaand ki sabse purani roshni thi... Big Bang ki goonj.
-Is goonj ne saabit kar diya, ki brahmaand ki ek shuruaat thi.
-Aur wahin se sabse bada sawaal khada hua. Us shuruaat se pehle, kya tha?
+**Card after:** title card `WHAT WAS THERE / BEFORE THE BIG BANG?`
 
-**Card:** title card `WHAT WAS THERE / BEFORE THE BIG BANG?`
+## ch1
+**Card:** `THE UNIVERSE HAS A BIRTHDAY` (chapter card, no number)
 
-## fact10
-**Card:** `FACT #10 · THE UNIVERSE HAS A BIRTHDAY`
+Brahmaand ka bhi ek janamdin hai. Aur scientists use ekdum sateek jaante hain. 2009 mein, Europe ki space agency ne ek satellite bheja, Planck. Chaar saal tak usne poore aasmaan mein wahi sabse purani roshni naapi, jo New Jersey ke antenna ne pakdi thi. Us roshni mein chhupe halke se nishaan, brahmaand ki umar batate hain. 2018 mein, Planck ka aakhri hisaab aaya. 13.8 arab saal. Aur galti ki gunjaaish, sirf 2 crore saal. Matlab jab hamari Earth bani, lagbhag 4.6 arab saal pehle, tab tak brahmaand pehle hi 9 arab saal purana ho chuka tha. Lekin brahmaand ki koi shuruaat thi, yeh baat sabse pehle kisi telescope ne nahi... ek padri ne kahi thi.
 
-Brahmaand ka bhi ek janamdin hai. Aur scientists use kamaal ki sateekta se jaante hain.
-2009 mein, Europe ki space agency ne ek satellite bheja, Planck. Chaar saal tak usne poore aasmaan mein wahi
-sabse purani roshni naapi, jo New Jersey ke antenna ne pakdi thi.
-Us roshni mein chhupe halke se nishaan, brahmaand ki umar batate hain. 2018 mein, Planck ka aakhri hisaab aaya.
-13.8 arab saal. Aur galti ki gunjaaish, sirf 2 crore saal.
-Matlab jab hamari Earth bani, lagbhag 4.6 arab saal pehle, tab tak brahmaand pehle hi 9 arab saal purana ho
-chuka tha.
+## ch2
+**Card:** `A PRIEST SAID IT FIRST` (chapter card, no number)
 
-## fact9
-**Card:** `FACT #9 · A PRIEST SAID IT FIRST`
+Belgium ke Georges Lemaître ek Church Father the, ek Catholic padri. Aur saath mein ek physicist bhi. 1927 mein, unhone Einstein ki equations se dikhaya, ki brahmaand ek jagah tika hua nahi hai. Woh phail raha hai. Usi saal Brussels mein, Einstein ne Lemaître se kaha, aapke calculations sahi hain, lekin aapki physics bekaar hai. Do saal baad, 1929 mein, America ke Edwin Hubble ne dekha, ki door ki galaxies hum se door bhaag rahi hain. Aur jo jitni door hai, woh utni tez. 1931 mein Lemaître ne agla kadam uthaya. Agar sab kuch aaj phail raha hai, to kabhi na kabhi, sab kuch ek saath, ek jagah raha hoga. Unhone use naam diya... primeval atom. Brahmaand ka pehla anda. Is idea ko ek naam ki zaroorat thi. Aur woh naam diya, is theory ke sabse bade virodhi ne.
 
-Brahmaand ki shuruaat ka idea, sabse pehle kisi telescope wale ne nahi, ek padri ne diya.
-Belgium ke Georges Lemaître ek Catholic priest the, aur ek physicist bhi. 1927 mein, unhone Einstein ki equations
-se dikhaya, ki brahmaand ek jagah tika hua nahi hai. Woh phail raha hai.
-Usi saal Brussels mein, Einstein ne Lemaître se kaha, aapke calculations sahi hain, lekin aapki physics bekaar hai.
-Do saal baad, 1929 mein, America ke Edwin Hubble ne dekha, ki door ki galaxies hum se door bhaag rahi hain. Aur
-jo jitni door hai, woh utni tez.
-1931 mein Lemaître ne agla kadam uthaya. Agar sab kuch aaj phail raha hai, to kabhi na kabhi, sab kuch ek saath
-ek jagah raha hoga. Unhone use naam diya... primeval atom. Brahmaand ka pehla anda.
+## ch3
+**Card:** `A NAME FROM ITS BIGGEST CRITIC` (chapter card, no number)
 
-## fact8
-**Card:** `FACT #8 · ITS NAME CAME FROM ITS BIGGEST CRITIC`
+28 March 1949. BBC radio par, British astronomer Fred Hoyle bol rahe the. Hoyle maante the, ki brahmaand ki na koi shuruaat hai, na koi ant. Woh hamesha se aisa hi hai. Doosri theory samjhaate hue, unhone ek shabd bola... Big Bang. Ek dhamaka. Hoyle ne kabhi is theory ko nahi maana. Lekin unka diya naam, hamesha ke liye chipak gaya. Aaj duniya ka har bachcha brahmaand ki shuruaat ko, ussi naam se jaanta hai, jo ek virodhi ke muh se nikla tha. Aur Hoyle ko galat saabit kiya, ussi sarsarahat ne, jo aaj bhi hamare chaaron taraf hai.
 
-Is theory ka sabse mashhoor naam, uske sabse bade virodhi ne diya.
-28 March 1949. BBC radio par, British astronomer Fred Hoyle bol rahe the. Hoyle maante the, ki brahmaand ki na
-koi shuruaat hai, na koi ant. Woh hamesha se aisa hi hai.
-Doosri theory samjhaate hue, unhone ek shabd bola... Big Bang. Ek dhamaka.
-Hoyle ne kabhi is theory ko nahi maana. Lekin unka diya naam, hamesha ke liye chipak gaya.
-Aaj duniya ka har bachcha, brahmaand ki shuruaat ko, ussi naam se jaanta hai, jo ek virodhi ke muh se nikla tha.
+## ch4
+**Card:** `THE OLDEST LIGHT IS ALL AROUND US` (chapter card, no number)
 
-## fact7
-**Card:** `FACT #7 · THE OLDEST LIGHT IS STILL ALL AROUND US`
+Big Bang ke baad, brahmaand itna garam aur ghana tha, ki roshni ek kadam bhi aage nahi badh paati thi. Lagbhag 3 lakh 80 hazaar saal baad, brahmaand itna thanda hua, ki roshni pehli baar azaad hui. Wahi roshni, 13.8 arab saal se safar kar rahi hai. Safar mein woh itni khinch gayi, ki ab aankh se dikhne wali roshni nahi rahi. Ab woh microwaves hai, aur uska taapmaan sirf minus 270 degree Celsius. 1978 mein, Penzias aur Wilson ko is khoj ke liye Nobel Prize mila. Aur purane TV ki woh kaali safed jhilmil, jo channel na milne par aati thi, uska lagbhag 1 percent hissa, yahi roshni thi. Big Bang ki goonj, ghar ke TV par. Lekin is roshni mein ek pahaili bhi chhupi thi. Ek aisi pahaili, jisne scientists ko saalon tak pareshaan rakha.
 
-New Jersey wali woh sarsarahat, aaj bhi har jagah hai. Hamare chaaron taraf.
-Big Bang ke baad, brahmaand itna garam aur ghana tha, ki roshni ek kadam bhi aage nahi badh paati thi.
-Lagbhag 3 lakh 80 hazaar saal baad, brahmaand itna thanda hua, ki roshni pehli baar azaad hui. Wahi roshni,
-13.8 arab saal se safar kar rahi hai.
-Safar mein woh itni khinch gayi, ki ab dikhne wali roshni nahi rahi. Ab woh microwaves hai, aur uska taapmaan
-sirf minus 270 degree Celsius.
-1978 mein, Penzias aur Wilson ko is khoj ke liye Nobel Prize mila.
-Aur purane TV ki jhilmil jhilmil mein bhi, is roshni ka ek chhota sa hissa hota tha. Big Bang ki goonj, ghar ke
-TV par.
+## ch5
+**Card:** `IT GREW 10²⁶ TIMES IN A FLASH` (chapter card, no number)
 
-## fact6
-**Card:** `FACT #6 · IT GREW 10²⁶ TIMES IN A FLASH`
+Brahmaand har taraf ek jaisa dikhta hai. Uske door door ke hisse, kabhi ek doosre se mile hi nahi, phir bhi bilkul ek jaise. Aisa kaise? 7 December 1979 ki raat, America ke ek young physicist, Alan Guth, ne apni notebook mein likha... SPECTACULAR REALIZATION. Shaandaar khayal. Unka idea tha, ki shuruaat ke ek second ke bahut hi chhote hisse mein, space khud, roshni ki raftaar se bhi tez phaila. 10 ke aage 26 zero guna. Jitna brahmaand hum aaj dekh sakte hain, woh tab ek proton se bhi chhota tha. Aur palak jhapakne se bhi kam waqt mein, woh ek bade santre jitna ho gaya. Is phailaav ko naam mila... inflation. Inflation ne bata diya, ki brahmaand phaila kaise. Lekin jaise hi scientists is ghadi ko aur peeche ghumate hain, poori science hi toot jaati hai.
 
-Brahmaand ka sabse bada vistaar, ek palak jhapakne se bhi kahin kam waqt mein hua.
-Saalon tak, Big Bang theory ke saamne ek pahaili thi. Brahmaand har taraf ek jaisa kyun dikhta hai? Uske door door
-ke hisse, kabhi ek doosre se mile hi nahi, phir bhi bilkul ek jaise.
-7 December 1979 ki raat, America ke ek young physicist, Alan Guth, ne apni notebook mein likha... SPECTACULAR
-REALIZATION. Shaandaar khayal.
-Unka idea tha, ki shuruaat ke ek second ke bahut hi chhote hisse mein, brahmaand bijli ki raftaar se bhi tez
-phaila. 10 ke aage 26 zero guna. Ek proton se bhi chhote hisse se, ek bade santre jitna.
-Is phailaav ko naam mila... inflation.
-Aur yeh sab us waqt mein hua, jismein roshni ek proton bhi paar nahi kar paati.
+## ch6
+**Card:** `WHERE PHYSICS BREAKS` (chapter card, no number)
 
-## fact5
-**Card:** `FACT #5 · PHYSICS BREAKS AT 10⁻⁴³ SECONDS`
+Physics ki do sabse badi theories hain. Einstein ki gravity, jo badi cheezon ko samjhati hai, galaxies aur black holes ko. Aur quantum physics, jo sabse chhoti cheezon ko, atom aur usse bhi chhote kanon ko. Aam taur par dono apni apni jagah kaam karti hain. Lekin Big Bang ke pehle pal mein, sab kuch bahut chhota bhi tha, aur bahut bhaari bhi. Wahan dono theories ek doosre se lad padti hain. Yahan ek deewar hai. Ek second ko itne tukdon mein kaato, ki 1 ke aage 43 zero lag jaayein, to uska ek tukda. Big Bang ke itne chhote pal baad. Isse Planck time kehte hain. Is deewar ke us paar kya hai, aaj tak koi equation nahi bata paayi. Lekin scientists ne us deewar tak pahunchne ki koshish nahi chhodi.
 
-Big Bang ke bilkul pehle pal tak, science pahunch hi nahi paati. Wahan ek deewar hai.
-Physics ki do sabse badi theories hain. Einstein ki gravity, jo badi cheezon ko samjhati hai, galaxies aur
-black holes ko. Aur quantum physics, jo sabse chhoti cheezon ko, atom aur usse bhi chhote kanon ko.
-Aam taur par dono apni apni jagah kaam karti hain. Lekin Big Bang ke pehle pal mein, sab kuch bahut chhota bhi
-tha, aur bahut bhaari bhi. Wahan dono theories ek doosre se lad padti hain.
-Yeh deewar hai, Big Bang ke 10 ki power minus 43 second baad. Isse Planck time kehte hain.
-Is deewar ke us paar kya hai, aaj tak koi equation nahi bata paayi.
+## ch7
+**Card:** `THE HUNT FOR CLUES` (chapter card, no number)
 
-## fact4
-**Card:** `FACT #4 · MAYBE THERE WAS NO "BEFORE"`
+17 March 2014 ko, Antarctica ke BICEP2 telescope ki team ne elaan kiya, ki unhe inflation ke seedhe nishaan mil gaye. Duniya bhar mein khushi mana li gayi. Lekin kuch mahino baad pata chala, ki woh nishaan, hamari hi galaxy ki dhool ne banaye the. Phir aaya James Webb Space Telescope. 2025 mein, Webb ne ek aisi galaxy dekhi, MoM-z14, jiski roshni Big Bang ke sirf 28 crore saal baad chali thi. Webb shuruaat ke jitna paas pahunch raha hai, utna hi saaf ho raha hai, ki deewar ke us paar jaane ke liye, sirf telescope kaafi nahi. Ab chahiye naye idea. Aur sabse hairaan karne wala idea diya, Stephen Hawking ne.
 
-Ho sakta hai, ki Big Bang se pehle kuch tha hi nahi. Waqt bhi nahi.
-1983 mein, Stephen Hawking aur James Hartle ne ek idea diya. Shuruaat ke paas, waqt bilkul waisa nahi chalta,
-jaisa hum jaante hain. Woh lambaai chaudaai jaisa ek aur disha ban jaata hai.
-Matlab brahmaand ki shuruaat ka koi kinaara hi nahi. Woh ek gend ki tarah, bas gol ho kar band ho jaata hai.
-2018 mein, apni maut se kuch hafte pehle, Hawking ne ise ek misaal se samjhaya. Big Bang se pehle kya tha, yeh
-poochhna aisa hi hai, jaise poochhna ki South Pole ke aur dakshin mein kya hai.
-Waha kuch nahi hai. Kyunki South Pole khud, aakhri bindu hai.
-Agar Hawking sahi the, to "pehle" shabd ka hi koi matlab nahi.
+## ch8
+**Card:** `MAYBE THERE WAS NO "BEFORE"` (chapter card, no number)
 
-## fact3
-**Card:** `FACT #3 · MAYBE THE UNIVERSE BOUNCED`
+Ho sakta hai, ki Big Bang se pehle kuch tha hi nahi... Waqt bhi nahi. 1983 mein, Stephen Hawking aur James Hartle ne ek idea diya. Shuruaat ke paas, waqt bilkul waisa nahi chalta, jaisa hum jaante hain. Woh lambaai chaudaai jaisi ek aur disha ban jaata hai. Matlab brahmaand ki shuruaat ka koi kinaara hi nahi. Woh ek gend ki tarah, bas gol ho kar band ho jaata hai. 2018 mein, apni maut se kuch hafte pehle, Hawking ne ise ek misaal se samjhaya. Big Bang se pehle kya tha, yeh poochhna aisa hi hai, jaise poochhna ki South Pole ke aur dakshin mein kya hai. Wahan kuch nahi hai. Kyunki South Pole khud, aakhri bindu hai. Agar Hawking sahi the, to "pehle" shabd ka hi koi matlab nahi. Lekin har scientist Hawking se sehmat nahi. Kuch kehte hain, Big Bang se pehle ek poora brahmaand tha.
 
-Kuch scientists kehte hain, ki Big Bang shuruaat nahi thi. Woh ek uchhaal tha.
-Is idea ke hisaab se, hamare brahmaand se pehle ek aur brahmaand tha. Woh sikudta gaya, sikudta gaya, aur phir
-ek gend ki tarah wapas uchhal gaya. Use kehte hain... Big Bounce.
-Nobel Prize jeetne wale British scientist, Roger Penrose, isse bhi aage jaate hain. Unke hisaab se brahmaand ek ke
-baad ek, kabhi na khatam hone wale chakkaron mein chalta hai.
-2018 mein, Penrose ki team ne daava kiya, ki sabse purani roshni mein, pichhle brahmaand ke nishaan dikhte hain.
-Zyaadatar scientists is daave ko nahi maante. Unke hisaab se woh sirf shor hai.
-Lekin agar Penrose sahi hain, to Big Bang kahaani ki shuruaat nahi, bas ek naya chapter tha.
+## ch9
+**Card:** `MAYBE THE UNIVERSE BOUNCED` (chapter card, no number)
 
-## fact2
-**Card:** `FACT #2 · OURS MAY BE ONE BUBBLE AMONG MANY`
+Is idea ke hisaab se, hamare brahmaand se pehle ek aur brahmaand tha. Woh sikudta gaya, sikudta gaya, aur phir ek gend ki tarah wapas uchhal gaya. Use kehte hain... Big Bounce. Nobel Prize jeetne wale British scientist, Roger Penrose, isse bhi aage jaate hain. Unke hisaab se brahmaand ek ke baad ek, kabhi na khatam hone wale chakkaron mein chalta hai. 2018 mein, Penrose ki team ne daava kiya, ki sabse purani roshni mein, pichhle brahmaand ke nishaan dikhte hain. Zyaadatar scientists is daave ko nahi maante. Unke hisaab se woh sirf shor hai. Lekin agar Penrose sahi hain, to Big Bang kahaani ki shuruaat nahi, bas ek naya chapter tha. Aur ek idea aisa bhi hai, jo inse bhi aage jaata hai. Ki hamara Big Bang... akela tha hi nahi.
 
-Ho sakta hai, ki hamara Big Bang, akela Big Bang na ho.
-Inflation ki theory ka ek ajeeb nateeja hai. Kuch scientists ke hisaab se, woh tez phailaav kabhi har jagah ek
-saath ruka hi nahi. Jahan ruka, wahan ek bubble bana, ek brahmaand. Aur baaki jagah, phailaav chalta raha.
-Is idea ko kehte hain eternal inflation. Isse ek ke baad ek, anginat bubbles bante rehte hain. Har bubble, ek alag
-brahmaand. Har ek ka apna Big Bang.
-Hamara brahmaand, shayad unmein se bas ek bubble hai... multiverse ka ek chhota sa hissa.
-Scientists ne sabse purani roshni mein, doosre bubbles se takkar ke nishaan bhi dhoondhe hain. Abhi tak, koi
-pakka nishaan nahi mila.
+## ch10
+**Card:** `ONE BUBBLE AMONG MANY` (chapter card, no number)
 
-## fact1
-**Card:** `FACT #1 · THE NEWEST CLUES`
+Inflation ki theory ka ek ajeeb nateeja hai. Kuch scientists ke hisaab se, woh tez phailaav kabhi har jagah ek saath ruka hi nahi. Jahan ruka, wahan ek bubble bana, ek brahmaand. Aur baaki jagah, phailaav chalta raha. Is idea ko kehte hain eternal inflation. Isse ek ke baad ek, anginat bubbles bante rehte hain. Har bubble, ek alag brahmaand. Har ek ka apna Big Bang. Hamara brahmaand, shayad unmein se bas ek bubble hai... multiverse ka ek chhota sa hissa. Scientists ne sabse purani roshni mein, doosre bubbles se takkar ke nishaan bhi dhoondhe hain. Abhi tak, koi pakka nishaan nahi mila.
 
-Is sawaal ka jawaab dhoondhne ki daud, aaj pehle se kahin tez hai.
-17 March 2014 ko, Antarctica ke BICEP2 telescope ki team ne elaan kiya, ki unhe inflation ke seedhe nishaan mil
-gaye. Duniya bhar mein khushi mana li gayi. Lekin kuch mahino baad pata chala, ki woh nishaan, hamari hi galaxy
-ki dhool ne banaye the.
-Phir aaya James Webb Space Telescope. 2025 mein, Webb ne ek aisi galaxy dekhi, MoM-z14, jiski roshni Big Bang ke
-sirf 28 crore saal baad chali thi.
-Aur ab Japan ka LiteBIRD satellite, lagbhag 2032 mein jaane ki taiyaari mein hai. Uska kaam hai, inflation ke
-asli nishaan dhoondhna. Shayad wahi batayega, ki shuruaat kaise hui.
-1964 mein, Penzias aur Wilson ne jis sarsarahat ko kharaabi samjha tha, wahi aaj brahmaand ki sabse badi pahaili ka
-sabse bada suraag hai.
-Brahmaand kahan se aaya. Aur us se pehle kya tha. Is sawaal ka jawaab, abhi bhi us sabse purani roshni ke peeche
-chhupa hai.
+## ending
+Jawaab ka intezaar shayad ab bahut lamba nahi. Japan ka LiteBIRD satellite, lagbhag 2032 mein jaane ki taiyaari mein hai. Uska kaam hai, sabse purani roshni mein inflation ke asli nishaan dhoondhna. Shayad wahi batayega, ki shuruaat kaise hui. Tab tak, sawaal khula hai. Hawking sahi the, ya Penrose? Waqt ki sach mein ek shuruaat thi, ya brahmaand ek kabhi na khatam hone wala chakkar hai? Science abhi tak faisla nahi kar paayi. 1964 mein, Penzias aur Wilson ne jis sarsarahat ko kharaabi samjha tha, wahi aaj is sabse badi pahaili ka sabse bada suraag hai. Brahmaand kahan se aaya. Aur us se pehle kya tha. Iska jawaab, abhi bhi us sabse purani roshni ke peeche chhupa hai.
 
 ## Fact-check sheet
 | Claim | Value used | Source |
@@ -175,7 +92,7 @@ chhupa hai.
 | Hubble | 1929: galaxies recede, speed proportional to distance | PNAS 15, 168 (1929) |
 | "Big Bang" name | Fred Hoyle, BBC Third Programme, 28 March 1949; Hoyle backed steady state (no beginning) and never accepted the Big Bang | BBC; standard histories |
 | CMB | released ~380,000 years after the Big Bang; today 2.725 K (≈ −270 °C); about 1% of old analogue TV static | NASA WMAP / ESA Planck; standard |
-| Inflation | Alan Guth, notebook entry 7 Dec 1979 "SPECTACULAR REALIZATION"; paper 1981; expansion by ≥10²⁶ in ~10⁻³² s; "smaller than a proton to the size of a grapefruit" (common illustration); solves the horizon (sameness) problem | Guth, Phys. Rev. D 23, 347 (1981); Guth's notebook (Adler Planetarium) |
+| Inflation | Alan Guth, notebook entry 7 Dec 1979 "SPECTACULAR REALIZATION"; paper 1981; expansion by ≥10²⁶ in ~10⁻³² s; "smaller than a proton to the size of a grapefruit" (common illustration; the *observable* universe); solves the horizon (sameness) problem | Guth, Phys. Rev. D 23, 347 (1981); Guth's notebook (Adler Planetarium) |
 | Light in 10⁻³² s | ~3×10⁻²⁴ m, far less than a proton (~10⁻¹⁵ m) | c × t |
 | Planck time | ~5.4 × 10⁻⁴⁴ s ("10⁻⁴³ s" as the usual round figure); relativity and quantum theory conflict there | Standard |
 | No-boundary proposal | Hartle & Hawking, 1983 (Phys. Rev. D 28, 2960); time behaves like space near the start | Standard |
