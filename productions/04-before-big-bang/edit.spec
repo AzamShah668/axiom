@@ -144,7 +144,7 @@ L Alan Guth @ ALAN GUTH | physicist · USA · 1979
 C Alan Guth | On that night, a young American physicist, Alan Guth, wrote in his notebook...
 K Spectacular realization @ *"SPECTACULAR REALIZATION"* | kicker=Guth's notebook · 1979
 C Spectacular realization | "Spectacular realization"
-V उनका idea था @ rapid expansion of space from a point | space stretching outward fast
+V उनका idea था @ an explosion of light filling space | a bright flash expanding in space
 C उनका idea था | His idea: in a tiny fraction of the first second, space itself expanded faster than light
 M एक के आगे छब्बीस | breath=1.0 | riser=1.4 | impact=impact | trans=flash
 V एक के आगे छब्बीस @ an explosion of light filling space | a flash of light expanding {hold}
@@ -165,7 +165,7 @@ V - @ a galaxy rotating | a black hole bending light {hold}
 C - | Physics has two great theories
 V Einstein की gravity @ a black hole bending light around it | gravity warping space around a galaxy cluster
 C Einstein की gravity | Einstein's gravity explains big things, like galaxies and black holes
-V और quantum physics @ glowing particles moving in a simulation | abstract swarm of tiny glowing particles
+V और quantum physics @ a dense star cluster sparkling | countless stars in a globular cluster
 C और quantum physics | Quantum physics explains the smallest things, atoms and particles even smaller
 K और quantum physics @ GRAVITY / *QUANTUM* | kicker=the two great theories
 C आम तौर पर | Usually each works fine in its own place
@@ -214,7 +214,7 @@ C - | Maybe there was nothing before the Big Bang...
 M वक़्त भी नहीं | breath=1.2 | riser=1.4 | impact=hit | trans=dip | drop
 C वक़्त भी नहीं | ...not even time
 K वक़्त भी नहीं @ NOTHING BEFORE / *NOT EVEN TIME*
-V उन्नीस सौ तिरासी में @ a black hole with swirling light | warped spacetime animation
+V उन्नीस सौ तिरासी में @ a spiral galaxy rotating slowly | a galaxy turning in deep space
 L Stephen Hawking @ STEPHEN HAWKING & JAMES HARTLE | physicists · 1983
 C उन्नीस सौ तिरासी में | In 1983, Stephen Hawking and James Hartle proposed an idea
 G शुरुआत के पास @ spacetime

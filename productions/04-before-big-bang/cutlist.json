@@ -2027,13 +2027,13 @@
    "dir": 1,
    "f0": 9036,
    "f1": 9133,
-   "shot": "eso_uhd-cm-vlt2014-2#0",
-   "clip": "eso_uhd-cm-vlt2014-2",
-   "ss": 3.99,
+   "shot": "eso_eso1509a#0",
+   "clip": "eso_eso1509a",
+   "ss": 3.97,
    "crop": null,
-   "score": 0.3161,
+   "score": 0.3066,
    "ref": "ch5/6",
-   "title": "On the mountaintop"
+   "title": "Artist’s impression of Mars four billion years ago"
   },
   {
    "sec": "ch5",
@@ -2432,13 +2432,13 @@
    "dir": -1,
    "f0": 10588,
    "f1": 10673,
-   "shot": "eso_eso2205b#0",
-   "clip": "eso_eso2205b",
-   "ss": 4.2,
+   "shot": "svs_13078#0",
+   "clip": "svs_13078",
+   "ss": 0.33,
    "crop": null,
-   "score": 0.2886,
+   "score": 0.2519,
    "ref": "ch6/6",
-   "title": "Artist’s animation of the dust trap in IRS 48"
+   "title": "Water Released from Moon During Meteor Showers"
   },
   {
    "sec": "ch6",
@@ -2457,13 +2457,18 @@
    "dir": -1,
    "f0": 10673,
    "f1": 10749,
-   "shot": "eso_eso1601a#0",
-   "clip": "eso_eso1601a",
-   "ss": 0.47,
-   "crop": null,
-   "score": 0.2853,
+   "shot": "esawebb_weic2212e#0",
+   "clip": "esawebb_weic2212e",
+   "ss": 3.97,
+   "crop": [
+    0.0,
+    0.15,
+    0.85,
+    1.0
+   ],
+   "score": 0.2555,
    "ref": "ch6/7",
-   "title": "GRAVITY discovers new double star in Orion Trapezium Cluster"
+   "title": "Pan of the Tarantula Nebula (MIRI Image)"
   },
   {
    "sec": "ch6",
@@ -3133,13 +3138,13 @@
    "dir": 1,
    "f0": 13450,
    "f1": 13607,
-   "shot": "svs_4580#0",
-   "clip": "svs_4580",
-   "ss": 2.98,
+   "shot": "svs_20398#0",
+   "clip": "svs_20398",
+   "ss": 2.39,
    "crop": null,
-   "score": 0.3205,
+   "score": 0.2886,
    "ref": "ch8/2",
-   "title": "Electromagnetic Waves and Polarization"
+   "title": "Habitable Worlds Observatory (HWO) EAC 2 Design Animations"
   },
   {
    "sec": "ch8",
@@ -4621,25 +4626,6 @@
     "count_s": 1.3,
     "dur": 7.017999999999972
    }
-  },
-  {
-   "kind": "headline",
-   "lines": [
-    {
-     "text": "THE BIG BANG",
-     "t": 267.955
-    },
-    {
-     "text": "*ON YOUR TV*",
-     "t": 269.139
-    }
-   ],
-   "kicker": null,
-   "sub": null,
-   "pos": "left",
-   "t0": 267.85499999999996,
-   "t_last": 269.139,
-   "t1": 273.139
   },
   {
    "kind": "footer",
@@ -6652,16 +6638,6 @@
    {
     "d": 0.6
    }
-  ],
-  [
-   "tick",
-   267.945,
-   0
-  ],
-  [
-   "tick",
-   269.129,
-   0
   ],
   [
    "whoosh_big",
