@@ -1054,21 +1054,22 @@ def cmb(kind, t, D, f):
             f = np.clip(f + line * np.array([200, 230, 255], np.float32), 0, 255).astype(np.uint8)
         return (f * (1 - m) + img * m).astype(np.uint8)
     if kind in ("sphere", "sphere_r"):  # the oldest light all around us: a turning sky-sphere (_r: right of centre)
-        if "cmb_sph" not in G:
-            R, ph0 = 400, math.radians(20)
+        key = "cmb_sph_" + kind
+        if key not in G:
+            R, ph0 = (330 if kind == "sphere_r" else 400), math.radians(20)
             yy, xx = np.mgrid[-R:R, -R:R].astype(np.float32)
             rho = np.sqrt(xx ** 2 + yy ** 2)
             c = np.arcsin(np.clip(rho / R, 0, 1))
             lat = np.arcsin(np.clip(np.cos(c) * math.sin(ph0) - yy * np.sin(c) * math.cos(ph0) / np.maximum(rho, 1e-3), -1, 1))
             lon = np.arctan2(xx * np.sin(c), rho * np.cos(c) * math.cos(ph0) + yy * np.sin(c) * math.sin(ph0))
-            G["cmb_sph"] = (R, lat, lon, (rho < R).astype(np.float32), np.clip(np.cos(c), 0, 1) ** 0.35)
-        R, lat, lon, ok, shade = G["cmb_sph"]
+            G[key] = (R, lat, lon, (rho < R).astype(np.float32), np.clip(np.cos(c), 0, 1) ** 0.35)
+        R, lat, lon, ok, shade = G[key]
         tex = cmb_tex()
         mx = (((lon + t * 0.22) / (2 * math.pi) + 0.5) % 1.0) * (tex.shape[1] - 1)
         my = (0.5 - lat / math.pi) * (tex.shape[0] - 1)
         img = cv2.remap(tex, mx.astype(np.float32), my.astype(np.float32), cv2.INTER_LINEAR) * shade[..., None]
         m = cv2.GaussianBlur(ok, (0, 0), 1.2)[..., None]
-        cx = W * 0.68 if kind == "sphere_r" else W / 2
+        cx = W * 0.8 if kind == "sphere_r" else W / 2  # _r: clear of a headline on the left
         x0, y0 = int(cx - R), int(H * 0.5 - R)
         add_glow(f, cx, H * 0.5, R * 1.35, (255, 200, 150), 0.25, 1.4)
         reg = f[y0:y0 + 2 * R, x0:x0 + 2 * R].astype(np.float32)
