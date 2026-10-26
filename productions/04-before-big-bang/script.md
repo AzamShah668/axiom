@@ -62,7 +62,7 @@ Physics ki do sabse badi theories hain. Einstein ki gravity, jo badi cheezon ko 
 ## ch7
 **Card:** `THE HUNT FOR CLUES` (chapter card, no number)
 
-17 March 2014 ko, Antarctica ke BICEP2 telescope ki team ne elaan kiya, ki unhe inflation ke seedhe nishaan mil gaye. Duniya bhar mein khushi mana li gayi. Lekin kuch mahino baad pata chala, ki woh nishaan, hamari hi galaxy ki dhool ne banaye the. Phir aaya James Webb Space Telescope. 2025 mein, Webb ne ab tak ki sabse door ki galaxy dekhi, jiski roshni Big Bang ke sirf 28 crore saal baad chali thi. Webb shuruaat ke jitna paas pahunch raha hai, utna hi saaf ho raha hai, ki deewar ke us paar jaane ke liye, sirf telescope kaafi nahi. Ab zaroorat hai, naye ideas ki. Aur sabse hairaan karne wala idea diya, Stephen Hawking ne.
+17 March 2014 ko, Antarctica ke BICEP2 telescope ki team ne elaan kiya, ki unhe inflation ke seedhe nishaan mil gaye. Duniya bhar mein khushi mana li gayi. Lekin kuch mahino baad pata chala, ki woh nishaan, hamari hi galaxy ki dhool ne banaye the. Phir aaya James Webb Space Telescope. 2025 mein, Webb ne ab tak ki sabse door ki galaxy dekhi, jiski roshni Big Bang ke sirf 28 crore saal baad chali thi. Webb shuruaat ke jitna paas pahunch raha hai, utna hi saaf ho raha hai, ki deewar ke us paar jaane ke liye, sirf telescope kaafi nahi. Ab zaroorat hai, bilkul alag ideas ki. Aur sabse hairaan karne wala idea diya, Stephen Hawking ne.
 
 ## ch8
 **Card:** `MAYBE THERE WAS NO "BEFORE"` (chapter card, no number)

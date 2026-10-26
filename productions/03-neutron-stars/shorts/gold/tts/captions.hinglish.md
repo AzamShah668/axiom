@@ -13,8 +13,8 @@ chamak aayi, jise koi samajh nahi paaya.
 
 ## gold_core
 Magnetar, brahmaand ka sabse taakatvar magnet hai. Jab uski satah phatti hai, to tukde bahar udte hain.
-Aur un tukdon mein, naye bhaari atom bante hain.
+Aur un tukdon mein, bhaari atom banne lagte hain.
 
 ## gold_end
-Phir ek PhD student ke hisaab ne yeh pahaili suljha di. Woh chamak, naye bane bhaari elements ki thi, jaise sona
+Phir ek PhD student ke hisaab ne yeh pahaili suljha di. Woh chamak, abhi abhi bane bhaari elements ki thi, jaise sona
 aur platinum. Earth ke ek tihaai wazan jitne. Woh mara hua taara, sone ki factory tha.

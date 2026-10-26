@@ -95,6 +95,8 @@ is 100 quota units, so stay under ~30 searches a day).
 - **Check the recording with speech recognition** (faster-whisper medium, `work/venv`) on the chapters with
   names and numbers. Re-record a chapter (delete its `<id>.mp3`, run the narration stage again) when a word
   comes out wrong. Video 04: "BICEP" read as "B-sep" until written बाइसेप; "नए idea" sounded like "नहीं".
+- **Never write नए / naye.** Neel says it so it sounds like नहीं ("naye bhaari atom bante hain" heard as "heavy
+  atoms don't form"). Use अलग, अभी अभी बने, or rephrase (video 04 ch7, the 03 gold Short, 2026-10-26).
 
 ## 6. Review loop with the owner
 1. Propose the topic and an outline of the key points. Get an OK.
