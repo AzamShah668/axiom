@@ -127,7 +127,6 @@ C उन्नीस सौ अठहत्तर में | In 1978, Penzias a
 G और पुराने TV की @ tv_static
 C और पुराने TV की | And about 1 percent of the black-and-white static on old TVs, with no channel tuned...
 C यही रोशनी थी | ...was this very light
-K Big Bang की गूँज, घर @ THE BIG BANG [गूँज] / *ON YOUR TV* [TV पर]
 C Big Bang की गूँज, घर | The echo of the Big Bang, on the TV at home
 G लेकिन इस रोशनी @ cmb_map
 C लेकिन इस रोशनी | But this light hid a puzzle...
