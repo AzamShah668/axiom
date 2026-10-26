@@ -1,0 +1,104 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "title": {
+  "kicker": "what was there",
+  "main": "Before the Big Bang?"
+ },
+ "cards": {
+  "ch1": [
+   "",
+   "THE UNIVERSE HAS A *BIRTHDAY*"
+  ],
+  "ch2": [
+   "",
+   "A *PRIEST* SAID IT FIRST"
+  ],
+  "ch3": [
+   "",
+   "A NAME FROM ITS BIGGEST *CRITIC*"
+  ],
+  "ch4": [
+   "",
+   "THE OLDEST LIGHT IS *ALL AROUND US*"
+  ],
+  "ch5": [
+   "",
+   "IT GREW *10²⁶* TIMES IN A FLASH"
+  ],
+  "ch6": [
+   "",
+   "WHERE *PHYSICS* BREAKS"
+  ],
+  "ch7": [
+   "",
+   "THE HUNT FOR *CLUES*"
+  ],
+  "ch8": [
+   "",
+   "MAYBE THERE WAS NO *\"BEFORE\"*"
+  ],
+  "ch9": [
+   "",
+   "MAYBE THE UNIVERSE *BOUNCED*"
+  ],
+  "ch10": [
+   "",
+   "ONE BUBBLE AMONG *MANY*"
+  ]
+ },
+ "count_total": 10,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "ch1",
+   "track": "Long_Note_Two.mp3"
+  },
+  {
+   "from": "ch3",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "ch5",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "ch7",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "ch8",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "ch10",
+   "track": "Ossuary_5_-_Rest.mp3"
+  },
+  {
+   "from": "ending",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "the cosmic microwave background all-sky map",
+  "slow flight through a star field"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [],
+ "crops": {},
+ "exclude": {}
+}

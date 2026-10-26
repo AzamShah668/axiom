@@ -591,8 +591,10 @@ def gfx(name, t, D, sh):
         if 0.6 < p < 0.8:
             add_glow(f, cx, cy, 520, (255, 255, 255), (1 - abs(p - 0.68) / 0.12) * 0.7, 1.4)
         return f
-    if name == "zeros":  # 10^67 years written out
-        n = int(round(67 * ease((p - 0.05) / 0.75)))
+    if name == "zeros" or name.startswith("zeros:"):  # 10^67 years written out; "zeros:43:of one second"
+        part = name.split(":", 2)
+        nz, unit = (int(part[1]), part[2].upper()) if len(part) == 3 else (67, "YEARS")
+        n = int(round(nz * ease((p - 0.05) / 0.75)))
         digits = "1" + "0" * n
         per, size = 23, 92
         fw = text_rgba("0" * per, size, "Anton", (255, 255, 255))[1].shape[1]
@@ -601,7 +603,7 @@ def gfx(name, t, D, sh):
             if seg:
                 draw_text(f, seg, size, ((W - fw) / 2 / W + 0.012, (0.24 + 0.15 * li)), align="left")
         if p > 0.82:
-            draw_text(f, "YEARS", 70, (0.5, 0.72), op=ease((p - 0.82) / 0.1), color=(255, 200, 120))
+            draw_text(f, unit, 70, (0.5, 0.72), op=ease((p - 0.82) / 0.1), color=(255, 200, 120))
         return f
     if name == "evaporate":  # Hawking radiation: particles leak away, the hole slowly shrinks
         cx, cy = W / 2, H * 0.44

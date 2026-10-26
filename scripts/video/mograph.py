@@ -782,32 +782,45 @@ def captions(fr, spec, t):
 
 
 # ------------------------------------------------------------------ cards, title, footer, logo
-def chapter(fr, num, n_total, title, t, D):
+def chapter(fr, num, n_total, title, t, D, idx=None):
     """FACT #n card: tracked 'FACT', a big gold number rising in, the title revealed word by word,
-    a countdown bar (n_total segments, the current one lit)."""
-    shade_box(fr, W / 2, H * 0.5, W * 0.6, H * 0.5, strength=0.55)
-    paste(fr, layer("FACT", "Montserrat", 40, "SemiBold", WHITE, track=0.8, shadow=0.4), W / 2, H * 0.24, op=ease_out(t / 0.3))
-    e = ease_out((t - 0.1) / 0.3)
-    lay = layer(f"#{num}", "Anton", 260, None, grad=GOLD, glow=(GLOW, 22, 0.55), shadow=0.3)
-    paste(fr, lay, W / 2, H * 0.41 + (1 - e) * 120, op=e, clip=(0, H * 0.27, W, H * 0.56))
-    words = title.split()
-    size = fit_size(title.upper(), "Anton", 92, W * 0.82)
-    lays = [layer(_line_spec(w_)[0].upper(), "Anton", size, None, grad=GOLD if _line_spec(w_)[1] else SILVER, shadow=0.5)
-            for w_ in words]
+    a countdown bar (n_total segments, the current one lit). A num that is not a number (a chapter title
+    video, e.g. "" or "PART TWO") gives a chapter card: that text as a small kicker, a bigger title in the
+    middle and a progress bar lit up to chapter idx."""
+    numbered = str(num).isdigit()
+    if numbered:
+        shade_box(fr, W / 2, H * 0.5, W * 0.6, H * 0.5, strength=0.55)
+        paste(fr, layer("FACT", "Montserrat", 40, "SemiBold", WHITE, track=0.8, shadow=0.4), W / 2, H * 0.24, op=ease_out(t / 0.3))
+        e = ease_out((t - 0.1) / 0.3)
+        lay = layer(f"#{num}", "Anton", 260, None, grad=GOLD, glow=(GLOW, 22, 0.55), shadow=0.3)
+        paste(fr, lay, W / 2, H * 0.41 + (1 - e) * 120, op=e, clip=(0, H * 0.27, W, H * 0.56))
+    else:
+        shade_box(fr, W / 2, H * 0.5, W * 0.72, H * 0.34, strength=0.55)
+        if num:
+            paste(fr, layer(str(num).upper(), "Montserrat", 40, "SemiBold", WHITE, track=0.8, shadow=0.4), W / 2, H * 0.39,
+                  op=ease_out(t / 0.3))
+    words, gold, on = [], [], False  # *gold* may span several words
+    for w_ in title.split():
+        on = on or w_.startswith("*")
+        words.append(w_.replace("*", ""))
+        gold.append(on)
+        on = on and not w_.rstrip(",.!?\"'").endswith("*")
+    size = fit_size(" ".join(words).upper(), "Anton", 92 if numbered else 112, W * 0.82)
+    lays = [layer(w_.upper(), "Anton", size, None, grad=GOLD if g else SILVER, shadow=0.5) for w_, g in zip(words, gold)]
     widths = [text_w(l_, size) for l_ in lays]
     sp = size * 0.28
     x = W / 2 - (sum(widths) + sp * (len(words) - 1)) / 2
-    cy = H * 0.66
+    cy = H * 0.66 if numbered else H * 0.5
     for i, (l_, wd) in enumerate(zip(lays, widths)):
         ew = ease_out((t - 0.45 - 0.06 * i) / 0.2)
         if ew > 0:
             paste(fr, l_, x - (l_.shape[1] - wd) / 2, cy + (1 - ew) * size * 0.5, op=ew, anchor="l",
                   clip=(0, cy - size * 0.62, W, cy + size * 0.62))
         x += wd + sp
-    # countdown bar: segments for n_total .. 1, the current one lit
-    bw, gap, y = 64, 10, H * 0.8
+    # countdown bar: segments for n_total .. 1, the current one lit (chapters: 1 .. n_total)
+    bw, gap, y = 64, 10, H * (0.8 if numbered else 0.61)
     x0 = W / 2 - (n_total * bw + (n_total - 1) * gap) / 2
-    done = n_total - int(num) if str(num).isdigit() else 0
+    done = n_total - int(num) if numbered else max(0, (idx or 1) - 1)
     bars = np.zeros_like(fr)
     for k in range(n_total):
         col = (40, 160, 255) if k < done else ((90, 200, 255) if k == done else (110, 110, 110))

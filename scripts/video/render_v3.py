@@ -197,12 +197,15 @@ def plan(edit, tl, voice_wav=None):
                 mus.append({"kind": "swell", "t0": c0 - 0.3, "peak": c0 + 0.4, "t1": c0 + 3.0, "db": 4.0})
                 c0 += 2.4
             num, ctitle = card_parts(edit, sid)
+            idx = [s_ for s_ in order if s_ in cards].index(sid) + 1
             items.append({"kind": "card", "sec": sid, "t0": c0, "t1": h["first"], "num": num, "ctitle": ctitle,
-                          "n_total": n_total, "q": edit["card_query"], "trans": "dip" if k != first_card else "soft"})
+                          "idx": idx, "n_total": n_total, "q": edit["card_query"],
+                          "trans": "dip" if k != first_card else "soft"})
             sfx += [("whoosh_big", c0 - 0.6, 0), ("hit", c0 + 0.28, -2)]
             sfx += [("tick", c0 + 0.45 + 0.06 * i, -4) for i in range(len(ctitle.split()))]
             fl = spec.get("footer") or ctitle.replace("*", "")
-            ovl.append({"kind": "footer", "t0": h["first"], "t1": sec_end, "left": f"FACT {num} / {n_total}", "right": fl})
+            left = f"FACT {num} / {n_total}" if isinstance(num, int) else (title.get("main") or "")
+            ovl.append({"kind": "footer", "t0": h["first"], "t1": sec_end, "left": left, "right": fl})
         first = h["first"]
         # kinetic headlines first: their windows are protected from scene cuts
         heads_k = []
@@ -480,7 +483,7 @@ def item_frame(it, f):
         return mg.card(fr, it["num"], t, D)
     if it["kind"] == "card":
         fr = dim(bg, 0.42)
-        mg.chapter(fr, it["num"], it["n_total"], it["ctitle"], t, D)
+        mg.chapter(fr, it["num"], it["n_total"], it["ctitle"], t, D, it.get("idx"))
         return fr
     if it["kind"] == "title":
         fr = dim(bg, 0.42)
