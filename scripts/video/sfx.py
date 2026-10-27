@@ -15,7 +15,7 @@ SR = 44100
 
 # level of each sound's loudest 400 ms vs the voice's momentary loudness while speaking (LU)
 LEVEL = {"tick": -20, "pop": -18, "roll": -24, "hit": -8, "impact": -2, "sub_drop": -8, "riser": -7,
-         "whoosh": -15, "whoosh_big": -10, "flare": -12, "sting": -3, "boom": -3}
+         "whoosh": -15, "whoosh_big": -10, "flare": -12, "sting": -3, "boom": -3, "hiss": -14}
 
 
 # ------------------------------------------------------------------ loudness
@@ -250,8 +250,19 @@ def sting(seed=11):
     return _norm(_reverb(x, 3.5, 0.35))
 
 
+def hiss(d=3.0, seed=12):
+    """Radio-antenna hiss: band-limited noise with faint crackle, swelling in and fading out (video 04's 1964 antenna)."""
+    tt = _t(d)
+    r = _rng(seed)
+    x = _bp(r.normal(0, 1, len(tt)), 900, 7000) * 0.8 + _lp(r.normal(0, 1, len(tt)), 400) * 0.3
+    crack = (r.random(len(tt)) > 0.9993) * r.normal(0, 4, len(tt))
+    x = x + _bp(crack, 1500, 8000)
+    env = np.minimum(1, tt / (d * 0.3)) * np.minimum(1, (d - tt) / (d * 0.35))
+    return _norm(_st(x * env, 0.0))
+
+
 KIT = {"tick": tick, "pop": pop, "roll": roll, "hit": hit, "impact": impact, "boom": impact, "sub_drop": sub_drop,
-       "riser": riser, "whoosh": whoosh, "whoosh_big": whoosh_big, "flare": flare, "sting": sting}
+       "riser": riser, "whoosh": whoosh, "whoosh_big": whoosh_big, "flare": flare, "sting": sting, "hiss": hiss}
 _CACHE = {}
 
 

@@ -970,6 +970,57 @@ def gfx(name, t, D, sh):
         return f
     if name.startswith("cmb_"):
         return cmb(name[4:], t, D, f)
+    if name == "rewind":  # the music-first intro: time runs back from today to 1964 while the stars rush past
+        rng = np.random.default_rng(64)
+        n = 220
+        ang, r0, sp = rng.uniform(0, 2 * np.pi, n), rng.uniform(0, 1, n), rng.uniform(0.5, 1.2, n)
+        warp = 0.25 + 1.6 * ease(p / 0.9)
+        f = (f * 0.6).astype(np.uint8)
+        for a, r, s in zip(ang, r0, sp):
+            rr = (r + t * s * warp * 0.45) % 1.0
+            d1 = rr ** 1.6 * 1150
+            d0 = max(0.0, d1 - (25 + 260 * warp * s * rr))
+            c, sn = math.cos(a), math.sin(a)
+            col = tuple(int(v * min(1.0, 0.25 + rr)) for v in (190, 225, 255))  # BGR, warm white
+            cv2.line(f, (int(W / 2 + c * d0), int(H / 2 + sn * d0 * 0.75)), (int(W / 2 + c * d1), int(H / 2 + sn * d1 * 0.75)),
+                     col, 2, cv2.LINE_AA)
+        add_glow(f, W / 2, H / 2, 260, (255, 200, 140), 0.25 + 0.4 * ease(p))
+        yr = int(round(2026 - (2026 - 1964) * ease(min(1.0, p / 0.82))))
+        sc = 1.0 + 0.12 * max(0.0, 1 - abs(p - 0.86) / 0.06)
+        draw_text(f, str(yr), int(230 * sc), (0.5, 0.5), color=(255, 205, 120))
+        fl = ease((p - 0.93) / 0.07)
+        if fl > 0:
+            f = np.clip(f.astype(np.float32) + fl * 220, 0, 255).astype(np.uint8)
+        return f
+    if name.startswith("photo:"):  # a photo of who or what the line names (owner, 2026-10-27); always moving
+        part = name.split(":")
+        im = load_img("photos/" + part[1])
+        mv = part[2] if len(part) > 2 else "in"
+        ih, iw = im.shape[:2]
+        if iw / ih >= 1.3:  # a wide photo fills the frame and drifts
+            f = ken_burns(im, p, mv)
+        else:  # a portrait: a print with a white border, over a blurred, darkened copy of itself
+            bgk = ("photo_bg", part[1])
+            if bgk not in G["imgs"]:
+                s0 = max(W / iw, H / ih)
+                b = cv2.resize(im, (int(iw * s0) + 2, int(ih * s0) + 2))
+                y0, x0 = (b.shape[0] - H) // 2, (b.shape[1] - W) // 2
+                G["imgs"][bgk] = (cv2.GaussianBlur(b[y0:y0 + H, x0:x0 + W], (0, 0), 28) * 0.3).astype(np.uint8)
+            f = G["imgs"][bgk].copy()
+            ph = H * 0.8 * (1.0 + 0.06 * ease(p))
+            fg = cv2.resize(im, (int(ph * iw / ih), int(ph)), interpolation=cv2.INTER_AREA)
+            fg = cv2.copyMakeBorder(fg, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=(235, 240, 245))
+            cx, cy = W * 0.56 + 30 * (p - 0.5), H * 0.5
+            x0, y0 = int(cx - fg.shape[1] / 2), int(cy - fg.shape[0] / 2)
+            sh = np.zeros((H, W), np.float32)
+            cv2.rectangle(sh, (x0 + 14, y0 + 18), (x0 + fg.shape[1] + 14, y0 + fg.shape[0] + 18), 1.0, -1)
+            f = (f * (1 - cv2.GaussianBlur(sh, (0, 0), 18)[..., None] * 0.6)).astype(np.uint8)
+            xa, ya, xb, yb = max(x0, 0), max(y0, 0), min(x0 + fg.shape[1], W), min(y0 + fg.shape[0], H)
+            f[ya:yb, xa:xb] = fg[ya - y0:yb - y0, xa - x0:xb - x0]
+        if "vig" not in G:
+            yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+            G["vig"] = (1 - 0.35 * (((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2) / 2)[..., None]
+        return (f * G["vig"]).astype(np.uint8)
     raise SystemExit(f"unknown gfx {name}")
 
 

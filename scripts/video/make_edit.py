@@ -26,7 +26,7 @@ v3 only (edit.base.json "style": "v3", see docs/style-guide.md):
                                        it, an impact, a music swell (drop = the music falls silent for the breath)
   L <trigger> @ <NAME> [| <role line>]  lower third for a person (= N ... @ name | value=NAME | sub=role | over)
   T <trigger> | <cut|dip|dissolve|flare|flash|whip|zoom>    transition override at the cut nearest the trigger
-  S <trigger> | <sound> [| gain=<dB>]  extra sound (scripts/video/sfx.py kinds)
+  S <trigger> | <sound> [| gain=<dB>] [| d=<s>]  extra sound (scripts/video/sfx.py kinds; d for riser/hiss/roll)
   F <text>                             footer text for this section (default: the chapter card title)
 edit.base.json holds the rest: lead_in, title_card / title, cards, music, card_query, bg_query, pin, ban, crops,
 exclude, and for v3: style, grade, count_total.

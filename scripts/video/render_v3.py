@@ -171,11 +171,23 @@ def plan(edit, tl, voice_wav=None):
             moments[round(T.vt(sid, m["at"]), 3)] = m
 
     # 2. where each section's own picture starts (cards and titles sit in the gap before a section)
+    # A music-first intro (owner, 2026-10-27, from the reference): edit "intro" {"dur", "gfx", "track", "db"} plays
+    # loud music over its own graphic before the voice, ends on an impact, and the music drops out until the voice
+    # has started. lead_in must leave room for it (voice at about dur + 0.5 s).
+    intro = edit.get("intro")
+    if intro:
+        d0 = float(intro["dur"])
+        items.append({"kind": "gfx", "sec": "intro", "t0": 0.0, "t1": d0, "gfx": intro["gfx"], "q": edit["bg_query"],
+                      "trans": "cut"})
+        v0 = T.v(T.secs[order[0]]["start"])
+        sfx += [("riser", d0 - 1.7, -2, {"d": 1.7}), ("impact", d0 - 0.03, 0), ("sub_drop", d0, -2)]
+        mus.append({"kind": "intro", "t1": d0, "back0": v0 + 0.5, "back1": v0 + 4.5, "db": float(intro.get("db", 12.0))})
     heads = {}
     for k, sid in enumerate(order):
         s = T.secs[sid]
         if k == 0:
-            heads[sid] = {"t": 0.0, "first": 0.0}
+            d0 = float(intro["dur"]) if intro else 0.0
+            heads[sid] = {"t": d0, "first": d0}
             continue
         prev_end = T.v(T.secs[order[k - 1]]["end"]) + 0.3
         on_start = round(T.v(s["start"]), 3) in moments  # a moment on the first word: cut right on it
@@ -307,7 +319,8 @@ def plan(edit, tl, voice_wav=None):
         for fx_ in spec.get("sfx", []):
             sfx.append((fx_["type"], T.vt(sid, fx_["at"]), 0))
         for fx_ in spec.get("s", []):
-            sfx.append((fx_["type"], T.vt(sid, fx_["at"]), float(fx_.get("gain", 0))))
+            kw = {"d": float(fx_["d"])} if "d" in fx_ else {}
+            sfx.append((fx_["type"], T.vt(sid, fx_["at"]), float(fx_.get("gain", 0)), kw))
         for hk in heads_k:
             ovl.append(hk)
     caps.sort(key=lambda c: c["t"])
@@ -405,6 +418,9 @@ def plan(edit, tl, voice_wav=None):
         hit = [t for t in full if o["kind"] != "footer" and o["t0"] < t < o["t1"]]
         if hit:
             o["t1"] = min(hit) - 0.1
+    if intro:  # the story's first picture lands on the intro's impact
+        nxt = next(it for it in items if it["sec"] == order[0])
+        nxt["trans"] = "flash"
     for it in items:
         it["f0"], it["f1"] = round(it["t0"] * FPS), round(it["t1"] * FPS)
     items[-1]["f1"] = round(total * FPS)
@@ -413,8 +429,11 @@ def plan(edit, tl, voice_wav=None):
     sfx = [list(x) for x in sorted(sfx, key=lambda x: x[1])]
     music = []
     starts = {s["id"]: T.v(s["start"]) for s in tl["sections"]}
+    if intro and intro.get("track"):
+        music.append({"t": 0.0, "track": intro["track"], "gain": intro.get("gain", 0.0)})
     for i, m in enumerate(edit.get("music", [])):
-        music.append({"t": 0.0 if i == 0 else starts[m["from"]] - 1.5, "track": m["track"], "gain": m.get("gain", 0.0)})
+        t0 = (float(intro["dur"]) if intro and intro.get("track") else 0.0) if i == 0 else starts[m["from"]] - 1.5
+        music.append({"t": t0, "track": m["track"], "gain": m.get("gain", 0.0)})
     return {"style": "v3", "items": items, "ovl": ovl, "caps": caps, "sfx": sfx, "mus": mus, "music": music,
             "breaths": T.breaths, "total": total, "off": T.off, "grade": edit.get("grade", {})}
 
@@ -467,7 +486,7 @@ def camera(fr, it, t, D):
     return cv2.warpAffine(fr, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
 
 
-OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros"}
+OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "photo"}
 
 
 def own_gfx(it):
@@ -709,6 +728,9 @@ def mix(narr, P, music_dir):
     for e in P["mus"]:
         if e["kind"] == "swell":
             db += _curve(n, [(0, 0), (e["t0"], 0), (e["peak"], e["db"]), (e["peak"] + 0.3, e["db"]), (e["t1"], 0), (total, 0)])
+        elif e["kind"] == "intro":  # loud from frame 0, out on the impact, back slowly once the voice is on
+            db += _curve(n, [(0, e["db"]), (e["t1"] - 0.15, e["db"]), (e["t1"] + 0.05, -40), (e["back0"], -40),
+                             (e["back1"], 0), (total, 0)])
         elif e["kind"] == "drop":
             db += _curve(n, [(0, 0), (e["t0"], 0), (e["t0"] + 0.25, -35), (e["t1"] - 0.02, -35), (e["t1"], 0), (total, 0)])
     tail = np.clip((total - np.arange(n) / SR) / 4, 0, 1)
