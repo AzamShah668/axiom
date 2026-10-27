@@ -103,7 +103,11 @@ def main():
                    help="section the open gap follows (default cold_open; the first section if there is none)")
     p.add_argument("--gap-after", default="", help="per-section gaps, e.g. hook=1.0,fact5=3.0 (silence after it)")
     p.add_argument("--max-pause", type=float, default=0.0, help="cut pauses inside sections to this (s); 0 = keep")
+    p.add_argument("--settings", default="", help='JSON over the locked voice_settings, e.g. {"stability": 0.35, "style": 0.3} '
+                                                 "(a test take only; the preset file stays the default)")
     a = p.parse_args()
+    if a.settings:
+        PRESET["voice_settings"] = {**PRESET["voice_settings"], **json.loads(a.settings)}
     os.makedirs(a.out_dir, exist_ok=True)
     secs = parse(a.narration)
     only = set(filter(None, a.only.split(",")))
