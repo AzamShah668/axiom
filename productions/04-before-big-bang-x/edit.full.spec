@@ -6,7 +6,6 @@
 == opening
 # new opening (owner, 2026-10-27): the big idea and its numbers first, then 1964; no pigeons, the word "signal"
 V - @ a flash of light expanding in space | an explosion of light filling space {hold}
-N तेरह point आठ @ hero | value=13.8 | from=0 | unit=billion years ago | kicker=everything began | land=आठ अरब | over
 C - | 13.8 billion years ago, the universe began
 V हर तारा @ flight through thousands of galaxies | zooming out from galaxies to the large-scale universe
 K हर तारा @ EVERY STAR [तारा] / EVERY GALAXY [galaxy] / *MAYBE EVEN TIME* [वक़्त]

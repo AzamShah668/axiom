@@ -104,6 +104,7 @@
  },
  "ban": [
   "esahubble_heic1711a#0",
+  "esahubble_heic1803c#0",
   "esahubble_heic1803c#1",
   "esahubble_heic1817b#0",
   "esahubble_heic1819a#0",
@@ -120,6 +121,7 @@
   "esawebb_potm2509a#0",
   "esawebb_potm2511a#0",
   "esawebb_weic2219b#1",
+  "esawebb_weic2324b#0",
   "esawebb_weic2517c#0",
   "esawebb_weic2612c#0",
   "eso_adaptiveopticsandmask#0",
@@ -455,37 +457,6 @@
     }
    ],
    "sfx": [],
-   "n": [
-    {
-     "at": "तेरह point आठ",
-     "num": {
-      "template": "hero",
-      "value": "13.8",
-      "from": "0",
-      "unit": "billion years ago",
-      "kicker": "everything began",
-      "land": "आठ अरब"
-     }
-    },
-    {
-     "at": "एक second से भी कम में",
-     "num": {
-      "template": "hero",
-      "value": "10²⁶",
-      "unit": "times bigger",
-      "kicker": "in less than a second",
-      "land": "छब्बीस"
-     }
-    },
-    {
-     "at": "Arno Penzias",
-     "num": {
-      "template": "name",
-      "value": "ARNO PENZIAS & ROBERT WILSON",
-      "sub": "radio astronomers · Bell Labs · 1964"
-     }
-    }
-   ],
    "k": [
     {
      "at": "हर तारा",
@@ -539,6 +510,26 @@
       }
      ],
      "kicker": "the oldest light in the universe"
+    }
+   ],
+   "n": [
+    {
+     "at": "एक second से भी कम में",
+     "num": {
+      "template": "hero",
+      "value": "10²⁶",
+      "unit": "times bigger",
+      "kicker": "in less than a second",
+      "land": "छब्बीस"
+     }
+    },
+    {
+     "at": "Arno Penzias",
+     "num": {
+      "template": "name",
+      "value": "ARNO PENZIAS & ROBERT WILSON",
+      "sub": "radio astronomers · Bell Labs · 1964"
+     }
     }
    ],
    "m": [
