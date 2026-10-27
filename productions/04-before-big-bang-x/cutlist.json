@@ -1582,7 +1582,7 @@
    "beat": 2,
    "kind": "gfx",
    "t0": 249.0515,
-   "t1": 260.365,
+   "t1": 253.743,
    "gfx": "stretch",
    "q": [
     "dark star field slowly drifting",
@@ -1590,7 +1590,7 @@
    ],
    "trans": "dip",
    "f0": 7472,
-   "f1": 7811,
+   "f1": 7612,
    "shot": "esahubble_heic2007c#0",
    "clip": "esahubble_heic2007c",
    "ss": 0.25,
@@ -1602,6 +1602,33 @@
   {
    "sec": "ch4",
    "beat": 3,
+   "kind": "gfx",
+   "t0": 253.743,
+   "t1": 260.365,
+   "gfx": "cmb_zoom",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 7612,
+   "f1": 7811,
+   "shot": "svs_30967#0",
+   "clip": "svs_30967",
+   "ss": 9.6,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3575,
+   "ref": "ch4/4",
+   "title": "30 Doradus: A Massive Star-Forming Region"
+  },
+  {
+   "sec": "ch4",
+   "beat": 4,
    "kind": "clip",
    "t0": 260.365,
    "t1": 263.223,
@@ -1621,12 +1648,12 @@
    "ss": 4.19,
    "crop": null,
    "score": 0.3784,
-   "ref": "ch4/4",
+   "ref": "ch4/5",
    "title": "Waking up at dusk"
   },
   {
    "sec": "ch4",
-   "beat": 3,
+   "beat": 4,
    "kind": "clip",
    "t0": 263.223,
    "t1": 266.23400000000004,
@@ -1646,12 +1673,12 @@
    "ss": 1.53,
    "crop": null,
    "score": 0.3281,
-   "ref": "ch4/5",
+   "ref": "ch4/6",
    "title": "Colour clouds swirl over ALMA"
   },
   {
    "sec": "ch4",
-   "beat": 4,
+   "beat": 5,
    "kind": "gfx",
    "t0": 266.23400000000004,
    "t1": 277.721,
@@ -1668,12 +1695,12 @@
    "ss": 9.25,
    "crop": null,
    "score": 0.4068,
-   "ref": "ch4/6",
+   "ref": "ch4/7",
    "title": "Zoom on galaxies"
   },
   {
    "sec": "ch4",
-   "beat": 5,
+   "beat": 6,
    "kind": "gfx",
    "t0": 277.721,
    "t1": 285.17600000000004,
@@ -1690,7 +1717,7 @@
    "ss": 7.28,
    "crop": null,
    "score": 0.3705,
-   "ref": "ch4/7",
+   "ref": "ch4/8",
    "title": "Zooming in on the dark and dusty Coalsack Nebula"
   },
   {
@@ -3502,13 +3529,13 @@
    "trans": "cut",
    "f0": 17231,
    "f1": 17584,
-   "shot": "eso_eso2507c#0",
-   "clip": "eso_eso2507c",
-   "ss": 1.61,
+   "shot": "svs_12587#0",
+   "clip": "svs_12587",
+   "ss": 0.75,
    "crop": null,
-   "score": 0.3476,
+   "score": 0.3544,
    "ref": "ch10/4",
-   "title": "Zooming in on JADES-GS-z14-0"
+   "title": "Gigantic Wave Discovered in Perseus Galaxy Cluster"
   },
   {
    "sec": "ch10",
@@ -6953,7 +6980,8 @@
   {
    "t": 0.0,
    "track": "Interloper.mp3",
-   "gain": 0.0
+   "gain": 0.0,
+   "start": 2.0
   },
   {
    "t": 3.6,
