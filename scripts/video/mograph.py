@@ -317,7 +317,9 @@ def keyline(fr, spec, t):
 def quote(fr, spec, t):
     """A real recording's words while it plays: the subtitle in quotes, low centre, and who said it in gold."""
     t0, t1 = spec["t0"], spec["t1"]
-    op = clamp01((t - t0) / 0.3) * clamp01((t1 - t) / 0.3)
+    if not t0 <= t < t1:
+        return
+    op = (clamp01((t - t0) / 0.3) if spec.get("fin", True) else 1.0) * (clamp01((t1 - t) / 0.3) if spec.get("fout", True) else 1.0)
     if op <= 0:
         return
     size, f = 50, _font("Montserrat", 50, "SemiBold")

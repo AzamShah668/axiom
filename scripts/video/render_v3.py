@@ -342,8 +342,10 @@ def plan(edit, tl, voice_wav=None):
         for bt in (x for x in tl.get("bites", []) if x["sec"] == sid):  # what the recording says, while it plays
             b0 = T.v(bt["t"])
             by = ", ".join(str(x) for x in (bt.get("who"), bt.get("when")) if x)
-            if bt.get("hi") or bt.get("said"):
-                ovl.append({"kind": "quote", "t0": b0, "t1": b0 + bt["d"], "text": bt.get("hi") or bt["said"], "by": by})
+            subs = bt.get("subs") or ([[0.0, bt["d"], bt.get("hi") or bt["said"]]] if bt.get("hi") or bt.get("said") else [])
+            for k, (s0, s1, txt) in enumerate(subs):  # line by line; the lines in between don't fade
+                ovl.append({"kind": "quote", "t0": b0 + s0, "t1": b0 + s1, "text": txt, "by": by,
+                            "fin": k == 0, "fout": k == len(subs) - 1})
             if bt.get("said"):
                 caps.append({"sec": sid, "t": b0, "end": b0 + bt["d"], "big": False,
                              "text": f'{bt["who"]}: "{bt["said"]}"' if bt.get("who") else bt["said"]})

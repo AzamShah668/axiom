@@ -88,6 +88,9 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   ("…John Mather ने कहा था,") and their own voice plays: `[bite:<name>]` in narration.hi.md + `bites.json`
   (see `scripts/elevenlabs/render_narration.py`). The recording's own video plays in sync when there is one; a
   Hinglish subtitle and who/when are shown, and the English words go into the CC track.
+  **Let them speak 2-3 sentences (about 8-20 s)** about the topic (owner, 2026-10-27: one sentence and gone
+  "looked odd"), with the subtitle line by line (`"subs"`). Pick a stretch where the person is on camera, says
+  something still true today, and nobody else talks over them.
 - **Licences for archive material:** only public domain (NASA, other US government) or CC BY / CC BY-SA / CC0,
   each clip and recording credited by name in the description. Never a TV channel, news agency (BBC, AP,
   Reuters, British Pathé), film studio or another YouTuber, and never "fair use": a monetised upload gets Content ID

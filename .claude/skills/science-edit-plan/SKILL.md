@@ -48,8 +48,8 @@ From video 05 (owner, 2026-10-27; `productions/README.md`):
   it), and an `L` card that says what and when (`L ख़ास satellite @ COBE | NASA satellite · launched 18 November
   1989 · archive footage`). Give launches and interviews `{hold}`; keep a speaker's line one scene so the name
   card lands on their face.
-- **Real recordings:** `V #<name> @ bite:<name>` right after the narration marker; its clip `bite_<name>` is
-  pinned automatically. The subtitle and the CC line come from bites.json, no `C` line needed. Without a `V`
+- **Real recordings** (2-3 sentences, 8-20 s): `V #<name> @ bite:<name>` right after the narration marker; its
+  clip `bite_<name>` is pinned automatically and opens on a hard cut. The subtitle and the CC line come from bites.json, no `C` line needed. Without a `V`
   line the recording plays over whatever is on screen (a photo of the speaker works for audio-only).
 
 ## Writing it, section by section

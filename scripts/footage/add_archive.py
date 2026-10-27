@@ -32,6 +32,13 @@ def add(name, src, ss, t, entry):
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(ss), "-t", str(t), "-i", src, "-an", "-vf", VF,
                     "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", "-g", "30", out],
                    check=True)
+    for f in ("shots.json", "text_gate.json"):  # a re-cut clip gets new shots and a new text check
+        fp = os.path.join(LIB, f)
+        if os.path.exists(fp):
+            d = json.load(open(fp))
+            d = [x for x in d if x["clip"] != name] if isinstance(d, list) else {k: v for k, v in d.items()
+                                                                               if not k.startswith(name + "#")}
+            json.dump(d, open(fp, "w"), indent=1 if f == "shots.json" else None)
     spath = os.path.join(LIB, "sources.json")
     sources = json.load(open(spath))
     sources[name] = {"key": entry.pop("key", name.replace("_", ":", 1)), "url": src if "://" in src else entry.get("url", ""),

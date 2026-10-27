@@ -62,7 +62,11 @@ instruments, labs and control rooms, the discovery as it was filmed, interviews 
   narration and put the marker where their voice plays: `…John Mather ने कहा था, [bite:mather]` (the marker
   goes in `tts/narration.hi.md` and `script.txt`). Define it in `productions/NN/bites.json`: file, ss, d, who,
   when, the English words ("said"), a Hinglish subtitle ("hi"), credit, licence, url, "video": true when it has
-  picture. Transcribe the recording first (faster-whisper, `language="en"`) and cut on word boundaries.
+  picture. Transcribe the recording first (faster-whisper, `language="en"`; NASA SVS interviews ship an .srt)
+  and cut on word boundaries. **2-3 sentences, about 8-20 s** (one sentence "looked odd": owner, 2026-10-27),
+  the person on camera, nobody talking over them, and nothing that is outdated today (Mather in 1989 called the
+  CMB "the dominant form of energy in the whole universe": not true since dark energy). Subtitle it line by
+  line: `"subs": [[0.0, 2.95, "Phir sabse bada sawaal tha: kya isme dhabbe hain?"], ...]`.
 - No "..." suspense pauses and no `M` moments: the voice never waits (owner, 2026-10-27).
 
 ## 3. Language that flows when Neel reads it

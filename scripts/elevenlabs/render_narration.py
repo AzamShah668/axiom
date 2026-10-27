@@ -15,7 +15,8 @@ character timings: a Short with its own script never waits (owner's rule). The t
 Real recordings (owner, 2026-10-27: "Einstein said it like this" - and then Einstein says it): a marker
 [bite:<name>] in the narration text is not spoken; the voice stops there, the recording plays, the voice goes on.
 productions/NN/bites.json defines each one: {"<name>": {"file": <audio/video path from the repo root>, "ss": s,
-"d": s, "who": "John Mather", "when": "1989", "said": "<English words>", "hi": "<Hinglish subtitle>",
+"d": s, "who": "John Mather", "when": "1989", "said": "<English words>", "hi": "<Hinglish subtitle>" or "subs":
+[[from_s, to_s, "<Hinglish line>"], ...] (one line per sentence, seconds from the start of the recording),
 "credit": "...", "licence": "public domain (NASA)", "url": "...", "video": true, "gain": 0}}. The recording is levelled
 to the voice before it (+ gain dB) and mixed in after the voice finish; timeline.json "bites" lists where each one plays, and a pseudo-word
 "#<name>" in the section's characters marks its start (edit.spec trigger "#<name>", e.g. V #mather @ bite:mather).
@@ -245,7 +246,7 @@ def main():
         if s["bites"] and al:
             al, placed = insert_bites(wav, al, s["bites"], bspec)
             for name, tb in placed:
-                bites.append({**{k: v for k, v in bspec[name].items() if k in ("who", "when", "said", "hi", "video")},
+                bites.append({**{k: v for k, v in bspec[name].items() if k in ("who", "when", "said", "hi", "subs", "video")},
                               "name": name, "sec": s["id"], "t": round(t + tb, 3), "d": float(bspec[name]["d"])})
                 print(f"  {s['id']}: [bite:{name}] at {t + tb:.2f} s ({bspec[name]['d']} s)")
         dur = duration(wav)
