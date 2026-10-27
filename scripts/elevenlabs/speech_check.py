@@ -5,7 +5,9 @@
 For each section mp3 not checked yet (voice_dir/speech_check.json remembers the checked ones):
 - every name and English term in the text must be heard in an English transcript (faster-whisper medium)
 - the Hindi transcript must not hold more नहीं than the text (Neel's नए sounded like नहीं and flipped a line)
-Prints FLAG lines (exit 1) with the section and term: fix the spelling (tts-lexicon.json), re-record that section."""
+Prints FLAG lines (exit 1) with the section and term. Listen to each: the English transcript is a translation and
+can drop a place name ("America के New Jersey में" -> "In New Jersey"). A real misread: fix the spelling
+(tts-lexicon.json), re-record that section."""
 import difflib, json, os, re, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(__file__))

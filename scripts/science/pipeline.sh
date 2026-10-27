@@ -82,7 +82,8 @@ stage() {
       # shellcheck disable=SC2086
       "$PY" "$ROOT/scripts/elevenlabs/render_narration.py" "$P/tts/narration.hi.md" "$WORK/voice" \
         ${NARRATION_FLAGS:---open-gap 6.4 --gap 0.8 --max-pause 0.4}
-      "$PY" "$ROOT/scripts/elevenlabs/speech_check.py" "$P/tts/narration.hi.md" "$WORK/voice" ;;
+      "$PY" "$ROOT/scripts/elevenlabs/speech_check.py" "$P/tts/narration.hi.md" "$WORK/voice" \
+        || echo "speech check: listen to each FLAG above (the English transcript can drop a place name)" ;;
     probe)  # new names and English terms read alone first: a few characters instead of a re-recorded section
       "$PY" "$ROOT/scripts/elevenlabs/probe_words.py" "$P/tts/narration.hi.md" ${PROBE_FLAGS:-} ;;
     edit)
