@@ -1,3 +1,4 @@
+# Production 04-x (experiment, owner 2026-10-27): v3 + music-first intro, channel intro, photos, more own graphics.
 # Production 04 edit plan, v3 style (docs/style-guide.md; syntax: scripts/video/make_edit.py).
 # Chapter cards carry an English title and no number (science-script-v2). Narration at 1.0x (owner, 2026-10-26).
 # Build: scripts/science/pipeline.sh productions/04-before-big-bang edit
@@ -8,14 +9,16 @@ C - | 1964
 V America के New Jersey @ a radio telescope dish turning against the sky | radio dishes moving in unison
 C America के New Jersey | In New Jersey, America, two scientists were cleaning pigeon droppings out of a giant radio antenna
 L Arno Penzias @ ARNO PENZIAS & ROBERT WILSON | radio astronomers · Bell Labs · 1964
+G Arno Penzias @ photo:Arno_Penzias
+G Robert Wilson @ photo:Robert_Wilson
 C Arno Penzias | Arno Penzias and Robert Wilson
-V उनके antenna में @ a radio telescope scanning the night sky timelapse | radio dishes under a starry sky
+G उनके antenna में @ photo:Holmdel_Horn_Antenna:in
 K उनके antenna में @ A STRANGE HISS [सरसराहट] / *THAT WOULD NOT GO AWAY* [जाती ही नहीं]
 C उनके antenna में | Their antenna picked up a strange hiss that would not go away
 S उनके antenna में | hiss | d=5.0 | gain=-3
 V दिन हो या रात @ day turning to night over an observatory timelapse | the sky rotating over radio telescopes
 C दिन हो या रात | Day or night, wherever the antenna pointed, the sound stayed the same
-V उन्हें लगा @ close-up of a telescope structure | an observatory dome closing at dawn
+G उन्हें लगा @ photo:Pigeons:in
 C उन्हें लगा | They thought the pigeons and their nests were to blame
 C कबूतर हटाए गए | The pigeons were removed. The antenna was scrubbed clean
 C सरसराहट फिर भी | The hiss was still there
@@ -45,7 +48,7 @@ C ब्रह्मांड शुरू होने | What was there before 
 == ch1
 G - @ cmb_map
 C - | The universe has a birthday, and scientists know it precisely
-V दो हज़ार नौ में @ the Planck satellite in space | a satellite launch on a rocket
+G दो हज़ार नौ में @ photo:Planck_spacecraft:in
 L Planck @ PLANCK | ESA space telescope · 2009-2013
 C दो हज़ार नौ में | In 2009, the European Space Agency launched a satellite: Planck
 G चार साल तक @ cmb_scan
@@ -65,23 +68,25 @@ K लेकिन ब्रह्मांड की कोई @ NOT A TELESCOPE
 C लेकिन ब्रह्मांड की कोई | But the first to say the universe had a beginning was not a telescope. It was a priest
 
 == ch2
-V - @ an old observatory under the stars | a classic telescope dome at night {hold}
+G - @ photo:Georges_Lemaitre
 L Georges Lemaître @ GEORGES LEMAÎTRE | Catholic priest & physicist · Belgium · 1894-1966
 C - | Belgium's Father Georges Lemaître was a Catholic priest, and also a physicist
 V उन्नीस सौ सत्ताईस में @ galaxies moving apart as the universe expands | expanding universe animation
 C उन्नीस सौ सत्ताईस में | In 1927, he used Einstein's equations to show that the universe is not standing still
 C वह फैल रहा है | It is expanding
 K वह फैल रहा है @ THE UNIVERSE / *IS EXPANDING*
-V उसी साल Brussels में @ a spiral galaxy rotating | a slow zoom into a spiral galaxy
+G उसी साल Brussels में @ photo:Solvay_1927:right
+G आपके calculations @ photo:Albert_Einstein:in:r
 C उसी साल Brussels में | That same year in Brussels, Einstein told Lemaître...
 K आपके calculations @ "YOUR CALCULATIONS ARE CORRECT [सही हैं] / BUT YOUR PHYSICS [लेकिन] / *IS ABOMINABLE"* [बेकार] | kicker=Einstein · 1927
 C आपके calculations | "Your calculations are correct, but your physics is abominable"
-V दो साल बाद @ the Hubble Space Telescope in orbit | a large telescope pointing at the sky
+G दो साल बाद @ photo:Mount_Wilson:in
+G Edwin Hubble ने @ photo:Edwin_Hubble
 L Edwin Hubble @ EDWIN HUBBLE | astronomer · USA · 1929
 C दो साल बाद | Two years later, in 1929, America's Edwin Hubble saw distant galaxies racing away from us
 G कि दूर की galaxies @ flyapart
 C और जो जितनी | And the farther they are, the faster they go
-V उन्नीस सौ इकतीस में @ rewinding the expansion of the universe | galaxies converging to a single point
+G उन्नीस सौ इकतीस में @ converge
 C उन्नीस सौ इकतीस में | In 1931, Lemaître took the next step
 C अगर सब कुछ आज | If everything is expanding today, then once, everything must have been together in one place
 V उन्होंने उसे नाम @ a bright point of light glowing in darkness | a glowing sphere of light in space {hold}
@@ -95,6 +100,7 @@ C और वह नाम दिया | ...and the name came from its biggest c
 V - @ a starry night sky over a dark landscape timelapse | the Milky Way over mountains {hold}
 C - | 28 MARCH 1949 | big
 L Fred Hoyle @ FRED HOYLE | British astronomer · 1915-2001
+G BBC radio पर @ photo:Fred_Hoyle
 C BBC radio पर | On BBC radio, British astronomer Fred Hoyle was speaking
 V Hoyle मानते थे @ a calm spiral galaxy rotating | a galaxy slowly turning
 C Hoyle मानते थे | Hoyle believed the universe had no beginning and no end...
@@ -114,19 +120,17 @@ C और Hoyle को ग़लत | And Hoyle was proved wrong by the same hiss
 S उसी सरसराहट ने | hiss | d=2.4 | gain=-7
 
 == ch4
-V - @ the hot dense early universe glowing | a bright fog of glowing plasma {hold}
+G - @ recombination
 C - | After the Big Bang, the universe was so hot and dense that light could not move a single step
-V लगभग तीन लाख @ light breaking free in the early universe | the fog of the early universe clearing
-N लगभग तीन लाख @ hero | value=380,000 | from=0 | unit=years after the Big Bang | kicker=light breaks free | land=अस्सी हज़ार | over
 C लगभग तीन लाख | About 380,000 years later, it cooled enough for light to break free for the first time
 V वही रोशनी @ light travelling across the universe | flight through space past galaxies
 C वही रोशनी | That same light has been travelling for 13.8 billion years
-V सफ़र में वह @ light stretching as space expands | light travelling across the expanding universe
+G सफ़र में वह @ stretch
 C सफ़र में वह | On the way it was stretched so much that it is no longer visible light
 C अब वह microwaves | Now it is microwaves...
 N अब वह microwaves @ thermo | value=-270 | from=0 | unit=°C | kicker=the oldest light today | land=सत्तर | over
 C और उसका तापमान | ...at just minus 270 degrees Celsius
-V उन्नीस सौ अठहत्तर में @ an observatory at dusk timelapse | telescope domes under the evening sky
+G उन्नीस सौ अठहत्तर में @ photo:Holmdel_Horn_Antenna:out
 C उन्नीस सौ अठहत्तर में | In 1978, Penzias and Wilson won the Nobel Prize for this discovery
 G और पुराने TV की @ tv_static
 C और पुराने TV की | And about 1 percent of the black-and-white static on old TVs, with no channel tuned...
@@ -145,8 +149,9 @@ C यही थी पहेली | That was the puzzle
 V सात December @ stars over a dark landscape at night | a starry night sky timelapse
 C सात December | 7 DECEMBER 1979 | big
 L Alan Guth @ ALAN GUTH | physicist · USA · 1979
+G Alan Guth @ photo:Alan_Guth
 C Alan Guth | On that night, a young American physicist, Alan Guth, wrote in his notebook...
-K Spectacular realization @ *"SPECTACULAR REALIZATION"* | kicker=Guth's notebook · 1979
+G Spectacular realization @ notebook
 C Spectacular realization | "Spectacular realization"
 V उनका idea था @ an explosion of light filling space | a bright flash expanding in space
 C उनका idea था | His idea: in a tiny fraction of the first second, space itself expanded faster than light
@@ -167,11 +172,9 @@ C लेकिन जैसे ही | But as soon as scientists turn the clock
 == ch6
 V - @ a galaxy rotating | a black hole bending light {hold}
 C - | Physics has two great theories
-V Einstein की gravity @ a black hole bending light around it | gravity warping space around a galaxy cluster
+G Einstein की gravity @ two_theories
 C Einstein की gravity | Einstein's gravity explains big things, like galaxies and black holes
-V और quantum physics @ a dense star cluster sparkling | countless stars in a globular cluster
 C और quantum physics | Quantum physics explains the smallest things, atoms and particles even smaller
-K और quantum physics @ GRAVITY / *QUANTUM* | kicker=the two great theories
 C आम तौर पर | Usually each works fine in its own place
 V लेकिन Big Bang के @ an intensely bright point of energy | a blinding flash at the centre of space
 C लेकिन Big Bang के | But in the first moment after the Big Bang, everything was both tiny and enormously heavy
@@ -194,6 +197,7 @@ C लेकिन scientists ने उस | But scientists have not stopped try
 V - @ a telescope in Antarctica under the sky | a telescope on snow at the South Pole {hold}
 C - | 17 MARCH 2014 | big
 L बाइसेप two @ BICEP2 | telescope · South Pole, Antarctica
+G कि उन्हें inflation के @ photo:BICEP2_detectors:in
 C बाइसेप two | On 17 March 2014, the BICEP2 team in Antarctica announced it had found direct traces of inflation
 G दुनिया भर में @ cmb_polar
 C दुनिया भर में | Scientists around the world celebrated
@@ -219,17 +223,17 @@ C - | Maybe there was nothing before the Big Bang...
 M वक़्त भी नहीं | breath=1.2 | riser=1.4 | impact=hit | trans=dip | drop
 C वक़्त भी नहीं | ...not even time
 K वक़्त भी नहीं @ NOTHING BEFORE / *NOT EVEN TIME*
-V उन्नीस सौ तिरासी में @ a spiral galaxy rotating slowly | a galaxy turning in deep space
+G उन्नीस सौ तिरासी में @ photo:Stephen_Hawking:in
+G James Hartle ने @ photo:James_Hartle
 L Stephen Hawking @ STEPHEN HAWKING & JAMES HARTLE | physicists · 1983
 C उन्नीस सौ तिरासी में | In 1983, Stephen Hawking and James Hartle proposed an idea
 G शुरुआत के पास @ spacetime
 C शुरुआत के पास | Near the beginning, time does not run the way we know it
 C वक़्त भी, लंबाई | Time becomes just like length and width
-V मतलब ब्रह्मांड की @ a rotating sphere of light | a glowing globe turning in space
+G मतलब ब्रह्मांड की @ no_boundary
 C मतलब ब्रह्मांड की | So the beginning of the universe has no edge at all
-K मतलब ब्रह्मांड की @ THE BEGINNING / *HAS NO EDGE* [किनारा]
 C वह एक गेंद | Like a ball, it simply rounds off and closes
-V दो हज़ार अठारह में @ the Earth turning in space | Earth seen from orbit
+G दो हज़ार अठारह में @ photo:Stephen_Hawking_2
 C दो हज़ार अठारह में | In 2018, a few weeks before he died, Hawking explained it with an example
 G Big Bang से पहले क्या @ south_pole
 C Big Bang से पहले क्या | Asking what came before the Big Bang is like asking what lies south of the South Pole
@@ -248,11 +252,10 @@ C वह सिकुड़ता गया | It shrank and shrank, then bounced
 M Big Bounce | breath=1.0 | riser=1.4 | impact=impact | trans=flare
 V Big Bounce @ an explosion of light outward from a point | a bright burst expanding in space {hold}
 C Big Bounce | BIG BOUNCE | big
-V Nobel Prize जीतने @ a galaxy rotating | spiral galaxy close-up
+G Nobel Prize जीतने @ photo:Roger_Penrose
 L Roger Penrose @ ROGER PENROSE | Nobel Prize in Physics 2020 · Britain
 C Nobel Prize जीतने | Nobel Prize-winning British scientist Roger Penrose goes even further
-V उनके हिसाब से @ a cycle of galaxies forming and fading | a slow spiral of stars
-K उनके हिसाब से @ ONE UNIVERSE AFTER ANOTHER [एक के बाद एक] / *ENDLESS CYCLES* [चक्करों]
+G उनके हिसाब से @ cycles
 C उनके हिसाब से | In his view, the universe runs in endless cycles, one after another
 G दो हज़ार अठारह में @ cmb_rings
 C दो हज़ार अठारह में | In 2018, Penrose's team claimed traces of the previous universe in the echo of the Big Bang
@@ -288,7 +291,7 @@ C Scientists ने उसी | Scientists have searched that ancient light for 
 C अभी तक, कोई | So far, no firm sign has been found
 
 == ending
-V - @ a satellite in orbit around Earth | a spacecraft in space {hold}
+G - @ photo:LiteBIRD:in
 C - | The wait for an answer may not be long
 L LiteBird @ LITEBIRD | JAXA satellite · planned for about 2032
 C Japan का LiteBird | Japan's LiteBIRD satellite is being prepared to launch around 2032
@@ -303,7 +306,7 @@ G वक़्त की सच @ three_answers
 C वक़्त की सच | Did time really have a beginning, is the universe an endless cycle...
 C या हमारा ब्रह्मांड | ...or is our universe just one of countless bubbles?
 C Science अभी तक | Science has not decided yet
-V उन्नीस सौ चौंसठ में @ a radio telescope dish at night | radio antennas under the stars
+G उन्नीस सौ चौंसठ में @ photo:Holmdel_Horn_Antenna:left
 C उन्नीस सौ चौंसठ में | In 1964, Penzias and Wilson thought that hiss was a fault...
 S जिस सरसराहट को | hiss | d=2.6 | gain=-6
 C वही आज इस | ...today it is the biggest clue to the biggest puzzle of all

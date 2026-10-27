@@ -1187,10 +1187,11 @@ def gfx(name, t, D, sh):
                 y0, x0 = (b.shape[0] - H) // 2, (b.shape[1] - W) // 2
                 G["imgs"][bgk] = (cv2.GaussianBlur(b[y0:y0 + H, x0:x0 + W], (0, 0), 28) * 0.3).astype(np.uint8)
             f = G["imgs"][bgk].copy()
-            ph = H * 0.8 * (1.0 + 0.06 * ease(p))
+            ph = min(H * 0.8, ih * 1.8) * (1.0 + 0.06 * ease(p))  # a small original is shown smaller, not blown up
             fg = cv2.resize(im, (int(ph * iw / ih), int(ph)), interpolation=cv2.INTER_AREA)
             fg = cv2.copyMakeBorder(fg, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=(235, 240, 245))
-            cx, cy = W * 0.56 + 30 * (p - 0.5), H * 0.5
+            side = part[3] if len(part) > 3 else ""  # photo:<stem>:<move>:r puts a portrait right of a headline
+            cx, cy = W * {"r": 0.7, "l": 0.32}.get(side, 0.56) + 30 * (p - 0.5), H * 0.5
             x0, y0 = int(cx - fg.shape[1] / 2), int(cy - fg.shape[0] / 2)
             sh = np.zeros((H, W), np.float32)
             cv2.rectangle(sh, (x0 + 14, y0 + 18), (x0 + fg.shape[1] + 14, y0 + fg.shape[0] + 18), 1.0, -1)

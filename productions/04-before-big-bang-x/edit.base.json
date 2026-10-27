@@ -273,5 +273,9 @@
   "gfx": "rewind",
   "track": "Interloper.mp3",
   "db": 12.0
+ },
+ "channel": {
+  "dur": 3.2,
+  "gfx": "channel"
  }
 }

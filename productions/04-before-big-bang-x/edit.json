@@ -1,0 +1,2012 @@
+{
+ "style": "v3",
+ "lead_in": 4.1,
+ "title": {
+  "kicker": "what was there",
+  "main": "Before the Big Bang?"
+ },
+ "cards": {
+  "ch1": [
+   "",
+   "THE UNIVERSE HAS A *BIRTHDAY*"
+  ],
+  "ch2": [
+   "",
+   "A *PRIEST* SAID IT FIRST"
+  ],
+  "ch3": [
+   "",
+   "A NAME FROM ITS BIGGEST *CRITIC*"
+  ],
+  "ch4": [
+   "",
+   "THE OLDEST LIGHT IS *ALL AROUND US*"
+  ],
+  "ch5": [
+   "",
+   "IT GREW *10²⁶* TIMES IN A FLASH"
+  ],
+  "ch6": [
+   "",
+   "WHERE *PHYSICS* BREAKS"
+  ],
+  "ch7": [
+   "",
+   "THE HUNT FOR *CLUES*"
+  ],
+  "ch8": [
+   "",
+   "MAYBE THERE WAS NO *\"BEFORE\"*"
+  ],
+  "ch9": [
+   "",
+   "MAYBE THE UNIVERSE *BOUNCED*"
+  ],
+  "ch10": [
+   "",
+   "ONE BUBBLE AMONG *MANY*"
+  ]
+ },
+ "count_total": 10,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "ch1",
+   "track": "Long_Note_Two.mp3"
+  },
+  {
+   "from": "ch3",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "ch5",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "ch7",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "ch8",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "ch10",
+   "track": "Ossuary_5_-_Rest.mp3"
+  },
+  {
+   "from": "ending",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "faint distant galaxies in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {
+  "opening/0": "eso_uhd_alma3_2014#0",
+  "opening/1": "eso_alma-array-uhd1#0",
+  "opening/4": "eso_almatimelapse12k#0"
+ },
+ "ban": [
+  "esahubble_heic1711a#0",
+  "esahubble_heic1803c#1",
+  "esahubble_heic1817b#0",
+  "esahubble_heic1819a#0",
+  "esahubble_heic2013b#0",
+  "esahubble_heic2016a#0",
+  "esahubble_heic2102a#0",
+  "esahubble_heic2108d#0",
+  "esahubble_heic2208b#0",
+  "esahubble_heic2603b#0",
+  "esahubble_potw2423a",
+  "esahubble_potw2542a#0",
+  "esahubble_v-r-aquarii_2#0",
+  "esawebb_potm2209a#0",
+  "esawebb_potm2509a#0",
+  "esawebb_potm2511a#0",
+  "esawebb_weic2219b#1",
+  "esawebb_weic2517c#0",
+  "esawebb_weic2612c#0",
+  "eso_adaptiveopticsandmask#0",
+  "eso_assembly-1-mtr-01-cc-am_iris2#0",
+  "eso_eso1134b#0",
+  "eso_eso1151e#0",
+  "eso_eso1422b#0",
+  "eso_eso1509a#0",
+  "eso_eso1601a#0",
+  "eso_eso1606b",
+  "eso_eso1614a",
+  "eso_eso1637a#0",
+  "eso_eso1641a#0",
+  "eso_eso1701c#0",
+  "eso_eso1708c#0",
+  "eso_eso1709b#0",
+  "eso_eso1709c#0",
+  "eso_eso1741b#0",
+  "eso_eso1814b#0",
+  "eso_eso1817b",
+  "eso_eso1821b#0",
+  "eso_eso1824b#0",
+  "eso_eso1825c#0",
+  "eso_eso1825f#0",
+  "eso_eso1835a#2",
+  "eso_eso1914c#0",
+  "eso_eso1919c#0",
+  "eso_eso1920d#0",
+  "eso_eso2002b#0",
+  "eso_eso2011a#2",
+  "eso_eso2014a#3",
+  "eso_eso2110c#0",
+  "eso_eso2110d#0",
+  "eso_eso2110f#0",
+  "eso_eso2110g#0",
+  "eso_eso2111c#0",
+  "eso_eso2112b#0",
+  "eso_eso2112c#0",
+  "eso_eso2112d#0",
+  "eso_eso2117a",
+  "eso_eso2117b#0",
+  "eso_eso2205b#0",
+  "eso_eso2305a#5",
+  "eso_eso2314c#0",
+  "eso_eso2502d#0",
+  "eso_eso2513a#0",
+  "eso_eso2519c#0",
+  "eso_eso2606a#1",
+  "eso_eso2606c#0",
+  "eso_eso2609b#0",
+  "eso_eso2612d#0",
+  "eso_esocast82b#0",
+  "eso_esopia00064sites#0",
+  "eso_lasillatimelapseeulerntt#0",
+  "eso_mars_4k#0",
+  "eso_moon_evolution_p1#0",
+  "eso_potw2443a",
+  "eso_rossiter-mclaughlin#0",
+  "eso_uhd-cm-vlt2014-2#0",
+  "eso_uhd_vlt6_2014#0",
+  "eso_wotu-supernovae-win2",
+  "svs_12019-win1#0",
+  "svs_12019-win2#0",
+  "svs_12605#0",
+  "svs_12605-win2#0",
+  "svs_12605-win3#1",
+  "svs_12854",
+  "svs_12854#0",
+  "svs_12854-win1",
+  "svs_12854-win1#0",
+  "svs_12854-win2",
+  "svs_12854-win3",
+  "svs_12854-win3#0",
+  "svs_12994-win1",
+  "svs_13078#0",
+  "svs_13483#1",
+  "svs_13619#1",
+  "svs_13778#0",
+  "svs_13991#0",
+  "svs_14103#0",
+  "svs_14163#0",
+  "svs_14309#0",
+  "svs_14347#7",
+  "svs_14399",
+  "svs_14399-win1",
+  "svs_14399-win2",
+  "svs_14399-win3",
+  "svs_14399-win3#0",
+  "svs_14402",
+  "svs_14531#0",
+  "svs_14666#0",
+  "svs_14666#3",
+  "svs_14701#0",
+  "svs_14710#0",
+  "svs_14719",
+  "svs_14719#0",
+  "svs_14719-win1",
+  "svs_14719-win2",
+  "svs_14719-win3",
+  "svs_14761#0",
+  "svs_14846#0",
+  "svs_14921#2",
+  "svs_14935#0",
+  "svs_14960#0",
+  "svs_14961#0",
+  "svs_15041#3",
+  "svs_15051-win1",
+  "svs_15095#0",
+  "svs_20310#0",
+  "svs_20315",
+  "svs_20395#0",
+  "svs_20398#0",
+  "svs_20404#0",
+  "svs_30020#0",
+  "svs_31346#0",
+  "svs_31361#0",
+  "svs_31365#0",
+  "svs_31376#0",
+  "svs_4141",
+  "svs_4142",
+  "svs_4143",
+  "svs_4144",
+  "svs_4145",
+  "svs_4557",
+  "svs_4557#0",
+  "svs_4580#0",
+  "svs_4645",
+  "svs_4645-win1",
+  "svs_4645-win2",
+  "svs_4645-win3",
+  "svs_4646",
+  "svs_4646-win1",
+  "svs_4646-win1#0",
+  "svs_4646-win2",
+  "svs_4646-win3",
+  "svs_4649#0",
+  "svs_4807#0",
+  "svs_5157",
+  "svs_5157-win1",
+  "svs_5157-win2",
+  "svs_5157-win3",
+  "svs_5273#0",
+  "svs_5503#2",
+  "svs_5552#0",
+  "svs_5627#0"
+ ],
+ "crops": {},
+ "exclude": {},
+ "intro": {
+  "dur": 3.6,
+  "gfx": "rewind",
+  "track": "Interloper.mp3",
+  "db": 12.0
+ },
+ "channel": {
+  "dur": 3.2,
+  "gfx": "channel"
+ },
+ "sections": {
+  "opening": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a large radio antenna under the sky",
+      "radio telescope dishes at dusk"
+     ]
+    },
+    {
+     "at": "America के New Jersey",
+     "q": [
+      "a radio telescope dish turning against the sky",
+      "radio dishes moving in unison"
+     ]
+    },
+    {
+     "at": "Arno Penzias",
+     "gfx": "photo:Arno_Penzias"
+    },
+    {
+     "at": "Robert Wilson",
+     "gfx": "photo:Robert_Wilson"
+    },
+    {
+     "at": "उनके antenna में",
+     "gfx": "photo:Holmdel_Horn_Antenna:in"
+    },
+    {
+     "at": "दिन हो या रात",
+     "q": [
+      "day turning to night over an observatory timelapse",
+      "the sky rotating over radio telescopes"
+     ]
+    },
+    {
+     "at": "उन्हें लगा",
+     "gfx": "photo:Pigeons:in"
+    },
+    {
+     "at": "वह सरसराहट कोई",
+     "q": [
+      "slow flight through a star field",
+      "stars drifting in deep space"
+     ]
+    },
+    {
+     "at": "Big Bang की गूँज",
+     "gfx": "cmb_sphere_r"
+    },
+    {
+     "at": "इसी गूँज ने",
+     "q": [
+      "zooming out from galaxies to the large-scale universe",
+      "flight through thousands of galaxies"
+     ]
+    },
+    {
+     "at": "आज हम जानते",
+     "q": [
+      "the first galaxies forming in the early universe",
+      "simulation of the early universe"
+     ]
+    },
+    {
+     "at": "और scientists के हिसाब",
+     "q": [
+      "a flash of light expanding in space",
+      "rapid expansion of the early universe"
+     ]
+    },
+    {
+     "at": "इस खोज ने",
+     "q": [
+      "telescope domes at sunset",
+      "an observatory at dusk timelapse"
+     ]
+    },
+    {
+     "at": "लेकिन इंसान के",
+     "q": [
+      "observatory under the Milky Way timelapse",
+      "the Milky Way rising over a dark landscape"
+     ]
+    },
+    {
+     "at": "ब्रह्मांड शुरू होने",
+     "opt": "hold",
+     "q": [
+      "deep black space with a faint glow",
+      "a single point of light in darkness"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "1964"
+    },
+    {
+     "at": "America के New Jersey",
+     "text": "In New Jersey, America, two scientists were cleaning pigeon droppings out of a giant radio antenna"
+    },
+    {
+     "at": "Arno Penzias",
+     "text": "Arno Penzias and Robert Wilson"
+    },
+    {
+     "at": "उनके antenna में",
+     "text": "Their antenna picked up a strange hiss that would not go away"
+    },
+    {
+     "at": "दिन हो या रात",
+     "text": "Day or night, wherever the antenna pointed, the sound stayed the same"
+    },
+    {
+     "at": "उन्हें लगा",
+     "text": "They thought the pigeons and their nests were to blame"
+    },
+    {
+     "at": "कबूतर हटाए गए",
+     "text": "The pigeons were removed. The antenna was scrubbed clean"
+    },
+    {
+     "at": "सरसराहट फिर भी",
+     "text": "The hiss was still there"
+    },
+    {
+     "at": "वह सरसराहट कोई",
+     "text": "The hiss was not a fault. It was the oldest light in the universe..."
+    },
+    {
+     "at": "Big Bang की गूँज",
+     "text": "...the echo of the Big Bang"
+    },
+    {
+     "at": "इसी गूँज ने",
+     "text": "That echo proved the universe had a beginning"
+    },
+    {
+     "at": "आज हम जानते",
+     "text": "Today we know that beginning was 13.8 billion years ago"
+    },
+    {
+     "at": "और scientists के हिसाब",
+     "text": "And according to scientists, in its very first instant, it grew 10²⁶ times bigger"
+    },
+    {
+     "at": "इस खोज ने",
+     "text": "The discovery later won a Nobel Prize"
+    },
+    {
+     "at": "लेकिन इंसान के",
+     "text": "But it also left humanity with its biggest question"
+    },
+    {
+     "at": "ब्रह्मांड शुरू होने",
+     "text": "What was there before the universe began?"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Arno Penzias",
+     "num": {
+      "template": "name",
+      "value": "ARNO PENZIAS & ROBERT WILSON",
+      "sub": "radio astronomers · Bell Labs · 1964"
+     }
+    },
+    {
+     "at": "आज हम जानते",
+     "num": {
+      "template": "hero",
+      "value": "13.8",
+      "from": "0",
+      "unit": "billion years ago",
+      "kicker": "it began",
+      "land": "आठ अरब"
+     }
+    },
+    {
+     "at": "उसके पहले ही",
+     "num": {
+      "template": "hero",
+      "value": "10²⁶",
+      "unit": "times bigger",
+      "kicker": "in its first instant",
+      "land": "छब्बीस"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "उनके antenna में",
+     "lines": [
+      {
+       "text": "A STRANGE HISS",
+       "at": "सरसराहट"
+      },
+      {
+       "text": "*THAT WOULD NOT GO AWAY*",
+       "at": "जाती ही नहीं"
+      }
+     ]
+    },
+    {
+     "at": "Big Bang की गूँज",
+     "lines": [
+      {
+       "text": "*THE ECHO OF THE BIG BANG*",
+       "at": "Big Bang की गूँज"
+      }
+     ],
+     "kicker": "the oldest light in the universe"
+    },
+    {
+     "at": "ब्रह्मांड शुरू होने",
+     "lines": [
+      {
+       "text": "WHAT WAS THERE",
+       "at": "ब्रह्मांड शुरू होने"
+      },
+      {
+       "text": "*BEFORE THE BIG BANG?*",
+       "at": "आख़िर"
+      }
+     ]
+    }
+   ],
+   "s": [
+    {
+     "at": "उनके antenna में",
+     "type": "hiss",
+     "d": "5.0",
+     "gain": "-3"
+    },
+    {
+     "at": "सरसराहट फिर भी",
+     "type": "hiss",
+     "d": "2.6",
+     "gain": "-5"
+    }
+   ],
+   "m": [
+    {
+     "at": "Big Bang की गूँज",
+     "breath": 1.2,
+     "riser": 1.6,
+     "impact": "impact",
+     "trans": "flare"
+    }
+   ]
+  },
+  "ch1": {
+   "v": [
+    {
+     "at": null,
+     "gfx": "cmb_map"
+    },
+    {
+     "at": "दो हज़ार नौ में",
+     "gfx": "photo:Planck_spacecraft:in"
+    },
+    {
+     "at": "चार साल तक",
+     "gfx": "cmb_scan"
+    },
+    {
+     "at": "उस रोशनी में",
+     "gfx": "cmb_zoom"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "q": [
+      "zooming into the deep field of distant galaxies",
+      "the Hubble Ultra Deep Field"
+     ]
+    },
+    {
+     "at": "मतलब जब हमारी",
+     "q": [
+      "the Earth forming from a young solar system",
+      "the young Earth in space"
+     ]
+    },
+    {
+     "at": "लेकिन ब्रह्मांड की कोई",
+     "q": [
+      "a church under the night sky",
+      "stars over an old building timelapse"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "The universe has a birthday, and scientists know it precisely"
+    },
+    {
+     "at": "दो हज़ार नौ में",
+     "text": "In 2009, the European Space Agency launched a satellite: Planck"
+    },
+    {
+     "at": "चार साल तक",
+     "text": "For four years it mapped the whole sky in the same light the New Jersey antenna had caught"
+    },
+    {
+     "at": "उस रोशनी में",
+     "text": "Faint patterns hidden in that light tell the age of the universe"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "text": "In 2018 came Planck's final result: 13.8 billion years"
+    },
+    {
+     "at": "और ग़लती की",
+     "text": "Give or take just 20 million years"
+    },
+    {
+     "at": "मतलब जब हमारी",
+     "text": "When Earth formed, about 4.6 billion years ago..."
+    },
+    {
+     "at": "तब तक ब्रह्मांड",
+     "text": "...the universe was already 9 billion years old"
+    },
+    {
+     "at": "लेकिन ब्रह्मांड की कोई",
+     "text": "But the first to say the universe had a beginning was not a telescope. It was a priest"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Planck",
+     "num": {
+      "template": "name",
+      "value": "PLANCK",
+      "sub": "ESA space telescope · 2009-2013"
+     }
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "num": {
+      "template": "hero",
+      "value": "13.8",
+      "from": "0",
+      "unit": "billion years",
+      "kicker": "planck's final result · 2018",
+      "land": "आठ अरब"
+     }
+    },
+    {
+     "at": "मतलब जब हमारी",
+     "num": {
+      "template": "line",
+      "value": "9",
+      "from": "0",
+      "unit": "billion years old",
+      "left": "Big Bang",
+      "right": "Earth forms",
+      "land": "नौ अरब"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "लेकिन ब्रह्मांड की कोई",
+     "lines": [
+      {
+       "text": "NOT A TELESCOPE",
+       "at": "telescope"
+      },
+      {
+       "text": "*A PRIEST*",
+       "at": "पादरी"
+      }
+     ],
+     "kicker": "the first to say it"
+    }
+   ]
+  },
+  "ch2": {
+   "v": [
+    {
+     "at": null,
+     "gfx": "photo:Georges_Lemaitre"
+    },
+    {
+     "at": "उन्नीस सौ सत्ताईस में",
+     "q": [
+      "galaxies moving apart as the universe expands",
+      "expanding universe animation"
+     ]
+    },
+    {
+     "at": "उसी साल Brussels में",
+     "gfx": "photo:Solvay_1927:right"
+    },
+    {
+     "at": "आपके calculations",
+     "gfx": "photo:Albert_Einstein:in:r"
+    },
+    {
+     "at": "दो साल बाद",
+     "gfx": "photo:Mount_Wilson:in"
+    },
+    {
+     "at": "Edwin Hubble ने",
+     "gfx": "photo:Edwin_Hubble"
+    },
+    {
+     "at": "कि दूर की galaxies",
+     "gfx": "flyapart"
+    },
+    {
+     "at": "उन्नीस सौ इकतीस में",
+     "gfx": "converge"
+    },
+    {
+     "at": "उन्होंने उसे नाम",
+     "opt": "hold",
+     "q": [
+      "a bright point of light glowing in darkness",
+      "a glowing sphere of light in space"
+     ]
+    },
+    {
+     "at": "इस idea को",
+     "q": [
+      "stars drifting in deep space",
+      "slow flight through a nebula"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Belgium's Father Georges Lemaître was a Catholic priest, and also a physicist"
+    },
+    {
+     "at": "उन्नीस सौ सत्ताईस में",
+     "text": "In 1927, he used Einstein's equations to show that the universe is not standing still"
+    },
+    {
+     "at": "वह फैल रहा है",
+     "text": "It is expanding"
+    },
+    {
+     "at": "उसी साल Brussels में",
+     "text": "That same year in Brussels, Einstein told Lemaître..."
+    },
+    {
+     "at": "आपके calculations",
+     "text": "\"Your calculations are correct, but your physics is abominable\""
+    },
+    {
+     "at": "दो साल बाद",
+     "text": "Two years later, in 1929, America's Edwin Hubble saw distant galaxies racing away from us"
+    },
+    {
+     "at": "और जो जितनी",
+     "text": "And the farther they are, the faster they go"
+    },
+    {
+     "at": "उन्नीस सौ इकतीस में",
+     "text": "In 1931, Lemaître took the next step"
+    },
+    {
+     "at": "अगर सब कुछ आज",
+     "text": "If everything is expanding today, then once, everything must have been together in one place"
+    },
+    {
+     "at": "उन्होंने उसे नाम",
+     "text": "He called it the primeval atom: the cosmic egg"
+    },
+    {
+     "at": "इस idea को",
+     "text": "The idea needed a name..."
+    },
+    {
+     "at": "और वह नाम दिया",
+     "text": "...and the name came from its biggest critic"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Georges Lemaître",
+     "num": {
+      "template": "name",
+      "value": "GEORGES LEMAÎTRE",
+      "sub": "Catholic priest & physicist · Belgium · 1894-1966"
+     }
+    },
+    {
+     "at": "Edwin Hubble",
+     "num": {
+      "template": "name",
+      "value": "EDWIN HUBBLE",
+      "sub": "astronomer · USA · 1929"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "वह फैल रहा है",
+     "lines": [
+      {
+       "text": "THE UNIVERSE",
+       "at": "वह फैल रहा है"
+      },
+      {
+       "text": "*IS EXPANDING*",
+       "at": null
+      }
+     ]
+    },
+    {
+     "at": "आपके calculations",
+     "lines": [
+      {
+       "text": "\"YOUR CALCULATIONS ARE CORRECT",
+       "at": "सही हैं"
+      },
+      {
+       "text": "BUT YOUR PHYSICS",
+       "at": "लेकिन"
+      },
+      {
+       "text": "*IS ABOMINABLE\"*",
+       "at": "बेकार"
+      }
+     ],
+     "kicker": "Einstein · 1927"
+    },
+    {
+     "at": "उन्होंने उसे नाम",
+     "lines": [
+      {
+       "text": "*THE PRIMEVAL ATOM*",
+       "at": "उन्होंने उसे नाम"
+      }
+     ],
+     "kicker": "Lemaître · 1931",
+     "sub": "the cosmic egg",
+     "sub_at": "अंडा"
+    }
+   ]
+  },
+  "ch3": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a starry night sky over a dark landscape timelapse",
+      "the Milky Way over mountains"
+     ]
+    },
+    {
+     "at": "BBC radio पर",
+     "gfx": "photo:Fred_Hoyle"
+    },
+    {
+     "at": "Hoyle मानते थे",
+     "q": [
+      "a calm spiral galaxy rotating",
+      "a galaxy slowly turning"
+     ]
+    },
+    {
+     "at": "Lemaître वाली theory",
+     "q": [
+      "a huge explosion of light in space",
+      "a bright flash expanding outward"
+     ]
+    },
+    {
+     "at": "Hoyle ने कभी",
+     "q": [
+      "a supernova explosion",
+      "a bright star exploding"
+     ]
+    },
+    {
+     "at": "लेकिन उनका दिया",
+     "q": [
+      "flight through a field of galaxies",
+      "zooming through the cosmos"
+     ]
+    },
+    {
+     "at": "और Hoyle को ग़लत",
+     "gfx": "cmb_out"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "28 MARCH 1949",
+     "big": true
+    },
+    {
+     "at": "BBC radio पर",
+     "text": "On BBC radio, British astronomer Fred Hoyle was speaking"
+    },
+    {
+     "at": "Hoyle मानते थे",
+     "text": "Hoyle believed the universe had no beginning and no end..."
+    },
+    {
+     "at": "वह हमेशा से",
+     "text": "...that it has always been the same"
+    },
+    {
+     "at": "Lemaître वाली theory",
+     "text": "Explaining Lemaître's theory, he used a word..."
+    },
+    {
+     "at": "Big Bang. एक धमाका",
+     "text": "\"BIG BANG\"",
+     "big": true
+    },
+    {
+     "at": "Hoyle ने कभी",
+     "text": "Hoyle never accepted the theory"
+    },
+    {
+     "at": "लेकिन उनका दिया",
+     "text": "But the name he gave it stuck forever"
+    },
+    {
+     "at": "आज दुनिया का",
+     "text": "Today every child knows the start of the universe by the name its critic gave it"
+    },
+    {
+     "at": "और Hoyle को ग़लत",
+     "text": "And Hoyle was proved wrong by the same hiss that is still all around us"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Fred Hoyle",
+     "num": {
+      "template": "name",
+      "value": "FRED HOYLE",
+      "sub": "British astronomer · 1915-2001"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "Hoyle मानते थे",
+     "lines": [
+      {
+       "text": "NO BEGINNING",
+       "at": "शुरुआत"
+      },
+      {
+       "text": "*NO END*",
+       "at": "अंत"
+      }
+     ],
+     "kicker": "the steady state"
+    }
+   ],
+   "m": [
+    {
+     "at": "Big Bang. एक धमाका",
+     "breath": 0.8,
+     "riser": 1.2,
+     "impact": "impact",
+     "trans": "flash"
+    }
+   ],
+   "s": [
+    {
+     "at": "उसी सरसराहट ने",
+     "type": "hiss",
+     "d": "2.4",
+     "gain": "-7"
+    }
+   ]
+  },
+  "ch4": {
+   "v": [
+    {
+     "at": null,
+     "gfx": "recombination"
+    },
+    {
+     "at": "वही रोशनी",
+     "q": [
+      "light travelling across the universe",
+      "flight through space past galaxies"
+     ]
+    },
+    {
+     "at": "सफ़र में वह",
+     "gfx": "stretch"
+    },
+    {
+     "at": "उन्नीस सौ अठहत्तर में",
+     "gfx": "photo:Holmdel_Horn_Antenna:out"
+    },
+    {
+     "at": "और पुराने TV की",
+     "gfx": "tv_static"
+    },
+    {
+     "at": "लेकिन इस रोशनी",
+     "gfx": "cmb_map"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "After the Big Bang, the universe was so hot and dense that light could not move a single step"
+    },
+    {
+     "at": "लगभग तीन लाख",
+     "text": "About 380,000 years later, it cooled enough for light to break free for the first time"
+    },
+    {
+     "at": "वही रोशनी",
+     "text": "That same light has been travelling for 13.8 billion years"
+    },
+    {
+     "at": "सफ़र में वह",
+     "text": "On the way it was stretched so much that it is no longer visible light"
+    },
+    {
+     "at": "अब वह microwaves",
+     "text": "Now it is microwaves..."
+    },
+    {
+     "at": "और उसका तापमान",
+     "text": "...at just minus 270 degrees Celsius"
+    },
+    {
+     "at": "उन्नीस सौ अठहत्तर में",
+     "text": "In 1978, Penzias and Wilson won the Nobel Prize for this discovery"
+    },
+    {
+     "at": "और पुराने TV की",
+     "text": "And about 1 percent of the black-and-white static on old TVs, with no channel tuned..."
+    },
+    {
+     "at": "यही रोशनी थी",
+     "text": "...was this very light"
+    },
+    {
+     "at": "Big Bang की गूँज, घर",
+     "text": "The echo of the Big Bang, on the TV at home"
+    },
+    {
+     "at": "लेकिन इस रोशनी",
+     "text": "But this light hid a puzzle..."
+    },
+    {
+     "at": "एक ऐसी पहेली",
+     "text": "...one that troubled scientists for years"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "अब वह microwaves",
+     "num": {
+      "template": "thermo",
+      "value": "-270",
+      "from": "0",
+      "unit": "°C",
+      "kicker": "the oldest light today",
+      "land": "सत्तर"
+     }
+    }
+   ]
+  },
+  "ch5": {
+   "v": [
+    {
+     "at": null,
+     "gfx": "cmb_sphere"
+    },
+    {
+     "at": "उसके दूर दूर",
+     "gfx": "horizon"
+    },
+    {
+     "at": "सात December",
+     "q": [
+      "stars over a dark landscape at night",
+      "a starry night sky timelapse"
+     ]
+    },
+    {
+     "at": "Alan Guth",
+     "gfx": "photo:Alan_Guth"
+    },
+    {
+     "at": "Spectacular realization",
+     "gfx": "notebook"
+    },
+    {
+     "at": "उनका idea था",
+     "q": [
+      "an explosion of light filling space",
+      "a bright flash expanding in space"
+     ]
+    },
+    {
+     "at": "एक के आगे छब्बीस",
+     "opt": "hold",
+     "q": [
+      "an explosion of light filling space",
+      "a flash of light expanding"
+     ]
+    },
+    {
+     "at": "जितना ब्रह्मांड हम",
+     "gfx": "inflate"
+    },
+    {
+     "at": "इस फैलाव को",
+     "q": [
+      "space expanding with galaxies moving apart",
+      "the cosmic web expanding"
+     ]
+    },
+    {
+     "at": "Inflation ने बता",
+     "q": [
+      "a clock-like spinning motion in space",
+      "stars swirling backward"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "The universe looks the same in every direction"
+    },
+    {
+     "at": "उसके दूर दूर",
+     "text": "Its far-apart regions never touched each other, yet they are exactly alike"
+    },
+    {
+     "at": "यही थी पहेली",
+     "text": "That was the puzzle"
+    },
+    {
+     "at": "सात December",
+     "text": "7 DECEMBER 1979",
+     "big": true
+    },
+    {
+     "at": "Alan Guth",
+     "text": "On that night, a young American physicist, Alan Guth, wrote in his notebook..."
+    },
+    {
+     "at": "Spectacular realization",
+     "text": "\"Spectacular realization\""
+    },
+    {
+     "at": "उनका idea था",
+     "text": "His idea: in a tiny fraction of the first second, space itself expanded faster than light"
+    },
+    {
+     "at": "एक के आगे छब्बीस",
+     "text": "10²⁶ times"
+    },
+    {
+     "at": "जितना ब्रह्मांड हम",
+     "text": "The whole universe we can see today was then smaller than a proton..."
+    },
+    {
+     "at": "और पलक झपकने",
+     "text": "...and in less than the blink of an eye, it grew to the size of a large orange"
+    },
+    {
+     "at": "इस फैलाव को",
+     "text": "The expansion got a name: inflation"
+    },
+    {
+     "at": "inflation.",
+     "text": "INFLATION",
+     "big": true
+    },
+    {
+     "at": "Inflation ने बता",
+     "text": "Inflation explained how the universe expanded"
+    },
+    {
+     "at": "लेकिन जैसे ही",
+     "text": "But as soon as scientists turn the clock back further, all of science breaks down"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Alan Guth",
+     "num": {
+      "template": "name",
+      "value": "ALAN GUTH",
+      "sub": "physicist · USA · 1979"
+     }
+    },
+    {
+     "at": "एक के आगे छब्बीस",
+     "num": {
+      "template": "hero",
+      "value": "10²⁶",
+      "unit": "times bigger",
+      "kicker": "in a flash",
+      "land": "छब्बीस"
+     }
+    }
+   ],
+   "m": [
+    {
+     "at": "एक के आगे छब्बीस",
+     "breath": 1.0,
+     "riser": 1.4,
+     "impact": "impact",
+     "trans": "flash"
+    }
+   ]
+  },
+  "ch6": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a galaxy rotating",
+      "a black hole bending light"
+     ]
+    },
+    {
+     "at": "Einstein की gravity",
+     "gfx": "two_theories"
+    },
+    {
+     "at": "लेकिन Big Bang के",
+     "q": [
+      "an intensely bright point of energy",
+      "a blinding flash at the centre of space"
+     ]
+    },
+    {
+     "at": "यहाँ एक दीवार है",
+     "opt": "hold",
+     "q": [
+      "deep black space with a faint glow",
+      "darkness at the edge of the universe"
+     ]
+    },
+    {
+     "at": "एक second को",
+     "gfx": "zeros:43:pieces of one second"
+    },
+    {
+     "at": "इसे Planck time",
+     "q": [
+      "a faint glow in deep darkness",
+      "the dark edge of a nebula"
+     ]
+    },
+    {
+     "at": "इस दीवार के",
+     "q": [
+      "a dark nebula with stars behind it",
+      "dark clouds of dust blocking starlight"
+     ]
+    },
+    {
+     "at": "लेकिन scientists ने उस",
+     "q": [
+      "a large telescope at night under the stars",
+      "an observatory dome opening at night"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Physics has two great theories"
+    },
+    {
+     "at": "Einstein की gravity",
+     "text": "Einstein's gravity explains big things, like galaxies and black holes"
+    },
+    {
+     "at": "और quantum physics",
+     "text": "Quantum physics explains the smallest things, atoms and particles even smaller"
+    },
+    {
+     "at": "आम तौर पर",
+     "text": "Usually each works fine in its own place"
+    },
+    {
+     "at": "लेकिन Big Bang के",
+     "text": "But in the first moment after the Big Bang, everything was both tiny and enormously heavy"
+    },
+    {
+     "at": "वहाँ दोनों theories",
+     "text": "There, the two theories clash"
+    },
+    {
+     "at": "यहाँ एक दीवार है",
+     "text": "Here there is a wall"
+    },
+    {
+     "at": "एक second को",
+     "text": "Cut one second into so many pieces that it takes a 1 followed by 43 zeros..."
+    },
+    {
+     "at": "Big Bang के बाद का वह",
+     "text": "...the very first slice of time after the Big Bang"
+    },
+    {
+     "at": "इसे Planck time",
+     "text": "PLANCK TIME",
+     "big": true
+    },
+    {
+     "at": "इस दीवार के",
+     "text": "No equation can yet say what lies beyond that wall"
+    },
+    {
+     "at": "लेकिन scientists ने उस",
+     "text": "But scientists have not stopped trying to reach it"
+    }
+   ],
+   "sfx": [],
+   "m": [
+    {
+     "at": "यहाँ एक दीवार है",
+     "breath": 1.4,
+     "riser": 1.6,
+     "impact": "impact",
+     "trans": "dip",
+     "drop": true
+    }
+   ],
+   "k": [
+    {
+     "at": "यहाँ एक दीवार है",
+     "lines": [
+      {
+       "text": "*A WALL*",
+       "at": "यहाँ एक दीवार है"
+      }
+     ],
+     "kicker": "where physics breaks"
+    }
+   ]
+  },
+  "ch7": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a telescope in Antarctica under the sky",
+      "a telescope on snow at the South Pole"
+     ]
+    },
+    {
+     "at": "कि उन्हें inflation के",
+     "gfx": "photo:BICEP2_detectors:in"
+    },
+    {
+     "at": "दुनिया भर में",
+     "gfx": "cmb_polar"
+    },
+    {
+     "at": "लेकिन कुछ महीनों",
+     "q": [
+      "dust in the Milky Way",
+      "dark dust lanes in our galaxy"
+     ]
+    },
+    {
+     "at": "फिर आया James Webb",
+     "q": [
+      "the James Webb Space Telescope in space",
+      "Webb telescope unfolding"
+     ]
+    },
+    {
+     "at": "दो हज़ार पच्चीस में",
+     "q": [
+      "zooming into a deep field of distant galaxies",
+      "the most distant galaxies seen by Webb"
+     ]
+    },
+    {
+     "at": "Webb शुरुआत के",
+     "q": [
+      "the Webb telescope mirror glinting",
+      "a golden telescope mirror in space"
+     ]
+    },
+    {
+     "at": "और सबसे हैरान",
+     "q": [
+      "a spiral galaxy rotating",
+      "a slow zoom into a spiral galaxy"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "17 MARCH 2014",
+     "big": true
+    },
+    {
+     "at": "बाइसेप two",
+     "text": "On 17 March 2014, the BICEP2 team in Antarctica announced it had found direct traces of inflation"
+    },
+    {
+     "at": "दुनिया भर में",
+     "text": "Scientists around the world celebrated"
+    },
+    {
+     "at": "लेकिन कुछ महीनों",
+     "text": "But months later it turned out the signal had been made by dust in our own galaxy"
+    },
+    {
+     "at": "फिर आया James Webb",
+     "text": "Then came the James Webb Space Telescope"
+    },
+    {
+     "at": "दो हज़ार पच्चीस में",
+     "text": "In 2025, Webb saw the most distant galaxy yet, its light leaving just 280 million years after the Big Bang"
+    },
+    {
+     "at": "Webb शुरुआत के",
+     "text": "The closer Webb gets to the beginning, the clearer it becomes..."
+    },
+    {
+     "at": "कि दीवार के उस",
+     "text": "...that telescopes alone can't get past the wall"
+    },
+    {
+     "at": "अब ज़रूरत है",
+     "text": "New ideas are needed now..."
+    },
+    {
+     "at": "और सबसे हैरान",
+     "text": "...and the most startling idea came from Stephen Hawking"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "बाइसेप two",
+     "num": {
+      "template": "name",
+      "value": "BICEP2",
+      "sub": "telescope · South Pole, Antarctica"
+     }
+    },
+    {
+     "at": "दो हज़ार पच्चीस में",
+     "num": {
+      "template": "hero",
+      "value": "280",
+      "from": "0",
+      "unit": "million years after the Big Bang",
+      "kicker": "the farthest galaxy · Webb 2025",
+      "land": "अट्ठाईस करोड़"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "लेकिन कुछ महीनों",
+     "lines": [
+      {
+       "text": "THE SIGNAL",
+       "at": "निशान"
+      },
+      {
+       "text": "*WAS DUST*",
+       "at": "धूल"
+      }
+     ],
+     "kicker": "months later"
+    }
+   ],
+   "m": [
+    {
+     "at": "हमारी ही galaxy की धूल",
+     "breath": 0.7,
+     "riser": 1.0,
+     "impact": "hit",
+     "trans": "cut"
+    }
+   ]
+  },
+  "ch8": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "deep black space with a faint glow",
+      "a slow drift through darkness"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ तिरासी में",
+     "gfx": "photo:Stephen_Hawking:in"
+    },
+    {
+     "at": "James Hartle ने",
+     "gfx": "photo:James_Hartle"
+    },
+    {
+     "at": "शुरुआत के पास",
+     "gfx": "spacetime"
+    },
+    {
+     "at": "मतलब ब्रह्मांड की",
+     "gfx": "no_boundary"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "gfx": "photo:Stephen_Hawking_2"
+    },
+    {
+     "at": "Big Bang से पहले क्या",
+     "gfx": "south_pole"
+    },
+    {
+     "at": "अगर Hawking सही",
+     "q": [
+      "the Earth slowly rotating",
+      "a planet turning in sunlight"
+     ]
+    },
+    {
+     "at": "लेकिन हर scientist",
+     "q": [
+      "a galaxy cluster in deep space",
+      "a field of galaxies"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Maybe there was nothing before the Big Bang..."
+    },
+    {
+     "at": "वक़्त भी नहीं",
+     "text": "...not even time"
+    },
+    {
+     "at": "उन्नीस सौ तिरासी में",
+     "text": "In 1983, Stephen Hawking and James Hartle proposed an idea"
+    },
+    {
+     "at": "शुरुआत के पास",
+     "text": "Near the beginning, time does not run the way we know it"
+    },
+    {
+     "at": "वक़्त भी, लंबाई",
+     "text": "Time becomes just like length and width"
+    },
+    {
+     "at": "मतलब ब्रह्मांड की",
+     "text": "So the beginning of the universe has no edge at all"
+    },
+    {
+     "at": "वह एक गेंद",
+     "text": "Like a ball, it simply rounds off and closes"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "text": "In 2018, a few weeks before he died, Hawking explained it with an example"
+    },
+    {
+     "at": "Big Bang से पहले क्या",
+     "text": "Asking what came before the Big Bang is like asking what lies south of the South Pole"
+    },
+    {
+     "at": "वहाँ कुछ नहीं",
+     "text": "There is nothing there, because the South Pole itself is the end point"
+    },
+    {
+     "at": "अगर Hawking सही",
+     "text": "If Hawking was right, the word \"before\" has no meaning"
+    },
+    {
+     "at": "लेकिन हर scientist",
+     "text": "But not every scientist agrees with Hawking"
+    },
+    {
+     "at": "कुछ कहते हैं",
+     "text": "Some say there was a whole universe before the Big Bang"
+    }
+   ],
+   "sfx": [],
+   "m": [
+    {
+     "at": "वक़्त भी नहीं",
+     "breath": 1.2,
+     "riser": 1.4,
+     "impact": "hit",
+     "trans": "dip",
+     "drop": true
+    }
+   ],
+   "k": [
+    {
+     "at": "वक़्त भी नहीं",
+     "lines": [
+      {
+       "text": "NOTHING BEFORE",
+       "at": "वक़्त भी नहीं"
+      },
+      {
+       "text": "*NOT EVEN TIME*",
+       "at": null
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "Stephen Hawking",
+     "num": {
+      "template": "name",
+      "value": "STEPHEN HAWKING & JAMES HARTLE",
+      "sub": "physicists · 1983"
+     }
+    }
+   ]
+  },
+  "ch9": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a collapsing cloud of matter in space",
+      "matter falling inward in a simulation"
+     ]
+    },
+    {
+     "at": "वह सिकुड़ता गया",
+     "gfx": "bounce"
+    },
+    {
+     "at": "Big Bounce",
+     "opt": "hold",
+     "q": [
+      "an explosion of light outward from a point",
+      "a bright burst expanding in space"
+     ]
+    },
+    {
+     "at": "Nobel Prize जीतने",
+     "gfx": "photo:Roger_Penrose"
+    },
+    {
+     "at": "उनके हिसाब से",
+     "gfx": "cycles"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "gfx": "cmb_rings"
+    },
+    {
+     "at": "लेकिन अगर Penrose",
+     "q": [
+      "the birth of stars in a nebula",
+      "a star-forming nebula glowing"
+     ]
+    },
+    {
+     "at": "और एक idea ऐसा",
+     "q": [
+      "countless galaxies in a deep field",
+      "a field of galaxies stretching away"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "In this idea, there was another universe before ours"
+    },
+    {
+     "at": "वह सिकुड़ता गया",
+     "text": "It shrank and shrank, then bounced back like a ball..."
+    },
+    {
+     "at": "Big Bounce",
+     "text": "BIG BOUNCE",
+     "big": true
+    },
+    {
+     "at": "Nobel Prize जीतने",
+     "text": "Nobel Prize-winning British scientist Roger Penrose goes even further"
+    },
+    {
+     "at": "उनके हिसाब से",
+     "text": "In his view, the universe runs in endless cycles, one after another"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "text": "In 2018, Penrose's team claimed traces of the previous universe in the echo of the Big Bang"
+    },
+    {
+     "at": "ज़्यादातर scientists",
+     "text": "Most scientists don't accept the claim; they say it's just noise"
+    },
+    {
+     "at": "लेकिन अगर Penrose",
+     "text": "But if Penrose is right, the Big Bang was not the start of the story, just a new chapter"
+    },
+    {
+     "at": "और एक idea ऐसा",
+     "text": "And one idea goes further still..."
+    },
+    {
+     "at": "अकेला था ही नहीं",
+     "text": "...that our Big Bang was not alone"
+    }
+   ],
+   "sfx": [],
+   "m": [
+    {
+     "at": "Big Bounce",
+     "breath": 1.0,
+     "riser": 1.4,
+     "impact": "impact",
+     "trans": "flare"
+    }
+   ],
+   "n": [
+    {
+     "at": "Roger Penrose",
+     "num": {
+      "template": "name",
+      "value": "ROGER PENROSE",
+      "sub": "Nobel Prize in Physics 2020 · Britain"
+     }
+    }
+   ]
+  },
+  "ch10": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "glowing bubbles of gas in space",
+      "a nebula with bubbles"
+     ]
+    },
+    {
+     "at": "कुछ scientists के",
+     "q": [
+      "space expanding rapidly",
+      "expanding cosmic web"
+     ]
+    },
+    {
+     "at": "जहाँ रुका",
+     "gfx": "bubbles"
+    },
+    {
+     "at": "इस idea को कहते",
+     "q": [
+      "many glowing bubbles in space",
+      "clusters of nebula bubbles"
+     ]
+    },
+    {
+     "at": "हर bubble, एक",
+     "q": [
+      "countless galaxies in a deep field",
+      "the large-scale structure of the universe"
+     ]
+    },
+    {
+     "at": "हमारा ब्रह्मांड, शायद",
+     "opt": "hold",
+     "q": [
+      "zooming out from the universe to many bubbles",
+      "flight out of the cosmic web"
+     ]
+    },
+    {
+     "at": "Scientists ने उसी",
+     "gfx": "cmb_bubbles"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Inflation has a strange consequence"
+    },
+    {
+     "at": "कुछ scientists के",
+     "text": "Some scientists think the rapid expansion never stopped everywhere at once"
+    },
+    {
+     "at": "जहाँ रुका",
+     "text": "Where it stopped, a bubble formed: a universe. Elsewhere, expansion carried on"
+    },
+    {
+     "at": "बिल्कुल वैसे ही",
+     "text": "Just like bubbles rising here and there in boiling water"
+    },
+    {
+     "at": "इस idea को कहते",
+     "text": "The idea is called eternal inflation"
+    },
+    {
+     "at": "eternal inflation.",
+     "text": "ETERNAL INFLATION",
+     "big": true
+    },
+    {
+     "at": "इससे एक के बाद",
+     "text": "It keeps making countless bubbles, one after another"
+    },
+    {
+     "at": "हर bubble, एक",
+     "text": "Every bubble, a separate universe, each with its own Big Bang"
+    },
+    {
+     "at": "हमारा ब्रह्मांड, शायद",
+     "text": "Our universe may be just one bubble..."
+    },
+    {
+     "at": "multiverse का",
+     "text": "...a tiny part of a multiverse"
+    },
+    {
+     "at": "Scientists ने उसी",
+     "text": "Scientists have searched that ancient light for marks of collisions with other bubbles"
+    },
+    {
+     "at": "अभी तक, कोई",
+     "text": "So far, no firm sign has been found"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "हर bubble, एक",
+     "lines": [
+      {
+       "text": "EVERY BUBBLE",
+       "at": "हर bubble"
+      },
+      {
+       "text": "*A UNIVERSE*",
+       "at": "एक अलग ब्रह्मांड"
+      }
+     ],
+     "sub": "each with its own Big Bang",
+     "sub_at": "हर एक"
+    },
+    {
+     "at": "multiverse का",
+     "lines": [
+      {
+       "text": "*THE MULTIVERSE*",
+       "at": "multiverse का"
+      }
+     ],
+     "kicker": "our universe, one bubble of many"
+    }
+   ],
+   "m": [
+    {
+     "at": "multiverse का",
+     "breath": 1.2,
+     "riser": 1.6,
+     "impact": "impact",
+     "trans": "flare",
+     "swell": 7.0
+    }
+   ]
+  },
+  "ending": {
+   "v": [
+    {
+     "at": null,
+     "gfx": "photo:LiteBIRD:in"
+    },
+    {
+     "at": "उसका काम है",
+     "gfx": "cmb_polar"
+    },
+    {
+     "at": "तब तक, सवाल",
+     "q": [
+      "a person under the Milky Way",
+      "the Milky Way over an observatory timelapse"
+     ]
+    },
+    {
+     "at": "वक़्त की सच",
+     "gfx": "three_answers"
+    },
+    {
+     "at": "उन्नीस सौ चौंसठ में",
+     "gfx": "photo:Holmdel_Horn_Antenna:left"
+    },
+    {
+     "at": "ब्रह्मांड कहाँ से",
+     "gfx": "cmb_out"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "The wait for an answer may not be long"
+    },
+    {
+     "at": "Japan का LiteBird",
+     "text": "Japan's LiteBIRD satellite is being prepared to launch around 2032"
+    },
+    {
+     "at": "उसका काम है",
+     "text": "Its job: to find the real traces of inflation in that echo"
+    },
+    {
+     "at": "शायद वही बताएगा",
+     "text": "It may finally tell how the beginning happened"
+    },
+    {
+     "at": "तब तक, सवाल",
+     "text": "Until then, the question stays open"
+    },
+    {
+     "at": "Hawking सही थे",
+     "text": "Was Hawking right, or Penrose?"
+    },
+    {
+     "at": "वक़्त की सच",
+     "text": "Did time really have a beginning, is the universe an endless cycle..."
+    },
+    {
+     "at": "या हमारा ब्रह्मांड",
+     "text": "...or is our universe just one of countless bubbles?"
+    },
+    {
+     "at": "Science अभी तक",
+     "text": "Science has not decided yet"
+    },
+    {
+     "at": "उन्नीस सौ चौंसठ में",
+     "text": "In 1964, Penzias and Wilson thought that hiss was a fault..."
+    },
+    {
+     "at": "वही आज इस",
+     "text": "...today it is the biggest clue to the biggest puzzle of all"
+    },
+    {
+     "at": "ब्रह्मांड कहाँ से",
+     "text": "Where the universe came from, and what came before it..."
+    },
+    {
+     "at": "इसका जवाब",
+     "text": "...the answer still hides behind that oldest light"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "LiteBird",
+     "num": {
+      "template": "name",
+      "value": "LITEBIRD",
+      "sub": "JAXA satellite · planned for about 2032"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "Hawking सही थे",
+     "lines": [
+      {
+       "text": "HAWKING",
+       "at": "Hawking"
+      },
+      {
+       "text": "OR *PENROSE?*",
+       "at": "Penrose"
+      }
+     ],
+     "kicker": "science hasn't decided"
+    }
+   ],
+   "s": [
+    {
+     "at": "जिस सरसराहट को",
+     "type": "hiss",
+     "d": "2.6",
+     "gain": "-6"
+    }
+   ],
+   "m": [
+    {
+     "at": "इसका जवाब",
+     "breath": 1.2,
+     "riser": 1.6,
+     "impact": "impact",
+     "trans": "flare",
+     "swell": 8.0
+    }
+   ]
+  }
+ }
+}
