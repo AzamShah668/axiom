@@ -305,12 +305,11 @@
      "gfx": "photo:Arno_Penzias"
     },
     {
-     "at": "Robert Wilson",
-     "gfx": "photo:Robert_Wilson"
-    },
-    {
      "at": "उनके antenna में",
-     "gfx": "photo:Holmdel_Horn_Antenna:in"
+     "q": [
+      "a radio telescope scanning the night sky timelapse",
+      "radio dishes under a starry sky"
+     ]
     },
     {
      "at": "दिन हो या रात",
@@ -321,7 +320,10 @@
     },
     {
      "at": "उन्हें लगा",
-     "gfx": "photo:Pigeons:in"
+     "q": [
+      "close-up of a telescope structure",
+      "an observatory dome closing at dawn"
+     ]
     },
     {
      "at": "वह सरसराहट कोई",
@@ -671,7 +673,11 @@
    "v": [
     {
      "at": null,
-     "gfx": "photo:Georges_Lemaitre"
+     "opt": "hold",
+     "q": [
+      "an old observatory under the stars",
+      "a classic telescope dome at night"
+     ]
     },
     {
      "at": "उन्नीस सौ सत्ताईस में",
@@ -682,7 +688,10 @@
     },
     {
      "at": "उसी साल Brussels में",
-     "gfx": "photo:Solvay_1927:right"
+     "q": [
+      "a spiral galaxy rotating",
+      "a slow zoom into a spiral galaxy"
+     ]
     },
     {
      "at": "आपके calculations",
@@ -690,7 +699,10 @@
     },
     {
      "at": "दो साल बाद",
-     "gfx": "photo:Mount_Wilson:in"
+     "q": [
+      "the Hubble Space Telescope in orbit",
+      "a large telescope pointing at the sky"
+     ]
     },
     {
      "at": "Edwin Hubble ने",
@@ -846,10 +858,6 @@
      ]
     },
     {
-     "at": "BBC radio पर",
-     "gfx": "photo:Fred_Hoyle"
-    },
-    {
      "at": "Hoyle मानते थे",
      "q": [
       "a calm spiral galaxy rotating",
@@ -990,7 +998,10 @@
     },
     {
      "at": "उन्नीस सौ अठहत्तर में",
-     "gfx": "photo:Holmdel_Horn_Antenna:out"
+     "q": [
+      "an observatory at dusk timelapse",
+      "telescope domes under the evening sky"
+     ]
     },
     {
      "at": "और पुराने TV की",
@@ -1506,10 +1517,6 @@
      "gfx": "photo:Stephen_Hawking:in"
     },
     {
-     "at": "James Hartle ने",
-     "gfx": "photo:James_Hartle"
-    },
-    {
      "at": "शुरुआत के पास",
      "gfx": "spacetime"
     },
@@ -1655,7 +1662,10 @@
     },
     {
      "at": "Nobel Prize जीतने",
-     "gfx": "photo:Roger_Penrose"
+     "q": [
+      "a galaxy rotating",
+      "spiral galaxy close-up"
+     ]
     },
     {
      "at": "उनके हिसाब से",
@@ -1886,7 +1896,11 @@
    "v": [
     {
      "at": null,
-     "gfx": "photo:LiteBIRD:in"
+     "opt": "hold",
+     "q": [
+      "a satellite in orbit around Earth",
+      "a spacecraft in space"
+     ]
     },
     {
      "at": "उसका काम है",
@@ -1905,7 +1919,10 @@
     },
     {
      "at": "उन्नीस सौ चौंसठ में",
-     "gfx": "photo:Holmdel_Horn_Antenna:left"
+     "q": [
+      "a radio telescope dish at night",
+      "radio antennas under the stars"
+     ]
     },
     {
      "at": "ब्रह्मांड कहाँ से",

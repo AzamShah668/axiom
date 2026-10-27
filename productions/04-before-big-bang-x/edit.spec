@@ -10,15 +10,14 @@ V America के New Jersey @ a radio telescope dish turning against the sky | r
 C America के New Jersey | In New Jersey, America, two scientists were cleaning pigeon droppings out of a giant radio antenna
 L Arno Penzias @ ARNO PENZIAS & ROBERT WILSON | radio astronomers · Bell Labs · 1964
 G Arno Penzias @ photo:Arno_Penzias
-G Robert Wilson @ photo:Robert_Wilson
 C Arno Penzias | Arno Penzias and Robert Wilson
-G उनके antenna में @ photo:Holmdel_Horn_Antenna:in
+V उनके antenna में @ a radio telescope scanning the night sky timelapse | radio dishes under a starry sky
 K उनके antenna में @ A STRANGE HISS [सरसराहट] / *THAT WOULD NOT GO AWAY* [जाती ही नहीं]
 C उनके antenna में | Their antenna picked up a strange hiss that would not go away
 S उनके antenna में | hiss | d=5.0 | gain=-3
 V दिन हो या रात @ day turning to night over an observatory timelapse | the sky rotating over radio telescopes
 C दिन हो या रात | Day or night, wherever the antenna pointed, the sound stayed the same
-G उन्हें लगा @ photo:Pigeons:in
+V उन्हें लगा @ close-up of a telescope structure | an observatory dome closing at dawn
 C उन्हें लगा | They thought the pigeons and their nests were to blame
 C कबूतर हटाए गए | The pigeons were removed. The antenna was scrubbed clean
 C सरसराहट फिर भी | The hiss was still there
@@ -68,19 +67,19 @@ K लेकिन ब्रह्मांड की कोई @ NOT A TELESCOPE
 C लेकिन ब्रह्मांड की कोई | But the first to say the universe had a beginning was not a telescope. It was a priest
 
 == ch2
-G - @ photo:Georges_Lemaitre
+V - @ an old observatory under the stars | a classic telescope dome at night {hold}
 L Georges Lemaître @ GEORGES LEMAÎTRE | Catholic priest & physicist · Belgium · 1894-1966
 C - | Belgium's Father Georges Lemaître was a Catholic priest, and also a physicist
 V उन्नीस सौ सत्ताईस में @ galaxies moving apart as the universe expands | expanding universe animation
 C उन्नीस सौ सत्ताईस में | In 1927, he used Einstein's equations to show that the universe is not standing still
 C वह फैल रहा है | It is expanding
 K वह फैल रहा है @ THE UNIVERSE / *IS EXPANDING*
-G उसी साल Brussels में @ photo:Solvay_1927:right
+V उसी साल Brussels में @ a spiral galaxy rotating | a slow zoom into a spiral galaxy
 G आपके calculations @ photo:Albert_Einstein:in:r
 C उसी साल Brussels में | That same year in Brussels, Einstein told Lemaître...
 K आपके calculations @ "YOUR CALCULATIONS ARE CORRECT [सही हैं] / BUT YOUR PHYSICS [लेकिन] / *IS ABOMINABLE"* [बेकार] | kicker=Einstein · 1927
 C आपके calculations | "Your calculations are correct, but your physics is abominable"
-G दो साल बाद @ photo:Mount_Wilson:in
+V दो साल बाद @ the Hubble Space Telescope in orbit | a large telescope pointing at the sky
 G Edwin Hubble ने @ photo:Edwin_Hubble
 L Edwin Hubble @ EDWIN HUBBLE | astronomer · USA · 1929
 C दो साल बाद | Two years later, in 1929, America's Edwin Hubble saw distant galaxies racing away from us
@@ -100,7 +99,6 @@ C और वह नाम दिया | ...and the name came from its biggest c
 V - @ a starry night sky over a dark landscape timelapse | the Milky Way over mountains {hold}
 C - | 28 MARCH 1949 | big
 L Fred Hoyle @ FRED HOYLE | British astronomer · 1915-2001
-G BBC radio पर @ photo:Fred_Hoyle
 C BBC radio पर | On BBC radio, British astronomer Fred Hoyle was speaking
 V Hoyle मानते थे @ a calm spiral galaxy rotating | a galaxy slowly turning
 C Hoyle मानते थे | Hoyle believed the universe had no beginning and no end...
@@ -130,7 +128,7 @@ C सफ़र में वह | On the way it was stretched so much that it is
 C अब वह microwaves | Now it is microwaves...
 N अब वह microwaves @ thermo | value=-270 | from=0 | unit=°C | kicker=the oldest light today | land=सत्तर | over
 C और उसका तापमान | ...at just minus 270 degrees Celsius
-G उन्नीस सौ अठहत्तर में @ photo:Holmdel_Horn_Antenna:out
+V उन्नीस सौ अठहत्तर में @ an observatory at dusk timelapse | telescope domes under the evening sky
 C उन्नीस सौ अठहत्तर में | In 1978, Penzias and Wilson won the Nobel Prize for this discovery
 G और पुराने TV की @ tv_static
 C और पुराने TV की | And about 1 percent of the black-and-white static on old TVs, with no channel tuned...
@@ -224,7 +222,6 @@ M वक़्त भी नहीं | breath=1.2 | riser=1.4 | impact=hit | tr
 C वक़्त भी नहीं | ...not even time
 K वक़्त भी नहीं @ NOTHING BEFORE / *NOT EVEN TIME*
 G उन्नीस सौ तिरासी में @ photo:Stephen_Hawking:in
-G James Hartle ने @ photo:James_Hartle
 L Stephen Hawking @ STEPHEN HAWKING & JAMES HARTLE | physicists · 1983
 C उन्नीस सौ तिरासी में | In 1983, Stephen Hawking and James Hartle proposed an idea
 G शुरुआत के पास @ spacetime
@@ -252,7 +249,7 @@ C वह सिकुड़ता गया | It shrank and shrank, then bounced
 M Big Bounce | breath=1.0 | riser=1.4 | impact=impact | trans=flare
 V Big Bounce @ an explosion of light outward from a point | a bright burst expanding in space {hold}
 C Big Bounce | BIG BOUNCE | big
-G Nobel Prize जीतने @ photo:Roger_Penrose
+V Nobel Prize जीतने @ a galaxy rotating | spiral galaxy close-up
 L Roger Penrose @ ROGER PENROSE | Nobel Prize in Physics 2020 · Britain
 C Nobel Prize जीतने | Nobel Prize-winning British scientist Roger Penrose goes even further
 G उनके हिसाब से @ cycles
@@ -291,7 +288,7 @@ C Scientists ने उसी | Scientists have searched that ancient light for 
 C अभी तक, कोई | So far, no firm sign has been found
 
 == ending
-G - @ photo:LiteBIRD:in
+V - @ a satellite in orbit around Earth | a spacecraft in space {hold}
 C - | The wait for an answer may not be long
 L LiteBird @ LITEBIRD | JAXA satellite · planned for about 2032
 C Japan का LiteBird | Japan's LiteBIRD satellite is being prepared to launch around 2032
@@ -306,7 +303,7 @@ G वक़्त की सच @ three_answers
 C वक़्त की सच | Did time really have a beginning, is the universe an endless cycle...
 C या हमारा ब्रह्मांड | ...or is our universe just one of countless bubbles?
 C Science अभी तक | Science has not decided yet
-G उन्नीस सौ चौंसठ में @ photo:Holmdel_Horn_Antenna:left
+V उन्नीस सौ चौंसठ में @ a radio telescope dish at night | radio antennas under the stars
 C उन्नीस सौ चौंसठ में | In 1964, Penzias and Wilson thought that hiss was a fault...
 S जिस सरसराहट को | hiss | d=2.6 | gain=-6
 C वही आज इस | ...today it is the biggest clue to the biggest puzzle of all
