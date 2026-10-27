@@ -1,6 +1,6 @@
 {
  "style": "v3",
- "lead_in": 4.1,
+ "lead_in": 0.5,
  "title": {
   "kicker": "what was there",
   "main": "Before the Big Bang?"
@@ -267,11 +267,5 @@
   "svs_5627#0"
  ],
  "crops": {},
- "exclude": {},
- "intro": {
-  "dur": 3.6,
-  "gfx": "rewind",
-  "track": "Interloper.mp3",
-  "db": 12.0
- }
+ "exclude": {}
 }

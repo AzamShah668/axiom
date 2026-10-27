@@ -1,6 +1,6 @@
 {
  "style": "v3",
- "lead_in": 4.1,
+ "lead_in": 0.5,
  "title": {
   "kicker": "what was there",
   "main": "Before the Big Bang?"
@@ -268,12 +268,6 @@
  ],
  "crops": {},
  "exclude": {},
- "intro": {
-  "dur": 3.6,
-  "gfx": "rewind",
-  "track": "Interloper.mp3",
-  "db": 12.0
- },
  "sections": {
   "opening": {
    "v": [
@@ -371,7 +365,8 @@
    "c": [
     {
      "at": null,
-     "text": "1964"
+     "text": "1964",
+     "big": true
     },
     {
      "at": "America के New Jersey",
@@ -502,20 +497,6 @@
        "at": "आख़िर"
       }
      ]
-    }
-   ],
-   "s": [
-    {
-     "at": "उनके antenna में",
-     "type": "hiss",
-     "d": "5.0",
-     "gain": "-3"
-    },
-    {
-     "at": "सरसराहट फिर भी",
-     "type": "hiss",
-     "d": "2.6",
-     "gain": "-5"
     }
    ],
    "m": [
@@ -945,23 +926,6 @@
       }
      ],
      "kicker": "the steady state"
-    }
-   ],
-   "m": [
-    {
-     "at": "Big Bang. एक धमाका",
-     "breath": 0.8,
-     "riser": 1.2,
-     "impact": "impact",
-     "trans": "flash"
-    }
-   ],
-   "s": [
-    {
-     "at": "उसी सरसराहट ने",
-     "type": "hiss",
-     "d": "2.4",
-     "gain": "-7"
     }
    ]
   },
@@ -1526,15 +1490,6 @@
      ],
      "kicker": "months later"
     }
-   ],
-   "m": [
-    {
-     "at": "हमारी ही galaxy की धूल",
-     "breath": 0.7,
-     "riser": 1.0,
-     "impact": "hit",
-     "trans": "cut"
-    }
    ]
   },
   "ch8": {
@@ -1794,15 +1749,6 @@
     }
    ],
    "sfx": [],
-   "m": [
-    {
-     "at": "Big Bounce",
-     "breath": 1.0,
-     "riser": 1.4,
-     "impact": "impact",
-     "trans": "flare"
-    }
-   ],
    "n": [
     {
      "at": "Roger Penrose",
@@ -2083,24 +2029,6 @@
       }
      ],
      "kicker": "science hasn't decided"
-    }
-   ],
-   "s": [
-    {
-     "at": "जिस सरसराहट को",
-     "type": "hiss",
-     "d": "2.6",
-     "gain": "-6"
-    }
-   ],
-   "m": [
-    {
-     "at": "इसका जवाब",
-     "breath": 1.2,
-     "riser": 1.6,
-     "impact": "impact",
-     "trans": "flare",
-     "swell": 8.0
     }
    ]
   }

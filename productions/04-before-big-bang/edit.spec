@@ -4,7 +4,7 @@
 
 == opening
 V - @ a large radio antenna under the sky | radio telescope dishes at dusk {hold}
-C - | 1964
+C - | 1964 | big
 V America के New Jersey @ a radio telescope dish turning against the sky | radio dishes moving in unison
 C America के New Jersey | In New Jersey, America, two scientists were cleaning pigeon droppings out of a giant radio antenna
 L Arno Penzias @ ARNO PENZIAS & ROBERT WILSON | radio astronomers · Bell Labs · 1964
@@ -12,14 +12,12 @@ C Arno Penzias | Arno Penzias and Robert Wilson
 V उनके antenna में @ a radio telescope scanning the night sky timelapse | radio dishes under a starry sky
 K उनके antenna में @ A STRANGE HISS [सरसराहट] / *THAT WOULD NOT GO AWAY* [जाती ही नहीं]
 C उनके antenna में | Their antenna picked up a strange hiss that would not go away
-S उनके antenna में | hiss | d=5.0 | gain=-3
 V दिन हो या रात @ day turning to night over an observatory timelapse | the sky rotating over radio telescopes
 C दिन हो या रात | Day or night, wherever the antenna pointed, the sound stayed the same
 V उन्हें लगा @ close-up of a telescope structure | an observatory dome closing at dawn
 C उन्हें लगा | They thought the pigeons and their nests were to blame
 C कबूतर हटाए गए | The pigeons were removed. The antenna was scrubbed clean
 C सरसराहट फिर भी | The hiss was still there
-S सरसराहट फिर भी | hiss | d=2.6 | gain=-5
 V वह सरसराहट कोई @ slow flight through a star field | stars drifting in deep space
 C वह सरसराहट कोई | The hiss was not a fault. It was the oldest light in the universe...
 M Big Bang की गूँज | breath=1.2 | riser=1.6 | impact=impact | trans=flare
@@ -102,7 +100,6 @@ C वह हमेशा से | ...that it has always been the same
 K Hoyle मानते थे @ NO BEGINNING [शुरुआत] / *NO END* [अंत] | kicker=the steady state
 V Lemaître वाली theory @ a huge explosion of light in space | a bright flash expanding outward
 C Lemaître वाली theory | Explaining Lemaître's theory, he used a word...
-M Big Bang. एक धमाका | breath=0.8 | riser=1.2 | impact=impact | trans=flash
 C Big Bang. एक धमाका | "BIG BANG" | big
 V Hoyle ने कभी @ a supernova explosion | a bright star exploding
 C Hoyle ने कभी | Hoyle never accepted the theory
@@ -111,7 +108,6 @@ C लेकिन उनका दिया | But the name he gave it stuck fore
 C आज दुनिया का | Today every child knows the start of the universe by the name its critic gave it
 G और Hoyle को ग़लत @ cmb_out
 C और Hoyle को ग़लत | And Hoyle was proved wrong by the same hiss that is still all around us
-S उसी सरसराहट ने | hiss | d=2.4 | gain=-7
 
 == ch4
 V - @ the hot dense early universe glowing | a bright fog of glowing plasma {hold}
@@ -200,7 +196,6 @@ C दुनिया भर में | Scientists around the world celebrated
 V लेकिन कुछ महीनों @ dust in the Milky Way | dark dust lanes in our galaxy
 K लेकिन कुछ महीनों @ THE SIGNAL [निशान] / *WAS DUST* [धूल] | kicker=months later
 C लेकिन कुछ महीनों | But months later it turned out the signal had been made by dust in our own galaxy
-M हमारी ही galaxy की धूल | breath=0.7 | riser=1.0 | impact=hit | trans=cut
 V फिर आया James Webb @ the James Webb Space Telescope in space | Webb telescope unfolding
 C फिर आया James Webb | Then came the James Webb Space Telescope
 V दो हज़ार पच्चीस में @ zooming into a deep field of distant galaxies | the most distant galaxies seen by Webb
@@ -245,7 +240,6 @@ V - @ a collapsing cloud of matter in space | matter falling inward in a simulat
 C - | In this idea, there was another universe before ours
 G वह सिकुड़ता गया @ bounce
 C वह सिकुड़ता गया | It shrank and shrank, then bounced back like a ball...
-M Big Bounce | breath=1.0 | riser=1.4 | impact=impact | trans=flare
 V Big Bounce @ an explosion of light outward from a point | a bright burst expanding in space {hold}
 C Big Bounce | BIG BOUNCE | big
 V Nobel Prize जीतने @ a galaxy rotating | spiral galaxy close-up
@@ -305,9 +299,7 @@ C या हमारा ब्रह्मांड | ...or is our universe jus
 C Science अभी तक | Science has not decided yet
 V उन्नीस सौ चौंसठ में @ a radio telescope dish at night | radio antennas under the stars
 C उन्नीस सौ चौंसठ में | In 1964, Penzias and Wilson thought that hiss was a fault...
-S जिस सरसराहट को | hiss | d=2.6 | gain=-6
 C वही आज इस | ...today it is the biggest clue to the biggest puzzle of all
 G ब्रह्मांड कहाँ से @ cmb_out
 C ब्रह्मांड कहाँ से | Where the universe came from, and what came before it...
-M इसका जवाब | breath=1.2 | riser=1.6 | impact=impact | trans=flare | swell=8
 C इसका जवाब | ...the answer still hides behind that oldest light
