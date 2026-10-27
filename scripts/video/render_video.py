@@ -968,6 +968,186 @@ def gfx(name, t, D, sh):
         draw_text(f, "?", 200, (0.5, 0.17), op=op, color=(255, 190, 90))
         draw_text(f, "SCIENCE HAS NOT DECIDED YET", 46, (0.5, 0.86), op=op, color=(255, 190, 110))
         return f
+    if name == "channel":  # the channel's intro sting after the hook: light sweeps in, the SCIENCE GUY plate, "presents"
+        f = (f * 0.5).astype(np.uint8)
+        rng = np.random.default_rng(77)
+        n = 90
+        ang, rad = rng.uniform(0, 2 * np.pi, n), rng.uniform(300, 900, n)
+        g = ease(p / 0.38)
+        for a_, r_ in zip(ang, rad):  # sparks converge onto the plate
+            r = r_ * (1 - g) + 6
+            add_glow(f, W / 2 + r * math.cos(a_), H * 0.46 + r * math.sin(a_) * 0.6, 7, (255, 220, 170), (1 - g) * 0.9 + 0.05)
+        sx = -200 + (W + 400) * ease(p / 0.42)  # a horizontal light streak
+        add_glow(f, sx, H * 0.46, 120, (255, 230, 200), 0.5 * (1 - ease((p - 0.42) / 0.1)), 1.2)
+        e = ease((p - 0.36) / 0.12)
+        if e > 0:
+            sc = 0.86 + 0.14 * e + 0.03 * max(0.0, 1 - abs(p - 0.5) / 0.08)
+            size = int(120 * sc)
+            a_bgr, a_a = text_rgba("SCIENCE", size, "Montserrat", (255, 255, 255))
+            b_bgr, b_a = text_rgba("GUY", size, "Montserrat", (255, 255, 255))
+            wa, wb, h = a_a.shape[1], b_a.shape[1], a_a.shape[0]
+            pad, gap = int(size * 0.22), int(size * 0.28)
+            tw = wa + 2 * pad + gap + wb
+            x0, yc = int(W / 2 - tw / 2), int(H * 0.46)
+            plate = f.copy()
+            cv2.rectangle(plate, (x0, yc - h // 2 - pad // 2), (x0 + wa + 2 * pad, yc + h // 2 + pad // 2), (245, 245, 245), -1)
+            f = cv2.addWeighted(plate, e, f, 1 - e, 0)
+            blit(f, np.zeros_like(a_bgr), a_a, x0 + pad, yc - h / 2, e)  # dark word on the white plate
+            blit(f, b_bgr, b_a, x0 + wa + 2 * pad + gap, yc - h / 2, e)
+            add_glow(f, W / 2, yc, 520, (255, 200, 140), 0.35 * max(0.0, 1 - abs(p - 0.48) / 0.1), 1.3)
+        draw_text(f, "P R E S E N T S", 40, (0.5, 0.62), op=ease((p - 0.55) / 0.12), color=(255, 200, 120), font="Montserrat")
+        out = ease((p - 0.88) / 0.12)
+        return (f * (1 - out)).astype(np.uint8) if out > 0 else f
+    if name == "converge":  # Lemaitre, 1931: run the expansion backwards and everything meets in one point
+        rng = np.random.default_rng(31)
+        n = 120
+        ang, rad, sz = rng.uniform(0, 2 * np.pi, n), rng.uniform(150, 1000, n), rng.uniform(10, 26, n)
+        cols = [(255, 230, 200), (200, 220, 255), (255, 200, 160)]
+        g = ease(p / 0.85) ** 1.6
+        for i, (a_, r_, z_) in enumerate(zip(ang, rad, sz)):
+            r = r_ * (1 - g)
+            add_glow(f, W / 2 + r * math.cos(a_ + g * 0.6), H / 2 + r * math.sin(a_ + g * 0.6) * 0.62, z_ * (1 - 0.6 * g) + 2,
+                     cols[i % 3], 0.85)
+        add_glow(f, W / 2, H / 2, 60 + 600 * ease((p - 0.7) / 0.25), (255, 240, 210), 0.3 + 0.7 * ease((p - 0.65) / 0.2), 1.3)
+        draw_text(f, "EVERYTHING, ONCE IN ONE PLACE", 54, (0.5, 0.88), op=ease((p - 0.6) / 0.15), color=(255, 200, 120))
+        return f
+    if name == "recombination":  # light trapped in the hot fog, then set free 380,000 years later
+        rng = np.random.default_rng(80)
+        f = (f * 0.4).astype(np.uint8)
+        clear = ease((p - 0.55) / 0.2)
+        fog = np.full_like(f, (40, 110, 210))  # BGR orange haze
+        f = cv2.addWeighted(fog, 0.55 * (1 - clear), f, 1, 0)
+        pts = rng.uniform([0, 0], [W, H], (420, 2))
+        jit = rng.normal(0, 1, (420, 2))
+        for (x, y), (jx, jy) in zip(pts, jit):  # electrons and nuclei jostling
+            add_glow(f, x + 7 * math.sin(t * 9 + jx * 5), y + 7 * math.cos(t * 8 + jy * 5), 9, (220, 235, 255), 0.9 * (1 - clear) + 0.15)
+        # the photon: a random walk while the fog lasts, then a straight line out
+        steps = rng.normal(0, 1, (400, 2)) * 38
+        walk = np.cumsum(steps, 0) * 0.5
+        walk = (walk - walk.mean(0)) / (np.abs(walk - walk.mean(0)).max(0) + 1) * [W * 0.18, H * 0.22] + [W * 0.35, H * 0.45]
+        k = int(min(399, p / 0.55 * 399)) if p < 0.55 else 399
+        trail = walk[:k + 1]
+        if len(trail) > 1:
+            cv2.polylines(f, [trail[-60:].astype(np.int32)], False, (120, 230, 255), 2, cv2.LINE_AA)
+        hx, hy = trail[-1]
+        if p >= 0.55:
+            q = ease((p - 0.55) / 0.45)
+            ex = hx + q * (W * 1.2)
+            cv2.line(f, (int(hx), int(hy)), (int(ex), int(hy)), (120, 230, 255), 3, cv2.LINE_AA)
+            hx = ex
+        add_glow(f, hx, hy, 22, (255, 240, 150), 1.0)
+        draw_text(f, "TOO HOT AND DENSE: LIGHT IS TRAPPED", 50, (0.5, 0.88), op=ease(p / 0.1) * (1 - ease((p - 0.5) / 0.08)))
+        draw_text(f, "380,000 YEARS LATER: LIGHT BREAKS FREE", 50, (0.5, 0.88), op=ease((p - 0.6) / 0.1), color=(255, 200, 120))
+        return f
+    if name == "stretch":  # the light is stretched as space expands: visible light becomes microwaves
+        f = (f * 0.5).astype(np.uint8)
+        e = ease((p - 0.1) / 0.7)
+        lam = 60 + 520 * e
+        col = tuple(int(a + (b - a) * e) for a, b in zip((200, 255, 255), (60, 80, 255)))  # BGR yellow-white -> red
+        xs = np.arange(0, W, 3, dtype=np.float32)
+        ys = H * 0.47 + 110 * np.sin(2 * np.pi * (xs / lam - t * 0.35))
+        cv2.polylines(f, [np.stack([xs, ys], 1).astype(np.int32)], False, col, 4, cv2.LINE_AA)
+        draw_text(f, "VISIBLE LIGHT", 58, (0.5, 0.8), op=1 - ease((p - 0.35) / 0.15), color=(255, 245, 200))
+        draw_text(f, "STRETCHED INTO MICROWAVES", 58, (0.5, 0.8), op=ease((p - 0.55) / 0.15), color=(255, 120, 80))
+        return f
+    if name == "notebook":  # Alan Guth's notebook, the night of 7 December 1979
+        f = (f * 0.35).astype(np.uint8)
+        pw, ph = 1100, 720
+        page = np.full((ph, pw, 3), (205, 232, 240), np.uint8)  # BGR cream
+        for y in range(120, ph, 52):
+            cv2.line(page, (40, y), (pw - 40, y), (200, 170, 150), 2, cv2.LINE_AA)
+        cv2.line(page, (110, 0), (110, ph), (150, 150, 230), 2, cv2.LINE_AA)
+        def hand(txt, size, x, y, frac, color=(60, 40, 30)):
+            k = int(round(len(txt) * max(0.0, min(1.0, frac))))
+            if k > 0:
+                bgr, a = text_rgba(txt[:k], size, "Caveat", color[::-1])
+                h_, w_ = min(a.shape[0], ph - y), min(a.shape[1], pw - x)  # clip to the page, not the frame
+                if h_ > 0 and w_ > 0:
+                    reg = page[y:y + h_, x:x + w_].astype(np.float32)
+                    page[y:y + h_, x:x + w_] = (reg * (1 - a[:h_, :w_]) + bgr[:h_, :w_] * a[:h_, :w_]).astype(np.uint8)
+        hand("Dec. 7, 1979", 56, 140, 40, (p - 0.02) / 0.15)
+        hand("SPECTACULAR REALIZATION", 74, 150, 244, (p - 0.18) / 0.35)
+        if p > 0.55:
+            q = ease((p - 0.55) / 0.15)
+            cv2.rectangle(page, (132, 236), (int(132 + 830 * q), 338), (60, 40, 30), 3, cv2.LINE_AA)
+            cv2.rectangle(page, (122, 226), (int(122 + 850 * q), 348), (60, 40, 30), 2, cv2.LINE_AA)
+        hand("this kind of supercooling can explain", 54, 150, 420, (p - 0.68) / 0.15)
+        hand("why the universe today is so flat...", 54, 150, 472, (p - 0.8) / 0.15)
+        z = 1.0 + 0.05 * ease(p)
+        M = cv2.getRotationMatrix2D((pw / 2, ph / 2), -3 + 2 * p, z)
+        M[0, 2] += W / 2 - pw / 2
+        M[1, 2] += H / 2 - ph / 2
+        mask = cv2.warpAffine(np.full((ph, pw), 255, np.uint8), M, (W, H))
+        img = cv2.warpAffine(page, M, (W, H))
+        sh = cv2.GaussianBlur(cv2.warpAffine(np.full((ph, pw), 255, np.uint8), M + [[0, 0, 18], [0, 0, 24]], (W, H)), (0, 0), 20)
+        f = (f * (1 - sh[..., None] / 255 * 0.6)).astype(np.uint8)
+        m = (mask[..., None] / 255.0)
+        return (f * (1 - m) + img * m).astype(np.uint8)
+    if name == "two_theories":  # gravity for the very big, quantum for the very small - then they collide
+        f = (f * 0.5).astype(np.uint8)
+        e = ease(p / 0.15)
+        meet = ease((p - 0.72) / 0.2)
+        lx, rx, cy = W * (0.27 + 0.2 * meet), W * (0.73 - 0.2 * meet), H * 0.45
+        add_glow(f, lx, cy, 80, (255, 210, 150), e)  # a star with an orbiting planet
+        cv2.ellipse(f, (int(lx), int(cy)), (270, 105), -12, 0, 360, tuple(int(c * e) for c in (150, 120, 90)), 2, cv2.LINE_AA)
+        a = t * 1.4
+        add_glow(f, lx + 270 * math.cos(a), cy + 105 * math.sin(a), 14, (150, 200, 255), e)
+        add_glow(f, rx, cy, 34, (255, 150, 120), e)  # an atom: nucleus and electron orbits
+        for k in range(3):
+            ang = k * 60
+            cv2.ellipse(f, (int(rx), int(cy)), (210, 66), ang, 0, 360, tuple(int(c * e) for c in (230, 200, 120)), 2, cv2.LINE_AA)
+            b = t * (3 + k) + k
+            ca, sa = math.cos(math.radians(ang)), math.sin(math.radians(ang))
+            ex, ey = 210 * math.cos(b), 66 * math.sin(b)
+            add_glow(f, rx + ex * ca - ey * sa, cy + ex * sa + ey * ca, 9, (255, 235, 160), e)
+        op = e * (1 - meet)
+        draw_text(f, "GRAVITY", 60, (0.27, 0.74), op=op, color=(255, 200, 120), align="center")
+        draw_text(f, "THE VERY BIG", 34, (0.27, 0.81), op=op, font="Montserrat", align="center")
+        draw_text(f, "QUANTUM", 60, (0.73, 0.74), op=op, color=(130, 200, 255), align="center")
+        draw_text(f, "THE VERY SMALL", 34, (0.73, 0.81), op=op, font="Montserrat", align="center")
+        if meet > 0.9:
+            add_glow(f, W / 2, cy, 420, (255, 240, 220), (meet - 0.9) * 8, 1.3)
+        return f
+    if name == "no_boundary":  # Hartle-Hawking: the universe's history rounds off at the bottom - no edge, no first point
+        f = (f * 0.5).astype(np.uint8)
+        cx, base, top = W / 2, H * 0.84, H * 0.14
+        rot = t * 0.5
+        e = ease(p / 0.6)
+        def r_of(z):  # z: 0 bottom .. 1 top; a rounded bowl that opens up like a trumpet
+            return 330 * (math.sin(min(z / 0.22, 1.0) * math.pi / 2) * 0.45 + 0.55 * z ** 1.3)
+        zs = np.linspace(0, 1, 15)
+        for z in zs[: max(2, int(len(zs) * e))]:
+            y = base - (base - top) * z
+            rr = r_of(z)
+            cv2.ellipse(f, (int(cx), int(y)), (int(rr), int(rr * 0.22)), 0, 0, 360, (200, 170, 120), 1, cv2.LINE_AA)
+        for k in range(12):  # meridians
+            a = rot + k * math.pi / 6
+            pts = [(cx + r_of(z) * math.cos(a), base - (base - top) * z + r_of(z) * 0.22 * math.sin(a)) for z in np.linspace(0, e, 40)]
+            if math.sin(a) > -0.2:
+                cv2.polylines(f, [np.array(pts, np.int32)], False, (230, 200, 140), 1, cv2.LINE_AA)
+        add_glow(f, cx, base, 30, (255, 220, 170), 0.6)
+        cv2.arrowedLine(f, (int(W * 0.2), int(base)), (int(W * 0.2), int(top + 40)), (200, 200, 200), 2, cv2.LINE_AA, tipLength=0.04)
+        draw_text(f, "TIME", 40, (0.2, (top + 10) / H), font="Montserrat", align="center", op=e)
+        draw_text(f, "NO EDGE, NO FIRST MOMENT", 54, (0.5, 0.93), op=ease((p - 0.55) / 0.15), color=(255, 200, 120))
+        return f
+    if name == "cycles":  # Penrose: one universe after another, each one's end becomes the next one's beginning
+        f = (f * 0.5).astype(np.uint8)
+        n = 4
+        wseg = W * 0.86 / n
+        for k in range(n):
+            e = ease((p - 0.06 - k * 0.2) / 0.22)
+            if e <= 0:
+                continue
+            x0 = W * 0.07 + k * wseg
+            pts_top = [(x0 + wseg * u * e, H * 0.5 - 170 * math.sin(u * math.pi / 2) ** 0.8) for u in np.linspace(0, 1, 40)]
+            pts_bot = [(x, 2 * H * 0.5 - y) for x, y in pts_top]
+            col = (120, 190, 255) if k % 2 == 0 else (230, 200, 140)
+            cv2.polylines(f, [np.array(pts_top, np.int32)], False, col, 3, cv2.LINE_AA)
+            cv2.polylines(f, [np.array(pts_bot, np.int32)], False, col, 3, cv2.LINE_AA)
+            add_glow(f, x0, H * 0.5, 26, (255, 235, 200), e)  # each one's Big Bang
+        draw_text(f, "ONE UNIVERSE AFTER ANOTHER", 54, (0.5, 0.12), op=ease(p / 0.12), color=(255, 200, 120))
+        draw_text(f, "...WITHOUT END", 46, (0.5, 0.86), op=ease((p - 0.75) / 0.12))
+        return f
     if name.startswith("cmb_"):
         return cmb(name[4:], t, D, f)
     if name == "rewind":  # the music-first intro: time runs back from today to 1964 while the stars rush past

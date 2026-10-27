@@ -202,6 +202,14 @@ def plan(edit, tl, voice_wav=None):
         sec_end = total if nxt is None else heads[nxt]["t"] if nxt in cards else heads[nxt]["first"]
         if sid in cards:
             c0 = h["t"]
+            if k == first_card and title and edit.get("channel"):  # the channel's own intro sting, after the hook
+                ch = edit["channel"]
+                d1 = float(ch.get("dur", 3.2))
+                items.append({"kind": "gfx", "sec": sid, "t0": c0, "t1": c0 + d1, "gfx": ch.get("gfx", "channel"),
+                              "q": edit["bg_query"], "trans": "dip"})
+                sfx += [("whoosh_big", c0 - 0.5, -2), ("sting", c0 + 0.35, 0), ("impact", c0 + 1.25, -4)]
+                mus.append({"kind": "swell", "t0": c0 - 0.3, "peak": c0 + 0.5, "t1": c0 + d1 + 0.6, "db": 6.0})
+                c0 += d1
             if k == first_card and title:
                 items.append({"kind": "title", "sec": sid, "t0": c0, "t1": c0 + 2.4, "ttl": title,
                               "q": edit["card_query"], "trans": "dip"})
@@ -486,7 +494,8 @@ def camera(fr, it, t, D):
     return cv2.warpAffine(fr, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
 
 
-OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "photo"}
+OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "photo",
+           "channel", "converge", "recombination", "stretch", "notebook", "two_theories", "no_boundary", "cycles"}
 
 
 def own_gfx(it):

@@ -1,0 +1,277 @@
+{
+ "style": "v3",
+ "lead_in": 4.1,
+ "title": {
+  "kicker": "what was there",
+  "main": "Before the Big Bang?"
+ },
+ "cards": {
+  "ch1": [
+   "",
+   "THE UNIVERSE HAS A *BIRTHDAY*"
+  ],
+  "ch2": [
+   "",
+   "A *PRIEST* SAID IT FIRST"
+  ],
+  "ch3": [
+   "",
+   "A NAME FROM ITS BIGGEST *CRITIC*"
+  ],
+  "ch4": [
+   "",
+   "THE OLDEST LIGHT IS *ALL AROUND US*"
+  ],
+  "ch5": [
+   "",
+   "IT GREW *10²⁶* TIMES IN A FLASH"
+  ],
+  "ch6": [
+   "",
+   "WHERE *PHYSICS* BREAKS"
+  ],
+  "ch7": [
+   "",
+   "THE HUNT FOR *CLUES*"
+  ],
+  "ch8": [
+   "",
+   "MAYBE THERE WAS NO *\"BEFORE\"*"
+  ],
+  "ch9": [
+   "",
+   "MAYBE THE UNIVERSE *BOUNCED*"
+  ],
+  "ch10": [
+   "",
+   "ONE BUBBLE AMONG *MANY*"
+  ]
+ },
+ "count_total": 10,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "ch1",
+   "track": "Long_Note_Two.mp3"
+  },
+  {
+   "from": "ch3",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "ch5",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "ch7",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "ch8",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "ch10",
+   "track": "Ossuary_5_-_Rest.mp3"
+  },
+  {
+   "from": "ending",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "faint distant galaxies in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {
+  "opening/0": "eso_uhd_alma3_2014#0",
+  "opening/1": "eso_alma-array-uhd1#0",
+  "opening/4": "eso_almatimelapse12k#0"
+ },
+ "ban": [
+  "esahubble_heic1711a#0",
+  "esahubble_heic1803c#1",
+  "esahubble_heic1817b#0",
+  "esahubble_heic1819a#0",
+  "esahubble_heic2013b#0",
+  "esahubble_heic2016a#0",
+  "esahubble_heic2102a#0",
+  "esahubble_heic2108d#0",
+  "esahubble_heic2208b#0",
+  "esahubble_heic2603b#0",
+  "esahubble_potw2423a",
+  "esahubble_potw2542a#0",
+  "esahubble_v-r-aquarii_2#0",
+  "esawebb_potm2209a#0",
+  "esawebb_potm2509a#0",
+  "esawebb_potm2511a#0",
+  "esawebb_weic2219b#1",
+  "esawebb_weic2517c#0",
+  "esawebb_weic2612c#0",
+  "eso_adaptiveopticsandmask#0",
+  "eso_assembly-1-mtr-01-cc-am_iris2#0",
+  "eso_eso1134b#0",
+  "eso_eso1151e#0",
+  "eso_eso1422b#0",
+  "eso_eso1509a#0",
+  "eso_eso1601a#0",
+  "eso_eso1606b",
+  "eso_eso1614a",
+  "eso_eso1637a#0",
+  "eso_eso1641a#0",
+  "eso_eso1701c#0",
+  "eso_eso1708c#0",
+  "eso_eso1709b#0",
+  "eso_eso1709c#0",
+  "eso_eso1741b#0",
+  "eso_eso1814b#0",
+  "eso_eso1817b",
+  "eso_eso1821b#0",
+  "eso_eso1824b#0",
+  "eso_eso1825c#0",
+  "eso_eso1825f#0",
+  "eso_eso1835a#2",
+  "eso_eso1914c#0",
+  "eso_eso1919c#0",
+  "eso_eso1920d#0",
+  "eso_eso2002b#0",
+  "eso_eso2011a#2",
+  "eso_eso2014a#3",
+  "eso_eso2110c#0",
+  "eso_eso2110d#0",
+  "eso_eso2110f#0",
+  "eso_eso2110g#0",
+  "eso_eso2111c#0",
+  "eso_eso2112b#0",
+  "eso_eso2112c#0",
+  "eso_eso2112d#0",
+  "eso_eso2117a",
+  "eso_eso2117b#0",
+  "eso_eso2205b#0",
+  "eso_eso2305a#5",
+  "eso_eso2314c#0",
+  "eso_eso2502d#0",
+  "eso_eso2513a#0",
+  "eso_eso2519c#0",
+  "eso_eso2606a#1",
+  "eso_eso2606c#0",
+  "eso_eso2609b#0",
+  "eso_eso2612d#0",
+  "eso_esocast82b#0",
+  "eso_esopia00064sites#0",
+  "eso_lasillatimelapseeulerntt#0",
+  "eso_mars_4k#0",
+  "eso_moon_evolution_p1#0",
+  "eso_potw2443a",
+  "eso_rossiter-mclaughlin#0",
+  "eso_uhd-cm-vlt2014-2#0",
+  "eso_uhd_vlt6_2014#0",
+  "eso_wotu-supernovae-win2",
+  "svs_12019-win1#0",
+  "svs_12019-win2#0",
+  "svs_12605#0",
+  "svs_12605-win2#0",
+  "svs_12605-win3#1",
+  "svs_12854",
+  "svs_12854#0",
+  "svs_12854-win1",
+  "svs_12854-win1#0",
+  "svs_12854-win2",
+  "svs_12854-win3",
+  "svs_12854-win3#0",
+  "svs_12994-win1",
+  "svs_13078#0",
+  "svs_13483#1",
+  "svs_13619#1",
+  "svs_13778#0",
+  "svs_13991#0",
+  "svs_14103#0",
+  "svs_14163#0",
+  "svs_14309#0",
+  "svs_14347#7",
+  "svs_14399",
+  "svs_14399-win1",
+  "svs_14399-win2",
+  "svs_14399-win3",
+  "svs_14399-win3#0",
+  "svs_14402",
+  "svs_14531#0",
+  "svs_14666#0",
+  "svs_14666#3",
+  "svs_14701#0",
+  "svs_14710#0",
+  "svs_14719",
+  "svs_14719#0",
+  "svs_14719-win1",
+  "svs_14719-win2",
+  "svs_14719-win3",
+  "svs_14761#0",
+  "svs_14846#0",
+  "svs_14921#2",
+  "svs_14935#0",
+  "svs_14960#0",
+  "svs_14961#0",
+  "svs_15041#3",
+  "svs_15051-win1",
+  "svs_15095#0",
+  "svs_20310#0",
+  "svs_20315",
+  "svs_20395#0",
+  "svs_20398#0",
+  "svs_20404#0",
+  "svs_30020#0",
+  "svs_31346#0",
+  "svs_31361#0",
+  "svs_31365#0",
+  "svs_31376#0",
+  "svs_4141",
+  "svs_4142",
+  "svs_4143",
+  "svs_4144",
+  "svs_4145",
+  "svs_4557",
+  "svs_4557#0",
+  "svs_4580#0",
+  "svs_4645",
+  "svs_4645-win1",
+  "svs_4645-win2",
+  "svs_4645-win3",
+  "svs_4646",
+  "svs_4646-win1",
+  "svs_4646-win1#0",
+  "svs_4646-win2",
+  "svs_4646-win3",
+  "svs_4649#0",
+  "svs_4807#0",
+  "svs_5157",
+  "svs_5157-win1",
+  "svs_5157-win2",
+  "svs_5157-win3",
+  "svs_5273#0",
+  "svs_5503#2",
+  "svs_5552#0",
+  "svs_5627#0"
+ ],
+ "crops": {},
+ "exclude": {},
+ "intro": {
+  "dur": 3.6,
+  "gfx": "rewind",
+  "track": "Interloper.mp3",
+  "db": 12.0
+ }
+}
