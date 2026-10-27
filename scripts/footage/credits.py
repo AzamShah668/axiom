@@ -18,6 +18,7 @@ ARCHIVE = {
     "esahubble": "ESA/Hubble (esahubble.org), CC BY 4.0",
     "esawebb": "ESA/Webb (esawebb.org), CC BY 4.0",
     "svs": "NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov)",
+    "nasa": "NASA Image and Video Library (images.nasa.gov)",
 }
 GFX_IMAGES = {"mw_spiral": "milkyway", "halo_expand": "milkyway", "halo_full": "milkyway", "galactic_orbit": "milkyway",
               "spectrum": "chandra_tel", "wind": "earth", "bh_shrink": "earth", "eht_m87": "eht_m87", "eht_sgra": "eht_sgra"}
@@ -39,12 +40,12 @@ def main():
         s = src[it["clip"]]
         by.setdefault(s["source"], {})[s["key"].split(":", 1)[1]] = s["title"]
     full = ["Footage used in this video (archive video IDs):"]
-    for k in ("eso", "esahubble", "esawebb", "svs"):
+    for k in ("eso", "esahubble", "esawebb", "svs", "nasa"):
         if k in by:
             full.append(f"- {ARCHIVE[k]}: " + ", ".join(sorted(by[k])))
     if a.full:
         open(a.full, "w").write("\n".join(full) + "\n")
-    lines = ["Footage credits: " + "; ".join(f"{ARCHIVE[k]} ({len(by[k])} videos)" for k in ("eso", "esahubble", "esawebb", "svs")
+    lines = ["Footage credits: " + "; ".join(f"{ARCHIVE[k]} ({len(by[k])} videos)" for k in ("eso", "esahubble", "esawebb", "svs", "nasa")
                                              if k in by) + ". Full list of videos in the pinned comment."]
     imgs = sorted({GFX_IMAGES[it["gfx"]] for it in cl["items"] if it.get("gfx") in GFX_IMAGES})
     if imgs and a.assets and os.path.exists(a.assets):

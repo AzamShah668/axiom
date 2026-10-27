@@ -15,7 +15,6 @@ N एक second से भी कम में @ hero | value=10²⁶ | unit=tim
 C एक second से भी कम में | In less than a second, the universe grew 10²⁶ times bigger
 V लेकिन इस कहानी का @ deep black space with a faint glow | a single point of light in darkness {hold}
 C लेकिन इस कहानी का | But the biggest secret of this story hides in one question
-M Big Bang से पहले, आख़िर | breath=1.0 | riser=1.4 | impact=impact | trans=flare
 K Big Bang से पहले, आख़िर @ WHAT WAS THERE / *BEFORE THE BIG BANG?* [क्या था]
 C Big Bang से पहले, आख़िर | What was there before the Big Bang?
 V इस सवाल तक पहुँचने @ a large radio antenna under the sky | radio telescope dishes at dusk {hold}
@@ -38,7 +37,6 @@ S Signal फिर भी | hiss | d=2.6 | gain=-5
 C Signal फिर भी | The signal was still there
 V वह कोई ख़राबी @ slow flight through a star field | stars drifting in deep space
 C वह कोई ख़राबी | It was not a fault. It was the oldest light in the universe...
-M Big Bang की गूँज | breath=1.2 | riser=1.6 | impact=impact | trans=flare
 G Big Bang की गूँज @ cmb_sphere_r
 K Big Bang की गूँज @ *THE ECHO OF THE BIG BANG* | kicker=the oldest light in the universe
 C Big Bang की गूँज | ...the echo of the Big Bang
@@ -136,6 +134,14 @@ G उन्नीस सौ अठहत्तर में @ photo:Holmdel_Horn
 C उन्नीस सौ अठहत्तर में | In 1978, Penzias and Wilson won the Nobel Prize for this discovery
 G और पुराने TV की @ tv_static
 C और पुराने TV की | And about 1 percent of the black-and-white static on old TVs, with no channel tuned...
+V उन्नीस सौ नवासी @ the 1989 launch of NASA's COBE satellite | a rocket lifting off at dawn {hold}
+L ख़ास satellite @ COBE | NASA satellite · launched 18 November 1989 · archive footage
+C उन्नीस सौ नवासी | Then, in 1989, NASA launched a satellite built for this very light: COBE
+V उसने पहली बार @ engineers in a clean room with the COBE satellite | a satellite being assembled
+C उसने पहली बार | For the first time, it mapped this light across the whole sky
+V और इस नक्शे @ John Mather interviewed in 1989 | a scientist speaking in his office
+L John Mather @ JOHN MATHER | COBE scientist · Nobel Prize in Physics 2006
+C और इस नक्शे | And for this map, John Mather and George Smoot won the Nobel Prize too
 C यही रोशनी थी | ...was this very light
 C Big Bang की गूँज, घर | The echo of the Big Bang, on the TV at home
 G लेकिन इस रोशनी @ cmb_map
@@ -204,7 +210,8 @@ C दुनिया भर में | Scientists around the world celebrated
 V लेकिन कुछ महीनों @ dust in the Milky Way | dark dust lanes in our galaxy
 K लेकिन कुछ महीनों @ THE SIGNAL [निशान] / *WAS DUST* [धूल] | kicker=months later
 C लेकिन कुछ महीनों | But months later it turned out the signal had been made by dust in our own galaxy
-V फिर आया James Webb @ the James Webb Space Telescope in space | Webb telescope unfolding
+V फिर आया James Webb @ the launch of the James Webb Space Telescope | an Ariane 5 rocket lifting off {hold}
+L फिर आया James Webb @ JAMES WEBB | launch · 25 December 2021 · NASA footage
 C फिर आया James Webb | Then came the James Webb Space Telescope
 V दो हज़ार पच्चीस में @ zooming into a deep field of distant galaxies | the most distant galaxies seen by Webb
 N दो हज़ार पच्चीस में @ hero | value=280 | from=0 | unit=million years after the Big Bang | kicker=the farthest galaxy · Webb 2025 | land=अट्ठाईस करोड़ | over

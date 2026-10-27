@@ -1,6 +1,6 @@
 {
  "style": "v3",
- "lead_in": 4.1,
+ "lead_in": 0.5,
  "title": {
   "kicker": "what was there",
   "main": "Before the Big Bang?"
@@ -100,7 +100,12 @@
  "pin": {
   "opening/4": "eso_uhd_alma3_2014#0",
   "opening/5": "eso_alma-array-uhd1#0",
-  "opening/7": "eso_almatimelapse12k#0"
+  "opening/7": "eso_almatimelapse12k#0",
+  "ch4/8": "svs_14715-launch#2",
+  "ch4/9": "svs_10529-cobe89#1",
+  "ch4/10": "svs_10529-mather#0",
+  "ch4/11": "svs_10529-cobe89#0",
+  "ch7/6": "nasa_webb-launch#3"
  },
  "ban": [
   "esahubble_heic1711a#0",
@@ -274,13 +279,6 @@
  ],
  "crops": {},
  "exclude": {},
- "intro": {
-  "dur": 3.6,
-  "gfx": "rewind:big",
-  "track": "Interloper.mp3",
-  "db": 12.0,
-  "start": 2.0
- },
  "channel": {
   "dur": 3.2,
   "gfx": "channel"

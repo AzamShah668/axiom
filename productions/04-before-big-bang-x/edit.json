@@ -1,6 +1,6 @@
 {
  "style": "v3",
- "lead_in": 4.1,
+ "lead_in": 0.5,
  "title": {
   "kicker": "what was there",
   "main": "Before the Big Bang?"
@@ -100,7 +100,12 @@
  "pin": {
   "opening/4": "eso_uhd_alma3_2014#0",
   "opening/5": "eso_alma-array-uhd1#0",
-  "opening/7": "eso_almatimelapse12k#0"
+  "opening/7": "eso_almatimelapse12k#0",
+  "ch4/8": "svs_14715-launch#2",
+  "ch4/9": "svs_10529-cobe89#1",
+  "ch4/10": "svs_10529-mather#0",
+  "ch4/11": "svs_10529-cobe89#0",
+  "ch7/6": "nasa_webb-launch#3"
  },
  "ban": [
   "esahubble_heic1711a#0",
@@ -274,13 +279,6 @@
  ],
  "crops": {},
  "exclude": {},
- "intro": {
-  "dur": 3.6,
-  "gfx": "rewind:big",
-  "track": "Interloper.mp3",
-  "db": 12.0,
-  "start": 2.0
- },
  "channel": {
   "dur": 3.2,
   "gfx": "channel"
@@ -530,22 +528,6 @@
       "value": "ARNO PENZIAS & ROBERT WILSON",
       "sub": "radio astronomers · Bell Labs · 1964"
      }
-    }
-   ],
-   "m": [
-    {
-     "at": "Big Bang से पहले, आख़िर",
-     "breath": 1.0,
-     "riser": 1.4,
-     "impact": "impact",
-     "trans": "flare"
-    },
-    {
-     "at": "Big Bang की गूँज",
-     "breath": 1.2,
-     "riser": 1.6,
-     "impact": "impact",
-     "trans": "flare"
     }
    ],
    "s": [
@@ -1026,6 +1008,28 @@
      "gfx": "tv_static"
     },
     {
+     "at": "उन्नीस सौ नवासी",
+     "opt": "hold",
+     "q": [
+      "the 1989 launch of NASA's COBE satellite",
+      "a rocket lifting off at dawn"
+     ]
+    },
+    {
+     "at": "उसने पहली बार",
+     "q": [
+      "engineers in a clean room with the COBE satellite",
+      "a satellite being assembled"
+     ]
+    },
+    {
+     "at": "और इस नक्शे",
+     "q": [
+      "John Mather interviewed in 1989",
+      "a scientist speaking in his office"
+     ]
+    },
+    {
      "at": "लेकिन इस रोशनी",
      "gfx": "cmb_map"
     }
@@ -1064,6 +1068,18 @@
      "text": "And about 1 percent of the black-and-white static on old TVs, with no channel tuned..."
     },
     {
+     "at": "उन्नीस सौ नवासी",
+     "text": "Then, in 1989, NASA launched a satellite built for this very light: COBE"
+    },
+    {
+     "at": "उसने पहली बार",
+     "text": "For the first time, it mapped this light across the whole sky"
+    },
+    {
+     "at": "और इस नक्शे",
+     "text": "And for this map, John Mather and George Smoot won the Nobel Prize too"
+    },
+    {
      "at": "यही रोशनी थी",
      "text": "...was this very light"
     },
@@ -1091,6 +1107,22 @@
       "unit": "°C",
       "kicker": "the oldest light today",
       "land": "सत्तर"
+     }
+    },
+    {
+     "at": "ख़ास satellite",
+     "num": {
+      "template": "name",
+      "value": "COBE",
+      "sub": "NASA satellite · launched 18 November 1989 · archive footage"
+     }
+    },
+    {
+     "at": "John Mather",
+     "num": {
+      "template": "name",
+      "value": "JOHN MATHER",
+      "sub": "COBE scientist · Nobel Prize in Physics 2006"
      }
     }
    ]
@@ -1383,9 +1415,10 @@
     },
     {
      "at": "फिर आया James Webb",
+     "opt": "hold",
      "q": [
-      "the James Webb Space Telescope in space",
-      "Webb telescope unfolding"
+      "the launch of the James Webb Space Telescope",
+      "an Ariane 5 rocket lifting off"
      ]
     },
     {
@@ -1461,6 +1494,14 @@
       "template": "name",
       "value": "BICEP2",
       "sub": "telescope · South Pole, Antarctica"
+     }
+    },
+    {
+     "at": "फिर आया James Webb",
+     "num": {
+      "template": "name",
+      "value": "JAMES WEBB",
+      "sub": "launch · 25 December 2021 · NASA footage"
      }
     },
     {
