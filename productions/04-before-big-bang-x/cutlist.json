@@ -39,13 +39,13 @@
    "dir": 1,
    "f0": 108,
    "f1": 242,
-   "shot": "eso_almatimelapse12h#1",
-   "clip": "eso_almatimelapse12h",
-   "ss": 4.2,
+   "shot": "eso_eso1723c#0",
+   "clip": "eso_eso1723c",
+   "ss": 3.38,
    "crop": null,
-   "score": 0.2386,
+   "score": 0.316,
    "ref": "opening/0",
-   "title": "ALMA and artificial satellites (time-lapse)"
+   "title": "Panning across the Orion Nebula"
   },
   {
    "sec": "opening",
@@ -89,13 +89,13 @@
    "dir": 1,
    "f0": 355,
    "f1": 504,
-   "shot": "esawebb_weic2324b#0",
-   "clip": "esawebb_weic2324b",
-   "ss": 3.12,
+   "shot": "esawebb_weic2207b#0",
+   "clip": "esawebb_weic2207b",
+   "ss": 2.75,
    "crop": null,
-   "score": 0.3449,
+   "score": 0.3188,
    "ref": "opening/2",
-   "title": "Hubble and Webb’s views of NGC 346"
+   "title": "Featuring the Southern Ring Nebula (NIRCam and MIRI Images)"
   },
   {
    "sec": "opening",
@@ -139,13 +139,13 @@
    "dir": 1,
    "f0": 734,
    "f1": 866,
-   "shot": "eso_bt_alma2#0",
-   "clip": "eso_bt_alma2",
-   "ss": 0.84,
+   "shot": "eso_almatimelapse12h#1",
+   "clip": "eso_almatimelapse12h",
+   "ss": 4.24,
    "crop": null,
-   "score": 0.3299,
+   "score": 0.3337,
    "ref": "opening/4",
-   "title": "Colour clouds swirl over ALMA"
+   "title": "ALMA and artificial satellites (time-lapse)"
   },
   {
    "sec": "opening",
@@ -186,13 +186,13 @@
    "trans": "cut",
    "f0": 960,
    "f1": 1026,
-   "shot": "svs_20267#0",
-   "clip": "svs_20267",
-   "ss": 0.25,
+   "shot": "svs_12740#2",
+   "clip": "svs_12740",
+   "ss": 26.97,
    "crop": null,
-   "score": 0.3452,
+   "score": 0.346,
    "ref": "opening/6",
-   "title": "Neutron Star Animations"
+   "title": "Doomed Neutron Stars Create Blast of Light and Gravitational Waves"
   },
   {
    "sec": "opening",
@@ -211,13 +211,13 @@
    "dir": -1,
    "f0": 1026,
    "f1": 1131,
-   "shot": "eso_alma2011chajtimelapse1#0",
-   "clip": "eso_alma2011chajtimelapse1",
-   "ss": 3.5,
+   "shot": "eso_Geminidstimelapse1#0",
+   "clip": "eso_Geminidstimelapse1",
+   "ss": 7.35,
    "crop": null,
-   "score": 0.354,
+   "score": 0.36,
    "ref": "opening/7",
-   "title": "ALMA time-lapse 2011 (part 1)"
+   "title": "Geminids time-lapse 1"
   },
   {
    "sec": "opening",
@@ -236,13 +236,13 @@
    "dir": -1,
    "f0": 1131,
    "f1": 1240,
-   "shot": "eso_eso2519b#0",
-   "clip": "eso_eso2519b",
-   "ss": 3.8,
+   "shot": "eso_alma2011chajtimelapse1#0",
+   "clip": "eso_alma2011chajtimelapse1",
+   "ss": 3.44,
    "crop": null,
-   "score": 0.346,
+   "score": 0.354,
    "ref": "opening/8",
-   "title": "Timelapse of the VLTI lasers (colour)"
+   "title": "ALMA time-lapse 2011 (part 1)"
   },
   {
    "sec": "opening",
@@ -366,13 +366,13 @@
    "dir": 1,
    "f0": 1565,
    "f1": 1651,
-   "shot": "esawebb_potm2301a#0",
-   "clip": "esawebb_potm2301a",
+   "shot": "esahubble_potm2606a#0",
+   "clip": "esahubble_potm2606a",
    "ss": 4.18,
    "crop": null,
-   "score": 0.2978,
+   "score": 0.3661,
    "ref": "opening/13",
-   "title": "Pan: A Spiral Amongst Thousands"
+   "title": "Pan video: NGC 6723"
   },
   {
    "sec": "opening",
@@ -388,13 +388,13 @@
    "trans": "flare",
    "f0": 1651,
    "f1": 1701,
-   "shot": "esahubble_heic1801a#1",
-   "clip": "esahubble_heic1801a",
-   "ss": 8.18,
+   "shot": "eso_eso2507c#1",
+   "clip": "eso_eso2507c",
+   "ss": 5.63,
    "crop": null,
-   "score": 0.4033,
+   "score": 0.3466,
    "ref": "opening/14",
-   "title": "Zooming into the galaxy cluster A1758N"
+   "title": "Zooming in on JADES-GS-z14-0"
   },
   {
    "sec": "opening",
@@ -438,13 +438,13 @@
    "dir": 1,
    "f0": 1799,
    "f1": 1869,
-   "shot": "esahubble_heic1803c#0",
-   "clip": "esahubble_heic1803c",
-   "ss": 0.5,
+   "shot": "esawebb_potm2301a#0",
+   "clip": "esawebb_potm2301a",
+   "ss": 4.45,
    "crop": null,
-   "score": 0.3771,
+   "score": 0.348,
    "ref": "opening/16",
-   "title": "The different colours of NGC 3344"
+   "title": "Pan: A Spiral Amongst Thousands"
   },
   {
    "sec": "opening",
@@ -598,13 +598,13 @@
    "trans": "cut",
    "f0": 2500,
    "f1": 2685,
-   "shot": "eso_eso2507c#0",
-   "clip": "eso_eso2507c",
-   "ss": 1.61,
+   "shot": "esahubble_heic1801a#1",
+   "clip": "esahubble_heic1801a",
+   "ss": 8.18,
    "crop": null,
-   "score": 0.3476,
+   "score": 0.4033,
    "ref": "ch1/5",
-   "title": "Zooming in on JADES-GS-z14-0"
+   "title": "Zooming into the galaxy cluster A1758N"
   },
   {
    "sec": "ch1",
@@ -2082,11 +2082,11 @@
    "trans": "cut",
    "f0": 10200,
    "f1": 10694,
-   "shot": "eso_eso2507c#1",
+   "shot": "eso_eso2507c#0",
    "clip": "eso_eso2507c",
-   "ss": 5.63,
+   "ss": 1.61,
    "crop": null,
-   "score": 0.3466,
+   "score": 0.3476,
    "ref": "ch6/2",
    "title": "Zooming in on JADES-GS-z14-0"
   },
@@ -3810,22 +3810,6 @@
   }
  ],
  "ovl": [
-  {
-   "kind": "num",
-   "t0": 4.1,
-   "t1": 7.066,
-   "num": {
-    "template": "hero",
-    "value": "13.8",
-    "from": "0",
-    "unit": "billion years ago",
-    "kicker": "everything began",
-    "land": "आठ अरब",
-    "land_t": 0.766,
-    "count_s": 0.616,
-    "dur": 2.966
-   }
-  },
   {
    "kind": "num",
    "t0": 12.076,
@@ -5636,19 +5620,6 @@
    "sub_drop",
    3.6,
    -2
-  ],
-  [
-   "roll",
-   4.25,
-   0,
-   {
-    "d": 0.62
-   }
-  ],
-  [
-   "hit",
-   4.856,
-   0
   ],
   [
    "tick",
