@@ -494,7 +494,7 @@ def camera(fr, it, t, D):
     return cv2.warpAffine(fr, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
 
 
-OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "photo",
+OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "rewind:big", "photo",
            "channel", "converge", "recombination", "stretch", "notebook", "two_theories", "no_boundary", "cycles"}
 
 

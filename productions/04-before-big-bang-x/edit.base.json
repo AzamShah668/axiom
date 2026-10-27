@@ -98,9 +98,9 @@
   "faint distant galaxies in dark space"
  ],
  "pin": {
-  "opening/0": "eso_uhd_alma3_2014#0",
-  "opening/1": "eso_alma-array-uhd1#0",
-  "opening/4": "eso_almatimelapse12k#0"
+  "opening/4": "eso_uhd_alma3_2014#0",
+  "opening/5": "eso_alma-array-uhd1#0",
+  "opening/7": "eso_almatimelapse12k#0"
  },
  "ban": [
   "esahubble_heic1711a#0",
@@ -274,7 +274,7 @@
  "exclude": {},
  "intro": {
   "dur": 3.6,
-  "gfx": "rewind",
+  "gfx": "rewind:big",
   "track": "Interloper.mp3",
   "db": 12.0,
   "start": 2.0

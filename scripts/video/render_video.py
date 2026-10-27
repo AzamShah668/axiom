@@ -1150,7 +1150,7 @@ def gfx(name, t, D, sh):
         return f
     if name.startswith("cmb_"):
         return cmb(name[4:], t, D, f)
-    if name == "rewind":  # the music-first intro: time runs back from today to 1964 while the stars rush past
+    if name in ("rewind", "rewind:big"):  # music-first intro: time runs back (to 1964, or :big to 13.8 billion years ago)
         rng = np.random.default_rng(64)
         n = 220
         ang, r0, sp = rng.uniform(0, 2 * np.pi, n), rng.uniform(0, 1, n), rng.uniform(0.5, 1.2, n)
@@ -1165,9 +1165,16 @@ def gfx(name, t, D, sh):
             cv2.line(f, (int(W / 2 + c * d0), int(H / 2 + sn * d0 * 0.75)), (int(W / 2 + c * d1), int(H / 2 + sn * d1 * 0.75)),
                      col, 2, cv2.LINE_AA)
         add_glow(f, W / 2, H / 2, 260, (255, 200, 140), 0.25 + 0.4 * ease(p))
-        yr = int(round(2026 - (2026 - 1964) * ease(min(1.0, p / 0.82))))
         sc = 1.0 + 0.12 * max(0.0, 1 - abs(p - 0.86) / 0.06)
-        draw_text(f, str(yr), int(230 * sc), (0.5, 0.5), color=(255, 205, 120))
+        if name == "rewind":
+            yr = int(round(2026 - (2026 - 1964) * ease(min(1.0, p / 0.82))))
+            draw_text(f, str(yr), int(230 * sc), (0.5, 0.5), color=(255, 205, 120))
+        else:  # years ago, on a log scale: 1 -> 13.8 billion
+            ago = 10 ** (math.log10(1.38e10) * ease(min(1.0, p / 0.82)))
+            num, unit = (f"{ago / 1e9:.1f}", "BILLION YEARS AGO") if ago >= 1e9 else \
+                (f"{ago / 1e6:,.0f}", "MILLION YEARS AGO") if ago >= 1e6 else (f"{ago:,.0f}", "YEARS AGO")
+            draw_text(f, num, int(210 * sc), (0.5, 0.46), color=(255, 205, 120))
+            draw_text(f, unit, 54, (0.5, 0.62), color=(240, 240, 240), font="Montserrat")
         fl = ease((p - 0.93) / 0.07)
         if fl > 0:
             f = np.clip(f.astype(np.float32) + fl * 220, 0, 255).astype(np.uint8)

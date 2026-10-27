@@ -98,9 +98,9 @@
   "faint distant galaxies in dark space"
  ],
  "pin": {
-  "opening/0": "eso_uhd_alma3_2014#0",
-  "opening/1": "eso_alma-array-uhd1#0",
-  "opening/4": "eso_almatimelapse12k#0"
+  "opening/4": "eso_uhd_alma3_2014#0",
+  "opening/5": "eso_alma-array-uhd1#0",
+  "opening/7": "eso_almatimelapse12k#0"
  },
  "ban": [
   "esahubble_heic1711a#0",
@@ -274,7 +274,7 @@
  "exclude": {},
  "intro": {
   "dur": 3.6,
-  "gfx": "rewind",
+  "gfx": "rewind:big",
   "track": "Interloper.mp3",
   "db": 12.0,
   "start": 2.0
@@ -290,12 +290,42 @@
      "at": null,
      "opt": "hold",
      "q": [
+      "a flash of light expanding in space",
+      "an explosion of light filling space"
+     ]
+    },
+    {
+     "at": "हर तारा",
+     "q": [
+      "flight through thousands of galaxies",
+      "zooming out from galaxies to the large-scale universe"
+     ]
+    },
+    {
+     "at": "एक second से भी कम में",
+     "q": [
+      "rapid expansion of the early universe",
+      "a bright flash expanding outward"
+     ]
+    },
+    {
+     "at": "लेकिन इस कहानी का",
+     "opt": "hold",
+     "q": [
+      "deep black space with a faint glow",
+      "a single point of light in darkness"
+     ]
+    },
+    {
+     "at": "इस सवाल तक पहुँचने",
+     "opt": "hold",
+     "q": [
       "a large radio antenna under the sky",
       "radio telescope dishes at dusk"
      ]
     },
     {
-     "at": "America के New Jersey",
+     "at": "America के New Jersey में",
      "q": [
       "a radio telescope dish turning against the sky",
       "radio dishes moving in unison"
@@ -306,28 +336,28 @@
      "gfx": "photo:Arno_Penzias"
     },
     {
-     "at": "उनके antenna में",
+     "at": "एक बड़े radio antenna",
      "q": [
       "a radio telescope scanning the night sky timelapse",
       "radio dishes under a starry sky"
      ]
     },
     {
-     "at": "दिन हो या रात",
+     "at": "दिन में भी",
      "q": [
       "day turning to night over an observatory timelapse",
       "the sky rotating over radio telescopes"
      ]
     },
     {
-     "at": "उन्हें लगा",
+     "at": "उन्होंने antenna साफ़",
      "q": [
       "close-up of a telescope structure",
       "an observatory dome closing at dawn"
      ]
     },
     {
-     "at": "वह सरसराहट कोई",
+     "at": "वह कोई ख़राबी",
      "q": [
       "slow flight through a star field",
       "stars drifting in deep space"
@@ -338,42 +368,14 @@
      "gfx": "cmb_sphere_r"
     },
     {
-     "at": "इसी गूँज ने",
+     "at": "और इसी गूँज ने",
      "q": [
       "zooming out from galaxies to the large-scale universe",
       "flight through thousands of galaxies"
      ]
     },
     {
-     "at": "आज हम जानते",
-     "q": [
-      "the first galaxies forming in the early universe",
-      "simulation of the early universe"
-     ]
-    },
-    {
-     "at": "और scientists के हिसाब",
-     "q": [
-      "a flash of light expanding in space",
-      "rapid expansion of the early universe"
-     ]
-    },
-    {
-     "at": "इस खोज ने",
-     "q": [
-      "telescope domes at sunset",
-      "an observatory at dusk timelapse"
-     ]
-    },
-    {
-     "at": "लेकिन इंसान के",
-     "q": [
-      "observatory under the Milky Way timelapse",
-      "the Milky Way rising over a dark landscape"
-     ]
-    },
-    {
-     "at": "ब्रह्मांड शुरू होने",
+     "at": "और शायद, उस से",
      "opt": "hold",
      "q": [
       "deep black space with a faint glow",
@@ -384,71 +386,97 @@
    "c": [
     {
      "at": null,
-     "text": "1964"
+     "text": "13.8 billion years ago, the universe began"
     },
     {
-     "at": "America के New Jersey",
-     "text": "In New Jersey, America, two scientists were cleaning pigeon droppings out of a giant radio antenna"
+     "at": "हर तारा",
+     "text": "Every star, every galaxy, and maybe even time itself"
     },
     {
-     "at": "Arno Penzias",
-     "text": "Arno Penzias and Robert Wilson"
+     "at": "एक second से भी कम में",
+     "text": "In less than a second, the universe grew 10²⁶ times bigger"
     },
     {
-     "at": "उनके antenna में",
-     "text": "Their antenna picked up a strange hiss that would not go away"
+     "at": "लेकिन इस कहानी का",
+     "text": "But the biggest secret of this story hides in one question"
     },
     {
-     "at": "दिन हो या रात",
-     "text": "Day or night, wherever the antenna pointed, the sound stayed the same"
+     "at": "Big Bang से पहले, आख़िर",
+     "text": "What was there before the Big Bang?"
     },
     {
-     "at": "उन्हें लगा",
-     "text": "They thought the pigeons and their nests were to blame"
+     "at": "उन्नीस सौ चौंसठ",
+     "text": "1964",
+     "big": true
     },
     {
-     "at": "कबूतर हटाए गए",
-     "text": "The pigeons were removed. The antenna was scrubbed clean"
+     "at": "इस सवाल तक पहुँचने",
+     "text": "The road to that question opened in 1964"
     },
     {
-     "at": "सरसराहट फिर भी",
-     "text": "The hiss was still there"
+     "at": "America के New Jersey में",
+     "text": "In New Jersey, America, two scientists, Arno Penzias and Robert Wilson..."
     },
     {
-     "at": "वह सरसराहट कोई",
-     "text": "The hiss was not a fault. It was the oldest light in the universe..."
+     "at": "एक बड़े radio antenna",
+     "text": "...were listening to the sky with a large radio antenna"
+    },
+    {
+     "at": "उन्हें एक अजीब सा signal",
+     "text": "They picked up a strange signal, from every direction"
+    },
+    {
+     "at": "दिन में भी",
+     "text": "By day, and by night"
+    },
+    {
+     "at": "उन्होंने antenna साफ़",
+     "text": "They cleaned the antenna and checked every part of it"
+    },
+    {
+     "at": "Signal फिर भी",
+     "text": "The signal was still there"
+    },
+    {
+     "at": "वह कोई ख़राबी",
+     "text": "It was not a fault. It was the oldest light in the universe..."
     },
     {
      "at": "Big Bang की गूँज",
      "text": "...the echo of the Big Bang"
     },
     {
-     "at": "इसी गूँज ने",
-     "text": "That echo proved the universe had a beginning"
+     "at": "और इसी गूँज ने",
+     "text": "And this echo showed humanity the road that leads straight to the beginning..."
     },
     {
-     "at": "आज हम जानते",
-     "text": "Today we know that beginning was 13.8 billion years ago"
-    },
-    {
-     "at": "और scientists के हिसाब",
-     "text": "And according to scientists, in its very first instant, it grew 10²⁶ times bigger"
-    },
-    {
-     "at": "इस खोज ने",
-     "text": "The discovery later won a Nobel Prize"
-    },
-    {
-     "at": "लेकिन इंसान के",
-     "text": "But it also left humanity with its biggest question"
-    },
-    {
-     "at": "ब्रह्मांड शुरू होने",
-     "text": "What was there before the universe began?"
+     "at": "और शायद, उस से",
+     "text": "...and perhaps, to what came before it"
     }
    ],
    "sfx": [],
    "n": [
+    {
+     "at": "तेरह point आठ",
+     "num": {
+      "template": "hero",
+      "value": "13.8",
+      "from": "0",
+      "unit": "billion years ago",
+      "kicker": "everything began",
+      "land": "आठ अरब"
+     }
+    },
+    {
+     "at": "एक second से भी कम में",
+     "num": {
+      "template": "hero",
+      "value": "10²⁶",
+      "unit": "times bigger",
+      "kicker": "in less than a second",
+      "land": "छब्बीस"
+     }
+    },
     {
      "at": "Arno Penzias",
      "num": {
@@ -456,40 +484,49 @@
       "value": "ARNO PENZIAS & ROBERT WILSON",
       "sub": "radio astronomers · Bell Labs · 1964"
      }
-    },
-    {
-     "at": "आज हम जानते",
-     "num": {
-      "template": "hero",
-      "value": "13.8",
-      "from": "0",
-      "unit": "billion years ago",
-      "kicker": "it began",
-      "land": "आठ अरब"
-     }
-    },
-    {
-     "at": "उसके पहले ही",
-     "num": {
-      "template": "hero",
-      "value": "10²⁶",
-      "unit": "times bigger",
-      "kicker": "in its first instant",
-      "land": "छब्बीस"
-     }
     }
    ],
    "k": [
     {
-     "at": "उनके antenna में",
+     "at": "हर तारा",
      "lines": [
       {
-       "text": "A STRANGE HISS",
-       "at": "सरसराहट"
+       "text": "EVERY STAR",
+       "at": "तारा"
       },
       {
-       "text": "*THAT WOULD NOT GO AWAY*",
-       "at": "जाती ही नहीं"
+       "text": "EVERY GALAXY",
+       "at": "galaxy"
+      },
+      {
+       "text": "*MAYBE EVEN TIME*",
+       "at": "वक़्त"
+      }
+     ]
+    },
+    {
+     "at": "Big Bang से पहले, आख़िर",
+     "lines": [
+      {
+       "text": "WHAT WAS THERE",
+       "at": "Big Bang से पहले, आख़िर"
+      },
+      {
+       "text": "*BEFORE THE BIG BANG?*",
+       "at": "क्या था"
+      }
+     ]
+    },
+    {
+     "at": "उन्हें एक अजीब सा signal",
+     "lines": [
+      {
+       "text": "A STRANGE SIGNAL",
+       "at": "signal"
+      },
+      {
+       "text": "*FROM EVERY DIRECTION*",
+       "at": "हर तरफ़"
       }
      ]
     },
@@ -502,42 +539,36 @@
       }
      ],
      "kicker": "the oldest light in the universe"
-    },
-    {
-     "at": "ब्रह्मांड शुरू होने",
-     "lines": [
-      {
-       "text": "WHAT WAS THERE",
-       "at": "ब्रह्मांड शुरू होने"
-      },
-      {
-       "text": "*BEFORE THE BIG BANG?*",
-       "at": "आख़िर"
-      }
-     ]
-    }
-   ],
-   "s": [
-    {
-     "at": "उनके antenna में",
-     "type": "hiss",
-     "d": "5.0",
-     "gain": "-3"
-    },
-    {
-     "at": "सरसराहट फिर भी",
-     "type": "hiss",
-     "d": "2.6",
-     "gain": "-5"
     }
    ],
    "m": [
+    {
+     "at": "Big Bang से पहले, आख़िर",
+     "breath": 1.0,
+     "riser": 1.4,
+     "impact": "impact",
+     "trans": "flare"
+    },
     {
      "at": "Big Bang की गूँज",
      "breath": 1.2,
      "riser": 1.6,
      "impact": "impact",
      "trans": "flare"
+    }
+   ],
+   "s": [
+    {
+     "at": "उन्हें एक अजीब सा signal",
+     "type": "hiss",
+     "d": "5.0",
+     "gain": "-3"
+    },
+    {
+     "at": "Signal फिर भी",
+     "type": "hiss",
+     "d": "2.6",
+     "gain": "-5"
     }
    ]
   },
@@ -973,7 +1004,7 @@
    ],
    "s": [
     {
-     "at": "उसी सरसराहट ने",
+     "at": "उसी signal ने",
      "type": "hiss",
      "d": "2.4",
      "gain": "-7"
@@ -2017,7 +2048,7 @@
    ],
    "s": [
     {
-     "at": "जिस सरसराहट को",
+     "at": "जिस signal को",
      "type": "hiss",
      "d": "2.6",
      "gain": "-6"

@@ -4,45 +4,49 @@
 # Build: scripts/science/pipeline.sh productions/04-before-big-bang edit
 
 == opening
-V - @ a large radio antenna under the sky | radio telescope dishes at dusk {hold}
-C - | 1964
-V America के New Jersey @ a radio telescope dish turning against the sky | radio dishes moving in unison
-C America के New Jersey | In New Jersey, America, two scientists were cleaning pigeon droppings out of a giant radio antenna
+# new opening (owner, 2026-10-27): the big idea and its numbers first, then 1964; no pigeons, the word "signal"
+V - @ a flash of light expanding in space | an explosion of light filling space {hold}
+N तेरह point आठ @ hero | value=13.8 | from=0 | unit=billion years ago | kicker=everything began | land=आठ अरब | over
+C - | 13.8 billion years ago, the universe began
+V हर तारा @ flight through thousands of galaxies | zooming out from galaxies to the large-scale universe
+K हर तारा @ EVERY STAR [तारा] / EVERY GALAXY [galaxy] / *MAYBE EVEN TIME* [वक़्त]
+C हर तारा | Every star, every galaxy, and maybe even time itself
+V एक second से भी कम में @ rapid expansion of the early universe | a bright flash expanding outward
+N एक second से भी कम में @ hero | value=10²⁶ | unit=times bigger | kicker=in less than a second | land=छब्बीस | over
+C एक second से भी कम में | In less than a second, the universe grew 10²⁶ times bigger
+V लेकिन इस कहानी का @ deep black space with a faint glow | a single point of light in darkness {hold}
+C लेकिन इस कहानी का | But the biggest secret of this story hides in one question
+M Big Bang से पहले, आख़िर | breath=1.0 | riser=1.4 | impact=impact | trans=flare
+K Big Bang से पहले, आख़िर @ WHAT WAS THERE / *BEFORE THE BIG BANG?* [क्या था]
+C Big Bang से पहले, आख़िर | What was there before the Big Bang?
+V इस सवाल तक पहुँचने @ a large radio antenna under the sky | radio telescope dishes at dusk {hold}
+C उन्नीस सौ चौंसठ | 1964 | big
+C इस सवाल तक पहुँचने | The road to that question opened in 1964
+V America के New Jersey में @ a radio telescope dish turning against the sky | radio dishes moving in unison
 L Arno Penzias @ ARNO PENZIAS & ROBERT WILSON | radio astronomers · Bell Labs · 1964
 G Arno Penzias @ photo:Arno_Penzias
-C Arno Penzias | Arno Penzias and Robert Wilson
-V उनके antenna में @ a radio telescope scanning the night sky timelapse | radio dishes under a starry sky
-K उनके antenna में @ A STRANGE HISS [सरसराहट] / *THAT WOULD NOT GO AWAY* [जाती ही नहीं]
-C उनके antenna में | Their antenna picked up a strange hiss that would not go away
-S उनके antenna में | hiss | d=5.0 | gain=-3
-V दिन हो या रात @ day turning to night over an observatory timelapse | the sky rotating over radio telescopes
-C दिन हो या रात | Day or night, wherever the antenna pointed, the sound stayed the same
-V उन्हें लगा @ close-up of a telescope structure | an observatory dome closing at dawn
-C उन्हें लगा | They thought the pigeons and their nests were to blame
-C कबूतर हटाए गए | The pigeons were removed. The antenna was scrubbed clean
-C सरसराहट फिर भी | The hiss was still there
-S सरसराहट फिर भी | hiss | d=2.6 | gain=-5
-V वह सरसराहट कोई @ slow flight through a star field | stars drifting in deep space
-C वह सरसराहट कोई | The hiss was not a fault. It was the oldest light in the universe...
+C America के New Jersey में | In New Jersey, America, two scientists, Arno Penzias and Robert Wilson...
+V एक बड़े radio antenna @ a radio telescope scanning the night sky timelapse | radio dishes under a starry sky
+C एक बड़े radio antenna | ...were listening to the sky with a large radio antenna
+K उन्हें एक अजीब सा signal @ A STRANGE SIGNAL [signal] / *FROM EVERY DIRECTION* [हर तरफ़]
+S उन्हें एक अजीब सा signal | hiss | d=5.0 | gain=-3
+C उन्हें एक अजीब सा signal | They picked up a strange signal, from every direction
+V दिन में भी @ day turning to night over an observatory timelapse | the sky rotating over radio telescopes
+C दिन में भी | By day, and by night
+V उन्होंने antenna साफ़ @ close-up of a telescope structure | an observatory dome closing at dawn
+C उन्होंने antenna साफ़ | They cleaned the antenna and checked every part of it
+S Signal फिर भी | hiss | d=2.6 | gain=-5
+C Signal फिर भी | The signal was still there
+V वह कोई ख़राबी @ slow flight through a star field | stars drifting in deep space
+C वह कोई ख़राबी | It was not a fault. It was the oldest light in the universe...
 M Big Bang की गूँज | breath=1.2 | riser=1.6 | impact=impact | trans=flare
 G Big Bang की गूँज @ cmb_sphere_r
 K Big Bang की गूँज @ *THE ECHO OF THE BIG BANG* | kicker=the oldest light in the universe
 C Big Bang की गूँज | ...the echo of the Big Bang
-V इसी गूँज ने @ zooming out from galaxies to the large-scale universe | flight through thousands of galaxies
-C इसी गूँज ने | That echo proved the universe had a beginning
-V आज हम जानते @ the first galaxies forming in the early universe | simulation of the early universe
-N आज हम जानते @ hero | value=13.8 | from=0 | unit=billion years ago | kicker=it began | land=आठ अरब | over
-C आज हम जानते | Today we know that beginning was 13.8 billion years ago
-V और scientists के हिसाब @ a flash of light expanding in space | rapid expansion of the early universe
-N उसके पहले ही @ hero | value=10²⁶ | unit=times bigger | kicker=in its first instant | land=छब्बीस | over
-C और scientists के हिसाब | And according to scientists, in its very first instant, it grew 10²⁶ times bigger
-V इस खोज ने @ telescope domes at sunset | an observatory at dusk timelapse
-C इस खोज ने | The discovery later won a Nobel Prize
-V लेकिन इंसान के @ observatory under the Milky Way timelapse | the Milky Way rising over a dark landscape
-C लेकिन इंसान के | But it also left humanity with its biggest question
-V ब्रह्मांड शुरू होने @ deep black space with a faint glow | a single point of light in darkness {hold}
-K ब्रह्मांड शुरू होने @ WHAT WAS THERE / *BEFORE THE BIG BANG?* [आख़िर]
-C ब्रह्मांड शुरू होने | What was there before the universe began?
+V और इसी गूँज ने @ zooming out from galaxies to the large-scale universe | flight through thousands of galaxies
+C और इसी गूँज ने | And this echo showed humanity the road that leads straight to the beginning...
+V और शायद, उस से @ deep black space with a faint glow | a single point of light in darkness {hold}
+C और शायद, उस से | ...and perhaps, to what came before it
 
 == ch1
 G - @ cmb_map
@@ -115,7 +119,7 @@ C लेकिन उनका दिया | But the name he gave it stuck fore
 C आज दुनिया का | Today every child knows the start of the universe by the name its critic gave it
 G और Hoyle को ग़लत @ cmb_out
 C और Hoyle को ग़लत | And Hoyle was proved wrong by the same hiss that is still all around us
-S उसी सरसराहट ने | hiss | d=2.4 | gain=-7
+S उसी signal ने | hiss | d=2.4 | gain=-7
 
 == ch4
 G - @ recombination
@@ -306,7 +310,7 @@ C या हमारा ब्रह्मांड | ...or is our universe jus
 C Science अभी तक | Science has not decided yet
 V उन्नीस सौ चौंसठ में @ a radio telescope dish at night | radio antennas under the stars
 C उन्नीस सौ चौंसठ में | In 1964, Penzias and Wilson thought that hiss was a fault...
-S जिस सरसराहट को | hiss | d=2.6 | gain=-6
+S जिस signal को | hiss | d=2.6 | gain=-6
 C वही आज इस | ...today it is the biggest clue to the biggest puzzle of all
 G ब्रह्मांड कहाँ से @ cmb_out
 C ब्रह्मांड कहाँ से | Where the universe came from, and what came before it...
