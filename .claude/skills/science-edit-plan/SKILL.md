@@ -39,7 +39,18 @@ C <trigger|-> | <English sentence> [| big]
 S <trigger> | <sound> [| gain=-3]        (tick pop roll hit impact sub_drop riser whoosh whoosh_big flare sting)
 B <trigger>                              boom
 F <footer text>                          (default: the chapter card title)
+V #<name> @ bite:<name>                  a real recording's own picture, uncut and in sync with its sound
 ```
+From video 05 (owner, 2026-10-27; `productions/README.md`):
+- **No `M` lines** (the voice never waits) and no `"intro"` in edit.base.json; `"channel"` plays after the hook.
+- **Real archive footage:** a `V` line on the sentence that names the moment, its shot pinned in edit.base.json
+  (`"pin": {"ch4/8": "svs_14715-launch#2"}`: section/item number as `scripts/footage/plan_items.py` prints
+  it), and an `L` card that says what and when (`L ख़ास satellite @ COBE | NASA satellite · launched 18 November
+  1989 · archive footage`). Give launches and interviews `{hold}`; keep a speaker's line one scene so the name
+  card lands on their face.
+- **Real recordings:** `V #<name> @ bite:<name>` right after the narration marker; its clip `bite_<name>` is
+  pinned automatically. The subtitle and the CC line come from bites.json, no `C` line needed. Without a `V`
+  line the recording plays over whatever is on screen (a photo of the speaker works for audio-only).
 
 ## Writing it, section by section
 1. **V beats: one per sentence or clause.** Each `V` query describes what a 4K space-archive shot should

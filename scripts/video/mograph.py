@@ -314,6 +314,32 @@ def keyline(fr, spec, t):
         x += wd + sp
 
 
+def quote(fr, spec, t):
+    """A real recording's words while it plays: the subtitle in quotes, low centre, and who said it in gold."""
+    t0, t1 = spec["t0"], spec["t1"]
+    op = clamp01((t - t0) / 0.3) * clamp01((t1 - t) / 0.3)
+    if op <= 0:
+        return
+    size, f = 50, _font("Montserrat", 50, "SemiBold")
+    lines, cur = [], ""
+    for w_ in f"\u201c{spec['text']}\u201d".split():
+        nxt = (cur + " " + w_).strip()
+        if cur and _measure(nxt, f, 0.0)[0] > W * 0.7:
+            lines.append(cur)
+            cur = w_
+        else:
+            cur = nxt
+    lines.append(cur)
+    lh = size * 1.25
+    y = H * 0.80 - (len(lines) - 1) * lh
+    shade_box(fr, W / 2, y + (len(lines) - 1) * lh / 2 + 20, W * 0.42, lh * (len(lines) + 1.2) / 2 + 30, op=op, strength=0.6)
+    for i, ln in enumerate(lines):
+        paste(fr, layer(ln, "Montserrat", size, "SemiBold", WHITE, shadow=0.6), W / 2, y + i * lh, op=op)
+    if spec.get("by"):
+        paste(fr, layer("\u2014 " + spec["by"].upper(), "Montserrat", 30, "SemiBold", KICKER, track=0.3, shadow=0.5),
+              W / 2, y + len(lines) * lh + 6, op=op)
+
+
 # ------------------------------------------------------------------ number cards
 def _count(spec, t):
     """Current value: ease-out from `from` to `value`, landing at land_t (s into the card)."""

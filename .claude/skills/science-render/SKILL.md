@@ -18,6 +18,9 @@ scripts/science/pipeline.sh productions/NN-slug assign
 
   For older productions it is `render_v2.plan()`. The whole plan is stored in `cutlist.json`.
 - Scores each library shot: 0.75 x CLIP(image, query) + 0.25 x CLIP(source title, query).
+- Pinned shots (archive footage, `bite:` scenes) skip the text gate: a pin is a deliberate choice. A `bite:`
+  scene plays its `bite_<name>` clip from the frame that matches the recording's sound (lip sync); bite clips are
+  never used for other scenes. Check on the render that the speaker's lips match and the quote subtitle reads.
 - Solves one global assignment (Hungarian). Rules:
   - every item gets a different shot
   - no two chosen shots show the same image: 3 frames from each shot's used part are compared, and a match

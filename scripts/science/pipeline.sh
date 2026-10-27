@@ -71,8 +71,11 @@ stage() {
     setup)
       bash "$ROOT/scripts/setup/fetch_media.sh" "$MEDIA" ;;
     narration)
-      "$PY" "$ROOT/scripts/elevenlabs/render_narration.py" "$P/tts/narration.hi.md" "$WORK/voice" --open-gap 3.5 --gap 2.0 \
-        --gap-after "${HOOK_GAP:-hook=1.2}" ;;
+      # no pauses (owner, 2026-10-27): 0.8 s before a chapter card, pauses inside a chapter cut to 0.4 s; the
+      # open gap holds the channel intro + title card after the opening (productions 01-04 used --open-gap 3.5 --gap 2.0)
+      # shellcheck disable=SC2086
+      "$PY" "$ROOT/scripts/elevenlabs/render_narration.py" "$P/tts/narration.hi.md" "$WORK/voice" \
+        ${NARRATION_FLAGS:---open-gap 6.4 --gap 0.8 --max-pause 0.4} ;;
     edit)
       "$PY" "$ROOT/scripts/video/make_edit.py" "$P/edit.spec" "$P/edit.base.json" "$P/edit.json"
       "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" --plan-only ;;

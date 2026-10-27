@@ -37,7 +37,8 @@
 - Narration source for TTS: `productions/<NN-topic>/tts/narration.hi.md` (Devanagari, one `## <section>` per chapter).
   - English names and science words stay in English letters.
   - Numbers are written as Hindi words.
-- Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir>`. This produces the narration, the timeline and per-character timings.
+- Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir> --open-gap 6.4 --gap 0.8 --max-pause 0.4`
+  (`pipeline.sh … narration`). This produces the narration, the timeline and per-character timings.
 - **Pace: full videos at 1.0x** (owner, 2026-10-26, after a 1.0x vs 1.2x sample of video 04). Shorts at 1.2x.
 
 ## Edit method
@@ -53,9 +54,10 @@ Productions 01-02 used the Science Time method (`docs/research/science-time/01-h
 Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pipeline):
 - **4K, moving, relevant, never repeated footage.**
   - Every shot comes from a 4K source (ESO, ESA/Hubble, ESA/Webb, NASA SVS) and is continuously moving.
+    Exception: real archive footage (below), which is often SD or HD.
   - It is matched to the sentence being spoken.
   - No shot (or near-identical copy) appears twice in a video, and shots used by earlier productions are avoided.
-  - No static photos. Stills only appear inside explanatory graphics, always moving.
+  - Stills only appear inside our own graphics, always moving (photos of people and things: `G photo:<stem>`).
 - **Pace that follows the voice.** A visual beat per sentence, cut into scenes of about 3 s, each a different
   shot. Cuts sit in pauses or on word starts. (v2: every ~2.5 s.)
 - **What is said is readable in English.**
@@ -65,10 +67,35 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
 - **Transitions with meaning.** Hard cut by default, dip to black at idea breaks, warm flare on reveals.
 - **Sound.**
   - Kevin MacLeod music (CC BY 4.0, credited), 16 LU under the voice and steady.
-  - 3-5 designed moments.
+  - No designed pauses or suspense breaths from video 05 on (see below).
   - Synthesised, licence-clean SFX.
   - Never another channel's music, footage or graphics.
 - **No text in footage.** OCR finds burned-in text. Corner labels are cropped out automatically; any other part with text is never used.
+  Pinned shots (archive footage, recordings) are a deliberate choice and skip this check.
+
+## Standard from video 05 (owner, 2026-10-27, after the 04-x experiment: "I accept all these changes")
+- **No opening animation, no pauses.** The voice starts at 0.5 s. No `M` moments and no "..." suspense pauses.
+  The narration stage joins with `--open-gap 6.4 --gap 0.8 --max-pause 0.4` (pipeline default).
+- **Channel intro after the opening/hook** (edit.base.json `"channel"`), then the title card. Chapter cards carry
+  a short title, no number. `"lead_in": 0.5`, no `"intro"`.
+- **Show what is being said.** Photos of the people and things named, our own motion graphics for every idea
+  that is explained, name cards (`L`) for people, missions and instruments, kinetic text and number cards.
+- **Real archive footage on many occasions: 10-20 clips a video when they exist.** Launches, the actual
+  instruments, labs, control rooms, discoveries as filmed, interviews of the people named. Research them with the
+  script (stage 1), write the lines so they name what the footage shows, pin each clip to its line, and add a
+  name card that says what it is and when ("archive footage").
+- **Real recordings of the people.** When someone in the story was recorded, the narration introduces them
+  ("…John Mather ने कहा था,") and their own voice plays: `[bite:<name>]` in narration.hi.md + `bites.json`
+  (see `scripts/elevenlabs/render_narration.py`). The recording's own video plays in sync when there is one; a
+  Hinglish subtitle and who/when are shown, and the English words go into the CC track.
+- **Licences for archive material:** only public domain (NASA, other US government) or CC BY / CC BY-SA / CC0,
+  each clip and recording credited by name in the description. Never a TV channel, news agency (BBC, AP,
+  Reuters, British Pathé), film studio or another YouTuber, and never "fair use": a monetised upload gets Content ID
+  claims. If a moment has no free clip, use a photo or one of our own graphics.
+- **Where to look:** NASA SVS (svs.gsfc.nasa.gov: "From the Archives", interviews, launches), NASA Image and Video
+  Library (images.nasa.gov: video and audio, launch broadcasts with .srt to find the exact moment), NASA JPL,
+  Internet Archive items whose licence field says public domain or CC, Wikimedia Commons (slow from the
+  container: it rate-limits shared IPs; never route around it). ESA's site blocks automated downloads.
 
 ## Shorts (owner's plan, 2026-10-22)
 - **Every video gets as many Shorts as it can carry**: roughly one per fact plus the cold open, cut from the

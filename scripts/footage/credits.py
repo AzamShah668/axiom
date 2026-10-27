@@ -35,9 +35,11 @@ def main():
     cl = json.load(open(a.cutlist))
     src = json.load(open(os.path.join(a.lib, "sources.json")))
     edit = json.load(open(a.edit))
-    by = {}
+    by, arch = {}, {}
     for it in cl["items"]:
         s = src[it["clip"]]
+        if s.get("archival"):  # real archive footage and recordings: named one by one
+            arch[s["title"]] = s.get("credit") or ARCHIVE.get(s["source"], s["source"])
         by.setdefault(s["source"], {})[s["key"].split(":", 1)[1]] = s["title"]
     full = ["Footage used in this video (archive video IDs):"]
     for k in ("eso", "esahubble", "esawebb", "svs", "nasa"):
@@ -47,6 +49,8 @@ def main():
         open(a.full, "w").write("\n".join(full) + "\n")
     lines = ["Footage credits: " + "; ".join(f"{ARCHIVE[k]} ({len(by[k])} videos)" for k in ("eso", "esahubble", "esawebb", "svs", "nasa")
                                              if k in by) + ". Full list of videos in the pinned comment."]
+    if arch:
+        lines.append("Archive footage and recordings: " + "; ".join(f"{t} - {c}" for t, c in sorted(arch.items())) + ".")
     imgs = sorted({GFX_IMAGES[it["gfx"]] for it in cl["items"] if it.get("gfx") in GFX_IMAGES})
     if imgs and a.assets and os.path.exists(a.assets):
         cred = json.load(open(a.assets))

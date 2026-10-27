@@ -32,6 +32,18 @@ The four steps can also be run alone (all in `scripts/footage/`):
 - Not 4K, never used: older ESO videos without ultra_hd, NASA SVS 1080p-only pages, and fulldome/VR renders
   (`-FD`, `dome`, `360`).
 
+## Real archive footage and recordings (standard from video 05)
+10-20 real clips a video when they exist (launches, instruments, labs, interviews of the people named), listed
+in `footage/archive.md` during the script (science-script-v2 §2b). Public domain or CC only. They may be SD/HD.
+```bash
+# download the source once into work/archive_src/ (NASA: SVS api/<id> media_groups; images-api.nasa.gov asset
+# list: ~orig.mp4 + .srt), look at a contact sheet, then cut the part you need into the library:
+python scripts/footage/add_archive.py clip svs_14715-launch work/archive_src/svs14715.mp4 --ss 34 --t 106 \
+    --title "COBE launch, 18 Nov 1989 (archival)" --source svs --page https://svs.gsfc.nasa.gov/14715/
+python scripts/footage/add_archive.py bites productions/NN-slug/bites.json   # bite_<name> clips for recordings
+```
+The library entry is marked `"archival"` (credited by name). Pin the shots in edit.base.json.
+
 ## Budget
 - Decoding 4K costs ~2 CPU-seconds per video second; 4 cores manage ~2.5 videos a minute.
 - Keep proxies short: `--cap-single 12 --cap-multi 60 --preset ultrafast --limit 400`. Each shot is used

@@ -175,6 +175,17 @@ def main():
         return
     shots = json.load(open(os.path.join(a.lib, "shots.json")))
     sources = json.load(open(os.path.join(a.lib, "sources.json")))
+    bite_pins = set()  # a real recording's scene shows its own clip (bite_<name>), in sync with its sound
+    for i, it in enumerate(items):
+        if it.get("bite"):
+            clip = "bite_" + it["bite"]
+            own = [s for s in shots if s["clip"] == clip]
+            if not own:
+                raise SystemExit(f"{clip}: not in the library (scripts/footage/add_archive.py bites <bites.json>)")
+            it["clip_ss"] = round(max(0.0, sources[clip].get("bite_pre", 0.0) - it["bite_lead"]), 3)
+            sid = next((s["id"] for s in own if s["start"] <= it["clip_ss"] < s["end"]), own[0]["id"])
+            edit.setdefault("pin", {})[f"{it['sec']}/{sum(1 for j in range(i) if items[j]['sec'] == it['sec'])}"] = sid
+            bite_pins.add(sid)
     z = np.load(os.path.join(a.lib, "shots_emb.npz"), allow_pickle=True)
     emb = dict(zip(z["ids"], z["emb"]))
     ban, avoided = set(edit.get("ban", [])), set()
@@ -191,6 +202,7 @@ def main():
         if s["clip"] in edit.get("crops", {}):
             s["crop"] = edit["crops"][s["clip"]]
     pool = [s for s in shots if s["usable"] and not s["dup_of"] and s["id"] not in ban and s["clip"] not in ban]
+    pool = [s for s in pool if not s["clip"].startswith("bite_")] + [s for s in shots if s["id"] in bite_pins]
     if a.local_only:
         pool = [s for s in pool if os.path.exists(os.path.join(a.lib, "clips", s["clip"] + ".mp4"))]
         print(f"local only: {len(pool)} usable shots with their clip on disk")
@@ -226,7 +238,8 @@ def main():
     dull = DARK_PENALTY * np.clip((28 - lum) / 20, 0, 1) + DARK_PENALTY * np.clip((lum - 120) / 40, 0, 1)  # or washed out
     S = S - np.array([[1.0] if it["kind"] == "clip" else [0.0] for it in items]) * dull[None, :]
     # our own full-frame graphics show no footage: any shot will do as their (unseen) placeholder
-    need = np.array([(min(it["t1"] - it["t0"], 1.0) if render_v3.own_gfx(it) else it["t1"] - it["t0"]) + PAD for it in items])
+    need = np.array([(min(it["t1"] - it["t0"], 1.0) if render_v3.own_gfx(it) or it.get("bite") else it["t1"] - it["t0"]) + PAD
+                     for it in items])
     cost = -S + 100.0 * (L[None, :] < need[:, None])
     # pins
     sec_n = {}
@@ -312,8 +325,11 @@ def main():
         raise SystemExit(f"{len(bad)} items have no shot long enough, e.g. {[sec_n[i] for i in bad[:5]]}: add footage")
     for i, j in zip(r, c):
         it, s = items[i], pool[j]
-        r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
-        ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
+        if it.get("bite"):  # plays from the frame that matches its sound
+            ss = it.pop("clip_ss")
+        else:
+            r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
+            ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
         it.update(shot=s["id"], clip=s["clip"], ss=round(ss, 2), crop=s["crop"], score=round(float(S[i, j]), 4),
                   ref=sec_n[i], title=sources[s["clip"]]["title"])
     used = [it["shot"] for it in items]

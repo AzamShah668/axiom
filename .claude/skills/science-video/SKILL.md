@@ -56,7 +56,12 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
   - **No shot is ever used twice in a video**, and neither is a near-identical copy of one. `assign_shots.py`
     enforces this, and `--avoid` keeps footage from earlier productions out.
   - **No text, logos or labels inside footage**: OCR-checked, corner labels auto-cropped, the rest excluded.
-  - No static photos. Stills only appear inside explanatory graphics, always moving.
+  - Stills only inside our own graphics, always moving: photos of the people and things named (`G photo:<stem>`).
+- **Standard from video 05** (owner, 2026-10-27; full list in `productions/README.md`): no opening animation and
+  no pauses (no `M` moments, narration joined with `--gap 0.8 --max-pause 0.4`), channel intro after the hook,
+  show what is said (photos, own graphics, name cards), **10-20 real archive clips** a video when they exist
+  (pinned, may be SD/HD, public domain or CC only) and **real recordings of the people** in the story
+  (`[bite:<name>]` + `bites.json`: the narration stops, their own voice plays with a subtitle).
 - **Editing style v3** (`docs/style-guide.md`, the owner's decisions of 2026-10-20). Every video from 03 on.
   - **Intro:** a 15-30 s hook that names the topic in its first sentence, then the story cold open, then the
     title card.
@@ -70,7 +75,7 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
     dips at idea breaks, flares on reveals).
   - **Sound:**
     - a Kevin MacLeod bed you can hear (16 LU under the voice, flat)
-    - 3-5 designed moments (breath, riser, impact, swell or silence)
+    - from video 05: no designed pauses; sound design by SFX (hiss, risers, impacts) without stopping the voice
     - synthesised SFX by rule
     - master at -14 LUFS
 

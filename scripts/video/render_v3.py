@@ -268,6 +268,14 @@ def plan(edit, tl, voice_wav=None):
             if b1 - b0 < 0.4:
                 continue
             base = {"sec": sid, "beat": j}
+            bq = (b.get("q") or [""])[0]
+            if bq.startswith("bite:"):  # a real recording's own picture: one uncut scene, in sync with its sound
+                bt = next((x for x in tl.get("bites", []) if x["name"] == bq[5:]), None)
+                if bt is None:
+                    raise SystemExit(f"[{sid}] {bq}: no such recording in timeline.json (narration marker missing?)")
+                items.append({**base, "kind": "clip", "t0": b0, "t1": b1, "q": b["q"], "opt": "bite", "bite": bq[5:],
+                              "bite_lead": round(T.v(bt["t"]) - b0, 3)})
+                continue
             if "gfx" in b:
                 items.append({**base, "kind": "gfx", "t0": b0, "t1": b1, "gfx": b["gfx"], "q": edit["bg_query"]})
                 continue
@@ -331,6 +339,14 @@ def plan(edit, tl, voice_wav=None):
             sfx.append((fx_["type"], T.vt(sid, fx_["at"]), float(fx_.get("gain", 0)), kw))
         for hk in heads_k:
             ovl.append(hk)
+        for bt in (x for x in tl.get("bites", []) if x["sec"] == sid):  # what the recording says, while it plays
+            b0 = T.v(bt["t"])
+            by = ", ".join(str(x) for x in (bt.get("who"), bt.get("when")) if x)
+            if bt.get("hi") or bt.get("said"):
+                ovl.append({"kind": "quote", "t0": b0, "t1": b0 + bt["d"], "text": bt.get("hi") or bt["said"], "by": by})
+            if bt.get("said"):
+                caps.append({"sec": sid, "t": b0, "end": b0 + bt["d"], "big": False,
+                             "text": f'{bt["who"]}: "{bt["said"]}"' if bt.get("who") else bt["said"]})
     caps.sort(key=lambda c: c["t"])
     for i, c in enumerate(caps):
         nxt = caps[i + 1]["t"] if i + 1 < len(caps) else total
@@ -382,6 +398,8 @@ def plan(edit, tl, voice_wav=None):
                 it["move"], it["rate"] = "impact", 0.12
             elif opt == "shrink":  # a fast pull-back: the subject visibly shrinks ("squeeze the whole Earth")
                 it["move"], it["rate"] = "pull", 0.22
+            elif opt == "bite":  # a person speaking: barely moving
+                it["move"], it["rate"] = "push", 0.008
             else:
                 it["move"] = MOVES[mv % len(MOVES)]
                 it["rate"] = 0.015 if opt == "hold" else 0.032
@@ -571,6 +589,8 @@ def draw_ovl(fr, ovl, t):
             mg.headline(fr, {**o, "t1": o["t1"]}, t)
         elif k == "keyline":
             mg.keyline(fr, {"text": o["text"], "t": o["t0"], "t1": o["t1"]}, t)
+        elif k == "quote":
+            mg.quote(fr, o, t)
         elif k == "num":
             tt = t - o["t0"]
             op = mg.clamp01((o["t1"] - t) / 0.25)

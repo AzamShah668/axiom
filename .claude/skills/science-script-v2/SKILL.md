@@ -49,6 +49,22 @@ is 100 quota units, so stay under ~30 searches a day).
   numbered poll of the ideas. The full footage list then moves to the description, which must stay under 5,000
   characters.
 
+## 2b. Archive hunt: real footage and real voices (owner, 2026-10-27, standard from video 05)
+While researching, list every real clip and recording the story could use, in `footage/archive.md`: the moment,
+the source page, the licence, and the in/out seconds. Aim for **10-20 clips** a video: launches, the actual
+instruments, labs and control rooms, the discovery as it was filmed, interviews of the people named.
+- Only public domain (NASA, other US government) or CC BY / CC BY-SA / CC0. Never TV, news agencies, studios,
+  other YouTubers or "fair use". Where to look: `productions/README.md` ("Where to look"). NASA launch broadcasts
+  come with an .srt: grep it for "liftoff" to find the second.
+- **Write the lines so they name what the footage shows** ("उन्नीस सौ नवासी में, NASA ने … कोबी"). A clip that
+  doesn't match a line is not used; add a short line when a strong clip deserves one.
+- **Real voices:** when a person in the story was recorded saying something that fits, introduce them in the
+  narration and put the marker where their voice plays: `…John Mather ने कहा था, [bite:mather]` (the marker
+  goes in `tts/narration.hi.md` and `script.txt`). Define it in `productions/NN/bites.json`: file, ss, d, who,
+  when, the English words ("said"), a Hinglish subtitle ("hi"), credit, licence, url, "video": true when it has
+  picture. Transcribe the recording first (faster-whisper, `language="en"`) and cut on word boundaries.
+- No "..." suspense pauses and no `M` moments: the voice never waits (owner, 2026-10-27).
+
 ## 3. Language that flows when Neel reads it
 - Conversational Hinglish. Keep English words people actually say (scientist, satellite, theory,
   calculate, inflation, Big Bounce, galaxy). Keep the emotional words Hindi (suraag, goonj, pahaili, daava).
