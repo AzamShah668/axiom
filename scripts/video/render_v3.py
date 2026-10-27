@@ -374,7 +374,7 @@ def plan(edit, tl, voice_wav=None):
             tov[round(T.vt(sid, t_["at"]), 3)] = t_["trans"]
     mv = 0
     for i, it in enumerate(items):
-        if i == 0:
+        if i == 0 or it.get("bite"):  # a recording opens on a hard cut, like a documentary interview
             it["trans"] = "cut"
         elif "trans" not in it:
             prev = items[i - 1]

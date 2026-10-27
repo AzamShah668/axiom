@@ -27,6 +27,8 @@ body: The strangest thing about neutron stars .. So scientists calculate
 - **say:** the new spoken hook. It asks the viewer ("क्या आपको पता है, कि…"; the owner's exception for Shorts
   hooks only) and ends on the number. Simple spoken Hindi; numbers in Hindi words; English terms in Latin
   letters. It is rendered with the locked voice and cached in `$WORK/out/shorts/tts/` (about 90 credits each).
+  Owner (2026-10-27): "क्या आपको पता है कि हमारे…" about the viewer's own world ("हमारे planet का सोना", not
+  "गहनों"), and the Short retells the video's own story: a script from elsewhere was rejected.
 - **say_en:** its English line (the Short's caption file).
 - **land:** the word in `say` where the count stops. The number is up and counting from frame 0.
 - **hook_shot:** the hook's own footage, one line per cut: `hook_shot: <shot id> @ <clip seconds> | <word>`

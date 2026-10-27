@@ -252,6 +252,7 @@ def main():
             if sid in ids:
                 cost[i, :] += 50.0
                 cost[i, ids.index(sid)] -= 50.0
+    pinned_rows = {i for i, key in sec_n.items() if key in edit.get("pin", {})}  # pins win every clash check
     if a.keep and os.path.exists(a.keep):  # converge review rounds: only re-solve items whose shot was banned
         old = {(o["sec"], round(o["t0"], 2)): o.get("shot") for o in json.load(open(a.keep))["items"]}
         kept = 0
@@ -268,11 +269,11 @@ def main():
     for rnd in range(30):
         r, c = linear_sum_assignment(cost + blocked)
         clash = 0
-        order = sorted(range(len(r)), key=lambda k: cost[r[k], c[k]])  # best matches keep their shot
+        order = sorted(range(len(r)), key=lambda k: (r[k] not in pinned_rows, cost[r[k], c[k]]))  # pins, then best matches
         chosen = []
         for k in order:
             i, j = r[k], c[k]
-            if same_footage(SE, SH, j, chosen):
+            if i not in pinned_rows and same_footage(SE, SH, j, chosen):
                 blocked[i, j] = 100.0
                 clash += 1
             else:
@@ -282,11 +283,11 @@ def main():
             break
     else:  # still clashing: give the remaining items the best free shot that shows nothing already chosen
         r, c = list(r), list(c)
-        order = sorted(range(len(r)), key=lambda k: cost[r[k], c[k]])
+        order = sorted(range(len(r)), key=lambda k: (r[k] not in pinned_rows, cost[r[k], c[k]]))
         chosen, used = [], set()
         for k in order:
             i, j = r[k], c[k]
-            if same_footage(SE, SH, j, chosen):
+            if i not in pinned_rows and same_footage(SE, SH, j, chosen):
                 for j2 in np.argsort(cost[i] + blocked[i]):
                     if j2 not in used and j2 not in c and cost[i, j2] < 50 and not same_footage(SE, SH, j2, chosen):
                         c[k] = j = int(j2)
@@ -312,9 +313,9 @@ def main():
         r, c = linear_sum_assignment(cost + blocked)
         r, c = list(r), list(c)
         chosen = []
-        for k in sorted(range(len(r)), key=lambda k: cost[r[k], c[k]]):
+        for k in sorted(range(len(r)), key=lambda k: (r[k] not in pinned_rows, cost[r[k], c[k]])):
             i, j = r[k], c[k]
-            if same_footage(SE, SH, j, chosen):
+            if i not in pinned_rows and same_footage(SE, SH, j, chosen):
                 for j2 in np.argsort(cost[i] + blocked[i]):
                     if j2 not in c and cost[i, j2] < 50 and not same_footage(SE, SH, j2, chosen):
                         c[k] = j = int(j2)

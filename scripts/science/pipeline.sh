@@ -5,7 +5,9 @@
 #
 # Stages, in order (see .claude/skills/science-video/SKILL.md for the whole workflow):
 #   setup      fonts, music, graphic stills -> $MEDIA            (once per machine)
+#   probe      read the names/terms never heard yet alone (a few characters) -> $WORK/voice_probe/probe.mp3
 #   narration  ElevenLabs render of tts/narration.hi.md -> $WORK/voice (narration.wav, timeline.json)
+#              (tts_check.py first: refuses to record while a line is flagged; speech_check.py after)
 #   edit       edit.spec + edit.base.json -> edit.json, then check every trigger against the narration
 #   footage    4K search -> CLIP pick -> 1080p proxies -> shots + QC (text, black, frozen, people)
 #              (shared library $LIB, grows over time)
@@ -73,9 +75,16 @@ stage() {
     narration)
       # no pauses (owner, 2026-10-27): 0.8 s before a chapter card, pauses inside a chapter cut to 0.4 s; the
       # open gap holds the channel intro + title card after the opening (productions 01-04 used --open-gap 3.5 --gap 2.0)
+      # right the first time (owner, 2026-10-27): the text is checked before a character is paid for, and every new
+      # recording is listened to (speech_check) before anything is built on it
+      "$PY" "$ROOT/scripts/elevenlabs/tts_check.py" "$P/tts/narration.hi.md" ${TTS_CHECK_FLAGS:-} \
+        || { echo "fix the flagged lines (new names: pipeline.sh $P probe) before recording"; exit 1; }
       # shellcheck disable=SC2086
       "$PY" "$ROOT/scripts/elevenlabs/render_narration.py" "$P/tts/narration.hi.md" "$WORK/voice" \
-        ${NARRATION_FLAGS:---open-gap 6.4 --gap 0.8 --max-pause 0.4} ;;
+        ${NARRATION_FLAGS:---open-gap 6.4 --gap 0.8 --max-pause 0.4}
+      "$PY" "$ROOT/scripts/elevenlabs/speech_check.py" "$P/tts/narration.hi.md" "$WORK/voice" ;;
+    probe)  # new names and English terms read alone first: a few characters instead of a re-recorded section
+      "$PY" "$ROOT/scripts/elevenlabs/probe_words.py" "$P/tts/narration.hi.md" ${PROBE_FLAGS:-} ;;
     edit)
       "$PY" "$ROOT/scripts/video/make_edit.py" "$P/edit.spec" "$P/edit.base.json" "$P/edit.json"
       "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" --plan-only ;;

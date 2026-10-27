@@ -1,0 +1,124 @@
+{
+ "_doc": "What Neel (ElevenLabs) gets wrong, and what the owner does not want to hear. scripts/elevenlabs/tts_check.py reads this before every recording and refuses to record while anything here is in narration.hi.md. Add every new finding the day it is found. 'verified': words of names and English terms already heard correctly (probe_words.py skips them).",
+ "replace": {
+  "नए": {
+   "use": "अलग / अभी अभी बने / बिल्कुल अलग (rephrase)",
+   "why": "Neel says it like नहीं: 'नए idea' was heard as 'नहीं' (video 04 ch7, 03 gold Short, 2026-10-26)"
+  },
+  "नई": {
+   "use": "अलग / rephrase",
+   "why": "same risk as नए (it is the same word)"
+  },
+  "वक़्त": {
+   "use": "time",
+   "why": "mispronounced (owner, 04-x, 2026-10-27: 'Don't say vakth, say time')"
+  },
+  "वक्त": {
+   "use": "time",
+   "why": "same word without the nukta"
+  },
+  "BICEP": {
+   "use": "बाइसेप",
+   "why": "read as 'B-sep' (video 04 ch7)"
+  },
+  "COBE": {
+   "use": "कोबी",
+   "why": "an acronym: Neel may spell it out; कोबी came out as 'COBE' (04-x ch4)"
+  },
+  "WMAP": {
+   "use": "डब्ल्यू मैप",
+   "why": "an acronym Neel would guess at"
+  },
+  "सरसराहट": {
+   "use": "signal / आवाज़",
+   "why": "owner did not like the word (04-x hook, 2026-10-27)"
+  },
+  "कण": {
+   "use": "particles",
+   "why": "textbook word (owner's simple-Hindi rule)"
+  },
+  "घनत्व": {
+   "use": "density",
+   "why": "textbook word"
+  },
+  "तत्व": {
+   "use": "elements",
+   "why": "textbook word"
+  },
+  "गहनों": {
+   "use": "planet / दुनिया (say what the gold is part of)",
+   "why": "owner: 'Remove गहनों with planet' (gold Short hook)"
+  }
+ },
+ "acronyms_ok": [
+  "NASA",
+  "TV",
+  "BBC",
+  "ESA",
+  "CERN",
+  "DNA",
+  "GPS"
+ ],
+ "verified": [
+  "Alan",
+  "America",
+  "Antarctica",
+  "Arno",
+  "Bang",
+  "Belgium",
+  "Big",
+  "Bounce",
+  "British",
+  "Brussels",
+  "Catholic",
+  "Celsius",
+  "December",
+  "Earth",
+  "Edwin",
+  "Einstein",
+  "Europe",
+  "Father",
+  "Fred",
+  "George",
+  "Georges",
+  "Guth",
+  "Hartle",
+  "Hawking",
+  "Hoyle",
+  "Hubble",
+  "inflation",
+  "James",
+  "Japan",
+  "Jersey",
+  "John",
+  "Lemaître",
+  "LiteBird",
+  "March",
+  "Mather",
+  "microwaves",
+  "multiverse",
+  "New",
+  "Nobel",
+  "Penrose",
+  "Penzias",
+  "Physics",
+  "Planck",
+  "Pole",
+  "Prize",
+  "Robert",
+  "Roger",
+  "Science",
+  "Scientists",
+  "Signal",
+  "Smoot",
+  "South",
+  "Space",
+  "Spectacular",
+  "Stephen",
+  "Telescope",
+  "Webb",
+  "Wilson",
+  "कोबी",
+  "बाइसेप"
+ ]
+}

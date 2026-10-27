@@ -72,8 +72,8 @@ instruments, labs and control rooms, the discovery as it was filmed, interviews 
   padri** (not "Church Father"), and **gandagi** (not beet, which reads as crude).
 - **Short sentences.** One idea and at most one number per sentence. Put the number near the end, so a
   count-up can land on the spoken word.
-- **At most 5 "..." per video.** Neel holds each "..." for about a second; save them for the designed moments
-  (the reveal words). Use commas everywhere else.
+- **No "..." at all** (owner, 2026-10-27: no pauses, not even for suspense). Neel holds each "..." for about a
+  second. Use commas; `tts_check.py` refuses "...", "…" and dashes.
 - **Nothing Neel can't say smoothly.** No catalogue names like MoM-z14 or GW250114 in the narration: say what
   it is ("ab tak ki sabse door ki galaxy") and put the name on screen.
 - **Repeat a key phrase at most 3 times** (opening, one middle callback, the end). Vary the rest ("sabse purani
@@ -108,9 +108,9 @@ instruments, labs and control rooms, the discovery as it was filmed, interviews 
 - **Record at normal pace.** Before planning the edit, send the owner a 60 s sample at 1.0x and 1.2x
   (rubberband time-stretch of the recording, no credits). Build the edit at the chosen speed, so the master
   renders only once. Video 04: the owner chose **1.0x** for full videos (2026-10-26); Shorts stay at 1.2x.
-- **Check the recording with speech recognition** (faster-whisper medium, `work/venv`) on the chapters with
-  names and numbers. Re-record a chapter (delete its `<id>.mp3`, run the narration stage again) when a word
-  comes out wrong. Video 04: "BICEP" read as "B-sep" until written बाइसेप; "नए idea" sounded like "नहीं".
+- **The recording is checked automatically** (`speech_check.py`, run by the narration stage): every name and
+  English term must be heard, and no extra नहीं. Video 04: "BICEP" read as "B-sep" until written बाइसेप; "नए
+  idea" sounded like "नहीं"; वक़्त came out wrong (now "time"). See §7 for how to avoid all of this up front.
 - **Never write नए / naye.** Neel says it so it sounds like नहीं ("naye bhaari atom bante hain" heard as "heavy
   atoms don't form"). Use अलग, अभी अभी बने, or rephrase (video 04 ch7, the 03 gold Short, 2026-10-26).
 
@@ -136,6 +136,42 @@ instruments, labs and control rooms, the discovery as it was filmed, interviews 
    length.
 6. Only after the OK, write `tts/narration.hi.md` in Devanagari, one `##` section per script section.
    Use the same section ids and commas instead of dashes, and record.
+
+## 7. Right the first time: no paid re-recordings (owner, 2026-10-27)
+ElevenLabs bills a whole section every time it is recorded, so a script goes to ElevenLabs only once it can't
+come back wrong. In this order:
+1. The owner's OK on `script.txt` (§6), with `script_check.py` clean.
+2. Write `tts/narration.hi.md`, then `python scripts/elevenlabs/tts_check.py productions/NN-slug/tts/narration.hi.md`
+   until it prints 0 problems. It refuses every word in `productions/tts-lexicon.json` "replace" (mispronounced or
+   unwanted, with the fix), "...", digits and symbols, acronyms Neel would guess at, catalogue codes, Hindi in
+   Latin letters, 28+ word sentences and undefined `[bite:]` markers. The narration stage runs it too.
+3. `pipeline.sh productions/NN-slug probe`: every name and English term never heard before is read alone (a few
+   characters each), transcribed and marked ok / LISTEN. Send the owner `work/NN-slug/voice_probe/probe.mp3` with
+   `probe.txt` if anything says LISTEN. Respell what comes out wrong (Devanagari, the way it is said: बाइसेप,
+   कोबी), add it to the lexicon, probe again; then `PROBE_FLAGS=--accept` adds the good ones to "verified".
+4. Only then `pipeline.sh … narration`. `speech_check.py` listens to the new sections; a FLAG means respell +
+   lexicon entry + re-record that one section.
+5. **Every new finding goes into `tts-lexicon.json` the same day**, so it can never be paid for twice.
+
+## Owner's verdicts on video 04 (2026-10-26/27): do this, not that
+Liked and kept:
+- An opening that starts on the big fact and its numbers and ends on the one question: "तेरह point आठ अरब साल
+  पहले, ब्रह्मांड की शुरुआत हुई। … Big Bang से पहले, आख़िर क्या था?", then a bridge into the story
+  ("इस सवाल तक पहुँचने का रास्ता, उन्नीस सौ चौंसठ में खुला।"). When an opening changes, write the bridge so the next
+  chapter continues without a jolt, and show the owner the join.
+- The calm take with the locked preset (he picked it over a more expressive one: "1 easily"). Never change the
+  voice settings for a whole video.
+- Full videos at 1.0x; Shorts at 1.2x.
+- Lines that name what is on screen: people (with photos), missions and real footage (the COBE lines were added for
+  their 1989 footage).
+- Simple English words where Hindi ones trip: time (not वक़्त), signal (not सरसराहट), particles (not कण).
+Did not like (never again):
+- Pauses anywhere: no "..." suspense, no designed silences, no long gaps between chapters.
+- An odd or unpleasant image in the hook (pigeon droppings in the antenna) and showy sound words (सरसराहट).
+- A Short script that wasn't the video's own story ("Is this from the video that we created? I don't like the
+  script."): Shorts retell the strongest moment of the finished video.
+- A weak Short hook: start with "क्या आपको पता है कि हमारे…" and make it about the viewer's world ("हमारे planet का
+  सोना", not "गहनों").
 
 ## Shorts
 Shorts scripts follow the owner's 4-beat format and the Shorts rules in `productions/README.md` and the

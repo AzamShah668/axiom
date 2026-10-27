@@ -37,6 +37,10 @@ scripts/science/pipeline.sh productions/NN-slug narration
   `/v1/voices/add/{owner}/{voice_id}`.
 
 ## QC
+- **Before the first character is paid for** (owner, 2026-10-27): `tts_check.py` must print 0 problems (the
+  narration stage refuses to record otherwise) and `pipeline.sh … probe` must have heard every new name; see
+  science-script-v2 §7. After recording, `speech_check.py` (run by the stage) flags names not heard and extra
+  नहीं; every finding goes into `productions/tts-lexicon.json`.
 - Listen to the start, one join, and the end. Check pronunciation of names and numbers. Fix the Devanagari
   spelling and re-render only that section.
 - Total length is usually 11-13 min for 10 facts.
