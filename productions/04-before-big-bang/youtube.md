@@ -1,5 +1,7 @@
 # YouTube upload: Production 04
 
+**Superseded (2026-10-27):** the owner accepted the 04-x version; upload `productions/04-before-big-bang-x/youtube.md` instead.
+
 Not uploaded yet. When the owner says, upload **private** (the uploader's default is public):
 `python scripts/youtube/upload_youtube.py upload work/04-before-big-bang/out/04-before-big-bang.mp4 productions/04-before-big-bang/youtube.md --privacy private`
 No thumbnail (the owner makes it), no CC track for now (the owner's caption decision is pending). Pin the comment below.
