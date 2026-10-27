@@ -284,6 +284,7 @@ def main():
     # final gate: OCR the frames each item will really show; text -> that shot is out, re-solve the rest in place
     for rnd in range(40):  # every re-solve is checked again: the result never skips the gate
         hits = text_gate(a.lib, items, pool, r, c, need, os.path.join(a.lib, "text_gate.json"))
+        hits = [k for k in hits if sec_n[r[k]] not in edit.get("pin", {})]  # a pin is a deliberate choice
         print(f"text gate {rnd}: {len(hits)} shown segments with text", flush=True)
         if not hits:
             break

@@ -417,9 +417,8 @@ def plan(edit, tl, voice_wav=None):
         if o["kind"] == "headline":
             after = [b for b in bounds if b >= o["t_last"] + 1.6]
             o["t1"] = min(after[0] if after else o["t_last"] + 3.0, o["t_last"] + 4.0)
-            nxt = [p["t0"] for p in ovl if (p["kind"] in ("keyline", "headline") or (p["kind"] == "num" and
-                   p["num"].get("template") != "name")) and o["t_last"] < p["t0"] < o["t1"]]
-            if nxt:  # make way for the next key line / number card
+            nxt = [p["t0"] for p in ovl if p["kind"] in ("keyline", "headline", "num") and o["t_last"] < p["t0"] < o["t1"]]
+            if nxt:  # make way for the next key line / number card / name lower third
                 o["t1"] = max(o["t_last"] + 0.8, min(nxt) - 0.12)
     full = [it["t0"] for it in items if it["kind"] in ("card", "title")]
     for o in ovl:  # nothing runs over a chapter or title card: it is gone by the time the card cuts in

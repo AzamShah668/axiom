@@ -138,7 +138,7 @@ L ख़ास satellite @ COBE | NASA satellite · launched 18 November 1989 ·
 C उन्नीस सौ नवासी | Then, in 1989, NASA launched a satellite built for this very light: COBE
 V उसने पहली बार @ engineers in a clean room with the COBE satellite | a satellite being assembled
 C उसने पहली बार | For the first time, it mapped this light across the whole sky
-V और इस नक्शे @ John Mather interviewed in 1989 | a scientist speaking in his office
+V और इस नक्शे @ John Mather interviewed in 1989 | a scientist speaking in his office {hold}
 L John Mather @ JOHN MATHER | COBE scientist · Nobel Prize in Physics 2006
 C और इस नक्शे | And for this map, John Mather and George Smoot won the Nobel Prize too
 C यही रोशनी थी | ...was this very light

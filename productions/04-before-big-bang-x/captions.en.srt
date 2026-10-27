@@ -1,576 +1,588 @@
 1
-00:00:03,600 --> 00:00:08,256
+00:00:00,000 --> 00:00:04,656
 13.8 billion years ago, the universe began
 
 2
-00:00:08,256 --> 00:00:12,076
+00:00:04,656 --> 00:00:08,388
 Every star, every galaxy, and maybe even time itself
 
 3
-00:00:12,076 --> 00:00:17,080
+00:00:08,388 --> 00:00:13,392
 In less than a second, the universe grew 10²⁶ times bigger
 
 4
-00:00:17,080 --> 00:00:22,132
+00:00:13,392 --> 00:00:17,444
 But the biggest secret of this story hides in one question
 
 5
-00:00:22,132 --> 00:00:24,755
+00:00:17,444 --> 00:00:19,864
 What was there before the Big Bang?
 
 6
-00:00:24,755 --> 00:00:27,031
+00:00:19,864 --> 00:00:22,140
 The road to that question opened in 1964
 
 7
-00:00:27,031 --> 00:00:29,098
+00:00:22,140 --> 00:00:24,096
 1964
 
 8
-00:00:29,098 --> 00:00:34,415
+00:00:24,096 --> 00:00:29,413
 In New Jersey, America, two scientists, Arno Penzias and Robert Wilson...
 
 9
-00:00:34,415 --> 00:00:37,863
+00:00:29,413 --> 00:00:32,861
 ...were listening to the sky with a large radio antenna
 
 10
-00:00:37,863 --> 00:00:41,590
+00:00:32,861 --> 00:00:36,500
 They picked up a strange signal, from every direction
 
 11
-00:00:41,590 --> 00:00:43,668
+00:00:36,500 --> 00:00:38,578
 By day, and by night
 
 12
-00:00:43,668 --> 00:00:47,035
+00:00:38,578 --> 00:00:41,945
 They cleaned the antenna and checked every part of it
 
 13
-00:00:47,035 --> 00:00:49,113
+00:00:41,945 --> 00:00:44,023
 The signal was still there
 
 14
-00:00:49,113 --> 00:00:55,046
+00:00:44,023 --> 00:00:48,556
 It was not a fault. It was the oldest light in the universe...
 
 15
-00:00:55,046 --> 00:00:56,729
+00:00:48,556 --> 00:00:50,239
 ...the echo of the Big Bang
 
 16
-00:00:56,729 --> 00:01:02,465
+00:00:50,239 --> 00:00:55,975
 And this echo showed humanity the road that leads straight to the beginning...
 
 17
-00:01:02,465 --> 00:01:05,012
+00:00:55,975 --> 00:00:58,469
 ...and perhaps, to what came before it
 
 18
-00:01:12,912 --> 00:01:17,656
+00:01:05,769 --> 00:01:10,368
 The universe has a birthday, and scientists know it precisely
 
 19
-00:01:17,656 --> 00:01:23,543
+00:01:10,368 --> 00:01:16,190
 In 2009, the European Space Agency launched a satellite: Planck
 
 20
-00:01:23,543 --> 00:01:29,638
+00:01:16,190 --> 00:01:22,285
 For four years it mapped the whole sky in the same light the New Jersey antenna had caught
 
 21
-00:01:29,638 --> 00:01:34,456
+00:01:22,285 --> 00:01:26,969
 Faint patterns hidden in that light tell the age of the universe
 
 22
-00:01:34,456 --> 00:01:40,597
+00:01:26,969 --> 00:01:33,110
 In 2018 came Planck's final result: 13.8 billion years
 
 23
-00:01:40,597 --> 00:01:43,953
+00:01:33,110 --> 00:01:36,401
 Give or take just 20 million years
 
 24
-00:01:43,953 --> 00:01:48,991
+00:01:36,401 --> 00:01:41,439
 When Earth formed, about 4.6 billion years ago...
 
 25
-00:01:48,991 --> 00:01:53,136
+00:01:41,439 --> 00:01:45,450
 ...the universe was already 9 billion years old
 
 26
-00:01:53,136 --> 00:02:00,136
+00:01:45,450 --> 00:01:52,450
 But the first to say the universe had a beginning was not a telescope. It was a priest
 
 27
-00:02:04,072 --> 00:02:10,649
+00:01:54,910 --> 00:02:01,487
 Belgium's Father Georges Lemaître was a Catholic priest, and also a physicist
 
 28
-00:02:10,649 --> 00:02:17,649
+00:02:01,487 --> 00:02:08,487
 In 1927, he used Einstein's equations to show that the universe is not standing still
 
 29
-00:02:18,347 --> 00:02:19,600
+00:02:09,185 --> 00:02:10,438
 It is expanding
 
 30
-00:02:19,600 --> 00:02:23,513
+00:02:10,438 --> 00:02:14,351
 That same year in Brussels, Einstein told Lemaître...
 
 31
-00:02:23,513 --> 00:02:27,414
+00:02:14,351 --> 00:02:18,252
 Your calculations are correct, but your physics is abominable
 
 32
-00:02:27,414 --> 00:02:34,414
+00:02:18,252 --> 00:02:25,252
 Two years later, in 1929, America's Edwin Hubble saw distant galaxies racing away from us
 
 33
-00:02:35,041 --> 00:02:38,048
+00:02:25,879 --> 00:02:28,752
 And the farther they are, the faster they go
 
 34
-00:02:38,048 --> 00:02:41,485
+00:02:28,752 --> 00:02:32,189
 In 1931, Lemaître took the next step
 
 35
-00:02:41,485 --> 00:02:47,255
+00:02:32,189 --> 00:02:37,959
 If everything is expanding today, then once, everything must have been together in one place
 
 36
-00:02:47,255 --> 00:02:52,410
+00:02:37,959 --> 00:02:43,061
 He called it the primeval atom: the cosmic egg
 
 37
-00:02:52,410 --> 00:02:55,232
+00:02:43,061 --> 00:02:45,883
 The idea needed a name...
 
 38
-00:02:55,232 --> 00:02:59,276
+00:02:45,883 --> 00:02:49,927
 ...and the name came from its biggest critic
 
 39
-00:03:01,876 --> 00:03:04,018
+00:02:51,327 --> 00:02:53,312
 28 MARCH 1949
 
 40
-00:03:04,018 --> 00:03:08,314
+00:02:53,312 --> 00:02:57,608
 On BBC radio, British astronomer Fred Hoyle was speaking
 
 41
-00:03:08,314 --> 00:03:12,505
+00:02:57,608 --> 00:03:01,799
 Hoyle believed the universe had no beginning and no end...
 
 42
-00:03:12,505 --> 00:03:14,583
+00:03:01,799 --> 00:03:03,877
 ...that it has always been the same
 
 43
-00:03:14,583 --> 00:03:18,483
+00:03:03,877 --> 00:03:07,777
 Explaining Lemaître's theory, he used a word...
 
 44
-00:03:18,483 --> 00:03:20,655
+00:03:07,777 --> 00:03:09,762
 BIG BANG
 
 45
-00:03:20,655 --> 00:03:22,918
+00:03:09,762 --> 00:03:12,025
 Hoyle never accepted the theory
 
 46
-00:03:22,918 --> 00:03:26,854
+00:03:12,025 --> 00:03:15,839
 But the name he gave it stuck forever
 
 47
-00:03:26,854 --> 00:03:33,854
+00:03:15,839 --> 00:03:22,839
 Today every child knows the start of the universe by the name its critic gave it
 
 48
-00:03:34,981 --> 00:03:41,243
+00:03:23,867 --> 00:03:30,129
 And Hoyle was proved wrong by the same hiss that is still all around us
 
 49
-00:03:43,843 --> 00:03:49,572
+00:03:31,529 --> 00:03:36,933
 After the Big Bang, the universe was so hot and dense that light could not move a single step
 
 50
-00:03:49,572 --> 00:03:56,572
+00:03:36,933 --> 00:03:43,933
 About 380,000 years later, it cooled enough for light to break free for the first time
 
 51
-00:03:56,817 --> 00:04:01,171
+00:03:44,364 --> 00:03:48,739
 That same light has been travelling for 13.8 billion years
 
 52
-00:04:01,171 --> 00:04:05,757
+00:03:48,739 --> 00:03:53,696
 On the way it was stretched so much that it is no longer visible light
 
 53
-00:04:05,757 --> 00:04:07,568
+00:03:53,696 --> 00:03:55,519
 Now it is microwaves...
 
 54
-00:04:07,568 --> 00:04:12,526
+00:03:55,519 --> 00:04:00,023
 ...at just minus 270 degrees Celsius
 
 55
-00:04:12,526 --> 00:04:18,192
+00:04:00,023 --> 00:04:05,422
 In 1978, Penzias and Wilson won the Nobel Prize for this discovery
 
 56
-00:04:18,192 --> 00:04:25,192
+00:04:05,422 --> 00:04:12,422
 And about 1 percent of the black-and-white static on old TVs, with no channel tuned...
 
 57
-00:04:25,634 --> 00:04:27,015
+00:04:12,818 --> 00:04:14,095
 ...was this very light
 
 58
-00:04:27,015 --> 00:04:29,744
+00:04:14,095 --> 00:04:17,125
 The echo of the Big Bang, on the TV at home
 
 59
-00:04:29,744 --> 00:04:32,565
-But this light hid a puzzle...
+00:04:17,125 --> 00:04:23,179
+Then, in 1989, NASA launched a satellite built for this very light: COBE
 
 60
-00:04:32,565 --> 00:04:36,714
-...one that troubled scientists for years
+00:04:23,179 --> 00:04:27,660
+For the first time, it mapped this light across the whole sky
 
 61
-00:04:39,314 --> 00:04:41,154
-The universe looks the same in every direction
+00:04:27,660 --> 00:04:32,606
+And for this map, John Mather and George Smoot won the Nobel Prize too
 
 62
-00:04:41,154 --> 00:04:47,783
-Its far-apart regions never touched each other, yet they are exactly alike
+00:04:32,606 --> 00:04:35,857
+But this light hid a puzzle...
 
 63
-00:04:47,783 --> 00:04:49,304
-That was the puzzle
+00:04:35,857 --> 00:04:40,819
+...one that troubled scientists for years
 
 64
-00:04:49,304 --> 00:04:54,714
-7 DECEMBER 1979
+00:04:42,219 --> 00:04:44,059
+The universe looks the same in every direction
 
 65
-00:04:54,714 --> 00:04:57,524
-On that night, a young American physicist, Alan Guth, wrote in his notebook...
+00:04:44,059 --> 00:04:50,461
+Its far-apart regions never touched each other, yet they are exactly alike
 
 66
-00:04:57,524 --> 00:05:00,752
-Spectacular realization
+00:04:50,461 --> 00:04:51,848
+That was the puzzle
 
 67
-00:05:00,752 --> 00:05:07,752
-His idea: in a tiny fraction of the first second, space itself expanded faster than light
+00:04:51,848 --> 00:04:57,258
+7 DECEMBER 1979
 
 68
-00:05:08,925 --> 00:05:12,025
-10²⁶ times
+00:04:57,258 --> 00:05:00,068
+On that night, a young American physicist, Alan Guth, wrote in his notebook...
 
 69
-00:05:12,025 --> 00:05:17,481
-The whole universe we can see today was then smaller than a proton...
+00:05:00,068 --> 00:05:03,208
+Spectacular realization
 
 70
-00:05:17,481 --> 00:05:22,717
-...and in less than the blink of an eye, it grew to the size of a large orange
+00:05:03,208 --> 00:05:10,208
+His idea: in a tiny fraction of the first second, space itself expanded faster than light
 
 71
-00:05:22,717 --> 00:05:24,459
-The expansion got a name: inflation
+00:05:11,381 --> 00:05:14,393
+10²⁶ times
 
 72
-00:05:24,459 --> 00:05:25,655
-INFLATION
+00:05:14,393 --> 00:05:19,849
+The whole universe we can see today was then smaller than a proton...
 
 73
-00:05:25,655 --> 00:05:28,998
-Inflation explained how the universe expanded
+00:05:19,849 --> 00:05:24,917
+...and in less than the blink of an eye, it grew to the size of a large orange
 
 74
-00:05:28,998 --> 00:05:35,875
-But as soon as scientists turn the clock back further, all of science breaks down
+00:05:24,917 --> 00:05:26,659
+The expansion got a name: inflation
 
 75
-00:05:38,475 --> 00:05:40,292
-Physics has two great theories
+00:05:26,659 --> 00:05:27,756
+INFLATION
 
 76
-00:05:40,292 --> 00:05:46,143
-Einstein's gravity explains big things, like galaxies and black holes
+00:05:27,756 --> 00:05:31,099
+Inflation explained how the universe expanded
 
 77
-00:05:46,143 --> 00:05:52,784
-Quantum physics explains the smallest things, atoms and particles even smaller
+00:05:31,099 --> 00:05:37,976
+But as soon as scientists turn the clock back further, all of science breaks down
 
 78
-00:05:52,784 --> 00:05:56,662
-Usually each works fine in its own place
+00:05:39,376 --> 00:05:41,193
+Physics has two great theories
 
 79
-00:05:56,662 --> 00:06:02,037
-But in the first moment after the Big Bang, everything was both tiny and enormously heavy
+00:05:41,193 --> 00:05:46,933
+Einstein's gravity explains big things, like galaxies and black holes
 
 80
-00:06:02,037 --> 00:06:05,357
-There, the two theories clash
+00:05:46,933 --> 00:05:53,405
+Quantum physics explains the smallest things, atoms and particles even smaller
 
 81
-00:06:05,357 --> 00:06:06,902
-Here there is a wall
+00:05:53,405 --> 00:05:57,283
+Usually each works fine in its own place
 
 82
-00:06:06,902 --> 00:06:12,556
-Cut one second into so many pieces that it takes a 1 followed by 43 zeros...
+00:05:57,283 --> 00:06:02,658
+But in the first moment after the Big Bang, everything was both tiny and enormously heavy
 
 83
-00:06:12,556 --> 00:06:15,424
-...the very first slice of time after the Big Bang
+00:06:02,658 --> 00:06:05,978
+There, the two theories clash
 
 84
-00:06:15,424 --> 00:06:17,672
-PLANCK TIME
+00:06:05,978 --> 00:06:07,447
+Here there is a wall
 
 85
-00:06:17,672 --> 00:06:22,397
-No equation can yet say what lies beyond that wall
+00:06:07,447 --> 00:06:13,101
+Cut one second into so many pieces that it takes a 1 followed by 43 zeros...
 
 86
-00:06:22,397 --> 00:06:27,104
-But scientists have not stopped trying to reach it
+00:06:13,101 --> 00:06:15,969
+...the very first slice of time after the Big Bang
 
 87
-00:06:29,704 --> 00:06:32,693
-17 MARCH 2014
+00:06:15,969 --> 00:06:18,017
+PLANCK TIME
 
 88
-00:06:32,693 --> 00:06:39,497
-On 17 March 2014, the BICEP2 team in Antarctica announced it had found direct traces of inflation
+00:06:18,017 --> 00:06:22,689
+No equation can yet say what lies beyond that wall
 
 89
-00:06:39,497 --> 00:06:41,761
-Scientists around the world celebrated
+00:06:22,689 --> 00:06:27,396
+But scientists have not stopped trying to reach it
 
 90
-00:06:41,761 --> 00:06:47,926
-But months later it turned out the signal had been made by dust in our own galaxy
+00:06:28,796 --> 00:06:31,785
+17 MARCH 2014
 
 91
-00:06:47,926 --> 00:06:50,944
-Then came the James Webb Space Telescope
+00:06:31,785 --> 00:06:38,432
+On 17 March 2014, the BICEP2 team in Antarctica announced it had found direct traces of inflation
 
 92
-00:06:50,944 --> 00:06:57,944
-In 2025, Webb saw the most distant galaxy yet, its light leaving just 280 million years after the Big Bang
+00:06:38,432 --> 00:06:40,620
+Scientists around the world celebrated
 
 93
-00:07:00,786 --> 00:07:05,233
-The closer Webb gets to the beginning, the clearer it becomes...
+00:06:40,620 --> 00:06:46,785
+But months later it turned out the signal had been made by dust in our own galaxy
 
 94
-00:07:05,233 --> 00:07:09,447
-...that telescopes alone can't get past the wall
+00:06:46,785 --> 00:06:49,803
+Then came the James Webb Space Telescope
 
 95
-00:07:09,447 --> 00:07:12,547
-New ideas are needed now...
+00:06:49,803 --> 00:06:56,803
+In 2025, Webb saw the most distant galaxy yet, its light leaving just 280 million years after the Big Bang
 
 96
-00:07:12,547 --> 00:07:16,382
-...and the most startling idea came from Stephen Hawking
+00:06:59,445 --> 00:07:03,892
+The closer Webb gets to the beginning, the clearer it becomes...
 
 97
-00:07:18,982 --> 00:07:21,577
-Maybe there was nothing before the Big Bang...
+00:07:03,892 --> 00:07:07,891
+...that telescopes alone can't get past the wall
 
 98
-00:07:21,577 --> 00:07:22,726
-...not even time
+00:07:07,891 --> 00:07:10,991
+New ideas are needed now...
 
 99
-00:07:22,726 --> 00:07:27,428
-In 1983, Stephen Hawking and James Hartle proposed an idea
+00:07:10,991 --> 00:07:14,826
+...and the most startling idea came from Stephen Hawking
 
 100
-00:07:27,428 --> 00:07:31,747
-Near the beginning, time does not run the way we know it
+00:07:16,226 --> 00:07:18,675
+Maybe there was nothing before the Big Bang...
 
 101
-00:07:31,747 --> 00:07:34,951
-Time becomes just like length and width
+00:07:18,675 --> 00:07:19,655
+...not even time
 
 102
-00:07:34,951 --> 00:07:38,841
-So the beginning of the universe has no edge at all
+00:07:19,655 --> 00:07:24,357
+In 1983, Stephen Hawking and James Hartle proposed an idea
 
 103
-00:07:38,841 --> 00:07:43,252
-Like a ball, it simply rounds off and closes
+00:07:24,357 --> 00:07:28,676
+Near the beginning, time does not run the way we know it
 
 104
-00:07:43,252 --> 00:07:50,114
-In 2018, a few weeks before he died, Hawking explained it with an example
+00:07:28,676 --> 00:07:31,880
+Time becomes just like length and width
 
 105
-00:07:50,114 --> 00:07:56,058
-Asking what came before the Big Bang is like asking what lies south of the South Pole
+00:07:31,880 --> 00:07:35,770
+So the beginning of the universe has no edge at all
 
 106
-00:07:56,058 --> 00:08:00,029
-There is nothing there, because the South Pole itself is the end point
+00:07:35,770 --> 00:07:40,181
+Like a ball, it simply rounds off and closes
 
 107
-00:08:00,029 --> 00:08:04,080
-If Hawking was right, the word "before" has no meaning
+00:07:40,181 --> 00:07:47,043
+In 2018, a few weeks before he died, Hawking explained it with an example
 
 108
-00:08:04,080 --> 00:08:07,273
-But not every scientist agrees with Hawking
+00:07:47,043 --> 00:07:52,830
+Asking what came before the Big Bang is like asking what lies south of the South Pole
 
 109
-00:08:07,273 --> 00:08:12,583
-Some say there was a whole universe before the Big Bang
+00:07:52,830 --> 00:07:56,801
+There is nothing there, because the South Pole itself is the end point
 
 110
-00:08:15,183 --> 00:08:19,101
-In this idea, there was another universe before ours
+00:07:56,801 --> 00:08:00,852
+If Hawking was right, the word "before" has no meaning
 
 111
-00:08:19,101 --> 00:08:25,765
-It shrank and shrank, then bounced back like a ball...
+00:08:00,852 --> 00:08:03,992
+But not every scientist agrees with Hawking
 
 112
-00:08:25,765 --> 00:08:27,576
-BIG BOUNCE
+00:08:03,992 --> 00:08:09,302
+Some say there was a whole universe before the Big Bang
 
 113
-00:08:27,576 --> 00:08:32,964
-Nobel Prize-winning British scientist Roger Penrose goes even further
+00:08:10,702 --> 00:08:14,620
+In this idea, there was another universe before ours
 
 114
-00:08:32,964 --> 00:08:39,427
-In his view, the universe runs in endless cycles, one after another
+00:08:14,620 --> 00:08:21,081
+It shrank and shrank, then bounced back like a ball...
 
 115
-00:08:39,427 --> 00:08:46,427
-In 2018, Penrose's team claimed traces of the previous universe in the echo of the Big Bang
+00:08:21,081 --> 00:08:22,892
+BIG BOUNCE
 
 116
-00:08:48,203 --> 00:08:53,370
-Most scientists don't accept the claim; they say it's just noise
+00:08:22,892 --> 00:08:28,146
+Nobel Prize-winning British scientist Roger Penrose goes even further
 
 117
-00:08:53,370 --> 00:08:59,906
-But if Penrose is right, the Big Bang was not the start of the story, just a new chapter
+00:08:28,146 --> 00:08:34,409
+In his view, the universe runs in endless cycles, one after another
 
 118
-00:08:59,906 --> 00:09:05,920
-And one idea goes further still...
+00:08:34,409 --> 00:08:41,409
+In 2018, Penrose's team claimed traces of the previous universe in the echo of the Big Bang
 
 119
-00:09:05,920 --> 00:09:07,410
-...that our Big Bang was not alone
+00:08:43,185 --> 00:08:48,352
+Most scientists don't accept the claim; they say it's just noise
 
 120
-00:09:10,010 --> 00:09:11,513
-Inflation has a strange consequence
+00:08:48,352 --> 00:08:54,888
+But if Penrose is right, the Big Bang was not the start of the story, just a new chapter
 
 121
-00:09:11,513 --> 00:09:17,585
-Some scientists think the rapid expansion never stopped everywhere at once
+00:08:54,888 --> 00:09:00,902
+And one idea goes further still...
 
 122
-00:09:17,585 --> 00:09:24,308
-Where it stopped, a bubble formed: a universe. Elsewhere, expansion carried on
+00:09:00,902 --> 00:09:02,392
+...that our Big Bang was not alone
 
 123
-00:09:24,308 --> 00:09:29,312
-Just like bubbles rising here and there in boiling water
+00:09:03,792 --> 00:09:05,295
+Inflation has a strange consequence
 
 124
-00:09:29,312 --> 00:09:30,566
-The idea is called eternal inflation
+00:09:05,295 --> 00:09:11,268
+Some scientists think the rapid expansion never stopped everywhere at once
 
 125
-00:09:30,566 --> 00:09:32,005
-ETERNAL INFLATION
+00:09:11,268 --> 00:09:17,991
+Where it stopped, a bubble formed: a universe. Elsewhere, expansion carried on
 
 126
-00:09:32,005 --> 00:09:35,593
-It keeps making countless bubbles, one after another
+00:09:17,991 --> 00:09:22,995
+Just like bubbles rising here and there in boiling water
 
 127
-00:09:35,593 --> 00:09:40,341
-Every bubble, a separate universe, each with its own Big Bang
+00:09:22,995 --> 00:09:24,249
+The idea is called eternal inflation
 
 128
-00:09:40,341 --> 00:09:44,648
-Our universe may be just one bubble...
+00:09:24,249 --> 00:09:25,688
+ETERNAL INFLATION
 
 129
-00:09:44,648 --> 00:09:47,051
-...a tiny part of a multiverse
+00:09:25,688 --> 00:09:29,276
+It keeps making countless bubbles, one after another
 
 130
-00:09:47,051 --> 00:09:52,752
-Scientists have searched that ancient light for marks of collisions with other bubbles
+00:09:29,276 --> 00:09:33,918
+Every bubble, a separate universe, each with its own Big Bang
 
 131
-00:09:52,752 --> 00:09:55,601
-So far, no firm sign has been found
+00:09:33,918 --> 00:09:37,975
+Our universe may be just one bubble...
 
 132
-00:09:56,280 --> 00:10:00,424
-The wait for an answer may not be long
+00:09:37,975 --> 00:09:40,244
+...a tiny part of a multiverse
 
 133
-00:10:00,424 --> 00:10:05,474
-Japan's LiteBIRD satellite is being prepared to launch around 2032
+00:09:40,244 --> 00:09:45,945
+Scientists have searched that ancient light for marks of collisions with other bubbles
 
 134
-00:10:05,474 --> 00:10:10,107
-Its job: to find the real traces of inflation in that echo
+00:09:45,945 --> 00:09:48,794
+So far, no firm sign has been found
 
 135
-00:10:10,107 --> 00:10:12,603
-It may finally tell how the beginning happened
+00:09:48,810 --> 00:09:52,341
+The wait for an answer may not be long
 
 136
-00:10:12,603 --> 00:10:14,727
-Until then, the question stays open
+00:09:52,341 --> 00:09:57,391
+Japan's LiteBIRD satellite is being prepared to launch around 2032
 
 137
-00:10:14,727 --> 00:10:17,084
-Was Hawking right, or Penrose?
+00:09:57,391 --> 00:10:01,925
+Its job: to find the real traces of inflation in that echo
 
 138
-00:10:17,084 --> 00:10:22,262
-Did time really have a beginning, is the universe an endless cycle...
+00:10:01,925 --> 00:10:04,421
+It may finally tell how the beginning happened
 
 139
-00:10:22,262 --> 00:10:26,186
-...or is our universe just one of countless bubbles?
+00:10:04,421 --> 00:10:06,388
+Until then, the question stays open
 
 140
-00:10:26,186 --> 00:10:28,624
-Science has not decided yet
+00:10:06,388 --> 00:10:08,745
+Was Hawking right, or Penrose?
 
 141
-00:10:28,624 --> 00:10:34,661
-In 1964, Penzias and Wilson thought that hiss was a fault...
+00:10:08,745 --> 00:10:13,923
+Did time really have a beginning, is the universe an endless cycle...
 
 142
-00:10:34,661 --> 00:10:39,677
-...today it is the biggest clue to the biggest puzzle of all
+00:10:13,923 --> 00:10:17,748
+...or is our universe just one of countless bubbles?
 
 143
-00:10:39,677 --> 00:10:43,264
-Where the universe came from, and what came before it...
+00:10:17,748 --> 00:10:20,186
+Science has not decided yet
 
 144
-00:10:43,264 --> 00:10:48,272
+00:10:20,186 --> 00:10:26,223
+In 1964, Penzias and Wilson thought that hiss was a fault...
+
+145
+00:10:26,223 --> 00:10:31,012
+...today it is the biggest clue to the biggest puzzle of all
+
+146
+00:10:31,012 --> 00:10:34,599
+Where the universe came from, and what came before it...
+
+147
+00:10:34,599 --> 00:10:39,607
 ...the answer still hides behind that oldest light
 
