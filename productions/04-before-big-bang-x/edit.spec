@@ -110,7 +110,6 @@ C वह हमेशा से | ...that it has always been the same
 K Hoyle मानते थे @ NO BEGINNING [शुरुआत] / *NO END* [अंत] | kicker=the steady state
 V Lemaître वाली theory @ a huge explosion of light in space | a bright flash expanding outward
 C Lemaître वाली theory | Explaining Lemaître's theory, he used a word...
-M Big Bang. एक धमाका | breath=0.8 | riser=1.2 | impact=impact | trans=flash
 C Big Bang. एक धमाका | "BIG BANG" | big
 V Hoyle ने कभी @ a supernova explosion | a bright star exploding
 C Hoyle ने कभी | Hoyle never accepted the theory
@@ -158,7 +157,6 @@ G Spectacular realization @ notebook
 C Spectacular realization | "Spectacular realization"
 V उनका idea था @ an explosion of light filling space | a bright flash expanding in space
 C उनका idea था | His idea: in a tiny fraction of the first second, space itself expanded faster than light
-M एक के आगे छब्बीस | breath=1.0 | riser=1.4 | impact=impact | trans=flash
 V एक के आगे छब्बीस @ an explosion of light filling space | a flash of light expanding {hold}
 N एक के आगे छब्बीस @ hero | value=10²⁶ | unit=times bigger | kicker=in a flash | land=छब्बीस | over
 C एक के आगे छब्बीस | 10²⁶ times
@@ -182,7 +180,6 @@ C आम तौर पर | Usually each works fine in its own place
 V लेकिन Big Bang के @ an intensely bright point of energy | a blinding flash at the centre of space
 C लेकिन Big Bang के | But in the first moment after the Big Bang, everything was both tiny and enormously heavy
 C वहाँ दोनों theories | There, the two theories clash
-M यहाँ एक दीवार है | breath=1.4 | riser=1.6 | impact=impact | trans=dip | drop
 V यहाँ एक दीवार है @ deep black space with a faint glow | darkness at the edge of the universe {hold}
 K यहाँ एक दीवार है @ *A WALL* | kicker=where physics breaks
 C यहाँ एक दीवार है | Here there is a wall
@@ -207,7 +204,6 @@ C दुनिया भर में | Scientists around the world celebrated
 V लेकिन कुछ महीनों @ dust in the Milky Way | dark dust lanes in our galaxy
 K लेकिन कुछ महीनों @ THE SIGNAL [निशान] / *WAS DUST* [धूल] | kicker=months later
 C लेकिन कुछ महीनों | But months later it turned out the signal had been made by dust in our own galaxy
-M हमारी ही galaxy की धूल | breath=0.7 | riser=1.0 | impact=hit | trans=cut
 V फिर आया James Webb @ the James Webb Space Telescope in space | Webb telescope unfolding
 C फिर आया James Webb | Then came the James Webb Space Telescope
 V दो हज़ार पच्चीस में @ zooming into a deep field of distant galaxies | the most distant galaxies seen by Webb
@@ -223,15 +219,14 @@ C और सबसे हैरान | ...and the most startling idea came from
 == ch8
 V - @ deep black space with a faint glow | a slow drift through darkness {hold}
 C - | Maybe there was nothing before the Big Bang...
-M वक़्त भी नहीं | breath=1.2 | riser=1.4 | impact=hit | trans=dip | drop
-C वक़्त भी नहीं | ...not even time
-K वक़्त भी नहीं @ NOTHING BEFORE / *NOT EVEN TIME*
+C time भी नहीं | ...not even time
+K time भी नहीं @ NOTHING BEFORE / *NOT EVEN TIME*
 G उन्नीस सौ तिरासी में @ photo:Stephen_Hawking:in
 L Stephen Hawking @ STEPHEN HAWKING & JAMES HARTLE | physicists · 1983
 C उन्नीस सौ तिरासी में | In 1983, Stephen Hawking and James Hartle proposed an idea
 G शुरुआत के पास @ spacetime
 C शुरुआत के पास | Near the beginning, time does not run the way we know it
-C वक़्त भी, लंबाई | Time becomes just like length and width
+C time भी, लंबाई | Time becomes just like length and width
 G मतलब ब्रह्मांड की @ no_boundary
 C मतलब ब्रह्मांड की | So the beginning of the universe has no edge at all
 C वह एक गेंद | Like a ball, it simply rounds off and closes
@@ -251,7 +246,6 @@ V - @ a collapsing cloud of matter in space | matter falling inward in a simulat
 C - | In this idea, there was another universe before ours
 G वह सिकुड़ता गया @ bounce
 C वह सिकुड़ता गया | It shrank and shrank, then bounced back like a ball...
-M Big Bounce | breath=1.0 | riser=1.4 | impact=impact | trans=flare
 V Big Bounce @ an explosion of light outward from a point | a bright burst expanding in space {hold}
 C Big Bounce | BIG BOUNCE | big
 V Nobel Prize जीतने @ a galaxy rotating | spiral galaxy close-up
@@ -283,7 +277,6 @@ C इससे एक के बाद | It keeps making countless bubbles, one 
 V हर bubble, एक @ countless galaxies in a deep field | the large-scale structure of the universe
 K हर bubble, एक @ EVERY BUBBLE [हर bubble] / *A UNIVERSE* [एक अलग ब्रह्मांड] | sub=each with its own Big Bang | sub_at=हर एक
 C हर bubble, एक | Every bubble, a separate universe, each with its own Big Bang
-M multiverse का | breath=1.2 | riser=1.6 | impact=impact | trans=flare | swell=7
 V हमारा ब्रह्मांड, शायद @ zooming out from the universe to many bubbles | flight out of the cosmic web {hold}
 C हमारा ब्रह्मांड, शायद | Our universe may be just one bubble...
 C multiverse का | ...a tiny part of a multiverse
@@ -304,8 +297,8 @@ V तब तक, सवाल @ a person under the Milky Way | the Milky Way ove
 C तब तक, सवाल | Until then, the question stays open
 K Hawking सही थे @ HAWKING [Hawking] / OR *PENROSE?* [Penrose] | kicker=science hasn't decided
 C Hawking सही थे | Was Hawking right, or Penrose?
-G वक़्त की सच @ three_answers
-C वक़्त की सच | Did time really have a beginning, is the universe an endless cycle...
+G time की सच @ three_answers
+C time की सच | Did time really have a beginning, is the universe an endless cycle...
 C या हमारा ब्रह्मांड | ...or is our universe just one of countless bubbles?
 C Science अभी तक | Science has not decided yet
 V उन्नीस सौ चौंसठ में @ a radio telescope dish at night | radio antennas under the stars
@@ -314,5 +307,4 @@ S जिस signal को | hiss | d=2.6 | gain=-6
 C वही आज इस | ...today it is the biggest clue to the biggest puzzle of all
 G ब्रह्मांड कहाँ से @ cmb_out
 C ब्रह्मांड कहाँ से | Where the universe came from, and what came before it...
-M इसका जवाब | breath=1.2 | riser=1.6 | impact=impact | trans=flare | swell=8
 C इसका जवाब | ...the answer still hides behind that oldest light

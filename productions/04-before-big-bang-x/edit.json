@@ -993,15 +993,6 @@
      "kicker": "the steady state"
     }
    ],
-   "m": [
-    {
-     "at": "Big Bang. एक धमाका",
-     "breath": 0.8,
-     "riser": 1.2,
-     "impact": "impact",
-     "trans": "flash"
-    }
-   ],
    "s": [
     {
      "at": "उसी signal ने",
@@ -1252,15 +1243,6 @@
       "land": "छब्बीस"
      }
     }
-   ],
-   "m": [
-    {
-     "at": "एक के आगे छब्बीस",
-     "breath": 1.0,
-     "riser": 1.4,
-     "impact": "impact",
-     "trans": "flash"
-    }
    ]
   },
   "ch6": {
@@ -1370,16 +1352,6 @@
     }
    ],
    "sfx": [],
-   "m": [
-    {
-     "at": "यहाँ एक दीवार है",
-     "breath": 1.4,
-     "riser": 1.6,
-     "impact": "impact",
-     "trans": "dip",
-     "drop": true
-    }
-   ],
    "k": [
     {
      "at": "यहाँ एक दीवार है",
@@ -1527,15 +1499,6 @@
      ],
      "kicker": "months later"
     }
-   ],
-   "m": [
-    {
-     "at": "हमारी ही galaxy की धूल",
-     "breath": 0.7,
-     "riser": 1.0,
-     "impact": "hit",
-     "trans": "cut"
-    }
    ]
   },
   "ch8": {
@@ -1589,7 +1552,7 @@
      "text": "Maybe there was nothing before the Big Bang..."
     },
     {
-     "at": "वक़्त भी नहीं",
+     "at": "time भी नहीं",
      "text": "...not even time"
     },
     {
@@ -1601,7 +1564,7 @@
      "text": "Near the beginning, time does not run the way we know it"
     },
     {
-     "at": "वक़्त भी, लंबाई",
+     "at": "time भी, लंबाई",
      "text": "Time becomes just like length and width"
     },
     {
@@ -1638,23 +1601,13 @@
     }
    ],
    "sfx": [],
-   "m": [
-    {
-     "at": "वक़्त भी नहीं",
-     "breath": 1.2,
-     "riser": 1.4,
-     "impact": "hit",
-     "trans": "dip",
-     "drop": true
-    }
-   ],
    "k": [
     {
-     "at": "वक़्त भी नहीं",
+     "at": "time भी नहीं",
      "lines": [
       {
        "text": "NOTHING BEFORE",
-       "at": "वक़्त भी नहीं"
+       "at": "time भी नहीं"
       },
       {
        "text": "*NOT EVEN TIME*",
@@ -1770,15 +1723,6 @@
     }
    ],
    "sfx": [],
-   "m": [
-    {
-     "at": "Big Bounce",
-     "breath": 1.0,
-     "riser": 1.4,
-     "impact": "impact",
-     "trans": "flare"
-    }
-   ],
    "n": [
     {
      "at": "Roger Penrose",
@@ -1916,16 +1860,6 @@
      ],
      "kicker": "our universe, one bubble of many"
     }
-   ],
-   "m": [
-    {
-     "at": "multiverse का",
-     "breath": 1.2,
-     "riser": 1.6,
-     "impact": "impact",
-     "trans": "flare",
-     "swell": 7.0
-    }
    ]
   },
   "ending": {
@@ -1950,7 +1884,7 @@
      ]
     },
     {
-     "at": "वक़्त की सच",
+     "at": "time की सच",
      "gfx": "three_answers"
     },
     {
@@ -1991,7 +1925,7 @@
      "text": "Was Hawking right, or Penrose?"
     },
     {
-     "at": "वक़्त की सच",
+     "at": "time की सच",
      "text": "Did time really have a beginning, is the universe an endless cycle..."
     },
     {
@@ -2052,16 +1986,6 @@
      "type": "hiss",
      "d": "2.6",
      "gain": "-6"
-    }
-   ],
-   "m": [
-    {
-     "at": "इसका जवाब",
-     "breath": 1.2,
-     "riser": 1.6,
-     "impact": "impact",
-     "trans": "flare",
-     "swell": 8.0
     }
    ]
   }
