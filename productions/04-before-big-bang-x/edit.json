@@ -276,7 +276,8 @@
   "dur": 3.6,
   "gfx": "rewind",
   "track": "Interloper.mp3",
-  "db": 12.0
+  "db": 12.0,
+  "start": 2.0
  },
  "channel": {
   "dur": 3.2,
@@ -995,6 +996,10 @@
     {
      "at": "सफ़र में वह",
      "gfx": "stretch"
+    },
+    {
+     "at": "अब वह microwaves",
+     "gfx": "cmb_zoom"
     },
     {
      "at": "उन्नीस सौ अठहत्तर में",

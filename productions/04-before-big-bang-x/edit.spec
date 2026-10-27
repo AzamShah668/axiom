@@ -126,6 +126,7 @@ C वही रोशनी | That same light has been travelling for 13.8 billi
 G सफ़र में वह @ stretch
 C सफ़र में वह | On the way it was stretched so much that it is no longer visible light
 C अब वह microwaves | Now it is microwaves...
+G अब वह microwaves @ cmb_zoom
 N अब वह microwaves @ thermo | value=-270 | from=0 | unit=°C | kicker=the oldest light today | land=सत्तर | over
 C और उसका तापमान | ...at just minus 270 degrees Celsius
 V उन्नीस सौ अठहत्तर में @ an observatory at dusk timelapse | telescope domes under the evening sky

@@ -438,7 +438,7 @@ def plan(edit, tl, voice_wav=None):
     music = []
     starts = {s["id"]: T.v(s["start"]) for s in tl["sections"]}
     if intro and intro.get("track"):
-        music.append({"t": 0.0, "track": intro["track"], "gain": intro.get("gain", 0.0)})
+        music.append({"t": 0.0, "track": intro["track"], "gain": intro.get("gain", 0.0), "start": intro.get("start", 0.0)})
     for i, m in enumerate(edit.get("music", [])):
         t0 = (float(intro["dur"]) if intro and intro.get("track") else 0.0) if i == 0 else starts[m["from"]] - 1.5
         music.append({"t": t0, "track": m["track"], "gain": m.get("gain", 0.0)})
@@ -722,6 +722,8 @@ def mix(narr, P, music_dir):
     cues = P["music"] + [{"t": total}]
     for c, nxt in zip(cues, cues[1:]):
         y = _load(os.path.join(music_dir, c["track"]))
+        if c.get("start"):  # begin inside the track (skip a quiet lead-in)
+            y = y[int(c["start"] * SR):]
         a, b = int(c["t"] * SR), min(n, int(nxt["t"] * SR) + xf)
         L = b - a
         seg = _loop(y, L, xf)
