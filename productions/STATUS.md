@@ -31,5 +31,5 @@ Last updated 2026-10-29. Update this file and commit it at the end of every chat
 
 ## Accounts and budget
 - ElevenLabs: about 38,300 of 131,000 characters left in the current period (2026-10-27).
-- All work of 2026-10-20 to 10-29 is on branch `claude/determined-bell-frode3`; merge it into `main` so a new chat
-  that starts on main sees it.
+- All work of 2026-10-20 to 10-29 is in pull request https://github.com/AzamShah668/axiom/pull/3 (branch
+  `claude/determined-bell-frode3` → `main`). Once it is merged, every new chat sees it.
