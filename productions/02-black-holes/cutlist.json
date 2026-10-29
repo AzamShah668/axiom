@@ -1,0 +1,9173 @@
+{
+ "total": 846.025,
+ "off": 2.0,
+ "clips_dir": "/tmp/claude-0/-home-user-axiom/55d834ac-77b7-5e6e-8a6c-2db6fe5f29b6/scratchpad/lib/clips",
+ "items": [
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 0.0,
+   "t1": 2.748666666666667,
+   "q": [
+    "a starry night sky over a dark landscape",
+    "Milky Way rising over mountains at night"
+   ],
+   "trans": "cut",
+   "zoom": "out",
+   "f0": 0,
+   "f1": 82,
+   "shot": "eso_pao-atmw#0",
+   "clip": "eso_pao-atmw",
+   "ss": 0.76,
+   "crop": null,
+   "score": 0.2933,
+   "ref": "cold_open/0",
+   "title": "Stars above the VLT"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 2.748666666666667,
+   "t1": 5.497333333333334,
+   "q": [
+    "a starry night sky over a dark landscape",
+    "Milky Way rising over mountains at night"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 82,
+   "f1": 165,
+   "shot": "eso_Geminidstimelapse3#0",
+   "clip": "eso_Geminidstimelapse3",
+   "ss": 4.23,
+   "crop": null,
+   "score": 0.3248,
+   "ref": "cold_open/1",
+   "title": "Geminids time-lapse 3"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 5.497333333333334,
+   "t1": 8.246,
+   "q": [
+    "a starry night sky over a dark landscape",
+    "Milky Way rising over mountains at night"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 165,
+   "f1": 247,
+   "shot": "eso_eso2604a#1",
+   "clip": "eso_eso2604a",
+   "ss": 5.95,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.2959,
+   "ref": "cold_open/2",
+   "title": "Two planets spotted forming around a young star | ESO News"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 8.246,
+   "t1": 11.729,
+   "q": [
+    "a bright meteor streaking across the night sky",
+    "shooting star over an observatory"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 247,
+   "f1": 352,
+   "shot": "eso_potw2443a#1",
+   "clip": "eso_potw2443a",
+   "ss": 6.48,
+   "crop": null,
+   "score": 0.3379,
+   "ref": "cold_open/3",
+   "title": "Comet Tsuchinshan-ATLAS meets the ESO Supernova (timelapse)"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 11.729,
+   "t1": 14.69,
+   "q": [
+    "star trails circling over an observatory",
+    "telescope dome under the stars"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 352,
+   "f1": 441,
+   "shot": "eso_eso1803b#0",
+   "clip": "eso_eso1803b",
+   "ss": 1.27,
+   "crop": null,
+   "score": 0.373,
+   "ref": "cold_open/4",
+   "title": "Time-lapse video sequence of the ExTrA planet-hunting facility at La Silla"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 14.69,
+   "t1": 16.646,
+   "q": [
+    "an old observatory telescope at night",
+    "astronomer's telescope under the night sky"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 441,
+   "f1": 499,
+   "shot": "eso_LaSilla16-DishLightDesertPolar24mm#0",
+   "clip": "eso_LaSilla16-DishLightDesertPolar24mm",
+   "ss": 4.62,
+   "crop": null,
+   "score": 0.3375,
+   "ref": "cold_open/5",
+   "title": "La Silla SEST time-lapse"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 16.646,
+   "t1": 18.602,
+   "q": [
+    "an old observatory telescope at night",
+    "astronomer's telescope under the night sky"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 499,
+   "f1": 558,
+   "shot": "eso_uhd_yb_paranal_03#0",
+   "clip": "eso_uhd_yb_paranal_03",
+   "ss": 0.27,
+   "crop": null,
+   "score": 0.3434,
+   "ref": "cold_open/6",
+   "title": "Auxiliary Telescope in action at Paranal"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 18.602,
+   "t1": 21.609,
+   "q": [
+    "dramatic clouds over a mountain observatory at night",
+    "storm clouds under the stars"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 558,
+   "f1": 648,
+   "shot": "eso_cs0007f#0",
+   "clip": "eso_cs0007f",
+   "ss": 2.58,
+   "crop": null,
+   "score": 0.2973,
+   "ref": "cold_open/7",
+   "title": "The outburst of Eta Carinae"
+  },
+  {
+   "kind": "gfx",
+   "sec": "cold_open",
+   "t0": 21.609,
+   "t1": 28.377,
+   "gfx": "spacetime",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "zoom",
+   "f0": 648,
+   "f1": 851,
+   "shot": "svs_31019#0",
+   "clip": "svs_31019",
+   "ss": 0.37,
+   "crop": null,
+   "score": 0.3635,
+   "ref": "cold_open/8",
+   "title": "Stephan's Quintet"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 28.377,
+   "t1": 30.223,
+   "q": [
+    "light bent around a massive galaxy cluster",
+    "gravitational lensing arcs"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 851,
+   "f1": 907,
+   "shot": "esahubble_potw2543a#0",
+   "clip": "esahubble_potw2543a",
+   "ss": 4.69,
+   "crop": null,
+   "score": 0.3571,
+   "ref": "cold_open/9",
+   "title": "Pan: NGC 4571"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 30.223,
+   "t1": 33.219,
+   "q": [
+    "black hole with a glowing accretion disk",
+    "visualization of a black hole"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 907,
+   "f1": 997,
+   "shot": "svs_14905#1",
+   "clip": "svs_14905",
+   "ss": 12.72,
+   "crop": [
+    0.05,
+    0.0,
+    0.95,
+    0.9
+   ],
+   "score": 0.4388,
+   "ref": "cold_open/10",
+   "title": "Black Hole Environments, Explained"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 33.219,
+   "t1": 35.889,
+   "q": [
+    "a star collapsing under its own gravity",
+    "matter swirling into a black hole"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 997,
+   "f1": 1077,
+   "shot": "esawebb_weic2605b#0",
+   "clip": "esawebb_weic2605b",
+   "ss": 4.28,
+   "crop": null,
+   "score": 0.3773,
+   "ref": "cold_open/11",
+   "title": "Pan video: Exposed Cranium Nebula (MIRI image)"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 35.889,
+   "t1": 38.559,
+   "q": [
+    "a star collapsing under its own gravity",
+    "matter swirling into a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 1077,
+   "f1": 1157,
+   "shot": "eso_eso2511b#0",
+   "clip": "eso_eso2511b",
+   "ss": 0.42,
+   "crop": null,
+   "score": 0.4084,
+   "ref": "cold_open/12",
+   "title": "Zooming into a star that detonated twice"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 38.559,
+   "t1": 41.229,
+   "q": [
+    "a star collapsing under its own gravity",
+    "matter swirling into a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 1157,
+   "f1": 1237,
+   "shot": "eso_eso1904c#0",
+   "clip": "eso_eso1904c",
+   "ss": 3.44,
+   "crop": null,
+   "score": 0.3741,
+   "ref": "cold_open/13",
+   "title": "Zooming into the Cosmic Bat"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 41.229,
+   "t1": 42.46,
+   "q": [
+    "light swallowed by a black hole",
+    "dark shadow of a black hole"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 1237,
+   "f1": 1274,
+   "shot": "eso_eso1618a#0",
+   "clip": "eso_eso1618a",
+   "ss": 4.98,
+   "crop": null,
+   "score": 0.3542,
+   "ref": "cold_open/14",
+   "title": "Artist’s impression of cold intergalactic rain"
+  },
+  {
+   "kind": "gfx",
+   "sec": "cold_open",
+   "t0": 42.46,
+   "t1": 48.787,
+   "gfx": "bh_shrink",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "flash",
+   "f0": 1274,
+   "f1": 1464,
+   "shot": "eso_eso1624b#0",
+   "clip": "eso_eso1624b",
+   "ss": 1.09,
+   "crop": null,
+   "score": 0.3935,
+   "ref": "cold_open/15",
+   "title": "Zooming in on the HD 131399 triple-star system"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 48.787,
+   "t1": 52.433,
+   "q": [
+    "a dark nebula in deep space",
+    "lonely stars in dark space"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 1464,
+   "f1": 1573,
+   "shot": "esawebb_weic2425b#0",
+   "clip": "esawebb_weic2425b",
+   "ss": 2.93,
+   "crop": null,
+   "score": 0.3735,
+   "ref": "cold_open/16",
+   "title": "NGC 602 (Zoom video)"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 52.433,
+   "t1": 54.546,
+   "q": [
+    "zooming into the dark centre of a galaxy",
+    "slow zoom into a galaxy core"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 1573,
+   "f1": 1636,
+   "shot": "esahubble_heic1503a#0",
+   "clip": "esahubble_heic1503a",
+   "ss": 4.56,
+   "crop": null,
+   "score": 0.4136,
+   "ref": "cold_open/17",
+   "title": "Panning across NGC 7714"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 54.546,
+   "t1": 56.659,
+   "q": [
+    "zooming into the dark centre of a galaxy",
+    "slow zoom into a galaxy core"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 1636,
+   "f1": 1700,
+   "shot": "esahubble_heic1811b#0",
+   "clip": "esahubble_heic1811b",
+   "ss": 4.54,
+   "crop": null,
+   "score": 0.3833,
+   "ref": "cold_open/18",
+   "title": "Pan on NGC 3256"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 56.659,
+   "t1": 58.772,
+   "q": [
+    "zooming into the dark centre of a galaxy",
+    "slow zoom into a galaxy core"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 1700,
+   "f1": 1763,
+   "shot": "esahubble_potm2609b#0",
+   "clip": "esahubble_potm2609b",
+   "ss": 3.69,
+   "crop": null,
+   "score": 0.3925,
+   "ref": "cold_open/19",
+   "title": "Zoom video: NGC 4698"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 58.772,
+   "t1": 60.165,
+   "q": [
+    "close-up of a black hole with a bright ring of light",
+    "black hole bending light around it"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 1763,
+   "f1": 1805,
+   "shot": "svs_14905#5",
+   "clip": "svs_14905",
+   "ss": 30.79,
+   "crop": [
+    0.05,
+    0.0,
+    0.95,
+    0.9
+   ],
+   "score": 0.4347,
+   "ref": "cold_open/20",
+   "title": "Black Hole Environments, Explained"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 60.165,
+   "t1": 62.44925,
+   "q": [
+    "the James Webb Space Telescope in space",
+    "Webb telescope sunshield unfolding in space",
+    "a Webb deep field full of galaxies"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 1805,
+   "f1": 1873,
+   "shot": "svs_20342#0",
+   "clip": "svs_20342",
+   "ss": 2.04,
+   "crop": null,
+   "score": 0.2962,
+   "ref": "cold_open/21",
+   "title": "WEBB Turn Arounds"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 62.44925,
+   "t1": 64.7335,
+   "q": [
+    "the James Webb Space Telescope in space",
+    "Webb telescope sunshield unfolding in space",
+    "a Webb deep field full of galaxies"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 1873,
+   "f1": 1942,
+   "shot": "svs_14381#1",
+   "clip": "svs_14381",
+   "ss": 4.61,
+   "crop": null,
+   "score": 0.3252,
+   "ref": "cold_open/22",
+   "title": "Webb Telescope Mission Overview 2023"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 64.7335,
+   "t1": 67.01775,
+   "q": [
+    "the James Webb Space Telescope in space",
+    "Webb telescope sunshield unfolding in space",
+    "a Webb deep field full of galaxies"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 1942,
+   "f1": 2011,
+   "shot": "svs_20339#0",
+   "clip": "svs_20339",
+   "ss": 28.46,
+   "crop": null,
+   "score": 0.2908,
+   "ref": "cold_open/23",
+   "title": "Webb Deployment Animations"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 67.01775,
+   "t1": 69.302,
+   "q": [
+    "the James Webb Space Telescope in space",
+    "Webb telescope sunshield unfolding in space",
+    "a Webb deep field full of galaxies"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 2011,
+   "f1": 2079,
+   "shot": "svs_14034#0",
+   "clip": "svs_14034",
+   "ss": 3.07,
+   "crop": null,
+   "score": 0.2879,
+   "ref": "cold_open/24",
+   "title": "Sunshield Only Deployment Animation"
+  },
+  {
+   "kind": "clip",
+   "sec": "cold_open",
+   "t0": 69.302,
+   "t1": 72.635,
+   "q": [
+    "a faint red galaxy in the early universe",
+    "deep field with distant red galaxies"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 2079,
+   "f1": 2179,
+   "shot": "esahubble_potw2441a#0",
+   "clip": "esahubble_potw2441a",
+   "ss": 3.95,
+   "crop": null,
+   "score": 0.3709,
+   "ref": "cold_open/25",
+   "title": "Pan: NGC 5248"
+  },
+  {
+   "kind": "title",
+   "sec": "fact10",
+   "t0": 72.635,
+   "t1": 75.235,
+   "text": "10 FACTS ABOUT BLACK HOLES",
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 2179,
+   "f1": 2257,
+   "shot": "esawebb_weic2520a#0",
+   "clip": "esawebb_weic2520a",
+   "ss": 4.32,
+   "crop": null,
+   "score": 0.3669,
+   "ref": "fact10/0",
+   "title": "Pan video: Sagittarius B2 (NIRCam image)"
+  },
+  {
+   "kind": "card",
+   "sec": "fact10",
+   "t0": 75.235,
+   "t1": 77.03500000000001,
+   "text": [
+    "FACT #10",
+    "PREDICTED IN 1783, BY A VILLAGE PRIEST"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 2257,
+   "f1": 2311,
+   "shot": "eso_eso1825e#0",
+   "clip": "eso_eso1825e",
+   "ss": 3.35,
+   "crop": null,
+   "score": 0.4032,
+   "ref": "fact10/1",
+   "title": "Stars orbiting the black hole at the heart of the Milky Way"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 77.03500000000001,
+   "t1": 79.897,
+   "q": [
+    "a starry night sky slowly drifting",
+    "stars over a quiet landscape at night"
+   ],
+   "trans": "cut",
+   "zoom": "out",
+   "f0": 2311,
+   "f1": 2397,
+   "shot": "esahubble_heic2108c#0",
+   "clip": "esahubble_heic2108c",
+   "ss": 4.18,
+   "crop": null,
+   "score": 0.3238,
+   "ref": "fact10/2",
+   "title": "Pan of M3"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 79.897,
+   "t1": 82.68299999999999,
+   "q": [
+    "the Milky Way over a dark countryside",
+    "night sky timelapse over hills"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 2397,
+   "f1": 2480,
+   "shot": "eso_uhd_bt_lasilla_01_layers#0",
+   "clip": "eso_uhd_bt_lasilla_01_layers",
+   "ss": 4.21,
+   "crop": null,
+   "score": 0.3426,
+   "ref": "fact10/3",
+   "title": "Sun sets over La Silla"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 82.68299999999999,
+   "t1": 85.469,
+   "q": [
+    "the Milky Way over a dark countryside",
+    "night sky timelapse over hills"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 2480,
+   "f1": 2564,
+   "shot": "eso_la_silla_horalek_1#0",
+   "clip": "eso_la_silla_horalek_1",
+   "ss": 1.86,
+   "crop": null,
+   "score": 0.3592,
+   "ref": "fact10/4",
+   "title": "Through the night"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 85.469,
+   "t1": 88.0935,
+   "q": [
+    "a bright star field",
+    "stars twinkling in the night sky"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 2564,
+   "f1": 2643,
+   "shot": "esahubble_potw2249a#0",
+   "clip": "esahubble_potw2249a",
+   "ss": 4.3,
+   "crop": null,
+   "score": 0.3747,
+   "ref": "fact10/5",
+   "title": "Head in the Clouds"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 88.0935,
+   "t1": 90.718,
+   "q": [
+    "a bright star field",
+    "stars twinkling in the night sky"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 2643,
+   "f1": 2722,
+   "shot": "esahubble_heic2108b#0",
+   "clip": "esahubble_heic2108b",
+   "ss": 4.3,
+   "crop": null,
+   "score": 0.3781,
+   "ref": "fact10/6",
+   "title": "Pan of M13"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 90.718,
+   "t1": 93.27966666666667,
+   "q": [
+    "planet Earth rotating in space",
+    "Earth seen from space"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 2722,
+   "f1": 2798,
+   "shot": "svs_30878#0",
+   "clip": "svs_30878",
+   "ss": 4.32,
+   "crop": null,
+   "score": 0.301,
+   "ref": "fact10/7",
+   "title": "Black Marble 2016 (Rotating Globe)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 93.27966666666667,
+   "t1": 95.84133333333334,
+   "q": [
+    "planet Earth rotating in space",
+    "Earth seen from space"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 2798,
+   "f1": 2875,
+   "shot": "svs_4593#0",
+   "clip": "svs_4593",
+   "ss": 0.47,
+   "crop": null,
+   "score": 0.3162,
+   "ref": "fact10/8",
+   "title": "Earthrise in 4K"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 95.84133333333334,
+   "t1": 98.403,
+   "q": [
+    "planet Earth rotating in space",
+    "Earth seen from space"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 2875,
+   "f1": 2952,
+   "shot": "eso_eso1706a#3",
+   "clip": "eso_eso1706a",
+   "ss": 27.74,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.3023,
+   "ref": "fact10/9",
+   "title": "ESOcast 96: Ultracool Dwarf and the Seven Planets"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 98.403,
+   "t1": 100.435,
+   "q": [
+    "the glowing surface of the Sun",
+    "a bright star in space"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 2952,
+   "f1": 3013,
+   "shot": "eso_2026-01-26-Solar-Ha-Strobele-loop#0",
+   "clip": "eso_2026-01-26-Solar-Ha-Strobele-loop",
+   "ss": 2.57,
+   "crop": null,
+   "score": 0.4125,
+   "ref": "fact10/10",
+   "title": "Solar active regions AR14341/5/6"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 100.435,
+   "t1": 102.467,
+   "q": [
+    "the glowing surface of the Sun",
+    "a bright star in space"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 3013,
+   "f1": 3074,
+   "shot": "svs_5649#0",
+   "clip": "svs_5649",
+   "ss": 4.58,
+   "crop": null,
+   "score": 0.4124,
+   "ref": "fact10/11",
+   "title": "Four Days of Solar Dynamics in 16 Minutes"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 102.467,
+   "t1": 105.509,
+   "q": [
+    "a giant red star",
+    "a huge glowing star"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 3074,
+   "f1": 3165,
+   "shot": "svs_20344#0",
+   "clip": "svs_20344",
+   "ss": 4.09,
+   "crop": null,
+   "score": 0.3743,
+   "ref": "fact10/12",
+   "title": "Type Ia Supernovae Animations"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 105.509,
+   "t1": 108.551,
+   "q": [
+    "a giant red star",
+    "a huge glowing star"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 3165,
+   "f1": 3257,
+   "shot": "eso_eso2007c#0",
+   "clip": "eso_eso2007c",
+   "ss": 2.73,
+   "crop": null,
+   "score": 0.3589,
+   "ref": "fact10/13",
+   "title": "Zooming into HR 6819"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 108.551,
+   "t1": 110.339,
+   "q": [
+    "a supergiant star with a glowing atmosphere",
+    "red supergiant star"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 3257,
+   "f1": 3310,
+   "shot": "svs_20413#0",
+   "clip": "svs_20413",
+   "ss": 4.71,
+   "crop": null,
+   "score": 0.4126,
+   "ref": "fact10/14",
+   "title": "Supernova explosion animation, with & without pulsar"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact10",
+   "t0": 110.339,
+   "t1": 117.433,
+   "gfx": "dark_star",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "flash",
+   "f0": 3310,
+   "f1": 3523,
+   "shot": "eso_eso1729b#0",
+   "clip": "eso_eso1729b",
+   "ss": 0.2,
+   "crop": null,
+   "score": 0.3895,
+   "ref": "fact10/15",
+   "title": "Flying from the Earth to the star WASP-19 in the constellation Vela"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 117.433,
+   "t1": 119.998,
+   "q": [
+    "a dark shadow among the stars",
+    "black hole in front of a star field"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 3523,
+   "f1": 3600,
+   "shot": "eso_eso1539a#0",
+   "clip": "eso_eso1539a",
+   "ss": 1.33,
+   "crop": null,
+   "score": 0.361,
+   "ref": "fact10/16",
+   "title": "Zooming in on the dark and dusty Coalsack Nebula"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact10",
+   "t0": 119.998,
+   "t1": 126.976,
+   "gfx": "hidden_companion",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "blur",
+   "f0": 3600,
+   "f1": 3809,
+   "shot": "eso_eso2509a#1",
+   "clip": "eso_eso2509a",
+   "ss": 2.59,
+   "crop": null,
+   "score": 0.3743,
+   "ref": "fact10/17",
+   "title": "Astronomers observe pair of galaxies in deep-space battle | ESO News"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 126.976,
+   "t1": 129.791,
+   "q": [
+    "a telescope observing the night sky",
+    "large telescope moving at night"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 3809,
+   "f1": 3894,
+   "shot": "eso_eso2401a#3",
+   "clip": "eso_eso2401a",
+   "ss": 17.54,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.3369,
+   "ref": "fact10/18",
+   "title": "Supernovae give rise to black holes or neutron stars (ESOcast 269 Light)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact10",
+   "t0": 129.791,
+   "t1": 132.606,
+   "q": [
+    "a telescope observing the night sky",
+    "large telescope moving at night"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 3894,
+   "f1": 3978,
+   "shot": "eso_Geminidstimelapse5#0",
+   "clip": "eso_Geminidstimelapse5",
+   "ss": 4.19,
+   "crop": null,
+   "score": 0.3777,
+   "ref": "fact10/19",
+   "title": "Geminids time-lapse 5"
+  },
+  {
+   "kind": "card",
+   "sec": "fact9",
+   "t0": 132.606,
+   "t1": 135.506,
+   "text": [
+    "FACT #9",
+    "EVEN EINSTEIN DIDN'T BELIEVE IN THEM"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 3978,
+   "f1": 4065,
+   "shot": "eso_eso2408b#0",
+   "clip": "eso_eso2408b",
+   "ss": 4.15,
+   "crop": null,
+   "score": 0.3961,
+   "ref": "fact9/0",
+   "title": "Artist’s animation of the system with the most massive stellar black hole in our galaxy"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 135.506,
+   "t1": 139.227,
+   "q": [
+    "warped light around a massive object in space",
+    "gravitational lens distorting background galaxies"
+   ],
+   "trans": "cut",
+   "zoom": "in",
+   "f0": 4065,
+   "f1": 4177,
+   "shot": "svs_14896#4",
+   "clip": "svs_14896",
+   "ss": 14.42,
+   "crop": null,
+   "score": 0.368,
+   "ref": "fact9/1",
+   "title": "NASA's IMAP Mission (Trailer)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 139.227,
+   "t1": 142.11200000000002,
+   "q": [
+    "a spiral galaxy slowly rotating",
+    "stars drifting in deep space"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 4177,
+   "f1": 4263,
+   "shot": "svs_30952#0",
+   "clip": "svs_30952",
+   "ss": 0.31,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3873,
+   "ref": "fact9/2",
+   "title": "The Whirlpool Galaxy: Visible and X-ray Views"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 142.11200000000002,
+   "t1": 144.997,
+   "q": [
+    "a spiral galaxy slowly rotating",
+    "stars drifting in deep space"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 4263,
+   "f1": 4350,
+   "shot": "esahubble_potw2530a#0",
+   "clip": "esahubble_potw2530a",
+   "ss": 4.17,
+   "crop": null,
+   "score": 0.3876,
+   "ref": "fact9/3",
+   "title": "Pan: NGC 1309"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 144.997,
+   "t1": 148.666,
+   "q": [
+    "a black hole visualization",
+    "dark sphere surrounded by glowing gas"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 4350,
+   "f1": 4460,
+   "shot": "eso_eso2109c#0",
+   "clip": "eso_eso2109c",
+   "ss": 3.77,
+   "crop": null,
+   "score": 0.3228,
+   "ref": "fact9/4",
+   "title": "Artist’s animation of Betelgeuse and its dusty veil"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 148.666,
+   "t1": 150.872,
+   "q": [
+    "a massive blue star shining",
+    "giant star surrounded by gas"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 4460,
+   "f1": 4526,
+   "shot": "esawebb_potm2412b#0",
+   "clip": "esawebb_potm2412b",
+   "ss": 4.51,
+   "crop": null,
+   "score": 0.4089,
+   "ref": "fact9/5",
+   "title": "Pan video: NGC 2566 (MIRI)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 150.872,
+   "t1": 153.01600000000002,
+   "q": [
+    "a cluster of massive young stars",
+    "bright star cluster"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 4526,
+   "f1": 4590,
+   "shot": "esahubble_potw2516a#0",
+   "clip": "esahubble_potw2516a",
+   "ss": 3.18,
+   "crop": null,
+   "score": 0.4078,
+   "ref": "fact9/6",
+   "title": "Pan: Messier 72"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 153.01600000000002,
+   "t1": 155.16,
+   "q": [
+    "a cluster of massive young stars",
+    "bright star cluster"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 4590,
+   "f1": 4655,
+   "shot": "eso_eso1534a#0",
+   "clip": "eso_eso1534a",
+   "ss": 2.04,
+   "crop": null,
+   "score": 0.437,
+   "ref": "fact9/7",
+   "title": "Zooming in on the star cluster IC 4651"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 155.16,
+   "t1": 157.304,
+   "q": [
+    "a cluster of massive young stars",
+    "bright star cluster"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 4655,
+   "f1": 4719,
+   "shot": "eso_eso1616b#0",
+   "clip": "eso_eso1616b",
+   "ss": 4.54,
+   "crop": null,
+   "score": 0.403,
+   "ref": "fact9/8",
+   "title": "Close-up view of the glowing gas cloud LHA 120-N55 in the Large Magellanic Cloud"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact9",
+   "t0": 157.304,
+   "t1": 167.23,
+   "gfx": "collapse",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "flash",
+   "f0": 4719,
+   "f1": 5017,
+   "shot": "eso_eso1814c#0",
+   "clip": "eso_eso1814c",
+   "ss": 0.64,
+   "crop": null,
+   "score": 0.3928,
+   "ref": "fact9/9",
+   "title": "Asteroid fly-by"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 167.23,
+   "t1": 170.945,
+   "q": [
+    "a black hole cut off in dark space",
+    "black hole alone in deep space"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 5017,
+   "f1": 5128,
+   "shot": "eso_eso1907f#0",
+   "clip": "eso_eso1907f",
+   "ss": 3.74,
+   "crop": null,
+   "score": 0.4267,
+   "ref": "fact9/10",
+   "title": "Artist’s impression of the Black Hole at the heart of M87"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 170.945,
+   "t1": 173.041,
+   "q": [
+    "a dark nebula with glowing edges",
+    "turbulent cosmic clouds"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 5128,
+   "f1": 5191,
+   "shot": "eso_eso1816c#0",
+   "clip": "eso_eso1816c",
+   "ss": 4.55,
+   "crop": null,
+   "score": 0.3745,
+   "ref": "fact9/11",
+   "title": "Panning across the rich region around the Tarantula Nebula in the Large Magellanic Cloud"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 173.041,
+   "t1": 175.137,
+   "q": [
+    "a dark nebula with glowing edges",
+    "turbulent cosmic clouds"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 5191,
+   "f1": 5254,
+   "shot": "esawebb_weic2605c#0",
+   "clip": "esawebb_weic2605c",
+   "ss": 4.57,
+   "crop": null,
+   "score": 0.3826,
+   "ref": "fact9/12",
+   "title": "Transition video: Exposed Cranium Nebula (NIRCam and MIRI images)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 175.137,
+   "t1": 177.23066666666668,
+   "q": [
+    "dark clouds of gas and dust in space",
+    "violent turbulent nebula"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 5254,
+   "f1": 5317,
+   "shot": "esahubble_heic1614a#0",
+   "clip": "esahubble_heic1614a",
+   "ss": 3.2,
+   "crop": null,
+   "score": 0.4113,
+   "ref": "fact9/13",
+   "title": "Zooming in on the Crab Nebula"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 177.23066666666668,
+   "t1": 179.32433333333333,
+   "q": [
+    "dark clouds of gas and dust in space",
+    "violent turbulent nebula"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 5317,
+   "f1": 5380,
+   "shot": "esahubble_heic1608b#0",
+   "clip": "esahubble_heic1608b",
+   "ss": 3.2,
+   "crop": null,
+   "score": 0.4091,
+   "ref": "fact9/14",
+   "title": "Zoom into the Bubble Nebula"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 179.32433333333333,
+   "t1": 181.418,
+   "q": [
+    "dark clouds of gas and dust in space",
+    "violent turbulent nebula"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 5380,
+   "f1": 5443,
+   "shot": "eso_eso1535a#0",
+   "clip": "eso_eso1535a",
+   "ss": 3.2,
+   "crop": null,
+   "score": 0.409,
+   "ref": "fact9/15",
+   "title": "Zooming in on the Prawn Nebula"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 181.418,
+   "t1": 183.914,
+   "q": [
+    "planet Earth at night from space",
+    "city lights on Earth from orbit"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 5443,
+   "f1": 5517,
+   "shot": "svs_5634#0",
+   "clip": "svs_5634",
+   "ss": 6.85,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3423,
+   "ref": "fact9/16",
+   "title": "Global Nighttime Lights Change (2014–2022)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 183.914,
+   "t1": 186.13899999999998,
+   "q": [
+    "a bright flash of light in space",
+    "brilliant burst of light from a star"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 5517,
+   "f1": 5584,
+   "shot": "esawebb_potm2608b#0",
+   "clip": "esawebb_potm2608b",
+   "ss": 4.5,
+   "crop": null,
+   "score": 0.372,
+   "ref": "fact9/17",
+   "title": "Transition video: Hubble and Webb views of Arp 263"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 186.13899999999998,
+   "t1": 188.364,
+   "q": [
+    "a bright flash of light in space",
+    "brilliant burst of light from a star"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 5584,
+   "f1": 5651,
+   "shot": "eso_eso1711b#0",
+   "clip": "eso_eso1711b",
+   "ss": 0.64,
+   "crop": null,
+   "score": 0.3863,
+   "ref": "fact9/18",
+   "title": "Zooming in on an explosive event in Orion"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 188.364,
+   "t1": 190.589,
+   "q": [
+    "a bright flash of light in space",
+    "brilliant burst of light from a star"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 5651,
+   "f1": 5718,
+   "shot": "esahubble_heic2105c#0",
+   "clip": "esahubble_heic2105c",
+   "ss": 4.14,
+   "crop": null,
+   "score": 0.3869,
+   "ref": "fact9/19",
+   "title": "Zoom Into AG Carinae"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact9",
+   "t0": 190.589,
+   "t1": 194.827,
+   "gfx": "year_counter:1939:1967",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "blur",
+   "f0": 5718,
+   "f1": 5845,
+   "shot": "esawebb_potm2301b#0",
+   "clip": "esawebb_potm2301b",
+   "ss": 0.63,
+   "crop": null,
+   "score": 0.3645,
+   "ref": "fact9/20",
+   "title": "Zoom: A Spiral Amongst Thousands"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 194.827,
+   "t1": 197.33474999999999,
+   "q": [
+    "a radio telescope under the night sky",
+    "observatory at night"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 5845,
+   "f1": 5920,
+   "shot": "eso_pao-vlt2016#0",
+   "clip": "eso_pao-vlt2016",
+   "ss": 0.5,
+   "crop": null,
+   "score": 0.3648,
+   "ref": "fact9/21",
+   "title": "VLT at dusk II"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 197.33474999999999,
+   "t1": 199.8425,
+   "q": [
+    "a radio telescope under the night sky",
+    "observatory at night"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 5920,
+   "f1": 5995,
+   "shot": "eso_uhd_yb_alma_02#0",
+   "clip": "eso_uhd_yb_alma_02",
+   "ss": 4.35,
+   "crop": null,
+   "score": 0.3497,
+   "ref": "fact9/22",
+   "title": "ALMA antenna dance"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 199.8425,
+   "t1": 202.35025000000002,
+   "q": [
+    "a radio telescope under the night sky",
+    "observatory at night"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 5995,
+   "f1": 6071,
+   "shot": "eso_horalek-pao-2017-9#0",
+   "clip": "eso_horalek-pao-2017-9",
+   "ss": 1.5,
+   "crop": null,
+   "score": 0.3438,
+   "ref": "fact9/23",
+   "title": "Into the night"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 202.35025000000002,
+   "t1": 204.858,
+   "q": [
+    "a radio telescope under the night sky",
+    "observatory at night"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 6071,
+   "f1": 6146,
+   "shot": "eso_uhd_bt_paranal_06#0",
+   "clip": "eso_uhd_bt_paranal_06",
+   "ss": 4.28,
+   "crop": null,
+   "score": 0.3275,
+   "ref": "fact9/24",
+   "title": "Yepun takes centre stage"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact9",
+   "t0": 204.858,
+   "t1": 205.845,
+   "q": [
+    "black hole with a glowing ring of light",
+    "visualization of a black hole bending light"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 6146,
+   "f1": 6175,
+   "shot": "svs_13483#3",
+   "clip": "svs_13483",
+   "ss": 31.83,
+   "crop": [
+    0.0,
+    0.25,
+    0.75,
+    1.0
+   ],
+   "score": 0.4236,
+   "ref": "fact9/25",
+   "title": "5 Things: Black Holes"
+  },
+  {
+   "kind": "card",
+   "sec": "fact8",
+   "t0": 205.845,
+   "t1": 208.745,
+   "text": [
+    "FACT #8",
+    "THE FIRST ONE WAS FOUND BY ITS X-RAYS"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 6175,
+   "f1": 6262,
+   "shot": "eso_eso2318b#0",
+   "clip": "eso_eso2318b",
+   "ss": 4.15,
+   "crop": null,
+   "score": 0.3659,
+   "ref": "fact8/0",
+   "title": "Animation of the disc and jet in the HH 1177 young star"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 208.745,
+   "t1": 212.268,
+   "q": [
+    "a dark region of space with faint stars",
+    "black hole hidden among stars"
+   ],
+   "trans": "cut",
+   "zoom": "in",
+   "f0": 6262,
+   "f1": 6368,
+   "shot": "esahubble_potw2532a#0",
+   "clip": "esahubble_potw2532a",
+   "ss": 3.85,
+   "crop": null,
+   "score": 0.363,
+   "ref": "fact8/1",
+   "title": "Pan: NGC 45"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 212.268,
+   "t1": 214.544,
+   "q": [
+    "a space telescope orbiting Earth",
+    "X-ray observatory in space"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 6368,
+   "f1": 6436,
+   "shot": "svs_15041#0",
+   "clip": "svs_15041",
+   "ss": 5.03,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3866,
+   "ref": "fact8/2",
+   "title": "NASA's Fermi Spies a Supercharged Supernova"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 214.544,
+   "t1": 216.68,
+   "q": [
+    "glowing X-ray view of hot gas in space",
+    "X-ray image of the sky"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 6436,
+   "f1": 6500,
+   "shot": "esawebb_weic2219c#0",
+   "clip": "esawebb_weic2219c",
+   "ss": 4.53,
+   "crop": null,
+   "score": 0.3769,
+   "ref": "fact8/3",
+   "title": "Pan of Protostar L1527"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 216.68,
+   "t1": 218.77366666666668,
+   "q": [
+    "a rocket launching into the sky",
+    "rocket lift-off from a launch pad",
+    "the X-ray sky glowing"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 6500,
+   "f1": 6563,
+   "shot": "svs_14666#1",
+   "clip": "svs_14666",
+   "ss": 27.2,
+   "crop": null,
+   "score": 0.3778,
+   "ref": "fact8/4",
+   "title": "ESCAPADE Launch Phase and Deployment Animations"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 218.77366666666668,
+   "t1": 220.86733333333333,
+   "q": [
+    "a rocket launching into the sky",
+    "rocket lift-off from a launch pad",
+    "the X-ray sky glowing"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 6563,
+   "f1": 6626,
+   "shot": "svs_20253#0",
+   "clip": "svs_20253",
+   "ss": 1.2,
+   "crop": null,
+   "score": 0.2663,
+   "ref": "fact8/5",
+   "title": "OSIRIS-REx Launch and Deployment Animations"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 220.86733333333333,
+   "t1": 222.961,
+   "q": [
+    "a rocket launching into the sky",
+    "rocket lift-off from a launch pad",
+    "the X-ray sky glowing"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 6626,
+   "f1": 6689,
+   "shot": "svs_15043#0",
+   "clip": "svs_15043",
+   "ss": 6.07,
+   "crop": null,
+   "score": 0.3539,
+   "ref": "fact8/6",
+   "title": "STORIE Launch and Install on the Space Station"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 222.961,
+   "t1": 225.09750000000003,
+   "q": [
+    "the Milky Way in the constellation Cygnus",
+    "rich star field along the Milky Way"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 6689,
+   "f1": 6753,
+   "shot": "esahubble_heic1709a#0",
+   "clip": "esahubble_heic1709a",
+   "ss": 4.55,
+   "crop": null,
+   "score": 0.3857,
+   "ref": "fact8/7",
+   "title": "Pan on NGC 4298 and NGC 4302"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 225.09750000000003,
+   "t1": 227.234,
+   "q": [
+    "the Milky Way in the constellation Cygnus",
+    "rich star field along the Milky Way"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 6753,
+   "f1": 6817,
+   "shot": "eso_eso1425b#0",
+   "clip": "eso_eso1425b",
+   "ss": 4.55,
+   "crop": null,
+   "score": 0.4012,
+   "ref": "fact8/8",
+   "title": "A close-up look at star formation in the southern Milky Way"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 227.234,
+   "t1": 229.521,
+   "q": [
+    "X-ray binary with a black hole pulling gas from a star",
+    "black hole feeding on a companion star"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 6817,
+   "f1": 6886,
+   "shot": "eso_eso1622a#0",
+   "clip": "eso_eso1622a",
+   "ss": 4.47,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.3732,
+   "ref": "fact8/9",
+   "title": "Artist’s impression of the star S2 passing very close to the supermassive black hole at the centre of the Milky Way"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 229.521,
+   "t1": 232.232,
+   "q": [
+    "a blue supergiant star",
+    "bright blue star"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 6886,
+   "f1": 6967,
+   "shot": "esahubble_heic1807d#0",
+   "clip": "esahubble_heic1807d",
+   "ss": 4.26,
+   "crop": null,
+   "score": 0.4466,
+   "ref": "fact8/10",
+   "title": "The blue supergiant star LS1 (artist’s impression)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 232.232,
+   "t1": 234.943,
+   "q": [
+    "a blue supergiant star",
+    "bright blue star"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 6967,
+   "f1": 7048,
+   "shot": "eso_eso2010c#0",
+   "clip": "eso_eso2010c",
+   "ss": 4.26,
+   "crop": null,
+   "score": 0.4084,
+   "ref": "fact8/11",
+   "title": "Zooming in to the Kinman Dwarf galaxy"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 234.943,
+   "t1": 238.019,
+   "q": [
+    "a star orbiting a black hole",
+    "binary star system orbiting"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 7048,
+   "f1": 7141,
+   "shot": "eso_eso1627a#0",
+   "clip": "eso_eso1627a",
+   "ss": 4.08,
+   "crop": null,
+   "score": 0.3916,
+   "ref": "fact8/12",
+   "title": "Artist’s impression video of the exotic binary star system AR Scorpii"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 238.019,
+   "t1": 240.0795,
+   "q": [
+    "black hole beside a blue star",
+    "black hole and companion star"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 7141,
+   "f1": 7202,
+   "shot": "eso_eso1804b#0",
+   "clip": "eso_eso1804b",
+   "ss": 3.72,
+   "crop": null,
+   "score": 0.3682,
+   "ref": "fact8/13",
+   "title": "Zooming in on the Lupus 3 star-forming region"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 240.0795,
+   "t1": 242.14,
+   "q": [
+    "black hole beside a blue star",
+    "black hole and companion star"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 7202,
+   "f1": 7264,
+   "shot": "eso_lupus3_ultrahd#0",
+   "clip": "eso_lupus3_ultrahd",
+   "ss": 3.72,
+   "crop": null,
+   "score": 0.3271,
+   "ref": "fact8/14",
+   "title": "Lupus 3 cloud"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 242.14,
+   "t1": 245.438,
+   "q": [
+    "gas stream flowing from a star into a black hole",
+    "accretion stream from a star"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 7264,
+   "f1": 7363,
+   "shot": "svs_20417#0",
+   "clip": "svs_20417",
+   "ss": 3.95,
+   "crop": null,
+   "score": 0.3586,
+   "ref": "fact8/15",
+   "title": "Wind-Accreting Pulsar Visualization"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 245.438,
+   "t1": 247.8525,
+   "q": [
+    "hot glowing accretion disk around a black hole",
+    "swirling disk of hot gas"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 7363,
+   "f1": 7436,
+   "shot": "esawebb_potm2306a#0",
+   "clip": "esawebb_potm2306a",
+   "ss": 4.41,
+   "crop": null,
+   "score": 0.3666,
+   "ref": "fact8/16",
+   "title": "Pan of NGC 3256"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 247.8525,
+   "t1": 250.267,
+   "q": [
+    "hot glowing accretion disk around a black hole",
+    "swirling disk of hot gas"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 7436,
+   "f1": 7508,
+   "shot": "esawebb_potm2602a#0",
+   "clip": "esawebb_potm2602a",
+   "ss": 4.41,
+   "crop": null,
+   "score": 0.3562,
+   "ref": "fact8/17",
+   "title": "Pan video: NGC 5134"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 250.267,
+   "t1": 252.62,
+   "q": [
+    "a black hole and its companion star",
+    "binary system with a black hole"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 7508,
+   "f1": 7579,
+   "shot": "esahubble_heic1717b#0",
+   "clip": "esahubble_heic1717b",
+   "ss": 3.07,
+   "crop": null,
+   "score": 0.3324,
+   "ref": "fact8/18",
+   "title": "Neutron star merger animation ending with kilonova explosion"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 252.62,
+   "t1": 254.973,
+   "q": [
+    "a black hole and its companion star",
+    "binary system with a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 7579,
+   "f1": 7649,
+   "shot": "svs_13483#4",
+   "clip": "svs_13483",
+   "ss": 44.7,
+   "crop": null,
+   "score": 0.3683,
+   "ref": "fact8/19",
+   "title": "5 Things: Black Holes"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 254.973,
+   "t1": 257.326,
+   "q": [
+    "a black hole and its companion star",
+    "binary system with a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 7649,
+   "f1": 7720,
+   "shot": "eso_eso2418c#0",
+   "clip": "eso_eso2418c",
+   "ss": 2.04,
+   "crop": null,
+   "score": 0.3668,
+   "ref": "fact8/20",
+   "title": "Artist's animation of star pair D9 orbiting the supermassive black hole Sgr A*"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 257.326,
+   "t1": 259.62100000000004,
+   "q": [
+    "black hole visualization with a warped disk",
+    "black hole bending light"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 7720,
+   "f1": 7789,
+   "shot": "eso_black-hole-material#0",
+   "clip": "eso_black-hole-material",
+   "ss": 4.45,
+   "crop": null,
+   "score": 0.4235,
+   "ref": "fact8/21",
+   "title": "Artist's impression of a black hole and the material surrounding it"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 259.62100000000004,
+   "t1": 261.916,
+   "q": [
+    "black hole visualization with a warped disk",
+    "black hole bending light"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 7789,
+   "f1": 7857,
+   "shot": "eso_eso1904a#3",
+   "clip": "eso_eso1904a",
+   "ss": 33.94,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.3026,
+   "ref": "fact8/22",
+   "title": "ESOcast 195 Light: A Cosmic Bat in Flight"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 261.916,
+   "t1": 264.211,
+   "q": [
+    "black hole visualization with a warped disk",
+    "black hole bending light"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 7857,
+   "f1": 7926,
+   "shot": "esahubble_heic2012b#0",
+   "clip": "esahubble_heic2012b",
+   "ss": 4.47,
+   "crop": null,
+   "score": 0.367,
+   "ref": "fact8/23",
+   "title": "Zooming Into the Bat Shadow and its “Flapping”"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 264.211,
+   "t1": 267.578,
+   "q": [
+    "glowing gas spiralling into a black hole",
+    "matter falling into a black hole"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 7926,
+   "f1": 8027,
+   "shot": "eso_eso1032a#0",
+   "clip": "eso_eso1032a",
+   "ss": 3.92,
+   "crop": null,
+   "score": 0.3705,
+   "ref": "fact8/24",
+   "title": "The material around SN 1987A (artist’s impression)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 267.578,
+   "t1": 269.62149999999997,
+   "q": [
+    "deep space with distant galaxies",
+    "star field drifting"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 8027,
+   "f1": 8089,
+   "shot": "esahubble_potw2418a#0",
+   "clip": "esahubble_potw2418a",
+   "ss": 4.59,
+   "crop": null,
+   "score": 0.3808,
+   "ref": "fact8/25",
+   "title": "Pan: IC 776"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 269.62149999999997,
+   "t1": 271.665,
+   "q": [
+    "deep space with distant galaxies",
+    "star field drifting"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 8089,
+   "f1": 8150,
+   "shot": "eso_eso2510b#0",
+   "clip": "eso_eso2510b",
+   "ss": 0.73,
+   "crop": null,
+   "score": 0.3799,
+   "ref": "fact8/26",
+   "title": "Zooming into a thousand-colour image of the Sculptor Galaxy"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 271.665,
+   "t1": 274.973,
+   "q": [
+    "black hole with jets",
+    "X-ray binary system"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 8150,
+   "f1": 8249,
+   "shot": "esahubble_heic2105d#0",
+   "clip": "esahubble_heic2105d",
+   "ss": 3.96,
+   "crop": null,
+   "score": 0.3308,
+   "ref": "fact8/27",
+   "title": "Pan of AG Carinae"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 274.973,
+   "t1": 277.34933333333333,
+   "q": [
+    "radio telescope dishes at night",
+    "array of radio antennas"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 8249,
+   "f1": 8320,
+   "shot": "eso_uhd_alma7_2014#0",
+   "clip": "eso_uhd_alma7_2014",
+   "ss": 3.56,
+   "crop": null,
+   "score": 0.394,
+   "ref": "fact8/28",
+   "title": "Antennas in Motion"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 277.34933333333333,
+   "t1": 279.72566666666665,
+   "q": [
+    "radio telescope dishes at night",
+    "array of radio antennas"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 8320,
+   "f1": 8392,
+   "shot": "eso_alma-array-uhd15#0",
+   "clip": "eso_alma-array-uhd15",
+   "ss": 4.41,
+   "crop": null,
+   "score": 0.3431,
+   "ref": "fact8/29",
+   "title": "Antennas to the Universe"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 279.72566666666665,
+   "t1": 282.102,
+   "q": [
+    "radio telescope dishes at night",
+    "array of radio antennas"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 8392,
+   "f1": 8463,
+   "shot": "eso_eso2208-eht-mwe#0",
+   "clip": "eso_eso2208-eht-mwe",
+   "ss": 2.06,
+   "crop": null,
+   "score": 0.3659,
+   "ref": "fact8/30",
+   "title": "Video montage of the Event Horizon Telescope observatories"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 282.102,
+   "t1": 285.562,
+   "q": [
+    "massive black hole swallowing gas",
+    "accretion disk around a stellar black hole"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 8463,
+   "f1": 8567,
+   "shot": "eso_eso2511c#0",
+   "clip": "eso_eso2511c",
+   "ss": 1.78,
+   "crop": null,
+   "score": 0.3974,
+   "ref": "fact8/31",
+   "title": "Animation of a double-detonation supernova"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 285.562,
+   "t1": 287.47749999999996,
+   "q": [
+    "zooming out from a black hole to the Milky Way",
+    "Milky Way star field"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 8567,
+   "f1": 8624,
+   "shot": "eso_eso1823b#0",
+   "clip": "eso_eso1823b",
+   "ss": 3.29,
+   "crop": null,
+   "score": 0.3625,
+   "ref": "fact8/32",
+   "title": "Zooming into RCW 38"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact8",
+   "t0": 287.47749999999996,
+   "t1": 289.393,
+   "q": [
+    "zooming out from a black hole to the Milky Way",
+    "Milky Way star field"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 8624,
+   "f1": 8682,
+   "shot": "esahubble_heic1509b#0",
+   "clip": "esahubble_heic1509b",
+   "ss": 3.29,
+   "crop": null,
+   "score": 0.3713,
+   "ref": "fact8/33",
+   "title": "Zoom into Westerlund 2"
+  },
+  {
+   "kind": "card",
+   "sec": "fact7",
+   "t0": 289.393,
+   "t1": 292.29299999999995,
+   "text": [
+    "FACT #7",
+    "BLACK HOLES ARE NOT COMPLETELY BLACK"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 8682,
+   "f1": 8769,
+   "shot": "eso_eso1810a#1",
+   "clip": "eso_eso1810a",
+   "ss": 19.5,
+   "crop": [
+    0.0,
+    0.2,
+    0.8,
+    1.0
+   ],
+   "score": 0.3767,
+   "ref": "fact7/0",
+   "title": "ESOcast 155 Light: Dead Star Circled by Light (4K UHD)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 292.29299999999995,
+   "t1": 293.819,
+   "q": [
+    "a black hole in empty space",
+    "dark sphere with a ring of light"
+   ],
+   "trans": "cut",
+   "zoom": "in",
+   "f0": 8769,
+   "f1": 8815,
+   "shot": "esahubble_heic2021c#0",
+   "clip": "esahubble_heic2021c",
+   "ss": 4.84,
+   "crop": null,
+   "score": 0.3307,
+   "ref": "fact7/1",
+   "title": "Artist’s Impression of the Hypothesized “Planet Nine”"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 293.819,
+   "t1": 296.223,
+   "q": [
+    "matter falling into a black hole",
+    "gas swirling into darkness"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 8815,
+   "f1": 8887,
+   "shot": "esahubble_potw2144a#0",
+   "clip": "esahubble_potw2144a",
+   "ss": 4.05,
+   "crop": null,
+   "score": 0.3653,
+   "ref": "fact7/2",
+   "title": "Video of Cosmic Fireworks"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 296.223,
+   "t1": 298.98,
+   "q": [
+    "glowing edge of a black hole",
+    "black hole with bright photon ring"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 8887,
+   "f1": 8969,
+   "shot": "eso_eso2111a#3",
+   "clip": "eso_eso2111a",
+   "ss": 28.8,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3486,
+   "ref": "fact7/3",
+   "title": "Peeking at a Distant Moon-Forming Disc (ESOcast Light 240)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 298.98,
+   "t1": 301.737,
+   "q": [
+    "glowing edge of a black hole",
+    "black hole with bright photon ring"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 8969,
+   "f1": 9052,
+   "shot": "eso_eso1825g#0",
+   "clip": "eso_eso1825g",
+   "ss": 4.24,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3991,
+   "ref": "fact7/4",
+   "title": "Animation of the orbit of the star S2 around the galactic centre black hole"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 301.737,
+   "t1": 304.28,
+   "q": [
+    "warped spacetime around a black hole",
+    "light bending around a black hole"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 9052,
+   "f1": 9128,
+   "shot": "svs_5502#1",
+   "clip": "svs_5502",
+   "ss": 8.38,
+   "crop": null,
+   "score": 0.382,
+   "ref": "fact7/5",
+   "title": "Solar Storm Excites Martian Magnetosphere"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 304.28,
+   "t1": 306.811,
+   "q": [
+    "glowing particles in space",
+    "sparkling cosmic dust"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 9128,
+   "f1": 9204,
+   "shot": "esahubble_heic2103a#1",
+   "clip": "esahubble_heic2103a",
+   "ss": 13.61,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3965,
+   "ref": "fact7/6",
+   "title": "Space Sparks Episode 1"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 306.811,
+   "t1": 309.342,
+   "q": [
+    "glowing particles in space",
+    "sparkling cosmic dust"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 9204,
+   "f1": 9280,
+   "shot": "esawebb_potm2607b#0",
+   "clip": "esawebb_potm2607b",
+   "ss": 3.48,
+   "crop": null,
+   "score": 0.3859,
+   "ref": "fact7/7",
+   "title": "Zoom video: Treasure Chest Nebula"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 309.342,
+   "t1": 311.315,
+   "q": [
+    "black hole with a faint glow",
+    "black hole visualization close-up"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 9280,
+   "f1": 9339,
+   "shot": "esahubble_potm2602d#0",
+   "clip": "esahubble_potm2602d",
+   "ss": 3.76,
+   "crop": null,
+   "score": 0.3198,
+   "ref": "fact7/8",
+   "title": "Zoom Video: Cat's Eye Nebula"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact7",
+   "t0": 311.315,
+   "t1": 321.997,
+   "gfx": "evaporate",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "flash",
+   "f0": 9339,
+   "f1": 9660,
+   "shot": "eso_eso1427b#0",
+   "clip": "eso_eso1427b",
+   "ss": 0.26,
+   "crop": null,
+   "score": 0.3685,
+   "ref": "fact7/9",
+   "title": "A close-up view of the dark cloud Lupus 4"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 321.997,
+   "t1": 325.015,
+   "q": [
+    "a black hole slowly fading",
+    "dim glowing remnant in space"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 9660,
+   "f1": 9750,
+   "shot": "esawebb_potm2408a#0",
+   "clip": "esawebb_potm2408a",
+   "ss": 4.11,
+   "crop": null,
+   "score": 0.3471,
+   "ref": "fact7/10",
+   "title": "Pan: NGC 1333"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 325.015,
+   "t1": 327.192,
+   "q": [
+    "wisps of gas drifting away into space",
+    "glowing gas dispersing"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 9750,
+   "f1": 9816,
+   "shot": "eso_esocast78c#2",
+   "clip": "eso_esocast78c",
+   "ss": 12.23,
+   "crop": null,
+   "score": 0.3561,
+   "ref": "fact7/11",
+   "title": "ESOcast78 excerpt: Chemiluminescence"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 327.192,
+   "t1": 329.369,
+   "q": [
+    "wisps of gas drifting away into space",
+    "glowing gas dispersing"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 9816,
+   "f1": 9881,
+   "shot": "svs_12221#0",
+   "clip": "svs_12221",
+   "ss": 6.01,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3888,
+   "ref": "fact7/12",
+   "title": "Tracking Volcanic Ash With Satellites"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 329.369,
+   "t1": 331.818,
+   "q": [
+    "slow drift through a dark star field",
+    "faint stars in deep space"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 9881,
+   "f1": 9955,
+   "shot": "esahubble_potw2511a#0",
+   "clip": "esahubble_potw2511a",
+   "ss": 4.39,
+   "crop": null,
+   "score": 0.3682,
+   "ref": "fact7/13",
+   "title": "Pan: NGC 346"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact7",
+   "t0": 331.818,
+   "t1": 340.572,
+   "gfx": "zeros",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "flash",
+   "f0": 9955,
+   "f1": 10217,
+   "shot": "eso_ann17051a#0",
+   "clip": "eso_ann17051a",
+   "ss": 1.24,
+   "crop": [
+    0.0,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "score": 0.3816,
+   "ref": "fact7/14",
+   "title": "Orbits of three stars very close to the centre of the Milky Way"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 340.572,
+   "t1": 343.742,
+   "q": [
+    "a lonely black hole in deep space",
+    "dark empty space with distant galaxies"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 10217,
+   "f1": 10312,
+   "shot": "esahubble_heic1812a#1",
+   "clip": "esahubble_heic1812a",
+   "ss": 12.46,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3521,
+   "ref": "fact7/15",
+   "title": "Hubblecast 110 Light: New test of Einstein’s general relativity"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 343.742,
+   "t1": 346.3775,
+   "q": [
+    "a large telescope observing at night",
+    "space telescope in orbit"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 10312,
+   "f1": 10391,
+   "shot": "eso_uhd_yb_paranal_02#0",
+   "clip": "eso_uhd_yb_paranal_02",
+   "ss": 2.93,
+   "crop": null,
+   "score": 0.3764,
+   "ref": "fact7/16",
+   "title": "Auxiliary Telescope at work at Paranal"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 346.3775,
+   "t1": 349.013,
+   "q": [
+    "a large telescope observing at night",
+    "space telescope in orbit"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 10391,
+   "f1": 10470,
+   "shot": "eso_gl_northwest_ut1_ut2_ut3#0",
+   "clip": "eso_gl_northwest_ut1_ut2_ut3",
+   "ss": 1.75,
+   "crop": null,
+   "score": 0.3828,
+   "ref": "fact7/17",
+   "title": "A busy night at the VLT"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 349.013,
+   "t1": 352.10749999999996,
+   "q": [
+    "black hole with a glowing ring fading into darkness",
+    "dark nebula"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 10470,
+   "f1": 10563,
+   "shot": "esawebb_weic2605a#0",
+   "clip": "esawebb_weic2605a",
+   "ss": 4.07,
+   "crop": null,
+   "score": 0.3724,
+   "ref": "fact7/18",
+   "title": "Pan video: Exposed Cranium Nebula (NIRCam image)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact7",
+   "t0": 352.10749999999996,
+   "t1": 355.202,
+   "q": [
+    "black hole with a glowing ring fading into darkness",
+    "dark nebula"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 10563,
+   "f1": 10656,
+   "shot": "esawebb_weic2301a#0",
+   "clip": "esawebb_weic2301a",
+   "ss": 4.07,
+   "crop": null,
+   "score": 0.3693,
+   "ref": "fact7/19",
+   "title": "Pan of NGC 346"
+  },
+  {
+   "kind": "card",
+   "sec": "fact6",
+   "t0": 355.202,
+   "t1": 358.102,
+   "text": [
+    "FACT #6",
+    "THEY STRETCH STARS LIKE SPAGHETTI"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 10656,
+   "f1": 10743,
+   "shot": "esahubble_heic2108e#0",
+   "clip": "esahubble_heic2108e",
+   "ss": 3.3,
+   "crop": null,
+   "score": 0.367,
+   "ref": "fact6/0",
+   "title": "Zoom Into M3"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 358.102,
+   "t1": 360.116,
+   "q": [
+    "powerful gravity around a black hole",
+    "black hole warping the light of stars behind it"
+   ],
+   "trans": "cut",
+   "zoom": "in",
+   "f0": 10743,
+   "f1": 10803,
+   "shot": "eso_eso1802e#0",
+   "clip": "eso_eso1802e",
+   "ss": 4.59,
+   "crop": null,
+   "score": 0.3848,
+   "ref": "fact6/1",
+   "title": "Artist’s impression video of the black hole binary system in NGC 3201"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 360.116,
+   "t1": 361.776,
+   "q": [
+    "gas being stretched near a black hole",
+    "swirling gas pulled into a black hole"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 10803,
+   "f1": 10853,
+   "shot": "svs_5623#0",
+   "clip": "svs_5623",
+   "ss": 4.77,
+   "crop": null,
+   "score": 0.3492,
+   "ref": "fact6/2",
+   "title": "The Moon Passes Through Earth's Magnetotail"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact6",
+   "t0": 361.776,
+   "t1": 370.368,
+   "gfx": "tidal",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "whip",
+   "f0": 10853,
+   "f1": 11111,
+   "shot": "eso_eso1730b#0",
+   "clip": "eso_eso1730b",
+   "ss": 0.87,
+   "crop": null,
+   "score": 0.4022,
+   "ref": "fact6/3",
+   "title": "Flying from the Earth to the star U Antliae"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 370.368,
+   "t1": 372.8115,
+   "q": [
+    "a star stretched into a long stream of gas",
+    "tidal disruption of a star by a black hole"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 11111,
+   "f1": 11184,
+   "shot": "esahubble_heic2604a#0",
+   "clip": "esahubble_heic2604a",
+   "ss": 4.39,
+   "crop": null,
+   "score": 0.3751,
+   "ref": "fact6/4",
+   "title": "Pan video: Egg Nebula"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 372.8115,
+   "t1": 375.255,
+   "q": [
+    "a star stretched into a long stream of gas",
+    "tidal disruption of a star by a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 11184,
+   "f1": 11258,
+   "shot": "eso_eso1810a#2",
+   "clip": "eso_eso1810a",
+   "ss": 28.4,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.351,
+   "ref": "fact6/5",
+   "title": "ESOcast 155 Light: Dead Star Circled by Light (4K UHD)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 375.255,
+   "t1": 378.878,
+   "q": [
+    "a stream of stellar debris wrapping around a black hole",
+    "star being shredded by a black hole"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 11258,
+   "f1": 11366,
+   "shot": "eso_eso1902b#0",
+   "clip": "eso_eso1902b",
+   "ss": 3.79,
+   "crop": null,
+   "score": 0.3637,
+   "ref": "fact6/6",
+   "title": "Panning across the evanescent planetary nebula ESO 577-24"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact6",
+   "t0": 378.878,
+   "t1": 392.462,
+   "gfx": "redshift_fall",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "flash",
+   "f0": 11366,
+   "f1": 11774,
+   "shot": "eso_eso1431a#0",
+   "clip": "eso_eso1431a",
+   "ss": 0.81,
+   "crop": null,
+   "score": 0.3689,
+   "ref": "fact6/7",
+   "title": "Artist’s impression of a protocluster forming in the early Universe"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 392.462,
+   "t1": 395.527,
+   "q": [
+    "zooming into a distant spiral galaxy",
+    "galaxy in deep space"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 11774,
+   "f1": 11866,
+   "shot": "esahubble_potw2544a#0",
+   "clip": "esahubble_potw2544a",
+   "ss": 4.08,
+   "crop": null,
+   "score": 0.3973,
+   "ref": "fact6/8",
+   "title": "Pan: NGC 4102"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 395.527,
+   "t1": 398.244,
+   "q": [
+    "a spiral galaxy seen from far away",
+    "distant galaxy zoom"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 11866,
+   "f1": 11947,
+   "shot": "esahubble_heic1514a#1",
+   "clip": "esahubble_heic1514a",
+   "ss": 3.24,
+   "crop": null,
+   "score": 0.4012,
+   "ref": "fact6/9",
+   "title": "Zooming into galaxy group HCG 16"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 398.244,
+   "t1": 400.885,
+   "q": [
+    "a star approaching a supermassive black hole",
+    "star moving toward a black hole"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 11947,
+   "f1": 12027,
+   "shot": "eso_eso1436c#0",
+   "clip": "eso_eso1436c",
+   "ss": 4.29,
+   "crop": null,
+   "score": 0.4149,
+   "ref": "fact6/10",
+   "title": "Artist's impression of the disc around a young star"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 400.885,
+   "t1": 403.526,
+   "q": [
+    "a star approaching a supermassive black hole",
+    "star moving toward a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 12027,
+   "f1": 12106,
+   "shot": "eso_eso2402b#0",
+   "clip": "eso_eso2402b",
+   "ss": 4.28,
+   "crop": null,
+   "score": 0.4218,
+   "ref": "fact6/11",
+   "title": "Artist’s impression of the record-breaking quasar J0529-4351"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 403.526,
+   "t1": 405.40700000000004,
+   "q": [
+    "a star torn apart by a black hole",
+    "tidal disruption event animation"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 12106,
+   "f1": 12162,
+   "shot": "svs_14347#2",
+   "clip": "svs_14347",
+   "ss": 12.88,
+   "crop": null,
+   "score": 0.3581,
+   "ref": "fact6/12",
+   "title": "Unfolding the Universe with Webb"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 405.40700000000004,
+   "t1": 407.288,
+   "q": [
+    "a star torn apart by a black hole",
+    "tidal disruption event animation"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 12162,
+   "f1": 12219,
+   "shot": "eso_eso2115b#0",
+   "clip": "eso_eso2115b",
+   "ss": 1.81,
+   "crop": [
+    0.0,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "score": 0.3761,
+   "ref": "fact6/13",
+   "title": "Zooming in on a Wolf–Rayet star in the remote NGP–190387 galaxy"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 407.288,
+   "t1": 410.898,
+   "q": [
+    "black hole swallowing the remains of a star",
+    "debris disk around a black hole"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 12219,
+   "f1": 12327,
+   "shot": "eso_eso2216a#0",
+   "clip": "eso_eso2216a",
+   "ss": 3.79,
+   "crop": null,
+   "score": 0.4747,
+   "ref": "fact6/14",
+   "title": "Animation of a black hole swallowing a star"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 410.898,
+   "t1": 413.0055,
+   "q": [
+    "the Very Large Telescope at night",
+    "VLT telescopes in Chile"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 12327,
+   "f1": 12390,
+   "shot": "eso_paranal-vlt08timelaps1#0",
+   "clip": "eso_paranal-vlt08timelaps1",
+   "ss": 4.55,
+   "crop": null,
+   "score": 0.4291,
+   "ref": "fact6/15",
+   "title": "Paranal VLT Unit Telescopes time-lapse"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 413.0055,
+   "t1": 415.113,
+   "q": [
+    "the Very Large Telescope at night",
+    "VLT telescopes in Chile"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 12390,
+   "f1": 12453,
+   "shot": "eso_gl_northwest_4ut#0",
+   "clip": "eso_gl_northwest_4ut",
+   "ss": 1.53,
+   "crop": null,
+   "score": 0.425,
+   "ref": "fact6/16",
+   "title": "The bright sky at Paranal"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 415.113,
+   "t1": 418.654,
+   "q": [
+    "telescope domes opening at dusk",
+    "observatory on a mountain at night"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 12453,
+   "f1": 12560,
+   "shot": "eso_eso1839e#0",
+   "clip": "eso_eso1839e",
+   "ss": 3.84,
+   "crop": null,
+   "score": 0.3572,
+   "ref": "fact6/17",
+   "title": "Sunset at SPECULOOS"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 418.654,
+   "t1": 421.5505,
+   "q": [
+    "the bright flare from a star being destroyed",
+    "glowing debris around a black hole"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 12560,
+   "f1": 12647,
+   "shot": "esahubble_heic1912b#0",
+   "clip": "esahubble_heic1912b",
+   "ss": 4.17,
+   "crop": null,
+   "score": 0.3864,
+   "ref": "fact6/18",
+   "title": "Zoom on Eta Carinae"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact6",
+   "t0": 421.5505,
+   "t1": 424.447,
+   "q": [
+    "the bright flare from a star being destroyed",
+    "glowing debris around a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 12647,
+   "f1": 12733,
+   "shot": "eso_eso0943b#0",
+   "clip": "eso_eso0943b",
+   "ss": 1.3,
+   "crop": null,
+   "score": 0.4058,
+   "ref": "fact6/19",
+   "title": "Artist's impression of vampire star"
+  },
+  {
+   "kind": "card",
+   "sec": "fact5",
+   "t0": 424.447,
+   "t1": 427.347,
+   "text": [
+    "FACT #5",
+    "A MONSTER AT THE HEART OF THE MILKY WAY"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 12733,
+   "f1": 12820,
+   "shot": "svs_31024#0",
+   "clip": "svs_31024",
+   "ss": 1.3,
+   "crop": null,
+   "score": 0.3753,
+   "ref": "fact5/0",
+   "title": "A Flyby of the Whirlpool Galaxy"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 427.347,
+   "t1": 429.303,
+   "q": [
+    "the glowing centre of the Milky Way",
+    "zooming into the centre of the Milky Way"
+   ],
+   "trans": "cut",
+   "zoom": "in",
+   "f0": 12820,
+   "f1": 12879,
+   "shot": "esahubble_heic1716a#0",
+   "clip": "esahubble_heic1716a",
+   "ss": 4.64,
+   "crop": null,
+   "score": 0.4016,
+   "ref": "fact5/1",
+   "title": "Pan across NGC 4490"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 429.303,
+   "t1": 431.242,
+   "q": [
+    "zooming into the Galactic Centre",
+    "dense star clouds at the heart of the galaxy"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 12879,
+   "f1": 12937,
+   "shot": "eso_eso1413a#0",
+   "clip": "eso_eso1413a",
+   "ss": 3.78,
+   "crop": null,
+   "score": 0.396,
+   "ref": "fact5/2",
+   "title": "Zooming in on the star formation region Gum 41"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 431.242,
+   "t1": 434.168,
+   "q": [
+    "the band of the Milky Way across the night sky",
+    "Milky Way over a mountain"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 12937,
+   "f1": 13025,
+   "shot": "eso_cs0025g#0",
+   "clip": "eso_cs0025g",
+   "ss": 2.29,
+   "crop": null,
+   "score": 0.3731,
+   "ref": "fact5/3",
+   "title": "Artist's visualisation of the Milky Way"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 434.168,
+   "t1": 436.826,
+   "q": [
+    "the supermassive black hole at the centre of the Milky Way",
+    "Sagittarius A* region"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 13025,
+   "f1": 13105,
+   "shot": "eso_eso2212b#0",
+   "clip": "eso_eso2212b",
+   "ss": 4.27,
+   "crop": null,
+   "score": 0.3576,
+   "ref": "fact5/4",
+   "title": "Sagittarius A* and animation of the hot spot around it"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 436.826,
+   "t1": 438.8,
+   "q": [
+    "dark dust lanes across the Milky Way",
+    "dark clouds of dust in the galaxy"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 13105,
+   "f1": 13164,
+   "shot": "esawebb_potm2407a#0",
+   "clip": "esawebb_potm2407a",
+   "ss": 4.63,
+   "crop": null,
+   "score": 0.3703,
+   "ref": "fact5/5",
+   "title": "Pan video of Messier 106"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 438.8,
+   "t1": 440.774,
+   "q": [
+    "dark dust lanes across the Milky Way",
+    "dark clouds of dust in the galaxy"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 13164,
+   "f1": 13223,
+   "shot": "esahubble_potw2520a#0",
+   "clip": "esahubble_potw2520a",
+   "ss": 4.63,
+   "crop": null,
+   "score": 0.3708,
+   "ref": "fact5/6",
+   "title": "Pan video: NGC 3511"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 440.774,
+   "t1": 442.89250000000004,
+   "q": [
+    "infrared view of the Galactic Centre",
+    "infrared image of stars behind dust"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 13223,
+   "f1": 13287,
+   "shot": "esawebb_weic2324a#0",
+   "clip": "esawebb_weic2324a",
+   "ss": 4.56,
+   "crop": null,
+   "score": 0.3867,
+   "ref": "fact5/7",
+   "title": "Pan of NGC 346 (MIRI image)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 442.89250000000004,
+   "t1": 445.011,
+   "q": [
+    "infrared view of the Galactic Centre",
+    "infrared image of stars behind dust"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 13287,
+   "f1": 13350,
+   "shot": "eso_eso1535b#0",
+   "clip": "eso_eso1535b",
+   "ss": 4.56,
+   "crop": null,
+   "score": 0.3869,
+   "ref": "fact5/8",
+   "title": "A close-up look at the Prawn Nebula"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 445.011,
+   "t1": 447.7685,
+   "q": [
+    "stars orbiting the centre of the galaxy",
+    "stars moving around the Galactic Centre"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 13350,
+   "f1": 13433,
+   "shot": "esawebb_weic2331a#0",
+   "clip": "esawebb_weic2331a",
+   "ss": 4.24,
+   "crop": null,
+   "score": 0.3896,
+   "ref": "fact5/9",
+   "title": "Pan of star cluster IC 348"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 447.7685,
+   "t1": 450.526,
+   "q": [
+    "stars orbiting the centre of the galaxy",
+    "stars moving around the Galactic Centre"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 13433,
+   "f1": 13516,
+   "shot": "esahubble_heic1803d#0",
+   "clip": "esahubble_heic1803d",
+   "ss": 4.24,
+   "crop": null,
+   "score": 0.3956,
+   "ref": "fact5/10",
+   "title": "Pan on NGC 3344"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 450.526,
+   "t1": 453.858,
+   "q": [
+    "the Very Large Telescope with laser beams",
+    "laser guide star from a telescope"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 13516,
+   "f1": 13616,
+   "shot": "eso_eso1613b#0",
+   "clip": "eso_eso1613b",
+   "ss": 1.58,
+   "crop": null,
+   "score": 0.4285,
+   "ref": "fact5/11",
+   "title": "The VLT's Laser Guide Star Facility"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 453.858,
+   "t1": 455.414,
+   "q": [
+    "telescopes on a mountain in Chile at night",
+    "Paranal observatory"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 13616,
+   "f1": 13662,
+   "shot": "eso_uhd_vlt1_2014#0",
+   "clip": "eso_uhd_vlt1_2014",
+   "ss": 5.82,
+   "crop": null,
+   "score": 0.472,
+   "ref": "fact5/12",
+   "title": "View of Paranal"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 455.414,
+   "t1": 458.328,
+   "q": [
+    "large telescope domes on a mountain top",
+    "twin telescope domes at night"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 13662,
+   "f1": 13750,
+   "shot": "eso_eso1803d#0",
+   "clip": "eso_eso1803d",
+   "ss": 1.63,
+   "crop": null,
+   "score": 0.3591,
+   "ref": "fact5/13",
+   "title": "Time-lapse video sequence of the ExTrA planet-hunting facility at La Silla"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 458.328,
+   "t1": 460.638,
+   "q": [
+    "observatory domes above the clouds",
+    "telescopes on a high mountain at sunset"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 13750,
+   "f1": 13819,
+   "shot": "eso_uhd_vlt2_2014#0",
+   "clip": "eso_uhd_vlt2_2014",
+   "ss": 3.59,
+   "crop": null,
+   "score": 0.3554,
+   "ref": "fact5/14",
+   "title": "Sunset View of the VLT Platform"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 460.638,
+   "t1": 462.931,
+   "q": [
+    "star positions changing around the Galactic Centre",
+    "animation of stars orbiting Sgr A*"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 13819,
+   "f1": 13888,
+   "shot": "eso_eso1714c#0",
+   "clip": "eso_eso1714c",
+   "ss": 5.97,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.4038,
+   "ref": "fact5/15",
+   "title": "Comparison of the Small Magellanic Cloud in infrared and visible light"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 462.931,
+   "t1": 465.224,
+   "q": [
+    "star positions changing around the Galactic Centre",
+    "animation of stars orbiting Sgr A*"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 13888,
+   "f1": 13957,
+   "shot": "esahubble_heic1906a#0",
+   "clip": "esahubble_heic1906a",
+   "ss": 4.47,
+   "crop": null,
+   "score": 0.3975,
+   "ref": "fact5/16",
+   "title": "Gault within the solar system"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact5",
+   "t0": 465.224,
+   "t1": 473.339,
+   "gfx": "s2_orbit",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "flash",
+   "f0": 13957,
+   "f1": 14200,
+   "shot": "esahubble_potw2438a#0",
+   "clip": "esahubble_potw2438a",
+   "ss": 1.56,
+   "crop": null,
+   "score": 0.354,
+   "ref": "fact5/17",
+   "title": "Pan: NGC 1559"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 473.339,
+   "t1": 475.97833333333335,
+   "q": [
+    "a star racing close to a black hole",
+    "star near a supermassive black hole"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 14200,
+   "f1": 14279,
+   "shot": "eso_eso2407d#0",
+   "clip": "eso_eso2407d",
+   "ss": 3.93,
+   "crop": null,
+   "score": 0.3641,
+   "ref": "fact5/18",
+   "title": "3D view of the NGC 6164/6165 nebula surrounding the HD 148937 stellar pair"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 475.97833333333335,
+   "t1": 478.61766666666665,
+   "q": [
+    "a star racing close to a black hole",
+    "star near a supermassive black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 14279,
+   "f1": 14359,
+   "shot": "esahubble_heic2011b#0",
+   "clip": "esahubble_heic2011b",
+   "ss": 2.93,
+   "crop": null,
+   "score": 0.3824,
+   "ref": "fact5/19",
+   "title": "Pan of NGC 7027"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 478.61766666666665,
+   "t1": 481.257,
+   "q": [
+    "a star racing close to a black hole",
+    "star near a supermassive black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 14359,
+   "f1": 14438,
+   "shot": "eso_eso1810b#0",
+   "clip": "eso_eso1810b",
+   "ss": 2.93,
+   "crop": null,
+   "score": 0.3809,
+   "ref": "fact5/20",
+   "title": "Zooming in on a neutron star in the Small Magellanic Cloud"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 481.257,
+   "t1": 483.38933333333335,
+   "q": [
+    "the heart of the Milky Way",
+    "dense star field at the Galactic Centre"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 14438,
+   "f1": 14502,
+   "shot": "eso_eso1607a#0",
+   "clip": "eso_eso1607a",
+   "ss": 4.53,
+   "crop": null,
+   "score": 0.4233,
+   "ref": "fact5/21",
+   "title": "A close look at the sky around the star formation region RCW 106"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 483.38933333333335,
+   "t1": 485.52166666666665,
+   "q": [
+    "the heart of the Milky Way",
+    "dense star field at the Galactic Centre"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 14502,
+   "f1": 14566,
+   "shot": "eso_eso1828d#0",
+   "clip": "eso_eso1828d",
+   "ss": 4.53,
+   "crop": null,
+   "score": 0.3913,
+   "ref": "fact5/22",
+   "title": "Pan across the Carina Nebula"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 485.52166666666665,
+   "t1": 487.654,
+   "q": [
+    "the heart of the Milky Way",
+    "dense star field at the Galactic Centre"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 14566,
+   "f1": 14630,
+   "shot": "esahubble_heic1606a#0",
+   "clip": "esahubble_heic1606a",
+   "ss": 3.18,
+   "crop": null,
+   "score": 0.4574,
+   "ref": "fact5/23",
+   "title": "Zoom in to the galactic centre"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 487.654,
+   "t1": 490.632,
+   "q": [
+    "supermassive black hole visualization",
+    "black hole in the centre of a galaxy"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 14630,
+   "f1": 14719,
+   "shot": "esahubble_potm2601a#0",
+   "clip": "esahubble_potm2601a",
+   "ss": 4.13,
+   "crop": null,
+   "score": 0.3682,
+   "ref": "fact5/24",
+   "title": "Pan Video: NGC 7722"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 490.632,
+   "t1": 493.61,
+   "q": [
+    "supermassive black hole visualization",
+    "black hole in the centre of a galaxy"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 14719,
+   "f1": 14808,
+   "shot": "esahubble_heic1907b#0",
+   "clip": "esahubble_heic1907b",
+   "ss": 2.76,
+   "crop": null,
+   "score": 0.3666,
+   "ref": "fact5/25",
+   "title": "Zooming in on the Southern Crab Nebula"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 493.61,
+   "t1": 496.35,
+   "q": [
+    "the Very Large Telescope at night under the Milky Way",
+    "VLT observing"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 14808,
+   "f1": 14890,
+   "shot": "eso_colosimo_paranal_03#0",
+   "clip": "eso_colosimo_paranal_03",
+   "ss": 4.23,
+   "crop": null,
+   "score": 0.4783,
+   "ref": "fact5/26",
+   "title": "Time-lapse of VLT"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 496.35,
+   "t1": 499.09,
+   "q": [
+    "the Very Large Telescope at night under the Milky Way",
+    "VLT observing"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 14890,
+   "f1": 14973,
+   "shot": "eso_uhd_cm_paranal_cc#0",
+   "clip": "eso_uhd_cm_paranal_cc",
+   "ss": 4.25,
+   "crop": null,
+   "score": 0.4466,
+   "ref": "fact5/27",
+   "title": "Sun sets over the VLT in Ultra HD"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 499.09,
+   "t1": 501.79499999999996,
+   "q": [
+    "black hole forming visualization",
+    "gas falling into a black hole"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 14973,
+   "f1": 15054,
+   "shot": "svs_14619#0",
+   "clip": "svs_14619",
+   "ss": 2.28,
+   "crop": null,
+   "score": 0.4499,
+   "ref": "fact5/28",
+   "title": "Black Hole with Accretion Disk Visualization"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 501.79499999999996,
+   "t1": 504.5,
+   "q": [
+    "black hole forming visualization",
+    "gas falling into a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 15054,
+   "f1": 15135,
+   "shot": "svs_15089#4",
+   "clip": "svs_15089",
+   "ss": 18.27,
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    1.0
+   ],
+   "score": 0.3256,
+   "ref": "fact5/29",
+   "title": "Roman Launches and a New Era Begins (Official NASA Recap)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 504.5,
+   "t1": 507.205,
+   "q": [
+    "black hole forming visualization",
+    "gas falling into a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 15135,
+   "f1": 15216,
+   "shot": "svs_13483#6",
+   "clip": "svs_13483",
+   "ss": 55.7,
+   "crop": null,
+   "score": 0.3955,
+   "ref": "fact5/30",
+   "title": "5 Things: Black Holes"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 507.205,
+   "t1": 509.8755,
+   "q": [
+    "the Milky Way over an observatory",
+    "starry sky timelapse over telescopes"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 15216,
+   "f1": 15296,
+   "shot": "eso_vlttimelapseauxtreck#0",
+   "clip": "eso_vlttimelapseauxtreck",
+   "ss": 1.36,
+   "crop": null,
+   "score": 0.4105,
+   "ref": "fact5/31",
+   "title": "VLT Auxiliary Telescopes time-lapse"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact5",
+   "t0": 509.8755,
+   "t1": 512.546,
+   "q": [
+    "the Milky Way over an observatory",
+    "starry sky timelapse over telescopes"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 15296,
+   "f1": 15376,
+   "shot": "eso_vlttimelapseorion#0",
+   "clip": "eso_vlttimelapseorion",
+   "ss": 1.41,
+   "crop": null,
+   "score": 0.4083,
+   "ref": "fact5/32",
+   "title": "VLT Auxiliary Telescopes time-lapse"
+  },
+  {
+   "kind": "card",
+   "sec": "fact4",
+   "t0": 512.546,
+   "t1": 515.446,
+   "text": [
+    "FACT #4",
+    "WHEN THEY COLLIDE, SPACE ITSELF SHAKES"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 15376,
+   "f1": 15463,
+   "shot": "eso_eso2309c#0",
+   "clip": "eso_eso2309c",
+   "ss": 4.17,
+   "crop": null,
+   "score": 0.3836,
+   "ref": "fact4/0",
+   "title": "Panning across the Sh2-284 nebula (no text)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 515.446,
+   "t1": 517.414,
+   "q": [
+    "planet Earth seen from space",
+    "North America from orbit at night"
+   ],
+   "trans": "cut",
+   "zoom": "out",
+   "f0": 15463,
+   "f1": 15522,
+   "shot": "svs_14896#1",
+   "clip": "svs_14896",
+   "ss": 3.92,
+   "crop": null,
+   "score": 0.3474,
+   "ref": "fact4/1",
+   "title": "NASA's IMAP Mission (Trailer)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 517.414,
+   "t1": 521.013,
+   "q": [
+    "North America at night seen from space",
+    "Earth rotating from orbit"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 15522,
+   "f1": 15630,
+   "shot": "esahubble_hubble_earth_4k_rising#0",
+   "clip": "esahubble_hubble_earth_4k_rising",
+   "ss": 3.8,
+   "crop": null,
+   "score": 0.335,
+   "ref": "fact4/2",
+   "title": "Hubble eclipses the Sun (artist's rendering)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 521.013,
+   "t1": 523.0735,
+   "q": [
+    "gravitational waves rippling from merging black holes",
+    "ripples in spacetime"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 15630,
+   "f1": 15692,
+   "shot": "esahubble_opo1742b#0",
+   "clip": "esahubble_opo1742b",
+   "ss": 1.22,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3279,
+   "ref": "fact4/3",
+   "title": "Zooming in on a light echo (annotated)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 523.0735,
+   "t1": 525.134,
+   "q": [
+    "gravitational waves rippling from merging black holes",
+    "ripples in spacetime"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 15692,
+   "f1": 15754,
+   "shot": "svs_13197#0",
+   "clip": "svs_13197",
+   "ss": 4.57,
+   "crop": null,
+   "score": 0.3965,
+   "ref": "fact4/4",
+   "title": "Gravitational Wave Simulations of Merging Black Holes: 1080 and 8k Resolutions"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 525.134,
+   "t1": 527.282,
+   "q": [
+    "two black holes spiralling together",
+    "binary black hole merger simulation"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 15754,
+   "f1": 15818,
+   "shot": "esahubble_heic1525a#0",
+   "clip": "esahubble_heic1525a",
+   "ss": 0.18,
+   "crop": null,
+   "score": 0.3464,
+   "ref": "fact4/5",
+   "title": "Appearances of the Refsdal supernova"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 527.282,
+   "t1": 529.604,
+   "q": [
+    "warped spacetime grid",
+    "gravitational waves spreading through space"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 15818,
+   "f1": 15888,
+   "shot": "esawebb_weic2413a#0",
+   "clip": "esawebb_weic2413a",
+   "ss": 4.45,
+   "crop": null,
+   "score": 0.3149,
+   "ref": "fact4/6",
+   "title": "Pan of ZS7 environment"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact4",
+   "t0": 529.604,
+   "t1": 537.29,
+   "gfx": "ripples",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "zoom",
+   "f0": 15888,
+   "f1": 16119,
+   "shot": "svs_13886#0",
+   "clip": "svs_13886",
+   "ss": 0.41,
+   "crop": null,
+   "score": 0.3684,
+   "ref": "fact4/7",
+   "title": "NASA's Fermi Spots 'Fizzled' Burst from Collapsing Star"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 537.29,
+   "t1": 539.855,
+   "q": [
+    "faint ripples spreading through space",
+    "gravitational waves visualization"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 16119,
+   "f1": 16196,
+   "shot": "esawebb_potm2506c#0",
+   "clip": "esawebb_potm2506c",
+   "ss": 4.33,
+   "crop": null,
+   "score": 0.3135,
+   "ref": "fact4/8",
+   "title": "Pan video: M82 (MIRI image)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 539.855,
+   "t1": 541.9855,
+   "q": [
+    "distant galaxies in deep space",
+    "deep field"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 16196,
+   "f1": 16260,
+   "shot": "svs_30124#0",
+   "clip": "svs_30124",
+   "ss": 4.53,
+   "crop": null,
+   "score": 0.3735,
+   "ref": "fact4/9",
+   "title": "A Journey Into Andromeda"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 541.9855,
+   "t1": 544.116,
+   "q": [
+    "distant galaxies in deep space",
+    "deep field"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 16260,
+   "f1": 16323,
+   "shot": "esawebb_potm2402a#0",
+   "clip": "esawebb_potm2402a",
+   "ss": 4.55,
+   "crop": null,
+   "score": 0.3759,
+   "ref": "fact4/10",
+   "title": "Pan of NGC 1559"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 544.116,
+   "t1": 547.692,
+   "q": [
+    "zooming out to distant galaxies",
+    "deep space with galaxies"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 16323,
+   "f1": 16431,
+   "shot": "esahubble_heic1516a#0",
+   "clip": "esahubble_heic1516a",
+   "ss": 2.96,
+   "crop": null,
+   "score": 0.3976,
+   "ref": "fact4/11",
+   "title": "Zooming in on ESO 381-12"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact4",
+   "t0": 547.692,
+   "t1": 560.37,
+   "gfx": "inspiral",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "zoom",
+   "f0": 16431,
+   "f1": 16811,
+   "shot": "eso_eso1832a#2",
+   "clip": "eso_eso1832a",
+   "ss": 34.15,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3564,
+   "ref": "fact4/12",
+   "title": "ESOcast 178 Light: A Universe Aglow (4K UHD)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 560.37,
+   "t1": 563.969,
+   "q": [
+    "a blinding flash of light in space",
+    "brilliant burst of energy"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 16811,
+   "f1": 16919,
+   "shot": "svs_15041#1",
+   "clip": "svs_15041",
+   "ss": 12.02,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3553,
+   "ref": "fact4/13",
+   "title": "NASA's Fermi Spies a Supercharged Supernova"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 563.969,
+   "t1": 566.4945,
+   "q": [
+    "the whole sky full of galaxies",
+    "deep field with thousands of galaxies"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 16919,
+   "f1": 16995,
+   "shot": "esahubble_potw2410a#0",
+   "clip": "esahubble_potw2410a",
+   "ss": 4.35,
+   "crop": null,
+   "score": 0.3755,
+   "ref": "fact4/14",
+   "title": "Pan of NGC 4423"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 566.4945,
+   "t1": 569.02,
+   "q": [
+    "the whole sky full of galaxies",
+    "deep field with thousands of galaxies"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 16995,
+   "f1": 17071,
+   "shot": "esawebb_potm2305a#0",
+   "clip": "esawebb_potm2305a",
+   "ss": 4.35,
+   "crop": null,
+   "score": 0.3737,
+   "ref": "fact4/15",
+   "title": "Pan of NGC 5068"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact4",
+   "t0": 569.02,
+   "t1": 578.54,
+   "gfx": "ligo",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "blur",
+   "f0": 17071,
+   "f1": 17356,
+   "shot": "esahubble_heic2409a#0",
+   "clip": "esahubble_heic2409a",
+   "ss": 0.86,
+   "crop": null,
+   "score": 0.3574,
+   "ref": "fact4/16",
+   "title": "Pan: Omega Centauri"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 578.54,
+   "t1": 580.409,
+   "q": [
+    "gravitational waves reaching Earth",
+    "Earth from space"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 17356,
+   "f1": 17412,
+   "shot": "svs_14369#0",
+   "clip": "svs_14369",
+   "ss": 0.32,
+   "crop": null,
+   "score": 0.3272,
+   "ref": "fact4/17",
+   "title": "Leveraging NASA Research to Safeguard the U.S. East Coast from Hurricanes"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 580.409,
+   "t1": 582.5455,
+   "q": [
+    "merging black holes simulation",
+    "binary black holes orbiting"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 17412,
+   "f1": 17476,
+   "shot": "eso_eso2313b#0",
+   "clip": "eso_eso2313b",
+   "ss": 4.53,
+   "crop": null,
+   "score": 0.3602,
+   "ref": "fact4/18",
+   "title": "Artist’s animation of HD 45166, the most magnetic massive star ever found"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 582.5455,
+   "t1": 584.682,
+   "q": [
+    "merging black holes simulation",
+    "binary black holes orbiting"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 17476,
+   "f1": 17540,
+   "shot": "eso_eso1902c#1",
+   "clip": "eso_eso1902c",
+   "ss": 5.68,
+   "crop": null,
+   "score": 0.3209,
+   "ref": "fact4/19",
+   "title": "Zooming in on ESO 577-24"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 584.682,
+   "t1": 586.892,
+   "q": [
+    "black hole merger with gravitational waves",
+    "two black holes circling each other"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 17540,
+   "f1": 17607,
+   "shot": "svs_12740#0",
+   "clip": "svs_12740",
+   "ss": 4.64,
+   "crop": null,
+   "score": 0.3648,
+   "ref": "fact4/20",
+   "title": "Doomed Neutron Stars Create Blast of Light and Gravitational Waves"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 586.892,
+   "t1": 589.102,
+   "q": [
+    "black hole merger with gravitational waves",
+    "two black holes circling each other"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 17607,
+   "f1": 17673,
+   "shot": "svs_14209#0",
+   "clip": "svs_14209",
+   "ss": 4.5,
+   "crop": null,
+   "score": 0.3209,
+   "ref": "fact4/21",
+   "title": "NASA’s Compton Mission Glimpses Supersized Neutron Stars"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact4",
+   "t0": 589.102,
+   "t1": 591.312,
+   "q": [
+    "black hole merger with gravitational waves",
+    "two black holes circling each other"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 17673,
+   "f1": 17739,
+   "shot": "svs_12740#1",
+   "clip": "svs_12740",
+   "ss": 17.14,
+   "crop": null,
+   "score": 0.3647,
+   "ref": "fact4/22",
+   "title": "Doomed Neutron Stars Create Blast of Light and Gravitational Waves"
+  },
+  {
+   "kind": "card",
+   "sec": "fact3",
+   "t0": 591.312,
+   "t1": 594.212,
+   "text": [
+    "FACT #3",
+    "A TELESCOPE THE SIZE OF EARTH"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 17739,
+   "f1": 17826,
+   "shot": "svs_14749#0",
+   "clip": "svs_14749",
+   "ss": 0.3,
+   "crop": null,
+   "score": 0.3686,
+   "ref": "fact3/0",
+   "title": "OpenUniverse: Simulated Universe Views for Roman"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 594.212,
+   "t1": 597.445,
+   "q": [
+    "glowing jet from the centre of a giant galaxy",
+    "giant elliptical galaxy with a jet"
+   ],
+   "trans": "cut",
+   "zoom": "in",
+   "f0": 17826,
+   "f1": 17923,
+   "shot": "esawebb_potm2412a#0",
+   "clip": "esawebb_potm2412a",
+   "ss": 4.0,
+   "crop": null,
+   "score": 0.3717,
+   "ref": "fact3/1",
+   "title": "Panv video: NGC 2566 (NIRCam and MIRI image)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 597.445,
+   "t1": 600.87,
+   "q": [
+    "zooming into a distant galaxy core",
+    "galaxy centre zoom"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 17923,
+   "f1": 18026,
+   "shot": "esahubble_potw2523a#0",
+   "clip": "esahubble_potw2523a",
+   "ss": 3.9,
+   "crop": null,
+   "score": 0.3722,
+   "ref": "fact3/2",
+   "title": "Pan: IC 758"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 600.87,
+   "t1": 603.749,
+   "q": [
+    "planet Earth rotating in space",
+    "Earth from orbit"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 18026,
+   "f1": 18112,
+   "shot": "svs_20412#0",
+   "clip": "svs_20412",
+   "ss": 2.31,
+   "crop": null,
+   "score": 0.3106,
+   "ref": "fact3/3",
+   "title": "Artemis II Flight Path Animations"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 603.749,
+   "t1": 605.7225000000001,
+   "q": [
+    "radio telescope dishes under the night sky",
+    "ALMA antennas at night"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 18112,
+   "f1": 18172,
+   "shot": "eso_ALMA16-MW14mm2#0",
+   "clip": "eso_ALMA16-MW14mm2",
+   "ss": 4.61,
+   "crop": null,
+   "score": 0.4111,
+   "ref": "fact3/4",
+   "title": "ALMA array at night (time-lapse)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 605.7225000000001,
+   "t1": 607.696,
+   "q": [
+    "radio telescope dishes under the night sky",
+    "ALMA antennas at night"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 18172,
+   "f1": 18231,
+   "shot": "eso_almatimelapse12e#0",
+   "clip": "eso_almatimelapse12e",
+   "ss": 4.26,
+   "crop": null,
+   "score": 0.4237,
+   "ref": "fact3/5",
+   "title": "The ALMA Antennas and the Magellanic Clouds"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact3",
+   "t0": 607.696,
+   "t1": 615.278,
+   "gfx": "eht_globe",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "whip",
+   "f0": 18231,
+   "f1": 18458,
+   "shot": "esahubble_potw2409a#0",
+   "clip": "esahubble_potw2409a",
+   "ss": 1.82,
+   "crop": null,
+   "score": 0.3663,
+   "ref": "fact3/6",
+   "title": "Pan: Celestial fossils"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 615.278,
+   "t1": 618.378,
+   "q": [
+    "array of radio antennas on a high plateau",
+    "ALMA observatory antennas moving"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 18458,
+   "f1": 18551,
+   "shot": "eso_uhd_alma6_2014#0",
+   "clip": "eso_uhd_alma6_2014",
+   "ss": 4.05,
+   "crop": null,
+   "score": 0.4459,
+   "ref": "fact3/7",
+   "title": "Closing in on the ALMA Array"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 618.378,
+   "t1": 620.3805,
+   "q": [
+    "radio dish pointing at the Milky Way",
+    "radio telescope at night"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 18551,
+   "f1": 18611,
+   "shot": "eso_LaSilla16-SESTMW35mm#0",
+   "clip": "eso_LaSilla16-SESTMW35mm",
+   "ss": 2.75,
+   "crop": null,
+   "score": 0.3699,
+   "ref": "fact3/8",
+   "title": "SEST time-lapse"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 620.3805,
+   "t1": 622.383,
+   "q": [
+    "radio dish pointing at the Milky Way",
+    "radio telescope at night"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 18611,
+   "f1": 18671,
+   "shot": "eso_ALMA16-SingleDishMW14mm#0",
+   "clip": "eso_ALMA16-SingleDishMW14mm",
+   "ss": 1.23,
+   "crop": null,
+   "score": 0.3385,
+   "ref": "fact3/9",
+   "title": "ALMA 1 of 66"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 622.383,
+   "t1": 624.519,
+   "q": [
+    "radio telescope under the stars timelapse",
+    "observatory at sunset above the clouds"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 18671,
+   "f1": 18736,
+   "shot": "eso_eso1803c#0",
+   "clip": "eso_eso1803c",
+   "ss": 1.12,
+   "crop": null,
+   "score": 0.3555,
+   "ref": "fact3/10",
+   "title": "Time-lapse video sequence of the ExTrA planet-hunting facility at La Silla"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 624.519,
+   "t1": 626.655,
+   "q": [
+    "radio telescope under the stars timelapse",
+    "observatory at sunset above the clouds"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 18736,
+   "f1": 18800,
+   "shot": "eso_eltu_Lasers#0",
+   "clip": "eso_eltu_Lasers",
+   "ss": 0.45,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3587,
+   "ref": "fact3/11",
+   "title": "New powerful lasers for the world's largest optical telescope"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 626.655,
+   "t1": 629.186,
+   "q": [
+    "zooming into the giant galaxy Messier 87",
+    "giant elliptical galaxy M87"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 18800,
+   "f1": 18876,
+   "shot": "svs_30981#0",
+   "clip": "svs_30981",
+   "ss": 0.48,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.4106,
+   "ref": "fact3/12",
+   "title": "Messier 81 in Multiple Wavelengths"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 629.186,
+   "t1": 632.507,
+   "q": [
+    "the first image of a black hole, a glowing orange ring",
+    "zoom into the black hole image of M87"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 18876,
+   "f1": 18975,
+   "shot": "svs_14457#0",
+   "clip": "svs_14457",
+   "ss": 0.59,
+   "crop": [
+    0.0,
+    0.15,
+    0.85,
+    1.0
+   ],
+   "score": 0.3933,
+   "ref": "fact3/13",
+   "title": "Hubble’s Inside The Image: M87 Jet"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 632.507,
+   "t1": 635.247,
+   "q": [
+    "the jet of galaxy M87",
+    "elliptical galaxy with a glowing jet"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 18975,
+   "f1": 19057,
+   "shot": "eso_eso1412b#0",
+   "clip": "eso_eso1412b",
+   "ss": 4.24,
+   "crop": null,
+   "score": 0.3723,
+   "ref": "fact3/14",
+   "title": "Panning across the planetary nebula Abell 33"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 635.247,
+   "t1": 637.987,
+   "q": [
+    "the jet of galaxy M87",
+    "elliptical galaxy with a glowing jet"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 19057,
+   "f1": 19140,
+   "shot": "esawebb_weic2612b#0",
+   "clip": "esawebb_weic2612b",
+   "ss": 3.38,
+   "crop": null,
+   "score": 0.3657,
+   "ref": "fact3/15",
+   "title": "Zoom video: M82"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact3",
+   "t0": 637.987,
+   "t1": 640.727,
+   "q": [
+    "the jet of galaxy M87",
+    "elliptical galaxy with a glowing jet"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 19140,
+   "f1": 19222,
+   "shot": "esawebb_potm2310c#0",
+   "clip": "esawebb_potm2310c",
+   "ss": 4.24,
+   "crop": null,
+   "score": 0.3592,
+   "ref": "fact3/16",
+   "title": "M83 (MIRI and NIRCam images)"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact3",
+   "t0": 640.727,
+   "t1": 647.147,
+   "gfx": "eht_m87",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "flash",
+   "f0": 19222,
+   "f1": 19414,
+   "shot": "esahubble_heic2021d#0",
+   "clip": "esahubble_heic2021d",
+   "ss": 2.39,
+   "crop": null,
+   "score": 0.3661,
+   "ref": "fact3/17",
+   "title": "Artist’s Impression of the Hypothesized “Planet Nine”"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact3",
+   "t0": 647.147,
+   "t1": 654.612,
+   "gfx": "eht_sgra",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "whip",
+   "f0": 19414,
+   "f1": 19638,
+   "shot": "esawebb_potm2303b#0",
+   "clip": "esawebb_potm2303b",
+   "ss": 1.52,
+   "crop": null,
+   "score": 0.3593,
+   "ref": "fact3/18",
+   "title": "Zoom into the cosmic seahorse"
+  },
+  {
+   "kind": "card",
+   "sec": "fact2",
+   "t0": 654.612,
+   "t1": 657.512,
+   "text": [
+    "FACT #2",
+    "HAWKING WAS RIGHT, 54 YEARS LATER"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 19638,
+   "f1": 19725,
+   "shot": "esahubble_heic1905b#0",
+   "clip": "esahubble_heic1905b",
+   "ss": 6.15,
+   "crop": null,
+   "score": 0.3678,
+   "ref": "fact2/0",
+   "title": "Globular clusters surrounding the Milky Way (artist’s impression)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 657.512,
+   "t1": 660.815,
+   "q": [
+    "black hole visualization",
+    "glowing disk around a black hole"
+   ],
+   "trans": "cut",
+   "zoom": "out",
+   "f0": 19725,
+   "f1": 19824,
+   "shot": "eso_eso1544a#0",
+   "clip": "eso_eso1544a",
+   "ss": 3.95,
+   "crop": null,
+   "score": 0.3576,
+   "ref": "fact2/1",
+   "title": "Artist’s impression of the glowing disc of material around the white dwarf SDSS J1228+1040"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 660.815,
+   "t1": 662.684,
+   "q": [
+    "two black holes approaching each other",
+    "binary black holes"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 19824,
+   "f1": 19881,
+   "shot": "svs_31353#0",
+   "clip": "svs_31353",
+   "ss": 2.32,
+   "crop": [
+    0.0,
+    0.15,
+    0.85,
+    1.0
+   ],
+   "score": 0.3861,
+   "ref": "fact2/2",
+   "title": "Supermassive Black Holes"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 662.684,
+   "t1": 665.528,
+   "q": [
+    "a large black hole with a glowing ring",
+    "supermassive black hole"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 19881,
+   "f1": 19966,
+   "shot": "svs_14148#0",
+   "clip": "svs_14148",
+   "ss": 4.18,
+   "crop": null,
+   "score": 0.4179,
+   "ref": "fact2/3",
+   "title": "Magnetic Flip Drives Flare-Up of Monster Black Hole"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 665.528,
+   "t1": 667.943,
+   "q": [
+    "black holes merging",
+    "merger of two black holes"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 19966,
+   "f1": 20038,
+   "shot": "eso_eso1131a#0",
+   "clip": "eso_eso1131a",
+   "ss": 1.54,
+   "crop": null,
+   "score": 0.3401,
+   "ref": "fact2/4",
+   "title": "Zooming in on The Eyes"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 667.943,
+   "t1": 670.358,
+   "q": [
+    "black holes merging",
+    "merger of two black holes"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 20038,
+   "f1": 20111,
+   "shot": "svs_14347#1",
+   "clip": "svs_14347",
+   "ss": 8.93,
+   "crop": null,
+   "score": 0.3401,
+   "ref": "fact2/5",
+   "title": "Unfolding the Universe with Webb"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 670.358,
+   "t1": 672.6643333333333,
+   "q": [
+    "black hole pair orbiting",
+    "two black holes circling"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 20111,
+   "f1": 20180,
+   "shot": "svs_5644#0",
+   "clip": "svs_5644",
+   "ss": 4.45,
+   "crop": null,
+   "score": 0.3123,
+   "ref": "fact2/6",
+   "title": "The Moon Passes Through Earth's Magnetotail for Fulldome"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 672.6643333333333,
+   "t1": 674.9706666666667,
+   "q": [
+    "black hole pair orbiting",
+    "two black holes circling"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 20180,
+   "f1": 20249,
+   "shot": "eso_eso2418b#0",
+   "clip": "eso_eso2418b",
+   "ss": 4.46,
+   "crop": null,
+   "score": 0.377,
+   "ref": "fact2/7",
+   "title": "Star pair D9 orbiting the supermassive black hole Sgr A* (artist's animation)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 674.9706666666667,
+   "t1": 677.277,
+   "q": [
+    "black hole pair orbiting",
+    "two black holes circling"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 20249,
+   "f1": 20318,
+   "shot": "eso_eso2007b#0",
+   "clip": "eso_eso2007b",
+   "ss": 4.46,
+   "crop": null,
+   "score": 0.4093,
+   "ref": "fact2/8",
+   "title": "Artist’s animation of the triple system with the closest black hole"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 677.277,
+   "t1": 679.286,
+   "q": [
+    "deep space star field drifting",
+    "distant galaxies"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 20318,
+   "f1": 20379,
+   "shot": "esawebb_carina_revisit_pan#0",
+   "clip": "esawebb_carina_revisit_pan",
+   "ss": 4.61,
+   "crop": null,
+   "score": 0.3828,
+   "ref": "fact2/9",
+   "title": "Diving Into the Cosmic Cliffs"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 679.286,
+   "t1": 681.979,
+   "q": [
+    "Earth seen from space",
+    "the Earth rotating"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 20379,
+   "f1": 20459,
+   "shot": "svs_5425#0",
+   "clip": "svs_5425",
+   "ss": 4.25,
+   "crop": null,
+   "score": 0.3914,
+   "ref": "fact2/10",
+   "title": "Perpetual Ocean 2: Western Boundary Currents"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 681.979,
+   "t1": 683.9005,
+   "q": [
+    "gravitational waves spreading out from colliding black holes",
+    "ripples from merging black holes"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 20459,
+   "f1": 20517,
+   "shot": "svs_20367#0",
+   "clip": "svs_20367",
+   "ss": 0.15,
+   "crop": null,
+   "score": 0.4248,
+   "ref": "fact2/11",
+   "title": "Gravitational Wave"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 683.9005,
+   "t1": 685.822,
+   "q": [
+    "gravitational waves spreading out from colliding black holes",
+    "ripples from merging black holes"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 20517,
+   "f1": 20575,
+   "shot": "esawebb_WR140a#0",
+   "clip": "esawebb_WR140a",
+   "ss": 4.29,
+   "crop": null,
+   "score": 0.3889,
+   "ref": "fact2/12",
+   "title": "Video of Star Duo Forms ‘Fingerprint’ in Space"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 685.822,
+   "t1": 688.725,
+   "q": [
+    "zoom into deep space galaxies",
+    "distant galaxy field"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 20575,
+   "f1": 20662,
+   "shot": "esahubble_potw2524a#0",
+   "clip": "esahubble_potw2524a",
+   "ss": 4.16,
+   "crop": null,
+   "score": 0.3773,
+   "ref": "fact2/13",
+   "title": "Pan: NGC 4449"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 688.725,
+   "t1": 691.1745000000001,
+   "q": [
+    "two black holes spiralling and merging",
+    "binary black hole merger"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 20662,
+   "f1": 20735,
+   "shot": "svs_5648#0",
+   "clip": "svs_5648",
+   "ss": 4.38,
+   "crop": null,
+   "score": 0.3175,
+   "ref": "fact2/14",
+   "title": "The Moon Passes In and Out of Earth's Magnetosphere"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 691.1745000000001,
+   "t1": 693.624,
+   "q": [
+    "two black holes spiralling and merging",
+    "binary black hole merger"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 20735,
+   "f1": 20809,
+   "shot": "esahubble_heic2201a#0",
+   "clip": "esahubble_heic2201a",
+   "ss": 4.39,
+   "crop": null,
+   "score": 0.3283,
+   "ref": "fact2/15",
+   "title": "Zoom into Arp 143"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 693.624,
+   "t1": 697.026,
+   "q": [
+    "ripples in spacetime",
+    "gravitational wave visualization"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 20809,
+   "f1": 20911,
+   "shot": "svs_14884#0",
+   "clip": "svs_14884",
+   "ss": 4.05,
+   "crop": null,
+   "score": 0.3321,
+   "ref": "fact2/16",
+   "title": "NASA Supercomputer Probes Tangled Magnetospheres of Merging Neutron Stars"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 697.026,
+   "t1": 699.092,
+   "q": [
+    "merged black hole ringing",
+    "black hole after a merger"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 20911,
+   "f1": 20973,
+   "shot": "svs_5617#0",
+   "clip": "svs_5617",
+   "ss": 4.57,
+   "crop": null,
+   "score": 0.3451,
+   "ref": "fact2/17",
+   "title": "ESCAPADE Visits the Distant Magnetotail"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 699.092,
+   "t1": 701.78,
+   "q": [
+    "a newly formed black hole",
+    "glowing black hole"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 20973,
+   "f1": 21053,
+   "shot": "esahubble_potw2451a#0",
+   "clip": "esahubble_potw2451a",
+   "ss": 4.27,
+   "crop": null,
+   "score": 0.3233,
+   "ref": "fact2/18",
+   "title": "Pan: NGC 2566"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 701.78,
+   "t1": 704.468,
+   "q": [
+    "a newly formed black hole",
+    "glowing black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 21053,
+   "f1": 21134,
+   "shot": "svs_4997#0",
+   "clip": "svs_4997",
+   "ss": 4.26,
+   "crop": null,
+   "score": 0.407,
+   "ref": "fact2/19",
+   "title": "Black Holes and Their Companions Close Up"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact2",
+   "t0": 704.468,
+   "t1": 714.302,
+   "gfx": "area_theorem",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "blur",
+   "f0": 21134,
+   "f1": 21429,
+   "shot": "esahubble_potw2307a#0",
+   "clip": "esahubble_potw2307a",
+   "ss": 0.7,
+   "crop": null,
+   "score": 0.36,
+   "ref": "fact2/20",
+   "title": "Galactic Crash Course"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 714.302,
+   "t1": 716.8035,
+   "q": [
+    "black hole with a bright ring of light",
+    "black hole in deep space"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 21429,
+   "f1": 21504,
+   "shot": "esawebb_weic2620b#0",
+   "clip": "esawebb_weic2620b",
+   "ss": 3.0,
+   "crop": null,
+   "score": 0.3503,
+   "ref": "fact2/21",
+   "title": "Zoom video: NGC 7129"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 716.8035,
+   "t1": 719.305,
+   "q": [
+    "black hole with a bright ring of light",
+    "black hole in deep space"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 21504,
+   "f1": 21579,
+   "shot": "eso_eso1825b#0",
+   "clip": "eso_eso1825b",
+   "ss": 4.35,
+   "crop": null,
+   "score": 0.379,
+   "ref": "fact2/22",
+   "title": "Artist's impression of star passing close to supermassive black hole"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 719.305,
+   "t1": 722.487,
+   "q": [
+    "a quiet star field",
+    "stars slowly drifting"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 21579,
+   "f1": 21675,
+   "shot": "eso_eso1428a#1",
+   "clip": "eso_eso1428a",
+   "ss": 6.51,
+   "crop": null,
+   "score": 0.3703,
+   "ref": "fact2/23",
+   "title": "Zooming in on the globular star cluster Messier 54"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 722.487,
+   "t1": 724.4259999999999,
+   "q": [
+    "a dark nebula",
+    "Milky Way at night"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 21675,
+   "f1": 21733,
+   "shot": "esawebb_weic2514b#0",
+   "clip": "esawebb_weic2514b",
+   "ss": 4.65,
+   "crop": null,
+   "score": 0.37,
+   "ref": "fact2/24",
+   "title": "Pan video: NGC 6072 (MIRI image)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact2",
+   "t0": 724.4259999999999,
+   "t1": 726.365,
+   "q": [
+    "a dark nebula",
+    "Milky Way at night"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 21733,
+   "f1": 21791,
+   "shot": "esahubble_heic1608c#0",
+   "clip": "esahubble_heic1608c",
+   "ss": 4.65,
+   "crop": null,
+   "score": 0.3685,
+   "ref": "fact2/25",
+   "title": "Pan across the Bubble Nebula"
+  },
+  {
+   "kind": "card",
+   "sec": "fact1",
+   "t0": 726.365,
+   "t1": 729.265,
+   "text": [
+    "FACT #1",
+    "SOME MAY BE OLDER THAN GALAXIES"
+   ],
+   "q": [
+    "slow flight through a star field",
+    "glowing disk around a black hole in deep space"
+   ],
+   "f0": 21791,
+   "f1": 21878,
+   "shot": "eso_eso1424b#0",
+   "clip": "eso_eso1424b",
+   "ss": 4.17,
+   "crop": null,
+   "score": 0.366,
+   "ref": "fact1/0",
+   "title": "A close-up look at the Triangulum Galaxy"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 729.265,
+   "t1": 732.243,
+   "q": [
+    "young stars forming in a glowing nebula",
+    "star-forming region"
+   ],
+   "trans": "cut",
+   "zoom": "out",
+   "f0": 21878,
+   "f1": 21967,
+   "shot": "eso_eso1537a#0",
+   "clip": "eso_eso1537a",
+   "ss": 2.76,
+   "crop": null,
+   "score": 0.4121,
+   "ref": "fact1/1",
+   "title": "Zooming in on the star formation region Messier 17"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 732.243,
+   "t1": 735.006,
+   "q": [
+    "a young galaxy forming stars",
+    "galaxies forming in the early universe"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 21967,
+   "f1": 22050,
+   "shot": "esahubble_potm2604a#0",
+   "clip": "esahubble_potm2604a",
+   "ss": 4.23,
+   "crop": null,
+   "score": 0.406,
+   "ref": "fact1/2",
+   "title": "Pan video: NGC 3137"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 735.006,
+   "t1": 736.469,
+   "q": [
+    "a massive star exploding as a supernova",
+    "supernova explosion"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 22050,
+   "f1": 22094,
+   "shot": "svs_15041#2",
+   "clip": "svs_15041",
+   "ss": 18.97,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.4175,
+   "ref": "fact1/3",
+   "title": "NASA's Fermi Spies a Supercharged Supernova"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 736.469,
+   "t1": 737.804,
+   "q": [
+    "black hole forming from a collapsed star",
+    "stellar black hole"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 22094,
+   "f1": 22134,
+   "shot": "esahubble_heic1913a#0",
+   "clip": "esahubble_heic1913a",
+   "ss": 4.93,
+   "crop": null,
+   "score": 0.4435,
+   "ref": "fact1/4",
+   "title": "Artist’s Impression of NGC3147 black hole disc"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 737.804,
+   "t1": 739.737,
+   "q": [
+    "black hole growing as it feeds on gas",
+    "accretion disk around a growing black hole"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 22134,
+   "f1": 22192,
+   "shot": "eso_eso1301a#0",
+   "clip": "eso_eso1301a",
+   "ss": 4.63,
+   "crop": null,
+   "score": 0.4155,
+   "ref": "fact1/5",
+   "title": "Artist’s impression of the disc and gas streams around HD 142527"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 739.737,
+   "t1": 741.67,
+   "q": [
+    "black hole growing as it feeds on gas",
+    "accretion disk around a growing black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 22192,
+   "f1": 22250,
+   "shot": "svs_11530#0",
+   "clip": "svs_11530",
+   "ss": 4.08,
+   "crop": null,
+   "score": 0.408,
+   "ref": "fact1/6",
+   "title": "Neutron Stars Rip Each Other Apart to Form Black Hole"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 741.67,
+   "t1": 743.8005,
+   "q": [
+    "the James Webb Space Telescope in space",
+    "Webb telescope launching on a rocket",
+    "a Webb deep field full of galaxies"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 22250,
+   "f1": 22314,
+   "shot": "esawebb_potm2404a#0",
+   "clip": "esawebb_potm2404a",
+   "ss": 4.55,
+   "crop": null,
+   "score": 0.3574,
+   "ref": "fact1/7",
+   "title": "Pan: NGC 6440"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 743.8005,
+   "t1": 745.931,
+   "q": [
+    "the James Webb Space Telescope in space",
+    "Webb telescope launching on a rocket",
+    "a Webb deep field full of galaxies"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 22314,
+   "f1": 22378,
+   "shot": "svs_14064#0",
+   "clip": "svs_14064",
+   "ss": 0.18,
+   "crop": null,
+   "score": 0.3959,
+   "ref": "fact1/8",
+   "title": "The Webb Telescope Sunshield"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 745.931,
+   "t1": 747.801,
+   "q": [
+    "Webb deep field full of distant galaxies",
+    "deep field"
+   ],
+   "trans": "zoom",
+   "zoom": "out",
+   "f0": 22378,
+   "f1": 22434,
+   "shot": "esahubble_heic1502a#0",
+   "clip": "esahubble_heic1502a",
+   "ss": 0.18,
+   "crop": null,
+   "score": 0.3927,
+   "ref": "fact1/9",
+   "title": "Zooming in on the Andromeda Galaxy"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 747.801,
+   "t1": 751.481,
+   "q": [
+    "tiny red galaxies in a deep field",
+    "little red dots"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 22434,
+   "f1": 22544,
+   "shot": "esahubble_potw2429a#0",
+   "clip": "esahubble_potw2429a",
+   "ss": 3.78,
+   "crop": null,
+   "score": 0.373,
+   "ref": "fact1/10",
+   "title": "Pan: NGC 5238"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 751.481,
+   "t1": 753.025,
+   "q": [
+    "a compact red galaxy in the early universe",
+    "red glowing object in deep space"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 22544,
+   "f1": 22591,
+   "shot": "eso_eso1409b#0",
+   "clip": "eso_eso1409b",
+   "ss": 2.34,
+   "crop": null,
+   "score": 0.3985,
+   "ref": "fact1/11",
+   "title": "Zooming in on the yellow hypergiant star HR 5171"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 753.025,
+   "t1": 754.9175,
+   "q": [
+    "black hole inside a young galaxy",
+    "early universe black hole"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 22591,
+   "f1": 22648,
+   "shot": "eso_eso2601a#0",
+   "clip": "eso_eso2601a",
+   "ss": 2.3,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.378,
+   "ref": "fact1/12",
+   "title": "An unexpected shock wave | ESO News"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 754.9175,
+   "t1": 756.81,
+   "q": [
+    "black hole inside a young galaxy",
+    "early universe black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 22648,
+   "f1": 22704,
+   "shot": "svs_30994#0",
+   "clip": "svs_30994",
+   "ss": 0.8,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3705,
+   "ref": "fact1/13",
+   "title": "Messier 82: Cigar Galaxy in Multiple Wavelengths"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 756.81,
+   "t1": 759.689,
+   "q": [
+    "galaxy cluster Abell 2744",
+    "Pandora's Cluster deep field"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 22704,
+   "f1": 22791,
+   "shot": "esahubble_heic1711b#0",
+   "clip": "esahubble_heic1711b",
+   "ss": 4.18,
+   "crop": null,
+   "score": 0.4189,
+   "ref": "fact1/14",
+   "title": "Pan across Abell 370"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 759.689,
+   "t1": 762.568,
+   "q": [
+    "galaxy cluster Abell 2744",
+    "Pandora's Cluster deep field"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 22791,
+   "f1": 22877,
+   "shot": "eso_eso1430b#0",
+   "clip": "eso_eso1430b",
+   "ss": 4.18,
+   "crop": null,
+   "score": 0.4117,
+   "ref": "fact1/15",
+   "title": "Close-up view of the open cluster Messier 11"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 762.568,
+   "t1": 765.3430000000001,
+   "q": [
+    "zoom into a distant lensed galaxy",
+    "gravitational lensing by a galaxy cluster"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 22877,
+   "f1": 22960,
+   "shot": "esahubble_heic1911a#0",
+   "clip": "esahubble_heic1911a",
+   "ss": 2.86,
+   "crop": null,
+   "score": 0.3876,
+   "ref": "fact1/16",
+   "title": "Zoom on ESO 495-21"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 765.3430000000001,
+   "t1": 768.118,
+   "q": [
+    "zoom into a distant lensed galaxy",
+    "gravitational lensing by a galaxy cluster"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 22960,
+   "f1": 23044,
+   "shot": "esawebb_potm2411a#0",
+   "clip": "esawebb_potm2411a",
+   "ss": 4.23,
+   "crop": null,
+   "score": 0.3824,
+   "ref": "fact1/17",
+   "title": "Pan Video: NGC 2090"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 768.118,
+   "t1": 770.788,
+   "q": [
+    "the early universe with the first galaxies",
+    "cosmic dawn"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 23044,
+   "f1": 23124,
+   "shot": "esawebb_potm2301b#1",
+   "clip": "esawebb_potm2301b",
+   "ss": 7.35,
+   "crop": null,
+   "score": 0.3494,
+   "ref": "fact1/18",
+   "title": "Zoom: A Spiral Amongst Thousands"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 770.788,
+   "t1": 773.458,
+   "q": [
+    "the early universe with the first galaxies",
+    "cosmic dawn"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 23124,
+   "f1": 23204,
+   "shot": "esahubble_potw2319a#0",
+   "clip": "esahubble_potw2319a",
+   "ss": 4.28,
+   "crop": null,
+   "score": 0.3649,
+   "ref": "fact1/19",
+   "title": "Pan: Cosmic leviathan"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 773.458,
+   "t1": 775.5070000000001,
+   "q": [
+    "a supermassive black hole in the early universe",
+    "quasar in the early universe"
+   ],
+   "trans": "blur",
+   "zoom": "in",
+   "f0": 23204,
+   "f1": 23265,
+   "shot": "esahubble_heic2204a#2",
+   "clip": "esahubble_heic2204a",
+   "ss": 27.73,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.4087,
+   "ref": "fact1/20",
+   "title": "Space Sparks Episode 11 - Astronomers Detect Supermassive Black Hole Precursor Lurking in Archival Hubble Data"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 775.5070000000001,
+   "t1": 777.556,
+   "q": [
+    "a supermassive black hole in the early universe",
+    "quasar in the early universe"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 23265,
+   "f1": 23327,
+   "shot": "eso_eso1122c#0",
+   "clip": "eso_eso1122c",
+   "ss": 4.59,
+   "crop": null,
+   "score": 0.4281,
+   "ref": "fact1/21",
+   "title": "A 3D animation of the most distant quasar"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 777.556,
+   "t1": 779.518,
+   "q": [
+    "black hole with almost no galaxy around it",
+    "lonely black hole in dark space"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 23327,
+   "f1": 23386,
+   "shot": "eso_eso1727a#1",
+   "clip": "eso_eso1727a",
+   "ss": 6.24,
+   "crop": null,
+   "score": 0.3667,
+   "ref": "fact1/22",
+   "title": "Zooming in on the Cosmic Eyelash"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 779.518,
+   "t1": 781.48,
+   "q": [
+    "black hole with almost no galaxy around it",
+    "lonely black hole in dark space"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 23386,
+   "f1": 23444,
+   "shot": "eso_eso1815a#2",
+   "clip": "eso_eso1815a",
+   "ss": 20.97,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.342,
+   "ref": "fact1/23",
+   "title": "ESOcast 161 Light: Distant galaxy reveals very early star formation (4K UHD)"
+  },
+  {
+   "kind": "gfx",
+   "sec": "fact1",
+   "t0": 781.48,
+   "t1": 785.346,
+   "gfx": "bh_share",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "flash",
+   "f0": 23444,
+   "f1": 23560,
+   "shot": "eso_eso1428a#0",
+   "clip": "eso_eso1428a",
+   "ss": 0.17,
+   "crop": null,
+   "score": 0.3706,
+   "ref": "fact1/24",
+   "title": "Zooming in on the globular star cluster Messier 54"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 785.346,
+   "t1": 787.2560000000001,
+   "q": [
+    "pristine gas clouds in the early universe",
+    "primordial gas cloud"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 23560,
+   "f1": 23618,
+   "shot": "esawebb_weic2514c#0",
+   "clip": "esawebb_weic2514c",
+   "ss": 4.66,
+   "crop": null,
+   "score": 0.3892,
+   "ref": "fact1/25",
+   "title": "Transition video: NGC 6072 (NIRCam and MIRI images)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 787.2560000000001,
+   "t1": 789.166,
+   "q": [
+    "pristine gas clouds in the early universe",
+    "primordial gas cloud"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 23618,
+   "f1": 23675,
+   "shot": "esawebb_potm2512b#0",
+   "clip": "esawebb_potm2512b",
+   "ss": 4.66,
+   "crop": null,
+   "score": 0.3804,
+   "ref": "fact1/26",
+   "title": "Transition Video: Webb and Hubble's views of Westerlund 2"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 789.166,
+   "t1": 791.697,
+   "q": [
+    "the Big Bang",
+    "expanding early universe"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 23675,
+   "f1": 23751,
+   "shot": "esawebb_weic2616c#0",
+   "clip": "esawebb_weic2616c",
+   "ss": 4.35,
+   "crop": null,
+   "score": 0.3721,
+   "ref": "fact1/27",
+   "title": "Transition video: Lion Nebula"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 791.697,
+   "t1": 793.93,
+   "q": [
+    "black hole forming in the early universe",
+    "early black hole growing"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 23751,
+   "f1": 23818,
+   "shot": "eso_eso2516d#0",
+   "clip": "eso_eso2516d",
+   "ss": 4.5,
+   "crop": null,
+   "score": 0.3769,
+   "ref": "fact1/28",
+   "title": "Animation of the growth spurt in the rogue planet Cha 1107-7626"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 793.93,
+   "t1": 796.163,
+   "q": [
+    "black hole forming in the early universe",
+    "early black hole growing"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 23818,
+   "f1": 23885,
+   "shot": "eso_eso1635b#0",
+   "clip": "eso_eso1635b",
+   "ss": 4.5,
+   "crop": null,
+   "score": 0.337,
+   "ref": "fact1/29",
+   "title": "Panning across VISTA’s view of Messier 78"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 796.163,
+   "t1": 798.396,
+   "q": [
+    "black hole forming in the early universe",
+    "early black hole growing"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 23885,
+   "f1": 23952,
+   "shot": "eso_eso1907b#3",
+   "clip": "eso_eso1907b",
+   "ss": 30.7,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.426,
+   "ref": "fact1/30",
+   "title": "ESOcast 199 Light: Astronomers Capture First Image of a Black Hole"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 798.396,
+   "t1": 801.751,
+   "q": [
+    "a giant gas cloud collapsing",
+    "gas cloud collapsing into a black hole"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 23952,
+   "f1": 24053,
+   "shot": "esahubble_heic1720b#0",
+   "clip": "esahubble_heic1720b",
+   "ss": 3.94,
+   "crop": null,
+   "score": 0.3346,
+   "ref": "fact1/31",
+   "title": "Pan across NGC 5256"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 801.751,
+   "t1": 805.257,
+   "q": [
+    "the Big Bang flash",
+    "birth of the universe"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 24053,
+   "f1": 24158,
+   "shot": "esahubble_heic2109b#0",
+   "clip": "esahubble_heic2109b",
+   "ss": 3.86,
+   "crop": null,
+   "score": 0.3789,
+   "ref": "fact1/32",
+   "title": "Pan of GAL-CLUS-022058s"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 805.257,
+   "t1": 807.788,
+   "q": [
+    "a starry night sky over a dark landscape",
+    "Milky Way rising over mountains"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 24158,
+   "f1": 24234,
+   "shot": "eso_pao-ngtsmw1#0",
+   "clip": "eso_pao-ngtsmw1",
+   "ss": 1.98,
+   "crop": null,
+   "score": 0.3212,
+   "ref": "fact1/33",
+   "title": "Laser light at the VLT"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 807.788,
+   "t1": 810.319,
+   "q": [
+    "a starry night sky over a dark landscape",
+    "Milky Way rising over mountains"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 24234,
+   "f1": 24310,
+   "shot": "eso_gl_west_moonset#0",
+   "clip": "eso_gl_west_moonset",
+   "ss": 0.93,
+   "crop": null,
+   "score": 0.3323,
+   "ref": "fact1/34",
+   "title": "Moonset"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 810.319,
+   "t1": 812.85,
+   "q": [
+    "a starry night sky over a dark landscape",
+    "Milky Way rising over mountains"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 24310,
+   "f1": 24386,
+   "shot": "eso_santerne_2016-01-11#0",
+   "clip": "eso_santerne_2016-01-11",
+   "ss": 1.48,
+   "crop": null,
+   "score": 0.298,
+   "ref": "fact1/35",
+   "title": "Centaurus over La Silla timelapse"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 812.85,
+   "t1": 816.066,
+   "q": [
+    "the first image of a black hole",
+    "black hole shadow with a glowing ring"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 24386,
+   "f1": 24482,
+   "shot": "eso_eso2305a#4",
+   "clip": "eso_eso2305a",
+   "ss": 28.27,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.4323,
+   "ref": "fact1/36",
+   "title": "First image of a black hole expelling a powerful jet (ESOcast 260 Light)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 816.066,
+   "t1": 818.783,
+   "q": [
+    "two black holes merging",
+    "gravitational waves from merging black holes"
+   ],
+   "trans": "flash",
+   "zoom": "out",
+   "f0": 24482,
+   "f1": 24563,
+   "shot": "svs_13086#0",
+   "clip": "svs_13086",
+   "ss": 0.89,
+   "crop": null,
+   "score": 0.4399,
+   "ref": "fact1/37",
+   "title": "Supermassive Black Hole Binary Simulation Visualizations in 4k"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 818.783,
+   "t1": 822.475,
+   "q": [
+    "distant galaxies in the early universe",
+    "deep field"
+   ],
+   "trans": "whip",
+   "zoom": "in",
+   "f0": 24563,
+   "f1": 24674,
+   "shot": "esahubble_potw2235c#0",
+   "clip": "esahubble_potw2235c",
+   "ss": 3.77,
+   "crop": null,
+   "score": 0.3555,
+   "ref": "fact1/38",
+   "title": "Pan of Combined optical/mid-infrared image of M74 (Hubble and Webb)"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 822.475,
+   "t1": 824.8123333333333,
+   "q": [
+    "slow push into a black hole",
+    "approaching the event horizon of a black hole"
+   ],
+   "trans": "blur",
+   "zoom": "out",
+   "f0": 24674,
+   "f1": 24744,
+   "shot": "eso_eso2406abh#1",
+   "clip": "eso_eso2406abh",
+   "ss": 5.01,
+   "crop": null,
+   "score": 0.3923,
+   "ref": "fact1/39",
+   "title": "A new view of our black hole | ESO News"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 824.8123333333333,
+   "t1": 827.1496666666667,
+   "q": [
+    "slow push into a black hole",
+    "approaching the event horizon of a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 24744,
+   "f1": 24814,
+   "shot": "eso_eso2516c#0",
+   "clip": "eso_eso2516c",
+   "ss": 4.43,
+   "crop": null,
+   "score": 0.3611,
+   "ref": "fact1/40",
+   "title": "Animation of the growth spurt in the rogue planet Cha 1107-7626"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 827.1496666666667,
+   "t1": 829.487,
+   "q": [
+    "slow push into a black hole",
+    "approaching the event horizon of a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 24814,
+   "f1": 24885,
+   "shot": "esahubble_potw2505a#0",
+   "clip": "esahubble_potw2505a",
+   "ss": 4.45,
+   "crop": null,
+   "score": 0.3192,
+   "ref": "fact1/41",
+   "title": "Pan: LEDA 132905"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 829.487,
+   "t1": 831.7974999999999,
+   "q": [
+    "falling into a black hole",
+    "dark centre of a black hole"
+   ],
+   "trans": "zoom",
+   "zoom": "in",
+   "f0": 24885,
+   "f1": 24954,
+   "shot": "esahubble_heic2210a#2",
+   "clip": "esahubble_heic2210a",
+   "ss": 44.56,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.4145,
+   "ref": "fact1/42",
+   "title": "Space Sparks Episode 16: Hubble Determines Mass of Isolated Black Hole Roaming Our Milky Way"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 831.7974999999999,
+   "t1": 834.108,
+   "q": [
+    "falling into a black hole",
+    "dark centre of a black hole"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 24954,
+   "f1": 25023,
+   "shot": "esahubble_heic1913b#0",
+   "clip": "esahubble_heic1913b",
+   "ss": 4.44,
+   "crop": null,
+   "score": 0.4191,
+   "ref": "fact1/43",
+   "title": "Top-Down View of Artist’s Impression of NGC3147 black hole disc"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 834.108,
+   "t1": 836.279,
+   "q": [
+    "deep darkness of a black hole",
+    "black hole with a glowing ring of light"
+   ],
+   "trans": "flash",
+   "zoom": "in",
+   "f0": 25023,
+   "f1": 25088,
+   "shot": "eso_eso1427a#0",
+   "clip": "eso_eso1427a",
+   "ss": 0.51,
+   "crop": null,
+   "score": 0.3618,
+   "ref": "fact1/44",
+   "title": "Zooming in on the dark cloud Lupus 4"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 836.279,
+   "t1": 838.4499999999999,
+   "q": [
+    "deep darkness of a black hole",
+    "black hole with a glowing ring of light"
+   ],
+   "trans": "xfade",
+   "zoom": "out",
+   "f0": 25088,
+   "f1": 25153,
+   "shot": "svs_14576#0",
+   "clip": "svs_14576",
+   "ss": 23.01,
+   "crop": null,
+   "score": 0.4342,
+   "ref": "fact1/45",
+   "title": "NASA Black Hole Visualization Takes Viewers Beyond the Brink"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 838.4499999999999,
+   "t1": 840.621,
+   "q": [
+    "deep darkness of a black hole",
+    "black hole with a glowing ring of light"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 25153,
+   "f1": 25219,
+   "shot": "svs_14335#0",
+   "clip": "svs_14335",
+   "ss": 1.96,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.4344,
+   "ref": "fact1/46",
+   "title": "NASA Animation Sizes Up the Universe’s Biggest Black Holes"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 840.621,
+   "t1": 843.323,
+   "q": [
+    "zooming out across the universe",
+    "cosmic web of galaxies"
+   ],
+   "trans": "whip",
+   "zoom": "out",
+   "f0": 25219,
+   "f1": 25300,
+   "shot": "eso_eso1903c#0",
+   "clip": "eso_eso1903c",
+   "ss": 4.25,
+   "crop": null,
+   "score": 0.3705,
+   "ref": "fact1/47",
+   "title": "Panning across N180"
+  },
+  {
+   "kind": "clip",
+   "sec": "fact1",
+   "t0": 843.323,
+   "t1": 846.025,
+   "q": [
+    "zooming out across the universe",
+    "cosmic web of galaxies"
+   ],
+   "trans": "xfade",
+   "zoom": "in",
+   "f0": 25300,
+   "f1": 25381,
+   "shot": "eso_eso1838b#0",
+   "clip": "eso_eso1838b",
+   "ss": 0.4,
+   "crop": null,
+   "score": 0.3889,
+   "ref": "fact1/48",
+   "title": "Zooming in on Apep"
+  }
+ ],
+ "caps": [
+  {
+   "sec": "cold_open",
+   "t": 0.0,
+   "end": 72.635,
+   "text": "DECEMBER 1915",
+   "big": true,
+   "t1": 4.843999999999999
+  },
+  {
+   "sec": "cold_open",
+   "t": 4.843999999999999,
+   "end": 72.635,
+   "text": "On the Russian front, a German army lieutenant...",
+   "big": false,
+   "t1": 8.246
+  },
+  {
+   "sec": "cold_open",
+   "t": 8.246,
+   "end": 72.635,
+   "text": "...worked out the paths of artillery shells",
+   "big": false,
+   "t1": 11.729
+  },
+  {
+   "sec": "cold_open",
+   "t": 11.729,
+   "end": 72.635,
+   "text": "KARL SCHWARZSCHILD",
+   "big": true,
+   "t1": 14.69
+  },
+  {
+   "sec": "cold_open",
+   "t": 14.69,
+   "end": 72.635,
+   "text": "One of Germany's most famous astronomers",
+   "big": false,
+   "t1": 18.602
+  },
+  {
+   "sec": "cold_open",
+   "t": 18.602,
+   "end": 72.635,
+   "text": "Amid the noise of war...",
+   "big": false,
+   "t1": 23.954
+  },
+  {
+   "sec": "cold_open",
+   "t": 23.954,
+   "end": 72.635,
+   "text": "EINSTEIN'S GENERAL RELATIVITY",
+   "big": true,
+   "t1": 25.289
+  },
+  {
+   "sec": "cold_open",
+   "t": 25.289,
+   "end": 72.635,
+   "text": "...he found the first exact solution of its equations",
+   "big": false,
+   "t1": 28.377
+  },
+  {
+   "sec": "cold_open",
+   "t": 28.377,
+   "end": 72.635,
+   "text": "Einstein himself was amazed",
+   "big": false,
+   "t1": 30.223
+  },
+  {
+   "sec": "cold_open",
+   "t": 30.223,
+   "end": 72.635,
+   "text": "But the solution hid a strange boundary",
+   "big": false,
+   "t1": 33.219
+  },
+  {
+   "sec": "cold_open",
+   "t": 33.219,
+   "end": 72.635,
+   "text": "If all of an object's mass is squeezed into a small ball...",
+   "big": false,
+   "t1": 38.222
+  },
+  {
+   "sec": "cold_open",
+   "t": 38.222,
+   "end": 72.635,
+   "text": "...nothing can ever come back out of it",
+   "big": false,
+   "t1": 41.229
+  },
+  {
+   "sec": "cold_open",
+   "t": 41.229,
+   "end": 72.635,
+   "text": "NOT EVEN LIGHT",
+   "big": true,
+   "t1": 42.46
+  },
+  {
+   "sec": "cold_open",
+   "t": 42.46,
+   "end": 72.635,
+   "text": "For the Sun, that ball would be just 6 km wide",
+   "big": false,
+   "t1": 46.163
+  },
+  {
+   "sec": "cold_open",
+   "t": 46.163,
+   "end": 72.635,
+   "text": "For Earth, the size of a marble",
+   "big": false,
+   "t1": 48.787
+  },
+  {
+   "sec": "cold_open",
+   "t": 48.787,
+   "end": 72.635,
+   "text": "Five months later, Schwarzschild was dead",
+   "big": false,
+   "t1": 52.433
+  },
+  {
+   "sec": "cold_open",
+   "t": 52.433,
+   "end": 72.635,
+   "text": "He never knew what his calculation was hiding...",
+   "big": false,
+   "t1": 58.772
+  },
+  {
+   "sec": "cold_open",
+   "t": 58.772,
+   "end": 72.635,
+   "text": "BLACK HOLE",
+   "big": true,
+   "t1": 60.165
+  },
+  {
+   "sec": "cold_open",
+   "t": 60.165,
+   "end": 72.635,
+   "text": "More than 100 years later...",
+   "big": false,
+   "t1": 62.836
+  },
+  {
+   "sec": "cold_open",
+   "t": 62.836,
+   "end": 72.635,
+   "text": "2026",
+   "big": true,
+   "t1": 64.983
+  },
+  {
+   "sec": "cold_open",
+   "t": 64.983,
+   "end": 72.635,
+   "text": "The James Webb Space Telescope found a black hole...",
+   "big": false,
+   "t1": 69.302
+  },
+  {
+   "sec": "cold_open",
+   "t": 69.302,
+   "end": 72.635,
+   "text": "...that may be older than its own galaxy",
+   "big": false,
+   "t1": 72.935
+  },
+  {
+   "sec": "fact10",
+   "t": 77.03500000000001,
+   "end": 132.606,
+   "text": "But the idea was even older than Schwarzschild",
+   "big": false,
+   "t1": 79.897
+  },
+  {
+   "sec": "fact10",
+   "t": 79.897,
+   "end": 132.606,
+   "text": "1783",
+   "big": true,
+   "t1": 83.89
+  },
+  {
+   "sec": "fact10",
+   "t": 83.89,
+   "end": 132.606,
+   "text": "The village priest of Thornhill, England...",
+   "big": false,
+   "t1": 85.469
+  },
+  {
+   "sec": "fact10",
+   "t": 85.469,
+   "end": 132.606,
+   "text": "JOHN MICHELL",
+   "big": true,
+   "t1": 87.257
+  },
+  {
+   "sec": "fact10",
+   "t": 87.257,
+   "end": 132.606,
+   "text": "...wrote a long letter to his friend Henry Cavendish",
+   "big": false,
+   "t1": 90.718
+  },
+  {
+   "sec": "fact10",
+   "t": 90.718,
+   "end": 132.606,
+   "text": "Michell also studied earthquakes...",
+   "big": false,
+   "t1": 93.353
+  },
+  {
+   "sec": "fact10",
+   "t": 93.353,
+   "end": 132.606,
+   "text": "...and his balance was later used to weigh the Earth",
+   "big": false,
+   "t1": 98.403
+  },
+  {
+   "sec": "fact10",
+   "t": 98.403,
+   "end": 132.606,
+   "text": "Using Newton's gravity, he asked a simple question",
+   "big": false,
+   "t1": 102.467
+  },
+  {
+   "sec": "fact10",
+   "t": 102.467,
+   "end": 132.606,
+   "text": "What if a star were as dense as the Sun...",
+   "big": false,
+   "t1": 105.218
+  },
+  {
+   "sec": "fact10",
+   "t": 105.218,
+   "end": 132.606,
+   "text": "...but 500 times wider?",
+   "big": false,
+   "t1": 108.551
+  },
+  {
+   "sec": "fact10",
+   "t": 108.551,
+   "end": 132.606,
+   "text": "The answer was shocking",
+   "big": false,
+   "t1": 110.339
+  },
+  {
+   "sec": "fact10",
+   "t": 110.339,
+   "end": 132.606,
+   "text": "Even light would be too slow to escape its gravity",
+   "big": false,
+   "t1": 114.739
+  },
+  {
+   "sec": "fact10",
+   "t": 114.739,
+   "end": 132.606,
+   "text": "Such a star would be completely invisible",
+   "big": false,
+   "t1": 117.433
+  },
+  {
+   "sec": "fact10",
+   "t": 117.433,
+   "end": 132.606,
+   "text": "\"DARK STARS\"",
+   "big": true,
+   "t1": 119.998
+  },
+  {
+   "sec": "fact10",
+   "t": 119.998,
+   "end": 132.606,
+   "text": "They could be found only by the stars orbiting them",
+   "big": false,
+   "t1": 126.976
+  },
+  {
+   "sec": "fact10",
+   "t": 126.976,
+   "end": 132.606,
+   "text": "About 200 years later, astronomers did exactly that",
+   "big": false,
+   "t1": 132.906
+  },
+  {
+   "sec": "fact9",
+   "t": 135.506,
+   "end": 205.845,
+   "text": "Even Einstein didn't believe in Schwarzschild's boundary",
+   "big": false,
+   "t1": 139.227
+  },
+  {
+   "sec": "fact9",
+   "t": 139.227,
+   "end": 205.845,
+   "text": "1939",
+   "big": true,
+   "t1": 141.026
+  },
+  {
+   "sec": "fact9",
+   "t": 141.026,
+   "end": 205.845,
+   "text": "He wrote a paper to prove such things could not exist",
+   "big": false,
+   "t1": 148.666
+  },
+  {
+   "sec": "fact9",
+   "t": 148.666,
+   "end": 205.845,
+   "text": "The same year, in California...",
+   "big": false,
+   "t1": 150.872
+  },
+  {
+   "sec": "fact9",
+   "t": 150.872,
+   "end": 205.845,
+   "text": "J. ROBERT OPPENHEIMER",
+   "big": true,
+   "t1": 152.543
+  },
+  {
+   "sec": "fact9",
+   "t": 152.543,
+   "end": 205.845,
+   "text": "...and his student Hartland Snyder found the opposite",
+   "big": false,
+   "t1": 157.304
+  },
+  {
+   "sec": "fact9",
+   "t": 157.304,
+   "end": 205.845,
+   "text": "When a very massive star runs out of fuel...",
+   "big": false,
+   "t1": 162.528
+  },
+  {
+   "sec": "fact9",
+   "t": 162.528,
+   "end": 205.845,
+   "text": "...it collapses under its own weight, and never stops",
+   "big": false,
+   "t1": 167.23
+  },
+  {
+   "sec": "fact9",
+   "t": 167.23,
+   "end": 205.845,
+   "text": "In the end, it is cut off from the universe forever",
+   "big": false,
+   "t1": 170.945
+  },
+  {
+   "sec": "fact9",
+   "t": 170.945,
+   "end": 205.845,
+   "text": "1 SEPTEMBER 1939",
+   "big": true,
+   "t1": 175.137
+  },
+  {
+   "sec": "fact9",
+   "t": 175.137,
+   "end": 205.845,
+   "text": "The same day, Germany invaded Poland...",
+   "big": false,
+   "t1": 178.248
+  },
+  {
+   "sec": "fact9",
+   "t": 178.248,
+   "end": 205.845,
+   "text": "...and World War II began",
+   "big": false,
+   "t1": 181.418
+  },
+  {
+   "sec": "fact9",
+   "t": 181.418,
+   "end": 205.845,
+   "text": "The world's attention was elsewhere",
+   "big": false,
+   "t1": 183.914
+  },
+  {
+   "sec": "fact9",
+   "t": 183.914,
+   "end": 205.845,
+   "text": "Oppenheimer went on to lead the atomic bomb project...",
+   "big": false,
+   "t1": 188.233
+  },
+  {
+   "sec": "fact9",
+   "t": 188.233,
+   "end": 205.845,
+   "text": "...and never returned to the subject",
+   "big": false,
+   "t1": 190.589
+  },
+  {
+   "sec": "fact9",
+   "t": 190.589,
+   "end": 205.845,
+   "text": "It took 28 more years for them to get a name",
+   "big": false,
+   "t1": 194.827
+  },
+  {
+   "sec": "fact9",
+   "t": 194.827,
+   "end": 205.845,
+   "text": "1967",
+   "big": true,
+   "t1": 196.65
+  },
+  {
+   "sec": "fact9",
+   "t": 196.65,
+   "end": 205.845,
+   "text": "JOHN WHEELER",
+   "big": true,
+   "t1": 199.332
+  },
+  {
+   "sec": "fact9",
+   "t": 199.332,
+   "end": 205.845,
+   "text": "In a lecture, he gave them a short name that stuck...",
+   "big": false,
+   "t1": 204.858
+  },
+  {
+   "sec": "fact9",
+   "t": 204.858,
+   "end": 205.845,
+   "text": "\"BLACK HOLE\"",
+   "big": true,
+   "t1": 206.145
+  },
+  {
+   "sec": "fact8",
+   "t": 208.745,
+   "end": 289.393,
+   "text": "How do you find something not even light escapes?",
+   "big": false,
+   "t1": 212.268
+  },
+  {
+   "sec": "fact8",
+   "t": 212.268,
+   "end": 289.393,
+   "text": "That was the question facing astronomers",
+   "big": false,
+   "t1": 214.544
+  },
+  {
+   "sec": "fact8",
+   "t": 214.544,
+   "end": 289.393,
+   "text": "The answer came in X-rays",
+   "big": false,
+   "t1": 216.68
+  },
+  {
+   "sec": "fact8",
+   "t": 216.68,
+   "end": 289.393,
+   "text": "1964",
+   "big": true,
+   "t1": 218.457
+  },
+  {
+   "sec": "fact8",
+   "t": 218.457,
+   "end": 289.393,
+   "text": "A small rocket launched from New Mexico...",
+   "big": false,
+   "t1": 222.961
+  },
+  {
+   "sec": "fact8",
+   "t": 222.961,
+   "end": 289.393,
+   "text": "...caught a bright X-ray source in the constellation Cygnus",
+   "big": false,
+   "t1": 227.234
+  },
+  {
+   "sec": "fact8",
+   "t": 227.234,
+   "end": 289.393,
+   "text": "CYGNUS X-1",
+   "big": true,
+   "t1": 229.521
+  },
+  {
+   "sec": "fact8",
+   "t": 229.521,
+   "end": 289.393,
+   "text": "In 1972, astronomers found a giant blue star...",
+   "big": false,
+   "t1": 234.943
+  },
+  {
+   "sec": "fact8",
+   "t": 234.943,
+   "end": 289.393,
+   "text": "...circling an invisible companion every 5.6 days",
+   "big": false,
+   "t1": 238.019
+  },
+  {
+   "sec": "fact8",
+   "t": 238.019,
+   "end": 289.393,
+   "text": "The companion was many Suns heavy, yet invisible",
+   "big": false,
+   "t1": 242.14
+  },
+  {
+   "sec": "fact8",
+   "t": 242.14,
+   "end": 289.393,
+   "text": "Its gravity was pulling gas off the blue star",
+   "big": false,
+   "t1": 245.438
+  },
+  {
+   "sec": "fact8",
+   "t": 245.438,
+   "end": 289.393,
+   "text": "The falling gas got so hot it glowed in X-rays",
+   "big": false,
+   "t1": 250.267
+  },
+  {
+   "sec": "fact8",
+   "t": 250.267,
+   "end": 289.393,
+   "text": "Just as Michell wrote, the invisible object gave itself away",
+   "big": false,
+   "t1": 257.326
+  },
+  {
+   "sec": "fact8",
+   "t": 257.326,
+   "end": 289.393,
+   "text": "STEPHEN HAWKING vs KIP THORNE",
+   "big": true,
+   "t1": 261.181
+  },
+  {
+   "sec": "fact8",
+   "t": 261.181,
+   "end": 289.393,
+   "text": "Hawking bet that Cygnus X-1 was NOT a black hole",
+   "big": false,
+   "t1": 264.211
+  },
+  {
+   "sec": "fact8",
+   "t": 264.211,
+   "end": 289.393,
+   "text": "He later called it an \"insurance policy\"",
+   "big": false,
+   "t1": 267.578
+  },
+  {
+   "sec": "fact8",
+   "t": 267.578,
+   "end": 289.393,
+   "text": "If black holes didn't exist, at least he'd win the bet",
+   "big": false,
+   "t1": 271.665
+  },
+  {
+   "sec": "fact8",
+   "t": 271.665,
+   "end": 289.393,
+   "text": "1990: HAWKING CONCEDED",
+   "big": true,
+   "t1": 274.973
+  },
+  {
+   "sec": "fact8",
+   "t": 274.973,
+   "end": 289.393,
+   "text": "Today: about 7,200 light-years away...",
+   "big": false,
+   "t1": 282.102
+  },
+  {
+   "sec": "fact8",
+   "t": 282.102,
+   "end": 289.393,
+   "text": "...and 21 times the mass of the Sun",
+   "big": false,
+   "t1": 285.562
+  },
+  {
+   "sec": "fact8",
+   "t": 285.562,
+   "end": 289.393,
+   "text": "THE FIRST BLACK HOLE EVER IDENTIFIED",
+   "big": true,
+   "t1": 289.693
+  },
+  {
+   "sec": "fact7",
+   "t": 292.29299999999995,
+   "end": 355.202,
+   "text": "Nothing can escape a black hole...",
+   "big": false,
+   "t1": 293.819
+  },
+  {
+   "sec": "fact7",
+   "t": 293.819,
+   "end": 355.202,
+   "text": "...or so everyone believed",
+   "big": false,
+   "t1": 296.223
+  },
+  {
+   "sec": "fact7",
+   "t": 296.223,
+   "end": 355.202,
+   "text": "1974",
+   "big": true,
+   "t1": 297.953
+  },
+  {
+   "sec": "fact7",
+   "t": 297.953,
+   "end": 355.202,
+   "text": "Stephen Hawking found a crack in that rule",
+   "big": false,
+   "t1": 301.737
+  },
+  {
+   "sec": "fact7",
+   "t": 301.737,
+   "end": 355.202,
+   "text": "He combined Einstein's gravity...",
+   "big": false,
+   "t1": 304.28
+  },
+  {
+   "sec": "fact7",
+   "t": 304.28,
+   "end": 355.202,
+   "text": "...with the physics of the very small: quantum physics",
+   "big": false,
+   "t1": 309.342
+  },
+  {
+   "sec": "fact7",
+   "t": 309.342,
+   "end": 355.202,
+   "text": "The result was astonishing",
+   "big": false,
+   "t1": 311.315
+  },
+  {
+   "sec": "fact7",
+   "t": 311.315,
+   "end": 355.202,
+   "text": "A faint glow leaks out from the edge, the event horizon",
+   "big": false,
+   "t1": 318.525
+  },
+  {
+   "sec": "fact7",
+   "t": 318.525,
+   "end": 355.202,
+   "text": "HAWKING RADIATION",
+   "big": true,
+   "t1": 321.997
+  },
+  {
+   "sec": "fact7",
+   "t": 321.997,
+   "end": 355.202,
+   "text": "So black holes don't last forever",
+   "big": false,
+   "t1": 325.015
+  },
+  {
+   "sec": "fact7",
+   "t": 325.015,
+   "end": 355.202,
+   "text": "They slowly lose energy, and one day evaporate",
+   "big": false,
+   "t1": 329.369
+  },
+  {
+   "sec": "fact7",
+   "t": 329.369,
+   "end": 355.202,
+   "text": "But very, very slowly",
+   "big": false,
+   "t1": 331.818
+  },
+  {
+   "sec": "fact7",
+   "t": 331.818,
+   "end": 355.202,
+   "text": "A Sun-mass black hole would take this many years",
+   "big": false,
+   "t1": 340.572
+  },
+  {
+   "sec": "fact7",
+   "t": 340.572,
+   "end": 355.202,
+   "text": "Hawking radiation has never been observed",
+   "big": false,
+   "t1": 343.742
+  },
+  {
+   "sec": "fact7",
+   "t": 343.742,
+   "end": 355.202,
+   "text": "No machine today can catch such a faint glow",
+   "big": false,
+   "t1": 349.013
+  },
+  {
+   "sec": "fact7",
+   "t": 349.013,
+   "end": 355.202,
+   "text": "Perhaps that is why Hawking never won a Nobel Prize",
+   "big": false,
+   "t1": 355.502
+  },
+  {
+   "sec": "fact6",
+   "t": 358.102,
+   "end": 424.447,
+   "text": "Near a black hole, gravity isn't just strong...",
+   "big": false,
+   "t1": 360.116
+  },
+  {
+   "sec": "fact6",
+   "t": 360.116,
+   "end": 424.447,
+   "text": "...it's uneven",
+   "big": false,
+   "t1": 361.776
+  },
+  {
+   "sec": "fact6",
+   "t": 361.776,
+   "end": 424.447,
+   "text": "The side closer to the black hole is pulled much harder",
+   "big": false,
+   "t1": 370.368
+  },
+  {
+   "sec": "fact6",
+   "t": 370.368,
+   "end": 424.447,
+   "text": "So it gets stretched long and thin, like spaghetti",
+   "big": false,
+   "t1": 375.255
+  },
+  {
+   "sec": "fact6",
+   "t": 375.255,
+   "end": 424.447,
+   "text": "\"SPAGHETTIFICATION\"",
+   "big": true,
+   "t1": 378.878
+  },
+  {
+   "sec": "fact6",
+   "t": 378.878,
+   "end": 424.447,
+   "text": "Seen from far away, a falling object seems to slow...",
+   "big": false,
+   "t1": 384.985
+  },
+  {
+   "sec": "fact6",
+   "t": 384.985,
+   "end": 424.447,
+   "text": "...as if time itself has stopped",
+   "big": false,
+   "t1": 387.051
+  },
+  {
+   "sec": "fact6",
+   "t": 387.051,
+   "end": 424.447,
+   "text": "Its light turns red, then dim, then vanishes",
+   "big": false,
+   "t1": 392.462
+  },
+  {
+   "sec": "fact6",
+   "t": 392.462,
+   "end": 424.447,
+   "text": "2019",
+   "big": true,
+   "t1": 395.527
+  },
+  {
+   "sec": "fact6",
+   "t": 395.527,
+   "end": 424.447,
+   "text": "About 215 million light-years away...",
+   "big": false,
+   "t1": 398.244
+  },
+  {
+   "sec": "fact6",
+   "t": 398.244,
+   "end": 424.447,
+   "text": "...a Sun-like star passed too close to a giant black hole",
+   "big": false,
+   "t1": 403.526
+  },
+  {
+   "sec": "fact6",
+   "t": 403.526,
+   "end": 424.447,
+   "text": "It was ripped into a long stream...",
+   "big": false,
+   "t1": 407.288
+  },
+  {
+   "sec": "fact6",
+   "t": 407.288,
+   "end": 424.447,
+   "text": "...and about half of its mass was swallowed",
+   "big": false,
+   "t1": 410.898
+  },
+  {
+   "sec": "fact6",
+   "t": 410.898,
+   "end": 424.447,
+   "text": "VERY LARGE TELESCOPE, CHILE",
+   "big": true,
+   "t1": 415.113
+  },
+  {
+   "sec": "fact6",
+   "t": 415.113,
+   "end": 424.447,
+   "text": "Telescopes recorded its death for six months",
+   "big": false,
+   "t1": 418.654
+  },
+  {
+   "sec": "fact6",
+   "t": 418.654,
+   "end": 424.447,
+   "text": "A star's death had never been seen this close",
+   "big": false,
+   "t1": 424.747
+  },
+  {
+   "sec": "fact5",
+   "t": 427.347,
+   "end": 512.546,
+   "text": "The nearest supermassive black hole...",
+   "big": false,
+   "t1": 429.303
+  },
+  {
+   "sec": "fact5",
+   "t": 429.303,
+   "end": 512.546,
+   "text": "...sits at the very centre of the Milky Way",
+   "big": false,
+   "t1": 431.242
+  },
+  {
+   "sec": "fact5",
+   "t": 431.242,
+   "end": 512.546,
+   "text": "26,000 LIGHT-YEARS AWAY",
+   "big": true,
+   "t1": 434.168
+  },
+  {
+   "sec": "fact5",
+   "t": 434.168,
+   "end": 512.546,
+   "text": "SAGITTARIUS A*",
+   "big": true,
+   "t1": 436.826
+  },
+  {
+   "sec": "fact5",
+   "t": 436.826,
+   "end": 512.546,
+   "text": "Thick walls of dust lie between it and Earth...",
+   "big": false,
+   "t1": 440.774
+  },
+  {
+   "sec": "fact5",
+   "t": 440.774,
+   "end": 512.546,
+   "text": "...but infrared light passes straight through",
+   "big": false,
+   "t1": 445.011
+  },
+  {
+   "sec": "fact5",
+   "t": 445.011,
+   "end": 512.546,
+   "text": "From the 1990s, two teams tracked stars near the centre",
+   "big": false,
+   "t1": 450.526
+  },
+  {
+   "sec": "fact5",
+   "t": 450.526,
+   "end": 512.546,
+   "text": "REINHARD GENZEL",
+   "big": true,
+   "t1": 453.858
+  },
+  {
+   "sec": "fact5",
+   "t": 453.858,
+   "end": 512.546,
+   "text": "...using telescopes in Chile",
+   "big": false,
+   "t1": 455.414
+  },
+  {
+   "sec": "fact5",
+   "t": 455.414,
+   "end": 512.546,
+   "text": "ANDREA GHEZ",
+   "big": true,
+   "t1": 458.328
+  },
+  {
+   "sec": "fact5",
+   "t": 458.328,
+   "end": 512.546,
+   "text": "...using the Keck telescopes in Hawaii",
+   "big": false,
+   "t1": 460.638
+  },
+  {
+   "sec": "fact5",
+   "t": 460.638,
+   "end": 512.546,
+   "text": "For three decades, they tracked the stars year after year",
+   "big": false,
+   "t1": 465.224
+  },
+  {
+   "sec": "fact5",
+   "t": 465.224,
+   "end": 512.546,
+   "text": "One star stood out: S2",
+   "big": false,
+   "t1": 468.405
+  },
+  {
+   "sec": "fact5",
+   "t": 468.405,
+   "end": 512.546,
+   "text": "It circles something invisible every 16 years",
+   "big": false,
+   "t1": 473.339
+  },
+  {
+   "sec": "fact5",
+   "t": 473.339,
+   "end": 512.546,
+   "text": "2018: OVER 25 MILLION KM/H",
+   "big": true,
+   "t1": 481.257
+  },
+  {
+   "sec": "fact5",
+   "t": 481.257,
+   "end": 512.546,
+   "text": "That speed needs about 4 million times the Sun's mass...",
+   "big": false,
+   "t1": 487.654
+  },
+  {
+   "sec": "fact5",
+   "t": 487.654,
+   "end": 512.546,
+   "text": "...in a space so small, it can only be a black hole",
+   "big": false,
+   "t1": 493.61
+  },
+  {
+   "sec": "fact5",
+   "t": 493.61,
+   "end": 512.546,
+   "text": "NOBEL PRIZE 2020",
+   "big": true,
+   "t1": 499.09
+  },
+  {
+   "sec": "fact5",
+   "t": 499.09,
+   "end": 512.546,
+   "text": "Shared with Roger Penrose...",
+   "big": false,
+   "t1": 501.575
+  },
+  {
+   "sec": "fact5",
+   "t": 501.575,
+   "end": 512.546,
+   "text": "...who showed Einstein's theory makes black holes inevitable",
+   "big": false,
+   "t1": 507.205
+  },
+  {
+   "sec": "fact5",
+   "t": 507.205,
+   "end": 512.546,
+   "text": "Ghez became only the 4th woman to win the Physics Nobel",
+   "big": false,
+   "t1": 512.846
+  },
+  {
+   "sec": "fact4",
+   "t": 515.446,
+   "end": 591.312,
+   "text": "14 SEPTEMBER 2015",
+   "big": true,
+   "t1": 517.414
+  },
+  {
+   "sec": "fact4",
+   "t": 517.414,
+   "end": 591.312,
+   "text": "In America, two giant detectors 3,000 km apart...",
+   "big": false,
+   "t1": 521.013
+  },
+  {
+   "sec": "fact4",
+   "t": 521.013,
+   "end": 591.312,
+   "text": "...caught the same trembling wave",
+   "big": false,
+   "t1": 525.134
+  },
+  {
+   "sec": "fact4",
+   "t": 525.134,
+   "end": 591.312,
+   "text": "LIGO",
+   "big": true,
+   "t1": 527.282
+  },
+  {
+   "sec": "fact4",
+   "t": 527.282,
+   "end": 591.312,
+   "text": "Einstein predicted it 100 years earlier...",
+   "big": false,
+   "t1": 529.604
+  },
+  {
+   "sec": "fact4",
+   "t": 529.604,
+   "end": 591.312,
+   "text": "...when heavy objects whirl, space and time ripple",
+   "big": false,
+   "t1": 535.711
+  },
+  {
+   "sec": "fact4",
+   "t": 535.711,
+   "end": 591.312,
+   "text": "GRAVITATIONAL WAVES",
+   "big": true,
+   "t1": 537.29
+  },
+  {
+   "sec": "fact4",
+   "t": 537.29,
+   "end": 591.312,
+   "text": "But the waves are so weak...",
+   "big": false,
+   "t1": 539.855
+  },
+  {
+   "sec": "fact4",
+   "t": 539.855,
+   "end": 591.312,
+   "text": "...Einstein doubted they could ever be measured",
+   "big": false,
+   "t1": 544.116
+  },
+  {
+   "sec": "fact4",
+   "t": 544.116,
+   "end": 591.312,
+   "text": "This wave set out 1.3 billion years ago",
+   "big": false,
+   "t1": 547.692
+  },
+  {
+   "sec": "fact4",
+   "t": 547.692,
+   "end": 591.312,
+   "text": "Two black holes, 36 and 29 Suns heavy, merged",
+   "big": false,
+   "t1": 555.738
+  },
+  {
+   "sec": "fact4",
+   "t": 555.738,
+   "end": 591.312,
+   "text": "In the last moment, 3 Suns of mass became pure energy",
+   "big": false,
+   "t1": 560.37
+  },
+  {
+   "sec": "fact4",
+   "t": 560.37,
+   "end": 591.312,
+   "text": "For a split second, it outshone...",
+   "big": false,
+   "t1": 563.969
+  },
+  {
+   "sec": "fact4",
+   "t": 563.969,
+   "end": 591.312,
+   "text": "...all the stars in the observable universe combined",
+   "big": false,
+   "t1": 569.02
+  },
+  {
+   "sec": "fact4",
+   "t": 569.02,
+   "end": 591.312,
+   "text": "At Earth, it stretched LIGO's 4 km arms...",
+   "big": false,
+   "t1": 574.198
+  },
+  {
+   "sec": "fact4",
+   "t": 574.198,
+   "end": 591.312,
+   "text": "...by 1/1000 of the width of a proton",
+   "big": false,
+   "t1": 578.54
+  },
+  {
+   "sec": "fact4",
+   "t": 578.54,
+   "end": 591.312,
+   "text": "And still, it was caught",
+   "big": false,
+   "t1": 580.409
+  },
+  {
+   "sec": "fact4",
+   "t": 580.409,
+   "end": 591.312,
+   "text": "NOBEL PRIZE 2017",
+   "big": true,
+   "t1": 584.682
+  },
+  {
+   "sec": "fact4",
+   "t": 584.682,
+   "end": 591.312,
+   "text": "Among the winners: Kip Thorne...",
+   "big": false,
+   "t1": 587.596
+  },
+  {
+   "sec": "fact4",
+   "t": 587.596,
+   "end": 591.312,
+   "text": "...the man who won his bet against Hawking",
+   "big": false,
+   "t1": 591.612
+  },
+  {
+   "sec": "fact3",
+   "t": 594.212,
+   "end": 654.612,
+   "text": "Until now, only a black hole's effects had been seen...",
+   "big": false,
+   "t1": 596.284
+  },
+  {
+   "sec": "fact3",
+   "t": 596.284,
+   "end": 654.612,
+   "text": "...never the black hole itself",
+   "big": false,
+   "t1": 597.445
+  },
+  {
+   "sec": "fact3",
+   "t": 597.445,
+   "end": 654.612,
+   "text": "Photographing something so small, so far away...",
+   "big": false,
+   "t1": 600.87
+  },
+  {
+   "sec": "fact3",
+   "t": 600.87,
+   "end": 654.612,
+   "text": "...needed a telescope as big as the Earth",
+   "big": false,
+   "t1": 603.749
+  },
+  {
+   "sec": "fact3",
+   "t": 603.749,
+   "end": 654.612,
+   "text": "So scientists built one",
+   "big": false,
+   "t1": 606.095
+  },
+  {
+   "sec": "fact3",
+   "t": 606.095,
+   "end": 654.612,
+   "text": "EVENT HORIZON TELESCOPE",
+   "big": true,
+   "t1": 607.696
+  },
+  {
+   "sec": "fact3",
+   "t": 607.696,
+   "end": 654.612,
+   "text": "From Hawaii to Chile, from Spain to the South Pole...",
+   "big": false,
+   "t1": 611.377
+  },
+  {
+   "sec": "fact3",
+   "t": 611.377,
+   "end": 654.612,
+   "text": "...radio telescopes watched one spot on the same night",
+   "big": false,
+   "t1": 615.278
+  },
+  {
+   "sec": "fact3",
+   "t": 615.278,
+   "end": 654.612,
+   "text": "...as if they were one giant telescope",
+   "big": false,
+   "t1": 618.378
+  },
+  {
+   "sec": "fact3",
+   "t": 618.378,
+   "end": 654.612,
+   "text": "There was too much data to send over the internet",
+   "big": false,
+   "t1": 622.383
+  },
+  {
+   "sec": "fact3",
+   "t": 622.383,
+   "end": 654.612,
+   "text": "About 1,000 hard drives were flown in by plane",
+   "big": false,
+   "t1": 626.655
+  },
+  {
+   "sec": "fact3",
+   "t": 626.655,
+   "end": 654.612,
+   "text": "10 APRIL 2019",
+   "big": true,
+   "t1": 629.186
+  },
+  {
+   "sec": "fact3",
+   "t": 629.186,
+   "end": 654.612,
+   "text": "The world saw a black hole for the first time",
+   "big": false,
+   "t1": 632.507
+  },
+  {
+   "sec": "fact3",
+   "t": 632.507,
+   "end": 654.612,
+   "text": "At the centre of galaxy M87...",
+   "big": false,
+   "t1": 634.748
+  },
+  {
+   "sec": "fact3",
+   "t": 634.748,
+   "end": 654.612,
+   "text": "...55 million light-years away...",
+   "big": false,
+   "t1": 637.151
+  },
+  {
+   "sec": "fact3",
+   "t": 637.151,
+   "end": 654.612,
+   "text": "...a black hole 6.5 billion times the Sun's mass",
+   "big": false,
+   "t1": 640.727
+  },
+  {
+   "sec": "fact3",
+   "t": 640.727,
+   "end": 654.612,
+   "text": "A ring of glowing gas around deep darkness...",
+   "big": false,
+   "t1": 645.069
+  },
+  {
+   "sec": "fact3",
+   "t": 645.069,
+   "end": 654.612,
+   "text": "...the black hole's shadow",
+   "big": false,
+   "t1": 647.147
+  },
+  {
+   "sec": "fact3",
+   "t": 647.147,
+   "end": 654.612,
+   "text": "2022: the Milky Way's own black hole...",
+   "big": false,
+   "t1": 651.036
+  },
+  {
+   "sec": "fact3",
+   "t": 651.036,
+   "end": 654.612,
+   "text": "...Sagittarius A*, was photographed too",
+   "big": false,
+   "t1": 654.9119999999999
+  },
+  {
+   "sec": "fact2",
+   "t": 657.512,
+   "end": 726.365,
+   "text": "1971",
+   "big": true,
+   "t1": 658.272
+  },
+  {
+   "sec": "fact2",
+   "t": 658.272,
+   "end": 726.365,
+   "text": "Stephen Hawking proposed a rule",
+   "big": false,
+   "t1": 660.815
+  },
+  {
+   "sec": "fact2",
+   "t": 660.815,
+   "end": 726.365,
+   "text": "When two black holes merge...",
+   "big": false,
+   "t1": 662.684
+  },
+  {
+   "sec": "fact2",
+   "t": 662.684,
+   "end": 726.365,
+   "text": "...the new black hole's surface area...",
+   "big": false,
+   "t1": 665.528
+  },
+  {
+   "sec": "fact2",
+   "t": 665.528,
+   "end": 726.365,
+   "text": "...can never be smaller than the two old ones combined",
+   "big": false,
+   "t1": 670.358
+  },
+  {
+   "sec": "fact2",
+   "t": 670.358,
+   "end": 726.365,
+   "text": "To test it, a collision had to be measured before and after",
+   "big": false,
+   "t1": 677.277
+  },
+  {
+   "sec": "fact2",
+   "t": 677.277,
+   "end": 726.365,
+   "text": "For decades, that was impossible",
+   "big": false,
+   "t1": 679.286
+  },
+  {
+   "sec": "fact2",
+   "t": 679.286,
+   "end": 726.365,
+   "text": "14 JANUARY 2025",
+   "big": true,
+   "t1": 681.979
+  },
+  {
+   "sec": "fact2",
+   "t": 681.979,
+   "end": 726.365,
+   "text": "LIGO caught the clearest gravitational wave ever",
+   "big": false,
+   "t1": 685.822
+  },
+  {
+   "sec": "fact2",
+   "t": 685.822,
+   "end": 726.365,
+   "text": "Over a billion light-years away...",
+   "big": false,
+   "t1": 688.725
+  },
+  {
+   "sec": "fact2",
+   "t": 688.725,
+   "end": 726.365,
+   "text": "...two black holes, each over 30 Suns, merged",
+   "big": false,
+   "t1": 693.624
+  },
+  {
+   "sec": "fact2",
+   "t": 693.624,
+   "end": 726.365,
+   "text": "The signal was 4 times clearer than in 2015",
+   "big": false,
+   "t1": 697.026
+  },
+  {
+   "sec": "fact2",
+   "t": 697.026,
+   "end": 726.365,
+   "text": "Clear enough to measure the waves before the collision...",
+   "big": false,
+   "t1": 699.092
+  },
+  {
+   "sec": "fact2",
+   "t": 699.092,
+   "end": 726.365,
+   "text": "...and the final \"ringing\" of the new black hole",
+   "big": false,
+   "t1": 704.468
+  },
+  {
+   "sec": "fact2",
+   "t": 704.468,
+   "end": 726.365,
+   "text": "Total area before: about 240,000 km²",
+   "big": false,
+   "t1": 710.668
+  },
+  {
+   "sec": "fact2",
+   "t": 710.668,
+   "end": 726.365,
+   "text": "After: about 400,000 km²",
+   "big": false,
+   "t1": 714.302
+  },
+  {
+   "sec": "fact2",
+   "t": 714.302,
+   "end": 726.365,
+   "text": "54 YEARS LATER, HAWKING WAS RIGHT",
+   "big": true,
+   "t1": 719.305
+  },
+  {
+   "sec": "fact2",
+   "t": 719.305,
+   "end": 726.365,
+   "text": "But Hawking didn't live to see it",
+   "big": false,
+   "t1": 722.487
+  },
+  {
+   "sec": "fact2",
+   "t": 722.487,
+   "end": 726.365,
+   "text": "STEPHEN HAWKING 1942–2018",
+   "big": true,
+   "t1": 726.665
+  },
+  {
+   "sec": "fact1",
+   "t": 729.265,
+   "end": 843.025,
+   "text": "For a long time, black holes had one story",
+   "big": false,
+   "t1": 732.243
+  },
+  {
+   "sec": "fact1",
+   "t": 732.243,
+   "end": 843.025,
+   "text": "First stars form, then galaxies",
+   "big": false,
+   "t1": 735.006
+  },
+  {
+   "sec": "fact1",
+   "t": 735.006,
+   "end": 843.025,
+   "text": "Massive stars die and become black holes...",
+   "big": false,
+   "t1": 737.804
+  },
+  {
+   "sec": "fact1",
+   "t": 737.804,
+   "end": 843.025,
+   "text": "...growing slowly over billions of years",
+   "big": false,
+   "t1": 741.67
+  },
+  {
+   "sec": "fact1",
+   "t": 741.67,
+   "end": 843.025,
+   "text": "The James Webb Space Telescope shook that story",
+   "big": false,
+   "t1": 745.931
+  },
+  {
+   "sec": "fact1",
+   "t": 745.931,
+   "end": 843.025,
+   "text": "In the early universe, Webb saw small, red, glowing dots",
+   "big": false,
+   "t1": 751.481
+  },
+  {
+   "sec": "fact1",
+   "t": 751.481,
+   "end": 843.025,
+   "text": "\"LITTLE RED DOTS\"",
+   "big": true,
+   "t1": 753.025
+  },
+  {
+   "sec": "fact1",
+   "t": 753.025,
+   "end": 843.025,
+   "text": "Inside them: black holes far bigger than expected",
+   "big": false,
+   "t1": 756.81
+  },
+  {
+   "sec": "fact1",
+   "t": 756.81,
+   "end": 843.025,
+   "text": "MAY 2026",
+   "big": true,
+   "t1": 759.26
+  },
+  {
+   "sec": "fact1",
+   "t": 759.26,
+   "end": 843.025,
+   "text": "A team led by the University of Cambridge...",
+   "big": false,
+   "t1": 762.568
+  },
+  {
+   "sec": "fact1",
+   "t": 762.568,
+   "end": 843.025,
+   "text": "...weighed the black hole in one of them, QSO1, directly",
+   "big": false,
+   "t1": 768.118
+  },
+  {
+   "sec": "fact1",
+   "t": 768.118,
+   "end": 843.025,
+   "text": "Its light set out when the universe...",
+   "big": false,
+   "t1": 769.882
+  },
+  {
+   "sec": "fact1",
+   "t": 769.882,
+   "end": 843.025,
+   "text": "...was only about 700 million years old",
+   "big": false,
+   "t1": 773.458
+  },
+  {
+   "sec": "fact1",
+   "t": 773.458,
+   "end": 843.025,
+   "text": "50 MILLION TIMES THE SUN'S MASS",
+   "big": true,
+   "t1": 777.556
+  },
+  {
+   "sec": "fact1",
+   "t": 777.556,
+   "end": 843.025,
+   "text": "And around it, almost no galaxy at all",
+   "big": false,
+   "t1": 781.48
+  },
+  {
+   "sec": "fact1",
+   "t": 781.48,
+   "end": 843.025,
+   "text": "The black hole alone was 2/3 of all the mass",
+   "big": false,
+   "t1": 785.346
+  },
+  {
+   "sec": "fact1",
+   "t": 785.346,
+   "end": 843.025,
+   "text": "Its gas was almost pure hydrogen and helium...",
+   "big": false,
+   "t1": 789.166
+  },
+  {
+   "sec": "fact1",
+   "t": 789.166,
+   "end": 843.025,
+   "text": "...just like right after the Big Bang",
+   "big": false,
+   "t1": 791.697
+  },
+  {
+   "sec": "fact1",
+   "t": 791.697,
+   "end": 843.025,
+   "text": "The simplest explanation:",
+   "big": false,
+   "t1": 794.692
+  },
+  {
+   "sec": "fact1",
+   "t": 794.692,
+   "end": 843.025,
+   "text": "THE BLACK HOLE CAME BEFORE ITS GALAXY",
+   "big": true,
+   "t1": 798.396
+  },
+  {
+   "sec": "fact1",
+   "t": 798.396,
+   "end": 843.025,
+   "text": "Perhaps a giant gas cloud collapsed directly...",
+   "big": false,
+   "t1": 801.751
+  },
+  {
+   "sec": "fact1",
+   "t": 801.751,
+   "end": 843.025,
+   "text": "...or perhaps...",
+   "big": false,
+   "t1": 802.866
+  },
+  {
+   "sec": "fact1",
+   "t": 802.866,
+   "end": 843.025,
+   "text": "...IN THE FIRST SECOND OF THE BIG BANG",
+   "big": true,
+   "t1": 805.257
+  },
+  {
+   "sec": "fact1",
+   "t": 805.257,
+   "end": 843.025,
+   "text": "1915",
+   "big": true,
+   "t1": 806.976
+  },
+  {
+   "sec": "fact1",
+   "t": 806.976,
+   "end": 843.025,
+   "text": "On a battlefield, Schwarzschild found a strange boundary",
+   "big": false,
+   "t1": 812.85
+  },
+  {
+   "sec": "fact1",
+   "t": 812.85,
+   "end": 843.025,
+   "text": "Today, humanity has photographed that boundary...",
+   "big": false,
+   "t1": 816.066
+  },
+  {
+   "sec": "fact1",
+   "t": 816.066,
+   "end": 843.025,
+   "text": "...heard black holes collide...",
+   "big": false,
+   "t1": 818.783
+  },
+  {
+   "sec": "fact1",
+   "t": 818.783,
+   "end": 843.025,
+   "text": "...and seen them at the dawn of the universe",
+   "big": false,
+   "t1": 822.475
+  },
+  {
+   "sec": "fact1",
+   "t": 822.475,
+   "end": 843.025,
+   "text": "But the biggest question remains:",
+   "big": false,
+   "t1": 826.77
+  },
+  {
+   "sec": "fact1",
+   "t": 826.77,
+   "end": 843.025,
+   "text": "WHAT LIES BEYOND THE EVENT HORIZON?",
+   "big": true,
+   "t1": 829.487
+  },
+  {
+   "sec": "fact1",
+   "t": 829.487,
+   "end": 843.025,
+   "text": "At its very centre, even Einstein's laws break down",
+   "big": false,
+   "t1": 834.108
+  },
+  {
+   "sec": "fact1",
+   "t": 834.108,
+   "end": 843.025,
+   "text": "The day humanity can look inside that darkness...",
+   "big": false,
+   "t1": 840.621
+  },
+  {
+   "sec": "fact1",
+   "t": 840.621,
+   "end": 843.025,
+   "text": "...it may finally learn where the universe came from",
+   "big": false,
+   "t1": 843.3249999999999
+  }
+ ],
+ "sfx": [
+  [
+   "whoosh",
+   8.246
+  ],
+  [
+   "whoosh",
+   11.729
+  ],
+  [
+   "whoosh",
+   14.69
+  ],
+  [
+   "whoosh",
+   18.602
+  ],
+  [
+   "whoosh",
+   21.609
+  ],
+  [
+   "whoosh",
+   28.377
+  ],
+  [
+   "whoosh",
+   30.223
+  ],
+  [
+   "whoosh",
+   33.219
+  ],
+  [
+   "whoosh",
+   41.229
+  ],
+  [
+   "whoosh",
+   42.46
+  ],
+  [
+   "whoosh",
+   48.787
+  ],
+  [
+   "whoosh",
+   52.433
+  ],
+  [
+   "whoosh",
+   58.772
+  ],
+  [
+   "whoosh",
+   60.165
+  ],
+  [
+   "whoosh",
+   69.302
+  ],
+  [
+   "pop",
+   0.0
+  ],
+  [
+   "pop",
+   11.729
+  ],
+  [
+   "pop",
+   23.954
+  ],
+  [
+   "pop",
+   41.229
+  ],
+  [
+   "pop",
+   58.772
+  ],
+  [
+   "pop",
+   62.836
+  ],
+  [
+   "boom",
+   58.772
+  ],
+  [
+   "boom",
+   72.685
+  ],
+  [
+   "whoosh_big",
+   72.635
+  ],
+  [
+   "whoosh_big",
+   75.235
+  ],
+  [
+   "whoosh",
+   79.897
+  ],
+  [
+   "whoosh",
+   85.469
+  ],
+  [
+   "whoosh",
+   90.718
+  ],
+  [
+   "whoosh",
+   98.403
+  ],
+  [
+   "whoosh",
+   102.467
+  ],
+  [
+   "whoosh",
+   108.551
+  ],
+  [
+   "whoosh",
+   110.339
+  ],
+  [
+   "whoosh",
+   117.433
+  ],
+  [
+   "whoosh",
+   119.998
+  ],
+  [
+   "whoosh",
+   126.976
+  ],
+  [
+   "pop",
+   79.897
+  ],
+  [
+   "pop",
+   85.469
+  ],
+  [
+   "pop",
+   117.433
+  ],
+  [
+   "whoosh_big",
+   132.606
+  ],
+  [
+   "whoosh",
+   139.227
+  ],
+  [
+   "whoosh",
+   144.997
+  ],
+  [
+   "whoosh",
+   148.666
+  ],
+  [
+   "whoosh",
+   150.872
+  ],
+  [
+   "whoosh",
+   157.304
+  ],
+  [
+   "whoosh",
+   167.23
+  ],
+  [
+   "whoosh",
+   170.945
+  ],
+  [
+   "whoosh",
+   175.137
+  ],
+  [
+   "whoosh",
+   181.418
+  ],
+  [
+   "whoosh",
+   183.914
+  ],
+  [
+   "whoosh",
+   190.589
+  ],
+  [
+   "whoosh",
+   194.827
+  ],
+  [
+   "whoosh",
+   204.858
+  ],
+  [
+   "pop",
+   139.227
+  ],
+  [
+   "pop",
+   150.872
+  ],
+  [
+   "pop",
+   170.945
+  ],
+  [
+   "pop",
+   194.827
+  ],
+  [
+   "pop",
+   196.65
+  ],
+  [
+   "pop",
+   204.858
+  ],
+  [
+   "whoosh_big",
+   205.845
+  ],
+  [
+   "whoosh",
+   212.268
+  ],
+  [
+   "whoosh",
+   214.544
+  ],
+  [
+   "whoosh",
+   216.68
+  ],
+  [
+   "whoosh",
+   222.961
+  ],
+  [
+   "whoosh",
+   227.234
+  ],
+  [
+   "whoosh",
+   229.521
+  ],
+  [
+   "whoosh",
+   234.943
+  ],
+  [
+   "whoosh",
+   238.019
+  ],
+  [
+   "whoosh",
+   242.14
+  ],
+  [
+   "whoosh",
+   245.438
+  ],
+  [
+   "whoosh",
+   250.267
+  ],
+  [
+   "whoosh",
+   257.326
+  ],
+  [
+   "whoosh",
+   264.211
+  ],
+  [
+   "whoosh",
+   267.578
+  ],
+  [
+   "whoosh",
+   271.665
+  ],
+  [
+   "whoosh",
+   274.973
+  ],
+  [
+   "whoosh",
+   282.102
+  ],
+  [
+   "whoosh",
+   285.562
+  ],
+  [
+   "pop",
+   216.68
+  ],
+  [
+   "pop",
+   227.234
+  ],
+  [
+   "pop",
+   257.326
+  ],
+  [
+   "pop",
+   271.665
+  ],
+  [
+   "pop",
+   285.562
+  ],
+  [
+   "whoosh_big",
+   289.393
+  ],
+  [
+   "whoosh",
+   293.819
+  ],
+  [
+   "whoosh",
+   296.223
+  ],
+  [
+   "whoosh",
+   301.737
+  ],
+  [
+   "whoosh",
+   304.28
+  ],
+  [
+   "whoosh",
+   309.342
+  ],
+  [
+   "whoosh",
+   311.315
+  ],
+  [
+   "whoosh",
+   321.997
+  ],
+  [
+   "whoosh",
+   325.015
+  ],
+  [
+   "whoosh",
+   329.369
+  ],
+  [
+   "whoosh",
+   331.818
+  ],
+  [
+   "whoosh",
+   340.572
+  ],
+  [
+   "whoosh",
+   343.742
+  ],
+  [
+   "whoosh",
+   349.013
+  ],
+  [
+   "pop",
+   296.223
+  ],
+  [
+   "pop",
+   318.525
+  ],
+  [
+   "whoosh_big",
+   355.202
+  ],
+  [
+   "whoosh",
+   360.116
+  ],
+  [
+   "whoosh",
+   361.776
+  ],
+  [
+   "whoosh",
+   370.368
+  ],
+  [
+   "whoosh",
+   375.255
+  ],
+  [
+   "whoosh",
+   378.878
+  ],
+  [
+   "whoosh",
+   392.462
+  ],
+  [
+   "whoosh",
+   395.527
+  ],
+  [
+   "whoosh",
+   398.244
+  ],
+  [
+   "whoosh",
+   403.526
+  ],
+  [
+   "whoosh",
+   407.288
+  ],
+  [
+   "whoosh",
+   410.898
+  ],
+  [
+   "whoosh",
+   415.113
+  ],
+  [
+   "whoosh",
+   418.654
+  ],
+  [
+   "pop",
+   375.255
+  ],
+  [
+   "pop",
+   392.462
+  ],
+  [
+   "pop",
+   410.898
+  ],
+  [
+   "whoosh_big",
+   424.447
+  ],
+  [
+   "whoosh",
+   429.303
+  ],
+  [
+   "whoosh",
+   431.242
+  ],
+  [
+   "whoosh",
+   434.168
+  ],
+  [
+   "whoosh",
+   436.826
+  ],
+  [
+   "whoosh",
+   440.774
+  ],
+  [
+   "whoosh",
+   445.011
+  ],
+  [
+   "whoosh",
+   450.526
+  ],
+  [
+   "whoosh",
+   453.858
+  ],
+  [
+   "whoosh",
+   455.414
+  ],
+  [
+   "whoosh",
+   458.328
+  ],
+  [
+   "whoosh",
+   460.638
+  ],
+  [
+   "whoosh",
+   465.224
+  ],
+  [
+   "whoosh",
+   473.339
+  ],
+  [
+   "whoosh",
+   481.257
+  ],
+  [
+   "whoosh",
+   487.654
+  ],
+  [
+   "whoosh",
+   493.61
+  ],
+  [
+   "whoosh",
+   499.09
+  ],
+  [
+   "whoosh",
+   507.205
+  ],
+  [
+   "pop",
+   431.242
+  ],
+  [
+   "pop",
+   434.168
+  ],
+  [
+   "pop",
+   450.526
+  ],
+  [
+   "pop",
+   455.414
+  ],
+  [
+   "pop",
+   473.339
+  ],
+  [
+   "pop",
+   493.61
+  ],
+  [
+   "whoosh_big",
+   512.546
+  ],
+  [
+   "whoosh",
+   517.414
+  ],
+  [
+   "whoosh",
+   521.013
+  ],
+  [
+   "whoosh",
+   525.134
+  ],
+  [
+   "whoosh",
+   527.282
+  ],
+  [
+   "whoosh",
+   529.604
+  ],
+  [
+   "whoosh",
+   537.29
+  ],
+  [
+   "whoosh",
+   539.855
+  ],
+  [
+   "whoosh",
+   544.116
+  ],
+  [
+   "whoosh",
+   547.692
+  ],
+  [
+   "whoosh",
+   560.37
+  ],
+  [
+   "whoosh",
+   563.969
+  ],
+  [
+   "whoosh",
+   569.02
+  ],
+  [
+   "whoosh",
+   578.54
+  ],
+  [
+   "whoosh",
+   580.409
+  ],
+  [
+   "whoosh",
+   584.682
+  ],
+  [
+   "pop",
+   515.446
+  ],
+  [
+   "pop",
+   525.134
+  ],
+  [
+   "pop",
+   535.711
+  ],
+  [
+   "pop",
+   580.409
+  ],
+  [
+   "boom",
+   555.738
+  ],
+  [
+   "whoosh_big",
+   591.312
+  ],
+  [
+   "whoosh",
+   597.445
+  ],
+  [
+   "whoosh",
+   600.87
+  ],
+  [
+   "whoosh",
+   603.749
+  ],
+  [
+   "whoosh",
+   607.696
+  ],
+  [
+   "whoosh",
+   615.278
+  ],
+  [
+   "whoosh",
+   618.378
+  ],
+  [
+   "whoosh",
+   622.383
+  ],
+  [
+   "whoosh",
+   626.655
+  ],
+  [
+   "whoosh",
+   629.186
+  ],
+  [
+   "whoosh",
+   632.507
+  ],
+  [
+   "whoosh",
+   640.727
+  ],
+  [
+   "whoosh",
+   647.147
+  ],
+  [
+   "pop",
+   606.095
+  ],
+  [
+   "pop",
+   626.655
+  ],
+  [
+   "whoosh_big",
+   654.612
+  ],
+  [
+   "whoosh",
+   660.815
+  ],
+  [
+   "whoosh",
+   662.684
+  ],
+  [
+   "whoosh",
+   665.528
+  ],
+  [
+   "whoosh",
+   670.358
+  ],
+  [
+   "whoosh",
+   677.277
+  ],
+  [
+   "whoosh",
+   679.286
+  ],
+  [
+   "whoosh",
+   681.979
+  ],
+  [
+   "whoosh",
+   685.822
+  ],
+  [
+   "whoosh",
+   688.725
+  ],
+  [
+   "whoosh",
+   693.624
+  ],
+  [
+   "whoosh",
+   697.026
+  ],
+  [
+   "whoosh",
+   699.092
+  ],
+  [
+   "whoosh",
+   704.468
+  ],
+  [
+   "whoosh",
+   714.302
+  ],
+  [
+   "whoosh",
+   719.305
+  ],
+  [
+   "whoosh",
+   722.487
+  ],
+  [
+   "pop",
+   657.512
+  ],
+  [
+   "pop",
+   679.286
+  ],
+  [
+   "pop",
+   714.302
+  ],
+  [
+   "pop",
+   722.487
+  ],
+  [
+   "whoosh_big",
+   726.365
+  ],
+  [
+   "whoosh",
+   732.243
+  ],
+  [
+   "whoosh",
+   735.006
+  ],
+  [
+   "whoosh",
+   736.469
+  ],
+  [
+   "whoosh",
+   737.804
+  ],
+  [
+   "whoosh",
+   741.67
+  ],
+  [
+   "whoosh",
+   745.931
+  ],
+  [
+   "whoosh",
+   747.801
+  ],
+  [
+   "whoosh",
+   751.481
+  ],
+  [
+   "whoosh",
+   753.025
+  ],
+  [
+   "whoosh",
+   756.81
+  ],
+  [
+   "whoosh",
+   762.568
+  ],
+  [
+   "whoosh",
+   768.118
+  ],
+  [
+   "whoosh",
+   773.458
+  ],
+  [
+   "whoosh",
+   777.556
+  ],
+  [
+   "whoosh",
+   781.48
+  ],
+  [
+   "whoosh",
+   785.346
+  ],
+  [
+   "whoosh",
+   789.166
+  ],
+  [
+   "whoosh",
+   791.697
+  ],
+  [
+   "whoosh",
+   798.396
+  ],
+  [
+   "whoosh",
+   801.751
+  ],
+  [
+   "whoosh",
+   805.257
+  ],
+  [
+   "whoosh",
+   812.85
+  ],
+  [
+   "whoosh",
+   816.066
+  ],
+  [
+   "whoosh",
+   818.783
+  ],
+  [
+   "whoosh",
+   822.475
+  ],
+  [
+   "whoosh",
+   829.487
+  ],
+  [
+   "whoosh",
+   834.108
+  ],
+  [
+   "whoosh",
+   840.621
+  ],
+  [
+   "pop",
+   751.481
+  ],
+  [
+   "pop",
+   756.81
+  ],
+  [
+   "pop",
+   773.458
+  ],
+  [
+   "pop",
+   794.692
+  ],
+  [
+   "pop",
+   802.866
+  ],
+  [
+   "pop",
+   805.257
+  ],
+  [
+   "pop",
+   826.77
+  ],
+  [
+   "boom",
+   802.866
+  ]
+ ]
+}

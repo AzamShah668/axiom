@@ -1,0 +1,9888 @@
+{
+ "style": "v3",
+ "items": [
+  {
+   "sec": "hook",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 0.0,
+   "t1": 4.2330000000000005,
+   "q": [
+    "a spinning pulsar with radio beams sweeping through space",
+    "neutron star animation with glowing magnetic field lines"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 0,
+   "f1": 127,
+   "shot": "svs_13058-win3#0",
+   "clip": "svs_13058-win3",
+   "ss": 2.7,
+   "crop": null,
+   "score": 0.3621,
+   "ref": "hook/0",
+   "title": "Simulations Create New Insights Into Pulsars"
+  },
+  {
+   "sec": "hook",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 4.2330000000000005,
+   "t1": 7.577000000000001,
+   "q": [
+    "a neutron star compared with the size of a city",
+    "a neutron star above a city on Earth"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 127,
+   "f1": 227,
+   "shot": "svs_20267-win1#0",
+   "clip": "svs_20267-win1",
+   "ss": 2.93,
+   "crop": null,
+   "score": 0.3857,
+   "ref": "hook/1",
+   "title": "Neutron Star Animations"
+  },
+  {
+   "sec": "hook",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 7.577000000000001,
+   "t1": 12.512500000000001,
+   "q": [
+    "the glowing surface of a neutron star with hot spots",
+    "a close-up of a dense neutron star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 227,
+   "f1": 375,
+   "shot": "eso_eso1641b#0",
+   "clip": "eso_eso1641b",
+   "ss": 1.78,
+   "crop": null,
+   "score": 0.3783,
+   "ref": "hook/2",
+   "title": "Zooming in on the very faint neutron star RX J1856.5-3754"
+  },
+  {
+   "sec": "hook",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 12.512500000000001,
+   "t1": 15.883,
+   "q": [
+    "an artist's animation of a pulsar with two beams",
+    "a neutron star rotating with magnetic field lines"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 375,
+   "f1": 476,
+   "shot": "svs_13058-win2#0",
+   "clip": "svs_13058-win2",
+   "ss": 2.93,
+   "crop": null,
+   "score": 0.4458,
+   "ref": "hook/3",
+   "title": "Simulations Create New Insights Into Pulsars"
+  },
+  {
+   "sec": "hook",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 15.883,
+   "t1": 17.4555,
+   "q": [
+    "an artist's animation of a pulsar with two beams",
+    "a neutron star rotating with magnetic field lines"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 476,
+   "f1": 524,
+   "shot": "svs_20404#1",
+   "clip": "svs_20404",
+   "ss": 9.33,
+   "crop": null,
+   "score": 0.4135,
+   "ref": "hook/4",
+   "title": "TRACERS Science Animations"
+  },
+  {
+   "sec": "hook",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 17.4555,
+   "t1": 21.741,
+   "q": [
+    "two neutron stars spiralling together and merging",
+    "simulation of a neutron star collision"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 524,
+   "f1": 652,
+   "shot": "eso_eso2316b#0",
+   "clip": "eso_eso2316b",
+   "ss": 2.61,
+   "crop": null,
+   "score": 0.298,
+   "ref": "hook/5",
+   "title": "Zooming in on 9io9"
+  },
+  {
+   "sec": "hook",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 21.741,
+   "t1": 23.919999999999998,
+   "q": [
+    "the glowing debris of a kilonova explosion",
+    "a bright explosion after a neutron star collision"
+   ],
+   "opt": "default",
+   "trans": "flare",
+   "move": "impact",
+   "rate": 0.12,
+   "f0": 652,
+   "f1": 718,
+   "shot": "eso_eso2511a#0",
+   "clip": "eso_eso2511a",
+   "ss": 4.16,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.4077,
+   "ref": "hook/6",
+   "title": "First visual proof of a star destroyed by pair of explosions | ESO News"
+  },
+  {
+   "sec": "hook",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 23.919999999999998,
+   "t1": 30.64,
+   "q": [
+    "a starry night sky before dawn",
+    "stars slowly drifting over a dark horizon"
+   ],
+   "opt": "hold",
+   "trans": "dip",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 718,
+   "f1": 919,
+   "shot": "svs_12313#0",
+   "clip": "svs_12313",
+   "ss": 2.24,
+   "crop": null,
+   "score": 0.3393,
+   "ref": "hook/7",
+   "title": "Roman Space Telescope Milky Way Exoplanet Locations Animation"
+  },
+  {
+   "sec": "hook",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 30.64,
+   "t1": 36.028999999999996,
+   "q": [
+    "a starry night sky before dawn",
+    "stars slowly drifting over a dark horizon"
+   ],
+   "opt": "hold",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 919,
+   "f1": 1081,
+   "shot": "esahubble_potw2406a#0",
+   "clip": "esahubble_potw2406a",
+   "ss": 2.92,
+   "crop": null,
+   "score": 0.3416,
+   "ref": "hook/8",
+   "title": "Pan: The forest for the trees, the galaxy for the stars"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 36.028999999999996,
+   "t1": 41.516999999999996,
+   "q": [
+    "the morning sky at dawn with a bright star",
+    "a starry sky over a dark landscape before sunrise"
+   ],
+   "opt": "hold",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 1081,
+   "f1": 1246,
+   "shot": "eso_bt_lasilla_crux#0",
+   "clip": "eso_bt_lasilla_crux",
+   "ss": 1.01,
+   "crop": null,
+   "score": 0.3779,
+   "ref": "cold_open/0",
+   "title": "Milky Way above mountain"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 41.516999999999996,
+   "t1": 46.1295,
+   "q": [
+    "the morning sky at dawn with a bright star",
+    "a starry sky over a dark landscape before sunrise"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 1246,
+   "f1": 1384,
+   "shot": "eso_gl_north_valley_moonset#0",
+   "clip": "eso_gl_north_valley_moonset",
+   "ss": 0.44,
+   "crop": null,
+   "score": 0.3235,
+   "ref": "cold_open/1",
+   "title": "Raise of the faint stars"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 46.1295,
+   "t1": 48.599,
+   "q": [
+    "a supernova lighting up the night sky",
+    "a bright star exploding in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1384,
+   "f1": 1458,
+   "shot": "esawebb_weic2620a#0",
+   "clip": "esawebb_weic2620a",
+   "ss": 4.38,
+   "crop": null,
+   "score": 0.3659,
+   "ref": "cold_open/2",
+   "title": "Pan video: NGC 7129"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 48.599,
+   "t1": 51.035000000000004,
+   "q": [
+    "a supernova lighting up the night sky",
+    "a bright star exploding in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1458,
+   "f1": 1531,
+   "shot": "eso_eso1521a#0",
+   "clip": "eso_eso1521a",
+   "ss": 3.03,
+   "crop": null,
+   "score": 0.3736,
+   "ref": "cold_open/3",
+   "title": "Zooming in on the star forming cloud RCW 34"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 51.035000000000004,
+   "t1": 54.3545,
+   "q": [
+    "a supernova lighting up the night sky",
+    "a bright star exploding in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1531,
+   "f1": 1631,
+   "shot": "esawebb_potm2502a#0",
+   "clip": "esawebb_potm2502a",
+   "ss": 3.96,
+   "crop": null,
+   "score": 0.3567,
+   "ref": "cold_open/4",
+   "title": "Pan Video: NGC 2283"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 54.3545,
+   "t1": 57.63,
+   "q": [
+    "the Crab Nebula",
+    "zooming into the Crab Nebula"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1631,
+   "f1": 1729,
+   "shot": "esawebb_weic2326c#0",
+   "clip": "esawebb_weic2326c",
+   "ss": 2.11,
+   "crop": null,
+   "score": 0.4721,
+   "ref": "cold_open/5",
+   "title": "Zoom into the Crab Nebula"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 57.63,
+   "t1": 59.686,
+   "q": [
+    "the Crab Nebula",
+    "zooming into the Crab Nebula"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1729,
+   "f1": 1791,
+   "shot": "esahubble_heic1520a#0",
+   "clip": "esahubble_heic1520a",
+   "ss": 3.22,
+   "crop": null,
+   "score": 0.3745,
+   "ref": "cold_open/6",
+   "title": "Zooming in on the Veil Nebula"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 59.686,
+   "t1": 62.681,
+   "q": [
+    "the Crab Nebula",
+    "zooming into the Crab Nebula"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 1791,
+   "f1": 1880,
+   "shot": "esahubble_heic2607c#0",
+   "clip": "esahubble_heic2607c",
+   "ss": 4.12,
+   "crop": null,
+   "score": 0.4457,
+   "ref": "cold_open/7",
+   "title": "Pan Video: The Crab Nebula (new Hubble image from 1999/2000 data)"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 62.681,
+   "t1": 65.05000000000001,
+   "q": [
+    "the Crab Nebula",
+    "zooming into the Crab Nebula"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 1880,
+   "f1": 1952,
+   "shot": "esawebb_weic2326b-win1#0",
+   "clip": "esawebb_weic2326b-win1",
+   "ss": 3.42,
+   "crop": null,
+   "score": 0.4569,
+   "ref": "cold_open/8",
+   "title": "Hubble and Webb’s views of the Crab Nebula"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 65.05000000000001,
+   "t1": 68.04050000000001,
+   "q": [
+    "the Crab Nebula",
+    "zooming into the Crab Nebula"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 1952,
+   "f1": 2041,
+   "shot": "esawebb_weic2326a#0",
+   "clip": "esawebb_weic2326a",
+   "ss": 4.12,
+   "crop": null,
+   "score": 0.443,
+   "ref": "cold_open/9",
+   "title": "Pan of the Crab Nebula"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 68.04050000000001,
+   "t1": 70.367,
+   "q": [
+    "a massive star exploding as a supernova",
+    "supernova explosion animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 2041,
+   "f1": 2111,
+   "shot": "eso_eso50supernova#0",
+   "clip": "eso_eso50supernova",
+   "ss": 3.59,
+   "crop": null,
+   "score": 0.4418,
+   "ref": "cold_open/10",
+   "title": "Artist's impression of a supernova explosion (Europe to the Stars Clip)"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 70.367,
+   "t1": 72.893,
+   "q": [
+    "a massive star exploding as a supernova",
+    "supernova explosion animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 2111,
+   "f1": 2187,
+   "shot": "esahubble_heic2102a-win1#0",
+   "clip": "esahubble_heic2102a-win1",
+   "ss": 3.34,
+   "crop": null,
+   "score": 0.378,
+   "ref": "cold_open/11",
+   "title": "Zoom Into the Supernova Remnant Expansion 1E 0102.2-7219"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 72.893,
+   "t1": 75.905,
+   "q": [
+    "the glowing remnant of an exploded star",
+    "the bright core of a supernova remnant"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 2187,
+   "f1": 2277,
+   "shot": "esawebb_weic2311b#0",
+   "clip": "esawebb_weic2311b",
+   "ss": 3.74,
+   "crop": null,
+   "score": 0.3772,
+   "ref": "cold_open/12",
+   "title": "Zoom Into Cassiopeia A"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 75.905,
+   "t1": 80.25500000000001,
+   "q": [
+    "the glowing remnant of an exploded star",
+    "the bright core of a supernova remnant"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 2277,
+   "f1": 2408,
+   "shot": "svs_30667-win1#0",
+   "clip": "svs_30667-win1",
+   "ss": 2.42,
+   "crop": null,
+   "score": 0.4326,
+   "ref": "cold_open/13",
+   "title": "Visualization of the Veil Supernova Remnant"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 80.25500000000001,
+   "t1": 85.618,
+   "q": [
+    "the glowing remnant of an exploded star",
+    "the bright core of a supernova remnant"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 2408,
+   "f1": 2569,
+   "shot": "esahubble_heic2102b-win1#0",
+   "clip": "esahubble_heic2102b-win1",
+   "ss": 1.92,
+   "crop": null,
+   "score": 0.425,
+   "ref": "cold_open/14",
+   "title": "Pan of the Supernova Remnant Expansion 1E 0102.2-7219"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 85.618,
+   "t1": 87.2795,
+   "q": [
+    "the pulsar spinning at the heart of the Crab Nebula",
+    "a spinning neutron star with beams"
+   ],
+   "opt": "hold",
+   "trans": "flare",
+   "move": "impact",
+   "rate": 0.12,
+   "f0": 2569,
+   "f1": 2618,
+   "shot": "esawebb_potm2510a#0",
+   "clip": "esawebb_potm2510a",
+   "ss": 4.78,
+   "crop": null,
+   "score": 0.3703,
+   "ref": "cold_open/15",
+   "title": "Pan Video: The Red Spider Nebula (NGC 6537)"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 87.2795,
+   "t1": 89.925,
+   "q": [
+    "the glowing debris cloud of a kilonova",
+    "gold glowing in an explosion in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 2618,
+   "f1": 2698,
+   "shot": "esahubble_heic1818b#0",
+   "clip": "esahubble_heic1818b",
+   "ss": 4.28,
+   "crop": null,
+   "score": 0.3625,
+   "ref": "cold_open/16",
+   "title": "Pan across a cosmic ghost"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 89.925,
+   "t1": 92.967,
+   "q": [
+    "the glowing debris cloud of a kilonova",
+    "gold glowing in an explosion in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 2698,
+   "f1": 2789,
+   "shot": "esahubble_potw2327a-win1#0",
+   "clip": "esahubble_potw2327a-win1",
+   "ss": 3.08,
+   "crop": null,
+   "score": 0.3115,
+   "ref": "cold_open/17",
+   "title": "Pan: Serene Supernova Aftermath"
+  },
+  {
+   "sec": "cold_open",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 92.967,
+   "t1": 95.833,
+   "q": [
+    "the glowing debris cloud of a kilonova",
+    "gold glowing in an explosion in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 2789,
+   "f1": 2875,
+   "shot": "esahubble_heic1525a-win1#0",
+   "clip": "esahubble_heic1525a-win1",
+   "ss": 4.73,
+   "crop": null,
+   "score": 0.3432,
+   "ref": "cold_open/18",
+   "title": "Appearances of the Refsdal supernova"
+  },
+  {
+   "kind": "title",
+   "sec": "fact10",
+   "t0": 95.833,
+   "t1": 98.233,
+   "ttl": {
+    "kicker": "10 facts about",
+    "main": "Neutron Stars"
+   },
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 2875,
+   "f1": 2947,
+   "shot": "svs_4637#0",
+   "clip": "svs_4637",
+   "ss": 4.4,
+   "crop": null,
+   "score": 0.4114,
+   "ref": "fact10/0",
+   "title": "Pulsars and their Magnetic Field - Vacuum solution"
+  },
+  {
+   "kind": "card",
+   "sec": "fact10",
+   "t0": 98.233,
+   "t1": 100.233,
+   "num": 10,
+   "ctitle": "PREDICTED IN *1934*, BEFORE ANYONE SAW ONE",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "soft",
+   "f0": 2947,
+   "f1": 3007,
+   "shot": "svs_31025#0",
+   "clip": "svs_31025",
+   "ss": 3.55,
+   "crop": null,
+   "score": 0.405,
+   "ref": "fact10/1",
+   "title": "Galaxy Traverse"
+  },
+  {
+   "sec": "fact10",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 100.233,
+   "t1": 102.735,
+   "q": [
+    "glowing particles moving in a simulation",
+    "abstract swarm of glowing particles in space"
+   ],
+   "opt": "default",
+   "trans": "soft",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 3007,
+   "f1": 3082,
+   "shot": "eso_eso2507b#0",
+   "clip": "eso_eso2507b",
+   "ss": 1.2,
+   "crop": null,
+   "score": 0.374,
+   "ref": "fact10/2",
+   "title": "When oxygen was first born"
+  },
+  {
+   "sec": "fact10",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 102.735,
+   "t1": 108.88,
+   "q": [
+    "glowing particles moving in a simulation",
+    "abstract swarm of glowing particles in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 3082,
+   "f1": 3266,
+   "shot": "eso_esocast78b#0",
+   "clip": "eso_esocast78b",
+   "ss": 10.68,
+   "crop": null,
+   "score": 0.3573,
+   "ref": "fact10/3",
+   "title": "ESOcast78 excerpt: Creating Ozone"
+  },
+  {
+   "sec": "fact10",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 108.88,
+   "t1": 112.10799999999999,
+   "q": [
+    "glowing particles moving in a simulation",
+    "abstract swarm of glowing particles in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 3266,
+   "f1": 3363,
+   "shot": "eso_eso1824b-win1#0",
+   "clip": "eso_eso1824b-win1",
+   "ss": 2.99,
+   "crop": null,
+   "score": 0.3577,
+   "ref": "fact10/4",
+   "title": "Zooming in on the globular star cluster NGC 6388"
+  },
+  {
+   "sec": "fact10",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 112.10799999999999,
+   "t1": 115.112,
+   "q": [
+    "an observatory dome under a starry sky",
+    "a large telescope at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 3363,
+   "f1": 3453,
+   "shot": "eso_uhd_lasilla6_2014#0",
+   "clip": "eso_uhd_lasilla6_2014",
+   "ss": 4.1,
+   "crop": null,
+   "score": 0.3654,
+   "ref": "fact10/5",
+   "title": "Inside of the ESO 3.6-metre telescope"
+  },
+  {
+   "sec": "fact10",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 115.112,
+   "t1": 118.29,
+   "q": [
+    "an observatory dome under a starry sky",
+    "a large telescope at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 3453,
+   "f1": 3549,
+   "shot": "eso_uhd-cm-alma-osf1#0",
+   "clip": "eso_uhd-cm-alma-osf1",
+   "ss": 4.01,
+   "crop": null,
+   "score": 0.301,
+   "ref": "fact10/6",
+   "title": "Silhouette against a golden sky"
+  },
+  {
+   "sec": "fact10",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 118.29,
+   "t1": 123.301,
+   "q": [
+    "an observatory dome under a starry sky",
+    "a large telescope at night"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 3549,
+   "f1": 3699,
+   "shot": "eso_elt2020-night1_3840x2160#0",
+   "clip": "eso_elt2020-night1_3840x2160",
+   "ss": 1.24,
+   "crop": null,
+   "score": 0.3705,
+   "ref": "fact10/7",
+   "title": "Laser focus: ELT’s adaptive optics"
+  },
+  {
+   "sec": "fact10",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 123.301,
+   "t1": 126.003,
+   "q": [
+    "the core of a massive star collapsing",
+    "a giant star exploding as a supernova"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 3699,
+   "f1": 3780,
+   "shot": "esahubble_heic1614a-win1#0",
+   "clip": "esahubble_heic1614a-win1",
+   "ss": 3.25,
+   "crop": null,
+   "score": 0.3873,
+   "ref": "fact10/8",
+   "title": "Zooming in on the Crab Nebula"
+  },
+  {
+   "sec": "fact10",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 126.003,
+   "t1": 131.90000000000003,
+   "q": [
+    "the core of a massive star collapsing",
+    "a giant star exploding as a supernova"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 3780,
+   "f1": 3957,
+   "shot": "esahubble_heic2414c#0",
+   "clip": "esahubble_heic2414c",
+   "ss": 2.67,
+   "crop": null,
+   "score": 0.3728,
+   "ref": "fact10/9",
+   "title": "NGC 2207 (Hubble/Webb image and Webb MIRI image)"
+  },
+  {
+   "sec": "fact10",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 131.90000000000003,
+   "t1": 136.2675,
+   "q": [
+    "the core of a massive star collapsing",
+    "a giant star exploding as a supernova"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 3957,
+   "f1": 4088,
+   "shot": "esahubble_heic2208b-win1#0",
+   "clip": "esahubble_heic2208b-win1",
+   "ss": 2.42,
+   "crop": null,
+   "score": 0.3725,
+   "ref": "fact10/10",
+   "title": "A Dazzling Hubble Collection of Supernova Host Galaxies"
+  },
+  {
+   "sec": "fact10",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 136.2675,
+   "t1": 139.57500000000002,
+   "q": [
+    "a supernova remnant expanding in space",
+    "the glowing shell of a supernova remnant"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 4088,
+   "f1": 4187,
+   "shot": "svs_30667#0",
+   "clip": "svs_30667",
+   "ss": 3.95,
+   "crop": null,
+   "score": 0.4331,
+   "ref": "fact10/11",
+   "title": "Visualization of the Veil Supernova Remnant"
+  },
+  {
+   "sec": "fact10",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 139.57500000000002,
+   "t1": 142.8905,
+   "q": [
+    "a supernova remnant expanding in space",
+    "the glowing shell of a supernova remnant"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 4187,
+   "f1": 4287,
+   "shot": "esahubble_heic2102b#0",
+   "clip": "esahubble_heic2102b",
+   "ss": 3.59,
+   "crop": null,
+   "score": 0.4317,
+   "ref": "fact10/12",
+   "title": "Pan of the Supernova Remnant Expansion 1E 0102.2-7219"
+  },
+  {
+   "sec": "fact10",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 142.8905,
+   "t1": 146.204,
+   "q": [
+    "a bright supernova in a distant galaxy",
+    "a galaxy with an exploding star"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 4287,
+   "f1": 4386,
+   "shot": "esahubble_heic2106a#0",
+   "clip": "esahubble_heic2106a",
+   "ss": 3.09,
+   "crop": null,
+   "score": 0.3777,
+   "ref": "fact10/13",
+   "title": "Zoom Into NGC 2276"
+  },
+  {
+   "sec": "fact10",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 146.204,
+   "t1": 149.865,
+   "q": [
+    "a bright supernova in a distant galaxy",
+    "a galaxy with an exploding star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 4386,
+   "f1": 4496,
+   "shot": "esahubble_potw2541a#0",
+   "clip": "esahubble_potw2541a",
+   "ss": 3.78,
+   "crop": null,
+   "score": 0.3568,
+   "ref": "fact10/14",
+   "title": "Pan: NGC 7496"
+  },
+  {
+   "sec": "fact10",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 149.865,
+   "t1": 153.35000000000002,
+   "q": [
+    "a bright supernova in a distant galaxy",
+    "a galaxy with an exploding star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 4496,
+   "f1": 4601,
+   "shot": "esahubble_potw2452a#0",
+   "clip": "esahubble_potw2452a",
+   "ss": 3.87,
+   "crop": null,
+   "score": 0.364,
+   "ref": "fact10/15",
+   "title": "Pan: NGC 337"
+  },
+  {
+   "sec": "fact10",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 153.35000000000002,
+   "t1": 156.12900000000002,
+   "q": [
+    "a bright supernova in a distant galaxy",
+    "a galaxy with an exploding star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 4601,
+   "f1": 4684,
+   "shot": "eso_eso1603a#1",
+   "clip": "eso_eso1603a",
+   "ss": 2.23,
+   "crop": null,
+   "score": 0.3683,
+   "ref": "fact10/16",
+   "title": "Zooming in on the dwarf galaxy IC 1613"
+  },
+  {
+   "kind": "card",
+   "sec": "fact9",
+   "t0": 156.12900000000002,
+   "t1": 158.729,
+   "num": 9,
+   "ctitle": "A STUDENT FOUND THE FIRST, *LGM-1*",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 4684,
+   "f1": 4762,
+   "shot": "svs_14347#0",
+   "clip": "svs_14347",
+   "ss": 2.45,
+   "crop": null,
+   "score": 0.3832,
+   "ref": "fact9/0",
+   "title": "Unfolding the Universe with Webb"
+  },
+  {
+   "sec": "fact9",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 158.729,
+   "t1": 164.51000000000002,
+   "q": [
+    "radio telescope dishes under the Milky Way",
+    "an observatory at night under the stars"
+   ],
+   "opt": "hold",
+   "trans": "soft",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 4762,
+   "f1": 4935,
+   "shot": "eso_uhd_bt_lasilla#0",
+   "clip": "eso_uhd_bt_lasilla",
+   "ss": 2.71,
+   "crop": null,
+   "score": 0.2757,
+   "ref": "fact9/1",
+   "title": "Stars rise over La Silla"
+  },
+  {
+   "sec": "fact9",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 164.51000000000002,
+   "t1": 170.078,
+   "q": [
+    "radio telescope dishes under the Milky Way",
+    "an observatory at night under the stars"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 4935,
+   "f1": 5102,
+   "shot": "svs_31373#0",
+   "clip": "svs_31373",
+   "ss": 0.47,
+   "crop": null,
+   "score": 0.2729,
+   "ref": "fact9/2",
+   "title": "The JWST Advanced Deep Extragalactic Survey (JADES), JADES-GS-z13-1 (NIRCam Close-Up)Untitled"
+  },
+  {
+   "sec": "fact9",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 170.078,
+   "t1": 176.05800000000002,
+   "q": [
+    "radio telescope dishes under the Milky Way",
+    "an observatory at night under the stars"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 5102,
+   "f1": 5282,
+   "shot": "eso_eso1502b#0",
+   "clip": "eso_eso1502b",
+   "ss": 2.61,
+   "crop": null,
+   "score": 0.2971,
+   "ref": "fact9/3",
+   "title": "The Next-Generation Transit Survey (NGTS) at Paranal"
+  },
+  {
+   "sec": "fact9",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 176.05800000000002,
+   "t1": 179.133,
+   "q": [
+    "a large telescope at night under the Milky Way",
+    "star trails over an observatory"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 5282,
+   "f1": 5374,
+   "shot": "eso_almatimelapse12j#1",
+   "clip": "eso_almatimelapse12j",
+   "ss": 6.68,
+   "crop": null,
+   "score": 0.321,
+   "ref": "fact9/4",
+   "title": "ALMA Operations and the Magellanic Clouds"
+  },
+  {
+   "sec": "fact9",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 179.133,
+   "t1": 182.65500000000003,
+   "q": [
+    "a large telescope at night under the Milky Way",
+    "star trails over an observatory"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 5374,
+   "f1": 5480,
+   "shot": "eso_uhd-cm-alma-mw1#0",
+   "clip": "eso_uhd-cm-alma-mw1",
+   "ss": 3.85,
+   "crop": null,
+   "score": 0.2708,
+   "ref": "fact9/5",
+   "title": "Dance of the dishes"
+  },
+  {
+   "sec": "fact9",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 182.65500000000003,
+   "t1": 185.727,
+   "q": [
+    "a large telescope at night under the Milky Way",
+    "star trails over an observatory"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 5480,
+   "f1": 5572,
+   "shot": "svs_13619#0",
+   "clip": "svs_13619",
+   "ss": 1.13,
+   "crop": null,
+   "score": 0.2382,
+   "ref": "fact9/6",
+   "title": "James Webb Space Telescope Wing Deployment Beauty Shots"
+  },
+  {
+   "sec": "fact9",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 185.727,
+   "t1": 188.77,
+   "q": [
+    "a large telescope at night under the Milky Way",
+    "star trails over an observatory"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 5572,
+   "f1": 5663,
+   "shot": "esahubble_potw2322a#0",
+   "clip": "esahubble_potw2322a",
+   "ss": 4.09,
+   "crop": null,
+   "score": 0.2829,
+   "ref": "fact9/7",
+   "title": "Pan: Hubble explores explosive aftermath in NGC 298"
+  },
+  {
+   "sec": "fact9",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 188.77,
+   "t1": 191.76350000000002,
+   "q": [
+    "a large telescope at night under the Milky Way",
+    "star trails over an observatory"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 5663,
+   "f1": 5753,
+   "shot": "eso_alma-japanese-milkyway#0",
+   "clip": "eso_alma-japanese-milkyway",
+   "ss": 2.85,
+   "crop": null,
+   "score": 0.351,
+   "ref": "fact9/8",
+   "title": "ALMA under the Milky Way (time-lapse)"
+  },
+  {
+   "sec": "fact9",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 191.76350000000002,
+   "t1": 195.31500000000003,
+   "q": [
+    "an artist's animation of a pulsar sweeping beams",
+    "a spinning neutron star with radio beams"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 5753,
+   "f1": 5859,
+   "shot": "eso_eso2305a#3",
+   "clip": "eso_eso2305a",
+   "ss": 18.74,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.374,
+   "ref": "fact9/9",
+   "title": "First image of a black hole expelling a powerful jet (ESOcast 260 Light)"
+  },
+  {
+   "sec": "fact9",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 195.31500000000003,
+   "t1": 197.80200000000002,
+   "q": [
+    "an artist's animation of a pulsar sweeping beams",
+    "a spinning neutron star with radio beams"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 5859,
+   "f1": 5934,
+   "shot": "eso_eso2315b-win1#0",
+   "clip": "eso_eso2315b-win1",
+   "ss": 3.36,
+   "crop": null,
+   "score": 0.422,
+   "ref": "fact9/10",
+   "title": "Artist’s animation of the pulsar PSR J1023+0038"
+  },
+  {
+   "sec": "fact9",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 197.80200000000002,
+   "t1": 201.31,
+   "q": [
+    "an artist's animation of a pulsar sweeping beams",
+    "a spinning neutron star with radio beams"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 5934,
+   "f1": 6039,
+   "shot": "eso_eso1546a#0",
+   "clip": "eso_eso1546a",
+   "ss": 2.5,
+   "crop": null,
+   "score": 0.3411,
+   "ref": "fact9/11",
+   "title": "Zooming in on the red hypergiant star VY Canis Majoris"
+  },
+  {
+   "sec": "fact9",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 201.31,
+   "t1": 203.92000000000002,
+   "q": [
+    "an artist's animation of a pulsar sweeping beams",
+    "a spinning neutron star with radio beams"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 6039,
+   "f1": 6118,
+   "shot": "eso_eso2008c#0",
+   "clip": "eso_eso2008c",
+   "ss": 4.31,
+   "crop": null,
+   "score": 0.3524,
+   "ref": "fact9/12",
+   "title": "Zooming in to AB Aurigae"
+  },
+  {
+   "sec": "fact9",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 203.92000000000002,
+   "t1": 206.98700000000002,
+   "q": [
+    "an artist's animation of a pulsar sweeping beams",
+    "a spinning neutron star with radio beams"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 6118,
+   "f1": 6210,
+   "shot": "eso_eso1608a#0",
+   "clip": "eso_eso1608a",
+   "ss": 1.22,
+   "crop": null,
+   "score": 0.3414,
+   "ref": "fact9/13",
+   "title": "Zooming in on aging double star IRAS 08544-4431"
+  },
+  {
+   "sec": "fact9",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 206.98700000000002,
+   "t1": 209.834,
+   "q": [
+    "radio telescopes pointing at the night sky",
+    "a strange signal from deep space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "impact",
+   "rate": 0.12,
+   "f0": 6210,
+   "f1": 6295,
+   "shot": "eso_eso2503b#0",
+   "clip": "eso_eso2503b",
+   "ss": 3.33,
+   "crop": null,
+   "score": 0.3351,
+   "ref": "fact9/14",
+   "title": "Zooming-in into RCW 38 in infrared light"
+  },
+  {
+   "sec": "fact9",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 209.834,
+   "t1": 216.275,
+   "q": [
+    "a pulsar sweeping beams like a lighthouse",
+    "a spinning neutron star with two beams"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 6295,
+   "f1": 6488,
+   "shot": "svs_15041-win3#0",
+   "clip": "svs_15041-win3",
+   "ss": 1.38,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3903,
+   "ref": "fact9/15",
+   "title": "NASA's Fermi Spies a Supercharged Supernova"
+  },
+  {
+   "sec": "fact9",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 216.275,
+   "t1": 219.375,
+   "q": [
+    "a pulsar sweeping beams like a lighthouse",
+    "a spinning neutron star with two beams"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 6488,
+   "f1": 6581,
+   "shot": "eso_eso1613c#0",
+   "clip": "eso_eso1613c",
+   "ss": 2.2,
+   "crop": null,
+   "score": 0.3528,
+   "ref": "fact9/16",
+   "title": "Yepun's lasers ignore the clouds"
+  },
+  {
+   "sec": "fact9",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 219.375,
+   "t1": 222.44850000000002,
+   "q": [
+    "a pulsar sweeping beams like a lighthouse",
+    "a spinning neutron star with two beams"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 6581,
+   "f1": 6673,
+   "shot": "eso_eso1913b#0",
+   "clip": "eso_eso1913b",
+   "ss": 4.08,
+   "crop": null,
+   "score": 0.3148,
+   "ref": "fact9/17",
+   "title": "Panning across the Cosmic Seagull"
+  },
+  {
+   "sec": "fact9",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 222.44850000000002,
+   "t1": 225.47,
+   "q": [
+    "the pulsar at the centre of the Crab Nebula",
+    "the heart of the Crab Nebula"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 6673,
+   "f1": 6764,
+   "shot": "esahubble_heic2607b#0",
+   "clip": "esahubble_heic2607b",
+   "ss": 4.1,
+   "crop": null,
+   "score": 0.4426,
+   "ref": "fact9/18",
+   "title": "Pan Video: The Crab Nebula (2024 Hubble image)"
+  },
+  {
+   "sec": "fact9",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 225.47,
+   "t1": 228.64950000000002,
+   "q": [
+    "the pulsar at the centre of the Crab Nebula",
+    "the heart of the Crab Nebula"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 6764,
+   "f1": 6859,
+   "shot": "svs_30944#0",
+   "clip": "svs_30944",
+   "ss": 0.16,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.4274,
+   "ref": "fact9/19",
+   "title": "Vision Across the Full Spectrum: The Crab Nebula, from Radio to X-ray"
+  },
+  {
+   "sec": "fact9",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 228.64950000000002,
+   "t1": 231.97000000000003,
+   "q": [
+    "an observatory under the stars",
+    "telescope domes at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 6859,
+   "f1": 6959,
+   "shot": "eso_bt-lasilla-swiss#0",
+   "clip": "eso_bt-lasilla-swiss",
+   "ss": 3.94,
+   "crop": null,
+   "score": 0.386,
+   "ref": "fact9/20",
+   "title": "Starry sky over the Swiss 1.2-metre Leonhard Euler Telescope (time-lapse)"
+  },
+  {
+   "sec": "fact9",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 231.97000000000003,
+   "t1": 233.83,
+   "q": [
+    "an observatory under the stars",
+    "telescope domes at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 6959,
+   "f1": 7015,
+   "shot": "eso_eso2604a#0",
+   "clip": "eso_eso2604a",
+   "ss": 1.24,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.3468,
+   "ref": "fact9/21",
+   "title": "Two planets spotted forming around a young star | ESO News"
+  },
+  {
+   "sec": "fact9",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 233.83,
+   "t1": 237.48700000000002,
+   "q": [
+    "an observatory under the stars",
+    "telescope domes at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 7015,
+   "f1": 7125,
+   "shot": "eso_bt_lasilla2_ntt#0",
+   "clip": "eso_bt_lasilla2_ntt",
+   "ss": 3.77,
+   "crop": null,
+   "score": 0.3768,
+   "ref": "fact9/22",
+   "title": "Milky Way moves over the NTT"
+  },
+  {
+   "sec": "fact9",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 237.48700000000002,
+   "t1": 239.3075,
+   "q": [
+    "an observatory under the stars",
+    "telescope domes at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 7125,
+   "f1": 7179,
+   "shot": "eso_jp_lasilla_01#0",
+   "clip": "eso_jp_lasilla_01",
+   "ss": 4.69,
+   "crop": null,
+   "score": 0.3837,
+   "ref": "fact9/23",
+   "title": "ESO 3.6-metre telescope against the Chilean night sky"
+  },
+  {
+   "sec": "fact9",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 239.3075,
+   "t1": 244.476,
+   "q": [
+    "a radio telescope at sunset",
+    "radio dishes at dusk"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 7179,
+   "f1": 7334,
+   "shot": "eso_uhd_vlt3_2014#0",
+   "clip": "eso_uhd_vlt3_2014",
+   "ss": 2.08,
+   "crop": null,
+   "score": 0.2799,
+   "ref": "fact9/24",
+   "title": "Dusk over Paranal"
+  },
+  {
+   "sec": "fact9",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 244.476,
+   "t1": 248.27200000000002,
+   "q": [
+    "a radio telescope at sunset",
+    "radio dishes at dusk"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 7334,
+   "f1": 7448,
+   "shot": "eso_uhd_cm_alma_01#0",
+   "clip": "eso_uhd_cm_alma_01",
+   "ss": 3.72,
+   "crop": null,
+   "score": 0.3529,
+   "ref": "fact9/25",
+   "title": "Sunset over ALMA"
+  },
+  {
+   "sec": "fact9",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 248.27200000000002,
+   "t1": 250.51500000000001,
+   "q": [
+    "a radio telescope at sunset",
+    "radio dishes at dusk"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 7448,
+   "f1": 7515,
+   "shot": "eso_eso1902a#1",
+   "clip": "eso_eso1902a",
+   "ss": 14.73,
+   "crop": [
+    0.0,
+    0.25,
+    0.75,
+    1.0
+   ],
+   "score": 0.3093,
+   "ref": "fact9/26",
+   "title": "ESOcast 191 Light: A Fleeting Moment in Time"
+  },
+  {
+   "sec": "fact9",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 250.51500000000001,
+   "t1": 253.30900000000003,
+   "q": [
+    "a radio telescope at sunset",
+    "radio dishes at dusk"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 7515,
+   "f1": 7599,
+   "shot": "eso_almatimelapse12b#0",
+   "clip": "eso_almatimelapse12b",
+   "ss": 4.22,
+   "crop": null,
+   "score": 0.3578,
+   "ref": "fact9/27",
+   "title": "ALMA operations time-lapse"
+  },
+  {
+   "kind": "card",
+   "sec": "fact8",
+   "t0": 253.30900000000003,
+   "t1": 255.90900000000002,
+   "num": 8,
+   "ctitle": "THE FIRST PLANETS CIRCLED A *DEAD* STAR",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 7599,
+   "f1": 7677,
+   "shot": "eso_eso1815b#1",
+   "clip": "eso_eso1815b",
+   "ss": 6.2,
+   "crop": null,
+   "score": 0.3835,
+   "ref": "fact8/0",
+   "title": "Zooming in on the distant galaxy MACS1149, and beyond"
+  },
+  {
+   "sec": "fact8",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 255.90900000000002,
+   "t1": 258.666,
+   "q": [
+    "a pulsar with precise flashing beams",
+    "a spinning pulsar in space"
+   ],
+   "opt": "default",
+   "trans": "soft",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 7677,
+   "f1": 7760,
+   "shot": "eso_eso1319a-win1#0",
+   "clip": "eso_eso1319a-win1",
+   "ss": 3.27,
+   "crop": null,
+   "score": 0.4025,
+   "ref": "fact8/1",
+   "title": "Artist’s impression of the pulsar PSR J0348+0432 and its white dwarf companion"
+  },
+  {
+   "sec": "fact8",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 258.666,
+   "t1": 261.03200000000004,
+   "q": [
+    "a pulsar with precise flashing beams",
+    "a spinning pulsar in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 7760,
+   "f1": 7831,
+   "shot": "svs_15099-win3#0",
+   "clip": "svs_15099-win3",
+   "ss": 3.42,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.4082,
+   "ref": "fact8/2",
+   "title": "NASA-JAXA XRISM Mission Sees Pulsar Accreting Companion's 'Wind'"
+  },
+  {
+   "sec": "fact8",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 261.03200000000004,
+   "t1": 264.181,
+   "q": [
+    "a giant radio telescope dish",
+    "a large radio dish seen from above"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 7831,
+   "f1": 7925,
+   "shot": "esahubble_potw2349a#0",
+   "clip": "esahubble_potw2349a",
+   "ss": 4.04,
+   "crop": null,
+   "score": 0.2944,
+   "ref": "fact8/3",
+   "title": "Pan: Cluster in the Cloud"
+  },
+  {
+   "sec": "fact8",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 264.181,
+   "t1": 269.034,
+   "q": [
+    "a giant radio telescope dish",
+    "a large radio dish seen from above"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 7925,
+   "f1": 8071,
+   "shot": "eso_uhd_lasilla7_2014#0",
+   "clip": "eso_uhd_lasilla7_2014",
+   "ss": 3.17,
+   "crop": null,
+   "score": 0.3575,
+   "ref": "fact8/4",
+   "title": "Interior of ESO 3.6-metre telescope"
+  },
+  {
+   "sec": "fact8",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 269.034,
+   "t1": 274.065,
+   "q": [
+    "a giant radio telescope dish",
+    "a large radio dish seen from above"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 8071,
+   "f1": 8222,
+   "shot": "esahubble_potw2310a#0",
+   "clip": "esahubble_potw2310a",
+   "ss": 3.1,
+   "crop": null,
+   "score": 0.2967,
+   "ref": "fact8/5",
+   "title": "Pan: Hubble spies a meandering spiral"
+  },
+  {
+   "sec": "fact8",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 274.065,
+   "t1": 277.44,
+   "q": [
+    "planets orbiting a pulsar",
+    "artist's impression of planets around a pulsar"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 8222,
+   "f1": 8323,
+   "shot": "eso_eso2207c#0",
+   "clip": "eso_eso2207c",
+   "ss": 3.91,
+   "crop": null,
+   "score": 0.3673,
+   "ref": "fact8/6",
+   "title": "Artist's animation of a binary with a white dwarf"
+  },
+  {
+   "sec": "fact8",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 277.44,
+   "t1": 279.415,
+   "q": [
+    "planets orbiting a pulsar",
+    "artist's impression of planets around a pulsar"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 8323,
+   "f1": 8382,
+   "shot": "eso_eso2311a#6",
+   "clip": "eso_eso2311a",
+   "ss": 36.98,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.3586,
+   "ref": "fact8/7",
+   "title": "Does this planet have a “sibling” sharing the same orbit? (ESOcast 263 Light)"
+  },
+  {
+   "sec": "fact8",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 279.415,
+   "t1": 284.42900000000003,
+   "q": [
+    "planets orbiting a pulsar",
+    "artist's impression of planets around a pulsar"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 8382,
+   "f1": 8533,
+   "shot": "esahubble_heic1916c#0",
+   "clip": "esahubble_heic1916c",
+   "ss": 3.09,
+   "crop": null,
+   "score": 0.3697,
+   "ref": "fact8/8",
+   "title": "Animation of Exoplanet K2-18b (Artist’s Impression)"
+  },
+  {
+   "sec": "fact8",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 284.42900000000003,
+   "t1": 287.90000000000003,
+   "q": [
+    "planets orbiting a pulsar",
+    "artist's impression of planets around a pulsar"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 8533,
+   "f1": 8637,
+   "shot": "eso_eso2403b#0",
+   "clip": "eso_eso2403b",
+   "ss": 2.36,
+   "crop": null,
+   "score": 0.3551,
+   "ref": "fact8/9",
+   "title": "Artist’s animation of WD 0816-310, a magnetic white dwarf, ingesting planetary fragments"
+  },
+  {
+   "sec": "fact8",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 287.90000000000003,
+   "t1": 290.27000000000004,
+   "q": [
+    "a rocky planet orbiting a dead star",
+    "a planet circling a neutron star"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 8637,
+   "f1": 8708,
+   "shot": "eso_eso1624a#0",
+   "clip": "eso_eso1624a",
+   "ss": 4.43,
+   "crop": null,
+   "score": 0.4064,
+   "ref": "fact8/10",
+   "title": "Artist’s impression of planet orbiting in the HD 131399 system"
+  },
+  {
+   "sec": "fact8",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 290.27000000000004,
+   "t1": 293.38000000000005,
+   "q": [
+    "a rocky planet orbiting a dead star",
+    "a planet circling a neutron star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 8708,
+   "f1": 8801,
+   "shot": "eso_eso2414b#0",
+   "clip": "eso_eso2414b",
+   "ss": 4.04,
+   "crop": null,
+   "score": 0.3935,
+   "ref": "fact8/11",
+   "title": "Animation of a sub-Earth-mass planet orbiting Barnard’s star"
+  },
+  {
+   "sec": "fact8",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 293.38000000000005,
+   "t1": 296.863,
+   "q": [
+    "a rocky planet orbiting a dead star",
+    "a planet circling a neutron star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 8801,
+   "f1": 8906,
+   "shot": "eso_eso1629c#0",
+   "clip": "eso_eso1629c",
+   "ss": 3.86,
+   "crop": null,
+   "score": 0.3905,
+   "ref": "fact8/12",
+   "title": "Artist's impression of the planet orbiting Proxima Centauri"
+  },
+  {
+   "sec": "fact8",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 296.863,
+   "t1": 299.673,
+   "q": [
+    "a rocky planet orbiting a dead star",
+    "a planet circling a neutron star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 8906,
+   "f1": 8990,
+   "shot": "eso_eso1621a#0",
+   "clip": "eso_eso1621a",
+   "ss": 4.21,
+   "crop": null,
+   "score": 0.3791,
+   "ref": "fact8/13",
+   "title": "Artist’s impression of hot Jupiter exoplanet in the star cluster Messier 67"
+  },
+  {
+   "sec": "fact8",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 299.673,
+   "t1": 302.464,
+   "q": [
+    "a rocky planet orbiting a dead star",
+    "a planet circling a neutron star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 8990,
+   "f1": 9074,
+   "shot": "eso_eso1615c#0",
+   "clip": "eso_eso1615c",
+   "ss": 4.2,
+   "crop": null,
+   "score": 0.3623,
+   "ref": "fact8/14",
+   "title": "Artist’s impression of the ultracool dwarf star TRAPPIST-1 from close to one of its planets"
+  },
+  {
+   "sec": "fact8",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 302.464,
+   "t1": 305.176,
+   "q": [
+    "a barren planet lit by harsh radiation",
+    "a planet bombarded by radiation from a star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 9074,
+   "f1": 9155,
+   "shot": "eso_eso2213b#0",
+   "clip": "eso_eso2213b",
+   "ss": 2.39,
+   "crop": null,
+   "score": 0.3821,
+   "ref": "fact8/15",
+   "title": "Detecting barium in an exoplanet atmosphere"
+  },
+  {
+   "sec": "fact8",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 305.176,
+   "t1": 308.23,
+   "q": [
+    "a barren planet lit by harsh radiation",
+    "a planet bombarded by radiation from a star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 9155,
+   "f1": 9247,
+   "shot": "eso_eso1736c#0",
+   "clip": "eso_eso1736c",
+   "ss": 4.07,
+   "crop": null,
+   "score": 0.3724,
+   "ref": "fact8/16",
+   "title": "Flying through the Ross 128 planetary system"
+  },
+  {
+   "sec": "fact8",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 308.23,
+   "t1": 311.0725,
+   "q": [
+    "a barren planet lit by harsh radiation",
+    "a planet bombarded by radiation from a star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 9247,
+   "f1": 9332,
+   "shot": "eso_exoplanet#0",
+   "clip": "eso_exoplanet",
+   "ss": 4.18,
+   "crop": null,
+   "score": 0.3691,
+   "ref": "fact8/17",
+   "title": "Artist's animated view of a rocky exoplanet"
+  },
+  {
+   "sec": "fact8",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 311.0725,
+   "t1": 314.14000000000004,
+   "q": [
+    "a planet orbiting a sun-like star",
+    "an exoplanet passing in front of its star"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 9332,
+   "f1": 9424,
+   "shot": "esahubble_heic1916b#0",
+   "clip": "esahubble_heic1916b",
+   "ss": 4.07,
+   "crop": null,
+   "score": 0.3957,
+   "ref": "fact8/18",
+   "title": "Animation of Exoplanet K2-18b (Artist’s Impression)"
+  },
+  {
+   "sec": "fact8",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 314.14000000000004,
+   "t1": 316.79600000000005,
+   "q": [
+    "a planet orbiting a sun-like star",
+    "an exoplanet passing in front of its star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 9424,
+   "f1": 9504,
+   "shot": "eso_eso1517b#0",
+   "clip": "eso_eso1517b",
+   "ss": 4.27,
+   "crop": null,
+   "score": 0.4121,
+   "ref": "fact8/19",
+   "title": "Artist’s impression of the exoplanet 51 Pegasi b"
+  },
+  {
+   "kind": "card",
+   "sec": "fact7",
+   "t0": 316.79600000000005,
+   "t1": 319.396,
+   "num": 7,
+   "ctitle": "A CITY-SIZED STAR SPINNING *716* TIMES A SECOND",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 9504,
+   "f1": 9582,
+   "shot": "esahubble_potw2231a#0",
+   "clip": "esahubble_potw2231a",
+   "ss": 4.32,
+   "crop": null,
+   "score": 0.4008,
+   "ref": "fact7/0",
+   "title": "Video of A Star-Studded Skyfield"
+  },
+  {
+   "sec": "fact7",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 319.396,
+   "t1": 322.45750000000004,
+   "q": [
+    "a dense glowing neutron star",
+    "a neutron star compared with the size of a city"
+   ],
+   "opt": "default",
+   "trans": "soft",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 9582,
+   "f1": 9674,
+   "shot": "svs_20378#0",
+   "clip": "svs_20378",
+   "ss": 0.63,
+   "crop": null,
+   "score": 0.3882,
+   "ref": "fact7/1",
+   "title": "Long Gamma-Ray Burst"
+  },
+  {
+   "sec": "fact7",
+   "beat": 1,
+   "kind": "num",
+   "t0": 322.45750000000004,
+   "t1": 331.016,
+   "num": {
+    "template": "hero",
+    "value": "20",
+    "from": "1,392,000",
+    "count": "1.6",
+    "unit": "km wide",
+    "kicker": "more than a Sun, squeezed",
+    "foot": "the size of a city",
+    "land": "बीस किलोमीटर",
+    "log": true,
+    "land_t": 5.26849999999996,
+    "count_s": 1.6
+   },
+   "q": [
+    "a neutron star glowing in space",
+    "hot spots on a neutron star"
+   ],
+   "trans": "cut",
+   "f0": 9674,
+   "f1": 9930,
+   "shot": "esawebb_weic2207a#0",
+   "clip": "esawebb_weic2207a",
+   "ss": 0.97,
+   "crop": null,
+   "score": 0.3268,
+   "ref": "fact7/2",
+   "title": "Zoom Into the Southern Ring Nebula (NIRCam Image)"
+  },
+  {
+   "sec": "fact7",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 331.016,
+   "t1": 334.49000000000007,
+   "q": [
+    "hot spots on the surface of a neutron star",
+    "a neutron star rotating with bright spots"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 9930,
+   "f1": 10035,
+   "shot": "eso_eso1504b#0",
+   "clip": "eso_eso1504b",
+   "ss": 2.51,
+   "crop": null,
+   "score": 0.3093,
+   "ref": "fact7/3",
+   "title": "Zooming in on the Trifid Nebula, and two Cepheid variables far beyond"
+  },
+  {
+   "sec": "fact7",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 334.49000000000007,
+   "t1": 337.559,
+   "q": [
+    "hot spots on the surface of a neutron star",
+    "a neutron star rotating with bright spots"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 10035,
+   "f1": 10127,
+   "shot": "eso_eso1605b#0",
+   "clip": "eso_eso1605b",
+   "ss": 4.08,
+   "crop": null,
+   "score": 0.3017,
+   "ref": "fact7/4",
+   "title": "Close-up of the reflection nebula IC 2631"
+  },
+  {
+   "sec": "fact7",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 337.559,
+   "t1": 340.57800000000003,
+   "q": [
+    "a dense globular star cluster",
+    "zooming into a globular cluster"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 10127,
+   "f1": 10217,
+   "shot": "esahubble_potw2228a#0",
+   "clip": "esahubble_potw2228a",
+   "ss": 4.04,
+   "crop": null,
+   "score": 0.4667,
+   "ref": "fact7/5",
+   "title": "Video of Portrait of a Globular Cluster"
+  },
+  {
+   "sec": "fact7",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 340.57800000000003,
+   "t1": 343.771,
+   "q": [
+    "a dense globular star cluster",
+    "zooming into a globular cluster"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 10217,
+   "f1": 10313,
+   "shot": "esahubble_potw2136a#0",
+   "clip": "esahubble_potw2136a",
+   "ss": 4.02,
+   "crop": null,
+   "score": 0.451,
+   "ref": "fact7/6",
+   "title": "A Glittering Globular Cluster"
+  },
+  {
+   "sec": "fact7",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 343.771,
+   "t1": 347.33500000000004,
+   "q": [
+    "a dense globular star cluster",
+    "zooming into a globular cluster"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 10313,
+   "f1": 10420,
+   "shot": "esahubble_potw2233a#0",
+   "clip": "esahubble_potw2233a",
+   "ss": 3.83,
+   "crop": null,
+   "score": 0.4487,
+   "ref": "fact7/7",
+   "title": "Video of Hubble Spies a Scintillating Globular Cluster"
+  },
+  {
+   "sec": "fact7",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 347.33500000000004,
+   "t1": 353.751,
+   "q": [
+    "a dense globular star cluster",
+    "zooming into a globular cluster"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 10420,
+   "f1": 10613,
+   "shot": "esahubble_potw2223a#0",
+   "clip": "esahubble_potw2223a",
+   "ss": 2.41,
+   "crop": null,
+   "score": 0.4375,
+   "ref": "fact7/8",
+   "title": "Video of Hubble Investigates an Enigmatic Globular Cluster"
+  },
+  {
+   "sec": "fact7",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 353.751,
+   "t1": 357.24000000000007,
+   "q": [
+    "a very fast spinning pulsar",
+    "a millisecond pulsar animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 10613,
+   "f1": 10717,
+   "shot": "eso_eso1428a-win1#0",
+   "clip": "eso_eso1428a-win1",
+   "ss": 0.36,
+   "crop": null,
+   "score": 0.3206,
+   "ref": "fact7/9",
+   "title": "Zooming in on the globular star cluster Messier 54"
+  },
+  {
+   "sec": "fact7",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 357.24000000000007,
+   "t1": 361.1575,
+   "q": [
+    "a very fast spinning pulsar",
+    "a millisecond pulsar animation"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 10717,
+   "f1": 10835,
+   "shot": "eso_eso1407d#0",
+   "clip": "eso_eso1407d",
+   "ss": 3.64,
+   "crop": [
+    0.25,
+    0.0,
+    1.0,
+    0.75
+   ],
+   "score": 0.3249,
+   "ref": "fact7/10",
+   "title": "MUSE —  running through the 3D data of NGC 4650A"
+  },
+  {
+   "sec": "fact7",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 361.1575,
+   "t1": 364.04200000000003,
+   "q": [
+    "a spinning star throwing off material",
+    "a fast rotating star in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 10835,
+   "f1": 10921,
+   "shot": "esawebb_weic2307b#0",
+   "clip": "esawebb_weic2307b",
+   "ss": 2.81,
+   "crop": null,
+   "score": 0.3826,
+   "ref": "fact7/11",
+   "title": "Zoom Into Wolf-Rayet 124"
+  },
+  {
+   "sec": "fact7",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 364.04200000000003,
+   "t1": 368.375,
+   "q": [
+    "a spinning star throwing off material",
+    "a fast rotating star in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 10921,
+   "f1": 11051,
+   "shot": "esahubble_potw2521a#0",
+   "clip": "esahubble_potw2521a",
+   "ss": 3.45,
+   "crop": null,
+   "score": 0.3547,
+   "ref": "fact7/12",
+   "title": "Pan: NGC 3507"
+  },
+  {
+   "sec": "fact7",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 368.375,
+   "t1": 372.378,
+   "q": [
+    "a spinning star throwing off material",
+    "a fast rotating star in space"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 11051,
+   "f1": 11171,
+   "shot": "esahubble_heic1617a-win1#0",
+   "clip": "esahubble_heic1617a-win1",
+   "ss": 2.6,
+   "crop": null,
+   "score": 0.3769,
+   "ref": "fact7/13",
+   "title": "Zooming on the star cluster Terzan"
+  },
+  {
+   "sec": "fact7",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 372.378,
+   "t1": 374.84900000000005,
+   "q": [
+    "a spinning star throwing off material",
+    "a fast rotating star in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 11171,
+   "f1": 11245,
+   "shot": "esahubble_heic2101a-win1#0",
+   "clip": "esahubble_heic2101a-win1",
+   "ss": 3.36,
+   "crop": [
+    0.0,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "score": 0.3507,
+   "ref": "fact7/14",
+   "title": "Hubble Showcases 6 Galaxy Mergers"
+  },
+  {
+   "kind": "card",
+   "sec": "fact6",
+   "t0": 374.84900000000005,
+   "t1": 377.449,
+   "num": 6,
+   "ctitle": "THE STRONGEST *MAGNETS* IN THE UNIVERSE",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 11245,
+   "f1": 11323,
+   "shot": "eso_eso2001b#0",
+   "clip": "eso_eso2001b",
+   "ss": 3.45,
+   "crop": null,
+   "score": 0.3995,
+   "ref": "fact6/0",
+   "title": "Zooming into star-forming region AFGL 5142"
+  },
+  {
+   "sec": "fact6",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 377.449,
+   "t1": 383.925,
+   "q": [
+    "a magnetar with twisted glowing magnetic field lines",
+    "neutron star magnetic field animation"
+   ],
+   "opt": "hold",
+   "trans": "soft",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 11323,
+   "f1": 11518,
+   "shot": "eso_eso1520b#0",
+   "clip": "eso_eso1520b",
+   "ss": 2.38,
+   "crop": null,
+   "score": 0.2816,
+   "ref": "fact6/1",
+   "title": "Close-up pan video showing the Medusa Nebula"
+  },
+  {
+   "sec": "fact6",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 383.925,
+   "t1": 390.82,
+   "q": [
+    "a magnetar with twisted glowing magnetic field lines",
+    "neutron star magnetic field animation"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 11518,
+   "f1": 11725,
+   "shot": "esawebb_weic2619b#0",
+   "clip": "esawebb_weic2619b",
+   "ss": 2.17,
+   "crop": null,
+   "score": 0.2886,
+   "ref": "fact6/2",
+   "title": "Pan video: IC 348"
+  },
+  {
+   "sec": "fact6",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 390.82,
+   "t1": 393.65000000000003,
+   "q": [
+    "the Milky Way galaxy seen from far away",
+    "a spiral galaxy slowly rotating"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 11725,
+   "f1": 11810,
+   "shot": "eso_eso1920c#0",
+   "clip": "eso_eso1920c",
+   "ss": 0.7,
+   "crop": null,
+   "score": 0.422,
+   "ref": "fact6/3",
+   "title": "Zoom of the Milky Way’s central region"
+  },
+  {
+   "sec": "fact6",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 393.65000000000003,
+   "t1": 396.055,
+   "q": [
+    "the Milky Way galaxy seen from far away",
+    "a spiral galaxy slowly rotating"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 11810,
+   "f1": 11882,
+   "shot": "esahubble_potw2546a#0",
+   "clip": "esahubble_potw2546a",
+   "ss": 4.41,
+   "crop": null,
+   "score": 0.3766,
+   "ref": "fact6/4",
+   "title": "Pan: NGC 4535"
+  },
+  {
+   "sec": "fact6",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 396.055,
+   "t1": 398.933,
+   "q": [
+    "the Milky Way galaxy seen from far away",
+    "a spiral galaxy slowly rotating"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 11882,
+   "f1": 11968,
+   "shot": "esahubble_potw2430a#0",
+   "clip": "esahubble_potw2430a",
+   "ss": 4.18,
+   "crop": null,
+   "score": 0.3869,
+   "ref": "fact6/5",
+   "title": "Pan: NGC 3430"
+  },
+  {
+   "sec": "fact6",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 398.933,
+   "t1": 401.825,
+   "q": [
+    "the Milky Way galaxy seen from far away",
+    "a spiral galaxy slowly rotating"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 11968,
+   "f1": 12055,
+   "shot": "esahubble_heic2208b-win2#0",
+   "clip": "esahubble_heic2208b-win2",
+   "ss": 3.15,
+   "crop": null,
+   "score": 0.3861,
+   "ref": "fact6/6",
+   "title": "A Dazzling Hubble Collection of Supernova Host Galaxies"
+  },
+  {
+   "sec": "fact6",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 401.825,
+   "t1": 407.479,
+   "q": [
+    "an animation of a magnetar exploding with a bright flash",
+    "a neutron star bursting with energy"
+   ],
+   "opt": "default",
+   "trans": "flash",
+   "move": "impact",
+   "rate": 0.12,
+   "f0": 12055,
+   "f1": 12224,
+   "shot": "esahubble_heic2105b#0",
+   "clip": "esahubble_heic2105b",
+   "ss": 2.77,
+   "crop": null,
+   "score": 0.3347,
+   "ref": "fact6/7",
+   "title": "Animation of AG Carinae"
+  },
+  {
+   "sec": "fact6",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 407.479,
+   "t1": 409.78150000000005,
+   "q": [
+    "an animation of a magnetar exploding with a bright flash",
+    "a neutron star bursting with energy"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 12224,
+   "f1": 12293,
+   "shot": "svs_20413-win2#0",
+   "clip": "svs_20413-win2",
+   "ss": 3.45,
+   "crop": null,
+   "score": 0.444,
+   "ref": "fact6/8",
+   "title": "Supernova explosion animation, with & without pulsar"
+  },
+  {
+   "sec": "fact6",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 409.78150000000005,
+   "t1": 416.007,
+   "q": [
+    "a satellite in orbit above Earth",
+    "a gamma-ray space telescope in orbit"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 12293,
+   "f1": 12480,
+   "shot": "svs_14858#0",
+   "clip": "svs_14858",
+   "ss": 2.49,
+   "crop": null,
+   "score": 0.3995,
+   "ref": "fact6/9",
+   "title": "Landsat 9 3D Visualizations & Asset Library"
+  },
+  {
+   "sec": "fact6",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 416.007,
+   "t1": 418.498,
+   "q": [
+    "Earth's atmosphere glowing seen from space",
+    "aurora over Earth seen from orbit"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 12480,
+   "f1": 12555,
+   "shot": "svs_30179#0",
+   "clip": "svs_30179",
+   "ss": 4.27,
+   "crop": null,
+   "score": 0.3963,
+   "ref": "fact6/10",
+   "title": "ISS Timelapse: Aurora Australis"
+  },
+  {
+   "sec": "fact6",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 418.498,
+   "t1": 420.6675,
+   "q": [
+    "Earth's atmosphere glowing seen from space",
+    "aurora over Earth seen from orbit"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 12555,
+   "f1": 12620,
+   "shot": "svs_30180#0",
+   "clip": "svs_30180",
+   "ss": 4.52,
+   "crop": null,
+   "score": 0.3785,
+   "ref": "fact6/11",
+   "title": "ISS Timelapse: West Coast of the Americas"
+  },
+  {
+   "sec": "fact6",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 420.6675,
+   "t1": 426.706,
+   "q": [
+    "planet Earth seen from space",
+    "Earth with its thin blue atmosphere"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 12620,
+   "f1": 12801,
+   "shot": "esahubble_heic1707b#0",
+   "clip": "esahubble_heic1707b",
+   "ss": 2.6,
+   "crop": null,
+   "score": 0.267,
+   "ref": "fact6/12",
+   "title": "Pan across N103B"
+  },
+  {
+   "sec": "fact6",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 426.706,
+   "t1": 429.69200000000006,
+   "q": [
+    "planet Earth seen from space",
+    "Earth with its thin blue atmosphere"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 12801,
+   "f1": 12891,
+   "shot": "esahubble_heic1425b#0",
+   "clip": "esahubble_heic1425b",
+   "ss": 4.61,
+   "crop": null,
+   "score": 0.2748,
+   "ref": "fact6/13",
+   "title": "Hubble and the sunrise over Earth (artist's rendering)"
+  },
+  {
+   "sec": "fact6",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 429.69200000000006,
+   "t1": 434.334,
+   "q": [
+    "an explosion in space slowly fading away",
+    "a glowing cloud fading in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 12891,
+   "f1": 13030,
+   "shot": "eso_eso1413b#0",
+   "clip": "eso_eso1413b",
+   "ss": 3.29,
+   "crop": null,
+   "score": 0.3645,
+   "ref": "fact6/14",
+   "title": "Panning across the star formation region Gum 41"
+  },
+  {
+   "sec": "fact6",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 434.334,
+   "t1": 439.103,
+   "q": [
+    "an explosion in space slowly fading away",
+    "a glowing cloud fading in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 13030,
+   "f1": 13173,
+   "shot": "esawebb_potm2210b#0",
+   "clip": "esawebb_potm2210b",
+   "ss": 3.23,
+   "crop": null,
+   "score": 0.3624,
+   "ref": "fact6/15",
+   "title": "Video: Pan of IC 1623"
+  },
+  {
+   "kind": "card",
+   "sec": "fact5",
+   "t0": 439.103,
+   "t1": 441.703,
+   "num": 5,
+   "ctitle": "WHEN THEY COLLIDE, THEY MAKE *GOLD*",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 13173,
+   "f1": 13251,
+   "shot": "svs_14950#0",
+   "clip": "svs_14950",
+   "ss": 4.3,
+   "crop": null,
+   "score": 0.3967,
+   "ref": "fact5/0",
+   "title": "Flying Through Galaxies"
+  },
+  {
+   "sec": "fact5",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 441.703,
+   "t1": 443.2465,
+   "q": [
+    "two neutron stars spiralling around each other",
+    "a calm star field slowly drifting"
+   ],
+   "opt": "default",
+   "trans": "soft",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 13251,
+   "f1": 13297,
+   "shot": "eso_eso1545a#0",
+   "clip": "eso_eso1545a",
+   "ss": 4.84,
+   "crop": null,
+   "score": 0.3294,
+   "ref": "fact5/1",
+   "title": "Massive galaxies discovered in the early Universe"
+  },
+  {
+   "sec": "fact5",
+   "beat": 1,
+   "kind": "gfx",
+   "t0": 443.2465,
+   "t1": 448.3165,
+   "gfx": "ligo",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 13297,
+   "f1": 13449,
+   "shot": "esahubble_heic1801a#0",
+   "clip": "esahubble_heic1801a",
+   "ss": 0.72,
+   "crop": null,
+   "score": 0.4018,
+   "ref": "fact5/2",
+   "title": "Zooming into the galaxy cluster A1758N"
+  },
+  {
+   "sec": "fact5",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 448.3165,
+   "t1": 451.298,
+   "q": [
+    "two neutron stars spiralling around each other",
+    "simulation of merging neutron stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 13449,
+   "f1": 13539,
+   "shot": "esahubble_heic2414b#0",
+   "clip": "esahubble_heic2414b",
+   "ss": 4.12,
+   "crop": null,
+   "score": 0.3087,
+   "ref": "fact5/3",
+   "title": "Pan video: NGC 2207 (Webb MIRI image)"
+  },
+  {
+   "sec": "fact5",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 451.298,
+   "t1": 454.08500000000004,
+   "q": [
+    "two neutron stars spiralling around each other",
+    "simulation of merging neutron stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 13539,
+   "f1": 13623,
+   "shot": "esawebb_weic2208b#0",
+   "clip": "esawebb_weic2208b",
+   "ss": 3.86,
+   "crop": null,
+   "score": 0.296,
+   "ref": "fact5/4",
+   "title": "Pan of Stephan’s Quintet (MIRI Imaging)"
+  },
+  {
+   "sec": "fact5",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 454.08500000000004,
+   "t1": 456.74100000000004,
+   "q": [
+    "two neutron stars spiralling around each other",
+    "simulation of merging neutron stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 13623,
+   "f1": 13702,
+   "shot": "svs_14896#2",
+   "clip": "svs_14896",
+   "ss": 7.59,
+   "crop": null,
+   "score": 0.2996,
+   "ref": "fact5/5",
+   "title": "NASA's IMAP Mission (Trailer)"
+  },
+  {
+   "sec": "fact5",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 456.74100000000004,
+   "t1": 459.692,
+   "q": [
+    "a gamma-ray burst jet from a merger",
+    "the Fermi gamma-ray telescope in orbit"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 13702,
+   "f1": 13791,
+   "shot": "svs_14255#0",
+   "clip": "svs_14255",
+   "ss": 4.12,
+   "crop": null,
+   "score": 0.4354,
+   "ref": "fact5/6",
+   "title": "NASA’s Fermi, Swift Capture Revolutionary Gamma-Ray Burst"
+  },
+  {
+   "sec": "fact5",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 459.692,
+   "t1": 461.887,
+   "q": [
+    "a gamma-ray burst jet from a merger",
+    "the Fermi gamma-ray telescope in orbit"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 13791,
+   "f1": 13857,
+   "shot": "svs_13886-win2#1",
+   "clip": "svs_13886-win2",
+   "ss": 5.15,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3336,
+   "ref": "fact5/7",
+   "title": "NASA's Fermi Spots 'Fizzled' Burst from Collapsing Star"
+  },
+  {
+   "sec": "fact5",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 461.887,
+   "t1": 464.665,
+   "q": [
+    "a gamma-ray burst jet from a merger",
+    "the Fermi gamma-ray telescope in orbit"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 13857,
+   "f1": 13940,
+   "shot": "svs_20378#2",
+   "clip": "svs_20378",
+   "ss": 8.06,
+   "crop": null,
+   "score": 0.4055,
+   "ref": "fact5/8",
+   "title": "Long Gamma-Ray Burst"
+  },
+  {
+   "sec": "fact5",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 464.665,
+   "t1": 467.576,
+   "q": [
+    "an observatory dome in Chile at night",
+    "telescopes in the Chilean desert under the stars"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 13940,
+   "f1": 14027,
+   "shot": "eso_lasilla-extra1outside#0",
+   "clip": "eso_lasilla-extra1outside",
+   "ss": 4.14,
+   "crop": null,
+   "score": 0.3908,
+   "ref": "fact5/9",
+   "title": "Watch the galaxy moves across La Silla"
+  },
+  {
+   "sec": "fact5",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 467.576,
+   "t1": 471.082,
+   "q": [
+    "an observatory dome in Chile at night",
+    "telescopes in the Chilean desert under the stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 14027,
+   "f1": 14132,
+   "shot": "eso_paranaltimelapse12c#0",
+   "clip": "eso_paranaltimelapse12c",
+   "ss": 3.85,
+   "crop": null,
+   "score": 0.3604,
+   "ref": "fact5/10",
+   "title": "Paranal time-lapse 2012c"
+  },
+  {
+   "sec": "fact5",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 471.082,
+   "t1": 473.1615,
+   "q": [
+    "an observatory dome in Chile at night",
+    "telescopes in the Chilean desert under the stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 14132,
+   "f1": 14195,
+   "shot": "eso_residencia#0",
+   "clip": "eso_residencia",
+   "ss": 4.56,
+   "crop": null,
+   "score": 0.3659,
+   "ref": "fact5/11",
+   "title": "Stars above the Paranal Residencia"
+  },
+  {
+   "sec": "fact5",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 473.1615,
+   "t1": 476.31,
+   "q": [
+    "many telescopes observing the sky at night",
+    "the Very Large Telescope at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 14195,
+   "f1": 14289,
+   "shot": "eso_colosimo_paranal_01#0",
+   "clip": "eso_colosimo_paranal_01",
+   "ss": 4.03,
+   "crop": null,
+   "score": 0.3916,
+   "ref": "fact5/12",
+   "title": "An evening time-lapse at Paranal"
+  },
+  {
+   "sec": "fact5",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 476.31,
+   "t1": 478.785,
+   "q": [
+    "an explosion after two neutron stars merge",
+    "artist's impression of a kilonova"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 14289,
+   "f1": 14364,
+   "shot": "esawebb_weic2425a#0",
+   "clip": "esawebb_weic2425a",
+   "ss": 4.38,
+   "crop": null,
+   "score": 0.2875,
+   "ref": "fact5/13",
+   "title": "NGC 602 (Pan video)"
+  },
+  {
+   "sec": "fact5",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 478.785,
+   "t1": 482.378,
+   "q": [
+    "an explosion after two neutron stars merge",
+    "artist's impression of a kilonova"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 14364,
+   "f1": 14471,
+   "shot": "eso_eso1810b-win1#0",
+   "clip": "eso_eso1810b-win1",
+   "ss": 3.8,
+   "crop": null,
+   "score": 0.3861,
+   "ref": "fact5/14",
+   "title": "Zooming in on a neutron star in the Small Magellanic Cloud"
+  },
+  {
+   "sec": "fact5",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 482.378,
+   "t1": 485.085,
+   "q": [
+    "an explosion after two neutron stars merge",
+    "artist's impression of a kilonova"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 14471,
+   "f1": 14553,
+   "shot": "eso_eso2401a-win3#0",
+   "clip": "eso_eso2401a-win3",
+   "ss": 1.23,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.4016,
+   "ref": "fact5/15",
+   "title": "Supernovae give rise to black holes or neutron stars (ESOcast 269 Light)"
+  },
+  {
+   "sec": "fact5",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 485.085,
+   "t1": 488.42,
+   "q": [
+    "an explosion after two neutron stars merge",
+    "artist's impression of a kilonova"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 14553,
+   "f1": 14653,
+   "shot": "eso_eso2207b#0",
+   "clip": "eso_eso2207b",
+   "ss": 2.58,
+   "crop": null,
+   "score": 0.3714,
+   "ref": "fact5/16",
+   "title": "Artist’s animation of a micronova"
+  },
+  {
+   "sec": "fact5",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 488.42,
+   "t1": 489.143,
+   "q": [
+    "glowing golden debris expanding in space",
+    "a bright golden explosion in space"
+   ],
+   "opt": "default",
+   "trans": "flare",
+   "move": "impact",
+   "rate": 0.12,
+   "f0": 14653,
+   "f1": 14674,
+   "shot": "esawebb_potm2607a#0",
+   "clip": "esawebb_potm2607a",
+   "ss": 5.25,
+   "crop": null,
+   "score": 0.3455,
+   "ref": "fact5/17",
+   "title": "Pan video: Treasure Chest Nebula"
+  },
+  {
+   "sec": "fact5",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 489.143,
+   "t1": 494.828,
+   "q": [
+    "a cloud of heavy elements glowing",
+    "debris of a neutron star merger"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 14674,
+   "f1": 14845,
+   "shot": "esawebb_weic2619d#0",
+   "clip": "esawebb_weic2619d",
+   "ss": 0.91,
+   "crop": null,
+   "score": 0.3176,
+   "ref": "fact5/18",
+   "title": "Zoom video: IC 348"
+  },
+  {
+   "sec": "fact5",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 494.828,
+   "t1": 497.56600000000003,
+   "q": [
+    "a cloud of heavy elements glowing",
+    "debris of a neutron star merger"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 14845,
+   "f1": 14927,
+   "shot": "esawebb_weic2303a#0",
+   "clip": "esawebb_weic2303a",
+   "ss": 4.25,
+   "crop": null,
+   "score": 0.3436,
+   "ref": "fact5/19",
+   "title": "Pan of the Molecular Cloud Chameleon I"
+  },
+  {
+   "kind": "card",
+   "sec": "fact4",
+   "t0": 497.56600000000003,
+   "t1": 500.166,
+   "num": 4,
+   "ctitle": "A RADIO *FLASH* FROM INSIDE OUR GALAXY",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 14927,
+   "f1": 15005,
+   "shot": "eso_eso1815b#0",
+   "clip": "eso_eso1815b",
+   "ss": 1.27,
+   "crop": null,
+   "score": 0.3861,
+   "ref": "fact4/0",
+   "title": "Zooming in on the distant galaxy MACS1149, and beyond"
+  },
+  {
+   "sec": "fact4",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 500.166,
+   "t1": 508.04800000000006,
+   "q": [
+    "radio telescope dishes at night",
+    "radio telescopes pointing at the starry sky"
+   ],
+   "opt": "hold",
+   "trans": "soft",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 15005,
+   "f1": 15241,
+   "shot": "eso_uhd_yb_lasilla_02#0",
+   "clip": "eso_uhd_yb_lasilla_02",
+   "ss": 1.66,
+   "crop": null,
+   "score": 0.3488,
+   "ref": "fact4/1",
+   "title": "SEST and 3.6-m Telescope UHD time-lapse of La Silla"
+  },
+  {
+   "sec": "fact4",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 508.04800000000006,
+   "t1": 510.76,
+   "q": [
+    "distant galaxies in a deep field",
+    "a deep field full of galaxies"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 15241,
+   "f1": 15323,
+   "shot": "svs_30961#0",
+   "clip": "svs_30961",
+   "ss": 0.39,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3947,
+   "ref": "fact4/2",
+   "title": "Milky Way Center in Multiple Wavelengths"
+  },
+  {
+   "sec": "fact4",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 510.76,
+   "t1": 513.195,
+   "q": [
+    "distant galaxies in a deep field",
+    "a deep field full of galaxies"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 15323,
+   "f1": 15396,
+   "shot": "esahubble_heic1506a#0",
+   "clip": "esahubble_heic1506a",
+   "ss": 4.4,
+   "crop": null,
+   "score": 0.3958,
+   "ref": "fact4/3",
+   "title": "Fade through of galaxy cluster images"
+  },
+  {
+   "sec": "fact4",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 513.195,
+   "t1": 516.6310000000001,
+   "q": [
+    "distant galaxies in a deep field",
+    "a deep field full of galaxies"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 15396,
+   "f1": 15499,
+   "shot": "eso_eso1428b-win1#0",
+   "clip": "eso_eso1428b-win1",
+   "ss": 2.88,
+   "crop": null,
+   "score": 0.3883,
+   "ref": "fact4/4",
+   "title": "Close-up view of the globular star cluster Messier 54"
+  },
+  {
+   "sec": "fact4",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 516.6310000000001,
+   "t1": 519.45,
+   "q": [
+    "a radio telescope array in a valley",
+    "radio antennas in a desert"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 15499,
+   "f1": 15584,
+   "shot": "eso_eso2311a#1",
+   "clip": "eso_eso2311a",
+   "ss": 7.16,
+   "crop": null,
+   "score": 0.365,
+   "ref": "fact4/5",
+   "title": "Does this planet have a “sibling” sharing the same orbit? (ESOcast 263 Light)"
+  },
+  {
+   "sec": "fact4",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 519.45,
+   "t1": 521.986,
+   "q": [
+    "a radio telescope array in a valley",
+    "radio antennas in a desert"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 15584,
+   "f1": 15660,
+   "shot": "eso_elt-construction-seq1#0",
+   "clip": "eso_elt-construction-seq1",
+   "ss": 4.35,
+   "crop": null,
+   "score": 0.291,
+   "ref": "fact4/6",
+   "title": "The ELT opens its eye on the sky (artist's impression)"
+  },
+  {
+   "sec": "fact4",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 521.986,
+   "t1": 524.784,
+   "q": [
+    "a radio telescope array in a valley",
+    "radio antennas in a desert"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 15660,
+   "f1": 15744,
+   "shot": "eso_uhd_alma2_2014#0",
+   "clip": "eso_uhd_alma2_2014",
+   "ss": 4.7,
+   "crop": null,
+   "score": 0.3188,
+   "ref": "fact4/7",
+   "title": "ALMA Distant View"
+  },
+  {
+   "sec": "fact4",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 524.784,
+   "t1": 528.005,
+   "q": [
+    "a radio telescope array in a valley",
+    "radio antennas in a desert"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 15744,
+   "f1": 15840,
+   "shot": "eso_almatimelapse12j#0",
+   "clip": "eso_almatimelapse12j",
+   "ss": 0.64,
+   "crop": null,
+   "score": 0.3248,
+   "ref": "fact4/8",
+   "title": "ALMA Operations and the Magellanic Clouds"
+  },
+  {
+   "sec": "fact4",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 528.005,
+   "t1": 530.508,
+   "q": [
+    "a radio telescope array in a valley",
+    "radio antennas in a desert"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 15840,
+   "f1": 15915,
+   "shot": "eso_eltu_Lasers#2",
+   "clip": "eso_eltu_Lasers",
+   "ss": 7.98,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.327,
+   "ref": "fact4/9",
+   "title": "New powerful lasers for the world's largest optical telescope"
+  },
+  {
+   "sec": "fact4",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 530.508,
+   "t1": 533.241,
+   "q": [
+    "a radio telescope array in a valley",
+    "radio antennas in a desert"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 15915,
+   "f1": 15997,
+   "shot": "eso_esocast192a#2",
+   "clip": "eso_esocast192a",
+   "ss": 26.08,
+   "crop": [
+    0.0,
+    0.25,
+    0.75,
+    1.0
+   ],
+   "score": 0.2987,
+   "ref": "fact4/10",
+   "title": "ESOcast 192 Light: GRAVITY Resolves a Gravitationally Microlensed Star"
+  },
+  {
+   "sec": "fact4",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 533.241,
+   "t1": 536.5905,
+   "q": [
+    "the Milky Way galaxy",
+    "the band of the Milky Way across the night sky"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 15997,
+   "f1": 16098,
+   "shot": "eso_eso2510d#0",
+   "clip": "eso_eso2510d",
+   "ss": 1.08,
+   "crop": null,
+   "score": 0.3599,
+   "ref": "fact4/11",
+   "title": "Animation of the rotation of the Sculptor Galaxy"
+  },
+  {
+   "sec": "fact4",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 536.5905,
+   "t1": 539.598,
+   "q": [
+    "a magnetar erupting with bursts",
+    "magnetar outburst animation"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 16098,
+   "f1": 16188,
+   "shot": "svs_20363#0",
+   "clip": "svs_20363",
+   "ss": 4.1,
+   "crop": null,
+   "score": 0.3717,
+   "ref": "fact4/12",
+   "title": "Animation: Heliosphere"
+  },
+  {
+   "sec": "fact4",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 539.598,
+   "t1": 544.173,
+   "q": [
+    "a magnetar erupting with bursts",
+    "magnetar outburst animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 16188,
+   "f1": 16325,
+   "shot": "eso_eso2102b#0",
+   "clip": "eso_eso2102b",
+   "ss": 3.33,
+   "crop": null,
+   "score": 0.382,
+   "ref": "fact4/13",
+   "title": "Artist’s animation of the TOI-178 orbits and resonances (sound on!)"
+  },
+  {
+   "sec": "fact4",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 544.173,
+   "t1": 548.7465,
+   "q": [
+    "a magnetar erupting with bursts",
+    "magnetar outburst animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 16325,
+   "f1": 16462,
+   "shot": "eso_eso1726c#0",
+   "clip": "eso_eso1726c",
+   "ss": 3.31,
+   "crop": null,
+   "score": 0.3522,
+   "ref": "fact4/14",
+   "title": "3D animation of Antares"
+  },
+  {
+   "sec": "fact4",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 548.7465,
+   "t1": 551.743,
+   "q": [
+    "radio waves travelling through space",
+    "a fast radio burst reaching Earth"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 16462,
+   "f1": 16552,
+   "shot": "eso_eso2519c#1",
+   "clip": "eso_eso2519c",
+   "ss": 4.52,
+   "crop": null,
+   "score": 0.3814,
+   "ref": "fact4/15",
+   "title": "Animation of the light path through the VLTI's GRAVITY+ instrument"
+  },
+  {
+   "sec": "fact4",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 551.743,
+   "t1": 554.599,
+   "q": [
+    "radio waves travelling through space",
+    "a fast radio burst reaching Earth"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 16552,
+   "f1": 16638,
+   "shot": "eso_eso2005c#0",
+   "clip": "eso_eso2005c",
+   "ss": 4.19,
+   "crop": null,
+   "score": 0.2945,
+   "ref": "fact4/16",
+   "title": "A view of the orbit of WASP-76b around its host star WASP-76"
+  },
+  {
+   "sec": "fact4",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 554.599,
+   "t1": 557.616,
+   "q": [
+    "radio waves travelling through space",
+    "a fast radio burst reaching Earth"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 16638,
+   "f1": 16728,
+   "shot": "svs_12994-win3#0",
+   "clip": "svs_12994-win3",
+   "ss": 1.24,
+   "crop": null,
+   "score": 0.3129,
+   "ref": "fact4/17",
+   "title": "NASA's Fermi Links Cosmic Neutrino to Monster Black Hole"
+  },
+  {
+   "kind": "card",
+   "sec": "fact3",
+   "t0": 557.616,
+   "t1": 560.216,
+   "num": 3,
+   "ctitle": "THE HEAVIEST ONE IS *EATING* ITS PARTNER",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 16728,
+   "f1": 16806,
+   "shot": "eso_eso1501a#0",
+   "clip": "eso_eso1501a",
+   "ss": 2.8,
+   "crop": null,
+   "score": 0.3848,
+   "ref": "fact3/0",
+   "title": "Zooming in on the dark nebula LDN 483"
+  },
+  {
+   "sec": "fact3",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 560.216,
+   "t1": 562.927,
+   "q": [
+    "a dense star collapsing under its own weight",
+    "a neutron star glowing in space"
+   ],
+   "opt": "default",
+   "trans": "soft",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 16806,
+   "f1": 16888,
+   "shot": "eso_eso2601b#0",
+   "clip": "eso_eso2601b",
+   "ss": 0.89,
+   "crop": null,
+   "score": 0.3977,
+   "ref": "fact3/1",
+   "title": "Zooming on a dead star with a strange shock wave around it"
+  },
+  {
+   "sec": "fact3",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 562.927,
+   "t1": 567.06,
+   "q": [
+    "a dense star collapsing under its own weight",
+    "a neutron star glowing in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 16888,
+   "f1": 17012,
+   "shot": "svs_30666#0",
+   "clip": "svs_30666",
+   "ss": 3.53,
+   "crop": null,
+   "score": 0.3851,
+   "ref": "fact3/2",
+   "title": "Flight to Star Cluster Westerlund 2"
+  },
+  {
+   "sec": "fact3",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 567.06,
+   "t1": 570.97,
+   "q": [
+    "a dense star collapsing under its own weight",
+    "a neutron star glowing in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 17012,
+   "f1": 17129,
+   "shot": "eso_eso1802b-win1#0",
+   "clip": "eso_eso1802b-win1",
+   "ss": 2.64,
+   "crop": null,
+   "score": 0.3804,
+   "ref": "fact3/3",
+   "title": "Zooming in on the globular star cluster NGC 3201"
+  },
+  {
+   "sec": "fact3",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 570.97,
+   "t1": 573.8565,
+   "q": [
+    "a dense star collapsing under its own weight",
+    "a neutron star glowing in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 17129,
+   "f1": 17216,
+   "shot": "esahubble_potw2424a#0",
+   "clip": "esahubble_potw2424a",
+   "ss": 4.17,
+   "crop": null,
+   "score": 0.3666,
+   "ref": "fact3/4",
+   "title": "Pan: NGC 2005"
+  },
+  {
+   "sec": "fact3",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 573.8565,
+   "t1": 576.649,
+   "q": [
+    "observatory domes on a mountain top at night",
+    "telescopes on a mountain above the clouds"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 17216,
+   "f1": 17299,
+   "shot": "eso_lasilla-tse1#0",
+   "clip": "eso_lasilla-tse1",
+   "ss": 4.2,
+   "crop": null,
+   "score": 0.2985,
+   "ref": "fact3/5",
+   "title": "La Silla total solar eclipse"
+  },
+  {
+   "sec": "fact3",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 576.649,
+   "t1": 579.552,
+   "q": [
+    "observatory domes on a mountain top at night",
+    "telescopes on a mountain above the clouds"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 17299,
+   "f1": 17387,
+   "shot": "eso_uhd_bt_lasilla_moon#0",
+   "clip": "eso_uhd_bt_lasilla_moon",
+   "ss": 2.63,
+   "crop": null,
+   "score": 0.3598,
+   "ref": "fact3/6",
+   "title": "La Silla moonscape"
+  },
+  {
+   "sec": "fact3",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 579.552,
+   "t1": 582.649,
+   "q": [
+    "observatory domes on a mountain top at night",
+    "telescopes on a mountain above the clouds"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 17387,
+   "f1": 17479,
+   "shot": "eso_brunier_la_silla#0",
+   "clip": "eso_brunier_la_silla",
+   "ss": 4.05,
+   "crop": null,
+   "score": 0.3272,
+   "ref": "fact3/7",
+   "title": "La Silla Milky Way time-lapse"
+  },
+  {
+   "sec": "fact3",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 582.649,
+   "t1": 586.1600000000001,
+   "q": [
+    "a pulsar evaporating its companion star",
+    "black widow pulsar animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 17479,
+   "f1": 17585,
+   "shot": "eso_eso1434a#0",
+   "clip": "eso_eso1434a",
+   "ss": 3.86,
+   "crop": null,
+   "score": 0.3778,
+   "ref": "fact3/8",
+   "title": "Artist’s impression of the double-star system GG Tauri-A"
+  },
+  {
+   "sec": "fact3",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 586.1600000000001,
+   "t1": 588.41,
+   "q": [
+    "a pulsar evaporating its companion star",
+    "black widow pulsar animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 17585,
+   "f1": 17652,
+   "shot": "esawebb_weic2503b#0",
+   "clip": "esawebb_weic2503b",
+   "ss": 4.49,
+   "crop": null,
+   "score": 0.3568,
+   "ref": "fact3/9",
+   "title": "Pan of Actively forming star system Lynds 483"
+  },
+  {
+   "sec": "fact3",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 588.41,
+   "t1": 594.09,
+   "q": [
+    "a pulsar evaporating its companion star",
+    "black widow pulsar animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 17652,
+   "f1": 17823,
+   "shot": "eso_cs0007c#0",
+   "clip": "eso_cs0007c",
+   "ss": 2.76,
+   "crop": null,
+   "score": 0.3849,
+   "ref": "fact3/10",
+   "title": "A binary pair of stars in orbit"
+  },
+  {
+   "sec": "fact3",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 594.09,
+   "t1": 597.1985,
+   "q": [
+    "a pulsar evaporating its companion star",
+    "black widow pulsar animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 17823,
+   "f1": 17916,
+   "shot": "eso_eso1511a#0",
+   "clip": "eso_eso1511a",
+   "ss": 2.7,
+   "crop": null,
+   "score": 0.3626,
+   "ref": "fact3/11",
+   "title": "Zooming in on the location of Nova Vul 1670 in the constellation of Vulpecula"
+  },
+  {
+   "sec": "fact3",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 597.1985,
+   "t1": 603.224,
+   "q": [
+    "a heavy neutron star glowing",
+    "a bright neutron star in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 17916,
+   "f1": 18097,
+   "shot": "svs_4954#0",
+   "clip": "svs_4954",
+   "ss": 2.59,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.333,
+   "ref": "fact3/12",
+   "title": "Mercury Makes Waves Cruising through the Solar Wind"
+  },
+  {
+   "sec": "fact3",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 603.224,
+   "t1": 606.11,
+   "q": [
+    "a heavy neutron star glowing",
+    "a bright neutron star in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 18097,
+   "f1": 18183,
+   "shot": "esahubble_heic2607c-win1#0",
+   "clip": "esahubble_heic2607c-win1",
+   "ss": 3.16,
+   "crop": null,
+   "score": 0.3031,
+   "ref": "fact3/13",
+   "title": "Pan Video: The Crab Nebula (new Hubble image from 1999/2000 data)"
+  },
+  {
+   "sec": "fact3",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 606.11,
+   "t1": 608.425,
+   "q": [
+    "a heavy neutron star glowing",
+    "a bright neutron star in space"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 18183,
+   "f1": 18253,
+   "shot": "svs_30970-win3#0",
+   "clip": "svs_30970-win3",
+   "ss": 3.59,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.2854,
+   "ref": "fact3/14",
+   "title": "Kepler Supernova Remnant"
+  },
+  {
+   "sec": "fact3",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 608.425,
+   "t1": 612.14,
+   "q": [
+    "a heavy neutron star glowing",
+    "a bright neutron star in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 18253,
+   "f1": 18364,
+   "shot": "eso_eso1532b#0",
+   "clip": "eso_eso1532b",
+   "ss": 3.74,
+   "crop": null,
+   "score": 0.3213,
+   "ref": "fact3/15",
+   "title": "Panning across the planetary nebula ESO 378-1"
+  },
+  {
+   "kind": "card",
+   "sec": "fact2",
+   "t0": 612.14,
+   "t1": 614.74,
+   "num": 2,
+   "ctitle": "PULSARS TURNED THE GALAXY INTO A *DETECTOR*",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 18364,
+   "f1": 18442,
+   "shot": "svs_4637-win1#0",
+   "clip": "svs_4637-win1",
+   "ss": 3.3,
+   "crop": null,
+   "score": 0.4113,
+   "ref": "fact2/0",
+   "title": "Pulsars and their Magnetic Field - Vacuum solution"
+  },
+  {
+   "sec": "fact2",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 614.74,
+   "t1": 619.575,
+   "q": [
+    "the Milky Way galaxy full of stars",
+    "a galaxy with flashing pulsars"
+   ],
+   "opt": "hold",
+   "trans": "soft",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 18442,
+   "f1": 18587,
+   "shot": "eso_eso1920b#0",
+   "clip": "eso_eso1920b",
+   "ss": 3.2,
+   "crop": null,
+   "score": 0.4313,
+   "ref": "fact2/1",
+   "title": "Pan across the Milky Way’s central region"
+  },
+  {
+   "sec": "fact2",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 619.575,
+   "t1": 624.332,
+   "q": [
+    "the Milky Way galaxy full of stars",
+    "a galaxy with flashing pulsars"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 18587,
+   "f1": 18730,
+   "shot": "esahubble_heic1525a-win2#0",
+   "clip": "esahubble_heic1525a-win2",
+   "ss": 0.37,
+   "crop": null,
+   "score": 0.3793,
+   "ref": "fact2/2",
+   "title": "Appearances of the Refsdal supernova"
+  },
+  {
+   "sec": "fact2",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 624.332,
+   "t1": 627.041,
+   "q": [
+    "radio telescopes observing at night",
+    "a big radio dish at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 18730,
+   "f1": 18811,
+   "shot": "eso_Geminidstimelapse2#0",
+   "clip": "eso_Geminidstimelapse2",
+   "ss": 4.25,
+   "crop": null,
+   "score": 0.3428,
+   "ref": "fact2/3",
+   "title": "Star show at Paranal: Geminids time lapse"
+  },
+  {
+   "sec": "fact2",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 627.041,
+   "t1": 630.221,
+   "q": [
+    "radio telescopes observing at night",
+    "a big radio dish at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 18811,
+   "f1": 18907,
+   "shot": "eso_eso1502c#0",
+   "clip": "eso_eso1502c",
+   "ss": 4.01,
+   "crop": null,
+   "score": 0.3275,
+   "ref": "fact2/4",
+   "title": "The Next-Generation Transit Survey (NGTS) at Paranal"
+  },
+  {
+   "sec": "fact2",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 630.221,
+   "t1": 633.115,
+   "q": [
+    "radio telescopes observing at night",
+    "a big radio dish at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 18907,
+   "f1": 18993,
+   "shot": "eso_eso2607d#0",
+   "clip": "eso_eso2607d",
+   "ss": 4.17,
+   "crop": null,
+   "score": 0.3508,
+   "ref": "fact2/5",
+   "title": "Time-lapse of satellites over ESO’s Very Large Telescope"
+  },
+  {
+   "sec": "fact2",
+   "beat": 2,
+   "kind": "gfx",
+   "t0": 633.115,
+   "t1": 641.8935,
+   "gfx": "ripples",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 18993,
+   "f1": 19257,
+   "shot": "eso_eso1736b#0",
+   "clip": "eso_eso1736b",
+   "ss": 0.86,
+   "crop": null,
+   "score": 0.3613,
+   "ref": "fact2/6",
+   "title": "Zooming in on Ross 128"
+  },
+  {
+   "sec": "fact2",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 641.8935,
+   "t1": 645.233,
+   "q": [
+    "two black holes orbiting each other in a simulation",
+    "two colliding galaxies"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 19257,
+   "f1": 19357,
+   "shot": "eso_eso2408d#0",
+   "clip": "eso_eso2408d",
+   "ss": 5.43,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.4209,
+   "ref": "fact2/7",
+   "title": "Comparison of several stellar black holes in our galaxy"
+  },
+  {
+   "sec": "fact2",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 645.233,
+   "t1": 648.042,
+   "q": [
+    "two black holes orbiting each other in a simulation",
+    "two colliding galaxies"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 19357,
+   "f1": 19441,
+   "shot": "esahubble_potw2529a#0",
+   "clip": "esahubble_potw2529a",
+   "ss": 4.21,
+   "crop": null,
+   "score": 0.3608,
+   "ref": "fact2/8",
+   "title": "Pan: NGC 3285B"
+  },
+  {
+   "sec": "fact2",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 648.042,
+   "t1": 654.277,
+   "q": [
+    "two black holes orbiting each other in a simulation",
+    "two colliding galaxies"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 19441,
+   "f1": 19628,
+   "shot": "esahubble_heic2101a-win3#0",
+   "clip": "esahubble_heic2101a-win3",
+   "ss": 1.48,
+   "crop": [
+    0.0,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "score": 0.3924,
+   "ref": "fact2/9",
+   "title": "Hubble Showcases 6 Galaxy Mergers"
+  },
+  {
+   "sec": "fact2",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 654.277,
+   "t1": 656.665,
+   "q": [
+    "two black holes orbiting each other in a simulation",
+    "two colliding galaxies"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 19628,
+   "f1": 19700,
+   "shot": "esahubble_heic2101a-win2#0",
+   "clip": "esahubble_heic2101a-win2",
+   "ss": 3.42,
+   "crop": [
+    0.0,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "score": 0.3917,
+   "ref": "fact2/10",
+   "title": "Hubble Showcases 6 Galaxy Mergers"
+  },
+  {
+   "sec": "fact2",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 656.665,
+   "t1": 660.3009999999999,
+   "q": [
+    "two black holes orbiting each other in a simulation",
+    "two colliding galaxies"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 19700,
+   "f1": 19809,
+   "shot": "esahubble_heic2208b-win3#0",
+   "clip": "esahubble_heic2208b-win3",
+   "ss": 2.78,
+   "crop": null,
+   "score": 0.3861,
+   "ref": "fact2/11",
+   "title": "A Dazzling Hubble Collection of Supernova Host Galaxies"
+  },
+  {
+   "kind": "card",
+   "sec": "fact1",
+   "t0": 660.3009999999999,
+   "t1": 662.901,
+   "num": 1,
+   "ctitle": "ONE FLARE FORGED *GOLD*",
+   "n_total": 10,
+   "q": [
+    "a spinning pulsar with radio beams",
+    "slow flight through a star field"
+   ],
+   "trans": "dip",
+   "f0": 19809,
+   "f1": 19887,
+   "shot": "eso_cs0025f#0",
+   "clip": "eso_cs0025f",
+   "ss": 3.45,
+   "crop": null,
+   "score": 0.4115,
+   "ref": "fact1/0",
+   "title": "Artist's rendition of a Milky Way flythrough"
+  },
+  {
+   "sec": "fact1",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 662.901,
+   "t1": 666.2550000000001,
+   "q": [
+    "a glowing cloud fading in space",
+    "the afterglow of an explosion in space"
+   ],
+   "opt": "default",
+   "trans": "soft",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 19887,
+   "f1": 19988,
+   "shot": "esahubble_heic1517a#0",
+   "clip": "esahubble_heic1517a",
+   "ss": 3.94,
+   "crop": null,
+   "score": 0.3375,
+   "ref": "fact1/1",
+   "title": "Zooming in on the Lagoon Nebula"
+  },
+  {
+   "sec": "fact1",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 666.2550000000001,
+   "t1": 668.3520000000001,
+   "q": [
+    "a glowing cloud fading in space",
+    "the afterglow of an explosion in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 19988,
+   "f1": 20051,
+   "shot": "svs_30957#0",
+   "clip": "svs_30957",
+   "ss": 5.2,
+   "crop": null,
+   "score": 0.3383,
+   "ref": "fact1/2",
+   "title": "Flight Through the Orion Nebula in Visible and Infrared Light"
+  },
+  {
+   "sec": "fact1",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 668.3520000000001,
+   "t1": 670.987,
+   "q": [
+    "an animation of a glowing neutron star close-up",
+    "a neutron star with magnetic field lines"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 20051,
+   "f1": 20130,
+   "shot": "svs_15041-win2#0",
+   "clip": "svs_15041-win2",
+   "ss": 1.43,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3554,
+   "ref": "fact1/3",
+   "title": "NASA's Fermi Spies a Supercharged Supernova"
+  },
+  {
+   "sec": "fact1",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 670.987,
+   "t1": 677.11,
+   "q": [
+    "an animation of a glowing neutron star close-up",
+    "a neutron star with magnetic field lines"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 20130,
+   "f1": 20313,
+   "shot": "esahubble_heic1717b-win2#0",
+   "clip": "esahubble_heic1717b-win2",
+   "ss": 1.54,
+   "crop": null,
+   "score": 0.4307,
+   "ref": "fact1/4",
+   "title": "Neutron star merger animation ending with kilonova explosion"
+  },
+  {
+   "sec": "fact1",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 677.11,
+   "t1": 679.491,
+   "q": [
+    "an animation of a glowing neutron star close-up",
+    "a neutron star with magnetic field lines"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 20313,
+   "f1": 20385,
+   "shot": "svs_12994-win2#0",
+   "clip": "svs_12994-win2",
+   "ss": 3.34,
+   "crop": null,
+   "score": 0.3871,
+   "ref": "fact1/5",
+   "title": "NASA's Fermi Links Cosmic Neutrino to Monster Black Hole"
+  },
+  {
+   "sec": "fact1",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 679.491,
+   "t1": 682.736,
+   "q": [
+    "a magnetar ejecting material from its surface",
+    "a neutron star blasting out glowing matter"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 20385,
+   "f1": 20482,
+   "shot": "esawebb_weic2612a#0",
+   "clip": "esawebb_weic2612a",
+   "ss": 3.99,
+   "crop": null,
+   "score": 0.3008,
+   "ref": "fact1/6",
+   "title": "Pan video: M82 (Webb and Hubble image)"
+  },
+  {
+   "sec": "fact1",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 682.736,
+   "t1": 686.3,
+   "q": [
+    "a magnetar ejecting material from its surface",
+    "a neutron star blasting out glowing matter"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 20482,
+   "f1": 20589,
+   "shot": "esahubble_potw2448a#0",
+   "clip": "esahubble_potw2448a",
+   "ss": 3.83,
+   "crop": null,
+   "score": 0.2966,
+   "ref": "fact1/7",
+   "title": "Pan: NGC 2090"
+  },
+  {
+   "sec": "fact1",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 686.3,
+   "t1": 692.7165,
+   "q": [
+    "a magnetar ejecting material from its surface",
+    "a neutron star blasting out glowing matter"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 20589,
+   "f1": 20781,
+   "shot": "svs_5643#0",
+   "clip": "svs_5643",
+   "ss": 2.39,
+   "crop": null,
+   "score": 0.3211,
+   "ref": "fact1/8",
+   "title": "The Ring Current in Earth's Magnetosphere"
+  },
+  {
+   "sec": "fact1",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 692.7165,
+   "t1": 695.182,
+   "q": [
+    "a gamma-ray space telescope in orbit",
+    "the INTEGRAL satellite in space"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 20781,
+   "f1": 20855,
+   "shot": "svs_15051#2",
+   "clip": "svs_15051",
+   "ss": 7.55,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3812,
+   "ref": "fact1/9",
+   "title": "NASA's Swift Mission Gets a Boost"
+  },
+  {
+   "sec": "fact1",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 695.182,
+   "t1": 698.549,
+   "q": [
+    "a gamma-ray space telescope in orbit",
+    "the INTEGRAL satellite in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 20855,
+   "f1": 20956,
+   "shot": "svs_14786#0",
+   "clip": "svs_14786",
+   "ss": 3.92,
+   "crop": null,
+   "score": 0.3472,
+   "ref": "fact1/10",
+   "title": "Swift Spacecraft Animations: 2025"
+  },
+  {
+   "sec": "fact1",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 698.549,
+   "t1": 701.385,
+   "q": [
+    "a gamma-ray space telescope in orbit",
+    "the INTEGRAL satellite in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 20956,
+   "f1": 21042,
+   "shot": "svs_20266#0",
+   "clip": "svs_20266",
+   "ss": 4.18,
+   "crop": null,
+   "score": 0.3562,
+   "ref": "fact1/11",
+   "title": "NICER Payload Animations"
+  },
+  {
+   "sec": "fact1",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 701.385,
+   "t1": 704.443,
+   "q": [
+    "a gamma-ray space telescope in orbit",
+    "the INTEGRAL satellite in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 21042,
+   "f1": 21133,
+   "shot": "svs_13235#0",
+   "clip": "svs_13235",
+   "ss": 1.72,
+   "crop": null,
+   "score": 0.3451,
+   "ref": "fact1/12",
+   "title": "NASA's Nancy Grace Roman Space Telescope's Wide Field Instrument"
+  },
+  {
+   "sec": "fact1",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 704.443,
+   "t1": 708.0450000000001,
+   "q": [
+    "glowing gold particles in space",
+    "a cloud of heavy elements glowing"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 21133,
+   "f1": 21241,
+   "shot": "esahubble_potw2136a-win1#0",
+   "clip": "esahubble_potw2136a-win1",
+   "ss": 3.3,
+   "crop": null,
+   "score": 0.372,
+   "ref": "fact1/13",
+   "title": "A Glittering Globular Cluster"
+  },
+  {
+   "sec": "fact1",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 708.0450000000001,
+   "t1": 713.815,
+   "q": [
+    "glowing gold particles in space",
+    "a cloud of heavy elements glowing"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 21241,
+   "f1": 21414,
+   "shot": "svs_12901#0",
+   "clip": "svs_12901",
+   "ss": 2.73,
+   "crop": null,
+   "score": 0.3409,
+   "ref": "fact1/14",
+   "title": "NASA Spacecraft Finds New Magnetic Process in Turbulent Space"
+  },
+  {
+   "sec": "fact1",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 713.815,
+   "t1": 716.235,
+   "q": [
+    "glowing gold particles in space",
+    "a cloud of heavy elements glowing"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 21414,
+   "f1": 21487,
+   "shot": "eso_eso2510a#0",
+   "clip": "eso_eso2510a",
+   "ss": 0.54,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.3509,
+   "ref": "fact1/15",
+   "title": "Astronomers capture galaxy in thousands of colours | ESO News"
+  },
+  {
+   "sec": "fact1",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 716.235,
+   "t1": 718.7810000000001,
+   "q": [
+    "planet Earth seen from space",
+    "Earth glowing in sunlight"
+   ],
+   "opt": "default",
+   "trans": "flare",
+   "move": "impact",
+   "rate": 0.12,
+   "f0": 21487,
+   "f1": 21563,
+   "shot": "eso_eso1822f#0",
+   "clip": "eso_eso1822f",
+   "ss": 4.34,
+   "crop": null,
+   "score": 0.3248,
+   "ref": "fact1/16",
+   "title": "Artist's impression of the 2 July 2019 total solar eclipse"
+  },
+  {
+   "sec": "fact1",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 718.7810000000001,
+   "t1": 724.1450000000001,
+   "q": [
+    "the Milky Way galaxy seen from above",
+    "our galaxy's spiral arms"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 21563,
+   "f1": 21724,
+   "shot": "esahubble_potm2603a#0",
+   "clip": "esahubble_potm2603a",
+   "ss": 2.93,
+   "crop": null,
+   "score": 0.3931,
+   "ref": "fact1/17",
+   "title": "Pan Video: IC 486"
+  },
+  {
+   "sec": "fact1",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 724.1450000000001,
+   "t1": 726.654,
+   "q": [
+    "the Milky Way galaxy seen from above",
+    "our galaxy's spiral arms"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 21724,
+   "f1": 21800,
+   "shot": "esahubble_potw2518a#0",
+   "clip": "esahubble_potw2518a",
+   "ss": 4.36,
+   "crop": null,
+   "score": 0.4024,
+   "ref": "fact1/18",
+   "title": "Pan video: NGC 3596"
+  },
+  {
+   "sec": "fact1",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 726.654,
+   "t1": 733.984,
+   "q": [
+    "the Crab Nebula",
+    "zooming into the Crab Nebula"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 21800,
+   "f1": 22020,
+   "shot": "esawebb_weic2417a#0",
+   "clip": "esawebb_weic2417a",
+   "ss": 1.95,
+   "crop": null,
+   "score": 0.4517,
+   "ref": "fact1/19",
+   "title": "Pan of the Crab Nebula (MIRI and NIRCam image)"
+  },
+  {
+   "sec": "fact1",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 733.984,
+   "t1": 737.493,
+   "q": [
+    "a pulsar spinning with beams",
+    "a neutron star rotating in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 22020,
+   "f1": 22125,
+   "shot": "svs_20409#0",
+   "clip": "svs_20409",
+   "ss": 3.85,
+   "crop": null,
+   "score": 0.384,
+   "ref": "fact1/20",
+   "title": "The Heliosphere and Galactic Cosmic Rays"
+  },
+  {
+   "sec": "fact1",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 737.493,
+   "t1": 740.5550000000001,
+   "q": [
+    "a pulsar spinning with beams",
+    "a neutron star rotating in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 22125,
+   "f1": 22217,
+   "shot": "esahubble_heic1526a#0",
+   "clip": "esahubble_heic1526a",
+   "ss": 2.72,
+   "crop": null,
+   "score": 0.3559,
+   "ref": "fact1/21",
+   "title": "Zooming on HH 24"
+  },
+  {
+   "sec": "fact1",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 740.5550000000001,
+   "t1": 743.9905,
+   "q": [
+    "a pulsar spinning with beams",
+    "a neutron star rotating in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 22217,
+   "f1": 22320,
+   "shot": "esawebb_potm2501a#0",
+   "clip": "esawebb_potm2501a",
+   "ss": 3.9,
+   "crop": null,
+   "score": 0.3696,
+   "ref": "fact1/22",
+   "title": "Pan Video: HH 30"
+  },
+  {
+   "sec": "fact1",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 743.9905,
+   "t1": 750.385,
+   "q": [
+    "a slow zoom into a glowing neutron star",
+    "the surface of a neutron star"
+   ],
+   "opt": "hold",
+   "trans": "dip",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 22320,
+   "f1": 22512,
+   "shot": "eso_eso1641b-win1#0",
+   "clip": "eso_eso1641b-win1",
+   "ss": 0.9,
+   "crop": null,
+   "score": 0.3673,
+   "ref": "fact1/23",
+   "title": "Zooming in on the very faint neutron star RX J1856.5-3754"
+  },
+  {
+   "sec": "fact1",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 750.385,
+   "t1": 756.743,
+   "q": [
+    "a slow zoom into a glowing neutron star",
+    "the surface of a neutron star"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 22512,
+   "f1": 22702,
+   "shot": "eso_eso1723b#0",
+   "clip": "eso_eso1723b",
+   "ss": 1.07,
+   "crop": null,
+   "score": 0.3116,
+   "ref": "fact1/24",
+   "title": "Zooming in on the Orion Nebula"
+  },
+  {
+   "sec": "fact1",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 756.743,
+   "t1": 762.9820000000001,
+   "q": [
+    "a slow zoom into a glowing neutron star",
+    "the surface of a neutron star"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 22702,
+   "f1": 22889,
+   "shot": "esahubble_heic2020b#0",
+   "clip": "esahubble_heic2020b",
+   "ss": 1.13,
+   "crop": null,
+   "score": 0.4071,
+   "ref": "fact1/25",
+   "title": "Zooming Into the Stingray Nebula"
+  }
+ ],
+ "ovl": [
+  {
+   "kind": "num",
+   "t0": 7.71,
+   "t1": 13.451,
+   "num": {
+    "template": "hero",
+    "value": "1,000,000,000",
+    "from": "0",
+    "unit": "tons",
+    "kicker": "one teaspoon",
+    "land": "अरब",
+    "land_t": 3.5409999999999995,
+    "count_s": 1.3,
+    "dur": 5.7410000000000005
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 12.69,
+   "t1": 17.41,
+   "num": {
+    "template": "gauge",
+    "value": "716",
+    "from": "0",
+    "max": "716",
+    "unit": "spins per second",
+    "kicker": "up to",
+    "land": "सात सौ",
+    "land_t": 2.5200000000000014,
+    "count_s": 1.3,
+    "dur": 4.720000000000001
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "NEUTRON STAR",
+     "t": 0.3
+    },
+    {
+     "text": "*THE HEART OF A DEAD STAR*",
+     "t": 3.159
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 0.19999999999999998,
+   "t_last": 3.159,
+   "t1": 4.239
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "THE SIZE OF A CITY",
+     "t": 4.459
+    },
+    {
+     "text": "*HEAVIER THAN THE SUN*",
+     "t": 6.468
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 4.359,
+   "t_last": 6.468,
+   "t1": 7.59
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "WHEN THEY COLLIDE",
+     "t": 21.741
+    },
+    {
+     "text": "*THEY MAKE GOLD*",
+     "t": 22.761999999999997
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 21.641,
+   "t_last": 22.761999999999997,
+   "t1": 26.761999999999997
+  },
+  {
+   "kind": "num",
+   "t0": 39.623999999999995,
+   "t1": 43.123999999999995,
+   "num": {
+    "template": "name",
+    "value": "THE COURT ASTRONOMERS",
+    "sub": "China · Song dynasty · 1054",
+    "land_t": 1.2999999999999972,
+    "count_s": 1.1499999999999972,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 46.335,
+   "t1": 50.160000000000004,
+   "num": {
+    "template": "hero",
+    "value": "23",
+    "from": "0",
+    "unit": "days, even in daylight",
+    "kicker": "it shone for",
+    "land": "तेईस",
+    "land_t": 1.625,
+    "count_s": 1.3,
+    "dur": 3.825000000000003
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 65.25900000000001,
+   "t1": 67.87700000000001,
+   "num": {
+    "template": "line",
+    "value": "6,500",
+    "from": "0",
+    "unit": "light-years",
+    "left": "Earth",
+    "right": "Crab Nebula",
+    "land": "साढ़े छह",
+    "land_t": 0.41799999999999216,
+    "count_s": 0.26799999999999213,
+    "dur": 2.617999999999995
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 80.421,
+   "t1": 82.62100000000001,
+   "num": {
+    "template": "hero",
+    "value": "30",
+    "from": "0",
+    "unit": "spins every second",
+    "kicker": "still today",
+    "land": "तीस",
+    "dur": 2.200000000000003,
+    "land_t": 2.2989999999999924,
+    "count_s": 1.3
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "HEAVIER THAN THE SUN",
+     "t": 76.427
+    },
+    {
+     "text": "*ONLY 20 KM WIDE*",
+     "t": 78.842
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 76.32700000000001,
+   "t_last": 78.842,
+   "t1": 80.301
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "WHERE DOES",
+     "t": 93.954
+    },
+    {
+     "text": "*GOLD COME FROM*",
+     "t": 94.314
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 93.854,
+   "t_last": 94.314,
+   "t1": 95.733
+  },
+  {
+   "kind": "footer",
+   "t0": 100.233,
+   "t1": 156.12900000000002,
+   "left": "FACT 10 / 10",
+   "right": "PREDICTED IN 1934, BEFORE ANYONE SAW ONE"
+  },
+  {
+   "kind": "num",
+   "t0": 104.966,
+   "t1": 108.466,
+   "num": {
+    "template": "name",
+    "value": "JAMES CHADWICK",
+    "sub": "physicist · England · 1932",
+    "land_t": 1.2999999999999972,
+    "count_s": 1.1499999999999972,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 119.478,
+   "t1": 122.978,
+   "num": {
+    "template": "name",
+    "value": "WALTER BAADE",
+    "sub": "astronomer · Mount Wilson Observatory",
+    "land_t": 1.2999999999999972,
+    "count_s": 1.1499999999999972,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 121.974,
+   "t1": 125.474,
+   "num": {
+    "template": "name",
+    "value": "FRITZ ZWICKY",
+    "sub": "astrophysicist · Caltech",
+    "land_t": 1.2999999999999972,
+    "count_s": 1.1499999999999972,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 151.69500000000002,
+   "t1": 154.24500000000003,
+   "num": {
+    "template": "line",
+    "value": "33",
+    "from": "0",
+    "unit": "years",
+    "left": "1934",
+    "right": "1967",
+    "land": "तैंतीस",
+    "land_t": 0.35,
+    "count_s": 0.19999999999999998,
+    "dur": 2.5500000000000114
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "WHEN A BIG STAR EXPLODES",
+     "t": 126.39699999999999
+    },
+    {
+     "text": "*A BALL OF NEUTRONS*",
+     "t": 133.155
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 126.297,
+   "t_last": 133.155,
+   "t1": 136.2675
+  },
+  {
+   "kind": "footer",
+   "t0": 158.729,
+   "t1": 253.30900000000003,
+   "left": "FACT 9 / 10",
+   "right": "A STUDENT FOUND THE FIRST, LGM-1"
+  },
+  {
+   "kind": "num",
+   "t0": 163.622,
+   "t1": 167.122,
+   "num": {
+    "template": "name",
+    "value": "JOCELYN BELL",
+    "sub": "PhD student · Cambridge",
+    "land_t": 1.3000000000000114,
+    "count_s": 1.1500000000000115,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 168.905,
+   "t1": 171.105,
+   "num": {
+    "template": "hero",
+    "value": "57",
+    "from": "0",
+    "unit": "tennis courts",
+    "kicker": "the telescope covered",
+    "land": "सत्तावन",
+    "dur": 2.1999999999999886,
+    "land_t": 0.35,
+    "count_s": 0.19999999999999998
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 172.353,
+   "t1": 175.4,
+   "num": {
+    "template": "hero",
+    "value": "2,048",
+    "from": "0",
+    "unit": "antennas",
+    "land": "दो हज़ार",
+    "land_t": 0.8470000000000084,
+    "count_s": 0.6970000000000084,
+    "dur": 3.046999999999997
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 176.25400000000002,
+   "t1": 179.882,
+   "num": {
+    "template": "hero",
+    "value": "30",
+    "from": "0",
+    "unit": "metres of chart paper",
+    "kicker": "every day",
+    "land": "तीस मीटर",
+    "land_t": 1.4279999999999973,
+    "count_s": 1.2779999999999974,
+    "dur": 3.627999999999986
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 198.417,
+   "t1": 202.463,
+   "num": {
+    "template": "hero",
+    "value": "1.337",
+    "from": "0",
+    "unit": "seconds between pulses",
+    "land": "सात second",
+    "land_t": 1.8460000000000036,
+    "count_s": 1.3,
+    "dur": 4.045999999999992
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 235.15300000000002,
+   "t1": 238.65300000000002,
+   "num": {
+    "template": "name",
+    "value": "ANTONY HEWISH & MARTIN RYLE",
+    "sub": "Nobel Prize in Physics · 1974",
+    "land_t": 1.3000000000000114,
+    "count_s": 1.1500000000000115,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 239.716,
+   "t1": 244.795,
+   "num": {
+    "template": "hero",
+    "value": "3,000,000",
+    "from": "0",
+    "unit": "dollars",
+    "kicker": "44 years later",
+    "land": "तीस लाख",
+    "land_t": 2.8789999999999907,
+    "count_s": 1.3,
+    "dur": 5.078999999999979
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "LGM-1",
+     "t": 206.98700000000002
+    },
+    {
+     "text": "*\"LITTLE GREEN MEN\"*",
+     "t": 208.69400000000002
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 206.88700000000003,
+   "t_last": 208.69400000000002,
+   "t1": 210.80800000000002
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "NOT ALIENS",
+     "t": 211.02800000000002
+    },
+    {
+     "text": "*THE FIRST PULSAR*",
+     "t": 212.44400000000002
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 210.92800000000003,
+   "t_last": 212.44400000000002,
+   "t1": 216.275
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "SHE GAVE",
+     "t": 245.184
+    },
+    {
+     "text": "*ALL OF IT AWAY*",
+     "t": 246.35600000000002
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 245.084,
+   "t_last": 246.35600000000002,
+   "t1": 248.27200000000002
+  },
+  {
+   "kind": "footer",
+   "t0": 255.90900000000002,
+   "t1": 316.79600000000005,
+   "left": "FACT 8 / 10",
+   "right": "THE FIRST PLANETS CIRCLED A DEAD STAR"
+  },
+  {
+   "kind": "num",
+   "t0": 267.23400000000004,
+   "t1": 270.73400000000004,
+   "num": {
+    "template": "name",
+    "value": "ALEKSANDER WOLSZCZAN",
+    "sub": "astronomer · Arecibo Observatory",
+    "land_t": 1.3000000000000114,
+    "count_s": 1.1500000000000115,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 270.462,
+   "t1": 274.799,
+   "num": {
+    "template": "gauge",
+    "value": "161",
+    "from": "0",
+    "max": "200",
+    "unit": "spins per second",
+    "land": "इकसठ",
+    "land_t": 2.1370000000000005,
+    "count_s": 1.3,
+    "dur": 4.336999999999989
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 281.666,
+   "t1": 285.166,
+   "num": {
+    "template": "name",
+    "value": "DALE FRAIL",
+    "sub": "radio astronomer · NRAO",
+    "land_t": 1.3000000000000114,
+    "count_s": 1.1500000000000115,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 295.25,
+   "t1": 298.355,
+   "num": {
+    "template": "scale",
+    "value": "4",
+    "from": "1",
+    "unit": "times Earth's mass",
+    "kicker": "two planets",
+    "land": "चार गुना",
+    "land_t": 0.9050000000000296,
+    "count_s": 0.7550000000000295,
+    "dur": 3.105000000000018
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "PLANETS",
+     "t": 284.743
+    },
+    {
+     "text": "*AROUND A DEAD STAR*",
+     "t": 287.007
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 284.643,
+   "t_last": 287.007,
+   "t1": 290.27000000000004
+  },
+  {
+   "kind": "footer",
+   "t0": 319.396,
+   "t1": 374.84900000000005,
+   "left": "FACT 7 / 10",
+   "right": "A CITY-SIZED STAR SPINNING 716 TIMES A SECOND"
+  },
+  {
+   "kind": "num",
+   "t0": 331.267,
+   "t1": 338.738,
+   "num": {
+    "template": "hero",
+    "value": "1,000,000,000",
+    "from": "0",
+    "unit": "tons",
+    "kicker": "one teaspoon",
+    "foot": "according to NASA",
+    "land": "अरब",
+    "land_t": 5.271000000000015,
+    "count_s": 1.3,
+    "dur": 7.471000000000004
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 350.342,
+   "t1": 353.842,
+   "num": {
+    "template": "name",
+    "value": "JASON HESSELS",
+    "sub": "student · McGill University",
+    "land_t": 1.3000000000000114,
+    "count_s": 1.1500000000000115,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 353.791,
+   "t1": 357.999,
+   "num": {
+    "template": "gauge",
+    "value": "716",
+    "from": "0",
+    "max": "716",
+    "unit": "spins per second",
+    "kicker": "the fastest known",
+    "land": "सोलह",
+    "land_t": 2.008000000000038,
+    "count_s": 1.3,
+    "dur": 4.208000000000027
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 368.697,
+   "t1": 373.347,
+   "num": {
+    "template": "hero",
+    "value": "32",
+    "from": "0",
+    "unit": "km across, at most",
+    "land": "बत्तीस",
+    "land_t": 2.4499999999999886,
+    "count_s": 1.3,
+    "dur": 4.649999999999977
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "ANY BIGGER",
+     "t": 364.344
+    },
+    {
+     "text": "*IT WOULD FLY APART*",
+     "t": 366.701
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 364.24399999999997,
+   "t_last": 366.701,
+   "t1": 368.375
+  },
+  {
+   "kind": "footer",
+   "t0": 377.449,
+   "t1": 439.103,
+   "left": "FACT 6 / 10",
+   "right": "THE STRONGEST MAGNETS IN THE UNIVERSE"
+  },
+  {
+   "kind": "num",
+   "t0": 384.223,
+   "t1": 390.614,
+   "num": {
+    "template": "scale",
+    "value": "1,000,000,000,000,000",
+    "from": "1",
+    "unit": "times Earth's magnetic field",
+    "land": "दस लाख अरब",
+    "log": true,
+    "land_t": 4.190999999999974,
+    "count_s": 1.3,
+    "dur": 6.390999999999963
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 401.825,
+   "t1": 408.925,
+   "num": {
+    "template": "hero",
+    "value": "150,000",
+    "from": "0",
+    "unit": "years of sunlight",
+    "kicker": "in a tenth of a second",
+    "land": "एक लाख पचास",
+    "land_t": 4.900000000000034,
+    "count_s": 1.3,
+    "dur": 7.100000000000023
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 422.515,
+   "t1": 426.328,
+   "num": {
+    "template": "hero",
+    "value": "10",
+    "from": "0",
+    "unit": "light-years",
+    "kicker": "if it had been within",
+    "land": "दस light-years",
+    "land_t": 1.6129999999999995,
+    "count_s": 1.3,
+    "dur": 3.812999999999988
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "THE STRONGEST",
+     "t": 381.065
+    },
+    {
+     "text": "*MAGNETS IN THE UNIVERSE*",
+     "t": 382.041
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 380.965,
+   "t_last": 382.041,
+   "t1": 383.925
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "SATELLITES",
+     "t": 412.391
+    },
+    {
+     "text": "*BLINDED*",
+     "t": 415.026
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 412.291,
+   "t_last": 415.026,
+   "t1": 418.498
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "AN AFTERGLOW",
+     "t": 432.221
+    },
+    {
+     "text": "*NOBODY UNDERSTOOD*",
+     "t": 437.329
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 432.121,
+   "t_last": 437.329,
+   "t1": 439.103
+  },
+  {
+   "kind": "footer",
+   "t0": 441.703,
+   "t1": 497.56600000000003,
+   "left": "FACT 5 / 10",
+   "right": "WHEN THEY COLLIDE, THEY MAKE GOLD"
+  },
+  {
+   "kind": "num",
+   "t0": 448.535,
+   "t1": 451.385,
+   "num": {
+    "template": "hero",
+    "value": "100",
+    "from": "0",
+    "unit": "seconds of waves",
+    "land": "सौ second",
+    "land_t": 0.6499999999999773,
+    "count_s": 0.49999999999997724,
+    "dur": 2.849999999999966
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 456.987,
+   "t1": 460.429,
+   "num": {
+    "template": "hero",
+    "value": "1.7",
+    "from": "0",
+    "unit": "seconds later",
+    "kicker": "gamma rays",
+    "land": "सात second",
+    "land_t": 1.2419999999999618,
+    "count_s": 1.091999999999962,
+    "dur": 3.4419999999999504
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 469.619,
+   "t1": 472.16900000000004,
+   "num": {
+    "template": "line",
+    "value": "130,000,000",
+    "from": "0",
+    "unit": "light-years",
+    "left": "Earth",
+    "right": "NGC 4993",
+    "land": "तेरह करोड़",
+    "land_t": 0.35,
+    "count_s": 0.19999999999999998,
+    "dur": 2.5500000000000114
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 473.346,
+   "t1": 476.416,
+   "num": {
+    "template": "hero",
+    "value": "70",
+    "from": "0",
+    "unit": "observatories",
+    "land": "सत्तर",
+    "land_t": 0.8700000000000045,
+    "count_s": 0.7200000000000045,
+    "dur": 3.069999999999993
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 489.534,
+   "t1": 495.925,
+   "num": {
+    "template": "scale",
+    "value": "10",
+    "from": "1",
+    "unit": "Earths of gold and platinum",
+    "kicker": "one estimate",
+    "land": "दस गुना",
+    "land_t": 4.191000000000031,
+    "count_s": 1.3,
+    "dur": 6.3910000000000196
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*GOLD*",
+     "t": 488.42
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 488.32,
+   "t_last": 488.42,
+   "t1": 489.414
+  },
+  {
+   "kind": "footer",
+   "t0": 500.166,
+   "t1": 557.616,
+   "left": "FACT 4 / 10",
+   "right": "A RADIO FLASH FROM INSIDE OUR GALAXY"
+  },
+  {
+   "kind": "num",
+   "t0": 504.316,
+   "t1": 507.341,
+   "num": {
+    "template": "hero",
+    "value": "0.001",
+    "from": "1",
+    "unit": "seconds",
+    "kicker": "each flash lasts",
+    "land": "millisecond",
+    "land_t": 0.8250000000000455,
+    "count_s": 0.6750000000000455,
+    "dur": 3.025000000000034
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 531.227,
+   "t1": 534.727,
+   "num": {
+    "template": "name",
+    "value": "CHRISTOPHER BOCHENEK",
+    "sub": "student · Caltech",
+    "land_t": 1.2999999999999545,
+    "count_s": 1.1499999999999546,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 541.851,
+   "t1": 549.205,
+   "num": {
+    "template": "hero",
+    "value": "30",
+    "from": "0",
+    "unit": "seconds of sunlight",
+    "kicker": "in one millisecond",
+    "land": "तीस second",
+    "land_t": 5.153999999999996,
+    "count_s": 1.3,
+    "dur": 7.354000000000042
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 548.979,
+   "t1": 551.529,
+   "num": {
+    "template": "line",
+    "value": "13",
+    "from": "0",
+    "unit": "years",
+    "left": "2007",
+    "right": "2020",
+    "land": "तेरह साल",
+    "land_t": 0.35,
+    "count_s": 0.19999999999999998,
+    "dur": 2.5499999999999545
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "FROM INSIDE",
+     "t": 533.491
+    },
+    {
+     "text": "*THE MILKY WAY*",
+     "t": 534.861
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 533.391,
+   "t_last": 534.861,
+   "t1": 536.5905
+  },
+  {
+   "kind": "footer",
+   "t0": 560.216,
+   "t1": 612.14,
+   "left": "FACT 3 / 10",
+   "right": "THE HEAVIEST ONE IS EATING ITS PARTNER"
+  },
+  {
+   "kind": "num",
+   "t0": 577.671,
+   "t1": 581.171,
+   "num": {
+    "template": "name",
+    "value": "ROGER ROMANI & ALEX FILIPPENKO",
+    "sub": "Stanford University · UC Berkeley",
+    "land_t": 1.2999999999999545,
+    "count_s": 1.1499999999999546,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 582.837,
+   "t1": 586.7090000000001,
+   "num": {
+    "template": "gauge",
+    "value": "707",
+    "from": "0",
+    "max": "716",
+    "unit": "spins per second",
+    "land": "सात सौ सात",
+    "land_t": 1.6720000000000255,
+    "count_s": 1.3,
+    "dur": 3.872000000000071
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 590.442,
+   "t1": 594.7890000000001,
+   "num": {
+    "template": "scale",
+    "value": "20",
+    "from": "1",
+    "unit": "Jupiter masses left",
+    "kicker": "the companion",
+    "land": "बीस गुना",
+    "land_t": 2.147000000000048,
+    "count_s": 1.3,
+    "dur": 4.347000000000094
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 597.384,
+   "t1": 603.8330000000001,
+   "num": {
+    "template": "hero",
+    "value": "2.35",
+    "from": "1",
+    "unit": "suns",
+    "kicker": "the heaviest known",
+    "land": "पाँच गुना",
+    "land_t": 4.249000000000024,
+    "count_s": 1.3,
+    "dur": 6.449000000000069
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "ANY HEAVIER",
+     "t": 564.506
+    },
+    {
+     "text": "*IT BECOMES A BLACK HOLE*",
+     "t": 567.977
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 564.406,
+   "t_last": 567.977,
+   "t1": 570.97
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "ONE GIANT",
+     "t": 609.354
+    },
+    {
+     "text": "*ATOMIC NUCLEUS*",
+     "t": 610.562
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 609.254,
+   "t_last": 610.562,
+   "t1": 612.04
+  },
+  {
+   "kind": "footer",
+   "t0": 614.74,
+   "t1": 660.3009999999999,
+   "left": "FACT 2 / 10",
+   "right": "PULSARS TURNED THE GALAXY INTO A DETECTOR"
+  },
+  {
+   "kind": "num",
+   "t0": 624.51,
+   "t1": 626.51,
+   "num": {
+    "template": "line",
+    "value": "15",
+    "from": "0",
+    "unit": "years",
+    "left": "2008",
+    "right": "2023",
+    "land": "पंद्रह",
+    "dur": 2.0,
+    "land_t": 0.35,
+    "count_s": 0.19999999999999998
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 627.586,
+   "t1": 631.1790000000001,
+   "num": {
+    "template": "hero",
+    "value": "68",
+    "from": "0",
+    "unit": "pulsars",
+    "land": "अड़सठ",
+    "land_t": 1.393000000000029,
+    "count_s": 1.2430000000000292,
+    "dur": 3.5930000000000746
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "THE GALAXY",
+     "t": 621.398
+    },
+    {
+     "text": "*AS A DETECTOR*",
+     "t": 623.186
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 621.298,
+   "t_last": 623.186,
+   "t1": 624.39
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "WAVES",
+     "t": 650.388
+    },
+    {
+     "text": "*YEARS LONG*",
+     "t": 651.015
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 650.288,
+   "t_last": 651.015,
+   "t1": 654.277
+  },
+  {
+   "kind": "footer",
+   "t0": 662.901,
+   "t1": 762.9820000000001,
+   "left": "FACT 1 / 10",
+   "right": "ONE FLARE FORGED GOLD"
+  },
+  {
+   "kind": "num",
+   "t0": 672.914,
+   "t1": 676.414,
+   "num": {
+    "template": "name",
+    "value": "ANIRUDH PATEL & BRIAN METZGER",
+    "sub": "Columbia University",
+    "land_t": 1.2999999999999545,
+    "count_s": 1.1499999999999546,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 686.509,
+   "t1": 692.123,
+   "num": {
+    "template": "hero",
+    "value": "10",
+    "from": "0",
+    "unit": "minutes after the flash",
+    "land": "दस मिनट",
+    "land_t": 3.4139999999999873,
+    "count_s": 1.3,
+    "dur": 5.614000000000033
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 695.391,
+   "t1": 698.891,
+   "num": {
+    "template": "name",
+    "value": "ERIC BURNS",
+    "sub": "astrophysicist · Louisiana State University",
+    "land_t": 1.2999999999999545,
+    "count_s": 1.1499999999999546,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 718.9870000000001,
+   "t1": 724.902,
+   "num": {
+    "template": "progress",
+    "value": "10",
+    "from": "0",
+    "max": "100",
+    "unit": "%",
+    "left": "magnetar flares",
+    "right": "all of the galaxy's",
+    "kicker": "up to",
+    "land": "दस percent",
+    "land_t": 3.714999999999918,
+    "count_s": 1.3,
+    "dur": 5.914999999999964
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "GOLD · PLATINUM",
+     "t": 709.636
+    },
+    {
+     "text": "*URANIUM*",
+     "t": 711.389
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 709.536,
+   "t_last": 711.389,
+   "t1": 713.815
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*A THIRD OF AN EARTH*",
+     "t": 717.1640000000001
+    },
+    {
+     "text": "OF HEAVY ELEMENTS",
+     "t": 717.907
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 717.0640000000001,
+   "t_last": 717.907,
+   "t1": 718.8670000000001
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "WHAT LIES AT THE HEART",
+     "t": 749.312
+    },
+    {
+     "text": "*OF A NEUTRON STAR?*",
+     "t": 754.653
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 749.212,
+   "t_last": 754.653,
+   "t1": 756.743
+  },
+  {
+   "kind": "keyline",
+   "t0": 36.028999999999996,
+   "t1": 38.629,
+   "text": "4 JULY 1054"
+  },
+  {
+   "kind": "keyline",
+   "t0": 52.940999999999995,
+   "t1": 55.541,
+   "text": "A GUEST STAR"
+  },
+  {
+   "kind": "keyline",
+   "t0": 63.808,
+   "t1": 66.408,
+   "text": "CRAB NEBULA"
+  },
+  {
+   "kind": "keyline",
+   "t0": 72.05000000000001,
+   "t1": 74.65,
+   "text": "SUPERNOVA"
+  },
+  {
+   "kind": "keyline",
+   "t0": 85.618,
+   "t1": 88.21799999999999,
+   "text": "NEUTRON STAR"
+  },
+  {
+   "kind": "keyline",
+   "t0": 102.86399999999999,
+   "t1": 105.46399999999998,
+   "text": "1932"
+  },
+  {
+   "kind": "keyline",
+   "t0": 111.456,
+   "t1": 114.056,
+   "text": "NEUTRON"
+  },
+  {
+   "kind": "keyline",
+   "t0": 141.711,
+   "t1": 144.311,
+   "text": "\"SUPERNOVA\""
+  },
+  {
+   "kind": "keyline",
+   "t0": 158.729,
+   "t1": 161.329,
+   "text": "1967"
+  },
+  {
+   "kind": "keyline",
+   "t0": 190.859,
+   "t1": 193.459,
+   "text": "\"SCRUFF\""
+  },
+  {
+   "kind": "keyline",
+   "t0": 226.91000000000003,
+   "t1": 228.74900000000002,
+   "text": "BAADE AND ZWICKY WERE RIGHT"
+  },
+  {
+   "kind": "keyline",
+   "t0": 228.84900000000002,
+   "t1": 231.449,
+   "text": "NOBEL PRIZE 1974"
+  },
+  {
+   "kind": "keyline",
+   "t0": 343.156,
+   "t1": 345.75600000000003,
+   "text": "TERZAN 5"
+  },
+  {
+   "kind": "keyline",
+   "t0": 391.038,
+   "t1": 393.63800000000003,
+   "text": "27 DECEMBER 2004"
+  },
+  {
+   "kind": "keyline",
+   "t0": 441.703,
+   "t1": 444.303,
+   "text": "17 AUGUST 2017"
+  },
+  {
+   "kind": "keyline",
+   "t0": 483.562,
+   "t1": 486.16200000000003,
+   "text": "KILONOVA"
+  },
+  {
+   "kind": "keyline",
+   "t0": 500.166,
+   "t1": 502.766,
+   "text": "2007"
+  },
+  {
+   "kind": "keyline",
+   "t0": 514.835,
+   "t1": 516.6039999999999,
+   "text": "FAST RADIO BURSTS"
+  },
+  {
+   "kind": "keyline",
+   "t0": 516.704,
+   "t1": 519.304,
+   "text": "28 APRIL 2020"
+  },
+  {
+   "kind": "keyline",
+   "t0": 596.235,
+   "t1": 598.835,
+   "text": "\"BLACK WIDOW\""
+  },
+  {
+   "kind": "keyline",
+   "t0": 642.18,
+   "t1": 644.78,
+   "text": "JUNE 2023"
+  }
+ ],
+ "caps": [
+  {
+   "sec": "hook",
+   "t": 0.0,
+   "end": 35.58,
+   "text": "Neutron star: the surviving heart of a dead star",
+   "big": false,
+   "t1": 4.459
+  },
+  {
+   "sec": "hook",
+   "t": 4.459,
+   "end": 35.58,
+   "text": "Only as big as a city, yet heavier than the Sun",
+   "big": false,
+   "t1": 7.71
+  },
+  {
+   "sec": "hook",
+   "t": 7.71,
+   "end": 35.58,
+   "text": "One teaspoon of it would weigh about a billion tons on Earth",
+   "big": false,
+   "t1": 12.69
+  },
+  {
+   "sec": "hook",
+   "t": 12.69,
+   "end": 35.58,
+   "text": "Some spin more than 700 times a second",
+   "big": false,
+   "t1": 17.66
+  },
+  {
+   "sec": "hook",
+   "t": 17.66,
+   "end": 35.58,
+   "text": "And when two neutron stars collide, the universe makes gold",
+   "big": false,
+   "t1": 24.189999999999998
+  },
+  {
+   "sec": "hook",
+   "t": 24.189999999999998,
+   "end": 35.58,
+   "text": "But their story begins about a thousand years ago...",
+   "big": false,
+   "t1": 31.145
+  },
+  {
+   "sec": "hook",
+   "t": 31.145,
+   "end": 35.58,
+   "text": "...with a \"guest star\" that suddenly woke up in the sky",
+   "big": false,
+   "t1": 35.879999999999995
+  },
+  {
+   "sec": "cold_open",
+   "t": 36.028999999999996,
+   "end": 95.533,
+   "text": "4 JULY 1054",
+   "big": true,
+   "t1": 39.623999999999995
+  },
+  {
+   "sec": "cold_open",
+   "t": 39.623999999999995,
+   "end": 95.533,
+   "text": "In China, the emperor's court astronomers saw a new star in the eastern sky at dawn",
+   "big": false,
+   "t1": 46.335
+  },
+  {
+   "sec": "cold_open",
+   "t": 46.335,
+   "end": 95.533,
+   "text": "It was so bright that for 23 days it could be seen even in daylight",
+   "big": false,
+   "t1": 52.940999999999995
+  },
+  {
+   "sec": "cold_open",
+   "t": 52.940999999999995,
+   "end": 95.533,
+   "text": "A GUEST STAR",
+   "big": true,
+   "t1": 54.531
+  },
+  {
+   "sec": "cold_open",
+   "t": 54.531,
+   "end": 95.533,
+   "text": "About two years later, the guest star faded away",
+   "big": false,
+   "t1": 57.805
+  },
+  {
+   "sec": "cold_open",
+   "t": 57.805,
+   "end": 95.533,
+   "text": "But where it shone, there is now a vast glowing cloud of gas and dust",
+   "big": false,
+   "t1": 63.808
+  },
+  {
+   "sec": "cold_open",
+   "t": 63.808,
+   "end": 95.533,
+   "text": "CRAB NEBULA",
+   "big": true,
+   "t1": 65.25900000000001
+  },
+  {
+   "sec": "cold_open",
+   "t": 65.25900000000001,
+   "end": 95.533,
+   "text": "About 6,500 light-years away",
+   "big": false,
+   "t1": 68.173
+  },
+  {
+   "sec": "cold_open",
+   "t": 68.173,
+   "end": 95.533,
+   "text": "The guest star was really the death of a massive star...",
+   "big": false,
+   "t1": 72.05000000000001
+  },
+  {
+   "sec": "cold_open",
+   "t": 72.05000000000001,
+   "end": 95.533,
+   "text": "SUPERNOVA",
+   "big": true,
+   "t1": 72.933
+  },
+  {
+   "sec": "cold_open",
+   "t": 72.933,
+   "end": 95.533,
+   "text": "And in the middle of that explosion, something survived",
+   "big": false,
+   "t1": 75.348
+  },
+  {
+   "sec": "cold_open",
+   "t": 75.348,
+   "end": 95.533,
+   "text": "Something heavier than the Sun, yet only 20 km wide",
+   "big": false,
+   "t1": 80.421
+  },
+  {
+   "sec": "cold_open",
+   "t": 80.421,
+   "end": 95.533,
+   "text": "And it still spins 30 times every second...",
+   "big": false,
+   "t1": 85.618
+  },
+  {
+   "sec": "cold_open",
+   "t": 85.618,
+   "end": 95.533,
+   "text": "NEUTRON STAR",
+   "big": true,
+   "t1": 87.533
+  },
+  {
+   "sec": "cold_open",
+   "t": 87.533,
+   "end": 95.533,
+   "text": "A thousand years later, these stars revealed another secret of the universe: where gold comes from",
+   "big": false,
+   "t1": 94.533
+  },
+  {
+   "sec": "fact10",
+   "t": 100.233,
+   "end": 155.829,
+   "text": "The idea of a neutron star was born from a new discovery",
+   "big": false,
+   "t1": 102.86399999999999
+  },
+  {
+   "sec": "fact10",
+   "t": 102.86399999999999,
+   "end": 155.829,
+   "text": "1932",
+   "big": true,
+   "t1": 104.966
+  },
+  {
+   "sec": "fact10",
+   "t": 104.966,
+   "end": 155.829,
+   "text": "In 1932, England's James Chadwick found a new particle inside the atom",
+   "big": false,
+   "t1": 109.029
+  },
+  {
+   "sec": "fact10",
+   "t": 109.029,
+   "end": 155.829,
+   "text": "It had no electric charge...",
+   "big": false,
+   "t1": 111.456
+  },
+  {
+   "sec": "fact10",
+   "t": 111.456,
+   "end": 155.829,
+   "text": "NEUTRON",
+   "big": true,
+   "t1": 112.303
+  },
+  {
+   "sec": "fact10",
+   "t": 112.303,
+   "end": 155.829,
+   "text": "Within two years, two astronomers in California connected it to something much bigger",
+   "big": false,
+   "t1": 118.595
+  },
+  {
+   "sec": "fact10",
+   "t": 118.595,
+   "end": 155.829,
+   "text": "Walter Baade from Germany, and Fritz Zwicky from Switzerland",
+   "big": false,
+   "t1": 123.553
+  },
+  {
+   "sec": "fact10",
+   "t": 123.553,
+   "end": 155.829,
+   "text": "They wrote that when a massive star explodes, its leftover core can be crushed so hard...",
+   "big": false,
+   "t1": 130.553
+  },
+  {
+   "sec": "fact10",
+   "t": 132.156,
+   "end": 155.829,
+   "text": "...that its atoms break down into a ball made almost only of neutrons",
+   "big": false,
+   "t1": 136.44
+  },
+  {
+   "sec": "fact10",
+   "t": 136.44,
+   "end": 155.829,
+   "text": "In the same work, they gave the explosion a name that is still used today...",
+   "big": false,
+   "t1": 141.711
+  },
+  {
+   "sec": "fact10",
+   "t": 141.711,
+   "end": 155.829,
+   "text": "\"SUPERNOVA\"",
+   "big": true,
+   "t1": 143.371
+  },
+  {
+   "sec": "fact10",
+   "t": 143.371,
+   "end": 155.829,
+   "text": "Most scientists didn't take the idea seriously",
+   "big": false,
+   "t1": 147.191
+  },
+  {
+   "sec": "fact10",
+   "t": 147.191,
+   "end": 155.829,
+   "text": "A star as small as a city, and heavier than the Sun?",
+   "big": false,
+   "t1": 151.69500000000002
+  },
+  {
+   "sec": "fact10",
+   "t": 151.69500000000002,
+   "end": 155.829,
+   "text": "For the next 33 years, nobody saw one",
+   "big": false,
+   "t1": 156.12900000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 158.729,
+   "end": 253.00900000000001,
+   "text": "1967",
+   "big": true,
+   "t1": 159.60500000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 159.60500000000002,
+   "end": 253.00900000000001,
+   "text": "In Cambridge, England, a 24-year-old PhD student, Jocelyn Bell, had built a new radio telescope with her colleagues",
+   "big": false,
+   "t1": 166.60500000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 168.905,
+   "end": 253.00900000000001,
+   "text": "It covered as much ground as 57 tennis courts, with more than 2,000 antennas",
+   "big": false,
+   "t1": 175.905
+  },
+  {
+   "sec": "fact9",
+   "t": 176.25400000000002,
+   "end": 253.00900000000001,
+   "text": "Every day the telescope printed about 30 metres of chart paper, and Jocelyn read it by hand",
+   "big": false,
+   "t1": 182.86
+  },
+  {
+   "sec": "fact9",
+   "t": 182.86,
+   "end": 253.00900000000001,
+   "text": "In August, she spotted a strange mark on the paper, just half an inch long",
+   "big": false,
+   "t1": 188.93200000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 188.93200000000002,
+   "end": 253.00900000000001,
+   "text": "She called it...",
+   "big": false,
+   "t1": 190.859
+  },
+  {
+   "sec": "fact9",
+   "t": 190.859,
+   "end": 253.00900000000001,
+   "text": "\"SCRUFF\"",
+   "big": true,
+   "t1": 192.13600000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 192.13600000000002,
+   "end": 253.00900000000001,
+   "text": "In November, when the mark was recorded at high speed, it was full of pulses",
+   "big": false,
+   "t1": 196.67600000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 196.67600000000002,
+   "end": 253.00900000000001,
+   "text": "As regular as the ticking of a clock",
+   "big": false,
+   "t1": 198.417
+  },
+  {
+   "sec": "fact9",
+   "t": 198.417,
+   "end": 253.00900000000001,
+   "text": "One every 1.337 seconds",
+   "big": false,
+   "t1": 202.202
+  },
+  {
+   "sec": "fact9",
+   "t": 202.202,
+   "end": 253.00900000000001,
+   "text": "So regular that the team jokingly named the signal...",
+   "big": false,
+   "t1": 206.98700000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 206.98700000000002,
+   "end": 253.00900000000001,
+   "text": "LGM-1: \"Little Green Men\"",
+   "big": false,
+   "t1": 210.07500000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 210.07500000000002,
+   "end": 253.00900000000001,
+   "text": "But it wasn't aliens. It was the first pulsar",
+   "big": false,
+   "t1": 213.60500000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 213.60500000000002,
+   "end": 253.00900000000001,
+   "text": "A spinning neutron star that, like a lighthouse, swept a beam of radio waves past Earth on every turn",
+   "big": false,
+   "t1": 220.60500000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 222.74200000000002,
+   "end": 253.00900000000001,
+   "text": "The very next year, a pulsar was found inside the Crab Nebula too",
+   "big": false,
+   "t1": 226.91000000000003
+  },
+  {
+   "sec": "fact9",
+   "t": 226.91000000000003,
+   "end": 253.00900000000001,
+   "text": "BAADE AND ZWICKY WERE RIGHT",
+   "big": true,
+   "t1": 228.84900000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 228.84900000000002,
+   "end": 253.00900000000001,
+   "text": "NOBEL PRIZE 1974",
+   "big": true,
+   "t1": 228.84900000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 228.84900000000002,
+   "end": 253.00900000000001,
+   "text": "In 1974, the discovery of pulsars won the Nobel Prize",
+   "big": false,
+   "t1": 233.50500000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 233.50500000000002,
+   "end": 253.00900000000001,
+   "text": "But not for Jocelyn Bell",
+   "big": false,
+   "t1": 235.15300000000002
+  },
+  {
+   "sec": "fact9",
+   "t": 235.15300000000002,
+   "end": 253.00900000000001,
+   "text": "It went to her supervisor, Antony Hewish, and to Martin Ryle",
+   "big": false,
+   "t1": 239.716
+  },
+  {
+   "sec": "fact9",
+   "t": 239.716,
+   "end": 253.00900000000001,
+   "text": "44 years later, Jocelyn Bell won a $3 million prize",
+   "big": false,
+   "t1": 245.184
+  },
+  {
+   "sec": "fact9",
+   "t": 245.184,
+   "end": 253.00900000000001,
+   "text": "She gave all of it away, so that students who rarely get the chance could study physics",
+   "big": false,
+   "t1": 252.184
+  },
+  {
+   "sec": "fact8",
+   "t": 255.90900000000002,
+   "end": 316.49600000000004,
+   "text": "Pulsars are such perfect clocks that even the smallest disturbance in their pulses can be caught",
+   "big": false,
+   "t1": 261.197
+  },
+  {
+   "sec": "fact8",
+   "t": 261.197,
+   "end": 316.49600000000004,
+   "text": "In 1990, Polish astronomer Aleksander Wolszczan used the giant Arecibo telescope in Puerto Rico to find a pulsar...",
+   "big": false,
+   "t1": 268.197
+  },
+  {
+   "sec": "fact8",
+   "t": 270.462,
+   "end": 316.49600000000004,
+   "text": "...spinning 161 times a second",
+   "big": false,
+   "t1": 274.28200000000004
+  },
+  {
+   "sec": "fact8",
+   "t": 274.28200000000004,
+   "end": 316.49600000000004,
+   "text": "Its pulses arrived sometimes a little early, sometimes a little late, in a repeating pattern",
+   "big": false,
+   "t1": 279.623
+  },
+  {
+   "sec": "fact8",
+   "t": 279.623,
+   "end": 316.49600000000004,
+   "text": "Wolszczan and his colleague Dale Frail realised that planets were orbiting the pulsar, tugging on it",
+   "big": false,
+   "t1": 286.623
+  },
+  {
+   "sec": "fact8",
+   "t": 288.17900000000003,
+   "end": 316.49600000000004,
+   "text": "1992",
+   "big": true,
+   "t1": 288.17900000000003
+  },
+  {
+   "sec": "fact8",
+   "t": 288.17900000000003,
+   "end": 316.49600000000004,
+   "text": "The discovery was published in 1992",
+   "big": false,
+   "t1": 290.536
+  },
+  {
+   "sec": "fact8",
+   "t": 290.536,
+   "end": 316.49600000000004,
+   "text": "They were the first confirmed planets around any star other than the Sun",
+   "big": false,
+   "t1": 295.25
+  },
+  {
+   "sec": "fact8",
+   "t": 295.25,
+   "end": 316.49600000000004,
+   "text": "Two planets about four times as heavy as Earth, and later a third, just twice the mass of the Moon",
+   "big": false,
+   "t1": 302.25
+  },
+  {
+   "sec": "fact8",
+   "t": 302.68,
+   "end": 316.49600000000004,
+   "text": "But these planets circle a dead star, under a constant rain of deadly radiation",
+   "big": false,
+   "t1": 309.68
+  },
+  {
+   "sec": "fact8",
+   "t": 311.341,
+   "end": 316.49600000000004,
+   "text": "The first planet around a Sun-like star was found three years later",
+   "big": false,
+   "t1": 316.79600000000005
+  },
+  {
+   "sec": "fact7",
+   "t": 319.396,
+   "end": 374.54900000000004,
+   "text": "The strangest thing about neutron stars is how dense they are",
+   "big": false,
+   "t1": 322.676
+  },
+  {
+   "sec": "fact7",
+   "t": 322.676,
+   "end": 374.54900000000004,
+   "text": "When the core of a massive star collapses, more than the Sun's mass is squeezed into a ball just 20 km wide",
+   "big": false,
+   "t1": 329.676
+  },
+  {
+   "sec": "fact7",
+   "t": 331.267,
+   "end": 374.54900000000004,
+   "text": "According to NASA, one teaspoon of neutron star would weigh about a billion tons on Earth",
+   "big": false,
+   "t1": 337.699
+  },
+  {
+   "sec": "fact7",
+   "t": 337.699,
+   "end": 374.54900000000004,
+   "text": "And these balls spin",
+   "big": false,
+   "t1": 339.51
+  },
+  {
+   "sec": "fact7",
+   "t": 339.51,
+   "end": 374.54900000000004,
+   "text": "In 2004, America's Green Bank Telescope recorded a dense cluster of stars called Terzan 5",
+   "big": false,
+   "t1": 343.156
+  },
+  {
+   "sec": "fact7",
+   "t": 343.156,
+   "end": 374.54900000000004,
+   "text": "TERZAN 5",
+   "big": true,
+   "t1": 348.403
+  },
+  {
+   "sec": "fact7",
+   "t": 348.403,
+   "end": 374.54900000000004,
+   "text": "In that data, McGill University student Jason Hessels found a pulsar spinning 716 times a second",
+   "big": false,
+   "t1": 355.403
+  },
+  {
+   "sec": "fact7",
+   "t": 357.541,
+   "end": 374.54900000000004,
+   "text": "No neutron star has ever been found spinning faster",
+   "big": false,
+   "t1": 361.337
+  },
+  {
+   "sec": "fact7",
+   "t": 361.337,
+   "end": 374.54900000000004,
+   "text": "At that speed, if the star were any bigger, its surface would fly apart",
+   "big": false,
+   "t1": 368.337
+  },
+  {
+   "sec": "fact7",
+   "t": 368.697,
+   "end": 374.54900000000004,
+   "text": "So scientists calculate it can be no more than 32 km across",
+   "big": false,
+   "t1": 374.84900000000005
+  },
+  {
+   "sec": "fact6",
+   "t": 377.449,
+   "end": 438.803,
+   "text": "Some neutron stars have another power. They are the strongest magnets in the universe...",
+   "big": false,
+   "t1": 383.132
+  },
+  {
+   "sec": "fact6",
+   "t": 383.132,
+   "end": 438.803,
+   "text": "MAGNETARS",
+   "big": true,
+   "t1": 384.223
+  },
+  {
+   "sec": "fact6",
+   "t": 384.223,
+   "end": 438.803,
+   "text": "Their magnetic field is about a million billion times stronger than Earth's",
+   "big": false,
+   "t1": 391.038
+  },
+  {
+   "sec": "fact6",
+   "t": 391.038,
+   "end": 438.803,
+   "text": "27 DECEMBER 2004",
+   "big": true,
+   "t1": 391.038
+  },
+  {
+   "sec": "fact6",
+   "t": 391.038,
+   "end": 438.803,
+   "text": "27 December 2004",
+   "big": false,
+   "t1": 394.73
+  },
+  {
+   "sec": "fact6",
+   "t": 394.73,
+   "end": 438.803,
+   "text": "On the far side of the galaxy, tens of thousands of light-years away, the surface of a magnetar suddenly burst",
+   "big": false,
+   "t1": 401.73
+  },
+  {
+   "sec": "fact6",
+   "t": 401.825,
+   "end": 438.803,
+   "text": "In just a tenth of a second, it released as much energy as the Sun gives off in 150,000 years",
+   "big": false,
+   "t1": 408.825
+  },
+  {
+   "sec": "fact6",
+   "t": 410.022,
+   "end": 438.803,
+   "text": "The flash was so intense that the detectors of several satellites were blinded for a moment",
+   "big": false,
+   "t1": 416.22200000000004
+  },
+  {
+   "sec": "fact6",
+   "t": 416.22200000000004,
+   "end": 438.803,
+   "text": "Its wave even shook the upper layers of Earth's atmosphere",
+   "big": false,
+   "t1": 420.889
+  },
+  {
+   "sec": "fact6",
+   "t": 420.889,
+   "end": 438.803,
+   "text": "Scientists say that if such a magnetar were within 10 light-years, Earth's atmosphere could have been badly damaged",
+   "big": false,
+   "t1": 427.889
+  },
+  {
+   "sec": "fact6",
+   "t": 429.887,
+   "end": 438.803,
+   "text": "But after the flash, a faint glow lingered for hours",
+   "big": false,
+   "t1": 435.379
+  },
+  {
+   "sec": "fact6",
+   "t": 435.379,
+   "end": 438.803,
+   "text": "For 20 years, nobody could explain it",
+   "big": false,
+   "t1": 439.103
+  },
+  {
+   "sec": "fact5",
+   "t": 441.703,
+   "end": 497.266,
+   "text": "17 AUGUST 2017",
+   "big": true,
+   "t1": 443.485
+  },
+  {
+   "sec": "fact5",
+   "t": 443.485,
+   "end": 497.266,
+   "text": "America's LIGO and Italy's Virgo detectors caught a faint ripple in space",
+   "big": false,
+   "t1": 448.535
+  },
+  {
+   "sec": "fact5",
+   "t": 448.535,
+   "end": 497.266,
+   "text": "For about 100 seconds, two neutron stars spiralled closer and closer, and then collided",
+   "big": false,
+   "t1": 455.535
+  },
+  {
+   "sec": "fact5",
+   "t": 456.987,
+   "end": 497.266,
+   "text": "Just 1.7 seconds later, NASA's Fermi satellite caught a flash of gamma rays from the same direction",
+   "big": false,
+   "t1": 463.987
+  },
+  {
+   "sec": "fact5",
+   "t": 464.894,
+   "end": 497.266,
+   "text": "Within 11 hours, a telescope in Chile found the crash site...",
+   "big": false,
+   "t1": 469.619
+  },
+  {
+   "sec": "fact5",
+   "t": 469.619,
+   "end": 497.266,
+   "text": "...in a galaxy 130 million light-years away",
+   "big": false,
+   "t1": 473.346
+  },
+  {
+   "sec": "fact5",
+   "t": 473.346,
+   "end": 497.266,
+   "text": "Then about 70 observatories turned to look",
+   "big": false,
+   "t1": 476.515
+  },
+  {
+   "sec": "fact5",
+   "t": 476.515,
+   "end": 497.266,
+   "text": "What they saw had never been seen before",
+   "big": false,
+   "t1": 478.91900000000004
+  },
+  {
+   "sec": "fact5",
+   "t": 478.91900000000004,
+   "end": 497.266,
+   "text": "The debris glowed with the light of newly made heavy elements...",
+   "big": false,
+   "t1": 483.562
+  },
+  {
+   "sec": "fact5",
+   "t": 483.562,
+   "end": 497.266,
+   "text": "KILONOVA",
+   "big": true,
+   "t1": 485.29200000000003
+  },
+  {
+   "sec": "fact5",
+   "t": 485.29200000000003,
+   "end": 497.266,
+   "text": "It contained platinum. And... gold",
+   "big": false,
+   "t1": 489.534
+  },
+  {
+   "sec": "fact5",
+   "t": 489.534,
+   "end": 497.266,
+   "text": "By one estimate, this single collision made gold and platinum weighing about ten times as much as Earth",
+   "big": false,
+   "t1": 496.534
+  },
+  {
+   "sec": "fact4",
+   "t": 500.166,
+   "end": 557.316,
+   "text": "2007",
+   "big": true,
+   "t1": 500.166
+  },
+  {
+   "sec": "fact4",
+   "t": 500.166,
+   "end": 557.316,
+   "text": "Since 2007, astronomers had been finding strange radio flashes in the sky",
+   "big": false,
+   "t1": 504.316
+  },
+  {
+   "sec": "fact4",
+   "t": 504.316,
+   "end": 557.316,
+   "text": "Just a millisecond long, but extremely powerful",
+   "big": false,
+   "t1": 508.217
+  },
+  {
+   "sec": "fact4",
+   "t": 508.217,
+   "end": 557.316,
+   "text": "They came from distant galaxies, and nobody knew what made them. They were named...",
+   "big": false,
+   "t1": 514.835
+  },
+  {
+   "sec": "fact4",
+   "t": 514.835,
+   "end": 557.316,
+   "text": "FAST RADIO BURSTS",
+   "big": true,
+   "t1": 516.704
+  },
+  {
+   "sec": "fact4",
+   "t": 516.704,
+   "end": 557.316,
+   "text": "28 APRIL 2020",
+   "big": true,
+   "t1": 516.704
+  },
+  {
+   "sec": "fact4",
+   "t": 516.704,
+   "end": 557.316,
+   "text": "28 April 2020",
+   "big": false,
+   "t1": 519.641
+  },
+  {
+   "sec": "fact4",
+   "t": 519.641,
+   "end": 557.316,
+   "text": "Canada's CHIME telescope, and a few small antennas in California, caught a bright radio flash at the same moment",
+   "big": false,
+   "t1": 526.641
+  },
+  {
+   "sec": "fact4",
+   "t": 528.198,
+   "end": 557.316,
+   "text": "Those antennas had been built by a Caltech student, Christopher Bochenek",
+   "big": false,
+   "t1": 533.491
+  },
+  {
+   "sec": "fact4",
+   "t": 533.491,
+   "end": 557.316,
+   "text": "This time, the flash came from inside the Milky Way",
+   "big": false,
+   "t1": 536.823
+  },
+  {
+   "sec": "fact4",
+   "t": 536.823,
+   "end": 557.316,
+   "text": "It came from a magnetar that was flaring in X-rays at the same time",
+   "big": false,
+   "t1": 541.851
+  },
+  {
+   "sec": "fact4",
+   "t": 541.851,
+   "end": 557.316,
+   "text": "According to Bochenek, in one millisecond it released as much energy as the Sun does in 30 seconds",
+   "big": false,
+   "t1": 548.851
+  },
+  {
+   "sec": "fact4",
+   "t": 548.979,
+   "end": 557.316,
+   "text": "A 13-year-old puzzle had its first answer",
+   "big": false,
+   "t1": 552.718
+  },
+  {
+   "sec": "fact4",
+   "t": 552.718,
+   "end": 557.316,
+   "text": "At least some fast radio bursts come from magnetars",
+   "big": false,
+   "t1": 557.616
+  },
+  {
+   "sec": "fact3",
+   "t": 560.216,
+   "end": 611.84,
+   "text": "There is a limit to how heavy a neutron star can be",
+   "big": false,
+   "t1": 564.018
+  },
+  {
+   "sec": "fact3",
+   "t": 564.018,
+   "end": 611.84,
+   "text": "Any more mass, and it collapses under its own weight into a black hole",
+   "big": false,
+   "t1": 569.695
+  },
+  {
+   "sec": "fact3",
+   "t": 569.695,
+   "end": 611.84,
+   "text": "Exactly where that limit lies, nobody knows for sure",
+   "big": false,
+   "t1": 574.13
+  },
+  {
+   "sec": "fact3",
+   "t": 574.13,
+   "end": 611.84,
+   "text": "In 2022, using the Keck telescope in Hawaii, Roger Romani and Alex Filippenko's team measured a strange pair",
+   "big": false,
+   "t1": 581.13
+  },
+  {
+   "sec": "fact3",
+   "t": 582.837,
+   "end": 611.84,
+   "text": "A pulsar spinning 707 times a second, and its companion star, which it is slowly eating",
+   "big": false,
+   "t1": 589.837
+  },
+  {
+   "sec": "fact3",
+   "t": 590.442,
+   "end": 611.84,
+   "text": "The companion is now only 20 times as heavy as Jupiter. Pulsars like this are called...",
+   "big": false,
+   "t1": 596.235
+  },
+  {
+   "sec": "fact3",
+   "t": 596.235,
+   "end": 611.84,
+   "text": "\"BLACK WIDOW\"",
+   "big": true,
+   "t1": 597.384
+  },
+  {
+   "sec": "fact3",
+   "t": 597.384,
+   "end": 611.84,
+   "text": "This pulsar weighs 2.35 times as much as the Sun: the heaviest neutron star ever measured",
+   "big": false,
+   "t1": 604.384
+  },
+  {
+   "sec": "fact3",
+   "t": 606.359,
+   "end": 611.84,
+   "text": "In Filippenko's words, a neutron star is like one giant atomic nucleus",
+   "big": false,
+   "t1": 612.14
+  },
+  {
+   "sec": "fact2",
+   "t": 614.74,
+   "end": 660.001,
+   "text": "Pulsars are the most perfect clocks in the universe",
+   "big": false,
+   "t1": 617.184
+  },
+  {
+   "sec": "fact2",
+   "t": 617.184,
+   "end": 660.001,
+   "text": "That gave scientists an amazing idea: turn the whole galaxy into a detector",
+   "big": false,
+   "t1": 624.184
+  },
+  {
+   "sec": "fact2",
+   "t": 624.51,
+   "end": 660.001,
+   "text": "For 15 years, the NANOGrav team timed the pulses of 68 pulsars across the Milky Way with great precision",
+   "big": false,
+   "t1": 631.51
+  },
+  {
+   "sec": "fact2",
+   "t": 633.356,
+   "end": 660.001,
+   "text": "If very long gravitational waves were passing through space, the pulsars' ticking would shift in a special pattern",
+   "big": false,
+   "t1": 640.356
+  },
+  {
+   "sec": "fact2",
+   "t": 642.18,
+   "end": 660.001,
+   "text": "JUNE 2023",
+   "big": true,
+   "t1": 642.18
+  },
+  {
+   "sec": "fact2",
+   "t": 642.18,
+   "end": 660.001,
+   "text": "In June 2023, NANOGrav and several other teams around the world showed evidence of exactly that pattern",
+   "big": false,
+   "t1": 649.18
+  },
+  {
+   "sec": "fact2",
+   "t": 650.26,
+   "end": 660.001,
+   "text": "These waves are years long, and probably come from pairs of giant black holes orbiting each other across the universe",
+   "big": false,
+   "t1": 657.26
+  },
+  {
+   "sec": "fact1",
+   "t": 662.901,
+   "end": 759.9820000000001,
+   "text": "For 20 years, the faint glow after the 2004 magnetar flash remained a puzzle",
+   "big": false,
+   "t1": 668.7
+  },
+  {
+   "sec": "fact1",
+   "t": 668.7,
+   "end": 759.9820000000001,
+   "text": "In 2024, Columbia University PhD student Anirudh Patel was working on a new calculation with his supervisor Brian Metzger",
+   "big": false,
+   "t1": 675.7
+  },
+  {
+   "sec": "fact1",
+   "t": 679.683,
+   "end": 759.9820000000001,
+   "text": "If a magnetar's flash blasts part of its surface into space, heavy elements can form in it",
+   "big": false,
+   "t1": 686.509
+  },
+  {
+   "sec": "fact1",
+   "t": 686.509,
+   "end": 759.9820000000001,
+   "text": "And their radioactive glow would peak about 10 minutes after the flash",
+   "big": false,
+   "t1": 693.139
+  },
+  {
+   "sec": "fact1",
+   "t": 693.139,
+   "end": 759.9820000000001,
+   "text": "Eric Burns of Louisiana State University found exactly such a glow in old data from ESA's INTEGRAL satellite...",
+   "big": false,
+   "t1": 700.139
+  },
+  {
+   "sec": "fact1",
+   "t": 701.614,
+   "end": 759.9820000000001,
+   "text": "...10 minutes after the 2004 flash",
+   "big": false,
+   "t1": 704.644
+  },
+  {
+   "sec": "fact1",
+   "t": 704.644,
+   "end": 759.9820000000001,
+   "text": "The result was published in April 2025",
+   "big": false,
+   "t1": 708.243
+  },
+  {
+   "sec": "fact1",
+   "t": 708.243,
+   "end": 759.9820000000001,
+   "text": "That one flash had made heavy elements like gold, platinum and uranium...",
+   "big": false,
+   "t1": 715.243
+  },
+  {
+   "sec": "fact1",
+   "t": 716.235,
+   "end": 759.9820000000001,
+   "text": "...about a third of Earth's mass in total",
+   "big": false,
+   "t1": 718.9870000000001
+  },
+  {
+   "sec": "fact1",
+   "t": 718.9870000000001,
+   "end": 759.9820000000001,
+   "text": "Scientists estimate that up to 10% of the Milky Way's heavy elements may come from magnetar flares",
+   "big": false,
+   "t1": 725.9870000000001
+  },
+  {
+   "sec": "fact1",
+   "t": 726.94,
+   "end": 759.9820000000001,
+   "text": "About a thousand years ago, astronomers in China watched a guest star shine",
+   "big": false,
+   "t1": 733.94
+  },
+  {
+   "sec": "fact1",
+   "t": 734.219,
+   "end": 759.9820000000001,
+   "text": "Today humanity knows that its death left behind a star the size of a city, heavier than the Sun, that can even make gold",
+   "big": false,
+   "t1": 741.219
+  },
+  {
+   "sec": "fact1",
+   "t": 744.216,
+   "end": 759.9820000000001,
+   "text": "But the biggest question still stands",
+   "big": false,
+   "t1": 747.571
+  },
+  {
+   "sec": "fact1",
+   "t": 747.571,
+   "end": 759.9820000000001,
+   "text": "At the very centre of a neutron star, where everything is crushed tighter than an atomic nucleus, what is there?",
+   "big": false,
+   "t1": 754.571
+  },
+  {
+   "sec": "fact1",
+   "t": 755.8950000000001,
+   "end": 759.9820000000001,
+   "text": "Perhaps something that exists nowhere else in the universe",
+   "big": false,
+   "t1": 760.282
+  }
+ ],
+ "sfx": [
+  [
+   "tick",
+   0.29,
+   0
+  ],
+  [
+   "tick",
+   3.149,
+   0
+  ],
+  [
+   "tick",
+   4.449,
+   0
+  ],
+  [
+   "tick",
+   6.458,
+   0
+  ],
+  [
+   "roll",
+   9.950999999999999,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   11.241,
+   0
+  ],
+  [
+   "whoosh",
+   12.312500000000002,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   13.91,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   15.200000000000001,
+   0
+  ],
+  [
+   "riser",
+   20.541,
+   0,
+   {
+    "d": 1.2
+   }
+  ],
+  [
+   "flare",
+   21.661,
+   0
+  ],
+  [
+   "tick",
+   21.730999999999998,
+   0
+  ],
+  [
+   "impact",
+   21.741,
+   0
+  ],
+  [
+   "tick",
+   22.751999999999995,
+   0
+  ],
+  [
+   "whoosh",
+   23.72,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "whoosh",
+   30.44,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "whoosh",
+   35.82899999999999,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "pop",
+   36.019,
+   0
+  ],
+  [
+   "tick",
+   36.099,
+   -5
+  ],
+  [
+   "tick",
+   36.169,
+   -5
+  ],
+  [
+   "pop",
+   39.74399999999999,
+   -2
+  ],
+  [
+   "roll",
+   46.660000000000004,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   47.95,
+   0
+  ],
+  [
+   "pop",
+   52.931,
+   0
+  ],
+  [
+   "tick",
+   53.010999999999996,
+   -5
+  ],
+  [
+   "tick",
+   53.080999999999996,
+   -5
+  ],
+  [
+   "pop",
+   63.798,
+   0
+  ],
+  [
+   "tick",
+   63.878,
+   -5
+  ],
+  [
+   "roll",
+   65.40900000000002,
+   0,
+   {
+    "d": 0.27
+   }
+  ],
+  [
+   "hit",
+   65.667,
+   0
+  ],
+  [
+   "pop",
+   72.04,
+   0
+  ],
+  [
+   "tick",
+   76.417,
+   0
+  ],
+  [
+   "tick",
+   78.832,
+   0
+  ],
+  [
+   "roll",
+   81.42,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   82.71,
+   0
+  ],
+  [
+   "riser",
+   84.018,
+   0,
+   {
+    "d": 1.6
+   }
+  ],
+  [
+   "flare",
+   85.538,
+   0
+  ],
+  [
+   "pop",
+   85.60799999999999,
+   0
+  ],
+  [
+   "impact",
+   85.618,
+   0
+  ],
+  [
+   "tick",
+   85.68799999999999,
+   -5
+  ],
+  [
+   "tick",
+   93.94399999999999,
+   0
+  ],
+  [
+   "tick",
+   94.30399999999999,
+   0
+  ],
+  [
+   "whoosh_big",
+   95.283,
+   -3
+  ],
+  [
+   "sting",
+   95.883,
+   0
+  ],
+  [
+   "whoosh_big",
+   97.63300000000001,
+   0
+  ],
+  [
+   "hit",
+   98.513,
+   -2
+  ],
+  [
+   "tick",
+   98.683,
+   -4
+  ],
+  [
+   "tick",
+   98.74300000000001,
+   -4
+  ],
+  [
+   "tick",
+   98.80300000000001,
+   -4
+  ],
+  [
+   "tick",
+   98.86300000000001,
+   -4
+  ],
+  [
+   "tick",
+   98.923,
+   -4
+  ],
+  [
+   "tick",
+   98.983,
+   -4
+  ],
+  [
+   "tick",
+   99.043,
+   -4
+  ],
+  [
+   "pop",
+   102.85399999999998,
+   0
+  ],
+  [
+   "pop",
+   105.086,
+   -2
+  ],
+  [
+   "pop",
+   111.446,
+   0
+  ],
+  [
+   "whoosh",
+   118.09,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "pop",
+   119.598,
+   -2
+  ],
+  [
+   "pop",
+   122.09400000000001,
+   -2
+  ],
+  [
+   "whoosh",
+   123.101,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "tick",
+   126.38699999999999,
+   0
+  ],
+  [
+   "tick",
+   133.145,
+   0
+  ],
+  [
+   "pop",
+   141.70100000000002,
+   0
+  ],
+  [
+   "whoosh",
+   142.69050000000001,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   151.84500000000003,
+   0,
+   {
+    "d": 0.2
+   }
+  ],
+  [
+   "hit",
+   152.03500000000003,
+   0
+  ],
+  [
+   "whoosh_big",
+   155.52900000000002,
+   0
+  ],
+  [
+   "hit",
+   156.40900000000002,
+   -2
+  ],
+  [
+   "tick",
+   156.579,
+   -4
+  ],
+  [
+   "tick",
+   156.639,
+   -4
+  ],
+  [
+   "tick",
+   156.699,
+   -4
+  ],
+  [
+   "tick",
+   156.75900000000001,
+   -4
+  ],
+  [
+   "tick",
+   156.81900000000002,
+   -4
+  ],
+  [
+   "tick",
+   156.87900000000002,
+   -4
+  ],
+  [
+   "pop",
+   158.71900000000002,
+   0
+  ],
+  [
+   "pop",
+   163.74200000000002,
+   -2
+  ],
+  [
+   "roll",
+   169.055,
+   0,
+   {
+    "d": 0.2
+   }
+  ],
+  [
+   "hit",
+   169.245,
+   0
+  ],
+  [
+   "roll",
+   172.50300000000001,
+   0,
+   {
+    "d": 0.7
+   }
+  ],
+  [
+   "hit",
+   173.19000000000003,
+   0
+  ],
+  [
+   "whoosh",
+   175.85800000000003,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   176.40400000000002,
+   0,
+   {
+    "d": 1.28
+   }
+  ],
+  [
+   "hit",
+   177.67200000000003,
+   0
+  ],
+  [
+   "pop",
+   190.84900000000002,
+   0
+  ],
+  [
+   "whoosh",
+   191.56350000000003,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   198.963,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   200.25300000000001,
+   0
+  ],
+  [
+   "riser",
+   205.787,
+   0,
+   {
+    "d": 1.2
+   }
+  ],
+  [
+   "tick",
+   206.97700000000003,
+   0
+  ],
+  [
+   "hit",
+   206.987,
+   0
+  ],
+  [
+   "tick",
+   208.68400000000003,
+   0
+  ],
+  [
+   "tick",
+   211.01800000000003,
+   0
+  ],
+  [
+   "tick",
+   212.43400000000003,
+   0
+  ],
+  [
+   "whoosh",
+   222.24850000000004,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "pop",
+   226.90000000000003,
+   0
+  ],
+  [
+   "tick",
+   226.98000000000002,
+   -5
+  ],
+  [
+   "tick",
+   227.05,
+   -5
+  ],
+  [
+   "tick",
+   227.12000000000003,
+   -5
+  ],
+  [
+   "tick",
+   227.19000000000003,
+   -5
+  ],
+  [
+   "pop",
+   228.83900000000003,
+   0
+  ],
+  [
+   "tick",
+   228.919,
+   -5
+  ],
+  [
+   "tick",
+   228.989,
+   -5
+  ],
+  [
+   "pop",
+   235.27300000000002,
+   -2
+  ],
+  [
+   "whoosh",
+   239.10750000000002,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   241.295,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   242.585,
+   0
+  ],
+  [
+   "tick",
+   245.174,
+   0
+  ],
+  [
+   "tick",
+   246.34600000000003,
+   0
+  ],
+  [
+   "whoosh_big",
+   252.70900000000003,
+   0
+  ],
+  [
+   "hit",
+   253.58900000000003,
+   -2
+  ],
+  [
+   "tick",
+   253.75900000000001,
+   -4
+  ],
+  [
+   "tick",
+   253.81900000000002,
+   -4
+  ],
+  [
+   "tick",
+   253.87900000000002,
+   -4
+  ],
+  [
+   "tick",
+   253.93900000000002,
+   -4
+  ],
+  [
+   "tick",
+   253.99900000000002,
+   -4
+  ],
+  [
+   "tick",
+   254.05900000000003,
+   -4
+  ],
+  [
+   "tick",
+   254.11900000000003,
+   -4
+  ],
+  [
+   "pop",
+   267.35400000000004,
+   -2
+  ],
+  [
+   "roll",
+   271.299,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   272.589,
+   0
+  ],
+  [
+   "whoosh",
+   273.865,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "pop",
+   281.786,
+   -2
+  ],
+  [
+   "tick",
+   284.733,
+   0
+  ],
+  [
+   "tick",
+   286.997,
+   0
+  ],
+  [
+   "whoosh",
+   287.70000000000005,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   295.4,
+   0,
+   {
+    "d": 0.76
+   }
+  ],
+  [
+   "hit",
+   296.14500000000004,
+   0
+  ],
+  [
+   "whoosh",
+   310.8725,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "whoosh_big",
+   316.196,
+   0
+  ],
+  [
+   "hit",
+   317.076,
+   -2
+  ],
+  [
+   "tick",
+   317.24600000000004,
+   -4
+  ],
+  [
+   "tick",
+   317.30600000000004,
+   -4
+  ],
+  [
+   "tick",
+   317.36600000000004,
+   -4
+  ],
+  [
+   "tick",
+   317.42600000000004,
+   -4
+  ],
+  [
+   "tick",
+   317.48600000000005,
+   -4
+  ],
+  [
+   "tick",
+   317.54600000000005,
+   -4
+  ],
+  [
+   "tick",
+   317.60600000000005,
+   -4
+  ],
+  [
+   "tick",
+   317.66600000000005,
+   -4
+  ],
+  [
+   "whoosh",
+   322.1575,
+   -4
+  ],
+  [
+   "roll",
+   326.126,
+   0,
+   {
+    "d": 1.6
+   }
+  ],
+  [
+   "hit",
+   327.716,
+   0
+  ],
+  [
+   "whoosh",
+   330.81600000000003,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   335.238,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   336.528,
+   0
+  ],
+  [
+   "pop",
+   343.146,
+   0
+  ],
+  [
+   "tick",
+   343.226,
+   -5
+  ],
+  [
+   "pop",
+   350.462,
+   -2
+  ],
+  [
+   "roll",
+   354.499,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   355.78900000000004,
+   0
+  ],
+  [
+   "whoosh",
+   357.0400000000001,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "tick",
+   364.334,
+   0
+  ],
+  [
+   "tick",
+   366.69100000000003,
+   0
+  ],
+  [
+   "whoosh",
+   368.175,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   369.847,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   371.137,
+   0
+  ],
+  [
+   "whoosh_big",
+   374.249,
+   0
+  ],
+  [
+   "hit",
+   375.129,
+   -2
+  ],
+  [
+   "tick",
+   375.29900000000004,
+   -4
+  ],
+  [
+   "tick",
+   375.35900000000004,
+   -4
+  ],
+  [
+   "tick",
+   375.41900000000004,
+   -4
+  ],
+  [
+   "tick",
+   375.47900000000004,
+   -4
+  ],
+  [
+   "tick",
+   375.53900000000004,
+   -4
+  ],
+  [
+   "tick",
+   375.59900000000005,
+   -4
+  ],
+  [
+   "tick",
+   381.055,
+   0
+  ],
+  [
+   "tick",
+   382.031,
+   0
+  ],
+  [
+   "roll",
+   387.114,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   388.404,
+   0
+  ],
+  [
+   "pop",
+   391.028,
+   0
+  ],
+  [
+   "tick",
+   391.108,
+   -5
+  ],
+  [
+   "tick",
+   391.178,
+   -5
+  ],
+  [
+   "riser",
+   400.425,
+   0,
+   {
+    "d": 1.4
+   }
+  ],
+  [
+   "hit",
+   401.825,
+   0
+  ],
+  [
+   "impact",
+   401.825,
+   0
+  ],
+  [
+   "roll",
+   405.425,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   406.71500000000003,
+   0
+  ],
+  [
+   "whoosh",
+   409.58150000000006,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "tick",
+   412.38100000000003,
+   0
+  ],
+  [
+   "tick",
+   415.016,
+   0
+  ],
+  [
+   "whoosh",
+   415.807,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   422.828,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   424.118,
+   0
+  ],
+  [
+   "tick",
+   432.211,
+   0
+  ],
+  [
+   "tick",
+   437.319,
+   0
+  ],
+  [
+   "whoosh_big",
+   438.503,
+   0
+  ],
+  [
+   "hit",
+   439.383,
+   -2
+  ],
+  [
+   "tick",
+   439.553,
+   -4
+  ],
+  [
+   "tick",
+   439.613,
+   -4
+  ],
+  [
+   "tick",
+   439.673,
+   -4
+  ],
+  [
+   "tick",
+   439.733,
+   -4
+  ],
+  [
+   "tick",
+   439.793,
+   -4
+  ],
+  [
+   "tick",
+   439.853,
+   -4
+  ],
+  [
+   "pop",
+   441.693,
+   0
+  ],
+  [
+   "tick",
+   441.77299999999997,
+   -5
+  ],
+  [
+   "tick",
+   441.84299999999996,
+   -5
+  ],
+  [
+   "roll",
+   448.685,
+   0,
+   {
+    "d": 0.5
+   }
+  ],
+  [
+   "hit",
+   449.175,
+   0
+  ],
+  [
+   "roll",
+   457.137,
+   0,
+   {
+    "d": 1.09
+   }
+  ],
+  [
+   "hit",
+   458.219,
+   0
+  ],
+  [
+   "whoosh",
+   464.46500000000003,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   469.76900000000006,
+   0,
+   {
+    "d": 0.2
+   }
+  ],
+  [
+   "hit",
+   469.95900000000006,
+   0
+  ],
+  [
+   "roll",
+   473.496,
+   0,
+   {
+    "d": 0.72
+   }
+  ],
+  [
+   "hit",
+   474.206,
+   0
+  ],
+  [
+   "pop",
+   483.552,
+   0
+  ],
+  [
+   "riser",
+   487.02000000000004,
+   0,
+   {
+    "d": 1.4
+   }
+  ],
+  [
+   "flare",
+   488.34000000000003,
+   0
+  ],
+  [
+   "tick",
+   488.41,
+   0
+  ],
+  [
+   "impact",
+   488.42,
+   0
+  ],
+  [
+   "roll",
+   492.425,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   493.71500000000003,
+   0
+  ],
+  [
+   "whoosh_big",
+   496.966,
+   0
+  ],
+  [
+   "hit",
+   497.846,
+   -2
+  ],
+  [
+   "tick",
+   498.016,
+   -4
+  ],
+  [
+   "tick",
+   498.076,
+   -4
+  ],
+  [
+   "tick",
+   498.136,
+   -4
+  ],
+  [
+   "tick",
+   498.196,
+   -4
+  ],
+  [
+   "tick",
+   498.25600000000003,
+   -4
+  ],
+  [
+   "tick",
+   498.31600000000003,
+   -4
+  ],
+  [
+   "tick",
+   498.37600000000003,
+   -4
+  ],
+  [
+   "pop",
+   500.156,
+   0
+  ],
+  [
+   "roll",
+   504.46599999999995,
+   0,
+   {
+    "d": 0.68
+   }
+  ],
+  [
+   "hit",
+   505.13100000000003,
+   0
+  ],
+  [
+   "pop",
+   514.825,
+   0
+  ],
+  [
+   "tick",
+   514.9050000000001,
+   -5
+  ],
+  [
+   "tick",
+   514.975,
+   -5
+  ],
+  [
+   "pop",
+   516.694,
+   0
+  ],
+  [
+   "tick",
+   516.774,
+   -5
+  ],
+  [
+   "tick",
+   516.8439999999999,
+   -5
+  ],
+  [
+   "pop",
+   531.347,
+   -2
+  ],
+  [
+   "whoosh",
+   533.0409999999999,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "tick",
+   533.481,
+   0
+  ],
+  [
+   "tick",
+   534.851,
+   0
+  ],
+  [
+   "whoosh",
+   536.3905,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   545.705,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   546.995,
+   0
+  ],
+  [
+   "whoosh",
+   548.5464999999999,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   549.129,
+   0,
+   {
+    "d": 0.2
+   }
+  ],
+  [
+   "hit",
+   549.3190000000001,
+   0
+  ],
+  [
+   "whoosh_big",
+   557.016,
+   0
+  ],
+  [
+   "hit",
+   557.896,
+   -2
+  ],
+  [
+   "tick",
+   558.066,
+   -4
+  ],
+  [
+   "tick",
+   558.126,
+   -4
+  ],
+  [
+   "tick",
+   558.186,
+   -4
+  ],
+  [
+   "tick",
+   558.246,
+   -4
+  ],
+  [
+   "tick",
+   558.306,
+   -4
+  ],
+  [
+   "tick",
+   558.366,
+   -4
+  ],
+  [
+   "tick",
+   558.426,
+   -4
+  ],
+  [
+   "tick",
+   564.496,
+   0
+  ],
+  [
+   "tick",
+   567.967,
+   0
+  ],
+  [
+   "whoosh",
+   573.6564999999999,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "pop",
+   577.791,
+   -2
+  ],
+  [
+   "roll",
+   583.2090000000001,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   584.499,
+   0
+  ],
+  [
+   "roll",
+   591.2890000000001,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   592.5790000000001,
+   0
+  ],
+  [
+   "pop",
+   596.225,
+   0
+  ],
+  [
+   "tick",
+   596.3050000000001,
+   -5
+  ],
+  [
+   "roll",
+   600.3330000000001,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   601.623,
+   0
+  ],
+  [
+   "whoosh",
+   605.91,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "tick",
+   609.344,
+   0
+  ],
+  [
+   "tick",
+   610.552,
+   0
+  ],
+  [
+   "whoosh_big",
+   611.54,
+   0
+  ],
+  [
+   "hit",
+   612.42,
+   -2
+  ],
+  [
+   "tick",
+   612.59,
+   -4
+  ],
+  [
+   "tick",
+   612.65,
+   -4
+  ],
+  [
+   "tick",
+   612.71,
+   -4
+  ],
+  [
+   "tick",
+   612.77,
+   -4
+  ],
+  [
+   "tick",
+   612.83,
+   -4
+  ],
+  [
+   "tick",
+   612.89,
+   -4
+  ],
+  [
+   "tick",
+   612.95,
+   -4
+  ],
+  [
+   "tick",
+   621.388,
+   0
+  ],
+  [
+   "tick",
+   623.176,
+   0
+  ],
+  [
+   "roll",
+   624.66,
+   0,
+   {
+    "d": 0.2
+   }
+  ],
+  [
+   "hit",
+   624.85,
+   0
+  ],
+  [
+   "roll",
+   627.736,
+   0,
+   {
+    "d": 1.24
+   }
+  ],
+  [
+   "hit",
+   628.969,
+   0
+  ],
+  [
+   "whoosh",
+   641.6935,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "pop",
+   642.17,
+   0
+  ],
+  [
+   "tick",
+   642.25,
+   -5
+  ],
+  [
+   "tick",
+   650.378,
+   0
+  ],
+  [
+   "tick",
+   651.005,
+   0
+  ],
+  [
+   "whoosh_big",
+   659.7009999999999,
+   0
+  ],
+  [
+   "hit",
+   660.5809999999999,
+   -2
+  ],
+  [
+   "tick",
+   660.751,
+   -4
+  ],
+  [
+   "tick",
+   660.8109999999999,
+   -4
+  ],
+  [
+   "tick",
+   660.871,
+   -4
+  ],
+  [
+   "tick",
+   660.9309999999999,
+   -4
+  ],
+  [
+   "pop",
+   673.034,
+   -2
+  ],
+  [
+   "roll",
+   688.623,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   689.913,
+   0
+  ],
+  [
+   "whoosh",
+   692.5165,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "pop",
+   695.511,
+   -2
+  ],
+  [
+   "tick",
+   709.626,
+   0
+  ],
+  [
+   "tick",
+   711.379,
+   0
+  ],
+  [
+   "riser",
+   714.835,
+   0,
+   {
+    "d": 1.4
+   }
+  ],
+  [
+   "flare",
+   716.155,
+   0
+  ],
+  [
+   "impact",
+   716.235,
+   0
+  ],
+  [
+   "tick",
+   717.1540000000001,
+   0
+  ],
+  [
+   "tick",
+   717.897,
+   0
+  ],
+  [
+   "roll",
+   721.402,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   722.692,
+   0
+  ],
+  [
+   "whoosh",
+   743.7905,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "tick",
+   749.302,
+   0
+  ],
+  [
+   "tick",
+   754.643,
+   0
+  ]
+ ],
+ "mus": [
+  {
+   "kind": "swell",
+   "t0": 95.533,
+   "peak": 96.233,
+   "t1": 98.833,
+   "db": 4.0
+  },
+  {
+   "kind": "swell",
+   "t0": 20.505,
+   "peak": 21.741,
+   "t1": 23.541,
+   "db": 7.0
+  },
+  {
+   "kind": "swell",
+   "t0": 83.80999999999999,
+   "peak": 85.618,
+   "t1": 87.41799999999999,
+   "db": 7.0
+  },
+  {
+   "kind": "swell",
+   "t0": 205.76700000000002,
+   "peak": 206.987,
+   "t1": 208.787,
+   "db": 7.0
+  },
+  {
+   "kind": "swell",
+   "t0": 400.32500000000005,
+   "peak": 401.825,
+   "t1": 403.625,
+   "db": 7.0
+  },
+  {
+   "kind": "swell",
+   "t0": 486.7950000000001,
+   "peak": 488.42,
+   "t1": 490.22,
+   "db": 7.0
+  },
+  {
+   "kind": "swell",
+   "t0": 714.68,
+   "peak": 716.235,
+   "t1": 718.035,
+   "db": 8.0
+  }
+ ],
+ "music": [
+  {
+   "t": 0.0,
+   "track": "Interloper.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 35.28,
+   "track": "Echoes_of_Time_v2.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 97.533,
+   "track": "Dark_Fog.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 253.50900000000001,
+   "track": "Lightless_Dawn.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 375.04900000000004,
+   "track": "Phantasm.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 497.766,
+   "track": "Long_Note_One.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 612.34,
+   "track": "Long_Note_Four.mp3",
+   "gain": 0.0
+  }
+ ],
+ "breaths": [
+  [
+   20.205,
+   0.9
+  ],
+  [
+   82.61,
+   1.4
+  ],
+  [
+   203.167,
+   1.0
+  ],
+  [
+   396.725,
+   1.0
+  ],
+  [
+   482.19500000000005,
+   1.2
+  ],
+  [
+   708.88,
+   1.2
+  ]
+ ],
+ "total": 762.9820000000001,
+ "off": 0.5,
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "clips_dir": "/home/user/axiom/work/library/clips"
+}

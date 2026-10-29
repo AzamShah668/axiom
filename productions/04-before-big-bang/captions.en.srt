@@ -1,0 +1,572 @@
+1
+00:00:00,000 --> 00:00:02,276
+1964
+
+2
+00:00:02,276 --> 00:00:09,276
+In New Jersey, America, two scientists were cleaning pigeon droppings out of a giant radio antenna
+
+3
+00:00:09,707 --> 00:00:12,702
+Arno Penzias and Robert Wilson
+
+4
+00:00:12,702 --> 00:00:17,787
+Their antenna picked up a strange hiss that would not go away
+
+5
+00:00:17,787 --> 00:00:22,199
+Day or night, wherever the antenna pointed, the sound stayed the same
+
+6
+00:00:22,199 --> 00:00:26,146
+They thought the pigeons and their nests were to blame
+
+7
+00:00:26,146 --> 00:00:29,676
+The pigeons were removed. The antenna was scrubbed clean
+
+8
+00:00:29,676 --> 00:00:31,847
+The hiss was still there
+
+9
+00:00:31,847 --> 00:00:38,376
+The hiss was not a fault. It was the oldest light in the universe...
+
+10
+00:00:38,376 --> 00:00:40,257
+...the echo of the Big Bang
+
+11
+00:00:40,257 --> 00:00:43,984
+That echo proved the universe had a beginning
+
+12
+00:00:43,984 --> 00:00:48,756
+Today we know that beginning was 13.8 billion years ago
+
+13
+00:00:48,756 --> 00:00:55,756
+And according to scientists, in its very first instant, it grew 10²⁶ times bigger
+
+14
+00:00:56,174 --> 00:00:59,321
+The discovery later won a Nobel Prize
+
+15
+00:00:59,321 --> 00:01:03,953
+But it also left humanity with its biggest question
+
+16
+00:01:03,953 --> 00:01:08,223
+What was there before the universe began?
+
+17
+00:01:12,623 --> 00:01:17,367
+The universe has a birthday, and scientists know it precisely
+
+18
+00:01:17,367 --> 00:01:23,254
+In 2009, the European Space Agency launched a satellite: Planck
+
+19
+00:01:23,254 --> 00:01:29,349
+For four years it mapped the whole sky in the same light the New Jersey antenna had caught
+
+20
+00:01:29,349 --> 00:01:34,167
+Faint patterns hidden in that light tell the age of the universe
+
+21
+00:01:34,167 --> 00:01:40,308
+In 2018 came Planck's final result: 13.8 billion years
+
+22
+00:01:40,308 --> 00:01:43,664
+Give or take just 20 million years
+
+23
+00:01:43,664 --> 00:01:48,702
+When Earth formed, about 4.6 billion years ago...
+
+24
+00:01:48,702 --> 00:01:52,847
+...the universe was already 9 billion years old
+
+25
+00:01:52,847 --> 00:01:59,847
+But the first to say the universe had a beginning was not a telescope. It was a priest
+
+26
+00:02:04,200 --> 00:02:10,777
+Belgium's Father Georges Lemaître was a Catholic priest, and also a physicist
+
+27
+00:02:10,777 --> 00:02:17,777
+In 1927, he used Einstein's equations to show that the universe is not standing still
+
+28
+00:02:18,475 --> 00:02:19,728
+It is expanding
+
+29
+00:02:19,728 --> 00:02:23,641
+That same year in Brussels, Einstein told Lemaître...
+
+30
+00:02:23,641 --> 00:02:27,542
+Your calculations are correct, but your physics is abominable
+
+31
+00:02:27,542 --> 00:02:34,542
+Two years later, in 1929, America's Edwin Hubble saw distant galaxies racing away from us
+
+32
+00:02:35,169 --> 00:02:38,176
+And the farther they are, the faster they go
+
+33
+00:02:38,176 --> 00:02:41,613
+In 1931, Lemaître took the next step
+
+34
+00:02:41,613 --> 00:02:47,383
+If everything is expanding today, then once, everything must have been together in one place
+
+35
+00:02:47,383 --> 00:02:52,538
+He called it the primeval atom: the cosmic egg
+
+36
+00:02:52,538 --> 00:02:55,360
+The idea needed a name...
+
+37
+00:02:55,360 --> 00:02:59,606
+...and the name came from its biggest critic
+
+38
+00:03:02,206 --> 00:03:04,127
+28 MARCH 1949
+
+39
+00:03:04,127 --> 00:03:08,075
+On BBC radio, British astronomer Fred Hoyle was speaking
+
+40
+00:03:08,075 --> 00:03:12,603
+Hoyle believed the universe had no beginning and no end...
+
+41
+00:03:12,603 --> 00:03:14,774
+...that it has always been the same
+
+42
+00:03:14,774 --> 00:03:18,489
+Explaining Lemaître's theory, he used a word...
+
+43
+00:03:18,489 --> 00:03:20,300
+BIG BANG
+
+44
+00:03:20,300 --> 00:03:22,494
+Hoyle never accepted the theory
+
+45
+00:03:22,494 --> 00:03:25,977
+But the name he gave it stuck forever
+
+46
+00:03:25,977 --> 00:03:32,977
+Today every child knows the start of the universe by the name its critic gave it
+
+47
+00:03:34,267 --> 00:03:41,267
+And Hoyle was proved wrong by the same hiss that is still all around us
+
+48
+00:03:44,098 --> 00:03:49,827
+After the Big Bang, the universe was so hot and dense that light could not move a single step
+
+49
+00:03:49,827 --> 00:03:56,827
+About 380,000 years later, it cooled enough for light to break free for the first time
+
+50
+00:03:57,072 --> 00:04:01,426
+That same light has been travelling for 13.8 billion years
+
+51
+00:04:01,426 --> 00:04:06,012
+On the way it was stretched so much that it is no longer visible light
+
+52
+00:04:06,012 --> 00:04:07,823
+Now it is microwaves...
+
+53
+00:04:07,823 --> 00:04:12,781
+...at just minus 270 degrees Celsius
+
+54
+00:04:12,781 --> 00:04:18,447
+In 1978, Penzias and Wilson won the Nobel Prize for this discovery
+
+55
+00:04:18,447 --> 00:04:25,447
+And about 1 percent of the black-and-white static on old TVs, with no channel tuned...
+
+56
+00:04:25,889 --> 00:04:27,270
+...was this very light
+
+57
+00:04:27,270 --> 00:04:29,999
+The echo of the Big Bang, on the TV at home
+
+58
+00:04:29,999 --> 00:04:32,820
+But this light hid a puzzle...
+
+59
+00:04:32,820 --> 00:04:37,276
+...one that troubled scientists for years
+
+60
+00:04:39,876 --> 00:04:41,809
+The universe looks the same in every direction
+
+61
+00:04:41,809 --> 00:04:48,218
+Its far-apart regions never touched each other, yet they are exactly alike
+
+62
+00:04:48,218 --> 00:04:49,971
+That was the puzzle
+
+63
+00:04:49,971 --> 00:04:55,242
+7 DECEMBER 1979
+
+64
+00:04:55,242 --> 00:04:58,098
+On that night, a young American physicist, Alan Guth, wrote in his notebook...
+
+65
+00:04:58,098 --> 00:05:01,418
+Spectacular realization
+
+66
+00:05:01,418 --> 00:05:08,418
+His idea: in a tiny fraction of the first second, space itself expanded faster than light
+
+67
+00:05:10,963 --> 00:05:13,471
+10²⁶ times
+
+68
+00:05:13,471 --> 00:05:19,299
+The whole universe we can see today was then smaller than a proton...
+
+69
+00:05:19,299 --> 00:05:24,140
+...and in less than the blink of an eye, it grew to the size of a large orange
+
+70
+00:05:24,140 --> 00:05:25,975
+The expansion got a name: inflation
+
+71
+00:05:25,975 --> 00:05:27,229
+INFLATION
+
+72
+00:05:27,229 --> 00:05:30,816
+Inflation explained how the universe expanded
+
+73
+00:05:30,816 --> 00:05:37,722
+But as soon as scientists turn the clock back further, all of science breaks down
+
+74
+00:05:40,322 --> 00:05:42,139
+Physics has two great theories
+
+75
+00:05:42,139 --> 00:05:47,990
+Einstein's gravity explains big things, like galaxies and black holes
+
+76
+00:05:47,990 --> 00:05:54,631
+Quantum physics explains the smallest things, atoms and particles even smaller
+
+77
+00:05:54,631 --> 00:05:58,509
+Usually each works fine in its own place
+
+78
+00:05:58,509 --> 00:06:03,884
+But in the first moment after the Big Bang, everything was both tiny and enormously heavy
+
+79
+00:06:03,884 --> 00:06:08,604
+There, the two theories clash
+
+80
+00:06:08,604 --> 00:06:10,149
+Here there is a wall
+
+81
+00:06:10,149 --> 00:06:15,803
+Cut one second into so many pieces that it takes a 1 followed by 43 zeros...
+
+82
+00:06:15,803 --> 00:06:18,671
+...the very first slice of time after the Big Bang
+
+83
+00:06:18,671 --> 00:06:21,039
+PLANCK TIME
+
+84
+00:06:21,039 --> 00:06:25,764
+No equation can yet say what lies beyond that wall
+
+85
+00:06:25,764 --> 00:06:30,812
+But scientists have not stopped trying to reach it
+
+86
+00:06:33,412 --> 00:06:36,401
+17 MARCH 2014
+
+87
+00:06:36,401 --> 00:06:43,205
+On 17 March 2014, the BICEP2 team in Antarctica announced it had found direct traces of inflation
+
+88
+00:06:43,205 --> 00:06:45,469
+Scientists around the world celebrated
+
+89
+00:06:45,469 --> 00:06:51,634
+But months later it turned out the signal had been made by dust in our own galaxy
+
+90
+00:06:51,634 --> 00:06:54,652
+Then came the James Webb Space Telescope
+
+91
+00:06:54,652 --> 00:07:01,652
+In 2025, Webb saw the most distant galaxy yet, its light leaving just 280 million years after the Big Bang
+
+92
+00:07:04,672 --> 00:07:09,119
+The closer Webb gets to the beginning, the clearer it becomes...
+
+93
+00:07:09,119 --> 00:07:13,333
+...that telescopes alone can't get past the wall
+
+94
+00:07:13,333 --> 00:07:16,433
+New ideas are needed now...
+
+95
+00:07:16,433 --> 00:07:20,460
+...and the most startling idea came from Stephen Hawking
+
+96
+00:07:23,060 --> 00:07:27,273
+Maybe there was nothing before the Big Bang...
+
+97
+00:07:27,273 --> 00:07:28,376
+...not even time
+
+98
+00:07:28,376 --> 00:07:33,832
+In 1983, Stephen Hawking and James Hartle proposed an idea
+
+99
+00:07:33,832 --> 00:07:38,929
+Near the beginning, time does not run the way we know it
+
+100
+00:07:38,929 --> 00:07:42,377
+Time becomes just like length and width
+
+101
+00:07:42,377 --> 00:07:45,860
+So the beginning of the universe has no edge at all
+
+102
+00:07:45,860 --> 00:07:49,796
+Like a ball, it simply rounds off and closes
+
+103
+00:07:49,796 --> 00:07:56,321
+In 2018, a few weeks before he died, Hawking explained it with an example
+
+104
+00:07:56,321 --> 00:08:03,043
+Asking what came before the Big Bang is like asking what lies south of the South Pole
+
+105
+00:08:03,043 --> 00:08:06,979
+There is nothing there, because the South Pole itself is the end point
+
+106
+00:08:06,979 --> 00:08:11,042
+If Hawking was right, the word "before" has no meaning
+
+107
+00:08:11,042 --> 00:08:14,351
+But not every scientist agrees with Hawking
+
+108
+00:08:14,351 --> 00:08:19,759
+Some say there was a whole universe before the Big Bang
+
+109
+00:08:22,359 --> 00:08:26,277
+In this idea, there was another universe before ours
+
+110
+00:08:26,277 --> 00:08:32,941
+It shrank and shrank, then bounced back like a ball...
+
+111
+00:08:32,941 --> 00:08:34,752
+BIG BOUNCE
+
+112
+00:08:34,752 --> 00:08:40,140
+Nobel Prize-winning British scientist Roger Penrose goes even further
+
+113
+00:08:40,140 --> 00:08:46,665
+In his view, the universe runs in endless cycles, one after another
+
+114
+00:08:46,665 --> 00:08:53,665
+In 2018, Penrose's team claimed traces of the previous universe in the echo of the Big Bang
+
+115
+00:08:55,441 --> 00:09:00,608
+Most scientists don't accept the claim; they say it's just noise
+
+116
+00:09:00,608 --> 00:09:07,144
+But if Penrose is right, the Big Bang was not the start of the story, just a new chapter
+
+117
+00:09:07,144 --> 00:09:13,158
+And one idea goes further still...
+
+118
+00:09:13,158 --> 00:09:14,840
+...that our Big Bang was not alone
+
+119
+00:09:17,440 --> 00:09:18,943
+Inflation has a strange consequence
+
+120
+00:09:18,943 --> 00:09:25,015
+Some scientists think the rapid expansion never stopped everywhere at once
+
+121
+00:09:25,015 --> 00:09:31,738
+Where it stopped, a bubble formed: a universe. Elsewhere, expansion carried on
+
+122
+00:09:31,738 --> 00:09:36,742
+Just like bubbles rising here and there in boiling water
+
+123
+00:09:36,742 --> 00:09:37,996
+The idea is called eternal inflation
+
+124
+00:09:37,996 --> 00:09:39,435
+ETERNAL INFLATION
+
+125
+00:09:39,435 --> 00:09:43,023
+It keeps making countless bubbles, one after another
+
+126
+00:09:43,023 --> 00:09:47,771
+Every bubble, a separate universe, each with its own Big Bang
+
+127
+00:09:47,771 --> 00:09:53,278
+Our universe may be just one bubble...
+
+128
+00:09:53,278 --> 00:09:55,681
+...a tiny part of a multiverse
+
+129
+00:09:55,681 --> 00:10:01,382
+Scientists have searched that ancient light for marks of collisions with other bubbles
+
+130
+00:10:01,382 --> 00:10:04,387
+So far, no firm sign has been found
+
+131
+00:10:04,986 --> 00:10:09,291
+The wait for an answer may not be long
+
+132
+00:10:09,291 --> 00:10:14,806
+Japan's LiteBIRD satellite is being prepared to launch around 2032
+
+133
+00:10:14,806 --> 00:10:19,705
+Its job: to find the real traces of inflation in that echo
+
+134
+00:10:19,705 --> 00:10:22,423
+It may finally tell how the beginning happened
+
+135
+00:10:22,423 --> 00:10:24,385
+Until then, the question stays open
+
+136
+00:10:24,385 --> 00:10:27,020
+Was Hawking right, or Penrose?
+
+137
+00:10:27,020 --> 00:10:32,581
+Did time really have a beginning, is the universe an endless cycle...
+
+138
+00:10:32,581 --> 00:10:36,505
+...or is our universe just one of countless bubbles?
+
+139
+00:10:36,505 --> 00:10:38,804
+Science has not decided yet
+
+140
+00:10:38,804 --> 00:10:44,702
+In 1964, Penzias and Wilson thought that hiss was a fault...
+
+141
+00:10:44,702 --> 00:10:49,717
+...today it is the biggest clue to the biggest puzzle of all
+
+142
+00:10:49,717 --> 00:10:52,829
+Where the universe came from, and what came before it...
+
+143
+00:10:52,829 --> 00:10:58,168
+...the answer still hides behind that oldest light
+

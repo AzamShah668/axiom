@@ -30,6 +30,11 @@ Node.js, Puppeteer, FFmpeg, googleapis, Notion API, YouTube Data API, Gemini AI,
 - Start with `agent.md` for orientation, read module `CONTEXT.md` only when needed
 - All logs → `logs/`, all renders → `output/videos/`
 
+## Science channel (Hindi documentary)
+- Separate pipeline from EduContent: `productions/` + `scripts/{science,footage,video,elevenlabs,setup}/`
+- **New chat? Read `productions/STATUS.md` first** (where every video stands, what's next); update it and commit at the end of each chat
+- Start with the `science-video` skill (`.claude/skills/science-video/SKILL.md`); channel rules in `productions/README.md`
+
 ## Key Paths
 | Resource | Path |
 |----------|------|

@@ -1,0 +1,2389 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "title": {
+  "kicker": "10 facts about",
+  "main": "Neutron Stars"
+ },
+ "cards": {
+  "fact10": [
+   "FACT #10",
+   "PREDICTED IN *1934*, BEFORE ANYONE SAW ONE"
+  ],
+  "fact9": [
+   "FACT #9",
+   "A STUDENT FOUND THE FIRST, *LGM-1*"
+  ],
+  "fact8": [
+   "FACT #8",
+   "THE FIRST PLANETS CIRCLED A *DEAD* STAR"
+  ],
+  "fact7": [
+   "FACT #7",
+   "A CITY-SIZED STAR SPINNING *716* TIMES A SECOND"
+  ],
+  "fact6": [
+   "FACT #6",
+   "THE STRONGEST *MAGNETS* IN THE UNIVERSE"
+  ],
+  "fact5": [
+   "FACT #5",
+   "WHEN THEY COLLIDE, THEY MAKE *GOLD*"
+  ],
+  "fact4": [
+   "FACT #4",
+   "A RADIO *FLASH* FROM INSIDE OUR GALAXY"
+  ],
+  "fact3": [
+   "FACT #3",
+   "THE HEAVIEST ONE IS *EATING* ITS PARTNER"
+  ],
+  "fact2": [
+   "FACT #2",
+   "PULSARS TURNED THE GALAXY INTO A *DETECTOR*"
+  ],
+  "fact1": [
+   "FACT #1",
+   "ONE FLARE FORGED *GOLD*"
+  ]
+ },
+ "count_total": 10,
+ "music": [
+  {
+   "from": "hook",
+   "track": "Interloper.mp3"
+  },
+  {
+   "from": "cold_open",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "fact10",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "fact8",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "fact6",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "fact4",
+   "track": "Long_Note_One.mp3"
+  },
+  {
+   "from": "fact2",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "a spinning pulsar with radio beams",
+  "slow flight through a star field"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {
+  "hook/1": "svs_20267-win1#0",
+  "fact9/7": "eso_alma-array-uhd1#0"
+ },
+ "ban": [
+  "esahubble_heic1711a#0",
+  "esahubble_heic1803c#1",
+  "esahubble_heic1817b#0",
+  "esahubble_heic1819a#0",
+  "esahubble_heic2013b#0",
+  "esahubble_heic2016a#0",
+  "esahubble_heic2102a#0",
+  "esahubble_heic2108d#0",
+  "esahubble_heic2208b#0",
+  "esahubble_heic2603b#0",
+  "esahubble_potw2423a",
+  "esahubble_potw2542a#0",
+  "esawebb_potm2209a#0",
+  "esawebb_potm2509a#0",
+  "esawebb_potm2511a#0",
+  "esawebb_weic2219b#1",
+  "esawebb_weic2517c#0",
+  "esawebb_weic2612c#0",
+  "eso_adaptiveopticsandmask#0",
+  "eso_eso1134b#0",
+  "eso_eso1151e#0",
+  "eso_eso1422b#0",
+  "eso_eso1606b",
+  "eso_eso1614a",
+  "eso_eso1637a#0",
+  "eso_eso1641a#0",
+  "eso_eso1708c#0",
+  "eso_eso1709b#0",
+  "eso_eso1709c#0",
+  "eso_eso1741b#0",
+  "eso_eso1814b#0",
+  "eso_eso1817b",
+  "eso_eso1821b#0",
+  "eso_eso1825c#0",
+  "eso_eso1825f#0",
+  "eso_eso1835a#2",
+  "eso_eso1914c#0",
+  "eso_eso1919c#0",
+  "eso_eso1920d#0",
+  "eso_eso2002b#0",
+  "eso_eso2014a#3",
+  "eso_eso2110c#0",
+  "eso_eso2110d#0",
+  "eso_eso2110f#0",
+  "eso_eso2110g#0",
+  "eso_eso2112b#0",
+  "eso_eso2112c#0",
+  "eso_eso2112d#0",
+  "eso_eso2117a",
+  "eso_eso2117b#0",
+  "eso_eso2305a#5",
+  "eso_eso2314c#0",
+  "eso_eso2513a#0",
+  "eso_eso2519c#0",
+  "eso_eso2606a#1",
+  "eso_eso2606c#0",
+  "eso_eso2609b#0",
+  "eso_esopia00064sites#0",
+  "eso_lasillatimelapseeulerntt#0",
+  "eso_mars_4k#0",
+  "eso_moon_evolution_p1#0",
+  "eso_potw2443a",
+  "eso_rossiter-mclaughlin#0",
+  "eso_wotu-supernovae-win2",
+  "svs_12019-win1#0",
+  "svs_12019-win2#0",
+  "svs_12605#0",
+  "svs_12605-win2#0",
+  "svs_12605-win3#1",
+  "svs_12854",
+  "svs_12854#0",
+  "svs_12854-win1",
+  "svs_12854-win1#0",
+  "svs_12854-win2",
+  "svs_12854-win3",
+  "svs_12994-win1",
+  "svs_13483#1",
+  "svs_13619#1",
+  "svs_13778#0",
+  "svs_14163#0",
+  "svs_14309#0",
+  "svs_14347#7",
+  "svs_14399",
+  "svs_14399-win1",
+  "svs_14399-win2",
+  "svs_14399-win3",
+  "svs_14399-win3#0",
+  "svs_14402",
+  "svs_14531#0",
+  "svs_14666#0",
+  "svs_14666#3",
+  "svs_14701#0",
+  "svs_14710#0",
+  "svs_14719",
+  "svs_14719#0",
+  "svs_14719-win1",
+  "svs_14719-win2",
+  "svs_14719-win3",
+  "svs_14846#0",
+  "svs_14921#2",
+  "svs_14935#0",
+  "svs_15041#3",
+  "svs_15051-win1",
+  "svs_20310#0",
+  "svs_20315",
+  "svs_20404#0",
+  "svs_30020#0",
+  "svs_31346#0",
+  "svs_31361#0",
+  "svs_31365#0",
+  "svs_31376#0",
+  "svs_4141",
+  "svs_4142",
+  "svs_4143",
+  "svs_4144",
+  "svs_4145",
+  "svs_4557",
+  "svs_4557#0",
+  "svs_4645",
+  "svs_4645-win1",
+  "svs_4645-win2",
+  "svs_4645-win3",
+  "svs_4646",
+  "svs_4646-win1",
+  "svs_4646-win2",
+  "svs_4646-win3",
+  "svs_4649#0",
+  "svs_5157",
+  "svs_5157-win1",
+  "svs_5157-win2",
+  "svs_5157-win3",
+  "svs_5503#2",
+  "svs_5627#0"
+ ],
+ "crops": {},
+ "exclude": {},
+ "sections": {
+  "hook": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a spinning pulsar with radio beams sweeping through space",
+      "neutron star animation with glowing magnetic field lines"
+     ]
+    },
+    {
+     "at": "सिर्फ़ एक शहर",
+     "q": [
+      "a neutron star compared with the size of a city",
+      "a neutron star above a city on Earth"
+     ]
+    },
+    {
+     "at": "इसका सिर्फ़ एक चम्मच",
+     "q": [
+      "the glowing surface of a neutron star with hot spots",
+      "a close-up of a dense neutron star"
+     ]
+    },
+    {
+     "at": "कुछ neutron stars",
+     "q": [
+      "an artist's animation of a pulsar with two beams",
+      "a neutron star rotating with magnetic field lines"
+     ]
+    },
+    {
+     "at": "और जब दो",
+     "q": [
+      "two neutron stars spiralling together and merging",
+      "simulation of a neutron star collision"
+     ]
+    },
+    {
+     "at": "तो ब्रह्मांड में सोना",
+     "q": [
+      "the glowing debris of a kilonova explosion",
+      "a bright explosion after a neutron star collision"
+     ]
+    },
+    {
+     "at": "लेकिन इन तारों की",
+     "opt": "hold",
+     "q": [
+      "a starry night sky before dawn",
+      "stars slowly drifting over a dark horizon"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Neutron star: the surviving heart of a dead star"
+    },
+    {
+     "at": "सिर्फ़ एक शहर",
+     "text": "Only as big as a city, yet heavier than the Sun"
+    },
+    {
+     "at": "इसका सिर्फ़ एक चम्मच",
+     "text": "One teaspoon of it would weigh about a billion tons on Earth"
+    },
+    {
+     "at": "कुछ neutron stars",
+     "text": "Some spin more than 700 times a second"
+    },
+    {
+     "at": "और जब दो",
+     "text": "And when two neutron stars collide, the universe makes gold"
+    },
+    {
+     "at": "लेकिन इन तारों की",
+     "text": "But their story begins about a thousand years ago..."
+    },
+    {
+     "at": "आसमान में",
+     "text": "...with a \"guest star\" that suddenly woke up in the sky"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": null,
+     "lines": [
+      {
+       "text": "NEUTRON STAR",
+       "at": null
+      },
+      {
+       "text": "*THE HEART OF A DEAD STAR*",
+       "at": "बचा हुआ दिल"
+      }
+     ]
+    },
+    {
+     "at": "सिर्फ़ एक शहर",
+     "lines": [
+      {
+       "text": "THE SIZE OF A CITY",
+       "at": "सिर्फ़ एक शहर"
+      },
+      {
+       "text": "*HEAVIER THAN THE SUN*",
+       "at": "Sun से भी"
+      }
+     ]
+    },
+    {
+     "at": "तो ब्रह्मांड में सोना",
+     "lines": [
+      {
+       "text": "WHEN THEY COLLIDE",
+       "at": "तो ब्रह्मांड में सोना"
+      },
+      {
+       "text": "*THEY MAKE GOLD*",
+       "at": "सोना"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "इसका सिर्फ़ एक चम्मच",
+     "num": {
+      "template": "hero",
+      "value": "1,000,000,000",
+      "from": "0",
+      "unit": "tons",
+      "kicker": "one teaspoon",
+      "land": "अरब"
+     }
+    },
+    {
+     "at": "कुछ neutron stars",
+     "num": {
+      "template": "gauge",
+      "value": "716",
+      "from": "0",
+      "max": "716",
+      "unit": "spins per second",
+      "kicker": "up to",
+      "land": "सात सौ"
+     }
+    }
+   ],
+   "m": [
+    {
+     "at": "तो ब्रह्मांड में सोना",
+     "breath": 0.9,
+     "riser": 1.2,
+     "impact": "impact",
+     "trans": "flare"
+    }
+   ]
+  },
+  "cold_open": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the morning sky at dawn with a bright star",
+      "a starry sky over a dark landscape before sunrise"
+     ]
+    },
+    {
+     "at": "वह इतना चमकदार",
+     "q": [
+      "a supernova lighting up the night sky",
+      "a bright star exploding in space"
+     ]
+    },
+    {
+     "at": "लगभग दो साल",
+     "q": [
+      "the Crab Nebula",
+      "zooming into the Crab Nebula"
+     ]
+    },
+    {
+     "at": "वह मेहमान तारा, असल",
+     "q": [
+      "a massive star exploding as a supernova",
+      "supernova explosion animation"
+     ]
+    },
+    {
+     "at": "और उस धमाके",
+     "q": [
+      "the glowing remnant of an exploded star",
+      "the bright core of a supernova remnant"
+     ]
+    },
+    {
+     "at": "एक neutron star.",
+     "opt": "hold",
+     "q": [
+      "the pulsar spinning at the heart of the Crab Nebula",
+      "a spinning neutron star with beams"
+     ]
+    },
+    {
+     "at": "लगभग एक हज़ार साल बाद",
+     "q": [
+      "the glowing debris cloud of a kilonova",
+      "gold glowing in an explosion in space"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "4 JULY 1054",
+     "big": true
+    },
+    {
+     "at": "China में",
+     "text": "In China, the emperor's court astronomers saw a new star in the eastern sky at dawn"
+    },
+    {
+     "at": "वह इतना चमकदार",
+     "text": "It was so bright that for 23 days it could be seen even in daylight"
+    },
+    {
+     "at": "एक मेहमान तारा",
+     "text": "A GUEST STAR",
+     "big": true
+    },
+    {
+     "at": "लगभग दो साल",
+     "text": "About two years later, the guest star faded away"
+    },
+    {
+     "at": "लेकिन जहाँ",
+     "text": "But where it shone, there is now a vast glowing cloud of gas and dust"
+    },
+    {
+     "at": "Crab Nebula",
+     "text": "CRAB NEBULA",
+     "big": true
+    },
+    {
+     "at": "लगभग साढ़े छह",
+     "text": "About 6,500 light-years away"
+    },
+    {
+     "at": "वह मेहमान तारा, असल",
+     "text": "The guest star was really the death of a massive star..."
+    },
+    {
+     "at": "एक supernova",
+     "text": "SUPERNOVA",
+     "big": true
+    },
+    {
+     "at": "और उस धमाके",
+     "text": "And in the middle of that explosion, something survived"
+    },
+    {
+     "at": "कुछ ऐसा, जिसका",
+     "text": "Something heavier than the Sun, yet only 20 km wide"
+    },
+    {
+     "at": "और जो आज भी",
+     "text": "And it still spins 30 times every second..."
+    },
+    {
+     "at": "एक neutron star.",
+     "text": "NEUTRON STAR",
+     "big": true
+    },
+    {
+     "at": "लगभग एक हज़ार साल बाद",
+     "text": "A thousand years later, these stars revealed another secret of the universe: where gold comes from"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "China में",
+     "num": {
+      "template": "name",
+      "value": "THE COURT ASTRONOMERS",
+      "sub": "China · Song dynasty · 1054"
+     }
+    },
+    {
+     "at": "वह इतना चमकदार",
+     "num": {
+      "template": "hero",
+      "value": "23",
+      "from": "0",
+      "unit": "days, even in daylight",
+      "kicker": "it shone for",
+      "land": "तेईस"
+     }
+    },
+    {
+     "at": "लगभग साढ़े छह",
+     "num": {
+      "template": "line",
+      "value": "6,500",
+      "from": "0",
+      "unit": "light-years",
+      "left": "Earth",
+      "right": "Crab Nebula",
+      "land": "साढ़े छह"
+     }
+    },
+    {
+     "at": "और जो आज भी",
+     "num": {
+      "template": "hero",
+      "value": "30",
+      "from": "0",
+      "unit": "spins every second",
+      "kicker": "still today",
+      "land": "तीस",
+      "dur": "2.2"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "कुछ ऐसा, जिसका",
+     "lines": [
+      {
+       "text": "HEAVIER THAN THE SUN",
+       "at": "वज़न"
+      },
+      {
+       "text": "*ONLY 20 KM WIDE*",
+       "at": "बीस किलोमीटर"
+      }
+     ]
+    },
+    {
+     "at": "लगभग एक हज़ार साल बाद",
+     "lines": [
+      {
+       "text": "WHERE DOES",
+       "at": "सोना"
+      },
+      {
+       "text": "*GOLD COME FROM*",
+       "at": "कहाँ से"
+      }
+     ]
+    }
+   ],
+   "m": [
+    {
+     "at": "एक neutron star.",
+     "breath": 1.4,
+     "riser": 1.6,
+     "impact": "impact",
+     "trans": "flare"
+    }
+   ]
+  },
+  "fact10": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "glowing particles moving in a simulation",
+      "abstract swarm of glowing particles in space"
+     ]
+    },
+    {
+     "at": "सिर्फ़ दो साल",
+     "q": [
+      "an observatory dome under a starry sky",
+      "a large telescope at night"
+     ]
+    },
+    {
+     "at": "उन्होंने लिखा",
+     "q": [
+      "the core of a massive star collapsing",
+      "a giant star exploding as a supernova"
+     ]
+    },
+    {
+     "at": "इसी काम में",
+     "q": [
+      "a supernova remnant expanding in space",
+      "the glowing shell of a supernova remnant"
+     ]
+    },
+    {
+     "at": "ज़्यादातर scientists",
+     "q": [
+      "a bright supernova in a distant galaxy",
+      "a galaxy with an exploding star"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "उन्नीस सौ बत्तीस",
+     "text": "1932",
+     "big": true
+    },
+    {
+     "at": "neutron.",
+     "text": "NEUTRON",
+     "big": true
+    },
+    {
+     "at": "supernova.",
+     "text": "\"SUPERNOVA\"",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "The idea of a neutron star was born from a new discovery"
+    },
+    {
+     "at": "James Chadwick",
+     "text": "In 1932, England's James Chadwick found a new particle inside the atom"
+    },
+    {
+     "at": "उस पर कोई",
+     "text": "It had no electric charge..."
+    },
+    {
+     "at": "सिर्फ़ दो साल",
+     "text": "Within two years, two astronomers in California connected it to something much bigger"
+    },
+    {
+     "at": "Germany से आए",
+     "text": "Walter Baade from Germany, and Fritz Zwicky from Switzerland"
+    },
+    {
+     "at": "उन्होंने लिखा",
+     "text": "They wrote that when a massive star explodes, its leftover core can be crushed so hard..."
+    },
+    {
+     "at": "लगभग सिर्फ़ neutrons",
+     "text": "...that its atoms break down into a ball made almost only of neutrons"
+    },
+    {
+     "at": "इसी काम में",
+     "text": "In the same work, they gave the explosion a name that is still used today..."
+    },
+    {
+     "at": "ज़्यादातर scientists",
+     "text": "Most scientists didn't take the idea seriously"
+    },
+    {
+     "at": "एक तारा जो",
+     "text": "A star as small as a city, and heavier than the Sun?"
+    },
+    {
+     "at": "अगले तैंतीस साल",
+     "text": "For the next 33 years, nobody saw one"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "James Chadwick",
+     "num": {
+      "template": "name",
+      "value": "JAMES CHADWICK",
+      "sub": "physicist · England · 1932"
+     }
+    },
+    {
+     "at": "Walter Baade",
+     "num": {
+      "template": "name",
+      "value": "WALTER BAADE",
+      "sub": "astronomer · Mount Wilson Observatory"
+     }
+    },
+    {
+     "at": "Fritz Zwicky",
+     "num": {
+      "template": "name",
+      "value": "FRITZ ZWICKY",
+      "sub": "astrophysicist · Caltech"
+     }
+    },
+    {
+     "at": "अगले तैंतीस साल",
+     "num": {
+      "template": "line",
+      "value": "33",
+      "from": "0",
+      "unit": "years",
+      "left": "1934",
+      "right": "1967",
+      "land": "तैंतीस"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "उन्होंने लिखा",
+     "lines": [
+      {
+       "text": "WHEN A BIG STAR EXPLODES",
+       "at": "फटता है"
+      },
+      {
+       "text": "*A BALL OF NEUTRONS*",
+       "at": "neutrons का"
+      }
+     ]
+    }
+   ]
+  },
+  "fact9": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "radio telescope dishes under the Milky Way",
+      "an observatory at night under the stars"
+     ]
+    },
+    {
+     "at": "Telescope हर दिन",
+     "q": [
+      "a large telescope at night under the Milky Way",
+      "star trails over an observatory"
+     ]
+    },
+    {
+     "at": "November में",
+     "q": [
+      "an artist's animation of a pulsar sweeping beams",
+      "a spinning neutron star with radio beams"
+     ]
+    },
+    {
+     "at": "LGM-One.",
+     "q": [
+      "radio telescopes pointing at the night sky",
+      "a strange signal from deep space"
+     ]
+    },
+    {
+     "at": "लेकिन यह कोई aliens",
+     "q": [
+      "a pulsar sweeping beams like a lighthouse",
+      "a spinning neutron star with two beams"
+     ]
+    },
+    {
+     "at": "अगले ही साल",
+     "q": [
+      "the pulsar at the centre of the Crab Nebula",
+      "the heart of the Crab Nebula"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ चौहत्तर",
+     "q": [
+      "an observatory under the stars",
+      "telescope domes at night"
+     ]
+    },
+    {
+     "at": "चवालीस साल बाद",
+     "q": [
+      "a radio telescope at sunset",
+      "radio dishes at dusk"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "1967",
+     "big": true
+    },
+    {
+     "at": "scruff.",
+     "text": "\"SCRUFF\"",
+     "big": true
+    },
+    {
+     "at": "Baade और Zwicky सही",
+     "text": "BAADE AND ZWICKY WERE RIGHT",
+     "big": true
+    },
+    {
+     "at": "उन्नीस सौ चौहत्तर",
+     "text": "NOBEL PRIZE 1974",
+     "big": true
+    },
+    {
+     "at": "England के Cambridge",
+     "text": "In Cambridge, England, a 24-year-old PhD student, Jocelyn Bell, had built a new radio telescope with her colleagues"
+    },
+    {
+     "at": "वह सत्तावन",
+     "text": "It covered as much ground as 57 tennis courts, with more than 2,000 antennas"
+    },
+    {
+     "at": "Telescope हर दिन",
+     "text": "Every day the telescope printed about 30 metres of chart paper, and Jocelyn read it by hand"
+    },
+    {
+     "at": "August में",
+     "text": "In August, she spotted a strange mark on the paper, just half an inch long"
+    },
+    {
+     "at": "उन्होंने उसे नाम दिया",
+     "text": "She called it..."
+    },
+    {
+     "at": "November में",
+     "text": "In November, when the mark was recorded at high speed, it was full of pulses"
+    },
+    {
+     "at": "बिल्कुल घड़ी की",
+     "text": "As regular as the ticking of a clock"
+    },
+    {
+     "at": "हर एक दशमलव",
+     "text": "One every 1.337 seconds"
+    },
+    {
+     "at": "इतनी एक जैसी",
+     "text": "So regular that the team jokingly named the signal..."
+    },
+    {
+     "at": "LGM-One.",
+     "text": "LGM-1: \"Little Green Men\""
+    },
+    {
+     "at": "लेकिन यह कोई aliens",
+     "text": "But it wasn't aliens. It was the first pulsar"
+    },
+    {
+     "at": "एक घूमता हुआ",
+     "text": "A spinning neutron star that, like a lighthouse, swept a beam of radio waves past Earth on every turn"
+    },
+    {
+     "at": "अगले ही साल",
+     "text": "The very next year, a pulsar was found inside the Crab Nebula too"
+    },
+    {
+     "at": "उन्नीस सौ चौहत्तर",
+     "text": "In 1974, the discovery of pulsars won the Nobel Prize"
+    },
+    {
+     "at": "लेकिन Jocelyn Bell को नहीं",
+     "text": "But not for Jocelyn Bell"
+    },
+    {
+     "at": "उनके supervisor",
+     "text": "It went to her supervisor, Antony Hewish, and to Martin Ryle"
+    },
+    {
+     "at": "चवालीस साल बाद",
+     "text": "44 years later, Jocelyn Bell won a $3 million prize"
+    },
+    {
+     "at": "उन्होंने पूरी रक़म",
+     "text": "She gave all of it away, so that students who rarely get the chance could study physics"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Jocelyn Bell",
+     "num": {
+      "template": "name",
+      "value": "JOCELYN BELL",
+      "sub": "PhD student · Cambridge"
+     }
+    },
+    {
+     "at": "वह सत्तावन",
+     "num": {
+      "template": "hero",
+      "value": "57",
+      "from": "0",
+      "unit": "tennis courts",
+      "kicker": "the telescope covered",
+      "land": "सत्तावन",
+      "dur": "2.2"
+     }
+    },
+    {
+     "at": "और उसमें दो हज़ार",
+     "num": {
+      "template": "hero",
+      "value": "2,048",
+      "from": "0",
+      "unit": "antennas",
+      "land": "दो हज़ार"
+     }
+    },
+    {
+     "at": "Telescope हर दिन",
+     "num": {
+      "template": "hero",
+      "value": "30",
+      "from": "0",
+      "unit": "metres of chart paper",
+      "kicker": "every day",
+      "land": "तीस मीटर"
+     }
+    },
+    {
+     "at": "हर एक दशमलव",
+     "num": {
+      "template": "hero",
+      "value": "1.337",
+      "from": "0",
+      "unit": "seconds between pulses",
+      "land": "सात second"
+     }
+    },
+    {
+     "at": "उनके supervisor",
+     "num": {
+      "template": "name",
+      "value": "ANTONY HEWISH & MARTIN RYLE",
+      "sub": "Nobel Prize in Physics · 1974"
+     }
+    },
+    {
+     "at": "चवालीस साल बाद",
+     "num": {
+      "template": "hero",
+      "value": "3,000,000",
+      "from": "0",
+      "unit": "dollars",
+      "kicker": "44 years later",
+      "land": "तीस लाख"
+     }
+    }
+   ],
+   "m": [
+    {
+     "at": "LGM-One.",
+     "breath": 1.0,
+     "riser": 1.2,
+     "impact": "hit",
+     "trans": "cut"
+    }
+   ],
+   "k": [
+    {
+     "at": "LGM-One.",
+     "lines": [
+      {
+       "text": "LGM-1",
+       "at": "LGM-One."
+      },
+      {
+       "text": "*\"LITTLE GREEN MEN\"*",
+       "at": "Little Green"
+      }
+     ]
+    },
+    {
+     "at": "लेकिन यह कोई aliens",
+     "lines": [
+      {
+       "text": "NOT ALIENS",
+       "at": "aliens"
+      },
+      {
+       "text": "*THE FIRST PULSAR*",
+       "at": "पहला pulsar"
+      }
+     ]
+    },
+    {
+     "at": "उन्होंने पूरी रक़म",
+     "lines": [
+      {
+       "text": "SHE GAVE",
+       "at": "उन्होंने पूरी रक़म"
+      },
+      {
+       "text": "*ALL OF IT AWAY*",
+       "at": "दान"
+      }
+     ]
+    }
+   ]
+  },
+  "fact8": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a pulsar with precise flashing beams",
+      "a spinning pulsar in space"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ नब्बे",
+     "q": [
+      "a giant radio telescope dish",
+      "a large radio dish seen from above"
+     ]
+    },
+    {
+     "at": "उसकी लहरें",
+     "q": [
+      "planets orbiting a pulsar",
+      "artist's impression of planets around a pulsar"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ बानवे",
+     "q": [
+      "a rocky planet orbiting a dead star",
+      "a planet circling a neutron star"
+     ]
+    },
+    {
+     "at": "लेकिन यह ग्रह",
+     "q": [
+      "a barren planet lit by harsh radiation",
+      "a planet bombarded by radiation from a star"
+     ]
+    },
+    {
+     "at": "Sun जैसे किसी",
+     "q": [
+      "a planet orbiting a sun-like star",
+      "an exoplanet passing in front of its star"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "उन्नीस सौ बानवे",
+     "text": "1992",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "Pulsars are such perfect clocks that even the smallest disturbance in their pulses can be caught"
+    },
+    {
+     "at": "उन्नीस सौ नब्बे",
+     "text": "In 1990, Polish astronomer Aleksander Wolszczan used the giant Arecibo telescope in Puerto Rico to find a pulsar..."
+    },
+    {
+     "at": "जो हर second एक सौ",
+     "text": "...spinning 161 times a second"
+    },
+    {
+     "at": "उसकी लहरें",
+     "text": "Its pulses arrived sometimes a little early, sometimes a little late, in a repeating pattern"
+    },
+    {
+     "at": "Wolszczan और उनके साथी",
+     "text": "Wolszczan and his colleague Dale Frail realised that planets were orbiting the pulsar, tugging on it"
+    },
+    {
+     "at": "उन्नीस सौ बानवे",
+     "text": "The discovery was published in 1992"
+    },
+    {
+     "at": "Sun के अलावा",
+     "text": "They were the first confirmed planets around any star other than the Sun"
+    },
+    {
+     "at": "Earth से लगभग चार",
+     "text": "Two planets about four times as heavy as Earth, and later a third, just twice the mass of the Moon"
+    },
+    {
+     "at": "लेकिन यह ग्रह",
+     "text": "But these planets circle a dead star, under a constant rain of deadly radiation"
+    },
+    {
+     "at": "Sun जैसे किसी",
+     "text": "The first planet around a Sun-like star was found three years later"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Aleksander Wolszczan",
+     "num": {
+      "template": "name",
+      "value": "ALEKSANDER WOLSZCZAN",
+      "sub": "astronomer · Arecibo Observatory"
+     }
+    },
+    {
+     "at": "जो हर second एक सौ",
+     "num": {
+      "template": "gauge",
+      "value": "161",
+      "from": "0",
+      "max": "200",
+      "unit": "spins per second",
+      "land": "इकसठ"
+     }
+    },
+    {
+     "at": "Dale Frail",
+     "num": {
+      "template": "name",
+      "value": "DALE FRAIL",
+      "sub": "radio astronomer · NRAO"
+     }
+    },
+    {
+     "at": "Earth से लगभग चार",
+     "num": {
+      "template": "scale",
+      "value": "4",
+      "from": "1",
+      "unit": "times Earth's mass",
+      "kicker": "two planets",
+      "land": "चार गुना"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "Wolszczan और उनके साथी",
+     "lines": [
+      {
+       "text": "PLANETS",
+       "at": "ग्रह घूम"
+      },
+      {
+       "text": "*AROUND A DEAD STAR*",
+       "at": "खींच"
+      }
+     ]
+    }
+   ]
+  },
+  "fact7": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a dense glowing neutron star",
+      "a neutron star compared with the size of a city"
+     ]
+    },
+    {
+     "at": "जब एक भारी तारे",
+     "num": {
+      "template": "hero",
+      "value": "20",
+      "from": "1,392,000",
+      "count": "1.6",
+      "unit": "km wide",
+      "kicker": "more than a Sun, squeezed",
+      "foot": "the size of a city",
+      "land": "बीस किलोमीटर",
+      "log": true
+     },
+     "q": [
+      "a neutron star glowing in space",
+      "hot spots on a neutron star"
+     ]
+    },
+    {
+     "at": "NASA के मुताबिक़",
+     "q": [
+      "hot spots on the surface of a neutron star",
+      "a neutron star rotating with bright spots"
+     ]
+    },
+    {
+     "at": "और यह गोले",
+     "q": [
+      "a dense globular star cluster",
+      "zooming into a globular cluster"
+     ]
+    },
+    {
+     "at": "जो हर second सात सौ सोलह",
+     "q": [
+      "a very fast spinning pulsar",
+      "a millisecond pulsar animation"
+     ]
+    },
+    {
+     "at": "इतनी रफ़्तार पर",
+     "q": [
+      "a spinning star throwing off material",
+      "a fast rotating star in space"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "Terzan Five",
+     "text": "TERZAN 5",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "The strangest thing about neutron stars is how dense they are"
+    },
+    {
+     "at": "जब एक भारी",
+     "text": "When the core of a massive star collapses, more than the Sun's mass is squeezed into a ball just 20 km wide"
+    },
+    {
+     "at": "NASA के मुताबिक़",
+     "text": "According to NASA, one teaspoon of neutron star would weigh about a billion tons on Earth"
+    },
+    {
+     "at": "और यह गोले",
+     "text": "And these balls spin"
+    },
+    {
+     "at": "दो हज़ार चार",
+     "text": "In 2004, America's Green Bank Telescope recorded a dense cluster of stars called Terzan 5"
+    },
+    {
+     "at": "McGill University",
+     "text": "In that data, McGill University student Jason Hessels found a pulsar spinning 716 times a second"
+    },
+    {
+     "at": "आज तक कोई",
+     "text": "No neutron star has ever been found spinning faster"
+    },
+    {
+     "at": "इतनी रफ़्तार पर",
+     "text": "At that speed, if the star were any bigger, its surface would fly apart"
+    },
+    {
+     "at": "इसलिए scientists",
+     "text": "So scientists calculate it can be no more than 32 km across"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "NASA के मुताबिक़",
+     "num": {
+      "template": "hero",
+      "value": "1,000,000,000",
+      "from": "0",
+      "unit": "tons",
+      "kicker": "one teaspoon",
+      "foot": "according to NASA",
+      "land": "अरब"
+     }
+    },
+    {
+     "at": "Jason Hessels",
+     "num": {
+      "template": "name",
+      "value": "JASON HESSELS",
+      "sub": "student · McGill University"
+     }
+    },
+    {
+     "at": "जो हर second सात सौ सोलह",
+     "num": {
+      "template": "gauge",
+      "value": "716",
+      "from": "0",
+      "max": "716",
+      "unit": "spins per second",
+      "kicker": "the fastest known",
+      "land": "सोलह"
+     }
+    },
+    {
+     "at": "इसलिए scientists",
+     "num": {
+      "template": "hero",
+      "value": "32",
+      "from": "0",
+      "unit": "km across, at most",
+      "land": "बत्तीस"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "इतनी रफ़्तार पर",
+     "lines": [
+      {
+       "text": "ANY BIGGER",
+       "at": "बड़ा"
+      },
+      {
+       "text": "*IT WOULD FLY APART*",
+       "at": "बिखर"
+      }
+     ]
+    }
+   ]
+  },
+  "fact6": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a magnetar with twisted glowing magnetic field lines",
+      "neutron star magnetic field animation"
+     ]
+    },
+    {
+     "at": "सत्ताईस December",
+     "q": [
+      "the Milky Way galaxy seen from far away",
+      "a spiral galaxy slowly rotating"
+     ]
+    },
+    {
+     "at": "सिर्फ़ एक second के दसवें",
+     "q": [
+      "an animation of a magnetar exploding with a bright flash",
+      "a neutron star bursting with energy"
+     ]
+    },
+    {
+     "at": "वह flash इतना तेज़",
+     "q": [
+      "a satellite in orbit above Earth",
+      "a gamma-ray space telescope in orbit"
+     ]
+    },
+    {
+     "at": "उसकी लहर ने",
+     "q": [
+      "Earth's atmosphere glowing seen from space",
+      "aurora over Earth seen from orbit"
+     ]
+    },
+    {
+     "at": "Scientists के मुताबिक़",
+     "q": [
+      "planet Earth seen from space",
+      "Earth with its thin blue atmosphere"
+     ]
+    },
+    {
+     "at": "लेकिन उस flash के बाद",
+     "q": [
+      "an explosion in space slowly fading away",
+      "a glowing cloud fading in space"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "magnetars.",
+     "text": "MAGNETARS",
+     "big": true
+    },
+    {
+     "at": "सत्ताईस December",
+     "text": "27 DECEMBER 2004",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "Some neutron stars have another power. They are the strongest magnets in the universe..."
+    },
+    {
+     "at": "उनका magnetic field",
+     "text": "Their magnetic field is about a million billion times stronger than Earth's"
+    },
+    {
+     "at": "सत्ताईस December",
+     "text": "27 December 2004"
+    },
+    {
+     "at": "Galaxy के दूसरी तरफ़",
+     "text": "On the far side of the galaxy, tens of thousands of light-years away, the surface of a magnetar suddenly burst"
+    },
+    {
+     "at": "सिर्फ़ एक second के दसवें",
+     "text": "In just a tenth of a second, it released as much energy as the Sun gives off in 150,000 years"
+    },
+    {
+     "at": "वह flash इतना तेज़",
+     "text": "The flash was so intense that the detectors of several satellites were blinded for a moment"
+    },
+    {
+     "at": "उसकी लहर ने",
+     "text": "Its wave even shook the upper layers of Earth's atmosphere"
+    },
+    {
+     "at": "Scientists के मुताबिक़",
+     "text": "Scientists say that if such a magnetar were within 10 light-years, Earth's atmosphere could have been badly damaged"
+    },
+    {
+     "at": "लेकिन उस flash के बाद",
+     "text": "But after the flash, a faint glow lingered for hours"
+    },
+    {
+     "at": "बीस साल तक",
+     "text": "For 20 years, nobody could explain it"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "वह ब्रह्मांड के सबसे",
+     "lines": [
+      {
+       "text": "THE STRONGEST",
+       "at": "सबसे ताक़तवर"
+      },
+      {
+       "text": "*MAGNETS IN THE UNIVERSE*",
+       "at": "magnet हैं"
+      }
+     ]
+    },
+    {
+     "at": "वह flash इतना तेज़",
+     "lines": [
+      {
+       "text": "SATELLITES",
+       "at": "satellites"
+      },
+      {
+       "text": "*BLINDED*",
+       "at": "अंधे"
+      }
+     ]
+    },
+    {
+     "at": "लेकिन उस flash के बाद",
+     "lines": [
+      {
+       "text": "AN AFTERGLOW",
+       "at": "हल्की सी चमक"
+      },
+      {
+       "text": "*NOBODY UNDERSTOOD*",
+       "at": "मतलब"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "उनका magnetic field",
+     "num": {
+      "template": "scale",
+      "value": "1,000,000,000,000,000",
+      "from": "1",
+      "unit": "times Earth's magnetic field",
+      "land": "दस लाख अरब",
+      "log": true
+     }
+    },
+    {
+     "at": "सिर्फ़ एक second के दसवें",
+     "num": {
+      "template": "hero",
+      "value": "150,000",
+      "from": "0",
+      "unit": "years of sunlight",
+      "kicker": "in a tenth of a second",
+      "land": "एक लाख पचास"
+     }
+    },
+    {
+     "at": "अगर ऐसा magnetar",
+     "num": {
+      "template": "hero",
+      "value": "10",
+      "from": "0",
+      "unit": "light-years",
+      "kicker": "if it had been within",
+      "land": "दस light-years"
+     }
+    }
+   ],
+   "m": [
+    {
+     "at": "सिर्फ़ एक second के दसवें",
+     "breath": 1.0,
+     "riser": 1.4,
+     "impact": "impact",
+     "trans": "flash"
+    }
+   ]
+  },
+  "fact5": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "two neutron stars spiralling around each other",
+      "a calm star field slowly drifting"
+     ]
+    },
+    {
+     "at": "America के LIGO",
+     "gfx": "ligo"
+    },
+    {
+     "at": "लगभग सौ second",
+     "q": [
+      "two neutron stars spiralling around each other",
+      "simulation of merging neutron stars"
+     ]
+    },
+    {
+     "at": "सिर्फ़ एक दशमलव सात",
+     "q": [
+      "a gamma-ray burst jet from a merger",
+      "the Fermi gamma-ray telescope in orbit"
+     ]
+    },
+    {
+     "at": "ग्यारह घंटे",
+     "q": [
+      "an observatory dome in Chile at night",
+      "telescopes in the Chilean desert under the stars"
+     ]
+    },
+    {
+     "at": "फिर लगभग सत्तर",
+     "q": [
+      "many telescopes observing the sky at night",
+      "the Very Large Telescope at night"
+     ]
+    },
+    {
+     "at": "जो दिखा",
+     "q": [
+      "an explosion after two neutron stars merge",
+      "artist's impression of a kilonova"
+     ]
+    },
+    {
+     "at": "सोना था",
+     "q": [
+      "glowing golden debris expanding in space",
+      "a bright golden explosion in space"
+     ]
+    },
+    {
+     "at": "एक अनुमान के",
+     "q": [
+      "a cloud of heavy elements glowing",
+      "debris of a neutron star merger"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "17 AUGUST 2017",
+     "big": true
+    },
+    {
+     "at": "America के LIGO",
+     "text": "America's LIGO and Italy's Virgo detectors caught a faint ripple in space"
+    },
+    {
+     "at": "एक kilonova.",
+     "text": "KILONOVA",
+     "big": true
+    },
+    {
+     "at": "लगभग सौ second",
+     "text": "For about 100 seconds, two neutron stars spiralled closer and closer, and then collided"
+    },
+    {
+     "at": "सिर्फ़ एक दशमलव सात",
+     "text": "Just 1.7 seconds later, NASA's Fermi satellite caught a flash of gamma rays from the same direction"
+    },
+    {
+     "at": "ग्यारह घंटे",
+     "text": "Within 11 hours, a telescope in Chile found the crash site..."
+    },
+    {
+     "at": "तेरह करोड़",
+     "text": "...in a galaxy 130 million light-years away"
+    },
+    {
+     "at": "फिर लगभग सत्तर",
+     "text": "Then about 70 observatories turned to look"
+    },
+    {
+     "at": "जो दिखा",
+     "text": "What they saw had never been seen before"
+    },
+    {
+     "at": "टक्कर से निकला",
+     "text": "The debris glowed with the light of newly made heavy elements..."
+    },
+    {
+     "at": "उसमें platinum",
+     "text": "It contained platinum. And... gold"
+    },
+    {
+     "at": "एक अनुमान के मुताबिक़",
+     "text": "By one estimate, this single collision made gold and platinum weighing about ten times as much as Earth"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "लगभग सौ second",
+     "num": {
+      "template": "hero",
+      "value": "100",
+      "from": "0",
+      "unit": "seconds of waves",
+      "land": "सौ second"
+     }
+    },
+    {
+     "at": "सिर्फ़ एक दशमलव सात",
+     "num": {
+      "template": "hero",
+      "value": "1.7",
+      "from": "0",
+      "unit": "seconds later",
+      "kicker": "gamma rays",
+      "land": "सात second"
+     }
+    },
+    {
+     "at": "तेरह करोड़",
+     "num": {
+      "template": "line",
+      "value": "130,000,000",
+      "from": "0",
+      "unit": "light-years",
+      "left": "Earth",
+      "right": "NGC 4993",
+      "land": "तेरह करोड़"
+     }
+    },
+    {
+     "at": "फिर लगभग सत्तर",
+     "num": {
+      "template": "hero",
+      "value": "70",
+      "from": "0",
+      "unit": "observatories",
+      "land": "सत्तर"
+     }
+    },
+    {
+     "at": "एक अनुमान के मुताबिक़",
+     "num": {
+      "template": "scale",
+      "value": "10",
+      "from": "1",
+      "unit": "Earths of gold and platinum",
+      "kicker": "one estimate",
+      "land": "दस गुना"
+     }
+    }
+   ],
+   "m": [
+    {
+     "at": "सोना था",
+     "breath": 1.2,
+     "riser": 1.4,
+     "impact": "impact",
+     "trans": "flare"
+    }
+   ],
+   "k": [
+    {
+     "at": "सोना था",
+     "lines": [
+      {
+       "text": "*GOLD*",
+       "at": "सोना था"
+      }
+     ]
+    }
+   ]
+  },
+  "fact4": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "radio telescope dishes at night",
+      "radio telescopes pointing at the starry sky"
+     ]
+    },
+    {
+     "at": "यह दूर की galaxies",
+     "q": [
+      "distant galaxies in a deep field",
+      "a deep field full of galaxies"
+     ]
+    },
+    {
+     "at": "अट्ठाईस April",
+     "q": [
+      "a radio telescope array in a valley",
+      "radio antennas in a desert"
+     ]
+    },
+    {
+     "at": "इस बार चमक",
+     "q": [
+      "the Milky Way galaxy",
+      "the band of the Milky Way across the night sky"
+     ]
+    },
+    {
+     "at": "वह एक magnetar",
+     "q": [
+      "a magnetar erupting with bursts",
+      "magnetar outburst animation"
+     ]
+    },
+    {
+     "at": "तेरह साल पुरानी",
+     "q": [
+      "radio waves travelling through space",
+      "a fast radio burst reaching Earth"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "2007",
+     "big": true
+    },
+    {
+     "at": "fast radio bursts.",
+     "text": "FAST RADIO BURSTS",
+     "big": true
+    },
+    {
+     "at": "अट्ठाईस April",
+     "text": "28 APRIL 2020",
+     "big": true
+    },
+    {
+     "at": "दो हज़ार सात से",
+     "text": "Since 2007, astronomers had been finding strange radio flashes in the sky"
+    },
+    {
+     "at": "सिर्फ़ एक millisecond",
+     "text": "Just a millisecond long, but extremely powerful"
+    },
+    {
+     "at": "यह दूर की galaxies",
+     "text": "They came from distant galaxies, and nobody knew what made them. They were named..."
+    },
+    {
+     "at": "अट्ठाईस April",
+     "text": "28 April 2020"
+    },
+    {
+     "at": "Canada के CHIME",
+     "text": "Canada's CHIME telescope, and a few small antennas in California, caught a bright radio flash at the same moment"
+    },
+    {
+     "at": "इन antennas को",
+     "text": "Those antennas had been built by a Caltech student, Christopher Bochenek"
+    },
+    {
+     "at": "इस बार चमक",
+     "text": "This time, the flash came from inside the Milky Way"
+    },
+    {
+     "at": "वह एक magnetar",
+     "text": "It came from a magnetar that was flaring in X-rays at the same time"
+    },
+    {
+     "at": "Bochenek के मुताबिक़",
+     "text": "According to Bochenek, in one millisecond it released as much energy as the Sun does in 30 seconds"
+    },
+    {
+     "at": "तेरह साल पुरानी",
+     "text": "A 13-year-old puzzle had its first answer"
+    },
+    {
+     "at": "कम से कम",
+     "text": "At least some fast radio bursts come from magnetars"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "सिर्फ़ एक millisecond",
+     "num": {
+      "template": "hero",
+      "value": "0.001",
+      "from": "1",
+      "unit": "seconds",
+      "kicker": "each flash lasts",
+      "land": "millisecond"
+     }
+    },
+    {
+     "at": "Christopher Bochenek",
+     "num": {
+      "template": "name",
+      "value": "CHRISTOPHER BOCHENEK",
+      "sub": "student · Caltech"
+     }
+    },
+    {
+     "at": "Bochenek के मुताबिक़",
+     "num": {
+      "template": "hero",
+      "value": "30",
+      "from": "0",
+      "unit": "seconds of sunlight",
+      "kicker": "in one millisecond",
+      "land": "तीस second"
+     }
+    },
+    {
+     "at": "तेरह साल पुरानी",
+     "num": {
+      "template": "line",
+      "value": "13",
+      "from": "0",
+      "unit": "years",
+      "left": "2007",
+      "right": "2020",
+      "land": "तेरह साल"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "इस बार चमक",
+     "lines": [
+      {
+       "text": "FROM INSIDE",
+       "at": "इस बार"
+      },
+      {
+       "text": "*THE MILKY WAY*",
+       "at": "Milky Way"
+      }
+     ]
+    }
+   ]
+  },
+  "fact3": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a dense star collapsing under its own weight",
+      "a neutron star glowing in space"
+     ]
+    },
+    {
+     "at": "दो हज़ार बाईस",
+     "q": [
+      "observatory domes on a mountain top at night",
+      "telescopes on a mountain above the clouds"
+     ]
+    },
+    {
+     "at": "एक pulsar, जो हर second",
+     "q": [
+      "a pulsar evaporating its companion star",
+      "black widow pulsar animation"
+     ]
+    },
+    {
+     "at": "इस pulsar का वज़न",
+     "q": [
+      "a heavy neutron star glowing",
+      "a bright neutron star in space"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "black widow.",
+     "text": "\"BLACK WIDOW\"",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "There is a limit to how heavy a neutron star can be"
+    },
+    {
+     "at": "उससे ज़्यादा mass",
+     "text": "Any more mass, and it collapses under its own weight into a black hole"
+    },
+    {
+     "at": "यह सीमा ठीक",
+     "text": "Exactly where that limit lies, nobody knows for sure"
+    },
+    {
+     "at": "दो हज़ार बाईस",
+     "text": "In 2022, using the Keck telescope in Hawaii, Roger Romani and Alex Filippenko's team measured a strange pair"
+    },
+    {
+     "at": "एक pulsar, जो हर second",
+     "text": "A pulsar spinning 707 times a second, and its companion star, which it is slowly eating"
+    },
+    {
+     "at": "साथी अब Jupiter",
+     "text": "The companion is now only 20 times as heavy as Jupiter. Pulsars like this are called..."
+    },
+    {
+     "at": "इस pulsar का वज़न",
+     "text": "This pulsar weighs 2.35 times as much as the Sun: the heaviest neutron star ever measured"
+    },
+    {
+     "at": "Filippenko के शब्दों में",
+     "text": "In Filippenko's words, a neutron star is like one giant atomic nucleus"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "उससे ज़्यादा mass",
+     "lines": [
+      {
+       "text": "ANY HEAVIER",
+       "at": "ज़्यादा mass"
+      },
+      {
+       "text": "*IT BECOMES A BLACK HOLE*",
+       "at": "black hole"
+      }
+     ]
+    },
+    {
+     "at": "Filippenko के शब्दों में",
+     "lines": [
+      {
+       "text": "ONE GIANT",
+       "at": "विशाल"
+      },
+      {
+       "text": "*ATOMIC NUCLEUS*",
+       "at": "nucleus"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "Roger Romani",
+     "num": {
+      "template": "name",
+      "value": "ROGER ROMANI & ALEX FILIPPENKO",
+      "sub": "Stanford University · UC Berkeley"
+     }
+    },
+    {
+     "at": "एक pulsar, जो हर second",
+     "num": {
+      "template": "gauge",
+      "value": "707",
+      "from": "0",
+      "max": "716",
+      "unit": "spins per second",
+      "land": "सात सौ सात"
+     }
+    },
+    {
+     "at": "साथी अब Jupiter",
+     "num": {
+      "template": "scale",
+      "value": "20",
+      "from": "1",
+      "unit": "Jupiter masses left",
+      "kicker": "the companion",
+      "land": "बीस गुना"
+     }
+    },
+    {
+     "at": "इस pulsar का वज़न",
+     "num": {
+      "template": "hero",
+      "value": "2.35",
+      "from": "1",
+      "unit": "suns",
+      "kicker": "the heaviest known",
+      "land": "पाँच गुना"
+     }
+    }
+   ]
+  },
+  "fact2": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the Milky Way galaxy full of stars",
+      "a galaxy with flashing pulsars"
+     ]
+    },
+    {
+     "at": "पंद्रह साल तक",
+     "q": [
+      "radio telescopes observing at night",
+      "a big radio dish at night"
+     ]
+    },
+    {
+     "at": "अगर space में",
+     "gfx": "ripples"
+    },
+    {
+     "at": "June दो हज़ार तेईस",
+     "q": [
+      "two black holes orbiting each other in a simulation",
+      "two colliding galaxies"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "June दो हज़ार तेईस",
+     "text": "JUNE 2023",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "Pulsars are the most perfect clocks in the universe"
+    },
+    {
+     "at": "इसी बात ने",
+     "text": "That gave scientists an amazing idea: turn the whole galaxy into a detector"
+    },
+    {
+     "at": "पंद्रह साल तक",
+     "text": "For 15 years, the NANOGrav team timed the pulses of 68 pulsars across the Milky Way with great precision"
+    },
+    {
+     "at": "अगर space में",
+     "text": "If very long gravitational waves were passing through space, the pulsars' ticking would shift in a special pattern"
+    },
+    {
+     "at": "June दो हज़ार तेईस",
+     "text": "In June 2023, NANOGrav and several other teams around the world showed evidence of exactly that pattern"
+    },
+    {
+     "at": "यह लहरें सालों",
+     "text": "These waves are years long, and probably come from pairs of giant black holes orbiting each other across the universe"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "इसी बात ने",
+     "lines": [
+      {
+       "text": "THE GALAXY",
+       "at": "पूरी galaxy"
+      },
+      {
+       "text": "*AS A DETECTOR*",
+       "at": "detector"
+      }
+     ]
+    },
+    {
+     "at": "यह लहरें सालों",
+     "lines": [
+      {
+       "text": "WAVES",
+       "at": "लहरें"
+      },
+      {
+       "text": "*YEARS LONG*",
+       "at": "सालों लंबी"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "पंद्रह साल तक",
+     "num": {
+      "template": "line",
+      "value": "15",
+      "from": "0",
+      "unit": "years",
+      "left": "2008",
+      "right": "2023",
+      "land": "पंद्रह",
+      "dur": "2.0"
+     }
+    },
+    {
+     "at": "Milky Way में बिखरे",
+     "num": {
+      "template": "hero",
+      "value": "68",
+      "from": "0",
+      "unit": "pulsars",
+      "land": "अड़सठ"
+     }
+    }
+   ]
+  },
+  "fact1": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a glowing cloud fading in space",
+      "the afterglow of an explosion in space"
+     ]
+    },
+    {
+     "at": "दो हज़ार चौबीस",
+     "q": [
+      "an animation of a glowing neutron star close-up",
+      "a neutron star with magnetic field lines"
+     ]
+    },
+    {
+     "at": "अगर magnetar के flash",
+     "q": [
+      "a magnetar ejecting material from its surface",
+      "a neutron star blasting out glowing matter"
+     ]
+    },
+    {
+     "at": "Louisiana State",
+     "q": [
+      "a gamma-ray space telescope in orbit",
+      "the INTEGRAL satellite in space"
+     ]
+    },
+    {
+     "at": "April दो हज़ार पच्चीस",
+     "q": [
+      "glowing gold particles in space",
+      "a cloud of heavy elements glowing"
+     ]
+    },
+    {
+     "at": "Earth के लगभग एक-तिहाई",
+     "q": [
+      "planet Earth seen from space",
+      "Earth glowing in sunlight"
+     ]
+    },
+    {
+     "at": "Scientists के अनुमान से",
+     "q": [
+      "the Milky Way galaxy seen from above",
+      "our galaxy's spiral arms"
+     ]
+    },
+    {
+     "at": "लगभग एक हज़ार साल पहले",
+     "opt": "hold",
+     "q": [
+      "the Crab Nebula",
+      "zooming into the Crab Nebula"
+     ]
+    },
+    {
+     "at": "आज इंसान जानता",
+     "q": [
+      "a pulsar spinning with beams",
+      "a neutron star rotating in space"
+     ]
+    },
+    {
+     "at": "लेकिन सबसे बड़ा",
+     "opt": "hold",
+     "q": [
+      "a slow zoom into a glowing neutron star",
+      "the surface of a neutron star"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "For 20 years, the faint glow after the 2004 magnetar flash remained a puzzle"
+    },
+    {
+     "at": "दो हज़ार चौबीस",
+     "text": "In 2024, Columbia University PhD student Anirudh Patel was working on a new calculation with his supervisor Brian Metzger"
+    },
+    {
+     "at": "अगर magnetar के flash",
+     "text": "If a magnetar's flash blasts part of its surface into space, heavy elements can form in it"
+    },
+    {
+     "at": "और उनकी radioactive",
+     "text": "And their radioactive glow would peak about 10 minutes after the flash"
+    },
+    {
+     "at": "Louisiana State",
+     "text": "Eric Burns of Louisiana State University found exactly such a glow in old data from ESA's INTEGRAL satellite..."
+    },
+    {
+     "at": "दो हज़ार चार के flash के",
+     "text": "...10 minutes after the 2004 flash"
+    },
+    {
+     "at": "April दो हज़ार पच्चीस",
+     "text": "The result was published in April 2025"
+    },
+    {
+     "at": "उस एक flash में",
+     "text": "That one flash had made heavy elements like gold, platinum and uranium..."
+    },
+    {
+     "at": "Earth के लगभग एक-तिहाई",
+     "text": "...about a third of Earth's mass in total"
+    },
+    {
+     "at": "Scientists के अनुमान से",
+     "text": "Scientists estimate that up to 10% of the Milky Way's heavy elements may come from magnetar flares"
+    },
+    {
+     "at": "लगभग एक हज़ार साल पहले",
+     "text": "About a thousand years ago, astronomers in China watched a guest star shine"
+    },
+    {
+     "at": "आज इंसान जानता",
+     "text": "Today humanity knows that its death left behind a star the size of a city, heavier than the Sun, that can even make gold"
+    },
+    {
+     "at": "लेकिन सबसे बड़ा",
+     "text": "But the biggest question still stands"
+    },
+    {
+     "at": "एक neutron star के बिल्कुल",
+     "text": "At the very centre of a neutron star, where everything is crushed tighter than an atomic nucleus, what is there?"
+    },
+    {
+     "at": "शायद वहाँ",
+     "text": "Perhaps something that exists nowhere else in the universe"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Anirudh Patel",
+     "num": {
+      "template": "name",
+      "value": "ANIRUDH PATEL & BRIAN METZGER",
+      "sub": "Columbia University"
+     }
+    },
+    {
+     "at": "और उनकी radioactive",
+     "num": {
+      "template": "hero",
+      "value": "10",
+      "from": "0",
+      "unit": "minutes after the flash",
+      "land": "दस मिनट"
+     }
+    },
+    {
+     "at": "Eric Burns",
+     "num": {
+      "template": "name",
+      "value": "ERIC BURNS",
+      "sub": "astrophysicist · Louisiana State University"
+     }
+    },
+    {
+     "at": "Scientists के अनुमान से",
+     "num": {
+      "template": "progress",
+      "value": "10",
+      "from": "0",
+      "max": "100",
+      "unit": "%",
+      "left": "magnetar flares",
+      "right": "all of the galaxy's",
+      "kicker": "up to",
+      "land": "दस percent"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "उस एक flash में",
+     "lines": [
+      {
+       "text": "GOLD · PLATINUM",
+       "at": "सोना"
+      },
+      {
+       "text": "*URANIUM*",
+       "at": "uranium"
+      }
+     ]
+    },
+    {
+     "at": "Earth के लगभग एक-तिहाई",
+     "lines": [
+      {
+       "text": "*A THIRD OF AN EARTH*",
+       "at": "एक-तिहाई"
+      },
+      {
+       "text": "OF HEAVY ELEMENTS",
+       "at": "mass"
+      }
+     ]
+    },
+    {
+     "at": "एक neutron star के बिल्कुल",
+     "lines": [
+      {
+       "text": "WHAT LIES AT THE HEART",
+       "at": "बिल्कुल बीच"
+      },
+      {
+       "text": "*OF A NEUTRON STAR?*",
+       "at": "असल में"
+      }
+     ]
+    }
+   ],
+   "m": [
+    {
+     "at": "Earth के लगभग एक-तिहाई",
+     "breath": 1.2,
+     "riser": 1.4,
+     "impact": "impact",
+     "trans": "flare",
+     "swell": 8.0
+    }
+   ]
+  }
+ }
+}

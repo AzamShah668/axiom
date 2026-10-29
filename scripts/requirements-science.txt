@@ -1,0 +1,14 @@
+# Science channel pipeline (scripts/science/pipeline.sh). Install torch/torchvision from the CPU index first:
+#   pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r scripts/requirements-science.txt
+# System tools: ffmpeg/ffprobe with libx264 and rubberband (voice finish).
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+pillow==12.3.0
+requests==2.34.2
+soundfile==0.14.0
+scipy==1.18.1
+scenedetect==0.7.1
+easyocr==1.7.2
+open_clip_torch==3.3.0
+ImageHash==4.3.2

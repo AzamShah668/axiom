@@ -1,0 +1,462 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "music": [
+  {
+   "from": "gold_hook",
+   "track": "Interloper.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "a spinning pulsar with radio beams",
+  "slow flight through a star field"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "ban": [
+  "esahubble_heic1617a",
+  "esahubble_heic1617a-win1",
+  "esahubble_heic1617a-win1#0",
+  "esahubble_heic1711a#0",
+  "esahubble_heic1803c#1",
+  "esahubble_heic1817b#0",
+  "esahubble_heic1819a#0",
+  "esahubble_heic2013b#0",
+  "esahubble_heic2016a#0",
+  "esahubble_heic2101a",
+  "esahubble_heic2101a-win1",
+  "esahubble_heic2101a-win1#0",
+  "esahubble_heic2101a-win2",
+  "esahubble_heic2101a-win3",
+  "esahubble_heic2102a#0",
+  "esahubble_heic2108d#0",
+  "esahubble_heic2208b#0",
+  "esahubble_heic2603b#0",
+  "esahubble_potw2136a",
+  "esahubble_potw2136a#0",
+  "esahubble_potw2136a-win1",
+  "esahubble_potw2223a",
+  "esahubble_potw2223a#0",
+  "esahubble_potw2223a-win1",
+  "esahubble_potw2228a",
+  "esahubble_potw2228a#0",
+  "esahubble_potw2228a-win1",
+  "esahubble_potw2233a",
+  "esahubble_potw2233a#0",
+  "esahubble_potw2233a-win1",
+  "esahubble_potw2423a",
+  "esahubble_potw2521a",
+  "esahubble_potw2521a#0",
+  "esahubble_potw2542a#0",
+  "esawebb_potm2209a#0",
+  "esawebb_potm2509a#0",
+  "esawebb_potm2511a#0",
+  "esawebb_weic2207a",
+  "esawebb_weic2207a#0",
+  "esawebb_weic2219b#1",
+  "esawebb_weic2307b",
+  "esawebb_weic2307b#0",
+  "esawebb_weic2517c#0",
+  "esawebb_weic2612c#0",
+  "eso_adaptiveopticsandmask#0",
+  "eso_eso1134b#0",
+  "eso_eso1151e#0",
+  "eso_eso1407d",
+  "eso_eso1407d#0",
+  "eso_eso1422b#0",
+  "eso_eso1428a",
+  "eso_eso1428a-win1",
+  "eso_eso1428a-win1#0",
+  "eso_eso1504b",
+  "eso_eso1504b#0",
+  "eso_eso1605b",
+  "eso_eso1605b#0",
+  "eso_eso1606b",
+  "eso_eso1614a",
+  "eso_eso1637a#0",
+  "eso_eso1641a#0",
+  "eso_eso1708c#0",
+  "eso_eso1709b#0",
+  "eso_eso1709c#0",
+  "eso_eso1741b#0",
+  "eso_eso1814b#0",
+  "eso_eso1817b",
+  "eso_eso1821b#0",
+  "eso_eso1825c#0",
+  "eso_eso1825f#0",
+  "eso_eso1835a#2",
+  "eso_eso1914c#0",
+  "eso_eso1919c#0",
+  "eso_eso1920d#0",
+  "eso_eso2002b#0",
+  "eso_eso2014a#3",
+  "eso_eso2110c#0",
+  "eso_eso2110d#0",
+  "eso_eso2110f#0",
+  "eso_eso2110g#0",
+  "eso_eso2112b#0",
+  "eso_eso2112c#0",
+  "eso_eso2112d#0",
+  "eso_eso2117a",
+  "eso_eso2117b#0",
+  "eso_eso2305a#5",
+  "eso_eso2314c#0",
+  "eso_eso2513a#0",
+  "eso_eso2519c#0",
+  "eso_eso2606a#1",
+  "eso_eso2606c#0",
+  "eso_eso2609b#0",
+  "eso_esopia00064sites#0",
+  "eso_lasillatimelapseeulerntt#0",
+  "eso_mars_4k#0",
+  "eso_moon_evolution_p1#0",
+  "eso_potw2443a",
+  "eso_rossiter-mclaughlin#0",
+  "eso_wotu-supernovae-win2",
+  "svs_12019-win1#0",
+  "svs_12019-win2#0",
+  "svs_12605#0",
+  "svs_12605-win2#0",
+  "svs_12605-win3#1",
+  "svs_12854",
+  "svs_12854#0",
+  "svs_12854-win1",
+  "svs_12854-win1#0",
+  "svs_12854-win2",
+  "svs_12854-win3",
+  "svs_12994-win1",
+  "svs_13483#1",
+  "svs_13619#1",
+  "svs_13778#0",
+  "svs_14163#0",
+  "svs_14309#0",
+  "svs_14347#7",
+  "svs_14399",
+  "svs_14399-win1",
+  "svs_14399-win2",
+  "svs_14399-win3",
+  "svs_14399-win3#0",
+  "svs_14402",
+  "svs_14531#0",
+  "svs_14666#0",
+  "svs_14666#3",
+  "svs_14701#0",
+  "svs_14710#0",
+  "svs_14719",
+  "svs_14719#0",
+  "svs_14719-win1",
+  "svs_14719-win2",
+  "svs_14719-win3",
+  "svs_14846#0",
+  "svs_14896#1",
+  "svs_14921#2",
+  "svs_14935#0",
+  "svs_15041#3",
+  "svs_15051-win1",
+  "svs_20310#0",
+  "svs_20315",
+  "svs_20378",
+  "svs_20378#0",
+  "svs_20404#0",
+  "svs_30020#0",
+  "svs_31346#0",
+  "svs_31361#0",
+  "svs_31365#0",
+  "svs_31376#0",
+  "svs_4141",
+  "svs_4142",
+  "svs_4143",
+  "svs_4144",
+  "svs_4145",
+  "svs_4557",
+  "svs_4557#0",
+  "svs_4645",
+  "svs_4645-win1",
+  "svs_4645-win2",
+  "svs_4645-win3",
+  "svs_4646",
+  "svs_4646-win1",
+  "svs_4646-win2",
+  "svs_4646-win3",
+  "svs_4649#0",
+  "svs_5157",
+  "svs_5157-win1",
+  "svs_5157-win2",
+  "svs_5157-win3",
+  "svs_5503#2",
+  "svs_5627#0"
+ ],
+ "pin": {
+  "gold_hook/0": "svs_14896#4",
+  "gold_hook/1": "svs_13058-win2#0"
+ },
+ "sections": {
+  "gold_hook": {
+   "v": [
+    {
+     "at": null,
+     "opt": "shrink",
+     "q": [
+      "glowing golden debris expanding in space",
+      "the glowing debris of a kilonova explosion"
+     ]
+    },
+    {
+     "at": "शायद एक मरे",
+     "q": [
+      "an animation of a magnetar exploding with a bright flash",
+      "a magnetar erupting with bursts"
+     ]
+    },
+    {
+     "at": "इसका सबूत",
+     "q": [
+      "the Earth rotating in space",
+      "the Earth seen from orbit"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Did you know that our planet's gold may have been made in the explosion of a dead star?"
+    },
+    {
+     "at": "इसका सबूत",
+     "text": "The proof came twenty years later"
+    }
+   ],
+   "sfx": []
+  },
+  "gold_flare": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "flight across the Milky Way",
+      "the Milky Way galaxy seen from above"
+     ]
+    },
+    {
+     "at": "Galaxy के दूसरी",
+     "q": [
+      "a magnetar with twisted glowing magnetic field lines",
+      "neutron star magnetic field animation"
+     ]
+    },
+    {
+     "at": "एक second के दसवें",
+     "q": [
+      "a blinding flash of light from a neutron star",
+      "a neutron star bursting with energy"
+     ]
+    },
+    {
+     "at": "और दस मिनट",
+     "q": [
+      "a faint glow fading in space",
+      "a glowing cloud slowly dimming"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "27 DECEMBER 2004",
+     "big": true
+    },
+    {
+     "at": "Galaxy के दूसरी",
+     "text": "On the far side of the galaxy, the surface of a magnetar burst open"
+    },
+    {
+     "at": "एक second के दसवें",
+     "text": "In a tenth of a second, it released as much energy as our Sun gives out in 150,000 years"
+    },
+    {
+     "at": "और दस मिनट",
+     "text": "Ten minutes later, a faint glow appeared that nobody could explain"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "एक second के दसवें",
+     "num": {
+      "template": "hero",
+      "value": "150,000",
+      "from": "0",
+      "unit": "years of sunlight",
+      "kicker": "released in 0.1 seconds",
+      "land": "लाख"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "और दस मिनट",
+     "lines": [
+      {
+       "text": "10 MINUTES LATER",
+       "at": "दस मिनट"
+      },
+      {
+       "text": "*A STRANGE GLOW*",
+       "at": "चमक"
+      }
+     ]
+    }
+   ]
+  },
+  "gold_core": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a magnetar with twisted glowing magnetic field lines",
+      "a spinning neutron star with magnetic field lines"
+     ]
+    },
+    {
+     "at": "जब उसकी सतह",
+     "q": [
+      "a magnetar ejecting material from its surface",
+      "a neutron star blasting out glowing matter"
+     ]
+    },
+    {
+     "at": "और उन टुकड़ों",
+     "q": [
+      "glowing gold particles in space",
+      "a cloud of heavy elements glowing"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "A magnetar is the strongest magnet in the universe"
+    },
+    {
+     "at": "जब उसकी सतह",
+     "text": "When its surface bursts, pieces fly out..."
+    },
+    {
+     "at": "और उन टुकड़ों",
+     "text": "...and inside those pieces, new heavy atoms form"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": null,
+     "lines": [
+      {
+       "text": "THE STRONGEST MAGNET",
+       "at": "magnet"
+      },
+      {
+       "text": "*IN THE UNIVERSE*",
+       "at": "है"
+      }
+     ],
+     "kicker": "a magnetar"
+    }
+   ]
+  },
+  "gold_end": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a gamma-ray space telescope in orbit",
+      "the INTEGRAL satellite in space"
+     ]
+    },
+    {
+     "at": "वह चमक",
+     "q": [
+      "glowing golden debris expanding in space",
+      "a bright golden explosion in space"
+     ]
+    },
+    {
+     "at": "Earth के एक",
+     "q": [
+      "the Earth seen from space",
+      "planet Earth rotating"
+     ]
+    },
+    {
+     "at": "वह मरा हुआ",
+     "opt": "hold",
+     "q": [
+      "a spinning neutron star glowing in space",
+      "a pulsar with sweeping beams"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Then one PhD student's calculation solved the puzzle"
+    },
+    {
+     "at": "वह चमक",
+     "text": "The glow came from newly made heavy elements, like gold and platinum"
+    },
+    {
+     "at": "Earth के एक",
+     "text": "About a third of Earth's mass of them"
+    },
+    {
+     "at": "वह मरा हुआ",
+     "text": "That dead star was a gold factory"
+    },
+    {
+     "at": "सोने की factory",
+     "text": "A GOLD FACTORY",
+     "big": true
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "वह चमक",
+     "lines": [
+      {
+       "text": "GOLD",
+       "at": "सोना"
+      },
+      {
+       "text": "*PLATINUM*",
+       "at": "platinum"
+      }
+     ],
+     "kicker": "freshly made"
+    }
+   ],
+   "n": [
+    {
+     "at": "Earth के एक",
+     "num": {
+      "template": "hero",
+      "value": "1/3",
+      "unit": "of Earth's mass",
+      "kicker": "heavy elements made",
+      "land": "तिहाई"
+     }
+    }
+   ]
+  }
+ }
+}

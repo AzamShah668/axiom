@@ -1,0 +1,121 @@
+{
+ "coma": {
+  "src": "nasa",
+  "q": "Coma Cluster galaxies",
+  "must": [
+   "coma"
+  ]
+ },
+ "coma2": {
+  "src": "nasa",
+  "q": "Coma cluster Hubble",
+  "must": [
+   "coma"
+  ]
+ },
+ "andromeda": {
+  "src": "nasa",
+  "q": "Andromeda galaxy",
+  "must": [
+   "andromeda"
+  ]
+ },
+ "spiral": {
+  "src": "nasa",
+  "q": "Hubble spiral galaxy face-on",
+  "must": [
+   "spiral"
+  ]
+ },
+ "milkyway": {
+  "src": "nasa",
+  "q": "Milky Way galaxy artist concept",
+  "must": [
+   "milky way"
+  ]
+ },
+ "deepfield": {
+  "src": "nasa",
+  "q": "Hubble eXtreme Deep Field",
+  "must": [
+   "deep"
+  ]
+ },
+ "hubble_tel": {
+  "src": "nasa",
+  "q": "Hubble Space Telescope in orbit",
+  "must": [
+   "hubble"
+  ]
+ },
+ "jwst_tel": {
+  "src": "nasa",
+  "q": "James Webb Space Telescope mirror",
+  "must": [
+   "webb"
+  ]
+ },
+ "chandra_tel": {
+  "src": "nasa",
+  "q": "Chandra X-ray Observatory illustration",
+  "must": [
+   "chandra"
+  ]
+ },
+ "vla": {
+  "src": "nasa",
+  "q": "Very Large Array radio telescope",
+  "must": [
+   "array"
+  ]
+ },
+ "smacs": {
+  "src": "nasa",
+  "q": "SMACS 0723",
+  "must": [
+   "smacs"
+  ]
+ },
+ "einstein_ring": {
+  "src": "nasa",
+  "q": "Einstein ring",
+  "must": [
+   "lens"
+  ]
+ },
+ "cl0024": {
+  "src": "nasa",
+  "q": "galaxy cluster lensing Webb",
+  "must": [
+   "dark matter"
+  ]
+ },
+ "cmb": {
+  "src": "nasa",
+  "q": "Planck cosmic microwave background map",
+  "must": [
+   "planck"
+  ]
+ },
+ "earth": {
+  "src": "nasa",
+  "q": "Blue Marble Earth",
+  "must": [
+   "blue marble"
+  ]
+ },
+ "pillars": {
+  "src": "nasa",
+  "q": "Pillars of Creation",
+  "must": [
+   "pillars"
+  ]
+ },
+ "milkyway_map": {
+  "src": "nasa",
+  "q": "Milky Way galaxy spiral arms artist concept",
+  "must": [
+   "spiral"
+  ]
+ }
+}
