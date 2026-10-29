@@ -8,9 +8,11 @@ other pause marks (no pauses since 2026-10-27); digits and symbols ElevenLabs re
 are not in "acronyms_ok" (write them the way they are said, in Devanagari); catalogue codes; Latin-script Hindi;
 sentences over 28 words; [bite:x] markers missing from bites.json. Prints the new names and English terms that
 were never heard yet ("verified"): probe them first with probe_words.py.
-A narration with no Devanagari is Hinglish (owner, 2026-10-29: Neel reads the approved Roman-letter script
-directly, as in the owner's Japan video): then Roman Hindi and digits are fine, the lexicon's Roman spellings
-(naye, waqt…) still count, and a sentence's first word is not taken for a name."""
+Roman-letter Hinglish is refused for eleven_multilingual_v2 (the locked model): it can't be told the language and
+half-reads Roman Hindi as English. Owner, 2026-10-29, after an A/B of the same sentences: "butchering the words" in
+Roman letters, "exactly what I want" in Devanagari. (v3/v4 with language_code "hi" can read Roman Hindi, but the
+owner prefers the old model's sound.) With such a model, Roman Hindi and digits pass and a sentence's first word
+is not taken for a name."""
 import json, os, re, sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -28,7 +30,13 @@ def check(path, allow_pauses=False):
     body = open(path, encoding="utf-8").read()
     common = {w.lower() for w in re.findall(r"\b[a-z][a-z]+\b", body)}  # also used lowercase
     hinglish = not re.search(r"[\u0900-\u097F]", "".join(l for l in body.splitlines() if not l.startswith("#")))
-    problems, new_terms, ctx, sec = [], {}, {}, None
+    preset = json.load(open(os.path.join(ROOT, "productions", "voice-preset.json")))
+    if hinglish and not preset.get("language_code"):
+        problems_pre = [f"the narration is in Roman letters, but {preset['model_id']} can't be told it is Hindi and half-reads "
+                        "it as English (owner, 2026-10-29): write it in Devanagari, English words in Latin letters"]
+    else:
+        problems_pre = []
+    problems, new_terms, ctx, sec = problems_pre, {}, {}, None
     for n, line in enumerate(open(path, encoding="utf-8"), 1):
         if line.startswith("## "):
             sec = line[3:].strip()

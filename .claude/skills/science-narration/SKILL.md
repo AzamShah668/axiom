@@ -37,6 +37,13 @@ scripts/science/pipeline.sh productions/NN-slug narration
   `/v1/voices/add/{owner}/{voice_id}`.
 
 ## QC
+- **ElevenLabs always gets Devanagari** (owner, 2026-10-29). With the locked model (eleven_multilingual_v2) a
+  Roman-letter Hinglish script is half-read as English ("butchering the words"); the same lines in Devanagari were
+  "exactly what I want". The owner still writes and approves the script in Hinglish (`script.txt`); the narration
+  file is its word-for-word Devanagari copy (English words in Latin letters, numbers as Hindi words, "Voyager
+  One"). Tried and not chosen: eleven_v3 / eleven_v4 with `language_code: "hi"` read Roman Hinglish well, but the
+  owner prefers the old model's sound (v3 also refuses previous/next text). tts_check.py refuses Roman narration
+  for this model.
 - **Before the first character is paid for** (owner, 2026-10-27): `tts_check.py` must print 0 problems (the
   narration stage refuses to record otherwise) and `pipeline.sh … probe` must have heard every new name; see
   science-script-v2 §7. After recording, `speech_check.py` (run by the stage) flags names not heard and extra
