@@ -193,6 +193,10 @@ Liked and kept:
   their 1989 footage).
 - Simple English words where Hindi ones trip: time (not वक़्त), signal (not सरसराहट), particles (not कण).
 Did not like (never again):
+- A hook that opens on a date ("14 November 2023…"): nobody remembers it, and a later "back to November 2023" lands
+  on nothing (owner, video 05). Open on the biggest fact; say time relatively ("teen saal pehle"), use plain years,
+  and keep an exact date only when the date is the story (the one-light-day day). Call back by the event ("us din
+  par, jab…"), not the date. Exact dates can go on screen.
 - Pauses anywhere: no "..." suspense, no designed silences, no long gaps between chapters.
 - An odd or unpleasant image in the hook (pigeon droppings in the antenna) and showy sound words (सरसराहट).
 - A Short script that wasn't the video's own story ("Is this from the video that we created? I don't like the
