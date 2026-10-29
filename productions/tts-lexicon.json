@@ -48,16 +48,49 @@
   "गहनों": {
    "use": "planet / दुनिया (say what the gold is part of)",
    "why": "owner: 'Remove गहनों with planet' (gold Short hook)"
+  },
+  "naye": {
+   "use": "alag / abhi abhi bane / bilkul alag (rephrase)",
+   "why": "Roman form of नए: Neel says it like nahi"
+  },
+  "nayi": {
+   "use": "alag / rephrase",
+   "why": "Roman form of नई"
+  },
+  "waqt": {
+   "use": "time",
+   "why": "Roman form of वक़्त (mispronounced)"
+  },
+  "vakt": {
+   "use": "time",
+   "why": "Roman form of वक़्त"
+  },
+  "sarsarahat": {
+   "use": "signal / aawaz",
+   "why": "owner did not like the word"
+  },
+  "gehnon": {
+   "use": "planet / duniya",
+   "why": "owner: Remove गहनों with planet"
+  },
+  "Voyager 1": {
+   "use": "Voyager One",
+   "why": "in Hinglish Neel reads the digit in Hindi: 'Voyager ek' (probe, 2026-10-29); captions keep 'Voyager 1'"
+  },
+  "Voyager 2": {
+   "use": "Voyager Two",
+   "why": "same as Voyager 1"
   }
  },
  "acronyms_ok": [
-  "NASA",
-  "TV",
   "BBC",
-  "ESA",
   "CERN",
   "DNA",
-  "GPS"
+  "ESA",
+  "GPS",
+  "JPL",
+  "NASA",
+  "TV"
  ],
  "verified": [
   "Alan",
@@ -66,6 +99,7 @@
   "Arno",
   "Bang",
   "Belgium",
+  "Bharat",
   "Big",
   "Bounce",
   "British",
@@ -84,6 +118,7 @@
   "Guth",
   "Hartle",
   "Hawking",
+  "Hindi",
   "Hoyle",
   "Hubble",
   "inflation",
@@ -91,14 +126,17 @@
   "Japan",
   "Jersey",
   "John",
+  "Jupiter",
   "Lemaître",
   "LiteBird",
   "March",
   "Mather",
   "microwaves",
   "multiverse",
+  "Neptune",
   "New",
   "Nobel",
+  "November",
   "Penrose",
   "Penzias",
   "Physics",
@@ -107,6 +145,7 @@
   "Prize",
   "Robert",
   "Roger",
+  "Saturn",
   "Science",
   "Scientists",
   "Signal",
@@ -116,6 +155,7 @@
   "Spectacular",
   "Stephen",
   "Telescope",
+  "Uranus",
   "Webb",
   "Wilson",
   "कोबी",
