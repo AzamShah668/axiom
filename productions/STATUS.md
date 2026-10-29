@@ -29,6 +29,11 @@ Last updated 2026-10-29. Update this file and commit it at the end of every chat
 - Missing photos for 04 (Lemaître, Penrose, Hoyle, Hartle, Wilson, Solvay 1927, Holmdel antenna, Mount Wilson,
   LiteBIRD) are covered by footage in the final; they only matter if the owner wants them added.
 
+## On trial (branch `claude/determined-bell-frode3` only, not in main; the owner decides after video 05)
+- Script rule "context before concept" (science-script-v2 §2c).
+
 ## Accounts and budget
+- YouTube token expired 2026-10-29 (re-sign-in: `upload_youtube.py auth-url`, then `exchange`). The Google app is in
+  Testing mode, so its sign-ins expire after 7 days; publishing the consent screen stops that.
 - ElevenLabs: about 38,300 of 131,000 characters left in the current period (2026-10-27).
 - All work of 2026-10-20 to 10-29 was merged into `main` on 2026-10-29 (https://github.com/AzamShah668/axiom/pull/3).
