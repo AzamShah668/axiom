@@ -135,9 +135,12 @@ def render(sec, prev_text, next_text, out_dir):
     if os.path.exists(mp3):
         return sec["id"], "cached"
     body = {"text": sec["text"], "model_id": PRESET["model_id"], "voice_settings": PRESET["voice_settings"]}
-    if prev_text:
+    if PRESET.get("language_code"):  # "hi": read the text as Hindi (Hinglish in Roman letters); not on multilingual_v2
+        body["language_code"] = PRESET["language_code"]
+    stitch = not PRESET["model_id"].startswith("eleven_v3")  # v3 refuses previous_text / next_text
+    if prev_text and stitch:
         body["previous_text"] = prev_text[-800:]
-    if next_text:
+    if next_text and stitch:
         body["next_text"] = next_text[:800]
     url = f"{API}/text-to-speech/{PRESET['voice_id']}/with-timestamps?output_format=mp3_44100_192"
     for attempt in range(4):
