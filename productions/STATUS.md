@@ -22,7 +22,7 @@ Last updated 2026-10-29. Update this file and commit it at the end of every chat
 | 03 gold Short | done, on Drive (`videos/03 Short - One Flash From a Dead Star Made Gold.mp4`) | upload private when the owner says (`productions/03-neutron-stars/shorts/gold.md`) |
 | 03 teaspoon Short | to be remade | when the owner asks |
 | 04 Before the Big Bang | **final = the 04-x version** (owner accepted 2026-10-27): no pauses, real NASA footage, photos, channel intro. On Drive: `videos/04 - What Was There Before the Big Bang? (Hindi Documentary) 1080p - FINAL (real footage, no pauses).mp4` | fill the two `AUTHOR_TBD` photo credits (Alan Guth, Arno Penzias; Wikimedia was rate-limiting), then upload private when the owner says: `productions/04-before-big-bang-x/youtube.md` |
-| 05 Voyager 1 | topic chosen 2026-10-29 (vidIQ + YouTube data); outline in `productions/05-voyager/outline.md`, waiting for the owner's OK | publish by 18 Nov 2026 (one light-day); after the OK: script.md + script.txt with the context-before-concept rule |
+| 05 Voyager 1 | script written 2026-10-29 (`productions/05-voyager/script.txt`, record in script.md), waiting for the owner's OK | publish by 18 Nov 2026 (one light-day); after the OK: narration.hi.md → tts_check → probe → record → speech_check; archive clips + 2 real voices |
 
 ## Open decisions for the owner
 - Captions: upload the English CC track or not (pending since video 03).
