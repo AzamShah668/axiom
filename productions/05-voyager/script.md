@@ -33,14 +33,15 @@ after the owner's OK, then tts_check.py, the name probe, recording, speech_check
 | idea | context given first | comparison | payoff |
 |---|---|---|---|
 | planetary alignment | Neptune direct = ~30 years, too long | ball off a moving bat | 12 years instead of 30 |
-| plutonium power | sunlight ~27x weaker at Jupiter | - | why it lives, why it is dying |
+| plutonium power | sunlight ~27x weaker at Jupiter | an ember that stays hot for years | why it lives, why it is dying |
 | Golden Record | the ships never come back | a gramophone record | humanity's self-portrait |
 | Io's volcano | moons thought cold, dead rocks | - | first active volcano beyond Earth |
-| Titan's price | Titan has a thick atmosphere | - | Voyager 1 leaves the planets' plane |
+| Titan's price | thick atmosphere; planets orbit in one flat plane; gravity bends paths (ch1) | marbles on a plate | Voyager 1 leaves the planets' plane |
 | Pale Blue Dot | cameras about to be switched off | - | last pictures, Earth under one pixel |
-| heliopause | the Sun's wind makes a bubble | a bell ringing | gas 40x denser: interstellar space |
-| the 2023 fault | 22 W radio, 70 m dishes, 2 days a round trip | a fridge bulb | memory copied, code moved, 20 Apr 2024 |
+| heliopause | the Sun's wind makes a bubble | a bell ringing; tapping a pot tells full or empty | gas 40x denser: interstellar space |
+| the 2023 fault | 22 W radio, 70 m dishes, 2 days a round trip | a fridge bulb; moving things out of a broken room | memory copied, code moved, 20 Apr 2024 |
 | power decline | the plutonium of ch2 | - | instruments off one by one |
+| light-year (ending) | the light-day of ch8 | - | Gliese 445 at 1.6 light-years |
 | one light-day | Moon 1.3 s, Sun 8 min | - | Voyager: a whole day |
 
 ## Real footage and voices (to find, all NASA/JPL unless a licence says otherwise)
@@ -74,8 +75,7 @@ Ch5: the Pale Blue Dot (and its 2020 remaster). Ch6: 2013 NASA briefing (Ed Ston
 | radio | ~22-23 W; DSN 70 m dishes | NASA/JPL; Make Tech Easier |
 | power decline | ~4 W a year; under half the original by 2026 | Universe Today; AIAA (Apr 2026) |
 | instruments | LECP off 17 Apr 2026; two left (magnetometer, plasma wave) | Universe Today; AIAA |
-| "Big Bang" plan | power-saving reconfiguration, tested on Voyager 2 first | Universe Today (2026) |
 | Ed Stone | project scientist 1972-2022; died 2024 | NASA/JPL |
-| speed | ~17 km/s (~61,000 km/h) | NASA |
+| speed | ~17 km/s (~61,000 km/h); Earth's 40,075 km circumference in ~40 min | NASA; arithmetic |
 | Gliese 445 | in ~40,000 years, within ~1.6 light-years | Science abstract; NASA |
 | Moon, Sun light time | 1.3 s; 8 min 20 s | standard values |
