@@ -9,7 +9,7 @@ V Voyager One @ the Voyager spacecraft unfolding in space | a spacecraft with a 
 K Voyager One @ *VOYAGER 1* | kicker=the farthest thing humans ever made
 C Voyager One | Voyager 1
 V वो Earth से इतना दूर @ flying away from the Sun out of the solar system | zooming out from Earth past the planets
-N पूरा एक दिन @ hero | value=1 | unit=day for its light | kicker=so far that even light needs | land=एक | over
+N पूरा एक दिन @ hero | value=1 | unit=day for its light | kicker=so far that even light needs | land=एक | over | dur=2.4
 C वो Earth से इतना दूर | It is so far from Earth that even light needs a whole day to reach it
 V वो उनचास साल @ the Voyager spacecraft flying through space with its antenna toward Earth | a probe crossing a star field
 N वो उनचास साल @ hero | value=49 | unit=years and still flying | kicker=launched 1977 | land=उनचास | over
@@ -33,7 +33,8 @@ C अगले पाँच महीने | The next five months were the long
 V लेकिन इस कहानी का @ the Sun as a bright star seen from the edge of the solar system | a faint star in black space {hold}
 C लेकिन इस कहानी का | But the biggest question of this story is still open
 V इंसान की बनाई ये चीज़ @ flight out of the solar system into interstellar space | stars rushing past in deep space
-K इंसान की बनाई ये चीज़ @ HOW DID IT GET *THIS FAR?* [कैसे] / WHAT WILL IT *CARRY AWAY?* [जाएगा]
+K इंसान की बनाई ये चीज़ @ HOW DID IT GET [बनाई] / *THIS FAR?* [कैसे]
+K और जब इसकी आवाज़ @ WHAT WILL IT [आवाज़] / *CARRY AWAY?* [जाएगा]
 C इंसान की बनाई ये चीज़ | How did this human-made thing get so far...
 C और जब इसकी आवाज़ | ...and when its voice falls silent forever, what will go with it?
 
@@ -106,7 +107,6 @@ C यही बिजली आज तक | That electricity keeps Voyager alive
 V और यही बिजली @ a spacecraft drifting into darkness | a lone probe far from the Sun
 C और यही बिजली | And that same electricity is slowly running out
 V उन्नीस सौ सतहत्तर में @ archival film of a rocket launch in 1977 | a rocket lifting off {hold}
-L उन्नीस सौ सतहत्तर में @ VOYAGER 2 & VOYAGER 1 LAUNCHES | Cape Canaveral · August & September 1977 · archive footage
 C उन्नीस सौ सतहत्तर में | In 1977, Voyager 2 flew first
 V दो हफ़्ते बाद @ archival film of a rocket rising | a rocket climbing into the sky
 C दो हफ़्ते बाद | Two weeks later, Voyager 1
@@ -142,7 +142,7 @@ N और पचपन भाषाओं में @ hero | value=55 | unit=lang
 C और पचपन भाषाओं में | And greetings from Earth in 55 languages
 G उनमें से एक हिंदी @ photo:Earth_black_marble_asia
 C उनमें से एक हिंदी | One of them is in Hindi
-K धरती के वासियों @ "GREETINGS FROM THE *PEOPLE OF EARTH*" | kicker=the hindi greeting on the golden record
+K धरती के वासियों @ GREETINGS FROM [वासियों] / *THE PEOPLE OF EARTH* [नमस्कार] | kicker=the hindi greeting on the golden record
 C धरती के वासियों | "Greetings from the people of Earth"
 G इस record में भारत @ photo:Golden_record
 C इस record में भारत | The record also carries a song from India
@@ -175,7 +175,7 @@ G तभी उन्हें Io के @ photo:Io_Loki_plume
 C तभी उन्हें Io के | Then she saw a strange cloud at the edge of Io
 G वो एक ज्वालामुखी @ photo:V_Io_disk
 C वो एक ज्वालामुखी | It was a volcano, erupting at that moment
-K Earth के बाहर @ THE FIRST *ACTIVE VOLCANO* [ज्वालामुखी] | kicker=ever found beyond earth
+K Earth के बाहर @ THE FIRST [बाहर] / *ACTIVE VOLCANO* [दुनिया] | kicker=ever found beyond earth
 C Earth के बाहर | The first active volcano ever found on any world beyond Earth
 G फिर आया Saturn @ photo:V_Saturn_rings
 C फिर आया Saturn | Then came Saturn
@@ -225,7 +225,7 @@ C इतनी दूर से Earth | A picture of Earth from that far was of 
 V आख़िर Sagan की बात @ the Voyager family portrait of the planets in 1990 {hold}
 C आख़िर Sagan की बात | In the end Sagan won, and Voyager looked back
 G उस तस्वीर में @ photo:Pale_Blue_Dot
-K उस तस्वीर में @ A TINY *BLUE DOT* [नीला] | kicker=the pale blue dot · 1990
+K उस तस्वीर में @ A TINY [छोटा] / *BLUE DOT* [नीला] | kicker=the pale blue dot · 1990
 C उस तस्वीर में | In that picture, inside a ray of sunlight, is a tiny blue dot
 C एक pixel से भी | Smaller than a single pixel
 G वो हमारी Earth है @ photo:Pale_Blue_Dot_revisited
@@ -309,7 +309,7 @@ C और हर संदेश | And every message takes about two days to go a
 V इसी हाल में @ a radio telescope dish tracking the sky | radio dishes at dusk
 C इसी हाल में | Working like this, engineers found that a chip in its 1977 computer had failed
 G Memory का लगभग @ starfield
-N Memory का लगभग @ progress | value=3 | unit=% of memory lost | kicker=one broken chip | land=तीन | over
+N Memory का लगभग @ progress | value=3 | unit=% OF MEMORY LOST | kicker=one broken chip | land=तीन | over
 C Memory का लगभग | About 3 percent of its memory was ruined
 G Chip ठीक नहीं @ starfield
 C Chip ठीक नहीं | The chip could not be fixed
@@ -344,7 +344,7 @@ V उसकी बिजली, हर साल @ a fading red star | a dim red
 N उसकी बिजली, हर साल @ hero | value=4 | unit=watts less every year | kicker=voyager's power | land=चार | over
 C उसकी बिजली, हर साल | Its power drops by about 4 watts every year
 V दो हज़ार छब्बीस तक @ a fading light in deep space | a dim star in black space
-K दो हज़ार छब्बीस तक @ LESS THAN *HALF* [आधी] / OF ITS POWER LEFT [बिजली]
+K दो हज़ार छब्बीस तक @ LESS THAN [शुरुआत] / *HALF* [आधी] / OF ITS POWER LEFT [बिजली]
 C दो हज़ार छब्बीस तक | By 2026, Voyager has less than half of the power it started with
 V इसलिए team, एक एक @ stars slowly drifting in deep space | a dark star field {hold}
 C इसलिए team, एक एक | So the team is switching its instruments off, one by one
@@ -392,7 +392,7 @@ G लेकिन वो अपने साथ @ photo:Golden_record_prep:out
 C लेकिन वो अपने साथ | But it carries a golden record
 V जिसमें एक दिल की @ Earth from the International Space Station | the Earth's limb from orbit {hold}
 C जिसमें एक दिल की | Holding a heartbeat, Kesarbai's voice, and a message in Hindi
-K धरती के वासियों @ "GREETINGS FROM THE *PEOPLE OF EARTH*"
+K धरती के वासियों @ GREETINGS FROM [वासियों] / *THE PEOPLE OF EARTH* [नमस्कार]
 C धरती के वासियों | "Greetings from the people of Earth"
 V जिस machine ने @ the Voyager spacecraft drifting toward the stars | a lone spacecraft among stars {hold}
 C जिस machine ने | The machine that once sent meaningless signals has set out forever, carrying humanity's longest message

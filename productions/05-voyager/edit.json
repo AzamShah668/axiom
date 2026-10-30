@@ -2,7 +2,7 @@
  "style": "v3",
  "lead_in": 0.5,
  "title": {
-  "kicker": "the farthest thing humans ever made",
+  "kicker": "farthest from home",
   "main": "Voyager 1"
  },
  "cards": {
@@ -587,11 +587,24 @@
      "at": "इंसान की बनाई ये चीज़",
      "lines": [
       {
-       "text": "HOW DID IT GET *THIS FAR?*",
-       "at": "कैसे"
+       "text": "HOW DID IT GET",
+       "at": "बनाई"
       },
       {
-       "text": "WHAT WILL IT *CARRY AWAY?*",
+       "text": "*THIS FAR?*",
+       "at": "कैसे"
+      }
+     ]
+    },
+    {
+     "at": "और जब इसकी आवाज़",
+     "lines": [
+      {
+       "text": "WHAT WILL IT",
+       "at": "आवाज़"
+      },
+      {
+       "text": "*CARRY AWAY?*",
        "at": "जाएगा"
       }
      ]
@@ -605,7 +618,8 @@
       "value": "1",
       "unit": "day for its light",
       "kicker": "so far that even light needs",
-      "land": "एक"
+      "land": "एक",
+      "dur": "2.4"
      }
     },
     {
@@ -1097,14 +1111,6 @@
       "kicker": "sunlight",
       "land": "सत्ताईस"
      }
-    },
-    {
-     "at": "उन्नीस सौ सतहत्तर में",
-     "num": {
-      "template": "name",
-      "value": "VOYAGER 2 & VOYAGER 1 LAUNCHES",
-      "sub": "Cape Canaveral · August & September 1977 · archive footage"
-     }
     }
    ]
   },
@@ -1328,8 +1334,12 @@
      "at": "धरती के वासियों",
      "lines": [
       {
-       "text": "\"GREETINGS FROM THE *PEOPLE OF EARTH*\"",
-       "at": "धरती के वासियों"
+       "text": "GREETINGS FROM",
+       "at": "वासियों"
+      },
+      {
+       "text": "*THE PEOPLE OF EARTH*",
+       "at": "नमस्कार"
       }
      ],
      "kicker": "the hindi greeting on the golden record"
@@ -1558,8 +1568,12 @@
      "at": "Earth के बाहर",
      "lines": [
       {
-       "text": "THE FIRST *ACTIVE VOLCANO*",
-       "at": "ज्वालामुखी"
+       "text": "THE FIRST",
+       "at": "बाहर"
+      },
+      {
+       "text": "*ACTIVE VOLCANO*",
+       "at": "दुनिया"
       }
      ],
      "kicker": "ever found beyond earth"
@@ -1763,7 +1777,11 @@
      "at": "उस तस्वीर में",
      "lines": [
       {
-       "text": "A TINY *BLUE DOT*",
+       "text": "A TINY",
+       "at": "छोटा"
+      },
+      {
+       "text": "*BLUE DOT*",
        "at": "नीला"
       }
      ],
@@ -2295,7 +2313,7 @@
      "num": {
       "template": "progress",
       "value": "3",
-      "unit": "% of memory lost",
+      "unit": "% OF MEMORY LOST",
       "kicker": "one broken chip",
       "land": "तीन"
      }
@@ -2497,7 +2515,11 @@
      "at": "दो हज़ार छब्बीस तक",
      "lines": [
       {
-       "text": "LESS THAN *HALF*",
+       "text": "LESS THAN",
+       "at": "शुरुआत"
+      },
+      {
+       "text": "*HALF*",
        "at": "आधी"
       },
       {
@@ -2705,8 +2727,12 @@
      "at": "धरती के वासियों",
      "lines": [
       {
-       "text": "\"GREETINGS FROM THE *PEOPLE OF EARTH*\"",
-       "at": "धरती के वासियों"
+       "text": "GREETINGS FROM",
+       "at": "वासियों"
+      },
+      {
+       "text": "*THE PEOPLE OF EARTH*",
+       "at": "नमस्कार"
       }
      ]
     },

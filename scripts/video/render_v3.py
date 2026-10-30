@@ -440,7 +440,7 @@ def plan(edit, tl, voice_wav=None):
             nxt = [p["t0"] for p in ovl if p["kind"] in ("keyline", "headline", "num") and o["t_last"] < p["t0"] < o["t1"]]
             if nxt:  # make way for the next key line / number card / name lower third
                 o["t1"] = max(o["t_last"] + 0.8, min(nxt) - 0.12)
-    full = [it["t0"] for it in items if it["kind"] in ("card", "title")]
+    full = [it["t0"] for it in items if it["kind"] in ("card", "title") or it.get("gfx") == "channel"]  # and the sting
     for o in ovl:  # nothing runs over a chapter or title card: it is gone by the time the card cuts in
         hit = [t for t in full if o["kind"] != "footer" and o["t0"] < t < o["t1"]]
         if hit:
