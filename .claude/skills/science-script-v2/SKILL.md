@@ -69,6 +69,29 @@ instruments, labs and control rooms, the discovery as it was filmed, interviews 
   line: `"subs": [[0.0, 2.95, "Phir sabse bada sawaal tha: kya isme dhabbe hain?"], ...]`.
 - No "..." suspense pauses and no `M` moments: the voice never waits (owner, 2026-10-27).
 
+## 2c. Context before concept (owner, 2026-10-29)
+The owner, after video 04: "you start with a concept in the middle of the thing; you don't give the context of
+what is behind it." A viewer hears each line once; an idea that arrives without its "why" loses them. Every new
+idea (a theory, a measurement, a puzzle, a named thing) gets, in this order:
+1. **The question it answers**, in one line ("Scientists ke saamne ek sawaal tha: …").
+2. **What it builds on**: a callback to something the viewer already heard ("wahi roshni, jo New Jersey ke
+   antenna ne pakdi thi").
+3. **The idea itself**, in plain words.
+4. **An everyday comparison** (two cups of tea at the same temperature that never touched).
+5. **The payoff**: how it answered the question, or why it didn't.
+Video 04 broke this, and every case is a check for the next script:
+- the horizon puzzle: never said why "never met, yet the same" is strange (heat needs time to even out)
+- inflation: never said how it solved the puzzle (the regions were close and evened out, then were stretched
+  apart)
+- "the faint marks tell the universe's age": what marks, and how
+- "the signal proved Hoyle wrong": why (a universe that never changes has no leftover glow from a hot start)
+- gravity vs quantum physics "clash": why; Planck time arrived as a bare number
+- BICEP2's "direct traces of inflation": what traces (a twist in the light), and why dust could fake them
+- Hawking-Hartle's "time becomes like length" and Penrose's "marks of an earlier universe": no picture of either
+**Context pass** before the owner sees the script: for every line, ask "what must the viewer already know for
+this to land?" If the answer isn't earlier in the script, add it. To keep the length, cut a side fact, never the
+context. Do the same for numbers: a number comes after the thing it measures, never before.
+
 ## 3. Language that flows when Neel reads it
 - Conversational Hinglish. Keep English words people actually say (scientist, satellite, theory,
   calculate, inflation, Big Bounce, galaxy). Keep the emotional words Hindi (suraag, goonj, pahaili, daava).
@@ -170,6 +193,10 @@ Liked and kept:
   their 1989 footage).
 - Simple English words where Hindi ones trip: time (not वक़्त), signal (not सरसराहट), particles (not कण).
 Did not like (never again):
+- A hook that opens on a date ("14 November 2023…"): nobody remembers it, and a later "back to November 2023" lands
+  on nothing (owner, video 05). Open on the biggest fact; say time relatively ("teen saal pehle"), use plain years,
+  and keep an exact date only when the date is the story (the one-light-day day). Call back by the event ("us din
+  par, jab…"), not the date. Exact dates can go on screen.
 - Pauses anywhere: no "..." suspense, no designed silences, no long gaps between chapters.
 - An odd or unpleasant image in the hook (pigeon droppings in the antenna) and showy sound words (सरसराहट).
 - A Short script that wasn't the video's own story ("Is this from the video that we created? I don't like the

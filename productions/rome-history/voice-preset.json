@@ -1,0 +1,15 @@
+{
+  "voice_name": "Neel Story Narrator (ElevenLabs), locked for Rome and Japan. Not 'Neel Ancient Storyteller' (PnaKthDVqB7PvUN6iU48)",
+  "voice_id": "q4KoKwFyTWQ0Fvvsl9LW",
+  "model_id": "eleven_v3",
+  "language_code": "hi",
+  "voice_settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "post_processing": "scripts/elevenlabs/voice_post.sh <in> <out.wav> 0",
+  "chosen": "2026-10-30: the owner locked Neel Story Narrator on eleven_v3 for this video (the first take was on multilingual_v2 by mistake)"
+}

@@ -1,0 +1,62 @@
+{
+ "dodd": {
+  "file": "work/archive_src/05/sciencelive.mp4",
+  "ss": 751.3,
+  "d": 15.5,
+  "who": "Suzanne Dodd, Voyager project manager",
+  "when": "NASA, 2019",
+  "said": "Voyager is really like a weather satellite traveling through interstellar space. And what interstellar space is contained of, it's dust from other stars. So what Voyager is measuring is the density of the dust and plasma that it's traveling through.",
+  "subs": [
+   [
+    0.0,
+    4.2,
+    "Voyager ek weather satellite jaisa hai, jo interstellar space mein safar kar raha hai."
+   ],
+   [
+    4.2,
+    8.7,
+    "Aur interstellar space mein hai, doosre taaron ki dhool."
+   ],
+   [
+    8.7,
+    15.5,
+    "To Voyager naap raha hai, ki jis dhool aur plasma se woh guzar raha hai, woh kitni ghani hai."
+   ]
+  ],
+  "credit": "NASA (NASA Science Live: Going Interstellar, 2019; svs.gsfc.nasa.gov/13161)",
+  "licence": "public domain (NASA)",
+  "url": "https://svs.gsfc.nasa.gov/13161/",
+  "video": true,
+  "source": "svs"
+ },
+ "team": {
+  "file": "work/archive_src/05/team2024.mp4",
+  "ss": 8.2,
+  "d": 9.0,
+  "who": "Voyager team, NASA JPL",
+  "when": "20 April 2024",
+  "said": "Oh, yeah. Oh, wow. That's insane. There we go. That's insane. All right!",
+  "subs": [
+   [
+    0.0,
+    2.0,
+    "Haan, haan!"
+   ],
+   [
+    2.0,
+    4.8,
+    "Arre wah! Yeh to kamaal hai!"
+   ],
+   [
+    4.8,
+    9.0,
+    "Yeh raha! Kamaal hai! Shabaash!"
+   ]
+  ],
+  "credit": "NASA/JPL-Caltech (Voyager 1 Team Reacts to Receiving Engineering Data From Spacecraft, 2024)",
+  "licence": "NASA/JPL b-roll for media and public use",
+  "url": "https://images.nasa.gov/details/JPL-20240425-VOYAGEf-0001-Voyager 1 Team Reacts to Receiving Engineering Data From Spacecraft",
+  "video": true,
+  "source": "nasa"
+ }
+}
