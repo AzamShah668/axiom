@@ -19,8 +19,8 @@ scripts/science/pipeline.sh productions/NN-slug narration
   - The voice is "Neel - Paranormal Story Narrator", fixed in `productions/voice-preset.json`.
   - Neighbouring text is sent as context so the joins flow.
   - A production can carry its own `productions/<name>/voice-preset.json`; render_narration.py and tts_check.py
-    use it over the channel's (Rome: Neel Story Narrator on eleven_v3, owner 2026-10-30).
-  - **eleven_v3 records long takes, never one request per section** (owner, 2026-10-30: per-scene v3 requests
+    use it over the channel's (for a one-off on another voice or model; the science channel uses the channel's).
+  - **eleven_v3 records long takes, never one request per section** (owner, 2026-10-30: per-section v3 requests
     "sound like a different voice" at every join, because v3 refuses the neighbouring text). render_narration.py
     does it by itself for a v3 preset: consecutive sections go in one request of up to 4,400 characters (v3's limit
     is 5,000), then the take is cut into `<id>.mp3` + `<id>.align.json` between the sections' words.
