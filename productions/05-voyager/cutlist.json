@@ -1,0 +1,8002 @@
+{
+ "style": "v3",
+ "items": [
+  {
+   "sec": "opening",
+   "beat": 0,
+   "kind": "gfx",
+   "t0": 0.0,
+   "t1": 7.109,
+   "gfx": "photo:V_explorer_art",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 0,
+   "f1": 213,
+   "shot": "esahubble_heic2210b#0",
+   "clip": "esahubble_heic2210b",
+   "ss": 7.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "opening/0",
+   "title": "Artist’s Impression of a Black Hole (Animation)"
+  },
+  {
+   "sec": "opening",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 7.109,
+   "t1": 8.363,
+   "q": [
+    "the Voyager spacecraft unfolding in space",
+    "a spacecraft with a large white dish"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 213,
+   "f1": 251,
+   "shot": "arc_voyager_anim#0",
+   "clip": "arc_voyager_anim",
+   "ss": 3.66,
+   "crop": null,
+   "score": 0.4224,
+   "ref": "opening/1",
+   "title": "Voyager spacecraft unfolding, JPL animation"
+  },
+  {
+   "sec": "opening",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 8.363,
+   "t1": 11.133,
+   "q": [
+    "flying away from the Sun out of the solar system",
+    "zooming out from Earth past the planets"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 251,
+   "f1": 334,
+   "shot": "eso_eso2015c#0",
+   "clip": "eso_eso2015c",
+   "ss": 4.41,
+   "crop": null,
+   "score": 0.3663,
+   "ref": "opening/2",
+   "title": "Animation: a fly-to Venus"
+  },
+  {
+   "sec": "opening",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 11.133,
+   "t1": 13.741,
+   "q": [
+    "flying away from the Sun out of the solar system",
+    "zooming out from Earth past the planets"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 334,
+   "f1": 412,
+   "shot": "svs_20408#0",
+   "clip": "svs_20408",
+   "ss": 0.62,
+   "crop": null,
+   "score": 0.3894,
+   "ref": "opening/3",
+   "title": "Solar Particle Acceleration"
+  },
+  {
+   "sec": "opening",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 13.741,
+   "t1": 16.136000000000003,
+   "q": [
+    "the Voyager spacecraft flying through space with its antenna toward Earth",
+    "a probe crossing a star field"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 412,
+   "f1": 484,
+   "shot": "esawebb_weic2212d#0",
+   "clip": "esawebb_weic2212d",
+   "ss": 4.59,
+   "crop": null,
+   "score": 0.287,
+   "ref": "opening/4",
+   "title": "Pan of the Tarantula Nebula (NIRCam Image)"
+  },
+  {
+   "sec": "opening",
+   "beat": 4,
+   "kind": "gfx",
+   "t0": 16.136000000000003,
+   "t1": 20.9175,
+   "gfx": "photo:V_proof_test",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 484,
+   "f1": 628,
+   "shot": "eso_Geminidstimelapse12#0",
+   "clip": "eso_Geminidstimelapse12",
+   "ss": 2.42,
+   "crop": null,
+   "score": 1.0,
+   "ref": "opening/5",
+   "title": "Geminids time-lapse 12"
+  },
+  {
+   "sec": "opening",
+   "beat": 5,
+   "kind": "gfx",
+   "t0": 20.9175,
+   "t1": 26.7055,
+   "gfx": "photo:V_two_travelers",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 628,
+   "f1": 801,
+   "shot": "eso_eso1431a#0",
+   "clip": "eso_eso1431a",
+   "ss": 7.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "opening/6",
+   "title": "Artist’s impression of a protocluster forming in the early Universe"
+  },
+  {
+   "sec": "opening",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 26.7055,
+   "t1": 29.219,
+   "q": [
+    "a radio telescope dish pointing at the sky at night",
+    "radio antenna under a starry sky"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 801,
+   "f1": 877,
+   "shot": "eso_potw2443b#0",
+   "clip": "eso_potw2443b",
+   "ss": 1.17,
+   "crop": null,
+   "score": 0.3148,
+   "ref": "opening/7",
+   "title": "Comet Tsuchinshan-ATLAS meets the ESO Supernova (zoomed-in view)"
+  },
+  {
+   "sec": "opening",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 29.219,
+   "t1": 31.716,
+   "q": [
+    "a giant radio dish antenna turning",
+    "a large antenna dish against the sky"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 877,
+   "f1": 951,
+   "shot": "eso_uhd-cm-alma-pan1#0",
+   "clip": "eso_uhd-cm-alma-pan1",
+   "ss": 4.54,
+   "crop": null,
+   "score": 0.3279,
+   "ref": "opening/8",
+   "title": "Listening out"
+  },
+  {
+   "sec": "opening",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 31.716,
+   "t1": 34.469,
+   "q": [
+    "a giant radio dish antenna turning",
+    "a large antenna dish against the sky"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 951,
+   "f1": 1034,
+   "shot": "eso_uhd_alma4_2014#0",
+   "clip": "eso_uhd_alma4_2014",
+   "ss": 4.4,
+   "crop": null,
+   "score": 0.3228,
+   "ref": "opening/9",
+   "title": "High on the Plateau"
+  },
+  {
+   "sec": "opening",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 34.469,
+   "t1": 39.048,
+   "q": [
+    "an elderly scientist in an interview",
+    "archival footage of engineers in the 1970s"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 1034,
+   "f1": 1171,
+   "speed": 0.841,
+   "shot": "arc_stone2011#0",
+   "clip": "arc_stone2011",
+   "ss": 0.15,
+   "crop": null,
+   "score": 0.3635,
+   "ref": "opening/10",
+   "title": "Ed Stone, Voyager project scientist, interview 2011"
+  },
+  {
+   "sec": "opening",
+   "beat": 9,
+   "kind": "gfx",
+   "t0": 39.048,
+   "t1": 41.1665,
+   "gfx": "photo:V_in_florida",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 1171,
+   "f1": 1235,
+   "shot": "eso_uhd_vlt7_2014#0",
+   "clip": "eso_uhd_vlt7_2014",
+   "ss": 7.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "opening/11",
+   "title": "Unit Telescope 1 (UT1) in Action"
+  },
+  {
+   "sec": "opening",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 41.1665,
+   "t1": 46.17,
+   "q": [
+    "the Voyager spacecraft alone in deep space",
+    "a spacecraft drifting far from the Sun"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 1235,
+   "f1": 1385,
+   "shot": "svs_20306#0",
+   "clip": "svs_20306",
+   "ss": 3.27,
+   "crop": null,
+   "score": 0.3753,
+   "ref": "opening/12",
+   "title": "Solar Orbiter - NASA Animations"
+  },
+  {
+   "sec": "opening",
+   "beat": 11,
+   "kind": "clip",
+   "t0": 46.17,
+   "t1": 50.411,
+   "q": [
+    "the Sun as a bright star seen from the edge of the solar system",
+    "a faint star in black space"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 1385,
+   "f1": 1512,
+   "shot": "esawebb_weic2621a#0",
+   "clip": "esawebb_weic2621a",
+   "ss": 3.67,
+   "crop": null,
+   "score": 0.3052,
+   "ref": "opening/13",
+   "title": "Pan video: FRB 20240304B (NIRCam image)"
+  },
+  {
+   "sec": "opening",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 50.411,
+   "t1": 53.313,
+   "q": [
+    "flight out of the solar system into interstellar space",
+    "stars rushing past in deep space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1512,
+   "f1": 1599,
+   "shot": "esahubble_heic1520b#0",
+   "clip": "esahubble_heic1520b",
+   "ss": 4.34,
+   "crop": null,
+   "score": 0.3166,
+   "ref": "opening/14",
+   "title": "Panning across the Veil Nebula"
+  },
+  {
+   "sec": "opening",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 53.313,
+   "t1": 59.087999999999994,
+   "q": [
+    "flight out of the solar system into interstellar space",
+    "stars rushing past in deep space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 1599,
+   "f1": 1773,
+   "shot": "esahubble_heic1520c#0",
+   "clip": "esahubble_heic1520c",
+   "ss": 2.04,
+   "crop": null,
+   "score": 0.3126,
+   "ref": "opening/15",
+   "title": "Moving filaments of the Veil Nebula"
+  },
+  {
+   "kind": "gfx",
+   "sec": "ch1",
+   "t0": 59.087999999999994,
+   "t1": 62.288,
+   "gfx": "channel",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "dip",
+   "f0": 1773,
+   "f1": 1869,
+   "shot": "eso_uhd_yb_alma_03#0",
+   "clip": "eso_uhd_yb_alma_03",
+   "ss": 6.39,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch1/0",
+   "title": "Synchronous dance of ALMA antennas"
+  },
+  {
+   "kind": "title",
+   "sec": "ch1",
+   "t0": 62.288,
+   "t1": 64.688,
+   "ttl": {
+    "kicker": "the farthest thing humans ever made",
+    "main": "Voyager 1"
+   },
+   "q": [
+    "slow flight through a star field",
+    "a lone spacecraft far away among stars"
+   ],
+   "trans": "dip",
+   "f0": 1869,
+   "f1": 1941,
+   "shot": "eso_eso1910b#0",
+   "clip": "eso_eso1910b",
+   "ss": 0.72,
+   "crop": null,
+   "score": 0.3785,
+   "ref": "ch1/1",
+   "title": "Artist’s Impression of Asteroid 1999 KW4"
+  },
+  {
+   "kind": "card",
+   "sec": "ch1",
+   "t0": 64.688,
+   "t1": 66.388,
+   "num": "",
+   "ctitle": "A LINE-UP ONCE IN *175 YEARS*",
+   "idx": 1,
+   "n_total": 8,
+   "q": [
+    "slow flight through a star field",
+    "a lone spacecraft far away among stars"
+   ],
+   "trans": "soft",
+   "f0": 1941,
+   "f1": 1992,
+   "shot": "svs_13948#0",
+   "clip": "svs_13948",
+   "ss": 0.42,
+   "crop": null,
+   "score": 0.3768,
+   "ref": "ch1/2",
+   "title": "Designing Lucy’s Path to the Trojan Asteroids"
+  },
+  {
+   "sec": "ch1",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 66.388,
+   "t1": 68.742,
+   "q": [
+    "the planets of the solar system orbiting the Sun",
+    "the outer planets Jupiter and Saturn"
+   ],
+   "opt": "hold",
+   "trans": "soft",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 1992,
+   "f1": 2062,
+   "shot": "esawebb_weic2606a#0",
+   "clip": "esawebb_weic2606a",
+   "ss": 4.25,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.4073,
+   "ref": "ch1/3",
+   "title": "Saturn (2024 Hubble and Webb images, clean)"
+  },
+  {
+   "sec": "ch1",
+   "beat": 1,
+   "kind": "gfx",
+   "t0": 68.742,
+   "t1": 70.244,
+   "gfx": "photo:V_Jupiter_GRS",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 2062,
+   "f1": 2107,
+   "shot": "esahubble_heic1511a#0",
+   "clip": "esahubble_heic1511a",
+   "ss": 7.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch1/4",
+   "title": "Artist’s animation of galaxy with jets from a supermassive black hole"
+  },
+  {
+   "sec": "ch1",
+   "beat": 2,
+   "kind": "gfx",
+   "t0": 70.244,
+   "t1": 71.94,
+   "gfx": "photo:V_Saturn",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 2107,
+   "f1": 2158,
+   "shot": "esahubble_heic1622a#0",
+   "clip": "esahubble_heic1622a",
+   "ss": 7.78,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch1/5",
+   "title": "Spinning supermassive black hole rips star apart (artist’s impression)"
+  },
+  {
+   "sec": "ch1",
+   "beat": 3,
+   "kind": "gfx",
+   "t0": 71.94,
+   "t1": 76.571,
+   "gfx": "photo:V_Neptune",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 2158,
+   "f1": 2297,
+   "shot": "esahubble_heic1905b#0",
+   "clip": "esahubble_heic1905b",
+   "ss": 7.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch1/6",
+   "title": "Globular clusters surrounding the Milky Way (artist’s impression)"
+  },
+  {
+   "sec": "ch1",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 76.571,
+   "t1": 77.8675,
+   "q": [
+    "flight away from the Sun through the solar system",
+    "the vast distance between planets"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 2297,
+   "f1": 2336,
+   "shot": "eso_gl_northeast_4ut_lgs#0",
+   "clip": "eso_gl_northeast_4ut_lgs",
+   "ss": 0.28,
+   "crop": null,
+   "score": 0.3291,
+   "ref": "ch1/7",
+   "title": "Observations in the moonlight"
+  },
+  {
+   "sec": "ch1",
+   "beat": 5,
+   "kind": "gfx",
+   "t0": 77.8675,
+   "t1": 81.7285,
+   "gfx": "orbits",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 2336,
+   "f1": 2452,
+   "shot": "eso_moon_evolution_p2#0",
+   "clip": "eso_moon_evolution_p2",
+   "ss": 3.86,
+   "crop": null,
+   "score": 0.3243,
+   "ref": "ch1/8",
+   "title": "Later evolution of the Moon"
+  },
+  {
+   "sec": "ch1",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 81.7285,
+   "t1": 85.81899999999999,
+   "q": [
+    "a spacecraft drifting in the dark of deep space",
+    "a lone spacecraft far from the Sun"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 2452,
+   "f1": 2575,
+   "shot": "eso_almahelishot28#0",
+   "clip": "eso_almahelishot28",
+   "ss": 3.73,
+   "crop": null,
+   "score": 0.3322,
+   "ref": "ch1/9",
+   "title": "Aerial view of the ALMA AOS - 9"
+  },
+  {
+   "sec": "ch1",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 85.81899999999999,
+   "t1": 93.1365,
+   "q": [
+    "Voyager trajectory animation",
+    "the planets' orbits animation"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 2575,
+   "f1": 2794,
+   "shot": "svs_4139-v1path#1",
+   "clip": "svs_4139-v1path",
+   "ss": 16.53,
+   "crop": null,
+   "score": 0.3788,
+   "ref": "ch1/10",
+   "title": "Voyager 1 trajectory through the solar system"
+  },
+  {
+   "sec": "ch1",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 93.1365,
+   "t1": 97.457,
+   "q": [
+    "the planets lining up on one side of the Sun",
+    "planets orbiting the Sun animation"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 2794,
+   "f1": 2924,
+   "shot": "eso_eso1706g#0",
+   "clip": "eso_eso1706g",
+   "ss": 3.61,
+   "crop": null,
+   "score": 0.346,
+   "ref": "ch1/11",
+   "title": "Animation of the planets in orbit around TRAPPIST-1"
+  },
+  {
+   "sec": "ch1",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 97.457,
+   "t1": 101.5765,
+   "q": [
+    "the planets lining up on one side of the Sun",
+    "planets orbiting the Sun animation"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 2924,
+   "f1": 3047,
+   "shot": "eso_eso2314a#3",
+   "clip": "eso_eso2314a",
+   "ss": 31.25,
+   "crop": [
+    0.0,
+    0.25,
+    0.75,
+    1.0
+   ],
+   "score": 0.314,
+   "ref": "ch1/12",
+   "title": "Mysterious Neptune Dark Spot Detected from Earth (ESOcast 265 Light)"
+  },
+  {
+   "sec": "ch1",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 101.5765,
+   "t1": 106.4375,
+   "q": [
+    "the solar system seen from above with planet orbits",
+    "the Sun and the planets from far away"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 3047,
+   "f1": 3193,
+   "shot": "eso_eso1706a#1",
+   "clip": "eso_eso1706a",
+   "ss": 12.41,
+   "crop": null,
+   "score": 0.3103,
+   "ref": "ch1/13",
+   "title": "ESOcast 96: Ultracool Dwarf and the Seven Planets"
+  },
+  {
+   "sec": "ch1",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 106.4375,
+   "t1": 109.4755,
+   "q": [
+    "a spacecraft approaching a giant planet",
+    "a probe flying past Jupiter"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 3193,
+   "f1": 3284,
+   "shot": "svs_4601#0",
+   "clip": "svs_4601",
+   "ss": 4.26,
+   "crop": null,
+   "score": 0.3238,
+   "ref": "ch1/14",
+   "title": "Jupiter Quasi-Quadrennial Oscillation"
+  },
+  {
+   "sec": "ch1",
+   "beat": 11,
+   "kind": "gfx",
+   "t0": 109.4755,
+   "t1": 122.601,
+   "gfx": "gravity_assist",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 3284,
+   "f1": 3678,
+   "shot": "eso_Geminidstimelapse7#0",
+   "clip": "eso_Geminidstimelapse7",
+   "ss": 4.43,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch1/15",
+   "title": "Geminids time-lapse 7"
+  },
+  {
+   "sec": "ch1",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 122.601,
+   "t1": 125.376,
+   "q": [
+    "Voyager trajectory through the outer solar system",
+    "spacecraft path between planets animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 3678,
+   "f1": 3761,
+   "shot": "svs_4139-v1path#2",
+   "clip": "svs_4139-v1path",
+   "ss": 30.29,
+   "crop": null,
+   "score": 0.4288,
+   "ref": "ch1/16",
+   "title": "Voyager 1 trajectory through the solar system"
+  },
+  {
+   "sec": "ch1",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 125.376,
+   "t1": 128.233,
+   "q": [
+    "Voyager trajectory through the outer solar system",
+    "spacecraft path between planets animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 3761,
+   "f1": 3847,
+   "shot": "svs_4719#0",
+   "clip": "svs_4719",
+   "ss": 4.35,
+   "crop": null,
+   "score": 0.3498,
+   "ref": "ch1/17",
+   "title": "Lucy mission trajectory"
+  },
+  {
+   "sec": "ch1",
+   "beat": 13,
+   "kind": "clip",
+   "t0": 128.233,
+   "t1": 133.4675,
+   "q": [
+    "the planet Neptune in blue",
+    "Neptune seen from a spacecraft"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 3847,
+   "f1": 4004,
+   "shot": "esahubble_heic1904a#0",
+   "clip": "esahubble_heic1904a",
+   "ss": 3.17,
+   "crop": null,
+   "score": 0.3853,
+   "ref": "ch1/18",
+   "title": "Animation of Neptune’s moon Hippocamp"
+  },
+  {
+   "sec": "ch1",
+   "beat": 14,
+   "kind": "clip",
+   "t0": 133.4675,
+   "t1": 139.24,
+   "q": [
+    "the planets orbiting the Sun in time-lapse",
+    "planets moving in their orbits"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 4004,
+   "f1": 4177,
+   "shot": "esahubble_heic2312b#0",
+   "clip": "esahubble_heic2312b",
+   "ss": 2.04,
+   "crop": null,
+   "score": 0.3225,
+   "ref": "ch1/19",
+   "title": "Pan: Hubble watches spoke season on Saturn"
+  },
+  {
+   "sec": "ch1",
+   "beat": 15,
+   "kind": "gfx",
+   "t0": 139.24,
+   "t1": 141.744,
+   "gfx": "photo:Voyager_science_meeting",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 4177,
+   "f1": 4252,
+   "shot": "eso_eso1707c#0",
+   "clip": "eso_eso1707c",
+   "ss": 7.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch1/20",
+   "title": "Panning across a new image of NGC 1055"
+  },
+  {
+   "kind": "card",
+   "sec": "ch2",
+   "t0": 141.744,
+   "t1": 143.144,
+   "num": "",
+   "ctitle": "*TWO* SHIPS, ONE CHANCE",
+   "idx": 2,
+   "n_total": 8,
+   "q": [
+    "slow flight through a star field",
+    "a lone spacecraft far away among stars"
+   ],
+   "trans": "dip",
+   "f0": 4252,
+   "f1": 4294,
+   "shot": "esahubble_heic2003a#0",
+   "clip": "esahubble_heic2003a",
+   "ss": 0.22,
+   "crop": null,
+   "score": 0.3758,
+   "ref": "ch2/0",
+   "title": "Zooming Through the Cosmic Web (Artist’s Impression)"
+  },
+  {
+   "sec": "ch2",
+   "beat": 0,
+   "kind": "gfx",
+   "t0": 143.144,
+   "t1": 145.844,
+   "gfx": "photo:Voyager2_encapsulation",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "soft",
+   "f0": 4294,
+   "f1": 4375,
+   "shot": "eso_eso1710b#0",
+   "clip": "eso_eso1710b",
+   "ss": 7.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch2/1",
+   "title": "Artist’s impression of stars born in winds from supermassive black holes"
+  },
+  {
+   "sec": "ch2",
+   "beat": 1,
+   "kind": "gfx",
+   "t0": 145.844,
+   "t1": 148.859,
+   "gfx": "photo:Voyager2_launch_b",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 4375,
+   "f1": 4466,
+   "shot": "eso_eso1719d#0",
+   "clip": "eso_eso1719d",
+   "ss": 3.42,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch2/2",
+   "title": "The Omega Nebula region seen with the VST"
+  },
+  {
+   "sec": "ch2",
+   "beat": 2,
+   "kind": "gfx",
+   "t0": 148.859,
+   "t1": 152.291,
+   "gfx": "photo:Voyager2_launch",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 4466,
+   "f1": 4569,
+   "shot": "eso_eso2116d#0",
+   "clip": "eso_eso2116d",
+   "ss": 7.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch2/3",
+   "title": "Artist’s animated view of the black hole in NGC 1850 distorting its companion star"
+  },
+  {
+   "sec": "ch2",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 152.291,
+   "t1": 154.742,
+   "q": [
+    "the Sun shining far away in black space",
+    "a distant Sun seen from the outer solar system"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 4569,
+   "f1": 4642,
+   "shot": "svs_12687-cme#1",
+   "clip": "svs_12687-cme",
+   "ss": 10.67,
+   "crop": null,
+   "score": 0.4039,
+   "ref": "ch2/4",
+   "title": "A solar storm reaches the outer solar system"
+  },
+  {
+   "sec": "ch2",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 154.742,
+   "t1": 159.18550000000002,
+   "q": [
+    "sunlight fading far from the Sun",
+    "the Sun as a small bright point from far away"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 4642,
+   "f1": 4776,
+   "shot": "svs_4776#0",
+   "clip": "svs_4776",
+   "ss": 3.55,
+   "crop": [
+    0.0,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "score": 0.3608,
+   "ref": "ch2/5",
+   "title": "Ten Years of Solar Dynamics Observatory"
+  },
+  {
+   "sec": "ch2",
+   "beat": 5,
+   "kind": "gfx",
+   "t0": 159.18550000000002,
+   "t1": 164.134,
+   "gfx": "photo:V_Jupiter_Io",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 4776,
+   "f1": 4924,
+   "shot": "eso_eso2510d#0",
+   "clip": "eso_eso2510d",
+   "ss": 2.42,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch2/6",
+   "title": "Animation of the rotation of the Sculptor Galaxy"
+  },
+  {
+   "sec": "ch2",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 164.134,
+   "t1": 166.256,
+   "q": [
+    "the Sun seen from far away in space",
+    "a faint distant Sun"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 4924,
+   "f1": 4988,
+   "shot": "svs_14263#0",
+   "clip": "svs_14263",
+   "ss": 1.83,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 0.3842,
+   "ref": "ch2/7",
+   "title": "133 Days on the Sun"
+  },
+  {
+   "sec": "ch2",
+   "beat": 7,
+   "kind": "gfx",
+   "t0": 166.256,
+   "t1": 169.5995,
+   "gfx": "photo:V_RTG",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 4988,
+   "f1": 5088,
+   "shot": "eso_uhd_bt_paranal_10_aux#0",
+   "clip": "eso_uhd_bt_paranal_10_aux",
+   "ss": 5.38,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch2/8",
+   "title": "Auxiliary Telescope UHD time-lapse"
+  },
+  {
+   "sec": "ch2",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 169.5995,
+   "t1": 172.997,
+   "q": [
+    "a glowing red star slowly pulsing",
+    "glowing hot gas in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 5088,
+   "f1": 5190,
+   "shot": "eso_eso1904d#0",
+   "clip": "eso_eso1904d",
+   "ss": 4.08,
+   "crop": null,
+   "score": 0.3493,
+   "ref": "ch2/9",
+   "title": "Panning across the Cosmic Bat"
+  },
+  {
+   "sec": "ch2",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 172.997,
+   "t1": 176.5905,
+   "q": [
+    "a glowing red star slowly pulsing",
+    "glowing hot gas in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 5190,
+   "f1": 5298,
+   "shot": "svs_20408#1",
+   "clip": "svs_20408",
+   "ss": 5.5,
+   "crop": null,
+   "score": 0.3892,
+   "ref": "ch2/10",
+   "title": "Solar Particle Acceleration"
+  },
+  {
+   "sec": "ch2",
+   "beat": 9,
+   "kind": "gfx",
+   "t0": 176.5905,
+   "t1": 179.2665,
+   "gfx": "photo:V_proof_test:out",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 5298,
+   "f1": 5378,
+   "shot": "svs_20399#0",
+   "clip": "svs_20399",
+   "ss": 5.88,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch2/11",
+   "title": "XMM-Newton spacecraft animations"
+  },
+  {
+   "sec": "ch2",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 179.2665,
+   "t1": 182.5865,
+   "q": [
+    "the Voyager spacecraft flying through deep space",
+    "a spacecraft among stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 5378,
+   "f1": 5478,
+   "shot": "esawebb_weic2411b#0",
+   "clip": "esawebb_weic2411b",
+   "ss": 4.13,
+   "crop": null,
+   "score": 0.3188,
+   "ref": "ch2/12",
+   "title": "Pan: Horsehead Nebula (NIRCam image)"
+  },
+  {
+   "sec": "ch2",
+   "beat": 11,
+   "kind": "clip",
+   "t0": 182.5865,
+   "t1": 185.7985,
+   "q": [
+    "a spacecraft drifting into darkness",
+    "a lone probe far from the Sun"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 5478,
+   "f1": 5574,
+   "shot": "svs_13029#0",
+   "clip": "svs_13029",
+   "ss": 4.17,
+   "crop": null,
+   "score": 0.3152,
+   "ref": "ch2/13",
+   "title": "Parker Solar Probe Pre-Launch Briefing"
+  },
+  {
+   "sec": "ch2",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 185.7985,
+   "t1": 189.803,
+   "q": [
+    "archival film of a rocket launch in 1977",
+    "a rocket lifting off"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 5574,
+   "f1": 5694,
+   "shot": "arc_launch1977#0",
+   "clip": "arc_launch1977",
+   "ss": 3.66,
+   "crop": null,
+   "score": 0.153,
+   "ref": "ch2/14",
+   "title": "Voyager 2 and Voyager 1 launches, 1977, side by side"
+  },
+  {
+   "sec": "ch2",
+   "beat": 13,
+   "kind": "clip",
+   "t0": 189.803,
+   "t1": 192.4385,
+   "q": [
+    "archival film of a rocket rising",
+    "a rocket climbing into the sky"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 5694,
+   "f1": 5773,
+   "shot": "arc_titan_centaur#0",
+   "clip": "arc_titan_centaur",
+   "ss": 2.44,
+   "crop": null,
+   "score": 0.3958,
+   "ref": "ch2/15",
+   "title": "Titan-Centaur rocket of a Voyager launch, 1977 film"
+  },
+  {
+   "sec": "ch2",
+   "beat": 14,
+   "kind": "gfx",
+   "t0": 192.4385,
+   "t1": 198.514,
+   "gfx": "photo:Voyager1_launch",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 5773,
+   "f1": 5955,
+   "shot": "esahubble_heic1425b#0",
+   "clip": "esahubble_heic1425b",
+   "ss": 5.78,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch2/16",
+   "title": "Hubble and the sunrise over Earth (artist's rendering)"
+  },
+  {
+   "sec": "ch2",
+   "beat": 15,
+   "kind": "clip",
+   "t0": 198.514,
+   "t1": 201.7665,
+   "q": [
+    "Voyager trajectory animation",
+    "spacecraft path through the solar system"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 5955,
+   "f1": 6053,
+   "shot": "eso_eso1908b#0",
+   "clip": "eso_eso1908b",
+   "ss": 0.3,
+   "crop": null,
+   "score": 0.3422,
+   "ref": "ch2/17",
+   "title": "Animation of Gaia's Orbit"
+  },
+  {
+   "sec": "ch2",
+   "beat": 16,
+   "kind": "clip",
+   "t0": 201.7665,
+   "t1": 204.479,
+   "q": [
+    "the Voyager spacecraft in deep space",
+    "a spacecraft among stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 6053,
+   "f1": 6134,
+   "shot": "esawebb_weic2513d#0",
+   "clip": "esawebb_weic2513d",
+   "ss": 3.57,
+   "crop": null,
+   "score": 0.2785,
+   "ref": "ch2/18",
+   "title": "Zoom video - Cat’s Paw Nebula"
+  },
+  {
+   "sec": "ch2",
+   "beat": 16,
+   "kind": "clip",
+   "t0": 204.479,
+   "t1": 206.7235,
+   "q": [
+    "the Voyager spacecraft in deep space",
+    "a spacecraft among stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 6134,
+   "f1": 6202,
+   "shot": "eso_eso1805a#2",
+   "clip": "eso_eso1805a",
+   "ss": 20.83,
+   "crop": [
+    0.0,
+    0.25,
+    0.75,
+    1.0
+   ],
+   "score": 0.2973,
+   "ref": "ch2/19",
+   "title": "ESOcast 150 Light: Planets around TRAPPIST-1 Probably Rich in Water"
+  },
+  {
+   "sec": "ch2",
+   "beat": 17,
+   "kind": "gfx",
+   "t0": 206.7235,
+   "t1": 210.03900000000002,
+   "gfx": "starfield",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 6202,
+   "f1": 6301,
+   "shot": "esahubble_heic1811b#0",
+   "clip": "esahubble_heic1811b",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch2/20",
+   "title": "Pan on NGC 3256"
+  },
+  {
+   "kind": "card",
+   "sec": "ch3",
+   "t0": 210.03900000000002,
+   "t1": 211.439,
+   "num": "",
+   "ctitle": "A MESSAGE FOR *ANYONE*",
+   "idx": 3,
+   "n_total": 8,
+   "q": [
+    "slow flight through a star field",
+    "a lone spacecraft far away among stars"
+   ],
+   "trans": "dip",
+   "f0": 6301,
+   "f1": 6343,
+   "shot": "svs_20267#0",
+   "clip": "svs_20267",
+   "ss": 0.23,
+   "crop": null,
+   "score": 0.336,
+   "ref": "ch3/0",
+   "title": "Neutron Star Animations"
+  },
+  {
+   "sec": "ch3",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 211.439,
+   "t1": 215.00650000000002,
+   "q": [
+    "a spacecraft leaving the solar system",
+    "flight past the outer planets into the dark"
+   ],
+   "opt": "default",
+   "trans": "soft",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 6343,
+   "f1": 6450,
+   "shot": "eso_eso2104a#0",
+   "clip": "eso_eso2104a",
+   "ss": 3.99,
+   "crop": null,
+   "score": 0.3427,
+   "ref": "ch3/1",
+   "title": "Powerful stratospheric winds near Jupiter’s south pole (animation)"
+  },
+  {
+   "sec": "ch3",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 215.00650000000002,
+   "t1": 219.77550000000002,
+   "q": [
+    "stars drifting slowly in interstellar space",
+    "a star field in deep space"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 6450,
+   "f1": 6593,
+   "shot": "esahubble_heic1808b#0",
+   "clip": "esahubble_heic1808b",
+   "ss": 0.54,
+   "crop": [
+    0.25,
+    0.0,
+    1.0,
+    0.75
+   ],
+   "score": 0.3392,
+   "ref": "ch3/2",
+   "title": "The centre of the Lagoon Nebula over time"
+  },
+  {
+   "sec": "ch3",
+   "beat": 2,
+   "kind": "gfx",
+   "t0": 219.77550000000002,
+   "t1": 227.2345,
+   "gfx": "photo:Carl_Sagan",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 6593,
+   "f1": 6817,
+   "shot": "esahubble_heic1906b#0",
+   "clip": "esahubble_heic1906b",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch3/3",
+   "title": "Pan across the Gault asteroid"
+  },
+  {
+   "sec": "ch3",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 227.2345,
+   "t1": 232.068,
+   "q": [
+    "the golden record",
+    "a golden disc spinning"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 6817,
+   "f1": 6962,
+   "shot": "arc_golden_record#0",
+   "clip": "arc_golden_record",
+   "ss": 1.22,
+   "crop": null,
+   "score": 0.1735,
+   "ref": "ch3/4",
+   "title": "The Voyager Golden Record, JPL animation"
+  },
+  {
+   "sec": "ch3",
+   "beat": 4,
+   "kind": "gfx",
+   "t0": 232.068,
+   "t1": 234.3835,
+   "gfx": "photo:Golden_record_prep",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 6962,
+   "f1": 7032,
+   "shot": "esahubble_heic2021c#0",
+   "clip": "esahubble_heic2021c",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch3/5",
+   "title": "Artist’s Impression of the Hypothesized “Planet Nine”"
+  },
+  {
+   "sec": "ch3",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 234.3835,
+   "t1": 238.1485,
+   "q": [
+    "clouds and storms over Earth from space",
+    "Earth's weather seen from orbit"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 7032,
+   "f1": 7144,
+   "shot": "svs_5046#0",
+   "clip": "svs_5046",
+   "ss": 3.89,
+   "crop": [
+    0.0,
+    0.15,
+    0.85,
+    1.0
+   ],
+   "score": 0.3437,
+   "ref": "ch3/6",
+   "title": "Daily Arctic Sea Ice, By Year"
+  },
+  {
+   "sec": "ch3",
+   "beat": 6,
+   "kind": "gfx",
+   "t0": 238.1485,
+   "t1": 245.99300000000002,
+   "gfx": "photo:Earth_blue_marble",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 7144,
+   "f1": 7380,
+   "shot": "esahubble_heic2103b#1",
+   "clip": "esahubble_heic2103b",
+   "ss": 8.93,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch3/7",
+   "title": "Callout of the Black Hole Concentration in NGC 6397 (Artist’s Impression)"
+  },
+  {
+   "sec": "ch3",
+   "beat": 7,
+   "kind": "gfx",
+   "t0": 245.99300000000002,
+   "t1": 250.96,
+   "gfx": "photo:Earth_black_marble_asia",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 7380,
+   "f1": 7529,
+   "shot": "eso_2026-01-26-Solar-Ha-Strobele-loop#0",
+   "clip": "eso_2026-01-26-Solar-Ha-Strobele-loop",
+   "ss": 3.26,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch3/8",
+   "title": "Solar active regions AR14341/5/6"
+  },
+  {
+   "sec": "ch3",
+   "beat": 8,
+   "kind": "gfx",
+   "t0": 250.96,
+   "t1": 258.364,
+   "gfx": "photo:Golden_record",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 7529,
+   "f1": 7751,
+   "shot": "eso_ALMA16-MW14mm2#0",
+   "clip": "eso_ALMA16-MW14mm2",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch3/9",
+   "title": "ALMA array at night (time-lapse)"
+  },
+  {
+   "sec": "ch3",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 258.364,
+   "t1": 260.8645,
+   "q": [
+    "stars drifting in deep space",
+    "a dark star field slowly moving"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 7751,
+   "f1": 7826,
+   "shot": "svs_20268#0",
+   "clip": "svs_20268",
+   "ss": 0.17,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.341,
+   "ref": "ch3/10",
+   "title": "NICER Lensing"
+  },
+  {
+   "sec": "ch3",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 260.8645,
+   "t1": 264.37,
+   "q": [
+    "the Earth from space",
+    "the blue Earth turning"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 7826,
+   "f1": 7931,
+   "shot": "svs_4850#0",
+   "clip": "svs_4850",
+   "ss": 4.02,
+   "crop": [
+    0.0,
+    0.25,
+    0.75,
+    1.0
+   ],
+   "score": 0.3948,
+   "ref": "ch3/11",
+   "title": "Internal Ocean Tides"
+  },
+  {
+   "sec": "ch3",
+   "beat": 11,
+   "kind": "clip",
+   "t0": 264.37,
+   "t1": 269.06550000000004,
+   "q": [
+    "empty black space with distant stars",
+    "the silence of deep space"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 7931,
+   "f1": 8072,
+   "shot": "esahubble_potw2127a#0",
+   "clip": "esahubble_potw2127a",
+   "ss": 3.44,
+   "crop": null,
+   "score": 0.3493,
+   "ref": "ch3/12",
+   "title": "One of the Greats"
+  },
+  {
+   "sec": "ch3",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 269.06550000000004,
+   "t1": 272.264,
+   "q": [
+    "a galaxy slowly rotating",
+    "the Milky Way across the sky"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 8072,
+   "f1": 8168,
+   "shot": "esahubble_potw2130a#0",
+   "clip": "esahubble_potw2130a",
+   "ss": 4.19,
+   "crop": null,
+   "score": 0.4115,
+   "ref": "ch3/13",
+   "title": "Squabbling Galactic Siblings"
+  },
+  {
+   "sec": "ch3",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 272.264,
+   "t1": 274.0145,
+   "q": [
+    "a galaxy slowly rotating",
+    "the Milky Way across the sky"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 8168,
+   "f1": 8220,
+   "shot": "esahubble_potw2445a#0",
+   "clip": "esahubble_potw2445a",
+   "ss": 4.91,
+   "crop": null,
+   "score": 0.3443,
+   "ref": "ch3/14",
+   "title": "Pan: NGC 1672"
+  },
+  {
+   "sec": "ch3",
+   "beat": 13,
+   "kind": "gfx",
+   "t0": 274.0145,
+   "t1": 280.778,
+   "gfx": "photo:V_Jupiter_GRS2",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 8220,
+   "f1": 8423,
+   "shot": "eso_Geminidstimelapse11#0",
+   "clip": "eso_Geminidstimelapse11",
+   "ss": 2.92,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch3/15",
+   "title": "Geminids time-lapse 11"
+  },
+  {
+   "kind": "card",
+   "sec": "ch4",
+   "t0": 280.778,
+   "t1": 282.178,
+   "num": "",
+   "ctitle": "WORLDS NOBODY *EXPECTED*",
+   "idx": 4,
+   "n_total": 8,
+   "q": [
+    "slow flight through a star field",
+    "a lone spacecraft far away among stars"
+   ],
+   "trans": "dip",
+   "f0": 8423,
+   "f1": 8465,
+   "shot": "eso_eso1405b#0",
+   "clip": "eso_eso1405b",
+   "ss": 5.08,
+   "crop": null,
+   "score": 0.3692,
+   "ref": "ch4/0",
+   "title": "Artist’s impression of asteroid (25143) Itokawa"
+  },
+  {
+   "sec": "ch4",
+   "beat": 0,
+   "kind": "gfx",
+   "t0": 282.178,
+   "t1": 288.3075,
+   "gfx": "photo:V_Galilean",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "soft",
+   "f0": 8465,
+   "f1": 8649,
+   "shot": "eso_Geminidstimelapse3#0",
+   "clip": "eso_Geminidstimelapse3",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/1",
+   "title": "Geminids time-lapse 3"
+  },
+  {
+   "sec": "ch4",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 288.3075,
+   "t1": 292.9035,
+   "q": [
+    "Jupiter's clouds swirling in time-lapse",
+    "Jupiter's Great Red Spot"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 8649,
+   "f1": 8787,
+   "shot": "esahubble_heic1914b#0",
+   "clip": "esahubble_heic1914b",
+   "ss": 3.49,
+   "crop": null,
+   "score": 0.426,
+   "ref": "ch4/2",
+   "title": "Zooming Into the Great Red Spot of Jupiter"
+  },
+  {
+   "sec": "ch4",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 292.9035,
+   "t1": 296.865,
+   "q": [
+    "Jupiter's moon Io",
+    "the moon Io in front of Jupiter"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 8787,
+   "f1": 8906,
+   "shot": "svs_30706-io#0",
+   "clip": "svs_30706-io",
+   "ss": 5.29,
+   "crop": null,
+   "score": 0.4277,
+   "ref": "ch4/3",
+   "title": "Io in motion"
+  },
+  {
+   "sec": "ch4",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 296.865,
+   "t1": 300.083,
+   "q": [
+    "Jupiter's moon Io",
+    "the moon Io in front of Jupiter"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 8906,
+   "f1": 9002,
+   "shot": "esahubble_heic1504a#0",
+   "clip": "esahubble_heic1504a",
+   "ss": 4.17,
+   "crop": null,
+   "score": 0.3597,
+   "ref": "ch4/4",
+   "title": "Time-lapse of Jupiter’s three moon transit"
+  },
+  {
+   "sec": "ch4",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 300.083,
+   "t1": 304.1675,
+   "q": [
+    "stars in a star field",
+    "a field of stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 9002,
+   "f1": 9125,
+   "shot": "esahubble_potw2413a#0",
+   "clip": "esahubble_potw2413a",
+   "ss": 3.75,
+   "crop": null,
+   "score": 0.3548,
+   "ref": "ch4/5",
+   "title": "Pan: No zoom"
+  },
+  {
+   "sec": "ch4",
+   "beat": 4,
+   "kind": "gfx",
+   "t0": 304.1675,
+   "t1": 308.0965,
+   "gfx": "photo:Io_Loki_plume",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 9125,
+   "f1": 9243,
+   "shot": "eso_Geminidstimelapse8#0",
+   "clip": "eso_Geminidstimelapse8",
+   "ss": 3.42,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/6",
+   "title": "Geminids time-lapse 8"
+  },
+  {
+   "sec": "ch4",
+   "beat": 5,
+   "kind": "gfx",
+   "t0": 308.0965,
+   "t1": 316.18649999999997,
+   "gfx": "photo:V_Io_disk",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 9243,
+   "f1": 9486,
+   "shot": "eso_bt_lasilla_crux#0",
+   "clip": "eso_bt_lasilla_crux",
+   "ss": 3.42,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/7",
+   "title": "Milky Way above mountain"
+  },
+  {
+   "sec": "ch4",
+   "beat": 6,
+   "kind": "gfx",
+   "t0": 316.18649999999997,
+   "t1": 317.701,
+   "gfx": "photo:V_Saturn_rings",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 9486,
+   "f1": 9531,
+   "shot": "eso_bt_lasilla1#0",
+   "clip": "eso_bt_lasilla1",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/8",
+   "title": "The light of night at la Silla"
+  },
+  {
+   "sec": "ch4",
+   "beat": 7,
+   "kind": "gfx",
+   "t0": 317.701,
+   "t1": 322.654,
+   "gfx": "photo:V_Titan_night",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 9531,
+   "f1": 9680,
+   "shot": "eso_cs0007g#0",
+   "clip": "eso_cs0007g",
+   "ss": 3.92,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/9",
+   "title": "Zooming in on Tabby’s star"
+  },
+  {
+   "sec": "ch4",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 322.654,
+   "t1": 325.645,
+   "q": [
+    "the hazy atmosphere of Titan",
+    "Titan's thick orange atmosphere"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 9680,
+   "f1": 9769,
+   "shot": "svs_5530#0",
+   "clip": "svs_5530",
+   "ss": 6.78,
+   "crop": null,
+   "score": 0.4154,
+   "ref": "ch4/10",
+   "title": "Webb Confirms Seasonal Variations in Titan Climate Model"
+  },
+  {
+   "sec": "ch4",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 325.645,
+   "t1": 328.591,
+   "q": [
+    "the hazy atmosphere of Titan",
+    "Titan's thick orange atmosphere"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 9769,
+   "f1": 9858,
+   "shot": "eso_eso1529a#0",
+   "clip": "eso_eso1529a",
+   "ss": 4.3,
+   "crop": null,
+   "score": 0.3106,
+   "ref": "ch4/11",
+   "title": "Artist’s impression of a Jupiter twin orbiting HIP 11915"
+  },
+  {
+   "sec": "ch4",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 328.591,
+   "t1": 331.48900000000003,
+   "q": [
+    "Saturn's rings close-up",
+    "a spacecraft passing Saturn"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 9858,
+   "f1": 9945,
+   "shot": "esahubble_heic1814a#1",
+   "clip": "esahubble_heic1814a",
+   "ss": 28.78,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3459,
+   "ref": "ch4/12",
+   "title": "Hubblecast 112 Light: Mars and Saturn"
+  },
+  {
+   "sec": "ch4",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 331.48900000000003,
+   "t1": 337.095,
+   "q": [
+    "the planets orbiting the Sun in one flat plane",
+    "solar system orbits animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 9945,
+   "f1": 10113,
+   "shot": "svs_14915#0",
+   "clip": "svs_14915",
+   "ss": 2.12,
+   "crop": null,
+   "score": 0.3227,
+   "ref": "ch4/13",
+   "title": "ESCAPADE Trajectory Animations"
+  },
+  {
+   "sec": "ch4",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 337.095,
+   "t1": 339.644,
+   "q": [
+    "the planets orbiting the Sun in one flat plane",
+    "solar system orbits animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 10113,
+   "f1": 10189,
+   "shot": "svs_14893#1",
+   "clip": "svs_14893",
+   "ss": 4.32,
+   "crop": null,
+   "score": 0.3409,
+   "ref": "ch4/14",
+   "title": "Three Missions Launch to Track Space Weather (Official NASA Trailer)"
+  },
+  {
+   "sec": "ch4",
+   "beat": 11,
+   "kind": "clip",
+   "t0": 339.644,
+   "t1": 343.172,
+   "q": [
+    "a spacecraft flying past a moon",
+    "a probe swinging past a planet"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 10189,
+   "f1": 10295,
+   "shot": "svs_14992#0",
+   "clip": "svs_14992",
+   "ss": 4.01,
+   "crop": null,
+   "score": 0.3581,
+   "ref": "ch4/15",
+   "title": "Lunar Near and Far Side Phases"
+  },
+  {
+   "sec": "ch4",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 343.172,
+   "t1": 346.692,
+   "q": [
+    "Voyager 1's path rising out of the plane of the solar system",
+    "spacecraft trajectory animation"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 10295,
+   "f1": 10401,
+   "shot": "svs_4139-v1path#3",
+   "clip": "svs_4139-v1path",
+   "ss": 45.0,
+   "crop": null,
+   "score": 0.3787,
+   "ref": "ch4/16",
+   "title": "Voyager 1 trajectory through the solar system"
+  },
+  {
+   "sec": "ch4",
+   "beat": 13,
+   "kind": "clip",
+   "t0": 346.692,
+   "t1": 349.7845,
+   "q": [
+    "a spacecraft heading away into dark space",
+    "a lone probe leaving the planets"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 10401,
+   "f1": 10494,
+   "shot": "svs_13821#0",
+   "clip": "svs_13821",
+   "ss": 2.28,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.3271,
+   "ref": "ch4/17",
+   "title": "Juno Discovers Mars’ Dust Storms Fill Solar System"
+  },
+  {
+   "sec": "ch4",
+   "beat": 14,
+   "kind": "gfx",
+   "t0": 349.7845,
+   "t1": 352.66200000000003,
+   "gfx": "photo:V_Miranda",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 10494,
+   "f1": 10580,
+   "shot": "eso_eso1204a#0",
+   "clip": "eso_eso1204a",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/18",
+   "title": "Planets everywhere"
+  },
+  {
+   "sec": "ch4",
+   "beat": 15,
+   "kind": "gfx",
+   "t0": 352.66200000000003,
+   "t1": 355.30899999999997,
+   "gfx": "photo:V_Uranus",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 10580,
+   "f1": 10659,
+   "shot": "eso_eso1438a#0",
+   "clip": "eso_eso1438a",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/19",
+   "title": "Artist's impression of mysterious alignment of quasar rotation axes"
+  },
+  {
+   "sec": "ch4",
+   "beat": 16,
+   "kind": "gfx",
+   "t0": 355.30899999999997,
+   "t1": 357.781,
+   "gfx": "photo:V_Neptune_clouds",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 10659,
+   "f1": 10733,
+   "shot": "eso_eso1524a#0",
+   "clip": "eso_eso1524a",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/20",
+   "title": "Artist’s impression of CR7: the brightest galaxy in the early Universe"
+  },
+  {
+   "sec": "ch4",
+   "beat": 17,
+   "kind": "gfx",
+   "t0": 357.781,
+   "t1": 364.3875,
+   "gfx": "photo:V_Triton",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 10733,
+   "f1": 10932,
+   "shot": "eso_eso1725b#0",
+   "clip": "eso_eso1725b",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/21",
+   "title": "Visualisation of galaxy undergoing ram pressure stripping"
+  },
+  {
+   "sec": "ch4",
+   "beat": 18,
+   "kind": "gfx",
+   "t0": 364.3875,
+   "t1": 366.528,
+   "gfx": "photo:V_Uranus_crescent",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 10932,
+   "f1": 10996,
+   "shot": "eso_eso1802e#0",
+   "clip": "eso_eso1802e",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/22",
+   "title": "Artist’s impression video of the black hole binary system in NGC 3201"
+  },
+  {
+   "sec": "ch4",
+   "beat": 19,
+   "kind": "gfx",
+   "t0": 366.528,
+   "t1": 372.95300000000003,
+   "gfx": "photo:V_speeds_art",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 10996,
+   "f1": 11189,
+   "shot": "eso_eso1812b#0",
+   "clip": "eso_eso1812b",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch4/23",
+   "title": "Artist’s impression of ancient galaxy megamerger"
+  },
+  {
+   "kind": "card",
+   "sec": "ch5",
+   "t0": 372.95300000000003,
+   "t1": 374.35299999999995,
+   "num": "",
+   "ctitle": "ONE LAST LOOK *BACK*",
+   "idx": 5,
+   "n_total": 8,
+   "q": [
+    "slow flight through a star field",
+    "a lone spacecraft far away among stars"
+   ],
+   "trans": "dip",
+   "f0": 11189,
+   "f1": 11231,
+   "shot": "svs_20394#1",
+   "clip": "svs_20394",
+   "ss": 7.23,
+   "crop": null,
+   "score": 0.3601,
+   "ref": "ch5/0",
+   "title": "Habitable Worlds Observatory (HWO) Animations and Stills"
+  },
+  {
+   "sec": "ch5",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 374.35299999999995,
+   "t1": 378.83,
+   "q": [
+    "the solar system seen from far beyond Pluto",
+    "the Sun as a bright star among others"
+   ],
+   "opt": "hold",
+   "trans": "soft",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 11231,
+   "f1": 11365,
+   "shot": "eso_exoplanet-barnard-1-v2#0",
+   "clip": "eso_exoplanet-barnard-1-v2",
+   "ss": 3.55,
+   "crop": null,
+   "score": 0.2936,
+   "ref": "ch5/1",
+   "title": "Artist’s impression of Barnard’s Star and its super-Earth"
+  },
+  {
+   "sec": "ch5",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 378.83,
+   "t1": 381.237,
+   "q": [
+    "the Sun as a faint star seen from the edge of the solar system",
+    "a lone bright star in the dark"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 11365,
+   "f1": 11437,
+   "shot": "eso_eso1706a#4",
+   "clip": "eso_eso1706a",
+   "ss": 36.69,
+   "crop": null,
+   "score": 0.3623,
+   "ref": "ch5/2",
+   "title": "ESOcast 96: Ultracool Dwarf and the Seven Planets"
+  },
+  {
+   "sec": "ch5",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 381.237,
+   "t1": 383.57800000000003,
+   "q": [
+    "the Sun as a faint star seen from the edge of the solar system",
+    "a lone bright star in the dark"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 11437,
+   "f1": 11507,
+   "shot": "esahubble_heic1813c#0",
+   "clip": "esahubble_heic1813c",
+   "ss": 4.62,
+   "crop": null,
+   "score": 0.3154,
+   "ref": "ch5/3",
+   "title": "Animation of `Oumuamua outgassing and rotating"
+  },
+  {
+   "sec": "ch5",
+   "beat": 2,
+   "kind": "gfx",
+   "t0": 383.57800000000003,
+   "t1": 387.084,
+   "gfx": "photo:Carl_Sagan:out",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 11507,
+   "f1": 11613,
+   "shot": "eso_eso2016a#0",
+   "clip": "eso_eso2016a",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch5/4",
+   "title": "Animation of the web of the supermassive black hole"
+  },
+  {
+   "sec": "ch5",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 387.084,
+   "t1": 389.536,
+   "q": [
+    "a spacecraft turning around in space",
+    "looking back toward the inner solar system"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 11613,
+   "f1": 11686,
+   "shot": "esawebb_potm2211a#0",
+   "clip": "esawebb_potm2211a",
+   "ss": 4.56,
+   "crop": null,
+   "score": 0.25,
+   "ref": "ch5/5",
+   "title": "Zoom Into II ZW 96"
+  },
+  {
+   "sec": "ch5",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 389.536,
+   "t1": 391.52750000000003,
+   "q": [
+    "a spacecraft far from the Sun",
+    "the Voyager spacecraft in deep space"
+   ],
+   "opt": "default",
+   "trans": "dip",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 11686,
+   "f1": 11746,
+   "shot": "svs_14691#2",
+   "clip": "svs_14691",
+   "ss": 23.38,
+   "crop": null,
+   "score": 0.3561,
+   "ref": "ch5/6",
+   "title": "To an Asteroid and Back Trailer"
+  },
+  {
+   "sec": "ch5",
+   "beat": 5,
+   "kind": "gfx",
+   "t0": 391.52750000000003,
+   "t1": 395.8595,
+   "gfx": "photo:V_Earth_Moon",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 11746,
+   "f1": 11876,
+   "shot": "eso_eso2208-eht-mwe#0",
+   "clip": "eso_eso2208-eht-mwe",
+   "ss": 2.92,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch5/7",
+   "title": "Video montage of the Event Horizon Telescope observatories"
+  },
+  {
+   "sec": "ch5",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 395.8595,
+   "t1": 400.229,
+   "q": [
+    "the Voyager family portrait of the planets in 1990"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 11876,
+   "f1": 12007,
+   "shot": "arc_family_portrait#0",
+   "clip": "arc_family_portrait",
+   "ss": 8.24,
+   "crop": null,
+   "score": 0.2612,
+   "ref": "ch5/8",
+   "title": "Voyager 1 Family Portrait sequence, 1990 (JPL animation of the real images)"
+  },
+  {
+   "sec": "ch5",
+   "beat": 7,
+   "kind": "gfx",
+   "t0": 400.229,
+   "t1": 408.034,
+   "gfx": "photo:Pale_Blue_Dot",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 12007,
+   "f1": 12241,
+   "shot": "eso_eso2408b#0",
+   "clip": "eso_eso2408b",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch5/9",
+   "title": "Artist’s animation of the system with the most massive stellar black hole in our galaxy"
+  },
+  {
+   "sec": "ch5",
+   "beat": 8,
+   "kind": "gfx",
+   "t0": 408.034,
+   "t1": 409.2875,
+   "gfx": "photo:Pale_Blue_Dot_revisited",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 12241,
+   "f1": 12279,
+   "shot": "eso_eso2306a#2",
+   "clip": "eso_eso2306a",
+   "ss": 15.66,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 1.0,
+   "ref": "ch5/10",
+   "title": "Observing the ashes of the first stars (ESOcast 261 Light)"
+  },
+  {
+   "sec": "ch5",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 409.2875,
+   "t1": 412.07,
+   "q": [
+    "the Earth from space slowly turning",
+    "Earth's night side with city lights"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 12279,
+   "f1": 12362,
+   "shot": "svs_5064#0",
+   "clip": "svs_5064",
+   "ss": 4.38,
+   "crop": [
+    0.0,
+    0.15,
+    0.85,
+    1.0
+   ],
+   "score": 0.3104,
+   "ref": "ch5/11",
+   "title": "Daily Antarctic Sea Ice, By Year"
+  },
+  {
+   "sec": "ch5",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 412.07,
+   "t1": 414.9885,
+   "q": [
+    "the Earth from space slowly turning",
+    "Earth's night side with city lights"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 12362,
+   "f1": 12450,
+   "shot": "svs_5242#0",
+   "clip": "svs_5242",
+   "ss": 4.32,
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    1.0
+   ],
+   "score": 0.3258,
+   "ref": "ch5/12",
+   "title": "Arctic Sea Ice Maximum 2024"
+  },
+  {
+   "sec": "ch5",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 414.9885,
+   "t1": 419.94550000000004,
+   "q": [
+    "the Voyager spacecraft drifting away into darkness",
+    "a spacecraft fading into the dark"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 12450,
+   "f1": 12598,
+   "shot": "svs_14715-launch#4",
+   "clip": "svs_14715-launch",
+   "ss": 42.68,
+   "crop": null,
+   "score": 0.3342,
+   "ref": "ch5/13",
+   "title": "COBE launch, 18 Nov 1989 (archival)"
+  },
+  {
+   "sec": "ch5",
+   "beat": 11,
+   "kind": "gfx",
+   "t0": 419.94550000000004,
+   "t1": 422.183,
+   "gfx": "photo:Family_portrait",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 12598,
+   "f1": 12665,
+   "shot": "eso_eso2306a#5",
+   "clip": "eso_eso2306a",
+   "ss": 36.1,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 1.0,
+   "ref": "ch5/14",
+   "title": "Observing the ashes of the first stars (ESOcast 261 Light)"
+  },
+  {
+   "sec": "ch5",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 422.183,
+   "t1": 426.40000000000003,
+   "q": [
+    "flight out of the solar system",
+    "stars streaming past"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 12665,
+   "f1": 12792,
+   "shot": "svs_5628#0",
+   "clip": "svs_5628",
+   "ss": 3.67,
+   "crop": null,
+   "score": 0.3145,
+   "ref": "ch5/15",
+   "title": "Lucy Observations of Asteroid Donaldjohanson"
+  },
+  {
+   "kind": "card",
+   "sec": "ch6",
+   "t0": 426.40000000000003,
+   "t1": 427.79999999999995,
+   "num": "",
+   "ctitle": "BEYOND THE SUN'S *BUBBLE*",
+   "idx": 6,
+   "n_total": 8,
+   "q": [
+    "slow flight through a star field",
+    "a lone spacecraft far away among stars"
+   ],
+   "trans": "dip",
+   "f0": 12792,
+   "f1": 12834,
+   "shot": "svs_13483#5",
+   "clip": "svs_13483",
+   "ss": 52.6,
+   "crop": null,
+   "score": 0.3564,
+   "ref": "ch6/0",
+   "title": "5 Things: Black Holes"
+  },
+  {
+   "sec": "ch6",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 427.79999999999995,
+   "t1": 428.8405,
+   "q": [
+    "the Sun's surface with flares",
+    "the Sun up close"
+   ],
+   "opt": "hold",
+   "trans": "soft",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 12834,
+   "f1": 12865,
+   "shot": "svs_14479#0",
+   "clip": "svs_14479",
+   "ss": 0.4,
+   "crop": null,
+   "score": 0.4235,
+   "ref": "ch6/1",
+   "title": "Sun Releases X3.3 Flare on February 9, 2024"
+  },
+  {
+   "sec": "ch6",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 428.8405,
+   "t1": 434.106,
+   "q": [
+    "solar wind streaming out from the Sun",
+    "particles flowing from the Sun"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 12865,
+   "f1": 13023,
+   "shot": "svs_14973#0",
+   "clip": "svs_14973",
+   "ss": 0.29,
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    1.0
+   ],
+   "score": 0.3377,
+   "ref": "ch6/2",
+   "title": "Furious February Flares"
+  },
+  {
+   "sec": "ch6",
+   "beat": 2,
+   "kind": "gfx",
+   "t0": 434.106,
+   "t1": 436.4015,
+   "gfx": "wind",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 13023,
+   "f1": 13092,
+   "shot": "eso_cs0025b#0",
+   "clip": "eso_cs0025b",
+   "ss": 4.63,
+   "crop": null,
+   "score": 0.3236,
+   "ref": "ch6/3",
+   "title": "Artist's impression of the interstellar comet 3I/ATLAS"
+  },
+  {
+   "sec": "ch6",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 436.4015,
+   "t1": 441.9245,
+   "q": [
+    "the heliosphere bubble around the solar system",
+    "the Sun's bubble in space"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 13092,
+   "f1": 13258,
+   "shot": "svs_20363-helio#0",
+   "clip": "svs_20363-helio",
+   "ss": 10.01,
+   "crop": null,
+   "score": 0.3922,
+   "ref": "ch6/4",
+   "title": "Animation: the heliosphere"
+  },
+  {
+   "sec": "ch6",
+   "beat": 4,
+   "kind": "gfx",
+   "t0": 441.9245,
+   "t1": 445.8195,
+   "gfx": "photo:V_magnetic_art",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 13258,
+   "f1": 13375,
+   "shot": "eso_eso2408d#0",
+   "clip": "eso_eso2408d",
+   "ss": 6.78,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 1.0,
+   "ref": "ch6/5",
+   "title": "Comparison of several stellar black holes in our galaxy"
+  },
+  {
+   "sec": "ch6",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 445.8195,
+   "t1": 450.62550000000005,
+   "q": [
+    "stars in deep interstellar space",
+    "a dense star field"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 13375,
+   "f1": 13519,
+   "shot": "esahubble_eagle-neb_4kultrahd#0",
+   "clip": "esahubble_eagle-neb_4kultrahd",
+   "ss": 3.37,
+   "crop": null,
+   "score": 0.3324,
+   "ref": "ch6/6",
+   "title": "The Eagle Nebula"
+  },
+  {
+   "sec": "ch6",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 450.62550000000005,
+   "t1": 453.064,
+   "q": [
+    "a spacecraft far out in the dark",
+    "a lone probe at the edge of the solar system"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 13519,
+   "f1": 13592,
+   "shot": "svs_13582#0",
+   "clip": "svs_13582",
+   "ss": 2.49,
+   "crop": null,
+   "score": 0.3565,
+   "ref": "ch6/7",
+   "title": "NASA Reveals Alien Composition of 2I/Borisov, First Interstellar Comet"
+  },
+  {
+   "sec": "ch6",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 453.064,
+   "t1": 455.442,
+   "q": [
+    "empty black space",
+    "a dark star field"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 13592,
+   "f1": 13663,
+   "shot": "eso_uhd_cm_paranal_2#0",
+   "clip": "eso_uhd_cm_paranal_2",
+   "ss": 0.24,
+   "crop": null,
+   "score": 0.3419,
+   "ref": "ch6/8",
+   "title": "VLT in Action"
+  },
+  {
+   "sec": "ch6",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 455.442,
+   "t1": 457.5845,
+   "q": [
+    "the Voyager spacecraft in deep space",
+    "a spacecraft among stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 13663,
+   "f1": 13728,
+   "shot": "svs_31286#0",
+   "clip": "svs_31286",
+   "ss": 8.35,
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    1.0
+   ],
+   "score": 0.3083,
+   "ref": "ch6/9",
+   "title": "Webb Space Telescope Studies the Pillars of Creation"
+  },
+  {
+   "sec": "ch6",
+   "beat": 9,
+   "kind": "gfx",
+   "t0": 457.5845,
+   "t1": 462.35,
+   "gfx": "starfield",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 13728,
+   "f1": 13870,
+   "shot": "eso_eso2606b#0",
+   "clip": "eso_eso2606b",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch6/10",
+   "title": "Animation of an exoplanet with a magnetic field"
+  },
+  {
+   "sec": "ch6",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 462.35,
+   "t1": 464.4125,
+   "q": [
+    "a solar flare erupting",
+    "a huge eruption on the Sun"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 13870,
+   "f1": 13932,
+   "shot": "svs_20392#1",
+   "clip": "svs_20392",
+   "ss": 5.96,
+   "crop": null,
+   "score": 0.3939,
+   "ref": "ch6/11",
+   "title": "Space Weather and NOAA's Space Weather Follow On at Lagrange point 1 (SWFO-L1)"
+  },
+  {
+   "sec": "ch6",
+   "beat": 11,
+   "kind": "clip",
+   "t0": 464.4125,
+   "t1": 468.49649999999997,
+   "q": [
+    "a coronal mass ejection blasting from the Sun",
+    "a solar eruption"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 13932,
+   "f1": 14055,
+   "shot": "svs_14741#0",
+   "clip": "svs_14741",
+   "ss": 2.88,
+   "crop": null,
+   "score": 0.3674,
+   "ref": "ch6/12",
+   "title": "Parker Solar Probe: Humanity’s Closest Encounter with the Sun"
+  },
+  {
+   "sec": "ch6",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 468.49649999999997,
+   "t1": 475.49649999999997,
+   "q": [
+    "a solar storm travelling through the solar system",
+    "a wave from the Sun reaching a spacecraft"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 14055,
+   "f1": 14265,
+   "shot": "esawebb_weic2510a#0",
+   "clip": "esawebb_weic2510a",
+   "ss": 2.29,
+   "crop": [
+    0.0,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "score": 0.3561,
+   "ref": "ch6/13",
+   "title": "Pullout of aurora observations on Jupiter"
+  },
+  {
+   "sec": "ch6",
+   "beat": 13,
+   "kind": "gfx",
+   "t0": 475.49649999999997,
+   "t1": 478.27,
+   "gfx": "photo:V_explorer_art:out",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 14265,
+   "f1": 14348,
+   "shot": "eso_gl_southwest_ut3_ut4_lgs#0",
+   "clip": "eso_gl_southwest_ut3_ut4_lgs",
+   "ss": 2.42,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch6/14",
+   "title": "Shooting at the centre of the Milky Way"
+  },
+  {
+   "sec": "ch6",
+   "beat": 14,
+   "kind": "clip",
+   "t0": 478.27,
+   "t1": 482.5205,
+   "q": [
+    "waves rippling outward",
+    "ripples spreading through gas"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 14348,
+   "f1": 14476,
+   "shot": "esahubble_potw2123a#0",
+   "clip": "esahubble_potw2123a",
+   "ss": 3.66,
+   "crop": null,
+   "score": 0.296,
+   "ref": "ch6/15",
+   "title": "A Spiral Amongst Friends"
+  },
+  {
+   "sec": "ch6",
+   "beat": 15,
+   "kind": "clip",
+   "t0": 482.5205,
+   "t1": 487.79200000000003,
+   "q": [
+    "glowing gas clouds in space",
+    "interstellar gas"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 14476,
+   "f1": 14634,
+   "shot": "esahubble_heic2614c#0",
+   "clip": "esahubble_heic2614c",
+   "ss": 3.15,
+   "crop": null,
+   "score": 0.3735,
+   "ref": "ch6/16",
+   "title": "Transition video: Cat's Head Nebula"
+  },
+  {
+   "sec": "ch6",
+   "beat": 16,
+   "kind": "clip",
+   "t0": 487.79200000000003,
+   "t1": 493.3655,
+   "q": [
+    "dense gas between the stars",
+    "a nebula of gas"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 14634,
+   "f1": 14801,
+   "shot": "esawebb_weic2513c#0",
+   "clip": "esawebb_weic2513c",
+   "ss": 3.0,
+   "crop": null,
+   "score": 0.3744,
+   "ref": "ch6/17",
+   "title": "Pan video - Cat’s Paw Nebula"
+  },
+  {
+   "sec": "ch6",
+   "beat": 17,
+   "kind": "clip",
+   "t0": 493.3655,
+   "t1": 496.2955,
+   "q": [
+    "the heliosphere seen from outside",
+    "the Sun's bubble in interstellar space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 14801,
+   "f1": 14889,
+   "shot": "svs_13544-pull#0",
+   "clip": "svs_13544-pull",
+   "ss": 4.21,
+   "crop": null,
+   "score": 0.1007,
+   "ref": "ch6/18",
+   "title": "Voyager's location: pulling out from the solar system"
+  },
+  {
+   "sec": "ch6",
+   "beat": 18,
+   "kind": "clip",
+   "t0": 496.2955,
+   "t1": 498.442,
+   "q": [
+    "interstellar clouds of gas and dust",
+    "gas between the stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 14889,
+   "f1": 14953,
+   "shot": "esahubble_heic1808f#0",
+   "clip": "esahubble_heic1808f",
+   "ss": 7.7,
+   "crop": [
+    0.0,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "score": 0.368,
+   "ref": "ch6/19",
+   "title": "Lagoon Nebula in visible and infrared light"
+  },
+  {
+   "sec": "ch6",
+   "beat": 19,
+   "kind": "gfx",
+   "t0": 498.442,
+   "t1": 508.53200000000004,
+   "gfx": "photo:V_interstellar_art",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 14953,
+   "f1": 15256,
+   "shot": "eso_horalek-pao-2017-6#0",
+   "clip": "eso_horalek-pao-2017-6",
+   "ss": 3.36,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch6/20",
+   "title": "Starry sky"
+  },
+  {
+   "sec": "ch6",
+   "beat": 20,
+   "kind": "gfx",
+   "t0": 508.53200000000004,
+   "t1": 515.35,
+   "gfx": "photo:Suzanne_Dodd",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 15256,
+   "f1": 15460,
+   "shot": "eso_horalek-pao-2017-6#1",
+   "clip": "eso_horalek-pao-2017-6",
+   "ss": 9.36,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch6/21",
+   "title": "Starry sky"
+  },
+  {
+   "sec": "ch6",
+   "beat": 21,
+   "kind": "clip",
+   "t0": 515.35,
+   "t1": 531.3345,
+   "q": [
+    "bite:dodd"
+   ],
+   "opt": "bite",
+   "bite": "dodd",
+   "bite_lead": 0.263,
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.008,
+   "f0": 15460,
+   "f1": 15940,
+   "shot": "bite_dodd#0",
+   "clip": "bite_dodd",
+   "ss": 1.24,
+   "crop": null,
+   "score": 0.0788,
+   "ref": "ch6/22",
+   "title": "Suzanne Dodd, Voyager project manager, NASA, 2019 (recording)"
+  },
+  {
+   "sec": "ch6",
+   "beat": 22,
+   "kind": "gfx",
+   "t0": 531.3345,
+   "t1": 535.3969999999999,
+   "gfx": "photo:V_one_out_one_in",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 15940,
+   "f1": 16062,
+   "shot": "eso_lasilla-tse1#0",
+   "clip": "eso_lasilla-tse1",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch6/23",
+   "title": "La Silla total solar eclipse"
+  },
+  {
+   "kind": "card",
+   "sec": "ch7",
+   "t0": 535.3969999999999,
+   "t1": 536.797,
+   "num": "",
+   "ctitle": "A REPAIR *24 BILLION KM* AWAY",
+   "idx": 7,
+   "n_total": 8,
+   "q": [
+    "slow flight through a star field",
+    "a lone spacecraft far away among stars"
+   ],
+   "trans": "dip",
+   "f0": 16062,
+   "f1": 16104,
+   "shot": "eso_eso1833b#0",
+   "clip": "eso_eso1833b",
+   "ss": 0.22,
+   "crop": [
+    0.0,
+    0.0,
+    0.85,
+    0.85
+   ],
+   "score": 0.3364,
+   "ref": "ch7/0",
+   "title": "The Hyperion Proto-Supercluster"
+  },
+  {
+   "sec": "ch7",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 536.797,
+   "t1": 543.6965,
+   "q": [
+    "the Voyager spacecraft in deep space with its dish toward Earth",
+    "a spacecraft far from the Sun"
+   ],
+   "opt": "hold",
+   "trans": "soft",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 16104,
+   "f1": 16311,
+   "shot": "esahubble_heic1809a#0",
+   "clip": "esahubble_heic1809a",
+   "ss": 2.33,
+   "crop": null,
+   "score": 0.3569,
+   "ref": "ch7/1",
+   "title": "Artist’s impression of WASP-107b"
+  },
+  {
+   "sec": "ch7",
+   "beat": 1,
+   "kind": "gfx",
+   "t0": 543.6965,
+   "t1": 545.9345,
+   "gfx": "photo:DSN_DSS53_night",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 16311,
+   "f1": 16378,
+   "shot": "eso_uhd_bt_lasilla_close#0",
+   "clip": "eso_uhd_bt_lasilla_close",
+   "ss": 3.84,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch7/2",
+   "title": "Night view of ESO 3.6-metre telescope"
+  },
+  {
+   "sec": "ch7",
+   "beat": 2,
+   "kind": "gfx",
+   "t0": 545.9345,
+   "t1": 551.392,
+   "gfx": "photo:V_dish_build",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 16378,
+   "f1": 16542,
+   "shot": "eso_uhd_yb_paranal_01#0",
+   "clip": "eso_uhd_yb_paranal_01",
+   "ss": 2.84,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch7/3",
+   "title": "Milky Way revealed"
+  },
+  {
+   "sec": "ch7",
+   "beat": 3,
+   "kind": "gfx",
+   "t0": 551.392,
+   "t1": 559.6705000000001,
+   "gfx": "photo:Canberra_DSS43",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 16542,
+   "f1": 16790,
+   "shot": "eso_uhd_yb_paranal_02#0",
+   "clip": "eso_uhd_yb_paranal_02",
+   "ss": 3.92,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch7/4",
+   "title": "Auxiliary Telescope at work at Paranal"
+  },
+  {
+   "sec": "ch7",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 559.6705000000001,
+   "t1": 564.543,
+   "q": [
+    "radio waves travelling through space",
+    "a signal crossing the solar system"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 16790,
+   "f1": 16936,
+   "shot": "eso_eso2610c#0",
+   "clip": "eso_eso2610c",
+   "ss": 3.34,
+   "crop": null,
+   "score": 0.3263,
+   "ref": "ch7/5",
+   "title": "Detecting a moon-like object in the CD-35 2722 system"
+  },
+  {
+   "sec": "ch7",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 564.543,
+   "t1": 568.241,
+   "q": [
+    "a radio telescope dish tracking the sky",
+    "radio dishes at dusk"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 16936,
+   "f1": 17047,
+   "shot": "eso_eso1839d#0",
+   "clip": "eso_eso1839d",
+   "ss": 3.94,
+   "crop": null,
+   "score": 0.2949,
+   "ref": "ch7/6",
+   "title": "Sunset at SPECULOOS"
+  },
+  {
+   "sec": "ch7",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 568.241,
+   "t1": 571.8265,
+   "q": [
+    "a radio telescope dish tracking the sky",
+    "radio dishes at dusk"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 17047,
+   "f1": 17155,
+   "shot": "eso_bt_alma2#0",
+   "clip": "eso_bt_alma2",
+   "ss": 1.42,
+   "crop": null,
+   "score": 0.3201,
+   "ref": "ch7/7",
+   "title": "Colour clouds swirl over ALMA"
+  },
+  {
+   "sec": "ch7",
+   "beat": 6,
+   "kind": "gfx",
+   "t0": 571.8265,
+   "t1": 576.0885000000001,
+   "gfx": "starfield",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 17155,
+   "f1": 17283,
+   "shot": "svs_20406#0",
+   "clip": "svs_20406",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch7/8",
+   "title": "The Heliosphere Within The Milky Way Galaxy"
+  },
+  {
+   "sec": "ch7",
+   "beat": 7,
+   "kind": "gfx",
+   "t0": 576.0885000000001,
+   "t1": 577.991,
+   "gfx": "starfield",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 17283,
+   "f1": 17340,
+   "shot": "svs_20417#0",
+   "clip": "svs_20417",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch7/9",
+   "title": "Wind-Accreting Pulsar Visualization"
+  },
+  {
+   "sec": "ch7",
+   "beat": 8,
+   "kind": "gfx",
+   "t0": 577.991,
+   "t1": 581.9665,
+   "gfx": "photo:DSN_Madrid",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 17340,
+   "f1": 17459,
+   "shot": "svs_30972#0",
+   "clip": "svs_30972",
+   "ss": 9.78,
+   "crop": [
+    0.0,
+    0.0,
+    0.9,
+    0.9
+   ],
+   "score": 1.0,
+   "ref": "ch7/10",
+   "title": "Zoo of Galaxies"
+  },
+  {
+   "sec": "ch7",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 581.9665,
+   "t1": 586.2620000000001,
+   "q": [
+    "a radio telescope dish at night under the Milky Way",
+    "radio dishes under a starry sky"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 17459,
+   "f1": 17588,
+   "shot": "eso_gl_north_4ut_front_sunset#0",
+   "clip": "eso_gl_north_4ut_front_sunset",
+   "ss": 0.78,
+   "crop": null,
+   "score": 0.3124,
+   "ref": "ch7/11",
+   "title": "A cloudy night"
+  },
+  {
+   "sec": "ch7",
+   "beat": 10,
+   "kind": "gfx",
+   "t0": 586.2620000000001,
+   "t1": 607.043,
+   "gfx": "memory_fix",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 17588,
+   "f1": 18211,
+   "shot": "esahubble_heic1913a#0",
+   "clip": "esahubble_heic1913a",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch7/12",
+   "title": "Artist’s Impression of NGC3147 black hole disc"
+  },
+  {
+   "sec": "ch7",
+   "beat": 11,
+   "kind": "clip",
+   "t0": 607.043,
+   "t1": 610.2555,
+   "q": [
+    "a radio dish antenna pointing at the sky at night",
+    "an antenna dish at dusk"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 18211,
+   "f1": 18308,
+   "shot": "eso_bt_alma3#0",
+   "clip": "eso_bt_alma3",
+   "ss": 2.32,
+   "crop": null,
+   "score": 0.2714,
+   "ref": "ch7/13",
+   "title": "Technicolour sunset over ALMA"
+  },
+  {
+   "sec": "ch7",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 610.2555,
+   "t1": 612.7925,
+   "q": [
+    "a radio telescope under a starry sky",
+    "radio dishes at night"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 18308,
+   "f1": 18384,
+   "shot": "eso_eso2314a#1",
+   "clip": "eso_eso2314a",
+   "ss": 13.49,
+   "crop": [
+    0.0,
+    0.25,
+    0.75,
+    1.0
+   ],
+   "score": 0.2891,
+   "ref": "ch7/14",
+   "title": "Mysterious Neptune Dark Spot Detected from Earth (ESOcast 265 Light)"
+  },
+  {
+   "sec": "ch7",
+   "beat": 13,
+   "kind": "clip",
+   "t0": 612.7925,
+   "t1": 615.5475,
+   "q": [
+    "a bright star shining in a dark star field",
+    "a star field with the Milky Way"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 18384,
+   "f1": 18466,
+   "shot": "eso_la_silla_horalek_2#0",
+   "clip": "eso_la_silla_horalek_2",
+   "ss": 2.05,
+   "crop": null,
+   "score": 0.3164,
+   "ref": "ch7/15",
+   "title": "Starry skies above La Silla"
+  },
+  {
+   "sec": "ch7",
+   "beat": 14,
+   "kind": "clip",
+   "t0": 615.5475,
+   "t1": 619.014,
+   "q": [
+    "the Voyager spacecraft flying toward the stars",
+    "a probe crossing a star field"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 18466,
+   "f1": 18570,
+   "shot": "eso_eso1549a#0",
+   "clip": "eso_eso1549a",
+   "ss": 4.04,
+   "crop": null,
+   "score": 0.3948,
+   "ref": "ch7/16",
+   "title": "Artist’s impression of a transitional disc around a young star"
+  },
+  {
+   "sec": "ch7",
+   "beat": 15,
+   "kind": "clip",
+   "t0": 619.014,
+   "t1": 621.879,
+   "q": [
+    "a radio dish under the stars at night",
+    "radio telescope timelapse"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 18570,
+   "f1": 18656,
+   "shot": "eso_esocast176a#2",
+   "clip": "eso_esocast176a",
+   "ss": 34.36,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3559,
+   "ref": "ch7/17",
+   "title": "ESOcast 176 Light: Building the Biggest Optical Telescope in the World (4K UHD)"
+  },
+  {
+   "sec": "ch7",
+   "beat": 15,
+   "kind": "clip",
+   "t0": 621.879,
+   "t1": 624.7065,
+   "q": [
+    "a radio dish under the stars at night",
+    "radio telescope timelapse"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 18656,
+   "f1": 18741,
+   "shot": "eso_eso1839b#0",
+   "clip": "eso_eso1839b",
+   "ss": 4.36,
+   "crop": null,
+   "score": 0.3216,
+   "ref": "ch7/18",
+   "title": "Stars wheel over SPECULOOS"
+  },
+  {
+   "sec": "ch7",
+   "beat": 16,
+   "kind": "clip",
+   "t0": 624.7065,
+   "t1": 634.2579999999999,
+   "q": [
+    "bite:team"
+   ],
+   "opt": "bite",
+   "bite": "team",
+   "bite_lead": 0.28,
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.008,
+   "f0": 18741,
+   "f1": 19028,
+   "shot": "bite_team#0",
+   "clip": "bite_team",
+   "ss": 1.22,
+   "crop": null,
+   "score": 0.2121,
+   "ref": "ch7/19",
+   "title": "Voyager team, NASA JPL, 20 April 2024 (recording)"
+  },
+  {
+   "kind": "card",
+   "sec": "ch8",
+   "t0": 634.2579999999999,
+   "t1": 635.658,
+   "num": "",
+   "ctitle": "THE POWER IS *RUNNING OUT*",
+   "idx": 8,
+   "n_total": 8,
+   "q": [
+    "slow flight through a star field",
+    "a lone spacecraft far away among stars"
+   ],
+   "trans": "dip",
+   "f0": 19028,
+   "f1": 19070,
+   "shot": "svs_31290#0",
+   "clip": "svs_31290",
+   "ss": 3.22,
+   "crop": [
+    0.0,
+    0.15,
+    0.85,
+    1.0
+   ],
+   "score": 0.3387,
+   "ref": "ch8/0",
+   "title": "Webb and Hubble's Views of Spiral Galaxy NGC 628"
+  },
+  {
+   "sec": "ch8",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 635.658,
+   "t1": 638.6785,
+   "q": [
+    "the Voyager spacecraft drifting in deep space",
+    "a spacecraft far from the Sun"
+   ],
+   "opt": "hold",
+   "trans": "soft",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 19070,
+   "f1": 19160,
+   "shot": "svs_14893#0",
+   "clip": "svs_14893",
+   "ss": 0.35,
+   "crop": null,
+   "score": 0.3756,
+   "ref": "ch8/1",
+   "title": "Three Missions Launch to Track Space Weather (Official NASA Trailer)"
+  },
+  {
+   "sec": "ch8",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 638.6785,
+   "t1": 642.212,
+   "q": [
+    "a dim glowing ember",
+    "a fading red star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 19160,
+   "f1": 19266,
+   "shot": "eso_eso1719e#0",
+   "clip": "eso_eso1719e",
+   "ss": 2.16,
+   "crop": null,
+   "score": 0.275,
+   "ref": "ch8/2",
+   "title": "The region of the Eagle Nebula seen with the VST"
+  },
+  {
+   "sec": "ch8",
+   "beat": 1,
+   "kind": "clip",
+   "t0": 642.212,
+   "t1": 645.802,
+   "q": [
+    "a dim glowing ember",
+    "a fading red star"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 19266,
+   "f1": 19374,
+   "shot": "eso_eso1705c#0",
+   "clip": "eso_eso1705c",
+   "ss": 3.63,
+   "crop": null,
+   "score": 0.2937,
+   "ref": "ch8/3",
+   "title": "Panning across the Cat’s Paw and Lobster Nebulae"
+  },
+  {
+   "sec": "ch8",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 645.802,
+   "t1": 649.5935,
+   "q": [
+    "a fading red star",
+    "a dim reddish star in space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 19374,
+   "f1": 19488,
+   "shot": "svs_30956#0",
+   "clip": "svs_30956",
+   "ss": 3.88,
+   "crop": null,
+   "score": 0.3345,
+   "ref": "ch8/4",
+   "title": "The Red Bubble: Supernova Remnant SNR 0509-67.5"
+  },
+  {
+   "sec": "ch8",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 649.5935,
+   "t1": 652.63,
+   "q": [
+    "a fading light in deep space",
+    "a dim star in black space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 19488,
+   "f1": 19579,
+   "shot": "esahubble_heic1915a#0",
+   "clip": "esahubble_heic1915a",
+   "ss": 4.26,
+   "crop": null,
+   "score": 0.2904,
+   "ref": "ch8/5",
+   "title": "Animation of Blue Stragglers"
+  },
+  {
+   "sec": "ch8",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 652.63,
+   "t1": 654.721,
+   "q": [
+    "a fading light in deep space",
+    "a dim star in black space"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 19579,
+   "f1": 19642,
+   "shot": "esahubble_heic1808c#0",
+   "clip": "esahubble_heic1808c",
+   "ss": 3.38,
+   "crop": null,
+   "score": 0.3013,
+   "ref": "ch8/6",
+   "title": "Diving into the Lagoon Nebula"
+  },
+  {
+   "sec": "ch8",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 654.721,
+   "t1": 659.07,
+   "q": [
+    "stars slowly drifting in deep space",
+    "a dark star field"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 19642,
+   "f1": 19772,
+   "shot": "svs_31197#0",
+   "clip": "svs_31197",
+   "ss": 3.25,
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    1.0
+   ],
+   "score": 0.3312,
+   "ref": "ch8/7",
+   "title": "Carina Nebula Webb vs Hubble"
+  },
+  {
+   "sec": "ch8",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 659.07,
+   "t1": 661.7,
+   "q": [
+    "a faint galaxy in a dark star field",
+    "a lonely star field"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 19772,
+   "f1": 19851,
+   "shot": "eso_eso1603b#0",
+   "clip": "eso_eso1603b",
+   "ss": 4.48,
+   "crop": null,
+   "score": 0.3976,
+   "ref": "ch8/8",
+   "title": "A close look at the dwarf galaxy IC 1613"
+  },
+  {
+   "sec": "ch8",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 661.7,
+   "t1": 663.601,
+   "q": [
+    "a faint galaxy in a dark star field",
+    "a lonely star field"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 19851,
+   "f1": 19908,
+   "shot": "esahubble_potw2428a#0",
+   "clip": "esahubble_potw2428a",
+   "ss": 4.84,
+   "crop": null,
+   "score": 0.3316,
+   "ref": "ch8/9",
+   "title": "Pan: NGC 3810"
+  },
+  {
+   "sec": "ch8",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 663.601,
+   "t1": 668.0715,
+   "q": [
+    "the Voyager spacecraft alone among the stars",
+    "a probe in a star field"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 19908,
+   "f1": 20042,
+   "shot": "eso_eso1549b#0",
+   "clip": "eso_eso1549b",
+   "ss": 3.54,
+   "crop": null,
+   "score": 0.3685,
+   "ref": "ch8/10",
+   "title": "Artist’s impression of a transitional disc around a young star"
+  },
+  {
+   "sec": "ch8",
+   "beat": 7,
+   "kind": "gfx",
+   "t0": 668.0715,
+   "t1": 670.994,
+   "gfx": "photo:Voyager_science_meeting:out",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "dip",
+   "f0": 20042,
+   "f1": 20130,
+   "shot": "esahubble_heic1913b#0",
+   "clip": "esahubble_heic1913b",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch8/11",
+   "title": "Top-Down View of Artist’s Impression of NGC3147 black hole disc"
+  },
+  {
+   "sec": "ch8",
+   "beat": 8,
+   "kind": "clip",
+   "t0": 670.994,
+   "t1": 674.7655,
+   "q": [
+    "Ed Stone interview",
+    "a scientist speaking in an interview"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 20130,
+   "f1": 20243,
+   "shot": "arc_stone2019#0",
+   "clip": "arc_stone2019",
+   "ss": 1.65,
+   "crop": null,
+   "score": 0.3637,
+   "ref": "ch8/12",
+   "title": "Ed Stone, Voyager project scientist, interview 2019"
+  },
+  {
+   "sec": "ch8",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 674.7655,
+   "t1": 677.902,
+   "q": [
+    "stars slowly drifting in deep space",
+    "a dark star field"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 20243,
+   "f1": 20337,
+   "shot": "esawebb_weic2212e#0",
+   "clip": "esawebb_weic2212e",
+   "ss": 3.86,
+   "crop": [
+    0.0,
+    0.15,
+    0.85,
+    1.0
+   ],
+   "score": 0.3196,
+   "ref": "ch8/13",
+   "title": "Pan of the Tarantula Nebula (MIRI Image)"
+  },
+  {
+   "sec": "ch8",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 677.902,
+   "t1": 680.38,
+   "q": [
+    "the Earth and Moon from space",
+    "the Moon orbiting Earth"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 20337,
+   "f1": 20411,
+   "shot": "eso_moon_earthshine_4k#0",
+   "clip": "eso_moon_earthshine_4k",
+   "ss": 2.69,
+   "crop": null,
+   "score": 0.3637,
+   "ref": "ch8/14",
+   "title": "The Moon's phases in 4k (Artist's Impression)"
+  },
+  {
+   "sec": "ch8",
+   "beat": 11,
+   "kind": "gfx",
+   "t0": 680.38,
+   "t1": 695.2995,
+   "gfx": "light_ladder",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 20411,
+   "f1": 20859,
+   "shot": "esahubble_heic2021b#0",
+   "clip": "esahubble_heic2021b",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ch8/15",
+   "title": "Artist’s Impression of Exoplanet HD 106906b"
+  },
+  {
+   "sec": "ending",
+   "beat": 0,
+   "kind": "clip",
+   "t0": 695.2995,
+   "t1": 700.7330000000001,
+   "q": [
+    "the Voyager spacecraft drifting away into darkness",
+    "a spacecraft fading into the dark"
+   ],
+   "opt": "hold",
+   "trans": "dip",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 20859,
+   "f1": 21022,
+   "shot": "svs_5319#0",
+   "clip": "svs_5319",
+   "ss": 3.06,
+   "crop": null,
+   "score": 0.287,
+   "ref": "ending/0",
+   "title": "Moon Essentials: Turntable"
+  },
+  {
+   "sec": "ending",
+   "beat": 1,
+   "kind": "gfx",
+   "t0": 700.7330000000001,
+   "t1": 705.366,
+   "gfx": "photo:Goldstone_70m",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 21022,
+   "f1": 21161,
+   "shot": "eso_LaSilla16-DishLightDesertPolar24mm#0",
+   "clip": "eso_LaSilla16-DishLightDesertPolar24mm",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ending/1",
+   "title": "La Silla SEST time-lapse"
+  },
+  {
+   "sec": "ending",
+   "beat": 2,
+   "kind": "clip",
+   "t0": 705.366,
+   "t1": 707.801,
+   "q": [
+    "flight through a star field",
+    "stars streaming past"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 21161,
+   "f1": 21234,
+   "shot": "esawebb_weic2212b#0",
+   "clip": "esawebb_weic2212b",
+   "ss": 3.21,
+   "crop": null,
+   "score": 0.3219,
+   "ref": "ending/2",
+   "title": "Zoom Into the Tarantula Nebula"
+  },
+  {
+   "sec": "ending",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 707.801,
+   "t1": 710.334,
+   "q": [
+    "the Voyager spacecraft flying fast through space",
+    "a probe crossing a star field"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 21234,
+   "f1": 21310,
+   "shot": "eso_eso1510b#0",
+   "clip": "eso_eso1510b",
+   "ss": 4.52,
+   "crop": null,
+   "score": 0.2581,
+   "ref": "ending/3",
+   "title": "Close-up view of the star cluster NGC 6193 and nebula NGC 6188"
+  },
+  {
+   "sec": "ending",
+   "beat": 3,
+   "kind": "clip",
+   "t0": 710.334,
+   "t1": 712.4879999999999,
+   "q": [
+    "the Voyager spacecraft flying fast through space",
+    "a probe crossing a star field"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": -1,
+   "f0": 21310,
+   "f1": 21375,
+   "shot": "eso_eso2520a-win3#0",
+   "clip": "eso_eso2520a-win3",
+   "ss": 7.2,
+   "crop": [
+    0.0,
+    0.0,
+    0.75,
+    0.75
+   ],
+   "score": 0.3389,
+   "ref": "ending/4",
+   "title": "What’s the true shape of a supernova? | ESO News"
+  },
+  {
+   "sec": "ending",
+   "beat": 4,
+   "kind": "clip",
+   "t0": 712.4879999999999,
+   "t1": 717.2555,
+   "q": [
+    "the Earth rotating seen from space",
+    "Earth from orbit"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 21375,
+   "f1": 21518,
+   "shot": "eso_eso1907g#0",
+   "clip": "eso_eso1907g",
+   "ss": 3.39,
+   "crop": null,
+   "score": 0.3573,
+   "ref": "ending/5",
+   "title": "The EHT, a Planet-Scale Array"
+  },
+  {
+   "sec": "ending",
+   "beat": 5,
+   "kind": "clip",
+   "t0": 717.2555,
+   "t1": 724.4889999999999,
+   "q": [
+    "a red dwarf star",
+    "a faint reddish star among stars"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": 1,
+   "f0": 21518,
+   "f1": 21735,
+   "shot": "eso_eso2502c#0",
+   "clip": "eso_eso2502c",
+   "ss": 2.16,
+   "crop": null,
+   "score": 0.3341,
+   "ref": "ending/6",
+   "title": "Jetstream winds on the giant gas planet WASP-127b"
+  },
+  {
+   "sec": "ending",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 724.4889999999999,
+   "t1": 727.9549999999999,
+   "q": [
+    "light travelling across space",
+    "a beam of light through stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "pull",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 21735,
+   "f1": 21839,
+   "shot": "esahubble_heic2112c#0",
+   "clip": "esahubble_heic2112c",
+   "ss": 4.06,
+   "crop": null,
+   "score": 0.2821,
+   "ref": "ending/7",
+   "title": "Zoom Into CW Leonis"
+  },
+  {
+   "sec": "ending",
+   "beat": 6,
+   "kind": "clip",
+   "t0": 727.9549999999999,
+   "t1": 730.7285,
+   "q": [
+    "light travelling across space",
+    "a beam of light through stars"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 21839,
+   "f1": 21922,
+   "shot": "esawebb_potm2409a#0",
+   "clip": "esawebb_potm2409a",
+   "ss": 4.4,
+   "crop": null,
+   "score": 0.3406,
+   "ref": "ending/8",
+   "title": "Pan: Westerlund 1"
+  },
+  {
+   "sec": "ending",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 730.7285,
+   "t1": 735.8665000000001,
+   "q": [
+    "a distant star seen from deep space",
+    "a bright star in a dark field"
+   ],
+   "opt": "default",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.032,
+   "dir": 1,
+   "f0": 21922,
+   "f1": 22076,
+   "shot": "eso_eso1731c#0",
+   "clip": "eso_eso1731c",
+   "ss": 1.86,
+   "crop": null,
+   "score": 0.3199,
+   "ref": "ending/9",
+   "title": "Zooming in on the Saturn Nebula"
+  },
+  {
+   "sec": "ending",
+   "beat": 8,
+   "kind": "gfx",
+   "t0": 735.8665000000001,
+   "t1": 739.4155000000001,
+   "gfx": "photo:Golden_record_prep:out",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 22076,
+   "f1": 22182,
+   "shot": "eso_almatimelapse12a#0",
+   "clip": "eso_almatimelapse12a",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ending/10",
+   "title": "Five ALMA Antennas on the Chajnantor plateau (time-lapse)"
+  },
+  {
+   "sec": "ending",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 739.4155000000001,
+   "t1": 743.99,
+   "q": [
+    "Earth from the International Space Station",
+    "the Earth's limb from orbit"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 22182,
+   "f1": 22320,
+   "shot": "svs_5230#0",
+   "clip": "svs_5230",
+   "ss": 3.49,
+   "crop": [
+    0.0,
+    0.1,
+    0.9,
+    1.0
+   ],
+   "score": 0.2918,
+   "ref": "ending/11",
+   "title": "Antarctic Sea Ice Minimum, 2024"
+  },
+  {
+   "sec": "ending",
+   "beat": 9,
+   "kind": "clip",
+   "t0": 743.99,
+   "t1": 748.116,
+   "q": [
+    "Earth from the International Space Station",
+    "the Earth's limb from orbit"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "drift",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 22320,
+   "f1": 22443,
+   "shot": "svs_3880#0",
+   "clip": "svs_3880",
+   "ss": 10.86,
+   "crop": null,
+   "score": 0.3241,
+   "ref": "ending/12",
+   "title": "Earth Observing Spacecraft Fleet shot for Dynamic Earth Dome Show"
+  },
+  {
+   "sec": "ending",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 748.116,
+   "t1": 752.425,
+   "q": [
+    "the Voyager spacecraft drifting toward the stars",
+    "a lone spacecraft among stars"
+   ],
+   "opt": "hold",
+   "trans": "dip",
+   "move": "pull",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 22443,
+   "f1": 22573,
+   "shot": "arc_saturn_flyby#0",
+   "clip": "arc_saturn_flyby",
+   "ss": 1.64,
+   "crop": null,
+   "score": 0.3754,
+   "ref": "ending/13",
+   "title": "Voyager passing Saturn, JPL animation"
+  },
+  {
+   "sec": "ending",
+   "beat": 10,
+   "kind": "clip",
+   "t0": 752.425,
+   "t1": 757.7775,
+   "q": [
+    "the Voyager spacecraft drifting toward the stars",
+    "a lone spacecraft among stars"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "push",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 22573,
+   "f1": 22733,
+   "shot": "eso_uhd_bt_lasilla_02_moonset#0",
+   "clip": "eso_uhd_bt_lasilla_02_moonset",
+   "ss": 0.75,
+   "crop": null,
+   "score": 0.3147,
+   "ref": "ending/14",
+   "title": "Moon sets over La Silla"
+  },
+  {
+   "sec": "ending",
+   "beat": 11,
+   "kind": "gfx",
+   "t0": 757.7775,
+   "t1": 760.8125,
+   "gfx": "starfield",
+   "q": [
+    "dark star field slowly drifting",
+    "faint distant galaxies in dark space"
+   ],
+   "trans": "cut",
+   "f0": 22733,
+   "f1": 22824,
+   "shot": "eso_colosimo_paranal_03#0",
+   "clip": "eso_colosimo_paranal_03",
+   "ss": 5.28,
+   "crop": null,
+   "score": 1.0,
+   "ref": "ending/15",
+   "title": "Time-lapse of VLT"
+  },
+  {
+   "sec": "ending",
+   "beat": 12,
+   "kind": "clip",
+   "t0": 760.8125,
+   "t1": 767.993,
+   "q": [
+    "the Milky Way across the sky",
+    "a field of stars"
+   ],
+   "opt": "hold",
+   "trans": "cut",
+   "move": "roll",
+   "rate": 0.015,
+   "dir": -1,
+   "f0": 22824,
+   "f1": 23040,
+   "shot": "eso_eso1435a#0",
+   "clip": "eso_eso1435a",
+   "ss": 2.2,
+   "crop": null,
+   "score": 0.3245,
+   "ref": "ending/16",
+   "title": "Artist’s impression of bright exozodiacal light"
+  }
+ ],
+ "ovl": [
+  {
+   "kind": "num",
+   "t0": 12.399,
+   "t1": 15.051000000000002,
+   "num": {
+    "template": "hero",
+    "value": "1",
+    "unit": "day for its light",
+    "kicker": "so far that even light needs",
+    "land": "एक",
+    "land_t": 0.45200000000000173,
+    "count_s": 0.3020000000000017,
+    "dur": 2.652000000000003
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 13.936,
+   "t1": 16.682,
+   "num": {
+    "template": "hero",
+    "value": "49",
+    "unit": "years and still flying",
+    "kicker": "launched 1977",
+    "land": "उनचास",
+    "land_t": 0.5459999999999994,
+    "count_s": 0.39599999999999935,
+    "dur": 2.7459999999999987
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 41.328,
+   "t1": 43.911,
+   "num": {
+    "template": "hero",
+    "value": "5",
+    "unit": "months",
+    "kicker": "the longest of the voyager team's lives",
+    "land": "पाँच",
+    "land_t": 0.38299999999999557,
+    "count_s": 0.23299999999999557,
+    "dur": 2.5829999999999984
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*VOYAGER 1*",
+     "t": 7.251
+    }
+   ],
+   "kicker": "the farthest thing humans ever made",
+   "sub": null,
+   "pos": "left",
+   "t0": 7.151000000000001,
+   "t_last": 7.251,
+   "kicker_t": 7.171,
+   "t1": 11.133
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "ITS WHOLE MEMORY",
+     "t": 17.802
+    },
+    {
+     "text": "*LESS THAN ONE PHONE PHOTO*",
+     "t": 19.729
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 17.701999999999998,
+   "t_last": 19.729,
+   "t1": 23.729
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "THE SAME PATTERN",
+     "t": 27.409
+    },
+    {
+     "text": "*AGAIN AND AGAIN*",
+     "t": 28.256
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 27.308999999999997,
+   "t_last": 28.256,
+   "t1": 31.716
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "HOW DID IT GET *THIS FAR?*",
+     "t": 53.65
+    },
+    {
+     "text": "WHAT WILL IT *CARRY AWAY?*",
+     "t": 58.109
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 53.55,
+   "t_last": 58.109,
+   "t1": 62.109
+  },
+  {
+   "kind": "footer",
+   "t0": 66.388,
+   "t1": 141.744,
+   "left": "Voyager 1",
+   "right": "A LINE-UP ONCE IN 175 YEARS"
+  },
+  {
+   "kind": "num",
+   "t0": 78.08,
+   "t1": 82.70700000000001,
+   "num": {
+    "template": "hero",
+    "value": "30",
+    "unit": "years",
+    "kicker": "flying straight to neptune",
+    "land": "तीस",
+    "land_t": 2.4270000000000067,
+    "count_s": 1.3,
+    "dur": 4.6270000000000095
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 90.027,
+   "t1": 93.527,
+   "num": {
+    "template": "name",
+    "value": "GARY FLANDRO",
+    "sub": "student at NASA's JPL · 1965",
+    "land_t": 1.2999999999999972,
+    "count_s": 1.1499999999999972,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 101.793,
+   "t1": 106.558,
+   "num": {
+    "template": "hero",
+    "value": "175",
+    "unit": "years",
+    "kicker": "a chance that comes once every",
+    "land": "पचहत्तर",
+    "land_t": 2.5649999999999977,
+    "count_s": 1.3,
+    "dur": 4.765000000000001
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 128.441,
+   "t1": 134.26299999999998,
+   "num": {
+    "template": "line",
+    "value": "12",
+    "from": "30",
+    "unit": "years to neptune",
+    "kicker": "with the planets' help",
+    "land": "बारह",
+    "land_t": 3.6219999999999857,
+    "count_s": 1.3,
+    "dur": 5.821999999999974
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 133.642,
+   "t1": 139.905,
+   "num": {
+    "template": "hero",
+    "value": "2150",
+    "unit": "the next chance",
+    "kicker": "miss it, and wait until about",
+    "land": "पचास",
+    "land_t": 4.063000000000017,
+    "count_s": 1.3,
+    "dur": 6.263000000000005
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "FOUR PLANETS",
+     "t": 98.514
+    },
+    {
+     "text": "*IN ONE LINE*",
+     "t": 100.523
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 98.414,
+   "t_last": 100.523,
+   "t1": 101.673
+  },
+  {
+   "kind": "footer",
+   "t0": 143.144,
+   "t1": 210.03900000000002,
+   "left": "Voyager 1",
+   "right": "TWO SHIPS, ONE CHANCE"
+  },
+  {
+   "kind": "num",
+   "t0": 159.402,
+   "t1": 164.737,
+   "num": {
+    "template": "scale",
+    "value": "27",
+    "unit": "times weaker at jupiter",
+    "kicker": "sunlight",
+    "land": "सत्ताईस",
+    "land_t": 3.1350000000000193,
+    "count_s": 1.3,
+    "dur": 5.335000000000008
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 185.987,
+   "t1": 189.487,
+   "num": {
+    "template": "name",
+    "value": "VOYAGER 2 & VOYAGER 1 LAUNCHES",
+    "sub": "Cape Canaveral · August & September 1977 · archive footage",
+    "land_t": 1.3000000000000114,
+    "count_s": 1.1500000000000115,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*VOYAGER 1*",
+     "t": 150.673
+    },
+    {
+     "text": "*VOYAGER 2*",
+     "t": 151.764
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 150.573,
+   "t_last": 151.764,
+   "t1": 154.742
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "INSIDE EVERY VOYAGER",
+     "t": 167.03
+    },
+    {
+     "text": "*PLUTONIUM*",
+     "t": 168.586
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 166.93,
+   "t_last": 168.586,
+   "t1": 172.586
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*A MESSAGE*",
+     "t": 207.492
+    },
+    {
+     "text": "FOR SOMEONE UNKNOWN",
+     "t": 208.769
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 207.392,
+   "t_last": 208.769,
+   "t1": 209.93900000000002
+  },
+  {
+   "kind": "footer",
+   "t0": 211.439,
+   "t1": 280.778,
+   "left": "Voyager 1",
+   "right": "A MESSAGE FOR ANYONE"
+  },
+  {
+   "kind": "num",
+   "t0": 219.948,
+   "t1": 223.448,
+   "num": {
+    "template": "name",
+    "value": "CARL SAGAN",
+    "sub": "astronomer · led the Golden Record team · 1934-1996",
+    "land_t": 1.3000000000000114,
+    "count_s": 1.1500000000000115,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 238.371,
+   "t1": 243.304,
+   "num": {
+    "template": "hero",
+    "value": "90",
+    "unit": "minutes of music",
+    "kicker": "from around the world",
+    "land": "नब्बे",
+    "land_t": 2.733000000000004,
+    "count_s": 1.3,
+    "dur": 4.932999999999993
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 242.265,
+   "t1": 244.815,
+   "num": {
+    "template": "hero",
+    "value": "55",
+    "unit": "languages",
+    "kicker": "greetings from earth in",
+    "land": "पचपन",
+    "land_t": 0.35,
+    "count_s": 0.19999999999999998,
+    "dur": 2.5500000000000114
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 253.439,
+   "t1": 256.93899999999996,
+   "num": {
+    "template": "name",
+    "value": "KESARBAI KERKAR",
+    "sub": "singer · raag Bhairavi, \"Jaat Kahan Ho\"",
+    "land_t": 1.3000000000000114,
+    "count_s": 1.1500000000000115,
+    "dur": 3.4999999999999716
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 269.245,
+   "t1": 273.86,
+   "num": {
+    "template": "hero",
+    "value": "1",
+    "unit": "billion years",
+    "kicker": "it may survive for",
+    "land": "अरब",
+    "land_t": 2.4150000000000205,
+    "count_s": 1.3,
+    "dur": 4.615000000000009
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*THE GOLDEN RECORD*",
+     "t": 227.441
+    }
+   ],
+   "kicker": "a gold-plated copper disc",
+   "sub": null,
+   "pos": "left",
+   "t0": 227.341,
+   "t_last": 227.441,
+   "kicker_t": 227.361,
+   "t1": 231.441
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "\"GREETINGS FROM THE *PEOPLE OF EARTH*\"",
+     "t": 248.789
+    }
+   ],
+   "kicker": "the hindi greeting on the golden record",
+   "sub": null,
+   "pos": "left",
+   "t0": 248.689,
+   "t_last": 248.789,
+   "kicker_t": 248.70899999999997,
+   "t1": 250.96
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "A PICTURE OF",
+     "t": 262.239
+    },
+    {
+     "text": "*WHO HUMANS WERE*",
+     "t": 263.702
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 262.13899999999995,
+   "t_last": 263.702,
+   "t1": 267.702
+  },
+  {
+   "kind": "footer",
+   "t0": 282.178,
+   "t1": 372.95300000000003,
+   "left": "Voyager 1",
+   "right": "WORLDS NOBODY EXPECTED"
+  },
+  {
+   "kind": "num",
+   "t0": 295.719,
+   "t1": 299.219,
+   "num": {
+    "template": "name",
+    "value": "LINDA MORABITO",
+    "sub": "navigation engineer · NASA JPL · 1979",
+    "land_t": 1.3000000000000114,
+    "count_s": 1.1500000000000115,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "THE FIRST *ACTIVE VOLCANO*",
+     "t": 315.414
+    }
+   ],
+   "kicker": "ever found beyond earth",
+   "sub": null,
+   "pos": "left",
+   "t0": 315.31399999999996,
+   "t_last": 315.414,
+   "kicker_t": 315.334,
+   "t1": 317.701
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "ALL THE PLANETS",
+     "t": 332.08
+    },
+    {
+     "text": "*ON ONE FLAT PLANE*",
+     "t": 335.435
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 331.97999999999996,
+   "t_last": 335.435,
+   "t1": 337.095
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*VOYAGER 2*",
+     "t": 362.1
+    },
+    {
+     "text": "THE ONLY VISITOR",
+     "t": 362.762
+    }
+   ],
+   "kicker": "uranus · neptune",
+   "sub": null,
+   "pos": "left",
+   "t0": 362.0,
+   "t_last": 362.762,
+   "kicker_t": 362.02000000000004,
+   "t1": 364.3875
+  },
+  {
+   "kind": "footer",
+   "t0": 374.35299999999995,
+   "t1": 426.40000000000003,
+   "left": "Voyager 1",
+   "right": "ONE LAST LOOK BACK"
+  },
+  {
+   "kind": "num",
+   "t0": 377.18,
+   "t1": 379.73,
+   "num": {
+    "template": "hero",
+    "value": "6",
+    "unit": "billion km from earth",
+    "kicker": "voyager 1 · 1990",
+    "land": "छह",
+    "land_t": 0.35,
+    "count_s": 0.19999999999999998,
+    "dur": 2.5500000000000114
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "TURN THE CAMERA",
+     "t": 387.268
+    },
+    {
+     "text": "*BACK TOWARD EARTH*",
+     "t": 388.661
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 387.16799999999995,
+   "t_last": 388.661,
+   "t1": 391.52750000000003
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "A TINY *BLUE DOT*",
+     "t": 404.833
+    }
+   ],
+   "kicker": "the pale blue dot · 1990",
+   "sub": null,
+   "pos": "left",
+   "t0": 404.733,
+   "t_last": 404.833,
+   "kicker_t": 404.75300000000004,
+   "t1": 408.034
+  },
+  {
+   "kind": "footer",
+   "t0": 427.79999999999995,
+   "t1": 535.3969999999999,
+   "left": "Voyager 1",
+   "right": "BEYOND THE SUN'S BUBBLE"
+  },
+  {
+   "kind": "num",
+   "t0": 487.981,
+   "t1": 493.96,
+   "num": {
+    "template": "scale",
+    "value": "40",
+    "unit": "times denser",
+    "kicker": "than the gas inside the sun's bubble",
+    "land": "चालीस",
+    "land_t": 3.7789999999999964,
+    "count_s": 1.3,
+    "dur": 5.978999999999985
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*SOLAR WIND*",
+     "t": 434.249
+    }
+   ],
+   "kicker": "a wind of particles from the sun",
+   "sub": null,
+   "pos": "left",
+   "t0": 434.149,
+   "t_last": 434.249,
+   "kicker_t": 434.16900000000004,
+   "t1": 436.4015
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*INTERSTELLAR SPACE*",
+     "t": 448.94
+    }
+   ],
+   "kicker": "the space between the stars",
+   "sub": null,
+   "pos": "left",
+   "t0": 448.84,
+   "t_last": 448.94,
+   "kicker_t": 448.86,
+   "t1": 450.62550000000005
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "IT WAS THE GAS",
+     "t": 496.659
+    },
+    {
+     "text": "*BETWEEN THE STARS*",
+     "t": 497.669
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 496.55899999999997,
+   "t_last": 497.669,
+   "t1": 501.669
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "INTO INTERSTELLAR SPACE",
+     "t": 503.875
+    },
+    {
+     "text": "*HUMANITY'S FIRST*",
+     "t": 507.114
+    }
+   ],
+   "kicker": "voyager 1 · 2012",
+   "sub": null,
+   "pos": "left",
+   "t0": 503.775,
+   "t_last": 507.114,
+   "kicker_t": 503.795,
+   "t1": 511.114
+  },
+  {
+   "kind": "quote",
+   "t0": 515.613,
+   "t1": 519.8130000000001,
+   "text": "Voyager ek weather satellite jaisa hai, jo interstellar space mein safar kar raha hai.",
+   "by": "Suzanne Dodd, Voyager project manager, NASA, 2019",
+   "fin": true,
+   "fout": false
+  },
+  {
+   "kind": "quote",
+   "t0": 519.8130000000001,
+   "t1": 524.3130000000001,
+   "text": "Aur interstellar space mein hai, doosre taaron ki dhool.",
+   "by": "Suzanne Dodd, Voyager project manager, NASA, 2019",
+   "fin": false,
+   "fout": false
+  },
+  {
+   "kind": "quote",
+   "t0": 524.3130000000001,
+   "t1": 531.113,
+   "text": "To Voyager naap raha hai, ki jis dhool aur plasma se woh guzar raha hai, woh kitni ghani hai.",
+   "by": "Suzanne Dodd, Voyager project manager, NASA, 2019",
+   "fin": false,
+   "fout": true
+  },
+  {
+   "kind": "footer",
+   "t0": 536.797,
+   "t1": 634.2579999999999,
+   "left": "Voyager 1",
+   "right": "A REPAIR 24 BILLION KM AWAY"
+  },
+  {
+   "kind": "num",
+   "t0": 546.189,
+   "t1": 549.561,
+   "num": {
+    "template": "hero",
+    "value": "22",
+    "unit": "watts",
+    "kicker": "voyager's radio · about a fridge bulb",
+    "land": "बाईस",
+    "land_t": 1.1720000000000255,
+    "count_s": 1.0220000000000256,
+    "dur": 3.372000000000071
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 557.625,
+   "t1": 560.175,
+   "num": {
+    "template": "hero",
+    "value": "70",
+    "unit": "metre dish",
+    "kicker": "needed to hear it",
+    "land": "सत्तर",
+    "land_t": 0.35,
+    "count_s": 0.19999999999999998,
+    "dur": 2.5499999999999545
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 559.819,
+   "t1": 565.514,
+   "num": {
+    "template": "hero",
+    "value": "2",
+    "unit": "days",
+    "kicker": "every message, there and back",
+    "land": "दो",
+    "land_t": 3.4950000000000045,
+    "count_s": 1.3,
+    "dur": 5.69500000000005
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 572.031,
+   "t1": 575.322,
+   "num": {
+    "template": "progress",
+    "value": "3",
+    "unit": "% of memory lost",
+    "kicker": "one broken chip",
+    "land": "तीन",
+    "land_t": 1.0910000000000082,
+    "count_s": 0.9410000000000082,
+    "dur": 3.2910000000000537
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*CLEAR*",
+     "t": 613.422
+    },
+    {
+     "text": "AND MAKING SENSE",
+     "t": 614.49
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 613.322,
+   "t_last": 614.49,
+   "t1": 618.49
+  },
+  {
+   "kind": "quote",
+   "t0": 624.987,
+   "t1": 626.987,
+   "text": "Haan, haan!",
+   "by": "Voyager team, NASA JPL, 20 April 2024",
+   "fin": true,
+   "fout": false
+  },
+  {
+   "kind": "quote",
+   "t0": 626.987,
+   "t1": 629.7869999999999,
+   "text": "Arre wah! Yeh to kamaal hai!",
+   "by": "Voyager team, NASA JPL, 20 April 2024",
+   "fin": false,
+   "fout": false
+  },
+  {
+   "kind": "quote",
+   "t0": 629.7869999999999,
+   "t1": 633.987,
+   "text": "Yeh raha! Kamaal hai! Shabaash!",
+   "by": "Voyager team, NASA JPL, 20 April 2024",
+   "fin": false,
+   "fout": true
+  },
+  {
+   "kind": "footer",
+   "t0": 635.658,
+   "t1": 695.2995,
+   "left": "Voyager 1",
+   "right": "THE POWER IS RUNNING OUT"
+  },
+  {
+   "kind": "num",
+   "t0": 646.02,
+   "t1": 650.2750000000001,
+   "num": {
+    "template": "hero",
+    "value": "4",
+    "unit": "watts less every year",
+    "kicker": "voyager's power",
+    "land": "चार",
+    "land_t": 2.0550000000000637,
+    "count_s": 1.3,
+    "dur": 4.255000000000109
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 663.764,
+   "t1": 668.9240000000001,
+   "num": {
+    "template": "hero",
+    "value": "2",
+    "unit": "science instruments left",
+    "kicker": "voyager 1",
+    "land": "दो",
+    "land_t": 2.9600000000000364,
+    "count_s": 1.3,
+    "dur": 5.160000000000082
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 671.177,
+   "t1": 674.677,
+   "num": {
+    "template": "name",
+    "value": "ED STONE",
+    "sub": "Voyager project scientist 1972-2022 · 1935-2024",
+    "land_t": 1.2999999999999545,
+    "count_s": 1.1499999999999546,
+    "dur": 3.5
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "LESS THAN *HALF*",
+     "t": 653.421
+    },
+    {
+     "text": "OF ITS POWER LEFT",
+     "t": 653.688
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 653.321,
+   "t_last": 653.688,
+   "t1": 657.688
+  },
+  {
+   "kind": "num",
+   "t0": 707.965,
+   "t1": 710.955,
+   "num": {
+    "template": "hero",
+    "value": "61,000",
+    "unit": "km per hour",
+    "kicker": "voyager 1's speed",
+    "land": "इकसठ",
+    "land_t": 0.7899999999999636,
+    "count_s": 0.6399999999999636,
+    "dur": 2.990000000000009
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 712.633,
+   "t1": 717.9670000000001,
+   "num": {
+    "template": "hero",
+    "value": "40",
+    "unit": "minutes around the earth",
+    "kicker": "fast enough to circle earth in",
+    "land": "चालीस",
+    "land_t": 3.1340000000000146,
+    "count_s": 1.3,
+    "dur": 5.33400000000006
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 717.468,
+   "t1": 720.33,
+   "num": {
+    "template": "hero",
+    "value": "40,000",
+    "unit": "years",
+    "kicker": "until it passes another star",
+    "land": "चालीस हज़ार",
+    "land_t": 0.6620000000000346,
+    "count_s": 0.5120000000000345,
+    "dur": 2.86200000000008
+   }
+  },
+  {
+   "kind": "num",
+   "t0": 730.912,
+   "t1": 736.259,
+   "num": {
+    "template": "hero",
+    "value": "1.6",
+    "unit": "light-years away",
+    "kicker": "even at its closest to gliese 445",
+    "land": "छह",
+    "land_t": 3.1469999999999345,
+    "count_s": 1.3,
+    "dur": 5.34699999999998
+   }
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "\"GREETINGS FROM THE *PEOPLE OF EARTH*\"",
+     "t": 745.547
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 745.447,
+   "t_last": 745.547,
+   "t1": 748.116
+  },
+  {
+   "kind": "headline",
+   "lines": [
+    {
+     "text": "*OUR MESSAGE*",
+     "t": 762.613
+    },
+    {
+     "text": "KEEPS GOING",
+     "t": 763.756
+    }
+   ],
+   "kicker": null,
+   "sub": null,
+   "pos": "left",
+   "t0": 762.513,
+   "t_last": 763.756,
+   "t1": 766.756
+  },
+  {
+   "kind": "keyline",
+   "t0": 67.162,
+   "t1": 69.762,
+   "text": "1965"
+  }
+ ],
+ "caps": [
+  {
+   "sec": "opening",
+   "t": 0.0,
+   "end": 58.788,
+   "text": "Of everything humans have ever made, the farthest is one small spacecraft",
+   "big": false,
+   "t1": 7.0
+  },
+  {
+   "sec": "opening",
+   "t": 7.251,
+   "end": 58.788,
+   "text": "Voyager 1",
+   "big": false,
+   "t1": 8.556
+  },
+  {
+   "sec": "opening",
+   "t": 8.556,
+   "end": 58.788,
+   "text": "It is so far from Earth that even light needs a whole day to reach it",
+   "big": false,
+   "t1": 13.936
+  },
+  {
+   "sec": "opening",
+   "t": 13.936,
+   "end": 58.788,
+   "text": "It has been travelling for 49 years",
+   "big": false,
+   "t1": 16.27
+  },
+  {
+   "sec": "opening",
+   "t": 16.27,
+   "end": 58.788,
+   "text": "And all of its computers' memory is smaller than a single photo on today's phones",
+   "big": false,
+   "t1": 21.209
+  },
+  {
+   "sec": "opening",
+   "t": 21.209,
+   "end": 58.788,
+   "text": "Three years ago, this machine suddenly started sending meaningless signals",
+   "big": false,
+   "t1": 26.933
+  },
+  {
+   "sec": "opening",
+   "t": 26.933,
+   "end": 58.788,
+   "text": "The same pattern, over and over",
+   "big": false,
+   "t1": 29.44
+  },
+  {
+   "sec": "opening",
+   "t": 29.44,
+   "end": 58.788,
+   "text": "To fix it, engineers had to reason with a machine from that far away",
+   "big": false,
+   "t1": 34.682
+  },
+  {
+   "sec": "opening",
+   "t": 34.682,
+   "end": 58.788,
+   "text": "A machine whose builders had mostly retired, and whose manuals were on paper",
+   "big": false,
+   "t1": 41.328
+  },
+  {
+   "sec": "opening",
+   "t": 41.328,
+   "end": 58.788,
+   "text": "The next five months were the longest the Voyager team had known",
+   "big": false,
+   "t1": 46.395
+  },
+  {
+   "sec": "opening",
+   "t": 46.395,
+   "end": 58.788,
+   "text": "But the biggest question of this story is still open",
+   "big": false,
+   "t1": 50.585
+  },
+  {
+   "sec": "opening",
+   "t": 50.585,
+   "end": 58.788,
+   "text": "How did this human-made thing get so far...",
+   "big": false,
+   "t1": 54.289
+  },
+  {
+   "sec": "opening",
+   "t": 54.289,
+   "end": 58.788,
+   "text": "...and when its voice falls silent forever, what will go with it?",
+   "big": false,
+   "t1": 59.087999999999994
+  },
+  {
+   "sec": "ch1",
+   "t": 66.388,
+   "end": 141.444,
+   "text": "This story begins in 1965",
+   "big": false,
+   "t1": 67.162
+  },
+  {
+   "sec": "ch1",
+   "t": 67.162,
+   "end": 141.444,
+   "text": "1965",
+   "big": true,
+   "t1": 68.892
+  },
+  {
+   "sec": "ch1",
+   "t": 68.892,
+   "end": 141.444,
+   "text": "Until then, Jupiter, Saturn, Uranus and Neptune, the four giant planets, were a mystery",
+   "big": false,
+   "t1": 75.892
+  },
+  {
+   "sec": "ch1",
+   "t": 76.745,
+   "end": 141.444,
+   "text": "The problem was distance",
+   "big": false,
+   "t1": 78.08
+  },
+  {
+   "sec": "ch1",
+   "t": 78.08,
+   "end": 141.444,
+   "text": "Flying straight to Neptune would take about 30 years",
+   "big": false,
+   "t1": 81.923
+  },
+  {
+   "sec": "ch1",
+   "t": 81.923,
+   "end": 141.444,
+   "text": "No machine, it seemed, could keep working that long",
+   "big": false,
+   "t1": 85.859
+  },
+  {
+   "sec": "ch1",
+   "t": 85.859,
+   "end": 141.444,
+   "text": "Then Gary Flandro, a young student working at NASA's JPL, worked out the motions of the planets",
+   "big": false,
+   "t1": 92.859
+  },
+  {
+   "sec": "ch1",
+   "t": 93.313,
+   "end": 141.444,
+   "text": "He saw that between 1976 and 1979, all four planets would line up in a special way",
+   "big": false,
+   "t1": 100.313
+  },
+  {
+   "sec": "ch1",
+   "t": 101.793,
+   "end": 141.444,
+   "text": "A chance like that comes about once every 175 years",
+   "big": false,
+   "t1": 106.622
+  },
+  {
+   "sec": "ch1",
+   "t": 106.622,
+   "end": 141.444,
+   "text": "And this line-up had an amazing advantage",
+   "big": false,
+   "t1": 109.681
+  },
+  {
+   "sec": "ch1",
+   "t": 109.681,
+   "end": 141.444,
+   "text": "When a spacecraft passes a planet, the planet's gravity pulls it and flings it onward",
+   "big": false,
+   "t1": 116.681
+  },
+  {
+   "sec": "ch1",
+   "t": 116.908,
+   "end": 141.444,
+   "text": "Just as a cricket ball speeds up off a swinging bat",
+   "big": false,
+   "t1": 122.834
+  },
+  {
+   "sec": "ch1",
+   "t": 122.834,
+   "end": 141.444,
+   "text": "Planet to planet, each time a little more speed",
+   "big": false,
+   "t1": 128.441
+  },
+  {
+   "sec": "ch1",
+   "t": 128.441,
+   "end": 141.444,
+   "text": "That cut the trip to Neptune from 30 years to just 12",
+   "big": false,
+   "t1": 133.642
+  },
+  {
+   "sec": "ch1",
+   "t": 133.642,
+   "end": 141.444,
+   "text": "Had they missed it, the next chance would come around 2150",
+   "big": false,
+   "t1": 139.452
+  },
+  {
+   "sec": "ch1",
+   "t": 139.452,
+   "end": 141.444,
+   "text": "NASA did not miss it",
+   "big": false,
+   "t1": 141.744
+  },
+  {
+   "sec": "ch2",
+   "t": 143.144,
+   "end": 209.739,
+   "text": "There was one chance, so NASA built two spacecraft",
+   "big": false,
+   "t1": 146.006
+  },
+  {
+   "sec": "ch2",
+   "t": 146.006,
+   "end": 209.739,
+   "text": "If one failed, the other would finish the job",
+   "big": false,
+   "t1": 149.001
+  },
+  {
+   "sec": "ch2",
+   "t": 149.001,
+   "end": 209.739,
+   "text": "They were named Voyager 1 and Voyager 2",
+   "big": false,
+   "t1": 152.472
+  },
+  {
+   "sec": "ch2",
+   "t": 152.472,
+   "end": 209.739,
+   "text": "But one big question remained",
+   "big": false,
+   "t1": 154.927
+  },
+  {
+   "sec": "ch2",
+   "t": 154.927,
+   "end": 209.739,
+   "text": "That far out, sunlight grows very weak",
+   "big": false,
+   "t1": 159.402
+  },
+  {
+   "sec": "ch2",
+   "t": 159.402,
+   "end": 209.739,
+   "text": "At Jupiter it is about 27 times weaker than at Earth",
+   "big": false,
+   "t1": 164.325
+  },
+  {
+   "sec": "ch2",
+   "t": 164.325,
+   "end": 209.739,
+   "text": "Solar panels can't work there",
+   "big": false,
+   "t1": 166.38
+  },
+  {
+   "sec": "ch2",
+   "t": 166.38,
+   "end": 209.739,
+   "text": "So inside each Voyager they put plutonium",
+   "big": false,
+   "t1": 169.758
+  },
+  {
+   "sec": "ch2",
+   "t": 169.758,
+   "end": 209.739,
+   "text": "Plutonium keeps giving off heat, like an ember that stays hot for years",
+   "big": false,
+   "t1": 176.735
+  },
+  {
+   "sec": "ch2",
+   "t": 176.735,
+   "end": 209.739,
+   "text": "And that heat makes electricity",
+   "big": false,
+   "t1": 179.48
+  },
+  {
+   "sec": "ch2",
+   "t": 179.48,
+   "end": 209.739,
+   "text": "That electricity keeps Voyager alive to this day",
+   "big": false,
+   "t1": 182.777
+  },
+  {
+   "sec": "ch2",
+   "t": 182.777,
+   "end": 209.739,
+   "text": "And that same electricity is slowly running out",
+   "big": false,
+   "t1": 185.987
+  },
+  {
+   "sec": "ch2",
+   "t": 185.987,
+   "end": 209.739,
+   "text": "In 1977, Voyager 2 flew first",
+   "big": false,
+   "t1": 190.027
+  },
+  {
+   "sec": "ch2",
+   "t": 190.027,
+   "end": 209.739,
+   "text": "Two weeks later, Voyager 1",
+   "big": false,
+   "t1": 192.644
+  },
+  {
+   "sec": "ch2",
+   "t": 192.644,
+   "end": 209.739,
+   "text": "Voyager 1 left later, but it was given a shorter, faster path to Jupiter",
+   "big": false,
+   "t1": 198.658
+  },
+  {
+   "sec": "ch2",
+   "t": 198.658,
+   "end": 209.739,
+   "text": "Within months, it overtook Voyager 2",
+   "big": false,
+   "t1": 201.96
+  },
+  {
+   "sec": "ch2",
+   "t": 201.96,
+   "end": 209.739,
+   "text": "But besides their science gear, both carried one more thing",
+   "big": false,
+   "t1": 206.934
+  },
+  {
+   "sec": "ch2",
+   "t": 206.934,
+   "end": 209.739,
+   "text": "A message, for someone unknown",
+   "big": false,
+   "t1": 210.03900000000002
+  },
+  {
+   "sec": "ch3",
+   "t": 211.439,
+   "end": 280.478,
+   "text": "Voyager's paths meant that after the planets, they would never come back",
+   "big": false,
+   "t1": 215.183
+  },
+  {
+   "sec": "ch3",
+   "t": 215.183,
+   "end": 280.478,
+   "text": "They would leave the solar system and wander among the stars forever",
+   "big": false,
+   "t1": 219.948
+  },
+  {
+   "sec": "ch3",
+   "t": 219.948,
+   "end": 280.478,
+   "text": "So astronomer Carl Sagan and his team decided to send a message with them",
+   "big": false,
+   "t1": 226.948
+  },
+  {
+   "sec": "ch3",
+   "t": 227.441,
+   "end": 280.478,
+   "text": "A gold-plated record, like the gramophone records of the old days",
+   "big": false,
+   "t1": 232.224
+  },
+  {
+   "sec": "ch3",
+   "t": 232.224,
+   "end": 280.478,
+   "text": "This record holds pictures of Earth",
+   "big": false,
+   "t1": 234.546
+  },
+  {
+   "sec": "ch3",
+   "t": 234.546,
+   "end": 280.478,
+   "text": "Sounds like wind, rain, and a heartbeat",
+   "big": false,
+   "t1": 238.371
+  },
+  {
+   "sec": "ch3",
+   "t": 238.371,
+   "end": 280.478,
+   "text": "Music from around the world, about 90 minutes of it",
+   "big": false,
+   "t1": 242.265
+  },
+  {
+   "sec": "ch3",
+   "t": 242.265,
+   "end": 280.478,
+   "text": "And greetings from Earth in 55 languages",
+   "big": false,
+   "t1": 246.16
+  },
+  {
+   "sec": "ch3",
+   "t": 246.16,
+   "end": 280.478,
+   "text": "One of them is in Hindi",
+   "big": false,
+   "t1": 248.789
+  },
+  {
+   "sec": "ch3",
+   "t": 248.789,
+   "end": 280.478,
+   "text": "\"Greetings from the people of Earth\"",
+   "big": false,
+   "t1": 251.135
+  },
+  {
+   "sec": "ch3",
+   "t": 251.135,
+   "end": 280.478,
+   "text": "The record also carries a song from India",
+   "big": false,
+   "t1": 253.439
+  },
+  {
+   "sec": "ch3",
+   "t": 253.439,
+   "end": 280.478,
+   "text": "Sung by Surshri Kesarbai Kerkar: raag Bhairavi, \"Jaat Kahan Ho\"",
+   "big": false,
+   "t1": 258.594
+  },
+  {
+   "sec": "ch3",
+   "t": 258.594,
+   "end": 280.478,
+   "text": "Perhaps no one will ever find it",
+   "big": false,
+   "t1": 261.043
+  },
+  {
+   "sec": "ch3",
+   "t": 261.043,
+   "end": 280.478,
+   "text": "But the record is a picture of who humans were",
+   "big": false,
+   "t1": 264.578
+  },
+  {
+   "sec": "ch3",
+   "t": 264.578,
+   "end": 280.478,
+   "text": "In space there is no air, no water, no soil to wear it down",
+   "big": false,
+   "t1": 269.245
+  },
+  {
+   "sec": "ch3",
+   "t": 269.245,
+   "end": 280.478,
+   "text": "So this picture may survive, unchanged, for a billion years",
+   "big": false,
+   "t1": 274.249
+  },
+  {
+   "sec": "ch3",
+   "t": 274.249,
+   "end": 280.478,
+   "text": "But before this message reached anyone, Voyager had a real job to do",
+   "big": false,
+   "t1": 280.778
+  },
+  {
+   "sec": "ch4",
+   "t": 282.178,
+   "end": 372.653,
+   "text": "Until 1979, scientists thought the moons of the giant planets were just cold, dead rock",
+   "big": false,
+   "t1": 288.511
+  },
+  {
+   "sec": "ch4",
+   "t": 288.511,
+   "end": 372.653,
+   "text": "In March 1979, Voyager 1 reached Jupiter",
+   "big": false,
+   "t1": 293.114
+  },
+  {
+   "sec": "ch4",
+   "t": 293.114,
+   "end": 372.653,
+   "text": "One day, NASA engineer Linda Morabito was looking at an image of Jupiter's moon Io",
+   "big": false,
+   "t1": 300.114
+  },
+  {
+   "sec": "ch4",
+   "t": 300.252,
+   "end": 372.653,
+   "text": "Her job was to check Voyager's path using the stars",
+   "big": false,
+   "t1": 304.339
+  },
+  {
+   "sec": "ch4",
+   "t": 304.339,
+   "end": 372.653,
+   "text": "Then she saw a strange cloud at the edge of Io",
+   "big": false,
+   "t1": 308.291
+  },
+  {
+   "sec": "ch4",
+   "t": 308.291,
+   "end": 372.653,
+   "text": "It was a volcano, erupting at that moment",
+   "big": false,
+   "t1": 311.826
+  },
+  {
+   "sec": "ch4",
+   "t": 311.826,
+   "end": 372.653,
+   "text": "The first active volcano ever found on any world beyond Earth",
+   "big": false,
+   "t1": 316.331
+  },
+  {
+   "sec": "ch4",
+   "t": 316.331,
+   "end": 372.653,
+   "text": "Then came Saturn",
+   "big": false,
+   "t1": 317.857
+  },
+  {
+   "sec": "ch4",
+   "t": 317.857,
+   "end": 372.653,
+   "text": "In 1980, Voyager 1 was sent close to Saturn's moon Titan",
+   "big": false,
+   "t1": 322.832
+  },
+  {
+   "sec": "ch4",
+   "t": 322.832,
+   "end": 372.653,
+   "text": "Titan has a thick blanket of air, and scientists wanted a close look",
+   "big": false,
+   "t1": 328.8
+  },
+  {
+   "sec": "ch4",
+   "t": 328.8,
+   "end": 372.653,
+   "text": "But that decision had a price",
+   "big": false,
+   "t1": 331.708
+  },
+  {
+   "sec": "ch4",
+   "t": 331.708,
+   "end": 372.653,
+   "text": "All the planets circle the Sun on nearly the same flat path, like marbles rolling on a plate",
+   "big": false,
+   "t1": 338.708
+  },
+  {
+   "sec": "ch4",
+   "t": 339.829,
+   "end": 372.653,
+   "text": "Titan's gravity did what the planets had done before",
+   "big": false,
+   "t1": 343.37
+  },
+  {
+   "sec": "ch4",
+   "t": 343.37,
+   "end": 372.653,
+   "text": "It bent Voyager 1's path up, out of the plate",
+   "big": false,
+   "t1": 346.881
+  },
+  {
+   "sec": "ch4",
+   "t": 346.881,
+   "end": 372.653,
+   "text": "Now it could never reach another planet",
+   "big": false,
+   "t1": 349.974
+  },
+  {
+   "sec": "ch4",
+   "t": 349.974,
+   "end": 372.653,
+   "text": "Voyager 2 made the rest of the journey alone",
+   "big": false,
+   "t1": 352.842
+  },
+  {
+   "sec": "ch4",
+   "t": 352.842,
+   "end": 372.653,
+   "text": "Uranus in 1986, and Neptune in 1989",
+   "big": false,
+   "t1": 358.013
+  },
+  {
+   "sec": "ch4",
+   "t": 358.013,
+   "end": 372.653,
+   "text": "To this day, Voyager 2 is the only spacecraft to have visited these two planets",
+   "big": false,
+   "t1": 364.555
+  },
+  {
+   "sec": "ch4",
+   "t": 364.555,
+   "end": 372.653,
+   "text": "The planets were done",
+   "big": false,
+   "t1": 366.703
+  },
+  {
+   "sec": "ch4",
+   "t": 366.703,
+   "end": 372.653,
+   "text": "But before Voyager 1's cameras switched off, it had one last picture to take",
+   "big": false,
+   "t1": 372.95300000000003
+  },
+  {
+   "sec": "ch5",
+   "t": 374.35299999999995,
+   "end": 426.1,
+   "text": "By 1990, Voyager 1 was about 6 billion kilometres from Earth",
+   "big": false,
+   "t1": 379.031
+  },
+  {
+   "sec": "ch5",
+   "t": 379.031,
+   "end": 426.1,
+   "text": "To save power, NASA was about to switch its cameras off for the last time",
+   "big": false,
+   "t1": 383.71
+  },
+  {
+   "sec": "ch5",
+   "t": 383.71,
+   "end": 426.1,
+   "text": "Then Carl Sagan made an odd demand",
+   "big": false,
+   "t1": 387.268
+  },
+  {
+   "sec": "ch5",
+   "t": 387.268,
+   "end": 426.1,
+   "text": "Turn the camera around, toward Earth",
+   "big": false,
+   "t1": 389.741
+  },
+  {
+   "sec": "ch5",
+   "t": 389.741,
+   "end": 426.1,
+   "text": "Many were against it",
+   "big": false,
+   "t1": 391.714
+  },
+  {
+   "sec": "ch5",
+   "t": 391.714,
+   "end": 426.1,
+   "text": "A picture of Earth from that far was of no use to science",
+   "big": false,
+   "t1": 396.056
+  },
+  {
+   "sec": "ch5",
+   "t": 396.056,
+   "end": 426.1,
+   "text": "In the end Sagan won, and Voyager looked back",
+   "big": false,
+   "t1": 400.41
+  },
+  {
+   "sec": "ch5",
+   "t": 400.41,
+   "end": 426.1,
+   "text": "In that picture, inside a ray of sunlight, is a tiny blue dot",
+   "big": false,
+   "t1": 406.296
+  },
+  {
+   "sec": "ch5",
+   "t": 406.296,
+   "end": 426.1,
+   "text": "Smaller than a single pixel",
+   "big": false,
+   "t1": 408.217
+  },
+  {
+   "sec": "ch5",
+   "t": 408.217,
+   "end": 426.1,
+   "text": "That is our Earth",
+   "big": false,
+   "t1": 409.436
+  },
+  {
+   "sec": "ch5",
+   "t": 409.436,
+   "end": 426.1,
+   "text": "Every person, every city, every war ever fought, all on that one dot",
+   "big": false,
+   "t1": 415.183
+  },
+  {
+   "sec": "ch5",
+   "t": 415.183,
+   "end": 426.1,
+   "text": "Soon after, Voyager's cameras were switched off, never to open again",
+   "big": false,
+   "t1": 420.157
+  },
+  {
+   "sec": "ch5",
+   "t": 420.157,
+   "end": 426.1,
+   "text": "These were its last pictures",
+   "big": false,
+   "t1": 422.386
+  },
+  {
+   "sec": "ch5",
+   "t": 422.386,
+   "end": 426.1,
+   "text": "But Voyager's longest journey had only just begun",
+   "big": false,
+   "t1": 426.40000000000003
+  },
+  {
+   "sec": "ch6",
+   "t": 427.79999999999995,
+   "end": 535.097,
+   "text": "The Sun doesn't only give light",
+   "big": false,
+   "t1": 429.036
+  },
+  {
+   "sec": "ch6",
+   "t": 429.036,
+   "end": 535.097,
+   "text": "Every moment it blows a wind of tiny particles out in all directions",
+   "big": false,
+   "t1": 434.249
+  },
+  {
+   "sec": "ch6",
+   "t": 434.249,
+   "end": 535.097,
+   "text": "It's called the solar wind",
+   "big": false,
+   "t1": 436.576
+  },
+  {
+   "sec": "ch6",
+   "t": 436.576,
+   "end": 535.097,
+   "text": "This wind wraps all the planets in a huge bubble",
+   "big": false,
+   "t1": 442.137
+  },
+  {
+   "sec": "ch6",
+   "t": 442.137,
+   "end": 535.097,
+   "text": "Where the wind stops, the bubble ends",
+   "big": false,
+   "t1": 446.014
+  },
+  {
+   "sec": "ch6",
+   "t": 446.014,
+   "end": 535.097,
+   "text": "Beyond it begins the space between the stars",
+   "big": false,
+   "t1": 448.94
+  },
+  {
+   "sec": "ch6",
+   "t": 448.94,
+   "end": 535.097,
+   "text": "Interstellar space",
+   "big": false,
+   "t1": 450.838
+  },
+  {
+   "sec": "ch6",
+   "t": 450.838,
+   "end": 535.097,
+   "text": "Scientists had a problem",
+   "big": false,
+   "t1": 453.206
+  },
+  {
+   "sec": "ch6",
+   "t": 453.206,
+   "end": 535.097,
+   "text": "There's no sign at the edge",
+   "big": false,
+   "t1": 455.668
+  },
+  {
+   "sec": "ch6",
+   "t": 455.668,
+   "end": 535.097,
+   "text": "And Voyager's cameras were off",
+   "big": false,
+   "t1": 457.85
+  },
+  {
+   "sec": "ch6",
+   "t": 457.85,
+   "end": 535.097,
+   "text": "They needed a sign that Voyager itself could feel",
+   "big": false,
+   "t1": 462.557
+  },
+  {
+   "sec": "ch6",
+   "t": 462.557,
+   "end": 535.097,
+   "text": "The answer came from the Sun itself",
+   "big": false,
+   "t1": 464.629
+  },
+  {
+   "sec": "ch6",
+   "t": 464.629,
+   "end": 535.097,
+   "text": "In 2012, there was a huge blast on the Sun",
+   "big": false,
+   "t1": 468.686
+  },
+  {
+   "sec": "ch6",
+   "t": 468.686,
+   "end": 535.097,
+   "text": "When its wave reached Voyager, the gas around Voyager rang like a bell",
+   "big": false,
+   "t1": 475.674
+  },
+  {
+   "sec": "ch6",
+   "t": 475.674,
+   "end": 535.097,
+   "text": "One of Voyager's instruments heard that ringing",
+   "big": false,
+   "t1": 478.31
+  },
+  {
+   "sec": "ch6",
+   "t": 478.31,
+   "end": 535.097,
+   "text": "Tapping a pot tells you whether it is empty or full",
+   "big": false,
+   "t1": 482.652
+  },
+  {
+   "sec": "ch6",
+   "t": 482.652,
+   "end": 535.097,
+   "text": "In the same way, the ringing told them how dense the gas was",
+   "big": false,
+   "t1": 487.981
+  },
+  {
+   "sec": "ch6",
+   "t": 487.981,
+   "end": 535.097,
+   "text": "It was about 40 times denser than the gas inside the Sun's bubble",
+   "big": false,
+   "t1": 493.577
+  },
+  {
+   "sec": "ch6",
+   "t": 493.577,
+   "end": 535.097,
+   "text": "So it wasn't the Sun's gas at all",
+   "big": false,
+   "t1": 496.427
+  },
+  {
+   "sec": "ch6",
+   "t": 496.427,
+   "end": 535.097,
+   "text": "It was the gas between the stars",
+   "big": false,
+   "t1": 498.627
+  },
+  {
+   "sec": "ch6",
+   "t": 498.627,
+   "end": 535.097,
+   "text": "In 2013 NASA announced that back in 2012, Voyager 1 had become the first human-made object in interstellar space",
+   "big": false,
+   "t1": 505.627
+  },
+  {
+   "sec": "ch6",
+   "t": 508.71,
+   "end": 535.097,
+   "text": "Voyager's project manager, Suzanne Dodd, later explained what Voyager is doing out there",
+   "big": false,
+   "t1": 515.613
+  },
+  {
+   "sec": "ch6",
+   "t": 515.613,
+   "end": 531.113,
+   "big": false,
+   "text": "Suzanne Dodd, Voyager project manager: \"Voyager is really like a weather satellite traveling through interstellar space. And what interstellar space is contained of, it's dust from other stars. So what Voyager is measuring is the density of the dust and plasma that it's traveling through.\"",
+   "t1": 522.613
+  },
+  {
+   "sec": "ch6",
+   "t": 531.538,
+   "end": 535.097,
+   "text": "In 2018, Voyager 2 got there too",
+   "big": false,
+   "t1": 535.3969999999999
+  },
+  {
+   "sec": "ch7",
+   "t": 536.797,
+   "end": 633.958,
+   "text": "Now back to three years ago, to the day Voyager began sending meaningless signals",
+   "big": false,
+   "t1": 543.797
+  },
+  {
+   "sec": "ch7",
+   "t": 543.878,
+   "end": 633.958,
+   "text": "Talking to Voyager is not easy",
+   "big": false,
+   "t1": 546.189
+  },
+  {
+   "sec": "ch7",
+   "t": 546.189,
+   "end": 633.958,
+   "text": "Its radio is just 22 watts, about as strong as a fridge light bulb",
+   "big": false,
+   "t1": 551.553
+  },
+  {
+   "sec": "ch7",
+   "t": 551.553,
+   "end": 633.958,
+   "text": "By the time its voice reaches Earth it's so faint that it takes a 70-metre dish to hear it",
+   "big": false,
+   "t1": 558.553
+  },
+  {
+   "sec": "ch7",
+   "t": 559.819,
+   "end": 633.958,
+   "text": "And every message takes about two days to go and come back",
+   "big": false,
+   "t1": 564.735
+  },
+  {
+   "sec": "ch7",
+   "t": 564.735,
+   "end": 633.958,
+   "text": "Working like this, engineers found that a chip in its 1977 computer had failed",
+   "big": false,
+   "t1": 571.735
+  },
+  {
+   "sec": "ch7",
+   "t": 572.031,
+   "end": 633.958,
+   "text": "About 3 percent of its memory was ruined",
+   "big": false,
+   "t1": 576.267
+  },
+  {
+   "sec": "ch7",
+   "t": 576.267,
+   "end": 633.958,
+   "text": "The chip could not be fixed",
+   "big": false,
+   "t1": 578.241
+  },
+  {
+   "sec": "ch7",
+   "t": 578.241,
+   "end": 633.958,
+   "text": "So the team sent Voyager a special command",
+   "big": false,
+   "t1": 582.171
+  },
+  {
+   "sec": "ch7",
+   "t": 582.171,
+   "end": 633.958,
+   "text": "In reply, Voyager sent back a copy of its entire memory",
+   "big": false,
+   "t1": 586.455
+  },
+  {
+   "sec": "ch7",
+   "t": 586.455,
+   "end": 633.958,
+   "text": "From that copy, the team saw which part of the program was stuck in the broken spot",
+   "big": false,
+   "t1": 592.172
+  },
+  {
+   "sec": "ch7",
+   "t": 592.172,
+   "end": 633.958,
+   "text": "Then they did what you'd do when one room of a house breaks",
+   "big": false,
+   "t1": 597.181
+  },
+  {
+   "sec": "ch7",
+   "t": 597.181,
+   "end": 633.958,
+   "text": "They moved its things, bit by bit, into the other rooms",
+   "big": false,
+   "t1": 601.651
+  },
+  {
+   "sec": "ch7",
+   "t": 601.651,
+   "end": 633.958,
+   "text": "That part of the program was moved, in pieces, to good places in the memory",
+   "big": false,
+   "t1": 607.217
+  },
+  {
+   "sec": "ch7",
+   "t": 607.217,
+   "end": 633.958,
+   "text": "In April 2024, the fix was sent",
+   "big": false,
+   "t1": 610.461
+  },
+  {
+   "sec": "ch7",
+   "t": 610.461,
+   "end": 633.958,
+   "text": "Two days later, Voyager answered",
+   "big": false,
+   "t1": 612.923
+  },
+  {
+   "sec": "ch7",
+   "t": 612.923,
+   "end": 633.958,
+   "text": "Clear this time, and making sense",
+   "big": false,
+   "t1": 615.726
+  },
+  {
+   "sec": "ch7",
+   "t": 615.726,
+   "end": 633.958,
+   "text": "After five months, Voyager 1 was talking again",
+   "big": false,
+   "t1": 619.232
+  },
+  {
+   "sec": "ch7",
+   "t": 619.232,
+   "end": 633.958,
+   "text": "And when that answer arrived, this is how the team in a room at JPL took it",
+   "big": false,
+   "t1": 624.987
+  },
+  {
+   "sec": "ch7",
+   "t": 624.987,
+   "end": 633.987,
+   "big": false,
+   "text": "Voyager team, NASA JPL: \"Oh, yeah. Oh, wow. That's insane. There we go. That's insane. All right!\"",
+   "t1": 631.987
+  },
+  {
+   "sec": "ch8",
+   "t": 635.658,
+   "end": 694.975,
+   "text": "But Voyager's biggest problem isn't a chip",
+   "big": false,
+   "t1": 638.88
+  },
+  {
+   "sec": "ch8",
+   "t": 638.88,
+   "end": 694.975,
+   "text": "The plutonium put in for power in 1977 is slowly running down",
+   "big": false,
+   "t1": 645.88
+  },
+  {
+   "sec": "ch8",
+   "t": 646.02,
+   "end": 694.975,
+   "text": "Its power drops by about 4 watts every year",
+   "big": false,
+   "t1": 649.798
+  },
+  {
+   "sec": "ch8",
+   "t": 649.798,
+   "end": 694.975,
+   "text": "By 2026, Voyager has less than half of the power it started with",
+   "big": false,
+   "t1": 654.907
+  },
+  {
+   "sec": "ch8",
+   "t": 654.907,
+   "end": 694.975,
+   "text": "So the team is switching its instruments off, one by one",
+   "big": false,
+   "t1": 659.237
+  },
+  {
+   "sec": "ch8",
+   "t": 659.237,
+   "end": 694.975,
+   "text": "In April 2026, one more instrument was switched off",
+   "big": false,
+   "t1": 663.764
+  },
+  {
+   "sec": "ch8",
+   "t": 663.764,
+   "end": 694.975,
+   "text": "Now Voyager 1 has just two science instruments left",
+   "big": false,
+   "t1": 668.292
+  },
+  {
+   "sec": "ch8",
+   "t": 668.292,
+   "end": 694.975,
+   "text": "On this long journey, its people changed too",
+   "big": false,
+   "t1": 671.177
+  },
+  {
+   "sec": "ch8",
+   "t": 671.177,
+   "end": 694.975,
+   "text": "Ed Stone, Voyager's chief scientist for 50 years, passed away in 2024",
+   "big": false,
+   "t1": 678.119
+  },
+  {
+   "sec": "ch8",
+   "t": 678.119,
+   "end": 694.975,
+   "text": "And now the day is coming",
+   "big": false,
+   "t1": 680.562
+  },
+  {
+   "sec": "ch8",
+   "t": 680.562,
+   "end": 694.975,
+   "text": "Light from the Moon reaches Earth in 1.3 seconds",
+   "big": false,
+   "t1": 684.823
+  },
+  {
+   "sec": "ch8",
+   "t": 684.823,
+   "end": 694.975,
+   "text": "From the Sun, in about 8 minutes",
+   "big": false,
+   "t1": 687.285
+  },
+  {
+   "sec": "ch8",
+   "t": 687.285,
+   "end": 694.975,
+   "text": "And from 18 November 2026, from Voyager 1: one whole day",
+   "big": false,
+   "t1": 693.529
+  },
+  {
+   "sec": "ch8",
+   "t": 693.529,
+   "end": 694.975,
+   "text": "One light-day",
+   "big": false,
+   "t1": 695.275
+  },
+  {
+   "sec": "ending",
+   "t": 695.2995,
+   "end": 764.993,
+   "text": "One day, perhaps within a few years, Voyager's last word will arrive",
+   "big": false,
+   "t1": 700.918
+  },
+  {
+   "sec": "ending",
+   "t": 700.918,
+   "end": 764.993,
+   "text": "After that, NASA's dishes will keep listening, but no answer will come",
+   "big": false,
+   "t1": 705.527
+  },
+  {
+   "sec": "ending",
+   "t": 705.527,
+   "end": 764.993,
+   "text": "But Voyager won't stop",
+   "big": false,
+   "t1": 707.965
+  },
+  {
+   "sec": "ending",
+   "t": 707.965,
+   "end": 764.993,
+   "text": "It will keep going at about 61,000 kilometres an hour",
+   "big": false,
+   "t1": 712.633
+  },
+  {
+   "sec": "ending",
+   "t": 712.633,
+   "end": 764.993,
+   "text": "Fast enough to fly all the way around Earth in just 40 minutes",
+   "big": false,
+   "t1": 717.468
+  },
+  {
+   "sec": "ending",
+   "t": 717.468,
+   "end": 764.993,
+   "text": "In about 40,000 years, it will pass a star called Gliese 445",
+   "big": false,
+   "t1": 724.468
+  },
+  {
+   "sec": "ending",
+   "t": 724.718,
+   "end": 764.993,
+   "text": "Like a light-day, a light-year is the distance light travels in a year",
+   "big": false,
+   "t1": 730.912
+  },
+  {
+   "sec": "ending",
+   "t": 730.912,
+   "end": 764.993,
+   "text": "And even then, Voyager will pass 1.6 light-years from that star",
+   "big": false,
+   "t1": 736.056
+  },
+  {
+   "sec": "ending",
+   "t": 736.056,
+   "end": 764.993,
+   "text": "But it carries a golden record",
+   "big": false,
+   "t1": 739.608
+  },
+  {
+   "sec": "ending",
+   "t": 739.608,
+   "end": 764.993,
+   "text": "Holding a heartbeat, Kesarbai's voice, and a message in Hindi",
+   "big": false,
+   "t1": 745.547
+  },
+  {
+   "sec": "ending",
+   "t": 745.547,
+   "end": 764.993,
+   "text": "\"Greetings from the people of Earth\"",
+   "big": false,
+   "t1": 748.345
+  },
+  {
+   "sec": "ending",
+   "t": 748.345,
+   "end": 764.993,
+   "text": "The machine that once sent meaningless signals has set out forever, carrying humanity's longest message",
+   "big": false,
+   "t1": 755.345
+  },
+  {
+   "sec": "ending",
+   "t": 757.963,
+   "end": 764.993,
+   "text": "Its voice will fall silent one day",
+   "big": false,
+   "t1": 761.057
+  },
+  {
+   "sec": "ending",
+   "t": 761.057,
+   "end": 764.993,
+   "text": "But our message will keep going",
+   "big": false,
+   "t1": 765.293
+  }
+ ],
+ "sfx": [
+  [
+   "tick",
+   7.2410000000000005,
+   0
+  ],
+  [
+   "roll",
+   12.549,
+   0,
+   {
+    "d": 0.3
+   }
+  ],
+  [
+   "hit",
+   12.841000000000001,
+   0
+  ],
+  [
+   "roll",
+   14.086,
+   0,
+   {
+    "d": 0.4
+   }
+  ],
+  [
+   "hit",
+   14.472,
+   0
+  ],
+  [
+   "tick",
+   17.791999999999998,
+   0
+  ],
+  [
+   "tick",
+   19.718999999999998,
+   0
+  ],
+  [
+   "tick",
+   27.398999999999997,
+   0
+  ],
+  [
+   "tick",
+   28.246,
+   0
+  ],
+  [
+   "roll",
+   41.478,
+   0,
+   {
+    "d": 0.23
+   }
+  ],
+  [
+   "hit",
+   41.701,
+   0
+  ],
+  [
+   "tick",
+   53.64,
+   0
+  ],
+  [
+   "tick",
+   58.099000000000004,
+   0
+  ],
+  [
+   "whoosh_big",
+   58.587999999999994,
+   -2
+  ],
+  [
+   "whoosh",
+   58.88799999999999,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "sting",
+   59.437999999999995,
+   0
+  ],
+  [
+   "impact",
+   60.337999999999994,
+   -4
+  ],
+  [
+   "whoosh_big",
+   61.738,
+   -3
+  ],
+  [
+   "sting",
+   62.337999999999994,
+   0
+  ],
+  [
+   "whoosh_big",
+   64.08800000000001,
+   0
+  ],
+  [
+   "hit",
+   64.968,
+   -2
+  ],
+  [
+   "tick",
+   65.138,
+   -4
+  ],
+  [
+   "tick",
+   65.19800000000001,
+   -4
+  ],
+  [
+   "tick",
+   65.25800000000001,
+   -4
+  ],
+  [
+   "tick",
+   65.31800000000001,
+   -4
+  ],
+  [
+   "tick",
+   65.378,
+   -4
+  ],
+  [
+   "tick",
+   65.438,
+   -4
+  ],
+  [
+   "pop",
+   67.152,
+   0
+  ],
+  [
+   "roll",
+   79.20700000000001,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   80.497,
+   0
+  ],
+  [
+   "pop",
+   90.147,
+   -2
+  ],
+  [
+   "tick",
+   98.50399999999999,
+   0
+  ],
+  [
+   "tick",
+   100.51299999999999,
+   0
+  ],
+  [
+   "roll",
+   103.058,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   104.348,
+   0
+  ],
+  [
+   "roll",
+   130.76299999999998,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   132.053,
+   0
+  ],
+  [
+   "roll",
+   136.405,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   137.69500000000002,
+   0
+  ],
+  [
+   "whoosh_big",
+   141.144,
+   0
+  ],
+  [
+   "hit",
+   142.024,
+   -2
+  ],
+  [
+   "tick",
+   142.194,
+   -4
+  ],
+  [
+   "tick",
+   142.254,
+   -4
+  ],
+  [
+   "tick",
+   142.314,
+   -4
+  ],
+  [
+   "tick",
+   142.374,
+   -4
+  ],
+  [
+   "tick",
+   150.663,
+   0
+  ],
+  [
+   "tick",
+   151.75400000000002,
+   0
+  ],
+  [
+   "roll",
+   161.237,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   162.52700000000002,
+   0
+  ],
+  [
+   "tick",
+   167.02,
+   0
+  ],
+  [
+   "tick",
+   168.57600000000002,
+   0
+  ],
+  [
+   "pop",
+   186.107,
+   -2
+  ],
+  [
+   "tick",
+   207.482,
+   0
+  ],
+  [
+   "tick",
+   208.75900000000001,
+   0
+  ],
+  [
+   "whoosh_big",
+   209.43900000000002,
+   0
+  ],
+  [
+   "hit",
+   210.31900000000002,
+   -2
+  ],
+  [
+   "tick",
+   210.489,
+   -4
+  ],
+  [
+   "tick",
+   210.549,
+   -4
+  ],
+  [
+   "tick",
+   210.609,
+   -4
+  ],
+  [
+   "tick",
+   210.669,
+   -4
+  ],
+  [
+   "pop",
+   220.068,
+   -2
+  ],
+  [
+   "tick",
+   227.431,
+   0
+  ],
+  [
+   "roll",
+   239.804,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   241.09400000000002,
+   0
+  ],
+  [
+   "roll",
+   242.415,
+   0,
+   {
+    "d": 0.2
+   }
+  ],
+  [
+   "hit",
+   242.605,
+   0
+  ],
+  [
+   "tick",
+   248.779,
+   0
+  ],
+  [
+   "pop",
+   253.559,
+   -2
+  ],
+  [
+   "tick",
+   262.229,
+   0
+  ],
+  [
+   "tick",
+   263.692,
+   0
+  ],
+  [
+   "roll",
+   270.36,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   271.65000000000003,
+   0
+  ],
+  [
+   "whoosh_big",
+   280.178,
+   0
+  ],
+  [
+   "hit",
+   281.058,
+   -2
+  ],
+  [
+   "tick",
+   281.228,
+   -4
+  ],
+  [
+   "tick",
+   281.288,
+   -4
+  ],
+  [
+   "tick",
+   281.348,
+   -4
+  ],
+  [
+   "pop",
+   295.839,
+   -2
+  ],
+  [
+   "tick",
+   315.404,
+   0
+  ],
+  [
+   "tick",
+   332.07,
+   0
+  ],
+  [
+   "tick",
+   335.425,
+   0
+  ],
+  [
+   "tick",
+   362.09000000000003,
+   0
+  ],
+  [
+   "tick",
+   362.752,
+   0
+  ],
+  [
+   "whoosh_big",
+   372.353,
+   0
+  ],
+  [
+   "hit",
+   373.233,
+   -2
+  ],
+  [
+   "tick",
+   373.403,
+   -4
+  ],
+  [
+   "tick",
+   373.463,
+   -4
+  ],
+  [
+   "tick",
+   373.523,
+   -4
+  ],
+  [
+   "tick",
+   373.583,
+   -4
+  ],
+  [
+   "roll",
+   377.33000000000004,
+   0,
+   {
+    "d": 0.2
+   }
+  ],
+  [
+   "hit",
+   377.52000000000004,
+   0
+  ],
+  [
+   "tick",
+   387.258,
+   0
+  ],
+  [
+   "tick",
+   388.651,
+   0
+  ],
+  [
+   "whoosh",
+   389.336,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "tick",
+   404.82300000000004,
+   0
+  ],
+  [
+   "whoosh_big",
+   425.8,
+   0
+  ],
+  [
+   "hit",
+   426.68,
+   -2
+  ],
+  [
+   "tick",
+   426.85,
+   -4
+  ],
+  [
+   "tick",
+   426.91,
+   -4
+  ],
+  [
+   "tick",
+   426.97,
+   -4
+  ],
+  [
+   "tick",
+   427.03000000000003,
+   -4
+  ],
+  [
+   "tick",
+   434.23900000000003,
+   0
+  ],
+  [
+   "tick",
+   448.93,
+   0
+  ],
+  [
+   "roll",
+   490.46,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   491.75,
+   0
+  ],
+  [
+   "tick",
+   496.649,
+   0
+  ],
+  [
+   "tick",
+   497.659,
+   0
+  ],
+  [
+   "tick",
+   503.865,
+   0
+  ],
+  [
+   "tick",
+   507.104,
+   0
+  ],
+  [
+   "whoosh_big",
+   534.7969999999999,
+   0
+  ],
+  [
+   "hit",
+   535.6769999999999,
+   -2
+  ],
+  [
+   "tick",
+   535.847,
+   -4
+  ],
+  [
+   "tick",
+   535.9069999999999,
+   -4
+  ],
+  [
+   "tick",
+   535.967,
+   -4
+  ],
+  [
+   "tick",
+   536.0269999999999,
+   -4
+  ],
+  [
+   "tick",
+   536.087,
+   -4
+  ],
+  [
+   "tick",
+   536.1469999999999,
+   -4
+  ],
+  [
+   "roll",
+   546.3389999999999,
+   0,
+   {
+    "d": 1.02
+   }
+  ],
+  [
+   "hit",
+   547.351,
+   0
+  ],
+  [
+   "roll",
+   557.775,
+   0,
+   {
+    "d": 0.2
+   }
+  ],
+  [
+   "hit",
+   557.965,
+   0
+  ],
+  [
+   "roll",
+   562.014,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   563.304,
+   0
+  ],
+  [
+   "roll",
+   572.1809999999999,
+   0,
+   {
+    "d": 0.94
+   }
+  ],
+  [
+   "hit",
+   573.112,
+   0
+  ],
+  [
+   "tick",
+   613.412,
+   0
+  ],
+  [
+   "tick",
+   614.48,
+   0
+  ],
+  [
+   "whoosh_big",
+   633.6579999999999,
+   0
+  ],
+  [
+   "hit",
+   634.5379999999999,
+   -2
+  ],
+  [
+   "tick",
+   634.708,
+   -4
+  ],
+  [
+   "tick",
+   634.7679999999999,
+   -4
+  ],
+  [
+   "tick",
+   634.828,
+   -4
+  ],
+  [
+   "tick",
+   634.8879999999999,
+   -4
+  ],
+  [
+   "tick",
+   634.948,
+   -4
+  ],
+  [
+   "roll",
+   646.7750000000001,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   648.065,
+   0
+  ],
+  [
+   "tick",
+   653.4110000000001,
+   0
+  ],
+  [
+   "tick",
+   653.678,
+   0
+  ],
+  [
+   "roll",
+   665.4240000000001,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   666.714,
+   0
+  ],
+  [
+   "whoosh",
+   667.8715,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "pop",
+   671.297,
+   -2
+  ],
+  [
+   "whoosh",
+   695.0994999999999,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "roll",
+   708.115,
+   0,
+   {
+    "d": 0.64
+   }
+  ],
+  [
+   "hit",
+   708.745,
+   0
+  ],
+  [
+   "roll",
+   714.4670000000001,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   715.7570000000001,
+   0
+  ],
+  [
+   "roll",
+   717.6179999999999,
+   0,
+   {
+    "d": 0.51
+   }
+  ],
+  [
+   "hit",
+   718.12,
+   0
+  ],
+  [
+   "roll",
+   732.759,
+   0,
+   {
+    "d": 1.3
+   }
+  ],
+  [
+   "hit",
+   734.049,
+   0
+  ],
+  [
+   "tick",
+   745.537,
+   0
+  ],
+  [
+   "whoosh",
+   747.9159999999999,
+   -2,
+   {
+    "d": 0.6
+   }
+  ],
+  [
+   "tick",
+   762.6030000000001,
+   0
+  ],
+  [
+   "tick",
+   763.746,
+   0
+  ]
+ ],
+ "mus": [
+  {
+   "kind": "swell",
+   "t0": 58.788,
+   "peak": 59.587999999999994,
+   "t1": 62.888,
+   "db": 6.0
+  },
+  {
+   "kind": "swell",
+   "t0": 61.988,
+   "peak": 62.687999999999995,
+   "t1": 65.288,
+   "db": 4.0
+  }
+ ],
+ "music": [
+  {
+   "t": 0.0,
+   "track": "Echoes_of_Time_v2.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 63.688,
+   "track": "Long_Note_Two.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 209.039,
+   "track": "Lightless_Dawn.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 371.953,
+   "track": "Long_Note_One.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 425.4,
+   "track": "Phantasm.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 534.397,
+   "track": "Dark_Fog.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 633.258,
+   "track": "Long_Note_Three.mp3",
+   "gain": 0.0
+  },
+  {
+   "t": 694.275,
+   "track": "Long_Note_Four.mp3",
+   "gain": 0.0
+  }
+ ],
+ "breaths": [],
+ "total": 767.993,
+ "off": 0.5,
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "clips_dir": "/home/user/axiom/work/library/clips"
+}
