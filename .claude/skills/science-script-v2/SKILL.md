@@ -197,6 +197,11 @@ Did not like (never again):
   on nothing (owner, video 05). Open on the biggest fact; say time relatively ("teen saal pehle"), use plain years,
   and keep an exact date only when the date is the story (the one-light-day day). Call back by the event ("us din
   par, jab…"), not the date. Exact dates can go on screen.
+- Side facts that don't serve the one story (the Valentine's Day line in video 05): be straight to the point;
+  every line either moves the story or gives context for the next idea, and a gap in context is never filled by
+  a side fact.
+- The same word or number twice in a row: "baar baar" twice in one opening, "1990" in back-to-back sentences
+  (the second became "us saal"). Read each pair of neighbouring sentences for it.
 - Pauses anywhere: no "..." suspense, no designed silences, no long gaps between chapters.
 - An odd or unpleasant image in the hook (pigeon droppings in the antenna) and showy sound words (सरसराहट).
 - A Short script that wasn't the video's own story ("Is this from the video that we created? I don't like the
