@@ -225,8 +225,15 @@ def main():
         keep = [k for k in range(len(pool)) if not same_footage(AE, AH, k, range(len(pool), len(pool) + len(prev)))]
         print(f"avoid: {len(prev)} shots from earlier productions; {len(pool) - len(keep)} look-alikes removed")
         pool = [pool[k] for k in keep]
+    own_rows = {i for i, it in enumerate(items) if render_v3.own_gfx(it)}
+    n_vis = len(pool)
+    if avoided and own_rows:  # own graphics show no footage: their unseen placeholder can be a shot an earlier video used
+        spare = [s for s in shots if s["id"] in avoided and s["usable"] and not s["dup_of"]
+                 and os.path.exists(os.path.join(a.lib, "clips", s["clip"] + ".mp4"))]
+        pool = pool + spare[:len(own_rows)]
     if len(pool) < len(items):
-        raise SystemExit(f"library has {len(pool)} usable shots but the edit needs {len(items)} different ones: add footage")
+        raise SystemExit(f"library has {n_vis} usable shots (+{len(pool) - n_vis} placeholders for own graphics) but the "
+                         f"edit needs {len(items)} different ones: add footage")
     E = np.stack([emb[s["id"]] for s in pool])
     L = np.array([max(r[1] - r[0] for r in s["usable"]) for s in pool])
     titles = sorted({sources[s["clip"]]["title"] for s in pool})
@@ -242,6 +249,9 @@ def main():
     lum = np.array([luma(a.lib, s) for s in pool])
     dull = DARK_PENALTY * np.clip((28 - lum) / 20, 0, 1) + DARK_PENALTY * np.clip((lum - 120) / 40, 0, 1)  # or washed out
     S = S - np.array([[1.0] if it["kind"] == "clip" else [0.0] for it in items]) * dull[None, :]
+    if len(pool) > n_vis:  # placeholders only ever stand behind our own graphics
+        hid, vis = np.arange(n_vis, len(pool)), np.array([i not in own_rows for i in range(len(items))])
+        S[np.ix_(vis, hid)], S[np.ix_(~vis, hid)] = -1000.0, 1.0
     # our own full-frame graphics show no footage: any shot will do as their (unseen) placeholder
     need = np.array([(min(it["t1"] - it["t0"], 1.0) if render_v3.own_gfx(it) or it.get("bite") else it["t1"] - it["t0"]) + PAD
                      for it in items])

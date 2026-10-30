@@ -91,8 +91,9 @@
  ],
  "pin": {
   "opening/1": "arc_voyager_anim#0",
-  "ch1/11": "svs_4139-v1path#1",
-  "ch1/22": "svs_4139-v1path#2",
+  "opening/12": "arc_stone2011#0",
+  "ch1/10": "svs_4139-v1path#1",
+  "ch1/20": "svs_4139-v1path#2",
   "ch2/14": "arc_launch1977#0",
   "ch2/15": "arc_titan_centaur#0",
   "ch3/4": "arc_golden_record#0",
@@ -102,8 +103,7 @@
   "ch6/5": "svs_20363-helio#0",
   "ch6/15": "svs_12687-cme#0",
   "ch6/22": "svs_13544-pull#0",
-  "ch8/12": "arc_stone2019#0",
-  "opening/12": "arc_stone2011#0"
+  "ch8/12": "arc_stone2019#0"
  },
  "ban": [
   "esahubble_heic1711a#0",
@@ -523,24 +523,15 @@
     },
     {
      "at": "तब तक Jupiter",
-     "q": [
-      "Jupiter's clouds swirling",
-      "the planet Jupiter rotating"
-     ]
+     "gfx": "photo:V_Jupiter_GRS"
     },
     {
      "at": "Saturn, Uranus",
-     "q": [
-      "Saturn and its rings",
-      "the planet Saturn with rings"
-     ]
+     "gfx": "photo:V_Saturn"
     },
     {
      "at": "और Neptune",
-     "q": [
-      "the blue planet Neptune",
-      "Uranus and Neptune, the ice giants"
-     ]
+     "gfx": "photo:V_Neptune"
     },
     {
      "at": "मुश्किल थी दूरी",
@@ -569,6 +560,7 @@
     },
     {
      "at": "उन्होंने देखा",
+     "opt": "hold",
      "q": [
       "the planets lining up on one side of the Sun",
       "planets orbiting the Sun animation"
@@ -812,10 +804,7 @@
     },
     {
      "at": "Jupiter पर वो",
-     "q": [
-      "Jupiter in the faint light of the Sun",
-      "Jupiter's night side"
-     ]
+     "gfx": "photo:V_Jupiter_Io"
     },
     {
      "at": "वहाँ solar panel",
@@ -1119,6 +1108,7 @@
     },
     {
      "at": "Space में न हवा",
+     "opt": "hold",
      "q": [
       "empty black space with distant stars",
       "the silence of deep space"
@@ -1332,10 +1322,7 @@
     },
     {
      "at": "वो एक ज्वालामुखी",
-     "q": [
-      "the volcanic moon Io rotating",
-      "a volcanic eruption on a moon"
-     ]
+     "gfx": "photo:V_Io_disk"
     },
     {
      "at": "Earth के बाहर",
@@ -1410,31 +1397,19 @@
     },
     {
      "at": "उन्नीस सौ छियासी में",
-     "q": [
-      "the planet Uranus",
-      "the pale blue planet Uranus"
-     ]
+     "gfx": "photo:V_Uranus"
     },
     {
      "at": "उन्नीस सौ नवासी में",
-     "q": [
-      "the planet Neptune with its dark spot",
-      "the deep blue planet Neptune"
-     ]
+     "gfx": "photo:V_Neptune_clouds"
     },
     {
      "at": "आज तक, इन दोनों",
-     "q": [
-      "Neptune's moon Triton",
-      "the icy moon Triton"
-     ]
+     "gfx": "photo:V_Triton"
     },
     {
      "at": "Planets का काम",
-     "q": [
-      "a crescent planet seen from a departing spacecraft",
-      "Neptune and its moon Triton"
-     ]
+     "gfx": "photo:V_Uranus_crescent"
     },
     {
      "at": "लेकिन Voyager One के cameras",
@@ -1614,10 +1589,7 @@
     },
     {
      "at": "इतनी दूर से Earth",
-     "q": [
-      "the Earth as a tiny point far away",
-      "a distant blue dot in space"
-     ]
+     "gfx": "photo:V_Earth_Moon"
     },
     {
      "at": "आख़िर Sagan की बात",
@@ -1651,10 +1623,7 @@
     },
     {
      "at": "ये उसकी आख़िरी",
-     "q": [
-      "the planets seen from far away",
-      "the outer solar system from beyond Neptune"
-     ]
+     "gfx": "photo:Family_portrait"
     },
     {
      "at": "लेकिन Voyager का सबसे",
@@ -2671,6 +2640,7 @@
     },
     {
      "at": "जिस machine ने",
+     "opt": "hold",
      "q": [
       "the Voyager spacecraft drifting toward the stars",
       "a lone spacecraft among stars"

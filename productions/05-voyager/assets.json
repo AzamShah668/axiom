@@ -96,5 +96,75 @@
   "must": [
    "SAGAN"
   ]
+ },
+ "V_Jupiter_GRS": {
+  "src": "nasa",
+  "q": "PIA00022",
+  "must": [
+   "Great Red Spot"
+  ]
+ },
+ "V_Jupiter_Io": {
+  "src": "nasa",
+  "q": "PIA00144",
+  "must": [
+   "Io"
+  ]
+ },
+ "V_Saturn": {
+  "src": "nasa",
+  "q": "PIA01364",
+  "must": [
+   "Saturn"
+  ]
+ },
+ "V_Uranus": {
+  "src": "nasa",
+  "q": "PIA18182",
+  "must": [
+   "Uranus"
+  ]
+ },
+ "V_Uranus_crescent": {
+  "src": "nasa",
+  "q": "PIA00346",
+  "must": [
+   "Uranus"
+  ]
+ },
+ "V_Neptune": {
+  "src": "nasa",
+  "q": "PIA01492",
+  "must": [
+   "PIA01492"
+  ]
+ },
+ "V_Neptune_clouds": {
+  "src": "nasa",
+  "q": "PIA01982",
+  "must": [
+   "Neptune"
+  ]
+ },
+ "V_Triton": {
+  "src": "nasa",
+  "q": "PIA00317",
+  "must": [
+   "Triton"
+  ]
+ },
+ "V_Earth_Moon": {
+  "src": "nasa",
+  "q": "PIA00013",
+  "must": [
+   "Crescent Earth and Moon"
+  ]
+ },
+ "V_Io_disk": {
+  "src": "nasa",
+  "q": "PIA00023",
+  "must": [
+   "Io"
+  ]
  }
 }

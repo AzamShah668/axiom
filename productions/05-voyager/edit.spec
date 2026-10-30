@@ -40,10 +40,10 @@ C और जब इसकी आवाज़ | ...and when its voice falls silen
 V - @ the planets of the solar system orbiting the Sun | the outer planets Jupiter and Saturn {hold}
 C उन्नीस सौ पैंसठ | 1965 | big
 C - | This story begins in 1965
-V तब तक Jupiter @ Jupiter's clouds swirling | the planet Jupiter rotating
+G तब तक Jupiter @ photo:V_Jupiter_GRS
 C तब तक Jupiter | Until then, Jupiter, Saturn, Uranus and Neptune, the four giant planets, were a mystery
-V Saturn, Uranus @ Saturn and its rings | the planet Saturn with rings
-V और Neptune @ the blue planet Neptune | Uranus and Neptune, the ice giants
+G Saturn, Uranus @ photo:V_Saturn
+G और Neptune @ photo:V_Neptune
 V मुश्किल थी दूरी @ flight away from the Sun through the solar system | the vast distance between planets
 C मुश्किल थी दूरी | The problem was distance
 G सीधा Neptune तक @ orbits
@@ -54,7 +54,7 @@ C इतने साल तक | No machine, it seemed, could keep working that
 V तब NASA की JPL @ Voyager trajectory animation | the planets' orbits animation
 L Gary Flandro @ GARY FLANDRO | student at NASA's JPL · 1965
 C तब NASA की JPL | Then Gary Flandro, a young student working at NASA's JPL, worked out the motions of the planets
-V उन्होंने देखा @ the planets lining up on one side of the Sun | planets orbiting the Sun animation
+V उन्होंने देखा @ the planets lining up on one side of the Sun | planets orbiting the Sun animation {hold}
 K उन्होंने देखा @ FOUR PLANETS [चारों] / *IN ONE LINE* [line]
 C उन्होंने देखा | He saw that between 1976 and 1979, all four planets would line up in a special way
 V ऐसा मौक़ा लगभग @ the solar system seen from above with planet orbits | the Sun and the planets from far away
@@ -90,7 +90,7 @@ V लेकिन एक बड़ा सवाल @ the Sun shining far away in
 C लेकिन एक बड़ा सवाल | But one big question remained
 V इतनी दूर, सूरज @ sunlight fading far from the Sun | the Sun as a small bright point from far away
 C इतनी दूर, सूरज | That far out, sunlight grows very weak
-V Jupiter पर वो @ Jupiter in the faint light of the Sun | Jupiter's night side
+G Jupiter पर वो @ photo:V_Jupiter_Io
 N Jupiter पर वो @ scale | value=27 | unit=times weaker at jupiter | kicker=sunlight | land=सत्ताईस | over
 C Jupiter पर वो | At Jupiter it is about 27 times weaker than at Earth
 V वहाँ solar panel @ solar panels of a spacecraft in space | a satellite with solar panels
@@ -155,7 +155,7 @@ C हो सकता है | Perhaps no one will ever find it
 V लेकिन ये record एक @ the Earth from space | the blue Earth turning
 K लेकिन ये record एक @ A PICTURE OF [तस्वीर] / *WHO HUMANS WERE* [कौन]
 C लेकिन ये record एक | But the record is a picture of who humans were
-V Space में न हवा @ empty black space with distant stars | the silence of deep space
+V Space में न हवा @ empty black space with distant stars | the silence of deep space {hold}
 C Space में न हवा | In space there is no air, no water, no soil to wear it down
 V इसलिए ये तस्वीर @ a galaxy slowly rotating | the Milky Way across the sky
 N इसलिए ये तस्वीर @ hero | value=1 | unit=billion years | kicker=it may survive for | land=अरब | over
@@ -175,7 +175,7 @@ V उनका काम था @ stars in a star field | a field of stars
 C उनका काम था | Her job was to check Voyager's path using the stars
 G तभी उन्हें Io के @ photo:Io_Loki_plume
 C तभी उन्हें Io के | Then she saw a strange cloud at the edge of Io
-V वो एक ज्वालामुखी @ the volcanic moon Io rotating | a volcanic eruption on a moon
+G वो एक ज्वालामुखी @ photo:V_Io_disk
 C वो एक ज्वालामुखी | It was a volcano, erupting at that moment
 V Earth के बाहर @ the volcanic moon Io with plumes | a volcanic plume rising from a moon
 K Earth के बाहर @ THE FIRST *ACTIVE VOLCANO* [ज्वालामुखी] | kicker=ever found beyond earth
@@ -199,13 +199,13 @@ V अब वो किसी और @ a spacecraft heading away into dark space 
 C अब वो किसी और | Now it could never reach another planet
 V आगे का सफ़र @ the Voyager spacecraft passing a planet | a spacecraft flying through space
 C आगे का सफ़र | Voyager 2 made the rest of the journey alone
-V उन्नीस सौ छियासी में @ the planet Uranus | the pale blue planet Uranus
+G उन्नीस सौ छियासी में @ photo:V_Uranus
 C उन्नीस सौ छियासी में | Uranus in 1986, and Neptune in 1989
-V उन्नीस सौ नवासी में @ the planet Neptune with its dark spot | the deep blue planet Neptune
-V आज तक, इन दोनों @ Neptune's moon Triton | the icy moon Triton
+G उन्नीस सौ नवासी में @ photo:V_Neptune_clouds
+G आज तक, इन दोनों @ photo:V_Triton
 K आज तक, इन दोनों @ *VOYAGER 2* [Two] / THE ONLY VISITOR [अकेला] | kicker=uranus · neptune
 C आज तक, इन दोनों | To this day, Voyager 2 is the only spacecraft to have visited these two planets
-V Planets का काम @ a crescent planet seen from a departing spacecraft | Neptune and its moon Triton
+G Planets का काम @ photo:V_Uranus_crescent
 C Planets का काम | The planets were done
 V लेकिन Voyager One के cameras @ a spacecraft turning its camera | the Voyager spacecraft in deep space
 C लेकिन Voyager One के cameras | But before Voyager 1's cameras switched off, it had one last picture to take
@@ -223,7 +223,7 @@ K Camera को पीछे @ TURN THE CAMERA [Camera] / *BACK TOWARD EARTH* [E
 C Camera को पीछे | Turn the camera around, toward Earth
 V कई लोग इसके @ a spacecraft far from the Sun | the Voyager spacecraft in deep space
 C कई लोग इसके | Many were against it
-V इतनी दूर से Earth @ the Earth as a tiny point far away | a distant blue dot in space
+G इतनी दूर से Earth @ photo:V_Earth_Moon
 C इतनी दूर से Earth | A picture of Earth from that far was of no use to science
 V आख़िर Sagan की बात @ the Voyager family portrait of the planets in 1990 {hold}
 C आख़िर Sagan की बात | In the end Sagan won, and Voyager looked back
@@ -237,7 +237,7 @@ V हर इंसान, हर शहर @ the Earth from space slowly turning
 C हर इंसान, हर शहर | Every person, every city, every war ever fought, all on that one dot
 V इसके कुछ ही देर बाद @ the Voyager spacecraft drifting away into darkness | a spacecraft fading into the dark {hold}
 C इसके कुछ ही देर बाद | Soon after, Voyager's cameras were switched off, never to open again
-V ये उसकी आख़िरी @ the planets seen from far away | the outer solar system from beyond Neptune
+G ये उसकी आख़िरी @ photo:Family_portrait
 C ये उसकी आख़िरी | These were its last pictures
 V लेकिन Voyager का सबसे @ flight out of the solar system | stars streaming past
 C लेकिन Voyager का सबसे | But Voyager's longest journey had only just begun
@@ -405,7 +405,7 @@ V जिसमें एक दिल की @ the Earth rotating from space | t
 C जिसमें एक दिल की | Holding a heartbeat, Kesarbai's voice, and a message in Hindi
 K धरती के वासियों @ "GREETINGS FROM THE *PEOPLE OF EARTH*"
 C धरती के वासियों | "Greetings from the people of Earth"
-V जिस machine ने @ the Voyager spacecraft drifting toward the stars | a lone spacecraft among stars
+V जिस machine ने @ the Voyager spacecraft drifting toward the stars | a lone spacecraft among stars {hold}
 C जिस machine ने | The machine that once sent meaningless signals has set out forever, carrying humanity's longest message
 V उसकी आवाज़ एक दिन @ a spacecraft vanishing into darkness | a fading point of light {hold}
 C उसकी आवाज़ एक दिन | Its voice will fall silent one day
