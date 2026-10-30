@@ -17,14 +17,14 @@ C वो उनचास साल | It has been travelling for 49 years
 G और उसके computers @ photo:V_proof_test
 K और उसके computers @ ITS WHOLE MEMORY [memory] / *LESS THAN ONE PHONE PHOTO* [photo]
 C और उसके computers | And all of its computers' memory is smaller than a single photo on today's phones
-V तीन साल पहले @ the Voyager spacecraft far from Earth with its dish | a spacecraft in deep space
+G तीन साल पहले @ photo:V_two_travelers
 C तीन साल पहले | Three years ago, this machine suddenly started sending meaningless signals
 V एक ही pattern @ a radio telescope dish pointing at the sky at night | radio antenna under a starry sky
 K एक ही pattern @ THE SAME PATTERN [pattern] / *AGAIN AND AGAIN* [बार]
 C एक ही pattern | The same pattern, over and over
 V उसे ठीक करने @ a giant radio dish antenna turning | a large antenna dish against the sky
 C उसे ठीक करने | To fix it, engineers had to reason with a machine from that far away
-V एक ऐसी machine @ an elderly scientist in an interview | archival footage of engineers in the 1970s
+V एक ऐसी machine @ an elderly scientist in an interview | archival footage of engineers in the 1970s {hold}
 C एक ऐसी machine | A machine whose builders had mostly retired, and whose manuals were on paper
 G और जिसके manual @ photo:V_in_florida
 V अगले पाँच महीने @ the Voyager spacecraft alone in deep space | a spacecraft drifting far from the Sun {hold}

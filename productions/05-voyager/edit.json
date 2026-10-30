@@ -439,10 +439,7 @@
     },
     {
      "at": "तीन साल पहले",
-     "q": [
-      "the Voyager spacecraft far from Earth with its dish",
-      "a spacecraft in deep space"
-     ]
+     "gfx": "photo:V_two_travelers"
     },
     {
      "at": "एक ही pattern",
@@ -460,6 +457,7 @@
     },
     {
      "at": "एक ऐसी machine",
+     "opt": "hold",
      "q": [
       "an elderly scientist in an interview",
       "archival footage of engineers in the 1970s"
