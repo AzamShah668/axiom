@@ -3,7 +3,7 @@
 # two real recordings (bites.json). Build: scripts/science/pipeline.sh productions/05-voyager edit
 
 == opening
-V - @ a lone spacecraft drifting through deep space | the Voyager spacecraft with its big dish among stars {hold}
+G - @ photo:V_explorer_art
 C - | Of everything humans have ever made, the farthest is one small spacecraft
 V Voyager One @ the Voyager spacecraft unfolding in space | a spacecraft with a large white dish
 K Voyager One @ *VOYAGER 1* | kicker=the farthest thing humans ever made
@@ -81,9 +81,9 @@ C NASA ने ये मौक़ा | NASA did not miss it
 == ch2
 G - @ photo:Voyager2_encapsulation
 C - | There was one chance, so NASA built two spacecraft
-V अगर एक ख़राब @ the Voyager spacecraft in space | a spacecraft with a large dish antenna
+G अगर एक ख़राब @ photo:Voyager2_launch_b
 C अगर एक ख़राब | If one failed, the other would finish the job
-V उनके नाम रखे गए @ two spacecraft flying apart in space | the twin Voyager spacecraft
+G उनके नाम रखे गए @ photo:Voyager2_launch
 K उनके नाम रखे गए @ *VOYAGER 1* [One] / *VOYAGER 2* [Two]
 C उनके नाम रखे गए | They were named Voyager 1 and Voyager 2
 V लेकिन एक बड़ा सवाल @ the Sun shining far away in black space | a distant Sun seen from the outer solar system
@@ -160,11 +160,11 @@ C Space में न हवा | In space there is no air, no water, no soil to
 V इसलिए ये तस्वीर @ a galaxy slowly rotating | the Milky Way across the sky
 N इसलिए ये तस्वीर @ hero | value=1 | unit=billion years | kicker=it may survive for | land=अरब | over
 C इसलिए ये तस्वीर | So this picture may survive, unchanged, for a billion years
-V लेकिन इस संदेश के @ Jupiter's swirling clouds | approaching Jupiter
+G लेकिन इस संदेश के @ photo:V_Jupiter_GRS2
 C लेकिन इस संदेश के | But before this message reached anyone, Voyager had a real job to do
 
 == ch4
-V - @ moons orbiting a giant planet | a grey cratered moon {hold}
+G - @ photo:V_Galilean
 C - | Until 1979, scientists thought the moons of the giant planets were just cold, dead rock
 V March, उन्नीस सौ @ Jupiter's clouds swirling in time-lapse | Jupiter's Great Red Spot {hold}
 C March, उन्नीस सौ | In March 1979, Voyager 1 reached Jupiter
@@ -180,9 +180,9 @@ C वो एक ज्वालामुखी | It was a volcano, erupting at t
 V Earth के बाहर @ the volcanic moon Io with plumes | a volcanic plume rising from a moon
 K Earth के बाहर @ THE FIRST *ACTIVE VOLCANO* [ज्वालामुखी] | kicker=ever found beyond earth
 C Earth के बाहर | The first active volcano ever found on any world beyond Earth
-V फिर आया Saturn @ Saturn and its rings | the planet Saturn {hold}
+G फिर आया Saturn @ photo:V_Saturn_rings
 C फिर आया Saturn | Then came Saturn
-V उन्नीस सौ अस्सी में @ Saturn's moon Titan with its orange haze | an orange hazy moon
+G उन्नीस सौ अस्सी में @ photo:V_Titan_night
 C उन्नीस सौ अस्सी में | In 1980, Voyager 1 was sent close to Saturn's moon Titan
 V Titan के ऊपर @ the hazy atmosphere of Titan | Titan's thick orange atmosphere
 C Titan के ऊपर | Titan has a thick blanket of air, and scientists wanted a close look
@@ -197,7 +197,7 @@ V उसने Voyager One का @ Voyager 1's path rising out of the plane of 
 C उसने Voyager One का | It bent Voyager 1's path up, out of the plate
 V अब वो किसी और @ a spacecraft heading away into dark space | a lone probe leaving the planets
 C अब वो किसी और | Now it could never reach another planet
-V आगे का सफ़र @ the Voyager spacecraft passing a planet | a spacecraft flying through space
+G आगे का सफ़र @ photo:V_Miranda
 C आगे का सफ़र | Voyager 2 made the rest of the journey alone
 G उन्नीस सौ छियासी में @ photo:V_Uranus
 C उन्नीस सौ छियासी में | Uranus in 1986, and Neptune in 1989
@@ -252,7 +252,7 @@ K इसे कहते हैं solar @ *SOLAR WIND* | kicker=a wind of parti
 C इसे कहते हैं solar | It's called the solar wind
 V ये हवा सारे planets @ the heliosphere bubble around the solar system | the Sun's bubble in space {hold}
 C ये हवा सारे planets | This wind wraps all the planets in a huge bubble
-V जहाँ ये हवा रुक @ the edge of the heliosphere | the boundary of the Sun's bubble
+G जहाँ ये हवा रुक @ photo:V_magnetic_art
 C जहाँ ये हवा रुक | Where the wind stops, the bubble ends
 V उसके बाद शुरू @ stars in deep interstellar space | a dense star field {hold}
 C उसके बाद शुरू | Beyond it begins the space between the stars
@@ -286,19 +286,19 @@ C मतलब वो सूरज की | So it wasn't the Sun's gas at all
 V वो तारों के बीच की gas @ interstellar clouds of gas and dust | gas between the stars
 K वो तारों के बीच की gas @ IT WAS THE GAS [तारों] / *BETWEEN THE STARS* [gas]
 C वो तारों के बीच की gas | It was the gas between the stars
-V दो हज़ार तेरह में @ Voyager 1 crossing into interstellar space animation | the Voyager spacecraft beyond the heliosphere {hold}
+G दो हज़ार तेरह में @ photo:V_interstellar_art
 K दो हज़ार तेरह में @ INTO INTERSTELLAR SPACE [interstellar] / *HUMANITY'S FIRST* [पहली] | kicker=voyager 1 · 2012
 C दो हज़ार तेरह में | In 2013 NASA announced that back in 2012, Voyager 1 had become the first human-made object in interstellar space
 G Voyager mission की project @ photo:Suzanne_Dodd
 C Voyager mission की project | Voyager's project manager, Suzanne Dodd, later explained what Voyager is doing out there
 V #dodd @ bite:dodd
-V दो हज़ार अठारह में @ Voyager 2 leaving the heliosphere | a spacecraft crossing a boundary
+G दो हज़ार अठारह में @ photo:V_one_out_one_in
 C दो हज़ार अठारह में | In 2018, Voyager 2 got there too
 
 == ch7
 V - @ the Voyager spacecraft in deep space with its dish toward Earth | a spacecraft far from the Sun {hold}
 C - | Now back to three years ago, to the day Voyager began sending meaningless signals
-V Voyager से बात करना @ a large radio dish antenna at night | deep space antenna under stars
+G Voyager से बात करना @ photo:DSN_DSS53_night
 C Voyager से बात करना | Talking to Voyager is not easy
 V उसका radio सिर्फ़ @ the Voyager spacecraft's big dish antenna | a spacecraft high-gain antenna
 N उसका radio सिर्फ़ @ hero | value=22 | unit=watts | kicker=voyager's radio · about a fridge bulb | land=बाईस | over
@@ -316,7 +316,7 @@ N Memory का लगभग @ progress | value=3 | unit=% of memory lost | kick
 C Memory का लगभग | About 3 percent of its memory was ruined
 V Chip ठीक नहीं @ the Voyager spacecraft alone in space | a probe in the dark
 C Chip ठीक नहीं | The chip could not be fixed
-V इसलिए team ने Voyager @ a radio dish sending a signal into space | a deep space antenna at dusk
+G इसलिए team ने Voyager @ photo:DSN_Madrid
 C इसलिए team ने Voyager | So the team sent Voyager a special command
 V जवाब में Voyager ने @ data streaming on screens | a radio telescope receiving signals
 C जवाब में Voyager ने | In reply, Voyager sent back a copy of its entire memory

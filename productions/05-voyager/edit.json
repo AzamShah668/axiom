@@ -98,7 +98,7 @@
   "ch2/15": "arc_titan_centaur#0",
   "ch3/4": "arc_golden_record#0",
   "ch4/3": "svs_30706-io#0",
-  "ch4/19": "svs_4139-v1path#3",
+  "ch4/18": "svs_4139-v1path#3",
   "ch5/8": "arc_family_portrait#0",
   "ch6/5": "svs_20363-helio#0",
   "ch6/15": "svs_12687-cme#0",
@@ -133,8 +133,10 @@
   "esawebb_weic2612c#0",
   "eso_adaptiveopticsandmask#0",
   "eso_alma-array-uhd1",
+  "eso_alma-array-uhd4",
   "eso_assembly-1-mtr-01-cc-am_iris2#0",
   "eso_cs0004d",
+  "eso_cs0004f",
   "eso_cs0010a",
   "eso_eso1134b#0",
   "eso_eso1151e#0",
@@ -191,6 +193,8 @@
   "eso_eso2408c",
   "eso_eso2502d#0",
   "eso_eso2507a",
+  "eso_eso2508b",
+  "eso_eso2508c",
   "eso_eso2510c",
   "eso_eso2513a#0",
   "eso_eso2519c#0",
@@ -206,6 +210,7 @@
   "eso_mars_4k#0",
   "eso_moon_evolution_p1#0",
   "eso_potw2443a",
+  "eso_potw2508a",
   "eso_rossiter-mclaughlin#0",
   "eso_scales_stars",
   "eso_uhd-cm-vlt2014-2#0",
@@ -237,6 +242,7 @@
   "svs_13778#0",
   "svs_13789",
   "svs_13991#0",
+  "svs_13994",
   "svs_14103#0",
   "svs_14163#0",
   "svs_14309#0",
@@ -278,10 +284,13 @@
   "svs_14956#0",
   "svs_14960#0",
   "svs_14961#0",
+  "svs_14997",
+  "svs_15004",
   "svs_15041#3",
   "svs_15044-win1",
   "svs_15051-win1",
   "svs_15095#0",
+  "svs_20261",
   "svs_20310#0",
   "svs_20315",
   "svs_20321",
@@ -289,10 +298,12 @@
   "svs_20398#0",
   "svs_20404#0",
   "svs_30020#0",
+  "svs_30991",
   "svs_31265",
   "svs_31308",
   "svs_31323",
   "svs_31346#0",
+  "svs_31350",
   "svs_31361#0",
   "svs_31365#0",
   "svs_31376#0",
@@ -321,6 +332,7 @@
   "svs_4646-win3",
   "svs_4649#0",
   "svs_4680",
+  "svs_4749",
   "svs_4766",
   "svs_4807#0",
   "svs_4839",
@@ -331,6 +343,7 @@
   "svs_5157-win2",
   "svs_5157-win3",
   "svs_5273#0",
+  "svs_5424",
   "svs_5429",
   "svs_5443",
   "svs_5479",
@@ -345,6 +358,7 @@
   "svs_5588",
   "svs_5622",
   "svs_5627#0",
+  "svs_5673",
   "svs_5686"
  ],
  "crops": {},
@@ -358,11 +372,7 @@
    "v": [
     {
      "at": null,
-     "opt": "hold",
-     "q": [
-      "a lone spacecraft drifting through deep space",
-      "the Voyager spacecraft with its big dish among stars"
-     ]
+     "gfx": "photo:V_explorer_art"
     },
     {
      "at": "Voyager One",
@@ -848,17 +858,11 @@
     },
     {
      "at": "अगर एक ख़राब",
-     "q": [
-      "the Voyager spacecraft in space",
-      "a spacecraft with a large dish antenna"
-     ]
+     "gfx": "photo:Voyager2_launch_b"
     },
     {
      "at": "उनके नाम रखे गए",
-     "q": [
-      "two spacecraft flying apart in space",
-      "the twin Voyager spacecraft"
-     ]
+     "gfx": "photo:Voyager2_launch"
     },
     {
      "at": "लेकिन एक बड़ा सवाल",
@@ -1195,10 +1199,7 @@
     },
     {
      "at": "लेकिन इस संदेश के",
-     "q": [
-      "Jupiter's swirling clouds",
-      "approaching Jupiter"
-     ]
+     "gfx": "photo:V_Jupiter_GRS2"
     }
    ],
    "c": [
@@ -1360,11 +1361,7 @@
    "v": [
     {
      "at": null,
-     "opt": "hold",
-     "q": [
-      "moons orbiting a giant planet",
-      "a grey cratered moon"
-     ]
+     "gfx": "photo:V_Galilean"
     },
     {
      "at": "March, उन्नीस सौ",
@@ -1405,18 +1402,11 @@
     },
     {
      "at": "फिर आया Saturn",
-     "opt": "hold",
-     "q": [
-      "Saturn and its rings",
-      "the planet Saturn"
-     ]
+     "gfx": "photo:V_Saturn_rings"
     },
     {
      "at": "उन्नीस सौ अस्सी में",
-     "q": [
-      "Saturn's moon Titan with its orange haze",
-      "an orange hazy moon"
-     ]
+     "gfx": "photo:V_Titan_night"
     },
     {
      "at": "Titan के ऊपर",
@@ -1462,10 +1452,7 @@
     },
     {
      "at": "आगे का सफ़र",
-     "q": [
-      "the Voyager spacecraft passing a planet",
-      "a spacecraft flying through space"
-     ]
+     "gfx": "photo:V_Miranda"
     },
     {
      "at": "उन्नीस सौ छियासी में",
@@ -1833,10 +1820,7 @@
     },
     {
      "at": "जहाँ ये हवा रुक",
-     "q": [
-      "the edge of the heliosphere",
-      "the boundary of the Sun's bubble"
-     ]
+     "gfx": "photo:V_magnetic_art"
     },
     {
      "at": "उसके बाद शुरू",
@@ -1940,11 +1924,7 @@
     },
     {
      "at": "दो हज़ार तेरह में",
-     "opt": "hold",
-     "q": [
-      "Voyager 1 crossing into interstellar space animation",
-      "the Voyager spacecraft beyond the heliosphere"
-     ]
+     "gfx": "photo:V_interstellar_art"
     },
     {
      "at": "Voyager mission की project",
@@ -1958,10 +1938,7 @@
     },
     {
      "at": "दो हज़ार अठारह में",
-     "q": [
-      "Voyager 2 leaving the heliosphere",
-      "a spacecraft crossing a boundary"
-     ]
+     "gfx": "photo:V_one_out_one_in"
     }
    ],
    "c": [
@@ -2133,10 +2110,7 @@
     },
     {
      "at": "Voyager से बात करना",
-     "q": [
-      "a large radio dish antenna at night",
-      "deep space antenna under stars"
-     ]
+     "gfx": "photo:DSN_DSS53_night"
     },
     {
      "at": "उसका radio सिर्फ़",
@@ -2179,10 +2153,7 @@
     },
     {
      "at": "इसलिए team ने Voyager",
-     "q": [
-      "a radio dish sending a signal into space",
-      "a deep space antenna at dusk"
-     ]
+     "gfx": "photo:DSN_Madrid"
     },
     {
      "at": "जवाब में Voyager ने",
