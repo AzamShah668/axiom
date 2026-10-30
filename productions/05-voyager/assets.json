@@ -313,5 +313,26 @@
   "must": [
    "India"
   ]
+ },
+ "Earth_blue_marble": {
+  "src": "nasa",
+  "q": "GSFC_20171208_Archive_e001788",
+  "must": [
+   "Blue Marble"
+  ]
+ },
+ "Earth_black_marble_asia": {
+  "src": "nasa",
+  "q": "Black Marble Asia",
+  "must": [
+   "Asia"
+  ]
+ },
+ "Earthrise_artemis": {
+  "src": "nasa",
+  "q": "art002e016299",
+  "must": [
+   "Earthrise"
+  ]
  }
 }

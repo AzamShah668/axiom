@@ -135,13 +135,12 @@ G इस record में Earth @ photo:Golden_record_prep
 C इस record में Earth | This record holds pictures of Earth
 V हवा, बारिश @ clouds and storms over Earth from space | Earth's weather seen from orbit
 C हवा, बारिश | Sounds like wind, rain, and a heartbeat
-V दुनिया भर का संगीत @ Earth from the International Space Station | clouds over Earth from orbit
+G दुनिया भर का संगीत @ photo:Earth_blue_marble
 N दुनिया भर का संगीत @ hero | value=90 | unit=minutes of music | kicker=from around the world | land=नब्बे | over
 C दुनिया भर का संगीत | Music from around the world, about 90 minutes of it
-V और पचपन भाषाओं में @ Earth at night from the International Space Station | city lights at night from orbit
 N और पचपन भाषाओं में @ hero | value=55 | unit=languages | kicker=greetings from earth in | land=पचपन | over
 C और पचपन भाषाओं में | And greetings from Earth in 55 languages
-V उनमें से एक हिंदी @ the Earth's horizon from orbit at sunrise | Earth from the International Space Station
+G उनमें से एक हिंदी @ photo:Earth_black_marble_asia
 C उनमें से एक हिंदी | One of them is in Hindi
 K धरती के वासियों @ "GREETINGS FROM THE *PEOPLE OF EARTH*" | kicker=the hindi greeting on the golden record
 C धरती के वासियों | "Greetings from the people of Earth"
@@ -176,7 +175,6 @@ G तभी उन्हें Io के @ photo:Io_Loki_plume
 C तभी उन्हें Io के | Then she saw a strange cloud at the edge of Io
 G वो एक ज्वालामुखी @ photo:V_Io_disk
 C वो एक ज्वालामुखी | It was a volcano, erupting at that moment
-V Earth के बाहर @ the volcanic moon Io with plumes | a volcanic plume rising from a moon
 K Earth के बाहर @ THE FIRST *ACTIVE VOLCANO* [ज्वालामुखी] | kicker=ever found beyond earth
 C Earth के बाहर | The first active volcano ever found on any world beyond Earth
 G फिर आया Saturn @ photo:V_Saturn_rings
@@ -263,7 +261,7 @@ V किनारे पर कोई board @ empty black space | a dark star fi
 C किनारे पर कोई board | There's no sign at the edge
 V और Voyager के cameras @ the Voyager spacecraft in deep space | a spacecraft among stars
 C और Voyager के cameras | And Voyager's cameras were off
-V उन्हें एक ऐसा निशान @ glowing plasma in space | an aurora seen from space
+G उन्हें एक ऐसा निशान @ starfield
 C उन्हें एक ऐसा निशान | They needed a sign that Voyager itself could feel
 V जवाब सूरज ने ख़ुद @ a solar flare erupting | a huge eruption on the Sun {hold}
 C जवाब सूरज ने ख़ुद | The answer came from the Sun itself

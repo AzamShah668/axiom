@@ -346,7 +346,7 @@ def main():
             chosen.append(j)
     bad = [i for i, j in zip(r, c) if L[j] < SLOW * need[i]]
     if bad:
-        raise SystemExit(f"{len(bad)} items have no shot long enough, e.g. {[sec_n[i] for i in bad[:5]]}: add footage")
+        raise SystemExit(f"{len(bad)} items have no shot long enough: {[sec_n[i] for i in bad]}: add footage")
     for i, j in zip(r, c):
         it, s = items[i], pool[j]
         if it.get("bite"):  # plays from the frame that matches its sound

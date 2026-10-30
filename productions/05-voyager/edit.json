@@ -91,7 +91,7 @@
  ],
  "pin": {
   "opening/1": "arc_voyager_anim#0",
-  "opening/12": "arc_stone2011#0",
+  "opening/11": "arc_stone2011#0",
   "ch1/10": "svs_4139-v1path#1",
   "ch1/17": "svs_4139-v1path#2",
   "ch2/14": "arc_launch1977#0",
@@ -101,7 +101,6 @@
   "ch4/18": "svs_4139-v1path#3",
   "ch5/8": "arc_family_portrait#0",
   "ch6/4": "svs_20363-helio#0",
-  "ch6/14": "svs_12687-cme#0",
   "ch6/21": "svs_13544-pull#0",
   "ch8/12": "arc_stone2019#0"
  },
@@ -1147,24 +1146,11 @@
     },
     {
      "at": "दुनिया भर का संगीत",
-     "q": [
-      "Earth from the International Space Station",
-      "clouds over Earth from orbit"
-     ]
-    },
-    {
-     "at": "और पचपन भाषाओं में",
-     "q": [
-      "Earth at night from the International Space Station",
-      "city lights at night from orbit"
-     ]
+     "gfx": "photo:Earth_blue_marble"
     },
     {
      "at": "उनमें से एक हिंदी",
-     "q": [
-      "the Earth's horizon from orbit at sunrise",
-      "Earth from the International Space Station"
-     ]
+     "gfx": "photo:Earth_black_marble_asia"
     },
     {
      "at": "इस record में भारत",
@@ -1394,13 +1380,6 @@
     {
      "at": "वो एक ज्वालामुखी",
      "gfx": "photo:V_Io_disk"
-    },
-    {
-     "at": "Earth के बाहर",
-     "q": [
-      "the volcanic moon Io with plumes",
-      "a volcanic plume rising from a moon"
-     ]
     },
     {
      "at": "फिर आया Saturn",
@@ -1853,10 +1832,7 @@
     },
     {
      "at": "उन्हें एक ऐसा निशान",
-     "q": [
-      "glowing plasma in space",
-      "an aurora seen from space"
-     ]
+     "gfx": "starfield"
     },
     {
      "at": "जवाब सूरज ने ख़ुद",
