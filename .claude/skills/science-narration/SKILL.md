@@ -18,6 +18,12 @@ scripts/science/pipeline.sh productions/NN-slug narration
 - Each `## section` is rendered by ElevenLabs `/with-timestamps` (model `eleven_multilingual_v2`).
   - The voice is "Neel - Paranormal Story Narrator", fixed in `productions/voice-preset.json`.
   - Neighbouring text is sent as context so the joins flow.
+  - A production can carry its own `productions/<name>/voice-preset.json`; render_narration.py and tts_check.py
+    use it over the channel's (Rome: Neel Story Narrator on eleven_v3, owner 2026-10-30).
+  - **eleven_v3 records long takes, never one request per section** (owner, 2026-10-30: per-scene v3 requests
+    "sound like a different voice" at every join, because v3 refuses the neighbouring text). render_narration.py
+    does it by itself for a v3 preset: consecutive sections go in one request of up to 4,400 characters (v3's limit
+    is 5,000), then the take is cut into `<id>.mp3` + `<id>.align.json` between the sections' words.
 - Sections are cached as `<id>.mp3` + `<id>.align.json`. To re-render one, delete its mp3 and run again.
 - The sections are joined with gaps that leave room for the cards:
   - 1.2 s after the hook (`HOOK_GAP`)
@@ -44,6 +50,9 @@ scripts/science/pipeline.sh productions/NN-slug narration
   One"). Tried and not chosen: eleven_v3 / eleven_v4 with `language_code: "hi"` read Roman Hinglish well, but the
   owner prefers the old model's sound (v3 also refuses previous/next text). tts_check.py refuses Roman narration
   for this model.
+- **ElevenLabs credits are precious** (owner, 2026-10-30): before any request that costs characters, a test
+  included, tell the owner what it costs and what is left, and record only once they say so. Never play with
+  them; joining, cutting or re-finishing recordings that exist costs nothing.
 - **Before the first character is paid for** (owner, 2026-10-27): `tts_check.py` must print 0 problems (the
   narration stage refuses to record otherwise) and `pipeline.sh … probe` must have heard every new name; see
   science-script-v2 §7. After recording, `speech_check.py` (run by the stage) flags names not heard and extra

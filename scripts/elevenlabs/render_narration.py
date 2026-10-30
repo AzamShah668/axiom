@@ -157,6 +157,49 @@ def render(sec, prev_text, next_text, out_dir):
     return sec["id"], f"{len(sec['text'])} chars"
 
 
+TAKE_MAX = 4400  # eleven_v3 takes up to 5,000 characters a request
+
+
+def takes(secs):
+    """eleven_v3 can't be given the text around a request (no previous_text/next_text), so each request is a fresh
+    performance and the voice shifts at every join. Consecutive sections therefore go in one request of up to
+    TAKE_MAX characters: one performance, few joins."""
+    out = [[]]
+    for s in secs:
+        if out[-1] and sum(len(x["text"]) + 2 for x in out[-1]) + len(s["text"]) > TAKE_MAX:
+            out.append([])
+        out[-1].append(s)
+    return out
+
+
+def render_take(group, out_dir):
+    """Render consecutive sections as one request, then cut it into each section's mp3 + alignment, halfway
+    between the last word of one section and the first of the next."""
+    if all(os.path.exists(os.path.join(out_dir, f"{s['id']}.mp3")) for s in group):
+        return f"{group[0]['id']}-{group[-1]['id']}", "kept"
+    name, sep = f"_take_{group[0]['id']}-{group[-1]['id']}", "\n\n"
+    take = {"id": name, "text": sep.join(s["text"] for s in group)}
+    render(take, "", "", out_dir)  # skipped when the take's mp3 is already there: a crash below costs nothing to redo
+    mp3 = os.path.join(out_dir, name + ".mp3")
+    al = json.load(open(os.path.join(out_dir, name + ".align.json")))
+    ch, cs, ce = al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
+    if "".join(ch) != take["text"]:
+        raise SystemExit(f"{name}: the alignment doesn't match the text; cut {mp3} by hand")
+    spans, o = [], 0
+    for s in group:
+        spans.append((o, o + len(s["text"])))
+        o += len(s["text"]) + len(sep)
+    vis = [[i for i in range(a0, a1) if ch[i].strip()] for a0, a1 in spans]
+    cuts = [0.0] + [(ce[v[-1]] + cs[w[0]]) / 2 for v, w in zip(vis, vis[1:])] + [duration(mp3)]
+    for s, (a0, a1), t0, t1 in zip(group, spans, cuts, cuts[1:]):
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp3, "-ss", f"{t0:.3f}", "-to", f"{t1:.3f}",
+                        "-c:a", "libmp3lame", "-b:a", "192k", os.path.join(out_dir, f"{s['id']}.mp3")], check=True)
+        json.dump({"characters": ch[a0:a1], "character_start_times_seconds": [x - t0 for x in cs[a0:a1]],
+                   "character_end_times_seconds": [x - t0 for x in ce[a0:a1]]},
+                  open(os.path.join(out_dir, f"{s['id']}.align.json"), "w"), ensure_ascii=False)
+    return name[6:], f"{len(take['text'])} chars, {len(group)} sections in one take"
+
+
 def tighten(wav, al, cap):
     """Cut pauses longer than cap (s) between a section's words down to cap, its tail to 0.25 s.
     Rewrites wav; returns (alignment on the new clock, seconds removed)."""
@@ -213,8 +256,11 @@ def main():
     only = set(filter(None, a.only.split(",")))
     jobs = []
     with ThreadPoolExecutor(3) as ex:
+        todo = [s for s in secs if not only or s["id"] in only]
+        if PRESET["model_id"].startswith("eleven_v3"):
+            jobs = [ex.submit(render_take, g, a.out_dir) for g in takes(todo)]
         for i, s in enumerate(secs):
-            if only and s["id"] not in only:
+            if (only and s["id"] not in only) or PRESET["model_id"].startswith("eleven_v3"):
                 continue
             prev_t = secs[i - 1]["text"] if i else ""
             next_t = secs[i + 1]["text"] if i + 1 < len(secs) else ""
