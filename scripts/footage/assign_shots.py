@@ -288,7 +288,7 @@ def main():
         chosen = []
         for k in order:
             i, j = r[k], c[k]
-            if i not in pinned_rows and same_footage(SE, SH, j, chosen):
+            if i not in pinned_rows and i not in own_rows and same_footage(SE, SH, j, chosen):
                 blocked[i, j] = 100.0
                 clash += 1
             else:
@@ -302,7 +302,7 @@ def main():
         chosen, used = [], set()
         for k in order:
             i, j = r[k], c[k]
-            if i not in pinned_rows and same_footage(SE, SH, j, chosen):
+            if i not in pinned_rows and i not in own_rows and same_footage(SE, SH, j, chosen):
                 for j2 in np.argsort(cost[i] + blocked[i]):
                     if j2 not in used and j2 not in c and cost[i, j2] < 50 and not same_footage(SE, SH, j2, chosen):
                         c[k] = j = int(j2)
@@ -313,7 +313,8 @@ def main():
     # final gate: OCR the frames each item will really show; text -> that shot is out, re-solve the rest in place
     for rnd in range(40):  # every re-solve is checked again: the result never skips the gate
         hits = text_gate(a.lib, items, pool, r, c, need, os.path.join(a.lib, "text_gate.json"))
-        hits = [k for k in hits if sec_n[r[k]] not in edit.get("pin", {})]  # a pin is a deliberate choice
+        hits = [k for k in hits if sec_n[r[k]] not in edit.get("pin", {})  # a pin is a deliberate choice
+                and r[k] not in own_rows]  # an own graphic's placeholder is never seen
         print(f"text gate {rnd}: {len(hits)} shown segments with text", flush=True)
         if not hits:
             break
@@ -330,7 +331,7 @@ def main():
         chosen = []
         for k in sorted(range(len(r)), key=lambda k: (r[k] not in pinned_rows, cost[r[k], c[k]])):
             i, j = r[k], c[k]
-            if i not in pinned_rows and same_footage(SE, SH, j, chosen):
+            if i not in pinned_rows and i not in own_rows and same_footage(SE, SH, j, chosen):
                 for j2 in np.argsort(cost[i] + blocked[i]):
                     if j2 not in c and cost[i, j2] < 50 and not same_footage(SE, SH, j2, chosen):
                         c[k] = j = int(j2)
