@@ -249,6 +249,9 @@ def main():
     lum = np.array([luma(a.lib, s) for s in pool])
     dull = DARK_PENALTY * np.clip((28 - lum) / 20, 0, 1) + DARK_PENALTY * np.clip((lum - 120) / 40, 0, 1)  # or washed out
     S = S - np.array([[1.0] if it["kind"] == "clip" else [0.0] for it in items]) * dull[None, :]
+    bite_cols = [j for j, s_ in enumerate(pool) if s_["clip"].startswith("bite_")]
+    if bite_cols:  # a real recording's clip plays only at its own recording, never as ordinary footage
+        S[np.ix_([i for i, it in enumerate(items) if not it.get("bite")], bite_cols)] = -1000.0
     if len(pool) > n_vis:  # placeholders only ever stand behind our own graphics
         hid, vis = np.arange(n_vis, len(pool)), np.array([i not in own_rows for i in range(len(items))])
         S[np.ix_(vis, hid)], S[np.ix_(~vis, hid)] = -1000.0, 1.0
