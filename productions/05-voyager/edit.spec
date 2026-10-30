@@ -115,7 +115,7 @@ V कुछ ही महीनों में @ Voyager trajectory animation |
 C कुछ ही महीनों में | Within months, it overtook Voyager 2
 V लेकिन इन दोनों में @ the Voyager spacecraft in deep space | a spacecraft among stars
 C लेकिन इन दोनों में | But besides their science gear, both carried one more thing
-V एक संदेश, किसी @ stars drifting in deep space | a dark star field slowly moving {hold}
+G एक संदेश, किसी @ starfield
 K एक संदेश, किसी @ *A MESSAGE* [संदेश] / FOR SOMEONE UNKNOWN [अनजान]
 C एक संदेश, किसी | A message, for someone unknown
 
@@ -243,7 +243,7 @@ C लेकिन Voyager का सबसे | But Voyager's longest journey ha
 == ch6
 V - @ the Sun's surface with flares | the Sun up close {hold}
 C - | The Sun doesn't only give light
-V वो हर पल @ solar wind streaming out from the Sun | particles flowing from the Sun
+V वो हर पल @ solar wind streaming out from the Sun | particles flowing from the Sun {hold}
 C वो हर पल | Every moment it blows a wind of tiny particles out in all directions
 G इसे कहते हैं solar @ wind
 K इसे कहते हैं solar @ *SOLAR WIND* | kicker=a wind of particles from the sun
@@ -309,7 +309,7 @@ N और हर संदेश @ hero | value=2 | unit=days | kicker=every mess
 C और हर संदेश | And every message takes about two days to go and come back
 V इसी हाल में @ a radio telescope dish tracking the sky | radio dishes at dusk
 C इसी हाल में | Working like this, engineers found that a chip in its 1977 computer had failed
-V Memory का लगभग @ close-up of a circuit chip | electronics inside a spacecraft
+G Memory का लगभग @ starfield
 N Memory का लगभग @ progress | value=3 | unit=% of memory lost | kicker=one broken chip | land=तीन | over
 C Memory का लगभग | About 3 percent of its memory was ruined
 V Chip ठीक नहीं @ the Voyager spacecraft alone in space | a probe in the dark
@@ -394,7 +394,7 @@ N और Voyager, उस तारे @ hero | value=1.6 | unit=light-years away
 C और Voyager, उस तारे | And even then, Voyager will pass 1.6 light-years from that star
 G लेकिन वो अपने साथ @ photo:Golden_record_prep:out
 C लेकिन वो अपने साथ | But it carries a golden record
-V जिसमें एक दिल की @ the Earth rotating from space | the blue Earth turning
+V जिसमें एक दिल की @ the Earth rotating from space | the blue Earth turning {hold}
 C जिसमें एक दिल की | Holding a heartbeat, Kesarbai's voice, and a message in Hindi
 K धरती के वासियों @ "GREETINGS FROM THE *PEOPLE OF EARTH*"
 C धरती के वासियों | "Greetings from the people of Earth"

@@ -936,11 +936,7 @@
     },
     {
      "at": "एक संदेश, किसी",
-     "opt": "hold",
-     "q": [
-      "stars drifting in deep space",
-      "a dark star field slowly moving"
-     ]
+     "gfx": "starfield"
     }
    ],
    "c": [
@@ -1778,6 +1774,7 @@
     },
     {
      "at": "वो हर पल",
+     "opt": "hold",
      "q": [
       "solar wind streaming out from the Sun",
       "particles flowing from the Sun"
@@ -2116,10 +2113,7 @@
     },
     {
      "at": "Memory का लगभग",
-     "q": [
-      "close-up of a circuit chip",
-      "electronics inside a spacecraft"
-     ]
+     "gfx": "starfield"
     },
     {
      "at": "Chip ठीक नहीं",
@@ -2605,6 +2599,7 @@
     },
     {
      "at": "जिसमें एक दिल की",
+     "opt": "hold",
      "q": [
       "the Earth rotating from space",
       "the blue Earth turning"
