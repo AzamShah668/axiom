@@ -287,11 +287,11 @@ def gfx(name, t, D, sh):
     p = t / D
     f = starfield(t, dim=0.8)
     if name == "starfield":  # a clean deep field drifting slowly, a faint Milky Way band across it (own graphic)
-        if "band" not in G:
+        if "sf_band" not in G:
             yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
             d = ((yy - H * 0.55) + (xx - W * 0.5) * 0.35) / (H * 0.2)
-            G["band"] = np.exp(-d ** 2)[..., None] * np.array([40, 32, 26], np.float32)  # BGR: a warm grey glow
-        return np.clip(f.astype(np.float32) * 1.3 + G["band"], 0, 255).astype(np.uint8)
+            G["sf_band"] = np.exp(-d ** 2)[..., None] * np.array([40, 32, 26], np.float32)  # BGR: a warm grey glow
+        return np.clip(f.astype(np.float32) * 1.3 + G["sf_band"], 0, 255).astype(np.uint8)
     if name == "flyapart":
         rng = np.random.default_rng(3)
         n = 70
