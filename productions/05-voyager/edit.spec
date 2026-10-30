@@ -99,7 +99,7 @@ K इसलिए हर Voyager @ INSIDE EVERY VOYAGER [Voyager] / *PLUTONIUM* 
 C इसलिए हर Voyager | So inside each Voyager they put plutonium
 V Plutonium धीरे धीरे @ a glowing red star slowly pulsing | glowing hot gas in space
 C Plutonium धीरे धीरे | Plutonium keeps giving off heat, like an ember that stays hot for years
-V और वो गर्मी @ a spacecraft with its booms extended in space | a probe in the dark
+G और वो गर्मी @ photo:V_proof_test:out
 C और वो गर्मी | And that heat makes electricity
 V यही बिजली आज तक @ the Voyager spacecraft flying through deep space | a spacecraft among stars
 C यही बिजली आज तक | That electricity keeps Voyager alive to this day
