@@ -815,8 +815,26 @@ def main():
     work = os.path.splitext(a.out)[0] + "_work"
     os.makedirs(work, exist_ok=True)
     step = int(a.chunk * FPS)
-    jobs = [(c, min(c + step, f_b), items, ovl, total_f, os.path.join(work, f"v3_{c:06d}_{min(c + step, f_b):06d}.mp4"))
+    import hashlib
+    here = os.path.dirname(os.path.abspath(__file__))
+    code = hashlib.sha1(b"".join(open(os.path.join(here, f), "rb").read() for f in
+                                 ("render_v3.py", "render_video.py", "mograph.py", "grade.py", "render_v2.py"))).hexdigest()
+
+    def sig(c0, c1):  # a chunk is re-rendered when anything it shows changes: its scenes, overlays, grade or the code
+        t0, t1 = c0 / FPS, c1 / FPS
+        its = [it for it in items if it.get("f0", 0) < c1 + 30 and it.get("f1", 1 << 30) > c0 - 30]
+        ovs = [o for o in ovl if o.get("t0", 0) < t1 + 1 and o.get("t1", 1e9) > t0 - 1]
+        blob = json.dumps([its, ovs, P.get("grade", {}), code], sort_keys=True, default=str)
+        return hashlib.sha1(blob.encode()).hexdigest()[:10]
+
+    jobs = [(c, min(c + step, f_b), items, ovl, total_f,
+             os.path.join(work, f"v3_{c:06d}_{min(c + step, f_b):06d}_{sig(c, min(c + step, f_b))}.mp4"))
             for c in range(f_a, f_b, step)]
+    if not a.range:  # stale chunks (an older edit or code) would only fill the disk
+        keep = {j[-1] for j in jobs}
+        for fn in os.listdir(work):
+            if fn.startswith("v3_") and fn.endswith(".mp4") and os.path.join(work, fn) not in keep:
+                os.remove(os.path.join(work, fn))
     with Pool(a.workers, initializer=init, initargs=(P["clips_dir"], a.fonts, a.assets, P.get("grade", {}))) as pool:
         for k, pth in enumerate(pool.imap(render_chunk, jobs)):
             print(f"  [{k + 1}/{len(jobs)}] {os.path.basename(pth)}", flush=True)
