@@ -19,6 +19,7 @@ import clip_model  # noqa: E402
 import render_v2  # noqa: E402
 import render_v3  # noqa: E402
 
+SLOW = 0.7         # slowest playback for a shot a little shorter than its scene
 PAD = 0.8          # extra seconds of footage per item (transition overlap)
 DARK_PENALTY = 0.05
 
@@ -130,7 +131,7 @@ def text_gate(lib, items, pool, r, c, need, cache_path, workers=4):
         s = pool[j]
         r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
         ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
-        d = need[i] - 0.8
+        d = min(need[i], r1 - r0) - 0.8  # a slowed shot shows all of its usable range
         key = f"{s['id']}@{ss:.2f}+{d:.2f}" + (f"/crop{list(s['crop'])}" if s.get("crop") else "") + "/strips"
         keys.append(key)
         if key not in cache:
@@ -258,7 +259,8 @@ def main():
     # our own full-frame graphics show no footage: any shot will do as their (unseen) placeholder
     need = np.array([(min(it["t1"] - it["t0"], 1.0) if render_v3.own_gfx(it) or it.get("bite") else it["t1"] - it["t0"]) + PAD
                      for it in items])
-    cost = -S + 100.0 * (L[None, :] < need[:, None])
+    # a shot a little short of its scene plays slowed down (render_v3: never below SLOW x); shorter still is out
+    cost = -S + 100.0 * (L[None, :] < SLOW * need[:, None]) + 0.12 * (L[None, :] < need[:, None])
     # pins
     sec_n = {}
     for i, it in enumerate(items):
@@ -341,7 +343,7 @@ def main():
                         c[k] = j = int(j2)
                         break
             chosen.append(j)
-    bad = [i for i, j in zip(r, c) if L[j] < need[i]]
+    bad = [i for i, j in zip(r, c) if L[j] < SLOW * need[i]]
     if bad:
         raise SystemExit(f"{len(bad)} items have no shot long enough, e.g. {[sec_n[i] for i in bad[:5]]}: add footage")
     for i, j in zip(r, c):
@@ -351,6 +353,8 @@ def main():
         else:
             r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
             ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
+            if r1 - r0 < need[i]:
+                it["speed"] = round((r1 - r0) / need[i], 3)
         it.update(shot=s["id"], clip=s["clip"], ss=round(ss, 2), crop=s["crop"], score=round(float(S[i, j]), 4),
                   ref=sec_n[i], title=sources[s["clip"]]["title"])
     used = [it["shot"] for it in items]

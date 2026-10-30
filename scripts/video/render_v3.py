@@ -474,16 +474,18 @@ class Readers:
 
     def get(self, it, f):
         key = id(it)
-        rel = f - it["f0"]
+        src = int(max(0, f - it["f0"]) * it.get("speed", 1.0))  # a slightly short shot plays slowed (assign: >= 0.7x)
         rd = self.r.get(key)
-        if rd is None or rd[1] != rel:
+        if rd is not None and rd[1] == src and rd[0].last is not None:  # slow motion: the same frame again
+            return rd[0].last
+        if rd is None or rd[1] != src - 1:
             if rd:
                 rd[0].cap.release()
-            rd = [render_v2.ClipReader(os.path.join(G["clips"], it["clip"] + ".mp4"), it["ss"] + max(0, rel) / FPS,
-                                       it.get("crop")), rel]
+            rd = [render_v2.ClipReader(os.path.join(G["clips"], it["clip"] + ".mp4"), it["ss"] + src / FPS,
+                                       it.get("crop")), src - 1]
             self.r[key] = rd
         fr = rd[0].read()
-        rd[1] = rel + 1
+        rd[1] = src
         return fr
 
     def close(self):
