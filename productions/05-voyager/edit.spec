@@ -325,9 +325,8 @@ C उस copy से team ने | From that copy, the team saw which part of th
 V फिर उन्होंने वही @ the Voyager spacecraft in deep space | a spacecraft far from the Sun
 K फिर उन्होंने वही @ LIKE A HOUSE [घर] / WITH ONE *BROKEN ROOM* [कमरा]
 C फिर उन्होंने वही | Then they did what you'd do when one room of a house breaks
-V उस कमरे का सामान @ a spacecraft flying through a star field | stars drifting slowly
+G उस कमरे का सामान @ memory_fix
 C उस कमरे का सामान | They moved its things, bit by bit, into the other rooms
-V Program का वो हिस्सा @ the Voyager spacecraft unfolding | a probe among stars
 C Program का वो हिस्सा | That part of the program was moved, in pieces, to good places in the memory
 V April, दो हज़ार चौबीस @ a radio dish antenna pointing at the sky at night | an antenna dish at dusk {hold}
 C April, दो हज़ार चौबीस | In April 2024, the fix was sent

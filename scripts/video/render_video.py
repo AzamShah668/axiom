@@ -1179,6 +1179,42 @@ def gfx(name, t, D, sh):
         if fl > 0:
             f = np.clip(f.astype(np.float32) + fl * 220, 0, 255).astype(np.uint8)
         return f
+    if name == "memory_fix":  # Voyager 1, 2024: a chip dies, the code stuck in it moves piece by piece to free memory
+        f = (f * 0.4).astype(np.uint8)
+        cols, rows, cw, ch_, gap = 24, 10, 52, 40, 6
+        x0, y0 = (W - cols * (cw + gap)) // 2, 250
+        rng = np.random.default_rng(24)
+        used = rng.random((rows, cols)) < 0.62
+        bad = [(r, c) for r in (4, 5) for c in (10, 11, 12, 13)]  # the broken chip: about 3 % of the memory
+        for rc in bad:
+            used[rc] = True
+        free = [(r, c) for r in range(rows) for c in range(cols) if not used[r, c] and abs(c - 11.5) > 4]
+        dest = [free[k] for k in np.random.default_rng(7).choice(len(free), len(bad), replace=False)]
+        xy = lambda r, c: (x0 + c * (cw + gap), y0 + r * (ch_ + gap))
+        gold, dark, red = (90, 190, 255), (55, 55, 55), (60, 60, 225)
+        moved = [ease((p - 0.36 - 0.055 * k) / 0.12) for k in range(len(bad))]
+        for r in range(rows):
+            for c in range(cols):
+                x, y = xy(r, c)
+                col = gold if used[r, c] else dark
+                if (r, c) in bad:
+                    flash = 0.5 + 0.5 * math.sin(t * 9) if 0.1 < p < 0.32 else 1.0
+                    col = tuple(int(v * flash) for v in red) if p > 0.1 else gold
+                if (r, c) in dest and moved[dest.index((r, c))] >= 1:
+                    col = gold
+                cv2.rectangle(f, (x, y), (x + cw, y + ch_), col, -1, cv2.LINE_AA)
+        for k, ((r, c), (r2, c2)) in enumerate(zip(bad, dest)):  # the pieces of code in flight
+            e = moved[k]
+            if 0 < e < 1:
+                (xa, ya), (xb, yb) = xy(r, c), xy(r2, c2)
+                x, y = int(xa + (xb - xa) * e), int(ya + (yb - ya) * e - 120 * math.sin(math.pi * e))
+                add_glow(f, x + cw / 2, y + ch_ / 2, 40, (120, 210, 255), 0.6)
+                cv2.rectangle(f, (x, y), (x + cw, y + ch_), gold, -1, cv2.LINE_AA)
+        draw_text(f, "VOYAGER 1 · MEMORY", 46, (0.5, 0.13), font="Montserrat", color=(240, 240, 240))
+        draw_text(f, "BROKEN CHIP · ABOUT 3%", 40, (0.5, 0.8), op=ease((p - 0.12) / 0.08) * (1 - ease((p - 0.36) / 0.06)),
+                  font="Montserrat", color=(255, 110, 110))  # draw_text takes RGB, the cells BGR
+        draw_text(f, "THE CODE MOVED, PIECE BY PIECE", 52, (0.5, 0.8), op=ease((p - 0.8) / 0.08), color=(255, 205, 120))
+        return f
     if name.startswith("photo:"):  # a photo of who or what the line names (owner, 2026-10-27); always moving
         part = name.split(":")
         im = load_img("photos/" + part[1])

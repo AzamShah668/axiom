@@ -2166,17 +2166,7 @@
     },
     {
      "at": "उस कमरे का सामान",
-     "q": [
-      "a spacecraft flying through a star field",
-      "stars drifting slowly"
-     ]
-    },
-    {
-     "at": "Program का वो हिस्सा",
-     "q": [
-      "the Voyager spacecraft unfolding",
-      "a probe among stars"
-     ]
+     "gfx": "memory_fix"
     },
     {
      "at": "April, दो हज़ार चौबीस",

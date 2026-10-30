@@ -514,7 +514,8 @@ def camera(fr, it, t, D):
 
 
 OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "rewind:big", "photo",
-           "channel", "converge", "recombination", "stretch", "notebook", "two_theories", "no_boundary", "cycles"}
+           "channel", "converge", "recombination", "stretch", "notebook", "two_theories", "no_boundary", "cycles",
+           "memory_fix"}
 
 
 def own_gfx(it):
