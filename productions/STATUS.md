@@ -19,7 +19,7 @@ Last updated 2026-10-29. Update this file and commit it at the end of every chat
 | Video | State | Next step |
 |---|---|---|
 | 03 Neutron Stars | on YouTube, **private** (https://youtu.be/fv9M4nmAEeM) | publish when the owner says (command in `productions/03-neutron-stars/youtube.md`) |
-| 03 gold Short | done, on Drive (`videos/03 Short - One Flash From a Dead Star Made Gold.mp4`) | upload private when the owner says (`productions/03-neutron-stars/shorts/gold.md`) |
+| 03 gold Short | on YouTube, **private** (https://youtu.be/cAm16FD1b44), uploaded 2026-10-30 | publish when the owner says |
 | 03 teaspoon Short | to be remade | when the owner asks |
 | 04 Before the Big Bang | **final = the 04-x version** (owner accepted 2026-10-27): no pauses, real NASA footage, photos, channel intro. On Drive: `videos/04 - What Was There Before the Big Bang? (Hindi Documentary) 1080p - FINAL (real footage, no pauses).mp4` | fill the two `AUTHOR_TBD` photo credits (Alan Guth, Arno Penzias; Wikimedia was rate-limiting), then upload private when the owner says: `productions/04-before-big-bang-x/youtube.md` |
 | 05 Voyager 1 | narration recorded 2026-10-29 (12:45, Devanagari to the old model; real voices: Suzanne Dodd 2019 NASA, the JPL team's 2024 reaction), all chapters speech-checked | owner listens; then the edit plan (photos, own graphics, 10-20 archive clips: 1977 launches, JPL rooms, Golden Record, flyby images, Pale Blue Dot, DSN), render, previews; publish by 18 Nov 2026 |
@@ -33,7 +33,7 @@ Last updated 2026-10-29. Update this file and commit it at the end of every chat
 - Script rule "context before concept" (science-script-v2 §2c).
 
 ## Accounts and budget
-- YouTube token expired 2026-10-29 (re-sign-in: `upload_youtube.py auth-url`, then `exchange`). The Google app is in
+- YouTube signed in again 2026-10-30 (Science Guy); it expires after 7 days (re-sign-in: `upload_youtube.py auth-url`, then `exchange`). The Google app is in
   Testing mode, so its sign-ins expire after 7 days; publishing the consent screen stops that.
 - ElevenLabs: about 25,500 characters left in the current period (2026-10-29, after video 05's narration).
 - All work of 2026-10-20 to 10-29 was merged into `main` on 2026-10-29 (https://github.com/AzamShah668/axiom/pull/3).

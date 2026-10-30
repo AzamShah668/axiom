@@ -1,7 +1,7 @@
 # YouTube Short: gold (video 03, facts 6 + 1)
 
 Own script (owner's 4-beat format, hook by the owner, 2026-10-26), recorded fresh, 1.2x, burned-in Hinglish captions.
-Not uploaded yet. Upload private when the owner says:
+Uploaded 2026-10-30 as **private**: https://youtu.be/cAm16FD1b44 (publish when the owner says). Upload command used:
 `python scripts/youtube/upload_youtube.py upload work/03-shorts/gold/out/shorts/gold.mp4 productions/03-neutron-stars/shorts/gold.md --privacy private`
 No thumbnail (the owner adds it). Once the full video is public: set **Related video** in YouTube Studio to
 "10 Facts You Don't Know About Neutron Stars | Hindi Documentary".
