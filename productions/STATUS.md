@@ -1,6 +1,6 @@
 # Where things stand (read this first in a new chat)
 
-Last updated 2026-10-30. Update this file and commit it at the end of every chat.
+Last updated 2026-10-30 (evening). Update this file and commit it at the end of every chat.
 
 ## How we work across chats
 - One chat per job: a script, a recording, an edit and render, Shorts, an upload. Long chats fill up; a new chat
@@ -24,7 +24,7 @@ Last updated 2026-10-30. Update this file and commit it at the end of every chat
 | 03 gold Short | on YouTube, **private** (https://youtu.be/cAm16FD1b44), uploaded 2026-10-30 | publish when the owner says |
 | 03 teaspoon Short | to be remade | when the owner asks |
 | 04 Before the Big Bang | **final = the 04-x version** (owner accepted 2026-10-27): no pauses, real NASA footage, photos, channel intro. On Drive: `videos/04 - What Was There Before the Big Bang? (Hindi Documentary) 1080p - FINAL (real footage, no pauses).mp4` | fill the two `AUTHOR_TBD` photo credits (Alan Guth, Arno Penzias; Wikimedia was rate-limiting), then upload private when the owner says: `productions/04-before-big-bang-x/youtube.md` |
-| 05 Voyager 1 | narration recorded 2026-10-29 (12:45, Devanagari to the old model; real voices: Suzanne Dodd 2019 NASA, the JPL team's 2024 reaction), all chapters speech-checked | owner listens; then the edit plan (photos, own graphics, 10-20 archive clips: 1977 launches, JPL rooms, Golden Record, flyby images, Pale Blue Dot, DSN), render, previews; publish by 18 Nov 2026 |
+| 05 Voyager 1 | **finished 2026-10-30**: master 12:48, 1080p30, -13.9 LUFS, on Drive (`videos/05 - Voyager 1 (Hindi Documentary) 1080p - master/… - FINAL.mp4`); previews sent; package in `productions/05-voyager/youtube.md` (credits and chapters filled) | owner reviews the previews. **Upload only after video 04 is up** (owner, 2026-10-30), private first; publish on or before 18 Nov 2026 |
 
 ## Open decisions for the owner
 - Captions: upload the English CC track or not (pending since video 03).

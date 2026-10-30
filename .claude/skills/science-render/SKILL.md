@@ -123,3 +123,13 @@ scripts/science/pipeline.sh productions/NN-slug preview credits
 - Preview: 3 x 720p parts under 30 MB each. Send them with SendUserFile.
 - The full master needs a Drive/YouTube upload; ask once, or follow the owner's standing instruction.
 - Commit `cutlist.json`: it records which shots this production used, so later productions avoid them.
+
+## Lessons from video 05 (2026-10-30)
+- Overlays (K, N, L, C) live in `cutlist.json`: after changing them, run `assign` again (shots are kept), then
+  `render`. Pins live in `edit.json`: after changing `edit.base.json`, run `edit` (make_edit) before `assign`.
+- Render chunks carry a fingerprint of their scenes, overlays, grade and code, so every change reaches the master;
+  check the fixed spots with frames from the master, not from memory.
+- When the library runs short (each video may not reuse a published video's shots), prefer real NASA/JPL photos
+  (`G photo:`) and our own graphics over weak stock: photos and own graphics take no fresh footage.
+- Ban every shot of another spacecraft or rocket where the line is about this one; ban clips whose every segment
+  shows text instead of re-solving forever.
