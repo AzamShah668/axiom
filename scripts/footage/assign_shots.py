@@ -319,7 +319,8 @@ def main():
         if not hits:
             break
         if rnd == 39:
-            raise SystemExit("text gate did not converge: ban the clips it keeps hitting or add footage")
+            raise SystemExit("text gate did not converge: ban the clips it keeps hitting or add footage: "
+                             + ", ".join(f"{sec_n[r[k]]}={pool[c[k]]['id']}" for k in hits))
         for k in hits:
             cost[:, c[k]] += 100.0  # the shot is out for every item
         for k in range(len(r)):

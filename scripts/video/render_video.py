@@ -1179,6 +1179,50 @@ def gfx(name, t, D, sh):
         if fl > 0:
             f = np.clip(f.astype(np.float32) + fl * 220, 0, 255).astype(np.uint8)
         return f
+    if name == "gravity_assist":  # a probe swings close past a planet: its gravity bends the path and flings it faster
+        f = (f * 0.6).astype(np.uint8)
+        px, py, pr, R = W * 0.5, H * 0.52, 120, 175
+        add_glow(f, px, py, 260, (60, 140, 255), 0.25)
+        cv2.circle(f, (int(px), int(py)), pr, (70, 150, 235), -1, cv2.LINE_AA)  # BGR: a warm, banded giant
+        for dy, col in ((-60, (60, 120, 200)), (-20, (110, 190, 250)), (25, (50, 110, 190)), (65, (90, 170, 240))):
+            hw = int(math.sqrt(max(pr * pr - dy * dy, 0)))
+            cv2.line(f, (int(px - hw), int(py + dy)), (int(px + hw), int(py + dy)), col, 14, cv2.LINE_AA)
+        pos = lambda th: np.array([px + R * math.cos(th), py + R * math.sin(th)])
+        tan = lambda th: np.array([-math.sin(th), math.cos(th)])
+        t0, t1 = math.radians(120), math.radians(250)  # in from the lower right, round the left side, out to the upper right
+        arc = [pos(th) for th in np.linspace(t0, t1, 80)]
+        pts = np.array([pos(t0) - tan(t0) * 1100 * (1 - k / 40) for k in range(40)] + arc +
+                       [pos(t1) + tan(t1) * 1500 * k / 40 for k in range(1, 41)])
+        seg = np.r_[0, np.cumsum(np.hypot(*np.diff(pts, axis=0).T))]
+        fr = 0.62 * ease(min(1.0, p / 0.55)) if p < 0.55 else 0.62 + 0.38 * ease((p - 0.55) / 0.4)  # slow in, fast out
+        n = max(2, int(np.searchsorted(seg, fr * seg[-1])))
+        cv2.polylines(f, [pts[:n].astype(np.int32)], False, (255, 220, 160), 3, cv2.LINE_AA)
+        hx, hy = pts[min(n, len(pts)) - 1]
+        add_glow(f, hx, hy, 30, (255, 240, 220), 1.0)
+        spd = 1.0 + 0.6 * ease((p - 0.5) / 0.3)
+        draw_text(f, f"SPEED  {spd:.1f}×", 58, (0.2, 0.86), font="Montserrat", color=(255, 205, 120))
+        draw_text(f, "THE PLANET'S GRAVITY", 40, (0.5, 0.2), op=ease((p - 0.2) / 0.1), font="Montserrat", color=(240, 240, 240))
+        return f
+    if name == "light_ladder":  # how long light takes to reach us: the Moon, the Sun, and Voyager 1 (18 Nov 2026)
+        f = (f * 0.5).astype(np.uint8)
+        rows = ((0.0, "MOON", "1.3 SECONDS", 0.16), (0.3, "SUN", "8 MINUTES", 0.45), (0.48, "VOYAGER 1", "1 DAY", 0.92))
+        y0, xe = H * 0.5, W * 0.08
+        cv2.line(f, (int(xe), int(y0)), (int(W * 0.95), int(y0)), (90, 90, 90), 2, cv2.LINE_AA)
+        add_glow(f, xe, y0, 30, (255, 200, 120), 1.0)
+        draw_text(f, "EARTH", 36, (xe / W, 0.58), font="Montserrat", color=(150, 200, 255))
+        for k, (t0, nm, val, xf) in enumerate(rows):
+            e = ease((p - t0) / 0.06)
+            if e <= 0:
+                continue
+            x = W * xf
+            add_glow(f, x, y0, 22, (255, 255, 255), e)
+            draw_text(f, nm, 40, (xf, 0.42), op=e, font="Montserrat", color=(240, 240, 240))
+            draw_text(f, val, 72 if k < 2 else 96, (xf, 0.66), op=e, color=(255, 205, 120))
+            ph = ((p - t0) * 1.6) % 1.0  # a pulse of light running home
+            bx = x + (xe - x) * ph
+            add_glow(f, bx, y0, 14, (255, 230, 160), e * 0.9)
+        draw_text(f, "ONE LIGHT-DAY", 120, (0.5, 0.2), op=ease((p - 0.8) / 0.08), color=(255, 205, 120))
+        return f
     if name == "memory_fix":  # Voyager 1, 2024: a chip dies, the code stuck in it moves piece by piece to free memory
         f = (f * 0.4).astype(np.uint8)
         cols, rows, cw, ch_, gap = 24, 10, 52, 40, 6

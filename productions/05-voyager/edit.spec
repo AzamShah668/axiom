@@ -62,10 +62,8 @@ N ऐसा मौक़ा लगभग @ hero | value=175 | unit=years | kicke
 C ऐसा मौक़ा लगभग | A chance like that comes about once every 175 years
 V और इस line का @ a spacecraft approaching a giant planet | a probe flying past Jupiter
 C और इस line का | And this line-up had an amazing advantage
-V जब कोई spacecraft @ a spacecraft swinging past a planet | a probe flying close past a planet
-K जब कोई spacecraft @ GRAVITY [gravity] / *THROWS IT FORWARD* [फेंक]
+G जब कोई spacecraft @ gravity_assist
 C जब कोई spacecraft | When a spacecraft passes a planet, the planet's gravity pulls it and flings it onward
-V बिल्कुल वैसे @ a spacecraft speeding up past a planet | a fast flyby of a planet
 C बिल्कुल वैसे | Just as a cricket ball speeds up off a swinging bat
 V एक planet से दूसरे @ Voyager trajectory through the outer solar system | spacecraft path between planets animation
 C एक planet से दूसरे | Planet to planet, each time a little more speed
@@ -367,15 +365,10 @@ V दो हज़ार चौबीस में इस @ stars slowly driftin
 C Ed Stone, जो पचास | Ed Stone, Voyager's chief scientist for 50 years, passed away in 2024
 V और अब आ रहा है @ the Earth and Moon from space | the Moon orbiting Earth {hold}
 C और अब आ रहा है | And now the day is coming
-V चाँद से रोशनी @ the Moon from space | the full Moon
-N चाँद से रोशनी @ hero | value=1.3 | unit=seconds | kicker=light from the moon | land=तीन | over
+G चाँद से रोशनी @ light_ladder
 C चाँद से रोशनी | Light from the Moon reaches Earth in 1.3 seconds
-V सूरज से, लगभग @ the Sun | the Sun's surface
-N सूरज से, लगभग @ hero | value=8 | unit=minutes | kicker=light from the sun | land=आठ | over
 C सूरज से, लगभग | From the Sun, in about 8 minutes
-V और अठारह November @ the Voyager spacecraft far from the Sun | flight to the edge of the solar system {hold}
 C और अठारह November | And from 18 November 2026, from Voyager 1: one whole day
-K एक light day @ *ONE LIGHT-DAY* | kicker=voyager 1 · from 18 november 2026
 C एक light day | One light-day
 
 == ending
