@@ -30,7 +30,8 @@ def check(path, allow_pauses=False):
     body = open(path, encoding="utf-8").read()
     common = {w.lower() for w in re.findall(r"\b[a-z][a-z]+\b", body)}  # also used lowercase
     hinglish = not re.search(r"[\u0900-\u097F]", "".join(l for l in body.splitlines() if not l.startswith("#")))
-    preset = json.load(open(os.path.join(ROOT, "productions", "voice-preset.json")))
+    from el import load_preset
+    preset = load_preset(path)
     if hinglish and not preset.get("language_code"):
         problems_pre = [f"the narration is in Roman letters, but {preset['model_id']} can't be told it is Hindi and half-reads "
                         "it as English (owner, 2026-10-29): write it in Devanagari, English words in Latin letters"]

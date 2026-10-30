@@ -29,3 +29,9 @@ script sent in Devanagari: `tts/narration.hi.md`). Changes:
 - Gaps between scenes 0.4 s, pauses inside a scene cut to 0.4 s.
 
 Kept as the owner wrote it: the closing call to comment and subscribe (this is not the science channel).
+
+## Voice (2026-10-30, second take)
+The first take used the channel preset (eleven_multilingual_v2) by mistake. The owner locked Neel Story Narrator
+(q4KoKwFyTWQ0Fvvsl9LW) on eleven_v3 for Rome and Japan; never "Neel Ancient Storyteller" (PnaKthDVqB7PvUN6iU48).
+That is now `productions/rome-history/voice-preset.json`: render_narration.py and tts_check.py use a production's
+own voice-preset.json when it has one, else the channel's. Same Devanagari text, language_code "hi".

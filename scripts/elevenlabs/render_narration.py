@@ -26,9 +26,9 @@ from concurrent.futures import ThreadPoolExecutor
 import requests
 
 sys.path.insert(0, os.path.dirname(__file__))
-from el import API, ROOT, _h  # noqa: E402  (loads config/.env)
+from el import API, ROOT, _h, load_preset  # noqa: E402  (loads config/.env)
 
-PRESET = json.load(open(os.path.join(ROOT, "productions", "voice-preset.json")))
+PRESET = load_preset()  # replaced in main() by the production's own preset when it has one
 
 
 BITE = re.compile(r"\s*\[bite:([\w-]+)\]\s*")
@@ -204,6 +204,8 @@ def main():
     p.add_argument("--settings", default="", help='JSON over the locked voice_settings, e.g. {"stability": 0.35, "style": 0.3} '
                                                  "(a test take only; the preset file stays the default)")
     a = p.parse_args()
+    PRESET.clear(); PRESET.update(load_preset(a.narration))
+    print(f"voice {PRESET['voice_id']} on {PRESET['model_id']}")
     if a.settings:
         PRESET["voice_settings"] = {**PRESET["voice_settings"], **json.loads(a.settings)}
     os.makedirs(a.out_dir, exist_ok=True)

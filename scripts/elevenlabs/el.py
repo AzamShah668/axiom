@@ -31,6 +31,16 @@ def _load_env():
 _load_env()
 
 
+def load_preset(narration=None):
+    """The channel's voice preset, or the production's own voice-preset.json when it has one
+    (productions/<name>/voice-preset.json next to tts/narration.hi.md)."""
+    if narration:
+        own = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(narration))), "voice-preset.json")
+        if os.path.isfile(own):
+            return json.load(open(own))
+    return json.load(open(os.path.join(ROOT, "productions", "voice-preset.json")))
+
+
 def _h():
     key = os.environ.get("ELEVENLABS_API_KEY")
     if not key:
