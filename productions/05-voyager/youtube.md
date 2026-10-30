@@ -3,8 +3,8 @@
 **Do not upload yet** (owner, 2026-10-30): video 04 goes up first. Publish on or just before **18 November 2026** (Voyager 1 is one light-day from Earth that day). Upload **private**
 first; the owner publishes. No thumbnail (the owner makes it). CC track: the owner's caption decision is pending, so
 upload without `--captions` unless the owner says otherwise.
-`python scripts/youtube/upload_youtube.py upload work/05-voyager/out/05-voyager.mp4 productions/05-voyager/youtube.md --privacy private`
-Master on Drive: `videos/05 - Voyager 1 (Hindi Documentary) 1080p - master/05 - Voyager 1 - The Farthest Thing Humans Ever Made (Hindi Documentary) 1080p - FINAL.mp4` (pull it if the local file is gone). Pin `credits_full.txt` as a comment.
+`python scripts/youtube/upload_youtube.py upload work/05-voyager/out/05-voyager-1440p.mp4 productions/05-voyager/youtube.md --privacy private` (upload the 1440p copy: YouTube gives 1440p uploads its better encoding)
+Master on Drive: `videos/05 - Voyager 1 (Hindi Documentary) 1080p - master/05 - Voyager 1 - The Farthest Thing Humans Ever Made (Hindi Documentary) 1080p - FINAL.mp4`, and the 1440p upload copy `… 1440p - FINAL for YouTube.mp4` in the same folder (pull it if the local file is gone). Pin `credits_full.txt` as a comment.
 
 **Title**
 Voyager 1: The Farthest Thing Humans Ever Made | Hindi Documentary
