@@ -98,10 +98,10 @@
   "ch2/15": "arc_titan_centaur#0",
   "ch3/4": "arc_golden_record#0",
   "ch4/3": "svs_30706-io#0",
-  "ch4/18": "svs_4139-v1path#3",
+  "ch4/16": "svs_4139-v1path#3",
   "ch5/8": "arc_family_portrait#0",
   "ch6/4": "svs_20363-helio#0",
-  "ch6/21": "svs_13544-pull#0",
+  "ch6/20": "svs_13544-pull#0",
   "ch8/12": "arc_stone2019#0"
  },
  "ban": [
@@ -666,6 +666,7 @@
     },
     {
      "at": "तब NASA की JPL",
+     "opt": "hold",
      "q": [
       "Voyager trajectory animation",
       "the planets' orbits animation"
@@ -1851,6 +1852,7 @@
     },
     {
      "at": "उसकी लहर जब",
+     "opt": "hold",
      "q": [
       "a solar storm travelling through the solar system",
       "a wave from the Sun reaching a spacecraft"
@@ -1869,6 +1871,7 @@
     },
     {
      "at": "वैसे ही, इस गूँज",
+     "opt": "hold",
      "q": [
       "glowing gas clouds in space",
       "interstellar gas"
@@ -2128,20 +2131,6 @@
     },
     {
      "at": "उस copy से team ने",
-     "q": [
-      "rows of radio antennas",
-      "an antenna array at night"
-     ]
-    },
-    {
-     "at": "फिर उन्होंने वही",
-     "q": [
-      "the Voyager spacecraft in deep space",
-      "a spacecraft far from the Sun"
-     ]
-    },
-    {
-     "at": "उस कमरे का सामान",
      "gfx": "memory_fix"
     },
     {
@@ -2311,19 +2300,6 @@
    ],
    "k": [
     {
-     "at": "फिर उन्होंने वही",
-     "lines": [
-      {
-       "text": "LIKE A HOUSE",
-       "at": "घर"
-      },
-      {
-       "text": "WITH ONE *BROKEN ROOM*",
-       "at": "कमरा"
-      }
-     ]
-    },
-    {
      "at": "इस बार साफ़",
      "lines": [
       {
@@ -2371,6 +2347,7 @@
     },
     {
      "at": "इसलिए team, एक एक",
+     "opt": "hold",
      "q": [
       "stars slowly drifting in deep space",
       "a dark star field"
@@ -2608,11 +2585,7 @@
     },
     {
      "at": "उसकी आवाज़ एक दिन",
-     "opt": "hold",
-     "q": [
-      "a fading point of light in a star field",
-      "stars streaming past"
-     ]
+     "gfx": "starfield"
     },
     {
      "at": "लेकिन हमारा संदेश",

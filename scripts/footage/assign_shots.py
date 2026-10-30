@@ -224,7 +224,9 @@ def main():
         PE, PH = segment_signatures(a.lib, prev, sig)
         CE, CH = segment_signatures(a.lib, pool, sig)
         AE, AH = np.concatenate([CE, PE]), np.concatenate([CH, PH])
-        keep = [k for k in range(len(pool)) if not same_footage(AE, AH, k, range(len(pool), len(pool) + len(prev)))]
+        pins = set(edit.get("pin", {}).values()) | bite_pins  # a pin is deliberate, even when it resembles old footage
+        keep = [k for k in range(len(pool)) if pool[k]["id"] in pins
+                or not same_footage(AE, AH, k, range(len(pool), len(pool) + len(prev)))]
         print(f"avoid: {len(prev)} shots from earlier productions; {len(pool) - len(keep)} look-alikes removed")
         pool = [pool[k] for k in keep]
     own_rows = {i for i, it in enumerate(items) if render_v3.own_gfx(it)}

@@ -52,7 +52,7 @@ N सीधा Neptune तक @ hero | value=30 | unit=years | kicker=flying str
 C सीधा Neptune तक | Flying straight to Neptune would take about 30 years
 V इतने साल तक @ a spacecraft drifting in the dark of deep space | a lone spacecraft far from the Sun
 C इतने साल तक | No machine, it seemed, could keep working that long
-V तब NASA की JPL @ Voyager trajectory animation | the planets' orbits animation
+V तब NASA की JPL @ Voyager trajectory animation | the planets' orbits animation {hold}
 L Gary Flandro @ GARY FLANDRO | student at NASA's JPL · 1965
 C तब NASA की JPL | Then Gary Flandro, a young student working at NASA's JPL, worked out the motions of the planets
 V उन्होंने देखा @ the planets lining up on one side of the Sun | planets orbiting the Sun animation {hold}
@@ -267,13 +267,13 @@ V जवाब सूरज ने ख़ुद @ a solar flare erupting | a hug
 C जवाब सूरज ने ख़ुद | The answer came from the Sun itself
 V दो हज़ार बारह में, सूरज @ a coronal mass ejection blasting from the Sun | a solar eruption
 C दो हज़ार बारह में, सूरज | In 2012, there was a huge blast on the Sun
-V उसकी लहर जब @ a solar storm travelling through the solar system | a wave from the Sun reaching a spacecraft
+V उसकी लहर जब @ a solar storm travelling through the solar system | a wave from the Sun reaching a spacecraft {hold}
 C उसकी लहर जब | When its wave reached Voyager, the gas around Voyager rang like a bell
 G Voyager के एक instrument @ photo:V_explorer_art:out
 C Voyager के एक instrument | One of Voyager's instruments heard that ringing
 V किसी बर्तन को बजाने @ waves rippling outward | ripples spreading through gas
 C किसी बर्तन को बजाने | Tapping a pot tells you whether it is empty or full
-V वैसे ही, इस गूँज @ glowing gas clouds in space | interstellar gas
+V वैसे ही, इस गूँज @ glowing gas clouds in space | interstellar gas {hold}
 C वैसे ही, इस गूँज | In the same way, the ringing told them how dense the gas was
 V वो सूरज के बुलबुले @ dense gas between the stars | a nebula of gas
 N वो सूरज के बुलबुले @ scale | value=40 | unit=times denser | kicker=than the gas inside the sun's bubble | land=चालीस | over
@@ -317,12 +317,9 @@ G इसलिए team ने Voyager @ photo:DSN_Madrid
 C इसलिए team ने Voyager | So the team sent Voyager a special command
 V जवाब में Voyager ने @ a radio telescope dish at night under the Milky Way | radio dishes under a starry sky
 C जवाब में Voyager ने | In reply, Voyager sent back a copy of its entire memory
-V उस copy से team ने @ rows of radio antennas | an antenna array at night
+G उस copy से team ने @ memory_fix
 C उस copy से team ने | From that copy, the team saw which part of the program was stuck in the broken spot
-V फिर उन्होंने वही @ the Voyager spacecraft in deep space | a spacecraft far from the Sun
-K फिर उन्होंने वही @ LIKE A HOUSE [घर] / WITH ONE *BROKEN ROOM* [कमरा]
 C फिर उन्होंने वही | Then they did what you'd do when one room of a house breaks
-G उस कमरे का सामान @ memory_fix
 C उस कमरे का सामान | They moved its things, bit by bit, into the other rooms
 C Program का वो हिस्सा | That part of the program was moved, in pieces, to good places in the memory
 V April, दो हज़ार चौबीस @ a radio dish antenna pointing at the sky at night | an antenna dish at dusk {hold}
@@ -349,7 +346,7 @@ C उसकी बिजली, हर साल | Its power drops by about 4 wa
 V दो हज़ार छब्बीस तक @ a fading light in deep space | a dim star in black space
 K दो हज़ार छब्बीस तक @ LESS THAN *HALF* [आधी] / OF ITS POWER LEFT [बिजली]
 C दो हज़ार छब्बीस तक | By 2026, Voyager has less than half of the power it started with
-V इसलिए team, एक एक @ stars slowly drifting in deep space | a dark star field
+V इसलिए team, एक एक @ stars slowly drifting in deep space | a dark star field {hold}
 C इसलिए team, एक एक | So the team is switching its instruments off, one by one
 V April, दो हज़ार छब्बीस में @ a faint galaxy in a dark star field | a lonely star field
 C April, दो हज़ार छब्बीस में | In April 2026, one more instrument was switched off
@@ -399,7 +396,7 @@ K धरती के वासियों @ "GREETINGS FROM THE *PEOPLE OF EAR
 C धरती के वासियों | "Greetings from the people of Earth"
 V जिस machine ने @ the Voyager spacecraft drifting toward the stars | a lone spacecraft among stars {hold}
 C जिस machine ने | The machine that once sent meaningless signals has set out forever, carrying humanity's longest message
-V उसकी आवाज़ एक दिन @ a fading point of light in a star field | stars streaming past {hold}
+G उसकी आवाज़ एक दिन @ starfield
 C उसकी आवाज़ एक दिन | Its voice will fall silent one day
 V लेकिन हमारा संदेश @ the Milky Way across the sky | a field of stars {hold}
 K लेकिन हमारा संदेश @ *OUR MESSAGE* [संदेश] / KEEPS GOING [चलता]

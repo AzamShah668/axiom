@@ -93,7 +93,7 @@
   "opening/1": "arc_voyager_anim#0",
   "opening/11": "arc_stone2011#0",
   "ch1/10": "svs_4139-v1path#1",
-  "ch1/17": "svs_4139-v1path#2",
+  "ch1/16": "svs_4139-v1path#2",
   "ch2/14": "arc_launch1977#0",
   "ch2/15": "arc_titan_centaur#0",
   "ch3/4": "arc_golden_record#0",
@@ -101,8 +101,9 @@
   "ch4/16": "svs_4139-v1path#3",
   "ch5/8": "arc_family_portrait#0",
   "ch6/4": "svs_20363-helio#0",
-  "ch6/20": "svs_13544-pull#0",
-  "ch8/12": "arc_stone2019#0"
+  "ch6/18": "svs_13544-pull#0",
+  "ch8/12": "arc_stone2019#0",
+  "ending/13": "arc_saturn_flyby#0"
  },
  "ban": [
   "esahubble_heic1711a#0",
