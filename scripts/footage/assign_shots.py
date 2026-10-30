@@ -20,7 +20,7 @@ import render_v2  # noqa: E402
 import render_v3  # noqa: E402
 
 SLOW = 0.7         # slowest playback for a shot a little shorter than its scene
-PAD = 0.8          # extra seconds of footage per item (transition overlap)
+PAD = 0.45         # extra seconds of footage per item: the longest transition is 12 frames (render_v3.TD), 0.4 s
 DARK_PENALTY = 0.05
 
 
@@ -131,7 +131,7 @@ def text_gate(lib, items, pool, r, c, need, cache_path, workers=4):
         s = pool[j]
         r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
         ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
-        d = min(need[i], r1 - r0) - 0.8  # a slowed shot shows all of its usable range
+        d = min(need[i], r1 - r0) - PAD  # a slowed shot shows all of its usable range
         key = f"{s['id']}@{ss:.2f}+{d:.2f}" + (f"/crop{list(s['crop'])}" if s.get("crop") else "") + "/strips"
         keys.append(key)
         if key not in cache:
