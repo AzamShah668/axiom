@@ -199,7 +199,8 @@ def main():
         here = os.path.dirname(os.path.abspath(a.edit))
         for d in sorted(os.listdir(a.avoid)):
             f = os.path.join(a.avoid, d, "cutlist.json")
-            if os.path.exists(f) and os.path.abspath(os.path.join(a.avoid, d)) != here:
+            if os.path.exists(f) and os.path.abspath(os.path.join(a.avoid, d)) != here \
+                    and not os.path.exists(os.path.join(a.avoid, d, "superseded.txt")):  # a replaced, never-published cut
                 avoided |= {it["shot"] for it in json.load(open(f))["items"] if it.get("shot")}
         ban |= avoided
     for s in shots:  # manual fixes from edit.base.json: cut seconds out of a clip, force a crop
