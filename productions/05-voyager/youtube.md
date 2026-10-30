@@ -1,6 +1,6 @@
 # YouTube upload: Production 05 (Voyager 1)
 
-Publish on or just before **18 November 2026** (Voyager 1 is one light-day from Earth that day). Upload **private**
+**Do not upload yet** (owner, 2026-10-30): video 04 goes up first. Publish on or just before **18 November 2026** (Voyager 1 is one light-day from Earth that day). Upload **private**
 first; the owner publishes. No thumbnail (the owner makes it). CC track: the owner's caption decision is pending, so
 upload without `--captions` unless the owner says otherwise.
 `python scripts/youtube/upload_youtube.py upload work/05-voyager/out/05-voyager.mp4 productions/05-voyager/youtube.md --privacy private`
