@@ -60,6 +60,11 @@ def main():
         cred = json.load(open(a.assets))
         lines.append("Image credits (graphics):")
         lines += [f"- {cred[i]}" for i in imgs if i in cred]
+    stems = sorted({it["gfx"].split(":")[1] for it in cl["items"] if str(it.get("gfx", "")).startswith("photo:")})
+    pc = os.path.join(os.path.dirname(a.assets), "photos", "credits.json") if a.assets else ""
+    if stems and os.path.exists(pc):  # photos of people and things (G photo:<stem>), fetched by fetch_assets.py
+        cred = json.load(open(pc))
+        lines.append("Photos: " + "; ".join(cred.get(k, f"{k} (CREDIT_TBD)") for k in stems) + ".")
     lines.append("Graphics and animation: original.")
     tracks = [m["track"].rsplit(".", 1)[0].replace("_", " ") for m in edit.get("music", [])]
     if tracks:

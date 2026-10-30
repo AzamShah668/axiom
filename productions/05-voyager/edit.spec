@@ -232,7 +232,7 @@ G वो हमारी Earth है @ photo:Pale_Blue_Dot_revisited
 C वो हमारी Earth है | That is our Earth
 V हर इंसान, हर शहर @ the Earth from space slowly turning | Earth's night side with city lights
 C हर इंसान, हर शहर | Every person, every city, every war ever fought, all on that one dot
-V इसके कुछ ही देर बाद @ the Voyager spacecraft drifting away into darkness | a spacecraft fading into the dark {hold}
+G इसके कुछ ही देर बाद @ starfield
 C इसके कुछ ही देर बाद | Soon after, Voyager's cameras were switched off, never to open again
 G ये उसकी आख़िरी @ photo:Family_portrait
 C ये उसकी आख़िरी | These were its last pictures

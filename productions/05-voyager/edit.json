@@ -285,6 +285,7 @@
   "svs_14701#0",
   "svs_14710#0",
   "svs_14714",
+  "svs_14715-launch",
   "svs_14715-launch#1",
   "svs_14715-launch#3",
   "svs_14715-launch#6",
@@ -1670,11 +1671,7 @@
     },
     {
      "at": "इसके कुछ ही देर बाद",
-     "opt": "hold",
-     "q": [
-      "the Voyager spacecraft drifting away into darkness",
-      "a spacecraft fading into the dark"
-     ]
+     "gfx": "starfield"
     },
     {
      "at": "ये उसकी आख़िरी",
