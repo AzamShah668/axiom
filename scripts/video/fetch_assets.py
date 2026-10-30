@@ -70,6 +70,9 @@ def main():
             print(f"MISS {key}: {s['q']}")
             continue
         data = requests.get(url, headers=UA, timeout=180).content
+        if not data.startswith((b"\xff\xd8", b"\x89PNG")):  # an error page (e.g. Wikimedia rate limit), not an image
+            print(f"BAD  {key}: {url} sent no image ({data[:40]!r}); skipped")
+            continue
         open(dst, "wb").write(data)
         credits[key] = credit
         print(f"ok   {key}: {credit[:110]}")

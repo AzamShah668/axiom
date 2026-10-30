@@ -186,6 +186,11 @@ def main():
             sid = next((s["id"] for s in own if s["start"] <= it["clip_ss"] < s["end"]), own[0]["id"])
             edit.setdefault("pin", {})[f"{it['sec']}/{sum(1 for j in range(i) if items[j]['sec'] == it['sec'])}"] = sid
             bite_pins.add(sid)
+    for s in shots:  # a pin is a deliberate choice: real archive footage keeps its on-screen text and dark frames
+        if s["id"] in set(edit.get("pin", {}).values()) | bite_pins:
+            s["dup_of"] = None
+            if not s["usable"] and s["end"] - s["start"] > 0.6:
+                s["usable"], s["crop"] = [[s["start"] + 0.15, s["end"] - 0.15]], None
     z = np.load(os.path.join(a.lib, "shots_emb.npz"), allow_pickle=True)
     emb = dict(zip(z["ids"], z["emb"]))
     ban, avoided = set(edit.get("ban", [])), set()

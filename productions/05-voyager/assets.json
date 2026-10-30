@@ -1,0 +1,100 @@
+{
+ "Voyager1_launch": {
+  "src": "nasa",
+  "q": "PIA21747",
+  "must": [
+   "Voyager 1 Launch"
+  ]
+ },
+ "Voyager2_launch": {
+  "src": "nasa",
+  "q": "PIA21744",
+  "must": [
+   "Voyager 2 Launch"
+  ]
+ },
+ "Voyager2_encapsulation": {
+  "src": "nasa",
+  "q": "PIA21743",
+  "must": [
+   "Encapsulation"
+  ]
+ },
+ "Golden_record_prep": {
+  "src": "nasa",
+  "q": "PIA21741",
+  "must": [
+   "Golden Record"
+  ]
+ },
+ "Golden_record": {
+  "src": "nasa",
+  "q": "PIA14113",
+  "must": [
+   "Golden Record"
+  ]
+ },
+ "Voyager_science_meeting": {
+  "src": "nasa",
+  "q": "PIA21122",
+  "must": [
+   "Science Meeting"
+  ]
+ },
+ "Suzanne_Dodd": {
+  "src": "nasa",
+  "q": "PIA26585",
+  "must": [
+   "Dodd"
+  ]
+ },
+ "Goldstone_70m": {
+  "src": "nasa",
+  "q": "PIA26716",
+  "must": [
+   "70-Meter"
+  ]
+ },
+ "Canberra_DSS43": {
+  "src": "nasa",
+  "q": "PIA23682",
+  "must": [
+   "Voyager"
+  ]
+ },
+ "Io_Loki_plume": {
+  "src": "nasa",
+  "q": "PIA00010",
+  "must": [
+   "Loki"
+  ]
+ },
+ "Pale_Blue_Dot": {
+  "src": "nasa",
+  "q": "PIA00452",
+  "must": [
+   "Pale Blue Dot"
+  ]
+ },
+ "Pale_Blue_Dot_revisited": {
+  "src": "nasa",
+  "q": "PIA23645",
+  "must": [
+   "Revisited"
+  ]
+ },
+ "Family_portrait": {
+  "src": "nasa",
+  "q": "PIA23681",
+  "must": [
+   "Family Portrait"
+  ]
+ },
+ "Carl_Sagan": {
+  "src": "nasa",
+  "q": "ARC-1994-A94-0009-1",
+  "must": [
+   "SAGAN"
+  ]
+ }
+}
