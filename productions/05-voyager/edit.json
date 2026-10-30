@@ -100,9 +100,9 @@
   "ch4/3": "svs_30706-io#0",
   "ch4/18": "svs_4139-v1path#3",
   "ch5/8": "arc_family_portrait#0",
-  "ch6/5": "svs_20363-helio#0",
-  "ch6/15": "svs_12687-cme#0",
-  "ch6/22": "svs_13544-pull#0",
+  "ch6/4": "svs_20363-helio#0",
+  "ch6/14": "svs_12687-cme#0",
+  "ch6/21": "svs_13544-pull#0",
   "ch8/12": "arc_stone2019#0"
  },
  "ban": [
@@ -131,13 +131,17 @@
   "esawebb_weic2324b#0",
   "esawebb_weic2517c#0",
   "esawebb_weic2612c#0",
+  "eso_ExTrA_exterior3#0",
   "eso_adaptiveopticsandmask#0",
   "eso_alma-array-uhd1",
   "eso_alma-array-uhd4",
+  "eso_ann24014a#0",
   "eso_assembly-1-mtr-01-cc-am_iris2#0",
   "eso_cs0004d",
   "eso_cs0004f",
   "eso_cs0010a",
+  "eso_eltsegtimelapse12m#0",
+  "eso_elttrailer-notext#2",
   "eso_eso1134b#0",
   "eso_eso1151e#0",
   "eso_eso1422b#0",
@@ -152,6 +156,7 @@
   "eso_eso1709b#0",
   "eso_eso1709c#0",
   "eso_eso1719a",
+  "eso_eso1729c#0",
   "eso_eso1741b#0",
   "eso_eso1813h#0",
   "eso_eso1814b#0",
@@ -162,6 +167,7 @@
   "eso_eso1825f#0",
   "eso_eso1835a#2",
   "eso_eso1837d",
+  "eso_eso1841b#0",
   "eso_eso1907o",
   "eso_eso1914c#0",
   "eso_eso1919c#0",
@@ -186,6 +192,7 @@
   "eso_eso2117b#0",
   "eso_eso2120c",
   "eso_eso2205b#0",
+  "eso_eso2208-eht-mwh#0",
   "eso_eso2305a#5",
   "eso_eso2314c#0",
   "eso_eso2316a",
@@ -204,6 +211,7 @@
   "eso_eso2609b#0",
   "eso_eso2612d#0",
   "eso_eso_astro_at_home",
+  "eso_esocast78d#0",
   "eso_esocast82b#0",
   "eso_esopia00064sites#0",
   "eso_lasillatimelapseeulerntt#0",
@@ -214,9 +222,14 @@
   "eso_rossiter-mclaughlin#0",
   "eso_scales_stars",
   "eso_uhd-cm-vlt2014-2#0",
+  "eso_uhd_photogr5_2014#0",
   "eso_uhd_vlt6_2014#0",
   "eso_wotu-supernovae-win2",
   "eso_wotu-supernovae-win3",
+  "nasa_webb-launch#2",
+  "svs_10529-cobe89#0",
+  "svs_10529-cobe89#2",
+  "svs_10790-bubbles#0",
   "svs_12019-win1#0",
   "svs_12019-win2#0",
   "svs_12034",
@@ -224,6 +237,8 @@
   "svs_12605-win2#0",
   "svs_12605-win3#1",
   "svs_12643",
+  "svs_12726#0",
+  "svs_12726#1",
   "svs_12854",
   "svs_12854#0",
   "svs_12854-win1",
@@ -239,14 +254,18 @@
   "svs_13620",
   "svs_13641#1",
   "svs_13676",
+  "svs_13703#1",
   "svs_13778#0",
   "svs_13789",
+  "svs_13955#0",
   "svs_13991#0",
   "svs_13994",
+  "svs_14051#1",
   "svs_14103#0",
   "svs_14163#0",
   "svs_14309#0",
   "svs_14347#7",
+  "svs_14355-win1#0",
   "svs_14355-win2",
   "svs_14399",
   "svs_14399-win1",
@@ -264,6 +283,9 @@
   "svs_14701#0",
   "svs_14710#0",
   "svs_14714",
+  "svs_14715-launch#1",
+  "svs_14715-launch#3",
+  "svs_14715-launch#6",
   "svs_14719",
   "svs_14719#0",
   "svs_14719-win1",
@@ -277,10 +299,12 @@
   "svs_14811",
   "svs_14846#0",
   "svs_14881",
+  "svs_14893#7",
   "svs_14904",
   "svs_14921#2",
   "svs_14935#0",
   "svs_14939",
+  "svs_14948#0",
   "svs_14956#0",
   "svs_14960#0",
   "svs_14961#0",
@@ -288,12 +312,17 @@
   "svs_15004",
   "svs_15041#3",
   "svs_15044-win1",
+  "svs_15051#0",
   "svs_15051-win1",
+  "svs_15072#0",
+  "svs_15089#7",
+  "svs_15089#8",
   "svs_15095#0",
   "svs_20261",
   "svs_20310#0",
   "svs_20315",
   "svs_20321",
+  "svs_20322#0",
   "svs_20395#0",
   "svs_20398#0",
   "svs_20404#0",
@@ -334,6 +363,7 @@
   "svs_4680",
   "svs_4749",
   "svs_4766",
+  "svs_4799#0",
   "svs_4807#0",
   "svs_4839",
   "svs_4887",
@@ -348,6 +378,7 @@
   "svs_5443",
   "svs_5479",
   "svs_5503#2",
+  "svs_5505#0",
   "svs_5532",
   "svs_5535",
   "svs_5538",
@@ -397,10 +428,7 @@
     },
     {
      "at": "और उसके computers",
-     "q": [
-      "close-up of a spacecraft with antenna and instruments",
-      "a satellite in orbit close-up"
-     ]
+     "gfx": "photo:V_proof_test"
     },
     {
      "at": "तीन साल पहले",
@@ -429,6 +457,10 @@
       "an elderly scientist in an interview",
       "archival footage of engineers in the 1970s"
      ]
+    },
+    {
+     "at": "और जिसके manual",
+     "gfx": "photo:V_in_florida"
     },
     {
      "at": "अगले पाँच महीने",
@@ -862,16 +894,13 @@
     {
      "at": "वहाँ solar panel",
      "q": [
-      "solar panels of a spacecraft in space",
-      "a satellite with solar panels"
+      "the Sun seen from far away in space",
+      "a faint distant Sun"
      ]
     },
     {
      "at": "इसलिए हर Voyager",
-     "q": [
-      "the Voyager spacecraft close-up",
-      "a spacecraft with long booms"
-     ]
+     "gfx": "photo:V_RTG"
     },
     {
      "at": "Plutonium धीरे धीरे",
@@ -1119,22 +1148,22 @@
     {
      "at": "दुनिया भर का संगीत",
      "q": [
-      "the Earth rotating in space",
-      "the blue Earth turning"
+      "Earth from the International Space Station",
+      "clouds over Earth from orbit"
      ]
     },
     {
      "at": "और पचपन भाषाओं में",
      "q": [
-      "the night side of Earth with city lights",
-      "Earth at night from space"
+      "Earth at night from the International Space Station",
+      "city lights at night from orbit"
      ]
     },
     {
      "at": "उनमें से एक हिंदी",
      "q": [
-      "India seen from space",
-      "South Asia from orbit"
+      "the Earth's horizon from orbit at sunrise",
+      "Earth from the International Space Station"
      ]
     },
     {
@@ -1445,10 +1474,7 @@
     },
     {
      "at": "लेकिन Voyager One के cameras",
-     "q": [
-      "a spacecraft turning its camera",
-      "the Voyager spacecraft in deep space"
-     ]
+     "gfx": "photo:V_speeds_art"
     }
    ],
    "c": [
@@ -1597,8 +1623,8 @@
     {
      "at": "बिजली बचाने के लिए",
      "q": [
-      "the Voyager spacecraft in deep space",
-      "a spacecraft camera platform"
+      "the Sun as a faint star seen from the edge of the solar system",
+      "a lone bright star in the dark"
      ]
     },
     {
@@ -1828,8 +1854,8 @@
     {
      "at": "उन्हें एक ऐसा निशान",
      "q": [
-      "instruments on a spacecraft",
-      "a spacecraft magnetometer boom"
+      "glowing plasma in space",
+      "an aurora seen from space"
      ]
     },
     {
@@ -1856,10 +1882,7 @@
     },
     {
      "at": "Voyager के एक instrument",
-     "q": [
-      "the Voyager spacecraft with its antennas",
-      "a spacecraft in space"
-     ]
+     "gfx": "photo:V_explorer_art:out"
     },
     {
      "at": "किसी बर्तन को बजाने",
@@ -2088,10 +2111,7 @@
     },
     {
      "at": "उसका radio सिर्फ़",
-     "q": [
-      "the Voyager spacecraft's big dish antenna",
-      "a spacecraft high-gain antenna"
-     ]
+     "gfx": "photo:V_dish_build"
     },
     {
      "at": "उसकी आवाज़ Earth",
@@ -2117,10 +2137,7 @@
     },
     {
      "at": "Chip ठीक नहीं",
-     "q": [
-      "the Voyager spacecraft alone in space",
-      "a probe in the dark"
-     ]
+     "gfx": "starfield"
     },
     {
      "at": "इसलिए team ने Voyager",
@@ -2129,8 +2146,8 @@
     {
      "at": "जवाब में Voyager ने",
      "q": [
-      "data streaming on screens",
-      "a radio telescope receiving signals"
+      "a radio telescope dish at night under the Milky Way",
+      "radio dishes under a starry sky"
      ]
     },
     {
@@ -2169,8 +2186,8 @@
     {
      "at": "इस बार साफ़",
      "q": [
-      "the Voyager spacecraft in deep space",
-      "a spacecraft with its dish toward Earth"
+      "a bright star shining in a dark star field",
+      "a star field with the Milky Way"
      ]
     },
     {
@@ -2365,8 +2382,8 @@
     {
      "at": "उसकी बिजली, हर साल",
      "q": [
-      "a spacecraft in the dark far from the Sun",
-      "a lone probe in deep space"
+      "a fading red star",
+      "a dim reddish star in space"
      ]
     },
     {
@@ -2379,15 +2396,15 @@
     {
      "at": "इसलिए team, एक एक",
      "q": [
-      "the Voyager spacecraft instruments",
-      "a spacecraft boom in space"
+      "stars slowly drifting in deep space",
+      "a dark star field"
      ]
     },
     {
      "at": "April, दो हज़ार छब्बीस में",
      "q": [
-      "the Voyager spacecraft instruments boom",
-      "a spacecraft magnetometer"
+      "a faint galaxy in a dark star field",
+      "a lonely star field"
      ]
     },
     {
@@ -2601,8 +2618,8 @@
      "at": "जिसमें एक दिल की",
      "opt": "hold",
      "q": [
-      "the Earth rotating from space",
-      "the blue Earth turning"
+      "Earth from the International Space Station",
+      "the Earth's limb from orbit"
      ]
     },
     {
@@ -2617,8 +2634,8 @@
      "at": "उसकी आवाज़ एक दिन",
      "opt": "hold",
      "q": [
-      "a spacecraft vanishing into darkness",
-      "a fading point of light"
+      "a fading point of light in a star field",
+      "stars streaming past"
      ]
     },
     {

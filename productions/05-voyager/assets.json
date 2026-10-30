@@ -271,5 +271,47 @@
   "must": [
    "Voyager 2 Launch"
   ]
+ },
+ "V_proof_test": {
+  "src": "nasa",
+  "q": "PIA21477",
+  "must": [
+   "Proof Test"
+  ]
+ },
+ "V_dish_build": {
+  "src": "nasa",
+  "q": "PIA21480",
+  "must": [
+   "Antenna Dish"
+  ]
+ },
+ "V_in_florida": {
+  "src": "nasa",
+  "q": "PIA21738",
+  "must": [
+   "Florida"
+  ]
+ },
+ "V_RTG": {
+  "src": "nasa",
+  "q": "PIA25782",
+  "must": [
+   "RTG"
+  ]
+ },
+ "V_speeds_art": {
+  "src": "nasa",
+  "q": "PIA26353",
+  "must": [
+   "Voyager"
+  ]
+ },
+ "India_night": {
+  "src": "nasa",
+  "q": "India-Pakistan Border at Night",
+  "must": [
+   "India"
+  ]
  }
 }

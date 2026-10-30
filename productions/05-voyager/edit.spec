@@ -14,7 +14,7 @@ C वो Earth से इतना दूर | It is so far from Earth that even
 V वो उनचास साल @ the Voyager spacecraft flying through space with its antenna toward Earth | a probe crossing a star field
 N वो उनचास साल @ hero | value=49 | unit=years and still flying | kicker=launched 1977 | land=उनचास | over
 C वो उनचास साल | It has been travelling for 49 years
-V और उसके computers @ close-up of a spacecraft with antenna and instruments | a satellite in orbit close-up
+G और उसके computers @ photo:V_proof_test
 K और उसके computers @ ITS WHOLE MEMORY [memory] / *LESS THAN ONE PHONE PHOTO* [photo]
 C और उसके computers | And all of its computers' memory is smaller than a single photo on today's phones
 V तीन साल पहले @ the Voyager spacecraft far from Earth with its dish | a spacecraft in deep space
@@ -26,6 +26,7 @@ V उसे ठीक करने @ a giant radio dish antenna turning | a larg
 C उसे ठीक करने | To fix it, engineers had to reason with a machine from that far away
 V एक ऐसी machine @ an elderly scientist in an interview | archival footage of engineers in the 1970s
 C एक ऐसी machine | A machine whose builders had mostly retired, and whose manuals were on paper
+G और जिसके manual @ photo:V_in_florida
 V अगले पाँच महीने @ the Voyager spacecraft alone in deep space | a spacecraft drifting far from the Sun {hold}
 N अगले पाँच महीने @ hero | value=5 | unit=months | kicker=the longest of the voyager team's lives | land=पाँच | over
 C अगले पाँच महीने | The next five months were the longest the Voyager team had known
@@ -91,9 +92,9 @@ C इतनी दूर, सूरज | That far out, sunlight grows very weak
 G Jupiter पर वो @ photo:V_Jupiter_Io
 N Jupiter पर वो @ scale | value=27 | unit=times weaker at jupiter | kicker=sunlight | land=सत्ताईस | over
 C Jupiter पर वो | At Jupiter it is about 27 times weaker than at Earth
-V वहाँ solar panel @ solar panels of a spacecraft in space | a satellite with solar panels
+V वहाँ solar panel @ the Sun seen from far away in space | a faint distant Sun
 C वहाँ solar panel | Solar panels can't work there
-V इसलिए हर Voyager @ the Voyager spacecraft close-up | a spacecraft with long booms
+G इसलिए हर Voyager @ photo:V_RTG
 K इसलिए हर Voyager @ INSIDE EVERY VOYAGER [Voyager] / *PLUTONIUM* [plutonium]
 C इसलिए हर Voyager | So inside each Voyager they put plutonium
 V Plutonium धीरे धीरे @ a glowing red star slowly pulsing | glowing hot gas in space
@@ -134,13 +135,13 @@ G इस record में Earth @ photo:Golden_record_prep
 C इस record में Earth | This record holds pictures of Earth
 V हवा, बारिश @ clouds and storms over Earth from space | Earth's weather seen from orbit
 C हवा, बारिश | Sounds like wind, rain, and a heartbeat
-V दुनिया भर का संगीत @ the Earth rotating in space | the blue Earth turning
+V दुनिया भर का संगीत @ Earth from the International Space Station | clouds over Earth from orbit
 N दुनिया भर का संगीत @ hero | value=90 | unit=minutes of music | kicker=from around the world | land=नब्बे | over
 C दुनिया भर का संगीत | Music from around the world, about 90 minutes of it
-V और पचपन भाषाओं में @ the night side of Earth with city lights | Earth at night from space
+V और पचपन भाषाओं में @ Earth at night from the International Space Station | city lights at night from orbit
 N और पचपन भाषाओं में @ hero | value=55 | unit=languages | kicker=greetings from earth in | land=पचपन | over
 C और पचपन भाषाओं में | And greetings from Earth in 55 languages
-V उनमें से एक हिंदी @ India seen from space | South Asia from orbit
+V उनमें से एक हिंदी @ the Earth's horizon from orbit at sunrise | Earth from the International Space Station
 C उनमें से एक हिंदी | One of them is in Hindi
 K धरती के वासियों @ "GREETINGS FROM THE *PEOPLE OF EARTH*" | kicker=the hindi greeting on the golden record
 C धरती के वासियों | "Greetings from the people of Earth"
@@ -205,14 +206,14 @@ K आज तक, इन दोनों @ *VOYAGER 2* [Two] / THE ONLY VISITOR [
 C आज तक, इन दोनों | To this day, Voyager 2 is the only spacecraft to have visited these two planets
 G Planets का काम @ photo:V_Uranus_crescent
 C Planets का काम | The planets were done
-V लेकिन Voyager One के cameras @ a spacecraft turning its camera | the Voyager spacecraft in deep space
+G लेकिन Voyager One के cameras @ photo:V_speeds_art
 C लेकिन Voyager One के cameras | But before Voyager 1's cameras switched off, it had one last picture to take
 
 == ch5
 V - @ the solar system seen from far beyond Pluto | the Sun as a bright star among others {hold}
 N छह अरब kilometre @ hero | value=6 | unit=billion km from earth | kicker=voyager 1 · 1990 | land=छह | over
 C - | By 1990, Voyager 1 was about 6 billion kilometres from Earth
-V बिजली बचाने के लिए @ the Voyager spacecraft in deep space | a spacecraft camera platform
+V बिजली बचाने के लिए @ the Sun as a faint star seen from the edge of the solar system | a lone bright star in the dark
 C बिजली बचाने के लिए | To save power, NASA was about to switch its cameras off for the last time
 G तब Carl Sagan ने @ photo:Carl_Sagan:out
 C तब Carl Sagan ने | Then Carl Sagan made an odd demand
@@ -262,7 +263,7 @@ V किनारे पर कोई board @ empty black space | a dark star fi
 C किनारे पर कोई board | There's no sign at the edge
 V और Voyager के cameras @ the Voyager spacecraft in deep space | a spacecraft among stars
 C और Voyager के cameras | And Voyager's cameras were off
-V उन्हें एक ऐसा निशान @ instruments on a spacecraft | a spacecraft magnetometer boom
+V उन्हें एक ऐसा निशान @ glowing plasma in space | an aurora seen from space
 C उन्हें एक ऐसा निशान | They needed a sign that Voyager itself could feel
 V जवाब सूरज ने ख़ुद @ a solar flare erupting | a huge eruption on the Sun {hold}
 C जवाब सूरज ने ख़ुद | The answer came from the Sun itself
@@ -270,7 +271,7 @@ V दो हज़ार बारह में, सूरज @ a coronal mass e
 C दो हज़ार बारह में, सूरज | In 2012, there was a huge blast on the Sun
 V उसकी लहर जब @ a solar storm travelling through the solar system | a wave from the Sun reaching a spacecraft
 C उसकी लहर जब | When its wave reached Voyager, the gas around Voyager rang like a bell
-V Voyager के एक instrument @ the Voyager spacecraft with its antennas | a spacecraft in space
+G Voyager के एक instrument @ photo:V_explorer_art:out
 C Voyager के एक instrument | One of Voyager's instruments heard that ringing
 V किसी बर्तन को बजाने @ waves rippling outward | ripples spreading through gas
 C किसी बर्तन को बजाने | Tapping a pot tells you whether it is empty or full
@@ -298,7 +299,7 @@ V - @ the Voyager spacecraft in deep space with its dish toward Earth | a spacec
 C - | Now back to three years ago, to the day Voyager began sending meaningless signals
 G Voyager से बात करना @ photo:DSN_DSS53_night
 C Voyager से बात करना | Talking to Voyager is not easy
-V उसका radio सिर्फ़ @ the Voyager spacecraft's big dish antenna | a spacecraft high-gain antenna
+G उसका radio सिर्फ़ @ photo:V_dish_build
 N उसका radio सिर्फ़ @ hero | value=22 | unit=watts | kicker=voyager's radio · about a fridge bulb | land=बाईस | over
 C उसका radio सिर्फ़ | Its radio is just 22 watts, about as strong as a fridge light bulb
 G उसकी आवाज़ Earth @ photo:Canberra_DSS43
@@ -312,11 +313,11 @@ C इसी हाल में | Working like this, engineers found that a chip
 G Memory का लगभग @ starfield
 N Memory का लगभग @ progress | value=3 | unit=% of memory lost | kicker=one broken chip | land=तीन | over
 C Memory का लगभग | About 3 percent of its memory was ruined
-V Chip ठीक नहीं @ the Voyager spacecraft alone in space | a probe in the dark
+G Chip ठीक नहीं @ starfield
 C Chip ठीक नहीं | The chip could not be fixed
 G इसलिए team ने Voyager @ photo:DSN_Madrid
 C इसलिए team ने Voyager | So the team sent Voyager a special command
-V जवाब में Voyager ने @ data streaming on screens | a radio telescope receiving signals
+V जवाब में Voyager ने @ a radio telescope dish at night under the Milky Way | radio dishes under a starry sky
 C जवाब में Voyager ने | In reply, Voyager sent back a copy of its entire memory
 V उस copy से team ने @ rows of radio antennas | an antenna array at night
 C उस copy से team ने | From that copy, the team saw which part of the program was stuck in the broken spot
@@ -330,7 +331,7 @@ V April, दो हज़ार चौबीस @ a radio dish antenna pointing 
 C April, दो हज़ार चौबीस | In April 2024, the fix was sent
 V दो दिन बाद @ a radio telescope under a starry sky | radio dishes at night
 C दो दिन बाद | Two days later, Voyager answered
-V इस बार साफ़ @ the Voyager spacecraft in deep space | a spacecraft with its dish toward Earth
+V इस बार साफ़ @ a bright star shining in a dark star field | a star field with the Milky Way
 K इस बार साफ़ @ *CLEAR* [साफ़] / AND MAKING SENSE [समझ]
 C इस बार साफ़ | Clear this time, and making sense
 V पाँच महीने बाद @ the Voyager spacecraft flying toward the stars | a probe crossing a star field {hold}
@@ -344,15 +345,15 @@ V - @ the Voyager spacecraft drifting in deep space | a spacecraft far from the 
 C - | But Voyager's biggest problem isn't a chip
 V वही plutonium @ a dim glowing ember | a fading red star
 C वही plutonium | The plutonium put in for power in 1977 is slowly running down
-V उसकी बिजली, हर साल @ a spacecraft in the dark far from the Sun | a lone probe in deep space
+V उसकी बिजली, हर साल @ a fading red star | a dim reddish star in space
 N उसकी बिजली, हर साल @ hero | value=4 | unit=watts less every year | kicker=voyager's power | land=चार | over
 C उसकी बिजली, हर साल | Its power drops by about 4 watts every year
 V दो हज़ार छब्बीस तक @ a fading light in deep space | a dim star in black space
 K दो हज़ार छब्बीस तक @ LESS THAN *HALF* [आधी] / OF ITS POWER LEFT [बिजली]
 C दो हज़ार छब्बीस तक | By 2026, Voyager has less than half of the power it started with
-V इसलिए team, एक एक @ the Voyager spacecraft instruments | a spacecraft boom in space
+V इसलिए team, एक एक @ stars slowly drifting in deep space | a dark star field
 C इसलिए team, एक एक | So the team is switching its instruments off, one by one
-V April, दो हज़ार छब्बीस में @ the Voyager spacecraft instruments boom | a spacecraft magnetometer
+V April, दो हज़ार छब्बीस में @ a faint galaxy in a dark star field | a lonely star field
 C April, दो हज़ार छब्बीस में | In April 2026, one more instrument was switched off
 V अब Voyager One के पास @ the Voyager spacecraft alone among the stars | a probe in a star field
 N अब Voyager One के पास @ hero | value=2 | unit=science instruments left | kicker=voyager 1 | land=दो | over
@@ -394,13 +395,13 @@ N और Voyager, उस तारे @ hero | value=1.6 | unit=light-years away
 C और Voyager, उस तारे | And even then, Voyager will pass 1.6 light-years from that star
 G लेकिन वो अपने साथ @ photo:Golden_record_prep:out
 C लेकिन वो अपने साथ | But it carries a golden record
-V जिसमें एक दिल की @ the Earth rotating from space | the blue Earth turning {hold}
+V जिसमें एक दिल की @ Earth from the International Space Station | the Earth's limb from orbit {hold}
 C जिसमें एक दिल की | Holding a heartbeat, Kesarbai's voice, and a message in Hindi
 K धरती के वासियों @ "GREETINGS FROM THE *PEOPLE OF EARTH*"
 C धरती के वासियों | "Greetings from the people of Earth"
 V जिस machine ने @ the Voyager spacecraft drifting toward the stars | a lone spacecraft among stars {hold}
 C जिस machine ने | The machine that once sent meaningless signals has set out forever, carrying humanity's longest message
-V उसकी आवाज़ एक दिन @ a spacecraft vanishing into darkness | a fading point of light {hold}
+V उसकी आवाज़ एक दिन @ a fading point of light in a star field | stars streaming past {hold}
 C उसकी आवाज़ एक दिन | Its voice will fall silent one day
 V लेकिन हमारा संदेश @ the Milky Way across the sky | a field of stars {hold}
 K लेकिन हमारा संदेश @ *OUR MESSAGE* [संदेश] / KEEPS GOING [चलता]
