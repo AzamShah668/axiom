@@ -1,0 +1,15 @@
+# generated or downloaded media and intermediates
+assets/
+audio/
+out/
+review/
+fonts/
+transcript.json
+sfx.json
+*.log
+__pycache__/
+remotion/node_modules
+remotion/build/
+remotion/out/
+remotion/public/
+remotion/src/edit.json
