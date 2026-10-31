@@ -586,7 +586,7 @@ def _progress(fr, spec, t, D):
             cv2.rectangle(bars, (x0, int(y)), (int(x0 + (seg - 4) * (fill - k)), int(y + 10)), (255, 215, 90), -1)
     cv2.addWeighted(bars, 0.9 * ease_out(t / 0.3), fr, 1, 0, fr)
     size = fit_size(str(spec["value"]) + "%", "Anton", spec.get("size", 200), W * 0.5)
-    lay = layer(txt + spec.get("unit", "%"), "Anton", size, None, grad=SILVER, glow=(GLOW, 16, 0.3), shadow=0.4)
+    lay = fit_layer(layer(txt + spec.get("unit", "%"), "Anton", size, None, grad=SILVER, glow=(GLOW, 16, 0.3), shadow=0.4))
     paste(fr, lay, W / 2, y - size * 0.55, op=ease_out(t / 0.2))
     for lab, xx in ((spec.get("left", ""), xa), (spec.get("right", ""), xb)):
         if lab:

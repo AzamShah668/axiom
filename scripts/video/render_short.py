@@ -91,7 +91,8 @@ class Lines:
         self.quiet = 10 ** (-45 / 20)  # 20 ms level under -45 dBFS = no speech
 
     def find(self, prefix):
-        hits = [i for i, c in enumerate(self.caps) if c["text"].strip('"').lower().startswith(prefix.lower())]
+        norm = lambda t: t.strip('"').lower().replace(",", "")  # noqa: E731  (prefixes are written without commas)
+        hits = [i for i, c in enumerate(self.caps) if norm(c["text"]).startswith(norm(prefix))]
         if len(hits) != 1:
             raise SystemExit(f"caption start {prefix!r} matches {len(hits)} lines: make it longer")
         return hits[0]

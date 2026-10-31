@@ -1221,7 +1221,8 @@ def gfx(name, t, D, sh):
             x = W * xf
             add_glow(f, x, y0, 22, (255, 255, 255), e)
             draw_text(f, nm, 40, (xf, 0.42), op=e, font="Montserrat", color=(240, 240, 240))
-            draw_text(f, val, 72 if k < 2 else 96, (xf, 0.66), op=e, color=(255, 205, 120))
+            vy = 0.75 if k == 1 and W < H * 1.4 else 0.66  # square Shorts frame: the Moon's and Sun's values would touch
+            draw_text(f, val, 72 if k < 2 else 96, (xf, vy), op=e, color=(255, 205, 120))
             ph = ((p - t0) * 1.6) % 1.0  # a pulse of light running home
             bx = x + (xe - x) * ph
             add_glow(f, bx, y0, 14, (255, 230, 160), e * 0.9)
