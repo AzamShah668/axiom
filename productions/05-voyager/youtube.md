@@ -1,6 +1,6 @@
 # YouTube upload: Production 05 (Voyager 1)
 
-**Do not upload yet** (owner, 2026-10-30): video 04 goes up first. Publish on or just before **18 November 2026** (Voyager 1 is one light-day from Earth that day). Upload **private**
+**Uploaded 2026-10-31, scheduled** (owner): https://youtu.be/dhLf0_YjElc, private until it goes public on **1 Nov 2026, 12:00 IST** (06:30 UTC). Uploaded before video 04 at the owner's word. No thumbnail yet (the owner adds it). No CC track. The credits comment could not be posted (the token has no comment permission, 403): post `credits_full.txt` as a comment and pin it after 12:00.
 first; the owner publishes. No thumbnail (the owner makes it). CC track: the owner's caption decision is pending, so
 upload without `--captions` unless the owner says otherwise.
 `python scripts/youtube/upload_youtube.py upload work/05-voyager/out/05-voyager-1440p.mp4 productions/05-voyager/youtube.md --privacy private` (upload the 1440p copy: YouTube gives 1440p uploads its better encoding)
