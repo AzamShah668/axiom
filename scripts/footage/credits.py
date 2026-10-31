@@ -5,7 +5,9 @@
 ESO, ESA/Hubble and ESA/Webb footage is CC BY 4.0 (credit + licence link); NASA SVS footage is credited to
 NASA's Goddard Space Flight Center. Kevin MacLeod music is CC BY 4.0 and needs the exact title list.
 """
-import argparse, json, os, re
+import argparse, json, os, re, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "video"))
+import render_v3  # noqa: E402
 
 
 def title_case(text):
@@ -37,6 +39,8 @@ def main():
     edit = json.load(open(a.edit))
     by, arch = {}, {}
     for it in cl["items"]:
+        if render_v3.own_gfx(it):  # our own graphics show no footage: their shot is an unseen placeholder
+            continue
         s = src[it["clip"]]
         if s.get("archival"):  # real archive footage and recordings: named one by one
             arch[s["title"]] = s.get("credit") or ARCHIVE.get(s["source"], s["source"])
@@ -56,6 +60,11 @@ def main():
         cred = json.load(open(a.assets))
         lines.append("Image credits (graphics):")
         lines += [f"- {cred[i]}" for i in imgs if i in cred]
+    stems = sorted({it["gfx"].split(":")[1] for it in cl["items"] if str(it.get("gfx", "")).startswith("photo:")})
+    pc = os.path.join(os.path.dirname(a.assets), "photos", "credits.json") if a.assets else ""
+    if stems and os.path.exists(pc):  # photos of people and things (G photo:<stem>), fetched by fetch_assets.py
+        cred = json.load(open(pc))
+        lines.append("Photos: " + "; ".join(cred.get(k, f"{k} (CREDIT_TBD)") for k in stems) + ".")
     lines.append("Graphics and animation: original.")
     tracks = [m["track"].rsplit(".", 1)[0].replace("_", " ") for m in edit.get("music", [])]
     if tracks:

@@ -25,6 +25,9 @@ without `--thumbnail`. `scripts/video/thumbnail.py` stays only for when the owne
   - NASA footage is credited to NASA's Goddard Space Flight Center
   - archive footage and recordings are named one by one ("Archive footage and recordings: …" from
     `credits.py`); add audio-only recordings from bites.json by hand (credit + licence)
+- **Length:** YouTube refuses a description over 5,000 characters (video 05's itemised credits made 7,082). Keep the
+  footage, CC BY and music credits in the description; put the item-by-item archive, recording and photo lists in
+  `credits_full.txt` (the pinned comment, up to 10,000 characters) and say so in one line.
 - **Tags:** topic in English and Hindi-search forms ("dark matter hindi", "hindi documentary", "space
   documentary hindi"), plus key names from the script.
 - **Chapters:** list `0:00 Intro` plus each card's start time (the cutlist's card items, `t0`) as YouTube chapters.

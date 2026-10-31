@@ -1,0 +1,2752 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "title": {
+  "kicker": "farthest from home",
+  "main": "Voyager 1"
+ },
+ "cards": {
+  "ch1": [
+   "",
+   "A LINE-UP ONCE IN *175 YEARS*"
+  ],
+  "ch2": [
+   "",
+   "*TWO* SHIPS, ONE CHANCE"
+  ],
+  "ch3": [
+   "",
+   "A MESSAGE FOR *ANYONE*"
+  ],
+  "ch4": [
+   "",
+   "WORLDS NOBODY *EXPECTED*"
+  ],
+  "ch5": [
+   "",
+   "ONE LAST LOOK *BACK*"
+  ],
+  "ch6": [
+   "",
+   "BEYOND THE SUN'S *BUBBLE*"
+  ],
+  "ch7": [
+   "",
+   "A REPAIR *24 BILLION KM* AWAY"
+  ],
+  "ch8": [
+   "",
+   "THE POWER IS *RUNNING OUT*"
+  ]
+ },
+ "count_total": 8,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "ch1",
+   "track": "Long_Note_Two.mp3"
+  },
+  {
+   "from": "ch3",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "ch5",
+   "track": "Long_Note_One.mp3"
+  },
+  {
+   "from": "ch6",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "ch7",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "ch8",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "ending",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "a lone spacecraft far away among stars"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {
+  "opening/1": "arc_voyager_anim#0",
+  "opening/10": "arc_stone2011#0",
+  "ch1/10": "svs_4139-v1path#1",
+  "ch1/16": "svs_4139-v1path#2",
+  "ch2/14": "arc_launch1977#0",
+  "ch2/15": "arc_titan_centaur#0",
+  "ch3/4": "arc_golden_record#0",
+  "ch4/3": "svs_30706-io#0",
+  "ch4/16": "svs_4139-v1path#3",
+  "ch5/8": "arc_family_portrait#0",
+  "ch6/4": "svs_20363-helio#0",
+  "ch6/18": "svs_13544-pull#0",
+  "ch8/12": "arc_stone2019#0",
+  "ending/13": "arc_saturn_flyby#0"
+ },
+ "ban": [
+  "esahubble_heic1711a#0",
+  "esahubble_heic1803c#0",
+  "esahubble_heic1803c#1",
+  "esahubble_heic1807c",
+  "esahubble_heic1817b#0",
+  "esahubble_heic1819a#0",
+  "esahubble_heic2013b#0",
+  "esahubble_heic2016a#0",
+  "esahubble_heic2018a",
+  "esahubble_heic2102a#0",
+  "esahubble_heic2108d#0",
+  "esahubble_heic2208b#0",
+  "esahubble_heic2603b#0",
+  "esahubble_heic2605b",
+  "esahubble_hubble_earth_4k_exploded",
+  "esahubble_potw2423a",
+  "esahubble_potw2542a#0",
+  "esahubble_v-r-aquarii_2#0",
+  "esawebb_potm2209a#0",
+  "esawebb_potm2509a#0",
+  "esawebb_potm2511a#0",
+  "esawebb_weic2219b#1",
+  "esawebb_weic2324b#0",
+  "esawebb_weic2517c#0",
+  "esawebb_weic2612c#0",
+  "eso_ExTrA_exterior3#0",
+  "eso_adaptiveopticsandmask#0",
+  "eso_alma-array-uhd1",
+  "eso_alma-array-uhd4",
+  "eso_ann24014a#0",
+  "eso_assembly-1-mtr-01-cc-am_iris2#0",
+  "eso_cs0004d",
+  "eso_cs0004f",
+  "eso_cs0010a",
+  "eso_eltsegtimelapse12m#0",
+  "eso_elttrailer-notext#2",
+  "eso_eso1134b#0",
+  "eso_eso1151e#0",
+  "eso_eso1422b#0",
+  "eso_eso1509a#0",
+  "eso_eso1601a#0",
+  "eso_eso1606b",
+  "eso_eso1614a",
+  "eso_eso1637a#0",
+  "eso_eso1641a#0",
+  "eso_eso1701c#0",
+  "eso_eso1708c#0",
+  "eso_eso1709b#0",
+  "eso_eso1709c#0",
+  "eso_eso1719a",
+  "eso_eso1729c#0",
+  "eso_eso1741b#0",
+  "eso_eso1813h#0",
+  "eso_eso1814b#0",
+  "eso_eso1817b",
+  "eso_eso1821b#0",
+  "eso_eso1824b#0",
+  "eso_eso1825c#0",
+  "eso_eso1825f#0",
+  "eso_eso1835a#2",
+  "eso_eso1837d",
+  "eso_eso1841b#0",
+  "eso_eso1907o",
+  "eso_eso1914c#0",
+  "eso_eso1919c#0",
+  "eso_eso1920d#0",
+  "eso_eso2002b#0",
+  "eso_eso2009a",
+  "eso_eso2011a#2",
+  "eso_eso2011b",
+  "eso_eso2013a",
+  "eso_eso2014a#3",
+  "eso_eso2110c#0",
+  "eso_eso2110d#0",
+  "eso_eso2110f#0",
+  "eso_eso2110g#0",
+  "eso_eso2111c#0",
+  "eso_eso2112b#0",
+  "eso_eso2112c#0",
+  "eso_eso2112d#0",
+  "eso_eso2116a",
+  "eso_eso2116c",
+  "eso_eso2117a",
+  "eso_eso2117b#0",
+  "eso_eso2120c",
+  "eso_eso2205b#0",
+  "eso_eso2208-eht-mwh#0",
+  "eso_eso2305a#5",
+  "eso_eso2314c#0",
+  "eso_eso2316a",
+  "eso_eso2405a",
+  "eso_eso2408c",
+  "eso_eso2502d#0",
+  "eso_eso2507a",
+  "eso_eso2508b",
+  "eso_eso2508c",
+  "eso_eso2510c",
+  "eso_eso2513a#0",
+  "eso_eso2519c#0",
+  "eso_eso2603a",
+  "eso_eso2606a#1",
+  "eso_eso2606c#0",
+  "eso_eso2609b#0",
+  "eso_eso2612d#0",
+  "eso_eso_astro_at_home",
+  "eso_esocast78d#0",
+  "eso_esocast82b#0",
+  "eso_esopia00064sites#0",
+  "eso_lasillatimelapseeulerntt#0",
+  "eso_mars_4k#0",
+  "eso_moon_evolution_p1#0",
+  "eso_potw2443a",
+  "eso_potw2508a",
+  "eso_rossiter-mclaughlin#0",
+  "eso_scales_stars",
+  "eso_uhd-cm-vlt2014-2#0",
+  "eso_uhd_photogr5_2014#0",
+  "eso_uhd_vlt6_2014#0",
+  "eso_wotu-supernovae-win2",
+  "eso_wotu-supernovae-win3",
+  "nasa_webb-launch#2",
+  "svs_10529-cobe89#0",
+  "svs_10529-cobe89#2",
+  "svs_10790-bubbles#0",
+  "svs_12019-win1#0",
+  "svs_12019-win2#0",
+  "svs_12034",
+  "svs_12605#0",
+  "svs_12605-win2#0",
+  "svs_12605-win3#1",
+  "svs_12643",
+  "svs_12726#0",
+  "svs_12726#1",
+  "svs_12854",
+  "svs_12854#0",
+  "svs_12854-win1",
+  "svs_12854-win1#0",
+  "svs_12854-win2",
+  "svs_12854-win3",
+  "svs_12854-win3#0",
+  "svs_12994-win1",
+  "svs_13078#0",
+  "svs_13483#1",
+  "svs_13553",
+  "svs_13619#1",
+  "svs_13620",
+  "svs_13641#1",
+  "svs_13676",
+  "svs_13703#1",
+  "svs_13778#0",
+  "svs_13789",
+  "svs_13955#0",
+  "svs_13991#0",
+  "svs_13994",
+  "svs_14051#0",
+  "svs_14051#1",
+  "svs_14103#0",
+  "svs_14163#0",
+  "svs_14309#0",
+  "svs_14347#7",
+  "svs_14355-win1#0",
+  "svs_14355-win2",
+  "svs_14399",
+  "svs_14399-win1",
+  "svs_14399-win2",
+  "svs_14399-win3",
+  "svs_14399-win3#0",
+  "svs_14402",
+  "svs_14434",
+  "svs_14434-win1",
+  "svs_14434-win2",
+  "svs_14531#0",
+  "svs_14649",
+  "svs_14666#0",
+  "svs_14666#3",
+  "svs_14691#0",
+  "svs_14701#0",
+  "svs_14710#0",
+  "svs_14714",
+  "svs_14715-launch",
+  "svs_14715-launch#1",
+  "svs_14715-launch#3",
+  "svs_14715-launch#6",
+  "svs_14715-launch#7",
+  "svs_14719",
+  "svs_14719#0",
+  "svs_14719-win1",
+  "svs_14719-win2",
+  "svs_14719-win3",
+  "svs_14747#0",
+  "svs_14759#1",
+  "svs_14761#0",
+  "svs_14762",
+  "svs_14768",
+  "svs_14802",
+  "svs_14811",
+  "svs_14846#0",
+  "svs_14881",
+  "svs_14893#7",
+  "svs_14896#7",
+  "svs_14904",
+  "svs_14921#2",
+  "svs_14935#0",
+  "svs_14939",
+  "svs_14948#0",
+  "svs_14956#0",
+  "svs_14960#0",
+  "svs_14961#0",
+  "svs_14997",
+  "svs_15004",
+  "svs_15041#3",
+  "svs_15044-win1",
+  "svs_15051#0",
+  "svs_15051-win1",
+  "svs_15072#0",
+  "svs_15089#7",
+  "svs_15089#8",
+  "svs_15095#0",
+  "svs_20261",
+  "svs_20310#0",
+  "svs_20315",
+  "svs_20321",
+  "svs_20322#0",
+  "svs_20395#0",
+  "svs_20398#0",
+  "svs_20404#0",
+  "svs_20414#0",
+  "svs_30020#0",
+  "svs_30991",
+  "svs_31265",
+  "svs_31308",
+  "svs_31323",
+  "svs_31346#0",
+  "svs_31350",
+  "svs_31361#0",
+  "svs_31365#0",
+  "svs_31368#0",
+  "svs_31376#0",
+  "svs_31399",
+  "svs_31400",
+  "svs_4139",
+  "svs_4140",
+  "svs_4141",
+  "svs_4142",
+  "svs_4143",
+  "svs_4144",
+  "svs_4145",
+  "svs_4392",
+  "svs_4557",
+  "svs_4557#0",
+  "svs_4580#0",
+  "svs_4594",
+  "svs_4645",
+  "svs_4645-win1",
+  "svs_4645-win2",
+  "svs_4645-win3",
+  "svs_4646",
+  "svs_4646-win1",
+  "svs_4646-win1#0",
+  "svs_4646-win2",
+  "svs_4646-win3",
+  "svs_4649#0",
+  "svs_4680",
+  "svs_4749",
+  "svs_4766",
+  "svs_4799#0",
+  "svs_4807#0",
+  "svs_4839",
+  "svs_4887",
+  "svs_4996",
+  "svs_5157",
+  "svs_5157-win1",
+  "svs_5157-win2",
+  "svs_5157-win3",
+  "svs_5273#0",
+  "svs_5424",
+  "svs_5429",
+  "svs_5443",
+  "svs_5479",
+  "svs_5503#2",
+  "svs_5505#0",
+  "svs_5532",
+  "svs_5535",
+  "svs_5538",
+  "svs_5552#0",
+  "svs_5555",
+  "svs_5567",
+  "svs_5587",
+  "svs_5588",
+  "svs_5622",
+  "svs_5627#0",
+  "svs_5673",
+  "svs_5686"
+ ],
+ "crops": {},
+ "exclude": {},
+ "channel": {
+  "dur": 3.2,
+  "gfx": "channel"
+ },
+ "sections": {
+  "opening": {
+   "v": [
+    {
+     "at": null,
+     "gfx": "photo:V_explorer_art"
+    },
+    {
+     "at": "Voyager One",
+     "q": [
+      "the Voyager spacecraft unfolding in space",
+      "a spacecraft with a large white dish"
+     ]
+    },
+    {
+     "at": "वो Earth से इतना दूर",
+     "q": [
+      "flying away from the Sun out of the solar system",
+      "zooming out from Earth past the planets"
+     ]
+    },
+    {
+     "at": "वो उनचास साल",
+     "q": [
+      "the Voyager spacecraft flying through space with its antenna toward Earth",
+      "a probe crossing a star field"
+     ]
+    },
+    {
+     "at": "और उसके computers",
+     "gfx": "photo:V_proof_test"
+    },
+    {
+     "at": "तीन साल पहले",
+     "gfx": "photo:V_two_travelers"
+    },
+    {
+     "at": "एक ही pattern",
+     "q": [
+      "a radio telescope dish pointing at the sky at night",
+      "radio antenna under a starry sky"
+     ]
+    },
+    {
+     "at": "उसे ठीक करने",
+     "q": [
+      "a giant radio dish antenna turning",
+      "a large antenna dish against the sky"
+     ]
+    },
+    {
+     "at": "एक ऐसी machine",
+     "opt": "hold",
+     "q": [
+      "an elderly scientist in an interview",
+      "archival footage of engineers in the 1970s"
+     ]
+    },
+    {
+     "at": "और जिसके manual",
+     "gfx": "photo:V_in_florida"
+    },
+    {
+     "at": "अगले पाँच महीने",
+     "opt": "hold",
+     "q": [
+      "the Voyager spacecraft alone in deep space",
+      "a spacecraft drifting far from the Sun"
+     ]
+    },
+    {
+     "at": "लेकिन इस कहानी का",
+     "opt": "hold",
+     "q": [
+      "the Sun as a bright star seen from the edge of the solar system",
+      "a faint star in black space"
+     ]
+    },
+    {
+     "at": "इंसान की बनाई ये चीज़",
+     "q": [
+      "flight out of the solar system into interstellar space",
+      "stars rushing past in deep space"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Of everything humans have ever made, the farthest is one small spacecraft"
+    },
+    {
+     "at": "Voyager One",
+     "text": "Voyager 1"
+    },
+    {
+     "at": "वो Earth से इतना दूर",
+     "text": "It is so far from Earth that even light needs a whole day to reach it"
+    },
+    {
+     "at": "वो उनचास साल",
+     "text": "It has been travelling for 49 years"
+    },
+    {
+     "at": "और उसके computers",
+     "text": "And all of its computers' memory is smaller than a single photo on today's phones"
+    },
+    {
+     "at": "तीन साल पहले",
+     "text": "Three years ago, this machine suddenly started sending meaningless signals"
+    },
+    {
+     "at": "एक ही pattern",
+     "text": "The same pattern, over and over"
+    },
+    {
+     "at": "उसे ठीक करने",
+     "text": "To fix it, engineers had to reason with a machine from that far away"
+    },
+    {
+     "at": "एक ऐसी machine",
+     "text": "A machine whose builders had mostly retired, and whose manuals were on paper"
+    },
+    {
+     "at": "अगले पाँच महीने",
+     "text": "The next five months were the longest the Voyager team had known"
+    },
+    {
+     "at": "लेकिन इस कहानी का",
+     "text": "But the biggest question of this story is still open"
+    },
+    {
+     "at": "इंसान की बनाई ये चीज़",
+     "text": "How did this human-made thing get so far..."
+    },
+    {
+     "at": "और जब इसकी आवाज़",
+     "text": "...and when its voice falls silent forever, what will go with it?"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "Voyager One",
+     "lines": [
+      {
+       "text": "*VOYAGER 1*",
+       "at": "Voyager One"
+      }
+     ],
+     "kicker": "the farthest thing humans ever made"
+    },
+    {
+     "at": "और उसके computers",
+     "lines": [
+      {
+       "text": "ITS WHOLE MEMORY",
+       "at": "memory"
+      },
+      {
+       "text": "*LESS THAN ONE PHONE PHOTO*",
+       "at": "photo"
+      }
+     ]
+    },
+    {
+     "at": "एक ही pattern",
+     "lines": [
+      {
+       "text": "THE SAME PATTERN",
+       "at": "pattern"
+      },
+      {
+       "text": "*AGAIN AND AGAIN*",
+       "at": "बार"
+      }
+     ]
+    },
+    {
+     "at": "इंसान की बनाई ये चीज़",
+     "lines": [
+      {
+       "text": "HOW DID IT GET",
+       "at": "बनाई"
+      },
+      {
+       "text": "*THIS FAR?*",
+       "at": "कैसे"
+      }
+     ]
+    },
+    {
+     "at": "और जब इसकी आवाज़",
+     "lines": [
+      {
+       "text": "WHAT WILL IT",
+       "at": "आवाज़"
+      },
+      {
+       "text": "*CARRY AWAY?*",
+       "at": "जाएगा"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "पूरा एक दिन",
+     "num": {
+      "template": "hero",
+      "value": "1",
+      "unit": "day for its light",
+      "kicker": "so far that even light needs",
+      "land": "एक",
+      "dur": "2.4"
+     }
+    },
+    {
+     "at": "वो उनचास साल",
+     "num": {
+      "template": "hero",
+      "value": "49",
+      "unit": "years and still flying",
+      "kicker": "launched 1977",
+      "land": "उनचास"
+     }
+    },
+    {
+     "at": "अगले पाँच महीने",
+     "num": {
+      "template": "hero",
+      "value": "5",
+      "unit": "months",
+      "kicker": "the longest of the voyager team's lives",
+      "land": "पाँच"
+     }
+    }
+   ]
+  },
+  "ch1": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the planets of the solar system orbiting the Sun",
+      "the outer planets Jupiter and Saturn"
+     ]
+    },
+    {
+     "at": "तब तक Jupiter",
+     "gfx": "photo:V_Jupiter_GRS"
+    },
+    {
+     "at": "Saturn, Uranus",
+     "gfx": "photo:V_Saturn"
+    },
+    {
+     "at": "और Neptune",
+     "gfx": "photo:V_Neptune"
+    },
+    {
+     "at": "मुश्किल थी दूरी",
+     "q": [
+      "flight away from the Sun through the solar system",
+      "the vast distance between planets"
+     ]
+    },
+    {
+     "at": "सीधा Neptune तक",
+     "gfx": "orbits"
+    },
+    {
+     "at": "इतने साल तक",
+     "q": [
+      "a spacecraft drifting in the dark of deep space",
+      "a lone spacecraft far from the Sun"
+     ]
+    },
+    {
+     "at": "तब NASA की JPL",
+     "opt": "hold",
+     "q": [
+      "Voyager trajectory animation",
+      "the planets' orbits animation"
+     ]
+    },
+    {
+     "at": "उन्होंने देखा",
+     "opt": "hold",
+     "q": [
+      "the planets lining up on one side of the Sun",
+      "planets orbiting the Sun animation"
+     ]
+    },
+    {
+     "at": "ऐसा मौक़ा लगभग",
+     "q": [
+      "the solar system seen from above with planet orbits",
+      "the Sun and the planets from far away"
+     ]
+    },
+    {
+     "at": "और इस line का",
+     "q": [
+      "a spacecraft approaching a giant planet",
+      "a probe flying past Jupiter"
+     ]
+    },
+    {
+     "at": "जब कोई spacecraft",
+     "gfx": "gravity_assist"
+    },
+    {
+     "at": "एक planet से दूसरे",
+     "q": [
+      "Voyager trajectory through the outer solar system",
+      "spacecraft path between planets animation"
+     ]
+    },
+    {
+     "at": "इस तरह Neptune का",
+     "q": [
+      "the planet Neptune in blue",
+      "Neptune seen from a spacecraft"
+     ]
+    },
+    {
+     "at": "अगर ये मौक़ा",
+     "q": [
+      "the planets orbiting the Sun in time-lapse",
+      "planets moving in their orbits"
+     ]
+    },
+    {
+     "at": "NASA ने ये मौक़ा",
+     "gfx": "photo:Voyager_science_meeting"
+    }
+   ],
+   "c": [
+    {
+     "at": "उन्नीस सौ पैंसठ",
+     "text": "1965",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "This story begins in 1965"
+    },
+    {
+     "at": "तब तक Jupiter",
+     "text": "Until then, Jupiter, Saturn, Uranus and Neptune, the four giant planets, were a mystery"
+    },
+    {
+     "at": "मुश्किल थी दूरी",
+     "text": "The problem was distance"
+    },
+    {
+     "at": "सीधा Neptune तक",
+     "text": "Flying straight to Neptune would take about 30 years"
+    },
+    {
+     "at": "इतने साल तक",
+     "text": "No machine, it seemed, could keep working that long"
+    },
+    {
+     "at": "तब NASA की JPL",
+     "text": "Then Gary Flandro, a young student working at NASA's JPL, worked out the motions of the planets"
+    },
+    {
+     "at": "उन्होंने देखा",
+     "text": "He saw that between 1976 and 1979, all four planets would line up in a special way"
+    },
+    {
+     "at": "ऐसा मौक़ा लगभग",
+     "text": "A chance like that comes about once every 175 years"
+    },
+    {
+     "at": "और इस line का",
+     "text": "And this line-up had an amazing advantage"
+    },
+    {
+     "at": "जब कोई spacecraft",
+     "text": "When a spacecraft passes a planet, the planet's gravity pulls it and flings it onward"
+    },
+    {
+     "at": "बिल्कुल वैसे",
+     "text": "Just as a cricket ball speeds up off a swinging bat"
+    },
+    {
+     "at": "एक planet से दूसरे",
+     "text": "Planet to planet, each time a little more speed"
+    },
+    {
+     "at": "इस तरह Neptune का",
+     "text": "That cut the trip to Neptune from 30 years to just 12"
+    },
+    {
+     "at": "अगर ये मौक़ा",
+     "text": "Had they missed it, the next chance would come around 2150"
+    },
+    {
+     "at": "NASA ने ये मौक़ा",
+     "text": "NASA did not miss it"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "सीधा Neptune तक",
+     "num": {
+      "template": "hero",
+      "value": "30",
+      "unit": "years",
+      "kicker": "flying straight to neptune",
+      "land": "तीस"
+     }
+    },
+    {
+     "at": "Gary Flandro",
+     "num": {
+      "template": "name",
+      "value": "GARY FLANDRO",
+      "sub": "student at NASA's JPL · 1965"
+     }
+    },
+    {
+     "at": "ऐसा मौक़ा लगभग",
+     "num": {
+      "template": "hero",
+      "value": "175",
+      "unit": "years",
+      "kicker": "a chance that comes once every",
+      "land": "पचहत्तर"
+     }
+    },
+    {
+     "at": "इस तरह Neptune का",
+     "num": {
+      "template": "line",
+      "value": "12",
+      "from": "30",
+      "unit": "years to neptune",
+      "kicker": "with the planets' help",
+      "land": "बारह"
+     }
+    },
+    {
+     "at": "अगर ये मौक़ा",
+     "num": {
+      "template": "hero",
+      "value": "2150",
+      "unit": "the next chance",
+      "kicker": "miss it, and wait until about",
+      "land": "पचास"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "उन्होंने देखा",
+     "lines": [
+      {
+       "text": "FOUR PLANETS",
+       "at": "चारों"
+      },
+      {
+       "text": "*IN ONE LINE*",
+       "at": "line"
+      }
+     ]
+    }
+   ]
+  },
+  "ch2": {
+   "v": [
+    {
+     "at": null,
+     "gfx": "photo:Voyager2_encapsulation"
+    },
+    {
+     "at": "अगर एक ख़राब",
+     "gfx": "photo:Voyager2_launch_b"
+    },
+    {
+     "at": "उनके नाम रखे गए",
+     "gfx": "photo:Voyager2_launch"
+    },
+    {
+     "at": "लेकिन एक बड़ा सवाल",
+     "q": [
+      "the Sun shining far away in black space",
+      "a distant Sun seen from the outer solar system"
+     ]
+    },
+    {
+     "at": "इतनी दूर, सूरज",
+     "q": [
+      "sunlight fading far from the Sun",
+      "the Sun as a small bright point from far away"
+     ]
+    },
+    {
+     "at": "Jupiter पर वो",
+     "gfx": "photo:V_Jupiter_Io"
+    },
+    {
+     "at": "वहाँ solar panel",
+     "q": [
+      "the Sun seen from far away in space",
+      "a faint distant Sun"
+     ]
+    },
+    {
+     "at": "इसलिए हर Voyager",
+     "gfx": "photo:V_RTG"
+    },
+    {
+     "at": "Plutonium धीरे धीरे",
+     "q": [
+      "a glowing red star slowly pulsing",
+      "glowing hot gas in space"
+     ]
+    },
+    {
+     "at": "और वो गर्मी",
+     "gfx": "photo:V_proof_test:out"
+    },
+    {
+     "at": "यही बिजली आज तक",
+     "q": [
+      "the Voyager spacecraft flying through deep space",
+      "a spacecraft among stars"
+     ]
+    },
+    {
+     "at": "और यही बिजली",
+     "q": [
+      "a spacecraft drifting into darkness",
+      "a lone probe far from the Sun"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ सतहत्तर में",
+     "opt": "hold",
+     "q": [
+      "archival film of a rocket launch in 1977",
+      "a rocket lifting off"
+     ]
+    },
+    {
+     "at": "दो हफ़्ते बाद",
+     "q": [
+      "archival film of a rocket rising",
+      "a rocket climbing into the sky"
+     ]
+    },
+    {
+     "at": "Voyager One बाद में",
+     "gfx": "photo:Voyager1_launch"
+    },
+    {
+     "at": "कुछ ही महीनों में",
+     "q": [
+      "Voyager trajectory animation",
+      "spacecraft path through the solar system"
+     ]
+    },
+    {
+     "at": "लेकिन इन दोनों में",
+     "q": [
+      "the Voyager spacecraft in deep space",
+      "a spacecraft among stars"
+     ]
+    },
+    {
+     "at": "एक संदेश, किसी",
+     "gfx": "starfield"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "There was one chance, so NASA built two spacecraft"
+    },
+    {
+     "at": "अगर एक ख़राब",
+     "text": "If one failed, the other would finish the job"
+    },
+    {
+     "at": "उनके नाम रखे गए",
+     "text": "They were named Voyager 1 and Voyager 2"
+    },
+    {
+     "at": "लेकिन एक बड़ा सवाल",
+     "text": "But one big question remained"
+    },
+    {
+     "at": "इतनी दूर, सूरज",
+     "text": "That far out, sunlight grows very weak"
+    },
+    {
+     "at": "Jupiter पर वो",
+     "text": "At Jupiter it is about 27 times weaker than at Earth"
+    },
+    {
+     "at": "वहाँ solar panel",
+     "text": "Solar panels can't work there"
+    },
+    {
+     "at": "इसलिए हर Voyager",
+     "text": "So inside each Voyager they put plutonium"
+    },
+    {
+     "at": "Plutonium धीरे धीरे",
+     "text": "Plutonium keeps giving off heat, like an ember that stays hot for years"
+    },
+    {
+     "at": "और वो गर्मी",
+     "text": "And that heat makes electricity"
+    },
+    {
+     "at": "यही बिजली आज तक",
+     "text": "That electricity keeps Voyager alive to this day"
+    },
+    {
+     "at": "और यही बिजली",
+     "text": "And that same electricity is slowly running out"
+    },
+    {
+     "at": "उन्नीस सौ सतहत्तर में",
+     "text": "In 1977, Voyager 2 flew first"
+    },
+    {
+     "at": "दो हफ़्ते बाद",
+     "text": "Two weeks later, Voyager 1"
+    },
+    {
+     "at": "Voyager One बाद में",
+     "text": "Voyager 1 left later, but it was given a shorter, faster path to Jupiter"
+    },
+    {
+     "at": "कुछ ही महीनों में",
+     "text": "Within months, it overtook Voyager 2"
+    },
+    {
+     "at": "लेकिन इन दोनों में",
+     "text": "But besides their science gear, both carried one more thing"
+    },
+    {
+     "at": "एक संदेश, किसी",
+     "text": "A message, for someone unknown"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "उनके नाम रखे गए",
+     "lines": [
+      {
+       "text": "*VOYAGER 1*",
+       "at": "One"
+      },
+      {
+       "text": "*VOYAGER 2*",
+       "at": "Two"
+      }
+     ]
+    },
+    {
+     "at": "इसलिए हर Voyager",
+     "lines": [
+      {
+       "text": "INSIDE EVERY VOYAGER",
+       "at": "Voyager"
+      },
+      {
+       "text": "*PLUTONIUM*",
+       "at": "plutonium"
+      }
+     ]
+    },
+    {
+     "at": "एक संदेश, किसी",
+     "lines": [
+      {
+       "text": "*A MESSAGE*",
+       "at": "संदेश"
+      },
+      {
+       "text": "FOR SOMEONE UNKNOWN",
+       "at": "अनजान"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "Jupiter पर वो",
+     "num": {
+      "template": "scale",
+      "value": "27",
+      "unit": "times weaker at jupiter",
+      "kicker": "sunlight",
+      "land": "सत्ताईस"
+     }
+    }
+   ]
+  },
+  "ch3": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a spacecraft leaving the solar system",
+      "flight past the outer planets into the dark"
+     ]
+    },
+    {
+     "at": "वो solar system से",
+     "opt": "hold",
+     "q": [
+      "stars drifting slowly in interstellar space",
+      "a star field in deep space"
+     ]
+    },
+    {
+     "at": "इसलिए astronomer Carl",
+     "gfx": "photo:Carl_Sagan"
+    },
+    {
+     "at": "एक सोने की परत",
+     "opt": "hold",
+     "q": [
+      "the golden record",
+      "a golden disc spinning"
+     ]
+    },
+    {
+     "at": "इस record में Earth",
+     "gfx": "photo:Golden_record_prep"
+    },
+    {
+     "at": "हवा, बारिश",
+     "q": [
+      "clouds and storms over Earth from space",
+      "Earth's weather seen from orbit"
+     ]
+    },
+    {
+     "at": "दुनिया भर का संगीत",
+     "gfx": "photo:Earth_blue_marble"
+    },
+    {
+     "at": "उनमें से एक हिंदी",
+     "gfx": "photo:Earth_black_marble_asia"
+    },
+    {
+     "at": "इस record में भारत",
+     "gfx": "photo:Golden_record"
+    },
+    {
+     "at": "हो सकता है",
+     "q": [
+      "stars drifting in deep space",
+      "a dark star field slowly moving"
+     ]
+    },
+    {
+     "at": "लेकिन ये record एक",
+     "q": [
+      "the Earth from space",
+      "the blue Earth turning"
+     ]
+    },
+    {
+     "at": "Space में न हवा",
+     "opt": "hold",
+     "q": [
+      "empty black space with distant stars",
+      "the silence of deep space"
+     ]
+    },
+    {
+     "at": "इसलिए ये तस्वीर",
+     "q": [
+      "a galaxy slowly rotating",
+      "the Milky Way across the sky"
+     ]
+    },
+    {
+     "at": "लेकिन इस संदेश के",
+     "gfx": "photo:V_Jupiter_GRS2"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Voyager's paths meant that after the planets, they would never come back"
+    },
+    {
+     "at": "वो solar system से",
+     "text": "They would leave the solar system and wander among the stars forever"
+    },
+    {
+     "at": "इसलिए astronomer Carl",
+     "text": "So astronomer Carl Sagan and his team decided to send a message with them"
+    },
+    {
+     "at": "एक सोने की परत",
+     "text": "A gold-plated record, like the gramophone records of the old days"
+    },
+    {
+     "at": "इस record में Earth",
+     "text": "This record holds pictures of Earth"
+    },
+    {
+     "at": "हवा, बारिश",
+     "text": "Sounds like wind, rain, and a heartbeat"
+    },
+    {
+     "at": "दुनिया भर का संगीत",
+     "text": "Music from around the world, about 90 minutes of it"
+    },
+    {
+     "at": "और पचपन भाषाओं में",
+     "text": "And greetings from Earth in 55 languages"
+    },
+    {
+     "at": "उनमें से एक हिंदी",
+     "text": "One of them is in Hindi"
+    },
+    {
+     "at": "धरती के वासियों",
+     "text": "\"Greetings from the people of Earth\""
+    },
+    {
+     "at": "इस record में भारत",
+     "text": "The record also carries a song from India"
+    },
+    {
+     "at": "सुरश्री Kesarbai",
+     "text": "Sung by Surshri Kesarbai Kerkar: raag Bhairavi, \"Jaat Kahan Ho\""
+    },
+    {
+     "at": "हो सकता है",
+     "text": "Perhaps no one will ever find it"
+    },
+    {
+     "at": "लेकिन ये record एक",
+     "text": "But the record is a picture of who humans were"
+    },
+    {
+     "at": "Space में न हवा",
+     "text": "In space there is no air, no water, no soil to wear it down"
+    },
+    {
+     "at": "इसलिए ये तस्वीर",
+     "text": "So this picture may survive, unchanged, for a billion years"
+    },
+    {
+     "at": "लेकिन इस संदेश के",
+     "text": "But before this message reached anyone, Voyager had a real job to do"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "इसलिए astronomer Carl",
+     "num": {
+      "template": "name",
+      "value": "CARL SAGAN",
+      "sub": "astronomer · led the Golden Record team · 1934-1996"
+     }
+    },
+    {
+     "at": "दुनिया भर का संगीत",
+     "num": {
+      "template": "hero",
+      "value": "90",
+      "unit": "minutes of music",
+      "kicker": "from around the world",
+      "land": "नब्बे"
+     }
+    },
+    {
+     "at": "और पचपन भाषाओं में",
+     "num": {
+      "template": "hero",
+      "value": "55",
+      "unit": "languages",
+      "kicker": "greetings from earth in",
+      "land": "पचपन"
+     }
+    },
+    {
+     "at": "सुरश्री Kesarbai",
+     "num": {
+      "template": "name",
+      "value": "KESARBAI KERKAR",
+      "sub": "singer · raag Bhairavi, \"Jaat Kahan Ho\""
+     }
+    },
+    {
+     "at": "इसलिए ये तस्वीर",
+     "num": {
+      "template": "hero",
+      "value": "1",
+      "unit": "billion years",
+      "kicker": "it may survive for",
+      "land": "अरब"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "एक सोने की परत",
+     "lines": [
+      {
+       "text": "*THE GOLDEN RECORD*",
+       "at": "एक सोने की परत"
+      }
+     ],
+     "kicker": "a gold-plated copper disc"
+    },
+    {
+     "at": "धरती के वासियों",
+     "lines": [
+      {
+       "text": "GREETINGS FROM",
+       "at": "वासियों"
+      },
+      {
+       "text": "*THE PEOPLE OF EARTH*",
+       "at": "नमस्कार"
+      }
+     ],
+     "kicker": "the hindi greeting on the golden record"
+    },
+    {
+     "at": "लेकिन ये record एक",
+     "lines": [
+      {
+       "text": "A PICTURE OF",
+       "at": "तस्वीर"
+      },
+      {
+       "text": "*WHO HUMANS WERE*",
+       "at": "कौन"
+      }
+     ]
+    }
+   ]
+  },
+  "ch4": {
+   "v": [
+    {
+     "at": null,
+     "gfx": "photo:V_Galilean"
+    },
+    {
+     "at": "March, उन्नीस सौ",
+     "opt": "hold",
+     "q": [
+      "Jupiter's clouds swirling in time-lapse",
+      "Jupiter's Great Red Spot"
+     ]
+    },
+    {
+     "at": "एक दिन, NASA की",
+     "q": [
+      "Jupiter's moon Io",
+      "the moon Io in front of Jupiter"
+     ]
+    },
+    {
+     "at": "उनका काम था",
+     "q": [
+      "stars in a star field",
+      "a field of stars"
+     ]
+    },
+    {
+     "at": "तभी उन्हें Io के",
+     "gfx": "photo:Io_Loki_plume"
+    },
+    {
+     "at": "वो एक ज्वालामुखी",
+     "gfx": "photo:V_Io_disk"
+    },
+    {
+     "at": "फिर आया Saturn",
+     "gfx": "photo:V_Saturn_rings"
+    },
+    {
+     "at": "उन्नीस सौ अस्सी में",
+     "gfx": "photo:V_Titan_night"
+    },
+    {
+     "at": "Titan के ऊपर",
+     "q": [
+      "the hazy atmosphere of Titan",
+      "Titan's thick orange atmosphere"
+     ]
+    },
+    {
+     "at": "लेकिन इस फ़ैसले की",
+     "q": [
+      "Saturn's rings close-up",
+      "a spacecraft passing Saturn"
+     ]
+    },
+    {
+     "at": "सारे planets, सूरज",
+     "q": [
+      "the planets orbiting the Sun in one flat plane",
+      "solar system orbits animation"
+     ]
+    },
+    {
+     "at": "Titan की gravity",
+     "q": [
+      "a spacecraft flying past a moon",
+      "a probe swinging past a planet"
+     ]
+    },
+    {
+     "at": "उसने Voyager One का",
+     "q": [
+      "Voyager 1's path rising out of the plane of the solar system",
+      "spacecraft trajectory animation"
+     ]
+    },
+    {
+     "at": "अब वो किसी और",
+     "q": [
+      "a spacecraft heading away into dark space",
+      "a lone probe leaving the planets"
+     ]
+    },
+    {
+     "at": "आगे का सफ़र",
+     "gfx": "photo:V_Miranda"
+    },
+    {
+     "at": "उन्नीस सौ छियासी में",
+     "gfx": "photo:V_Uranus"
+    },
+    {
+     "at": "उन्नीस सौ नवासी में",
+     "gfx": "photo:V_Neptune_clouds"
+    },
+    {
+     "at": "आज तक, इन दोनों",
+     "gfx": "photo:V_Triton"
+    },
+    {
+     "at": "Planets का काम",
+     "gfx": "photo:V_Uranus_crescent"
+    },
+    {
+     "at": "लेकिन Voyager One के cameras",
+     "gfx": "photo:V_speeds_art"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Until 1979, scientists thought the moons of the giant planets were just cold, dead rock"
+    },
+    {
+     "at": "March, उन्नीस सौ",
+     "text": "In March 1979, Voyager 1 reached Jupiter"
+    },
+    {
+     "at": "एक दिन, NASA की",
+     "text": "One day, NASA engineer Linda Morabito was looking at an image of Jupiter's moon Io"
+    },
+    {
+     "at": "उनका काम था",
+     "text": "Her job was to check Voyager's path using the stars"
+    },
+    {
+     "at": "तभी उन्हें Io के",
+     "text": "Then she saw a strange cloud at the edge of Io"
+    },
+    {
+     "at": "वो एक ज्वालामुखी",
+     "text": "It was a volcano, erupting at that moment"
+    },
+    {
+     "at": "Earth के बाहर",
+     "text": "The first active volcano ever found on any world beyond Earth"
+    },
+    {
+     "at": "फिर आया Saturn",
+     "text": "Then came Saturn"
+    },
+    {
+     "at": "उन्नीस सौ अस्सी में",
+     "text": "In 1980, Voyager 1 was sent close to Saturn's moon Titan"
+    },
+    {
+     "at": "Titan के ऊपर",
+     "text": "Titan has a thick blanket of air, and scientists wanted a close look"
+    },
+    {
+     "at": "लेकिन इस फ़ैसले की",
+     "text": "But that decision had a price"
+    },
+    {
+     "at": "सारे planets, सूरज",
+     "text": "All the planets circle the Sun on nearly the same flat path, like marbles rolling on a plate"
+    },
+    {
+     "at": "Titan की gravity",
+     "text": "Titan's gravity did what the planets had done before"
+    },
+    {
+     "at": "उसने Voyager One का",
+     "text": "It bent Voyager 1's path up, out of the plate"
+    },
+    {
+     "at": "अब वो किसी और",
+     "text": "Now it could never reach another planet"
+    },
+    {
+     "at": "आगे का सफ़र",
+     "text": "Voyager 2 made the rest of the journey alone"
+    },
+    {
+     "at": "उन्नीस सौ छियासी में",
+     "text": "Uranus in 1986, and Neptune in 1989"
+    },
+    {
+     "at": "आज तक, इन दोनों",
+     "text": "To this day, Voyager 2 is the only spacecraft to have visited these two planets"
+    },
+    {
+     "at": "Planets का काम",
+     "text": "The planets were done"
+    },
+    {
+     "at": "लेकिन Voyager One के cameras",
+     "text": "But before Voyager 1's cameras switched off, it had one last picture to take"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Linda Morabito",
+     "num": {
+      "template": "name",
+      "value": "LINDA MORABITO",
+      "sub": "navigation engineer · NASA JPL · 1979"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "Earth के बाहर",
+     "lines": [
+      {
+       "text": "THE FIRST",
+       "at": "बाहर"
+      },
+      {
+       "text": "*ACTIVE VOLCANO*",
+       "at": "दुनिया"
+      }
+     ],
+     "kicker": "ever found beyond earth"
+    },
+    {
+     "at": "सारे planets, सूरज",
+     "lines": [
+      {
+       "text": "ALL THE PLANETS",
+       "at": "planets"
+      },
+      {
+       "text": "*ON ONE FLAT PLANE*",
+       "at": "सपाट"
+      }
+     ]
+    },
+    {
+     "at": "आज तक, इन दोनों",
+     "lines": [
+      {
+       "text": "*VOYAGER 2*",
+       "at": "Two"
+      },
+      {
+       "text": "THE ONLY VISITOR",
+       "at": "अकेला"
+      }
+     ],
+     "kicker": "uranus · neptune"
+    }
+   ]
+  },
+  "ch5": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the solar system seen from far beyond Pluto",
+      "the Sun as a bright star among others"
+     ]
+    },
+    {
+     "at": "बिजली बचाने के लिए",
+     "q": [
+      "the Sun as a faint star seen from the edge of the solar system",
+      "a lone bright star in the dark"
+     ]
+    },
+    {
+     "at": "तब Carl Sagan ने",
+     "gfx": "photo:Carl_Sagan:out"
+    },
+    {
+     "at": "Camera को पीछे",
+     "q": [
+      "a spacecraft turning around in space",
+      "looking back toward the inner solar system"
+     ]
+    },
+    {
+     "at": "कई लोग इसके",
+     "q": [
+      "a spacecraft far from the Sun",
+      "the Voyager spacecraft in deep space"
+     ]
+    },
+    {
+     "at": "इतनी दूर से Earth",
+     "gfx": "photo:V_Earth_Moon"
+    },
+    {
+     "at": "आख़िर Sagan की बात",
+     "opt": "hold",
+     "q": [
+      "the Voyager family portrait of the planets in 1990"
+     ]
+    },
+    {
+     "at": "उस तस्वीर में",
+     "gfx": "photo:Pale_Blue_Dot"
+    },
+    {
+     "at": "वो हमारी Earth है",
+     "gfx": "photo:Pale_Blue_Dot_revisited"
+    },
+    {
+     "at": "हर इंसान, हर शहर",
+     "q": [
+      "the Earth from space slowly turning",
+      "Earth's night side with city lights"
+     ]
+    },
+    {
+     "at": "इसके कुछ ही देर बाद",
+     "gfx": "starfield"
+    },
+    {
+     "at": "ये उसकी आख़िरी",
+     "gfx": "photo:Family_portrait"
+    },
+    {
+     "at": "लेकिन Voyager का सबसे",
+     "q": [
+      "flight out of the solar system",
+      "stars streaming past"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "By 1990, Voyager 1 was about 6 billion kilometres from Earth"
+    },
+    {
+     "at": "बिजली बचाने के लिए",
+     "text": "To save power, NASA was about to switch its cameras off for the last time"
+    },
+    {
+     "at": "तब Carl Sagan ने",
+     "text": "Then Carl Sagan made an odd demand"
+    },
+    {
+     "at": "Camera को पीछे",
+     "text": "Turn the camera around, toward Earth"
+    },
+    {
+     "at": "कई लोग इसके",
+     "text": "Many were against it"
+    },
+    {
+     "at": "इतनी दूर से Earth",
+     "text": "A picture of Earth from that far was of no use to science"
+    },
+    {
+     "at": "आख़िर Sagan की बात",
+     "text": "In the end Sagan won, and Voyager looked back"
+    },
+    {
+     "at": "उस तस्वीर में",
+     "text": "In that picture, inside a ray of sunlight, is a tiny blue dot"
+    },
+    {
+     "at": "एक pixel से भी",
+     "text": "Smaller than a single pixel"
+    },
+    {
+     "at": "वो हमारी Earth है",
+     "text": "That is our Earth"
+    },
+    {
+     "at": "हर इंसान, हर शहर",
+     "text": "Every person, every city, every war ever fought, all on that one dot"
+    },
+    {
+     "at": "इसके कुछ ही देर बाद",
+     "text": "Soon after, Voyager's cameras were switched off, never to open again"
+    },
+    {
+     "at": "ये उसकी आख़िरी",
+     "text": "These were its last pictures"
+    },
+    {
+     "at": "लेकिन Voyager का सबसे",
+     "text": "But Voyager's longest journey had only just begun"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "छह अरब kilometre",
+     "num": {
+      "template": "hero",
+      "value": "6",
+      "unit": "billion km from earth",
+      "kicker": "voyager 1 · 1990",
+      "land": "छह"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "Camera को पीछे",
+     "lines": [
+      {
+       "text": "TURN THE CAMERA",
+       "at": "Camera"
+      },
+      {
+       "text": "*BACK TOWARD EARTH*",
+       "at": "Earth"
+      }
+     ]
+    },
+    {
+     "at": "उस तस्वीर में",
+     "lines": [
+      {
+       "text": "A TINY",
+       "at": "छोटा"
+      },
+      {
+       "text": "*BLUE DOT*",
+       "at": "नीला"
+      }
+     ],
+     "kicker": "the pale blue dot · 1990"
+    }
+   ]
+  },
+  "ch6": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the Sun's surface with flares",
+      "the Sun up close"
+     ]
+    },
+    {
+     "at": "वो हर पल",
+     "opt": "hold",
+     "q": [
+      "solar wind streaming out from the Sun",
+      "particles flowing from the Sun"
+     ]
+    },
+    {
+     "at": "इसे कहते हैं solar",
+     "gfx": "wind"
+    },
+    {
+     "at": "ये हवा सारे planets",
+     "opt": "hold",
+     "q": [
+      "the heliosphere bubble around the solar system",
+      "the Sun's bubble in space"
+     ]
+    },
+    {
+     "at": "जहाँ ये हवा रुक",
+     "gfx": "photo:V_magnetic_art"
+    },
+    {
+     "at": "उसके बाद शुरू",
+     "opt": "hold",
+     "q": [
+      "stars in deep interstellar space",
+      "a dense star field"
+     ]
+    },
+    {
+     "at": "Scientists के सामने",
+     "q": [
+      "a spacecraft far out in the dark",
+      "a lone probe at the edge of the solar system"
+     ]
+    },
+    {
+     "at": "किनारे पर कोई board",
+     "q": [
+      "empty black space",
+      "a dark star field"
+     ]
+    },
+    {
+     "at": "और Voyager के cameras",
+     "q": [
+      "the Voyager spacecraft in deep space",
+      "a spacecraft among stars"
+     ]
+    },
+    {
+     "at": "उन्हें एक ऐसा निशान",
+     "gfx": "starfield"
+    },
+    {
+     "at": "जवाब सूरज ने ख़ुद",
+     "opt": "hold",
+     "q": [
+      "a solar flare erupting",
+      "a huge eruption on the Sun"
+     ]
+    },
+    {
+     "at": "दो हज़ार बारह में, सूरज",
+     "q": [
+      "a coronal mass ejection blasting from the Sun",
+      "a solar eruption"
+     ]
+    },
+    {
+     "at": "उसकी लहर जब",
+     "opt": "hold",
+     "q": [
+      "a solar storm travelling through the solar system",
+      "a wave from the Sun reaching a spacecraft"
+     ]
+    },
+    {
+     "at": "Voyager के एक instrument",
+     "gfx": "photo:V_explorer_art:out"
+    },
+    {
+     "at": "किसी बर्तन को बजाने",
+     "q": [
+      "waves rippling outward",
+      "ripples spreading through gas"
+     ]
+    },
+    {
+     "at": "वैसे ही, इस गूँज",
+     "opt": "hold",
+     "q": [
+      "glowing gas clouds in space",
+      "interstellar gas"
+     ]
+    },
+    {
+     "at": "वो सूरज के बुलबुले",
+     "q": [
+      "dense gas between the stars",
+      "a nebula of gas"
+     ]
+    },
+    {
+     "at": "मतलब वो सूरज की",
+     "q": [
+      "the heliosphere seen from outside",
+      "the Sun's bubble in interstellar space"
+     ]
+    },
+    {
+     "at": "वो तारों के बीच की gas",
+     "q": [
+      "interstellar clouds of gas and dust",
+      "gas between the stars"
+     ]
+    },
+    {
+     "at": "दो हज़ार तेरह में",
+     "gfx": "photo:V_interstellar_art"
+    },
+    {
+     "at": "Voyager mission की project",
+     "gfx": "photo:Suzanne_Dodd"
+    },
+    {
+     "at": "#dodd",
+     "q": [
+      "bite:dodd"
+     ]
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "gfx": "photo:V_one_out_one_in"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "The Sun doesn't only give light"
+    },
+    {
+     "at": "वो हर पल",
+     "text": "Every moment it blows a wind of tiny particles out in all directions"
+    },
+    {
+     "at": "इसे कहते हैं solar",
+     "text": "It's called the solar wind"
+    },
+    {
+     "at": "ये हवा सारे planets",
+     "text": "This wind wraps all the planets in a huge bubble"
+    },
+    {
+     "at": "जहाँ ये हवा रुक",
+     "text": "Where the wind stops, the bubble ends"
+    },
+    {
+     "at": "उसके बाद शुरू",
+     "text": "Beyond it begins the space between the stars"
+    },
+    {
+     "at": "Interstellar space",
+     "text": "Interstellar space"
+    },
+    {
+     "at": "Scientists के सामने",
+     "text": "Scientists had a problem"
+    },
+    {
+     "at": "किनारे पर कोई board",
+     "text": "There's no sign at the edge"
+    },
+    {
+     "at": "और Voyager के cameras",
+     "text": "And Voyager's cameras were off"
+    },
+    {
+     "at": "उन्हें एक ऐसा निशान",
+     "text": "They needed a sign that Voyager itself could feel"
+    },
+    {
+     "at": "जवाब सूरज ने ख़ुद",
+     "text": "The answer came from the Sun itself"
+    },
+    {
+     "at": "दो हज़ार बारह में, सूरज",
+     "text": "In 2012, there was a huge blast on the Sun"
+    },
+    {
+     "at": "उसकी लहर जब",
+     "text": "When its wave reached Voyager, the gas around Voyager rang like a bell"
+    },
+    {
+     "at": "Voyager के एक instrument",
+     "text": "One of Voyager's instruments heard that ringing"
+    },
+    {
+     "at": "किसी बर्तन को बजाने",
+     "text": "Tapping a pot tells you whether it is empty or full"
+    },
+    {
+     "at": "वैसे ही, इस गूँज",
+     "text": "In the same way, the ringing told them how dense the gas was"
+    },
+    {
+     "at": "वो सूरज के बुलबुले",
+     "text": "It was about 40 times denser than the gas inside the Sun's bubble"
+    },
+    {
+     "at": "मतलब वो सूरज की",
+     "text": "So it wasn't the Sun's gas at all"
+    },
+    {
+     "at": "वो तारों के बीच की gas",
+     "text": "It was the gas between the stars"
+    },
+    {
+     "at": "दो हज़ार तेरह में",
+     "text": "In 2013 NASA announced that back in 2012, Voyager 1 had become the first human-made object in interstellar space"
+    },
+    {
+     "at": "Voyager mission की project",
+     "text": "Voyager's project manager, Suzanne Dodd, later explained what Voyager is doing out there"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "text": "In 2018, Voyager 2 got there too"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "इसे कहते हैं solar",
+     "lines": [
+      {
+       "text": "*SOLAR WIND*",
+       "at": "इसे कहते हैं solar"
+      }
+     ],
+     "kicker": "a wind of particles from the sun"
+    },
+    {
+     "at": "Interstellar space",
+     "lines": [
+      {
+       "text": "*INTERSTELLAR SPACE*",
+       "at": "Interstellar space"
+      }
+     ],
+     "kicker": "the space between the stars"
+    },
+    {
+     "at": "वो तारों के बीच की gas",
+     "lines": [
+      {
+       "text": "IT WAS THE GAS",
+       "at": "तारों"
+      },
+      {
+       "text": "*BETWEEN THE STARS*",
+       "at": "gas"
+      }
+     ]
+    },
+    {
+     "at": "दो हज़ार तेरह में",
+     "lines": [
+      {
+       "text": "INTO INTERSTELLAR SPACE",
+       "at": "interstellar"
+      },
+      {
+       "text": "*HUMANITY'S FIRST*",
+       "at": "पहली"
+      }
+     ],
+     "kicker": "voyager 1 · 2012"
+    }
+   ],
+   "n": [
+    {
+     "at": "वो सूरज के बुलबुले",
+     "num": {
+      "template": "scale",
+      "value": "40",
+      "unit": "times denser",
+      "kicker": "than the gas inside the sun's bubble",
+      "land": "चालीस"
+     }
+    }
+   ]
+  },
+  "ch7": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the Voyager spacecraft in deep space with its dish toward Earth",
+      "a spacecraft far from the Sun"
+     ]
+    },
+    {
+     "at": "Voyager से बात करना",
+     "gfx": "photo:DSN_DSS53_night"
+    },
+    {
+     "at": "उसका radio सिर्फ़",
+     "gfx": "photo:V_dish_build"
+    },
+    {
+     "at": "उसकी आवाज़ Earth",
+     "gfx": "photo:Canberra_DSS43"
+    },
+    {
+     "at": "और हर संदेश",
+     "q": [
+      "radio waves travelling through space",
+      "a signal crossing the solar system"
+     ]
+    },
+    {
+     "at": "इसी हाल में",
+     "q": [
+      "a radio telescope dish tracking the sky",
+      "radio dishes at dusk"
+     ]
+    },
+    {
+     "at": "Memory का लगभग",
+     "gfx": "starfield"
+    },
+    {
+     "at": "Chip ठीक नहीं",
+     "gfx": "starfield"
+    },
+    {
+     "at": "इसलिए team ने Voyager",
+     "gfx": "photo:DSN_Madrid"
+    },
+    {
+     "at": "जवाब में Voyager ने",
+     "q": [
+      "a radio telescope dish at night under the Milky Way",
+      "radio dishes under a starry sky"
+     ]
+    },
+    {
+     "at": "उस copy से team ने",
+     "gfx": "memory_fix"
+    },
+    {
+     "at": "April, दो हज़ार चौबीस",
+     "opt": "hold",
+     "q": [
+      "a radio dish antenna pointing at the sky at night",
+      "an antenna dish at dusk"
+     ]
+    },
+    {
+     "at": "दो दिन बाद",
+     "q": [
+      "a radio telescope under a starry sky",
+      "radio dishes at night"
+     ]
+    },
+    {
+     "at": "इस बार साफ़",
+     "q": [
+      "a bright star shining in a dark star field",
+      "a star field with the Milky Way"
+     ]
+    },
+    {
+     "at": "पाँच महीने बाद",
+     "opt": "hold",
+     "q": [
+      "the Voyager spacecraft flying toward the stars",
+      "a probe crossing a star field"
+     ]
+    },
+    {
+     "at": "और जब वो जवाब",
+     "q": [
+      "a radio dish under the stars at night",
+      "radio telescope timelapse"
+     ]
+    },
+    {
+     "at": "#team",
+     "q": [
+      "bite:team"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Now back to three years ago, to the day Voyager began sending meaningless signals"
+    },
+    {
+     "at": "Voyager से बात करना",
+     "text": "Talking to Voyager is not easy"
+    },
+    {
+     "at": "उसका radio सिर्फ़",
+     "text": "Its radio is just 22 watts, about as strong as a fridge light bulb"
+    },
+    {
+     "at": "उसकी आवाज़ Earth",
+     "text": "By the time its voice reaches Earth it's so faint that it takes a 70-metre dish to hear it"
+    },
+    {
+     "at": "और हर संदेश",
+     "text": "And every message takes about two days to go and come back"
+    },
+    {
+     "at": "इसी हाल में",
+     "text": "Working like this, engineers found that a chip in its 1977 computer had failed"
+    },
+    {
+     "at": "Memory का लगभग",
+     "text": "About 3 percent of its memory was ruined"
+    },
+    {
+     "at": "Chip ठीक नहीं",
+     "text": "The chip could not be fixed"
+    },
+    {
+     "at": "इसलिए team ने Voyager",
+     "text": "So the team sent Voyager a special command"
+    },
+    {
+     "at": "जवाब में Voyager ने",
+     "text": "In reply, Voyager sent back a copy of its entire memory"
+    },
+    {
+     "at": "उस copy से team ने",
+     "text": "From that copy, the team saw which part of the program was stuck in the broken spot"
+    },
+    {
+     "at": "फिर उन्होंने वही",
+     "text": "Then they did what you'd do when one room of a house breaks"
+    },
+    {
+     "at": "उस कमरे का सामान",
+     "text": "They moved its things, bit by bit, into the other rooms"
+    },
+    {
+     "at": "Program का वो हिस्सा",
+     "text": "That part of the program was moved, in pieces, to good places in the memory"
+    },
+    {
+     "at": "April, दो हज़ार चौबीस",
+     "text": "In April 2024, the fix was sent"
+    },
+    {
+     "at": "दो दिन बाद",
+     "text": "Two days later, Voyager answered"
+    },
+    {
+     "at": "इस बार साफ़",
+     "text": "Clear this time, and making sense"
+    },
+    {
+     "at": "पाँच महीने बाद",
+     "text": "After five months, Voyager 1 was talking again"
+    },
+    {
+     "at": "और जब वो जवाब",
+     "text": "And when that answer arrived, this is how the team in a room at JPL took it"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "उसका radio सिर्फ़",
+     "num": {
+      "template": "hero",
+      "value": "22",
+      "unit": "watts",
+      "kicker": "voyager's radio · about a fridge bulb",
+      "land": "बाईस"
+     }
+    },
+    {
+     "at": "सत्तर metre",
+     "num": {
+      "template": "hero",
+      "value": "70",
+      "unit": "metre dish",
+      "kicker": "needed to hear it",
+      "land": "सत्तर"
+     }
+    },
+    {
+     "at": "और हर संदेश",
+     "num": {
+      "template": "hero",
+      "value": "2",
+      "unit": "days",
+      "kicker": "every message, there and back",
+      "land": "दो"
+     }
+    },
+    {
+     "at": "Memory का लगभग",
+     "num": {
+      "template": "progress",
+      "value": "3",
+      "unit": "% OF MEMORY LOST",
+      "kicker": "one broken chip",
+      "land": "तीन"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "इस बार साफ़",
+     "lines": [
+      {
+       "text": "*CLEAR*",
+       "at": "साफ़"
+      },
+      {
+       "text": "AND MAKING SENSE",
+       "at": "समझ"
+      }
+     ]
+    }
+   ]
+  },
+  "ch8": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the Voyager spacecraft drifting in deep space",
+      "a spacecraft far from the Sun"
+     ]
+    },
+    {
+     "at": "वही plutonium",
+     "q": [
+      "a dim glowing ember",
+      "a fading red star"
+     ]
+    },
+    {
+     "at": "उसकी बिजली, हर साल",
+     "q": [
+      "a fading red star",
+      "a dim reddish star in space"
+     ]
+    },
+    {
+     "at": "दो हज़ार छब्बीस तक",
+     "q": [
+      "a fading light in deep space",
+      "a dim star in black space"
+     ]
+    },
+    {
+     "at": "इसलिए team, एक एक",
+     "opt": "hold",
+     "q": [
+      "stars slowly drifting in deep space",
+      "a dark star field"
+     ]
+    },
+    {
+     "at": "April, दो हज़ार छब्बीस में",
+     "q": [
+      "a faint galaxy in a dark star field",
+      "a lonely star field"
+     ]
+    },
+    {
+     "at": "अब Voyager One के पास",
+     "q": [
+      "the Voyager spacecraft alone among the stars",
+      "a probe in a star field"
+     ]
+    },
+    {
+     "at": "इस लंबे सफ़र में",
+     "gfx": "photo:Voyager_science_meeting:out"
+    },
+    {
+     "at": "Ed Stone, जो पचास",
+     "opt": "hold",
+     "q": [
+      "Ed Stone interview",
+      "a scientist speaking in an interview"
+     ]
+    },
+    {
+     "at": "दो हज़ार चौबीस में इस",
+     "opt": "hold",
+     "q": [
+      "stars slowly drifting in deep space",
+      "a dark star field"
+     ]
+    },
+    {
+     "at": "और अब आ रहा है",
+     "opt": "hold",
+     "q": [
+      "the Earth and Moon from space",
+      "the Moon orbiting Earth"
+     ]
+    },
+    {
+     "at": "चाँद से रोशनी",
+     "gfx": "light_ladder"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "But Voyager's biggest problem isn't a chip"
+    },
+    {
+     "at": "वही plutonium",
+     "text": "The plutonium put in for power in 1977 is slowly running down"
+    },
+    {
+     "at": "उसकी बिजली, हर साल",
+     "text": "Its power drops by about 4 watts every year"
+    },
+    {
+     "at": "दो हज़ार छब्बीस तक",
+     "text": "By 2026, Voyager has less than half of the power it started with"
+    },
+    {
+     "at": "इसलिए team, एक एक",
+     "text": "So the team is switching its instruments off, one by one"
+    },
+    {
+     "at": "April, दो हज़ार छब्बीस में",
+     "text": "In April 2026, one more instrument was switched off"
+    },
+    {
+     "at": "अब Voyager One के पास",
+     "text": "Now Voyager 1 has just two science instruments left"
+    },
+    {
+     "at": "इस लंबे सफ़र में",
+     "text": "On this long journey, its people changed too"
+    },
+    {
+     "at": "Ed Stone, जो पचास",
+     "text": "Ed Stone, Voyager's chief scientist for 50 years, passed away in 2024"
+    },
+    {
+     "at": "और अब आ रहा है",
+     "text": "And now the day is coming"
+    },
+    {
+     "at": "चाँद से रोशनी",
+     "text": "Light from the Moon reaches Earth in 1.3 seconds"
+    },
+    {
+     "at": "सूरज से, लगभग",
+     "text": "From the Sun, in about 8 minutes"
+    },
+    {
+     "at": "और अठारह November",
+     "text": "And from 18 November 2026, from Voyager 1: one whole day"
+    },
+    {
+     "at": "एक light day",
+     "text": "One light-day"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "उसकी बिजली, हर साल",
+     "num": {
+      "template": "hero",
+      "value": "4",
+      "unit": "watts less every year",
+      "kicker": "voyager's power",
+      "land": "चार"
+     }
+    },
+    {
+     "at": "अब Voyager One के पास",
+     "num": {
+      "template": "hero",
+      "value": "2",
+      "unit": "science instruments left",
+      "kicker": "voyager 1",
+      "land": "दो"
+     }
+    },
+    {
+     "at": "Ed Stone",
+     "num": {
+      "template": "name",
+      "value": "ED STONE",
+      "sub": "Voyager project scientist 1972-2022 · 1935-2024"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "दो हज़ार छब्बीस तक",
+     "lines": [
+      {
+       "text": "LESS THAN",
+       "at": "शुरुआत"
+      },
+      {
+       "text": "*HALF*",
+       "at": "आधी"
+      },
+      {
+       "text": "OF ITS POWER LEFT",
+       "at": "बिजली"
+      }
+     ]
+    }
+   ]
+  },
+  "ending": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the Voyager spacecraft drifting away into darkness",
+      "a spacecraft fading into the dark"
+     ]
+    },
+    {
+     "at": "उसके बाद, NASA की",
+     "gfx": "photo:Goldstone_70m"
+    },
+    {
+     "at": "लेकिन Voyager रुकेगा",
+     "opt": "hold",
+     "q": [
+      "flight through a star field",
+      "stars streaming past"
+     ]
+    },
+    {
+     "at": "वो लगभग इकसठ",
+     "q": [
+      "the Voyager spacecraft flying fast through space",
+      "a probe crossing a star field"
+     ]
+    },
+    {
+     "at": "इतनी तेज़, कि",
+     "q": [
+      "the Earth rotating seen from space",
+      "Earth from orbit"
+     ]
+    },
+    {
+     "at": "लगभग चालीस हज़ार साल",
+     "opt": "hold",
+     "q": [
+      "a red dwarf star",
+      "a faint reddish star among stars"
+     ]
+    },
+    {
+     "at": "Light day की तरह",
+     "q": [
+      "light travelling across space",
+      "a beam of light through stars"
+     ]
+    },
+    {
+     "at": "और Voyager, उस तारे",
+     "q": [
+      "a distant star seen from deep space",
+      "a bright star in a dark field"
+     ]
+    },
+    {
+     "at": "लेकिन वो अपने साथ",
+     "gfx": "photo:Golden_record_prep:out"
+    },
+    {
+     "at": "जिसमें एक दिल की",
+     "opt": "hold",
+     "q": [
+      "Earth from the International Space Station",
+      "the Earth's limb from orbit"
+     ]
+    },
+    {
+     "at": "जिस machine ने",
+     "opt": "hold",
+     "q": [
+      "the Voyager spacecraft drifting toward the stars",
+      "a lone spacecraft among stars"
+     ]
+    },
+    {
+     "at": "उसकी आवाज़ एक दिन",
+     "gfx": "starfield"
+    },
+    {
+     "at": "लेकिन हमारा संदेश",
+     "opt": "hold",
+     "q": [
+      "the Milky Way across the sky",
+      "a field of stars"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "One day, perhaps within a few years, Voyager's last word will arrive"
+    },
+    {
+     "at": "उसके बाद, NASA की",
+     "text": "After that, NASA's dishes will keep listening, but no answer will come"
+    },
+    {
+     "at": "लेकिन Voyager रुकेगा",
+     "text": "But Voyager won't stop"
+    },
+    {
+     "at": "वो लगभग इकसठ",
+     "text": "It will keep going at about 61,000 kilometres an hour"
+    },
+    {
+     "at": "इतनी तेज़, कि",
+     "text": "Fast enough to fly all the way around Earth in just 40 minutes"
+    },
+    {
+     "at": "लगभग चालीस हज़ार साल",
+     "text": "In about 40,000 years, it will pass a star called Gliese 445"
+    },
+    {
+     "at": "Light day की तरह",
+     "text": "Like a light-day, a light-year is the distance light travels in a year"
+    },
+    {
+     "at": "और Voyager, उस तारे",
+     "text": "And even then, Voyager will pass 1.6 light-years from that star"
+    },
+    {
+     "at": "लेकिन वो अपने साथ",
+     "text": "But it carries a golden record"
+    },
+    {
+     "at": "जिसमें एक दिल की",
+     "text": "Holding a heartbeat, Kesarbai's voice, and a message in Hindi"
+    },
+    {
+     "at": "धरती के वासियों",
+     "text": "\"Greetings from the people of Earth\""
+    },
+    {
+     "at": "जिस machine ने",
+     "text": "The machine that once sent meaningless signals has set out forever, carrying humanity's longest message"
+    },
+    {
+     "at": "उसकी आवाज़ एक दिन",
+     "text": "Its voice will fall silent one day"
+    },
+    {
+     "at": "लेकिन हमारा संदेश",
+     "text": "But our message will keep going"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "वो लगभग इकसठ",
+     "num": {
+      "template": "hero",
+      "value": "61,000",
+      "unit": "km per hour",
+      "kicker": "voyager 1's speed",
+      "land": "इकसठ"
+     }
+    },
+    {
+     "at": "इतनी तेज़, कि",
+     "num": {
+      "template": "hero",
+      "value": "40",
+      "unit": "minutes around the earth",
+      "kicker": "fast enough to circle earth in",
+      "land": "चालीस"
+     }
+    },
+    {
+     "at": "लगभग चालीस हज़ार साल",
+     "num": {
+      "template": "hero",
+      "value": "40,000",
+      "unit": "years",
+      "kicker": "until it passes another star",
+      "land": "चालीस हज़ार"
+     }
+    },
+    {
+     "at": "और Voyager, उस तारे",
+     "num": {
+      "template": "hero",
+      "value": "1.6",
+      "unit": "light-years away",
+      "kicker": "even at its closest to gliese 445",
+      "land": "छह"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "धरती के वासियों",
+     "lines": [
+      {
+       "text": "GREETINGS FROM",
+       "at": "वासियों"
+      },
+      {
+       "text": "*THE PEOPLE OF EARTH*",
+       "at": "नमस्कार"
+      }
+     ]
+    },
+    {
+     "at": "लेकिन हमारा संदेश",
+     "lines": [
+      {
+       "text": "*OUR MESSAGE*",
+       "at": "संदेश"
+      },
+      {
+       "text": "KEEPS GOING",
+       "at": "चलता"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

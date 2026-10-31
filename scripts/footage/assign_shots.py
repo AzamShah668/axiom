@@ -19,7 +19,8 @@ import clip_model  # noqa: E402
 import render_v2  # noqa: E402
 import render_v3  # noqa: E402
 
-PAD = 0.8          # extra seconds of footage per item (transition overlap)
+SLOW = 0.7         # slowest playback for a shot a little shorter than its scene
+PAD = 0.45         # extra seconds of footage per item: the longest transition is 12 frames (render_v3.TD), 0.4 s
 DARK_PENALTY = 0.05
 
 
@@ -130,7 +131,7 @@ def text_gate(lib, items, pool, r, c, need, cache_path, workers=4):
         s = pool[j]
         r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
         ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
-        d = need[i] - 0.8
+        d = min(need[i], r1 - r0) - PAD  # a slowed shot shows all of its usable range
         key = f"{s['id']}@{ss:.2f}+{d:.2f}" + (f"/crop{list(s['crop'])}" if s.get("crop") else "") + "/strips"
         keys.append(key)
         if key not in cache:
@@ -186,6 +187,11 @@ def main():
             sid = next((s["id"] for s in own if s["start"] <= it["clip_ss"] < s["end"]), own[0]["id"])
             edit.setdefault("pin", {})[f"{it['sec']}/{sum(1 for j in range(i) if items[j]['sec'] == it['sec'])}"] = sid
             bite_pins.add(sid)
+    for s in shots:  # a pin is a deliberate choice: real archive footage keeps its on-screen text and dark frames
+        if s["id"] in set(edit.get("pin", {}).values()) | bite_pins:
+            s["dup_of"] = None
+            if not s["usable"] and s["end"] - s["start"] > 0.6:
+                s["usable"], s["crop"] = [[s["start"] + 0.15, s["end"] - 0.15]], None
     z = np.load(os.path.join(a.lib, "shots_emb.npz"), allow_pickle=True)
     emb = dict(zip(z["ids"], z["emb"]))
     ban, avoided = set(edit.get("ban", [])), set()
@@ -193,7 +199,8 @@ def main():
         here = os.path.dirname(os.path.abspath(a.edit))
         for d in sorted(os.listdir(a.avoid)):
             f = os.path.join(a.avoid, d, "cutlist.json")
-            if os.path.exists(f) and os.path.abspath(os.path.join(a.avoid, d)) != here:
+            if os.path.exists(f) and os.path.abspath(os.path.join(a.avoid, d)) != here \
+                    and not os.path.exists(os.path.join(a.avoid, d, "superseded.txt")):  # a replaced, never-published cut
                 avoided |= {it["shot"] for it in json.load(open(f))["items"] if it.get("shot")}
         ban |= avoided
     for s in shots:  # manual fixes from edit.base.json: cut seconds out of a clip, force a crop
@@ -217,11 +224,20 @@ def main():
         PE, PH = segment_signatures(a.lib, prev, sig)
         CE, CH = segment_signatures(a.lib, pool, sig)
         AE, AH = np.concatenate([CE, PE]), np.concatenate([CH, PH])
-        keep = [k for k in range(len(pool)) if not same_footage(AE, AH, k, range(len(pool), len(pool) + len(prev)))]
+        pins = set(edit.get("pin", {}).values()) | bite_pins  # a pin is deliberate, even when it resembles old footage
+        keep = [k for k in range(len(pool)) if pool[k]["id"] in pins
+                or not same_footage(AE, AH, k, range(len(pool), len(pool) + len(prev)))]
         print(f"avoid: {len(prev)} shots from earlier productions; {len(pool) - len(keep)} look-alikes removed")
         pool = [pool[k] for k in keep]
+    own_rows = {i for i, it in enumerate(items) if render_v3.own_gfx(it)}
+    n_vis = len(pool)
+    if avoided and own_rows:  # own graphics show no footage: their unseen placeholder can be a shot an earlier video used
+        spare = [s for s in shots if s["id"] in avoided and s["usable"] and not s["dup_of"]
+                 and os.path.exists(os.path.join(a.lib, "clips", s["clip"] + ".mp4"))]
+        pool = pool + spare[:len(own_rows)]
     if len(pool) < len(items):
-        raise SystemExit(f"library has {len(pool)} usable shots but the edit needs {len(items)} different ones: add footage")
+        raise SystemExit(f"library has {n_vis} usable shots (+{len(pool) - n_vis} placeholders for own graphics) but the "
+                         f"edit needs {len(items)} different ones: add footage")
     E = np.stack([emb[s["id"]] for s in pool])
     L = np.array([max(r[1] - r[0] for r in s["usable"]) for s in pool])
     titles = sorted({sources[s["clip"]]["title"] for s in pool})
@@ -237,10 +253,17 @@ def main():
     lum = np.array([luma(a.lib, s) for s in pool])
     dull = DARK_PENALTY * np.clip((28 - lum) / 20, 0, 1) + DARK_PENALTY * np.clip((lum - 120) / 40, 0, 1)  # or washed out
     S = S - np.array([[1.0] if it["kind"] == "clip" else [0.0] for it in items]) * dull[None, :]
+    bite_cols = [j for j, s_ in enumerate(pool) if s_["clip"].startswith("bite_")]
+    if bite_cols:  # a real recording's clip plays only at its own recording, never as ordinary footage
+        S[np.ix_([i for i, it in enumerate(items) if not it.get("bite")], bite_cols)] = -1000.0
+    if len(pool) > n_vis:  # placeholders only ever stand behind our own graphics
+        hid, vis = np.arange(n_vis, len(pool)), np.array([i not in own_rows for i in range(len(items))])
+        S[np.ix_(vis, hid)], S[np.ix_(~vis, hid)] = -1000.0, 1.0
     # our own full-frame graphics show no footage: any shot will do as their (unseen) placeholder
     need = np.array([(min(it["t1"] - it["t0"], 1.0) if render_v3.own_gfx(it) or it.get("bite") else it["t1"] - it["t0"]) + PAD
                      for it in items])
-    cost = -S + 100.0 * (L[None, :] < need[:, None])
+    # a shot a little short of its scene plays slowed down (render_v3: never below SLOW x); shorter still is out
+    cost = -S + 100.0 * (L[None, :] < SLOW * need[:, None]) + 0.12 * (L[None, :] < need[:, None])
     # pins
     sec_n = {}
     for i, it in enumerate(items):
@@ -273,7 +296,7 @@ def main():
         chosen = []
         for k in order:
             i, j = r[k], c[k]
-            if i not in pinned_rows and same_footage(SE, SH, j, chosen):
+            if i not in pinned_rows and i not in own_rows and same_footage(SE, SH, j, chosen):
                 blocked[i, j] = 100.0
                 clash += 1
             else:
@@ -287,7 +310,7 @@ def main():
         chosen, used = [], set()
         for k in order:
             i, j = r[k], c[k]
-            if i not in pinned_rows and same_footage(SE, SH, j, chosen):
+            if i not in pinned_rows and i not in own_rows and same_footage(SE, SH, j, chosen):
                 for j2 in np.argsort(cost[i] + blocked[i]):
                     if j2 not in used and j2 not in c and cost[i, j2] < 50 and not same_footage(SE, SH, j2, chosen):
                         c[k] = j = int(j2)
@@ -298,12 +321,14 @@ def main():
     # final gate: OCR the frames each item will really show; text -> that shot is out, re-solve the rest in place
     for rnd in range(40):  # every re-solve is checked again: the result never skips the gate
         hits = text_gate(a.lib, items, pool, r, c, need, os.path.join(a.lib, "text_gate.json"))
-        hits = [k for k in hits if sec_n[r[k]] not in edit.get("pin", {})]  # a pin is a deliberate choice
+        hits = [k for k in hits if sec_n[r[k]] not in edit.get("pin", {})  # a pin is a deliberate choice
+                and r[k] not in own_rows]  # an own graphic's placeholder is never seen
         print(f"text gate {rnd}: {len(hits)} shown segments with text", flush=True)
         if not hits:
             break
         if rnd == 39:
-            raise SystemExit("text gate did not converge: ban the clips it keeps hitting or add footage")
+            raise SystemExit("text gate did not converge: ban the clips it keeps hitting or add footage: "
+                             + ", ".join(f"{sec_n[r[k]]}={pool[c[k]]['id']}" for k in hits))
         for k in hits:
             cost[:, c[k]] += 100.0  # the shot is out for every item
         for k in range(len(r)):
@@ -315,15 +340,15 @@ def main():
         chosen = []
         for k in sorted(range(len(r)), key=lambda k: (r[k] not in pinned_rows, cost[r[k], c[k]])):
             i, j = r[k], c[k]
-            if i not in pinned_rows and same_footage(SE, SH, j, chosen):
+            if i not in pinned_rows and i not in own_rows and same_footage(SE, SH, j, chosen):
                 for j2 in np.argsort(cost[i] + blocked[i]):
                     if j2 not in c and cost[i, j2] < 50 and not same_footage(SE, SH, j2, chosen):
                         c[k] = j = int(j2)
                         break
             chosen.append(j)
-    bad = [i for i, j in zip(r, c) if L[j] < need[i]]
+    bad = [i for i, j in zip(r, c) if L[j] < SLOW * need[i]]
     if bad:
-        raise SystemExit(f"{len(bad)} items have no shot long enough, e.g. {[sec_n[i] for i in bad[:5]]}: add footage")
+        raise SystemExit(f"{len(bad)} items have no shot long enough: {[sec_n[i] for i in bad]}: add footage")
     for i, j in zip(r, c):
         it, s = items[i], pool[j]
         if it.get("bite"):  # plays from the frame that matches its sound
@@ -331,6 +356,8 @@ def main():
         else:
             r0, r1 = max(s["usable"], key=lambda rr: rr[1] - rr[0])
             ss = r0 + max(0.0, (r1 - r0 - need[i]) / 2)
+            if r1 - r0 < need[i]:
+                it["speed"] = round((r1 - r0) / need[i], 3)
         it.update(shot=s["id"], clip=s["clip"], ss=round(ss, 2), crop=s["crop"], score=round(float(S[i, j]), 4),
                   ref=sec_n[i], title=sources[s["clip"]]["title"])
     used = [it["shot"] for it in items]

@@ -286,8 +286,12 @@ def overlay(frame, kind, p):
 def gfx(name, t, D, sh):
     p = t / D
     f = starfield(t, dim=0.8)
-    if name == "starfield":
-        return f
+    if name == "starfield":  # a clean deep field drifting slowly, a faint Milky Way band across it (own graphic)
+        if "sf_band" not in G:
+            yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+            d = ((yy - H * 0.55) + (xx - W * 0.5) * 0.35) / (H * 0.2)
+            G["sf_band"] = np.exp(-d ** 2)[..., None] * np.array([40, 32, 26], np.float32)  # BGR: a warm grey glow
+        return np.clip(f.astype(np.float32) * 1.3 + G["sf_band"], 0, 255).astype(np.uint8)
     if name == "flyapart":
         rng = np.random.default_rng(3)
         n = 70
@@ -1178,6 +1182,86 @@ def gfx(name, t, D, sh):
         fl = ease((p - 0.93) / 0.07)
         if fl > 0:
             f = np.clip(f.astype(np.float32) + fl * 220, 0, 255).astype(np.uint8)
+        return f
+    if name == "gravity_assist":  # a probe swings close past a planet: its gravity bends the path and flings it faster
+        f = (f * 0.6).astype(np.uint8)
+        px, py, pr, R = W * 0.5, H * 0.52, 120, 175
+        add_glow(f, px, py, 260, (60, 140, 255), 0.25)
+        cv2.circle(f, (int(px), int(py)), pr, (70, 150, 235), -1, cv2.LINE_AA)  # BGR: a warm, banded giant
+        for dy, col in ((-60, (60, 120, 200)), (-20, (110, 190, 250)), (25, (50, 110, 190)), (65, (90, 170, 240))):
+            hw = int(math.sqrt(max(pr * pr - dy * dy, 0)))
+            cv2.line(f, (int(px - hw), int(py + dy)), (int(px + hw), int(py + dy)), col, 14, cv2.LINE_AA)
+        pos = lambda th: np.array([px + R * math.cos(th), py + R * math.sin(th)])
+        tan = lambda th: np.array([-math.sin(th), math.cos(th)])
+        t0, t1 = math.radians(120), math.radians(250)  # in from the lower right, round the left side, out to the upper right
+        arc = [pos(th) for th in np.linspace(t0, t1, 80)]
+        pts = np.array([pos(t0) - tan(t0) * 1100 * (1 - k / 40) for k in range(40)] + arc +
+                       [pos(t1) + tan(t1) * 1500 * k / 40 for k in range(1, 41)])
+        seg = np.r_[0, np.cumsum(np.hypot(*np.diff(pts, axis=0).T))]
+        fr = 0.62 * ease(min(1.0, p / 0.55)) if p < 0.55 else 0.62 + 0.38 * ease((p - 0.55) / 0.4)  # slow in, fast out
+        n = max(2, int(np.searchsorted(seg, fr * seg[-1])))
+        cv2.polylines(f, [pts[:n].astype(np.int32)], False, (255, 220, 160), 3, cv2.LINE_AA)
+        hx, hy = pts[min(n, len(pts)) - 1]
+        add_glow(f, hx, hy, 30, (255, 240, 220), 1.0)
+        spd = 1.0 + 0.6 * ease((p - 0.5) / 0.3)
+        draw_text(f, f"SPEED  {spd:.1f}×", 58, (0.2, 0.86), font="Montserrat", color=(255, 205, 120))
+        draw_text(f, "THE PLANET'S GRAVITY", 40, (0.5, 0.2), op=ease((p - 0.2) / 0.1), font="Montserrat", color=(240, 240, 240))
+        return f
+    if name == "light_ladder":  # how long light takes to reach us: the Moon, the Sun, and Voyager 1 (18 Nov 2026)
+        f = (f * 0.5).astype(np.uint8)
+        rows = ((0.0, "MOON", "1.3 SECONDS", 0.16), (0.3, "SUN", "8 MINUTES", 0.45), (0.48, "VOYAGER 1", "1 DAY", 0.92))
+        y0, xe = H * 0.5, W * 0.08
+        cv2.line(f, (int(xe), int(y0)), (int(W * 0.95), int(y0)), (90, 90, 90), 2, cv2.LINE_AA)
+        add_glow(f, xe, y0, 30, (255, 200, 120), 1.0)
+        draw_text(f, "EARTH", 36, (xe / W, 0.58), font="Montserrat", color=(150, 200, 255))
+        for k, (t0, nm, val, xf) in enumerate(rows):
+            e = ease((p - t0) / 0.06)
+            if e <= 0:
+                continue
+            x = W * xf
+            add_glow(f, x, y0, 22, (255, 255, 255), e)
+            draw_text(f, nm, 40, (xf, 0.42), op=e, font="Montserrat", color=(240, 240, 240))
+            draw_text(f, val, 72 if k < 2 else 96, (xf, 0.66), op=e, color=(255, 205, 120))
+            ph = ((p - t0) * 1.6) % 1.0  # a pulse of light running home
+            bx = x + (xe - x) * ph
+            add_glow(f, bx, y0, 14, (255, 230, 160), e * 0.9)
+        draw_text(f, "ONE LIGHT-DAY", 120, (0.5, 0.2), op=ease((p - 0.8) / 0.08), color=(255, 205, 120))
+        return f
+    if name == "memory_fix":  # Voyager 1, 2024: a chip dies, the code stuck in it moves piece by piece to free memory
+        f = (f * 0.4).astype(np.uint8)
+        cols, rows, cw, ch_, gap = 24, 10, 52, 40, 6
+        x0, y0 = (W - cols * (cw + gap)) // 2, 250
+        rng = np.random.default_rng(24)
+        used = rng.random((rows, cols)) < 0.62
+        bad = [(r, c) for r in (4, 5) for c in (10, 11, 12, 13)]  # the broken chip: about 3 % of the memory
+        for rc in bad:
+            used[rc] = True
+        free = [(r, c) for r in range(rows) for c in range(cols) if not used[r, c] and abs(c - 11.5) > 4]
+        dest = [free[k] for k in np.random.default_rng(7).choice(len(free), len(bad), replace=False)]
+        xy = lambda r, c: (x0 + c * (cw + gap), y0 + r * (ch_ + gap))
+        gold, dark, red = (90, 190, 255), (55, 55, 55), (60, 60, 225)
+        moved = [ease((p - 0.36 - 0.055 * k) / 0.12) for k in range(len(bad))]
+        for r in range(rows):
+            for c in range(cols):
+                x, y = xy(r, c)
+                col = gold if used[r, c] else dark
+                if (r, c) in bad:
+                    flash = 0.5 + 0.5 * math.sin(t * 9) if 0.1 < p < 0.32 else 1.0
+                    col = tuple(int(v * flash) for v in red) if p > 0.1 else gold
+                if (r, c) in dest and moved[dest.index((r, c))] >= 1:
+                    col = gold
+                cv2.rectangle(f, (x, y), (x + cw, y + ch_), col, -1, cv2.LINE_AA)
+        for k, ((r, c), (r2, c2)) in enumerate(zip(bad, dest)):  # the pieces of code in flight
+            e = moved[k]
+            if 0 < e < 1:
+                (xa, ya), (xb, yb) = xy(r, c), xy(r2, c2)
+                x, y = int(xa + (xb - xa) * e), int(ya + (yb - ya) * e - 120 * math.sin(math.pi * e))
+                add_glow(f, x + cw / 2, y + ch_ / 2, 40, (120, 210, 255), 0.6)
+                cv2.rectangle(f, (x, y), (x + cw, y + ch_), gold, -1, cv2.LINE_AA)
+        draw_text(f, "VOYAGER 1 · MEMORY", 46, (0.5, 0.13), font="Montserrat", color=(240, 240, 240))
+        draw_text(f, "BROKEN CHIP · ABOUT 3%", 40, (0.5, 0.8), op=ease((p - 0.12) / 0.08) * (1 - ease((p - 0.36) / 0.06)),
+                  font="Montserrat", color=(255, 110, 110))  # draw_text takes RGB, the cells BGR
+        draw_text(f, "THE CODE MOVED, PIECE BY PIECE", 52, (0.5, 0.8), op=ease((p - 0.8) / 0.08), color=(255, 205, 120))
         return f
     if name.startswith("photo:"):  # a photo of who or what the line names (owner, 2026-10-27); always moving
         part = name.split(":")

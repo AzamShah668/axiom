@@ -440,7 +440,7 @@ def plan(edit, tl, voice_wav=None):
             nxt = [p["t0"] for p in ovl if p["kind"] in ("keyline", "headline", "num") and o["t_last"] < p["t0"] < o["t1"]]
             if nxt:  # make way for the next key line / number card / name lower third
                 o["t1"] = max(o["t_last"] + 0.8, min(nxt) - 0.12)
-    full = [it["t0"] for it in items if it["kind"] in ("card", "title")]
+    full = [it["t0"] for it in items if it["kind"] in ("card", "title") or it.get("gfx") == "channel"]  # and the sting
     for o in ovl:  # nothing runs over a chapter or title card: it is gone by the time the card cuts in
         hit = [t for t in full if o["kind"] != "footer" and o["t0"] < t < o["t1"]]
         if hit:
@@ -474,16 +474,18 @@ class Readers:
 
     def get(self, it, f):
         key = id(it)
-        rel = f - it["f0"]
+        src = int(max(0, f - it["f0"]) * it.get("speed", 1.0))  # a slightly short shot plays slowed (assign: >= 0.7x)
         rd = self.r.get(key)
-        if rd is None or rd[1] != rel:
+        if rd is not None and rd[1] == src and rd[0].last is not None:  # slow motion: the same frame again
+            return rd[0].last
+        if rd is None or rd[1] != src - 1:
             if rd:
                 rd[0].cap.release()
-            rd = [render_v2.ClipReader(os.path.join(G["clips"], it["clip"] + ".mp4"), it["ss"] + max(0, rel) / FPS,
-                                       it.get("crop")), rel]
+            rd = [render_v2.ClipReader(os.path.join(G["clips"], it["clip"] + ".mp4"), it["ss"] + src / FPS,
+                                       it.get("crop")), src - 1]
             self.r[key] = rd
         fr = rd[0].read()
-        rd[1] = rel + 1
+        rd[1] = src
         return fr
 
     def close(self):
@@ -514,7 +516,8 @@ def camera(fr, it, t, D):
 
 
 OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "rewind:big", "photo",
-           "channel", "converge", "recombination", "stretch", "notebook", "two_theories", "no_boundary", "cycles"}
+           "channel", "converge", "recombination", "stretch", "notebook", "two_theories", "no_boundary", "cycles",
+           "memory_fix", "gravity_assist", "light_ladder", "starfield"}
 
 
 def own_gfx(it):
@@ -812,8 +815,26 @@ def main():
     work = os.path.splitext(a.out)[0] + "_work"
     os.makedirs(work, exist_ok=True)
     step = int(a.chunk * FPS)
-    jobs = [(c, min(c + step, f_b), items, ovl, total_f, os.path.join(work, f"v3_{c:06d}_{min(c + step, f_b):06d}.mp4"))
+    import hashlib
+    here = os.path.dirname(os.path.abspath(__file__))
+    code = hashlib.sha1(b"".join(open(os.path.join(here, f), "rb").read() for f in
+                                 ("render_v3.py", "render_video.py", "mograph.py", "grade.py", "render_v2.py"))).hexdigest()
+
+    def sig(c0, c1):  # a chunk is re-rendered when anything it shows changes: its scenes, overlays, grade or the code
+        t0, t1 = c0 / FPS, c1 / FPS
+        its = [it for it in items if it.get("f0", 0) < c1 + 30 and it.get("f1", 1 << 30) > c0 - 30]
+        ovs = [o for o in ovl if o.get("t0", 0) < t1 + 1 and o.get("t1", 1e9) > t0 - 1]
+        blob = json.dumps([its, ovs, P.get("grade", {}), code], sort_keys=True, default=str)
+        return hashlib.sha1(blob.encode()).hexdigest()[:10]
+
+    jobs = [(c, min(c + step, f_b), items, ovl, total_f,
+             os.path.join(work, f"v3_{c:06d}_{min(c + step, f_b):06d}_{sig(c, min(c + step, f_b))}.mp4"))
             for c in range(f_a, f_b, step)]
+    if not a.range:  # stale chunks (an older edit or code) would only fill the disk
+        keep = {j[-1] for j in jobs}
+        for fn in os.listdir(work):
+            if fn.startswith("v3_") and fn.endswith(".mp4") and os.path.join(work, fn) not in keep:
+                os.remove(os.path.join(work, fn))
     with Pool(a.workers, initializer=init, initargs=(P["clips_dir"], a.fonts, a.assets, P.get("grade", {}))) as pool:
         for k, pth in enumerate(pool.imap(render_chunk, jobs)):
             print(f"  [{k + 1}/{len(jobs)}] {os.path.basename(pth)}", flush=True)
