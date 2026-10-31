@@ -14,6 +14,7 @@ say_roman: Agar aapka computer kharab ho jaye, toh aap mechanic ke paas jayenge.
 captions: shorts/captions.hinglish.md
 hook_shot: arc_saturn_flyby#0 @ 3.4
 hook_shot: svs_12687-cme#1 @ 10.6 | पर
+hook_shot: eso_cs0007g#0 @ 4.8 | धरती
 hook_shot: arc_voyager_anim#0 @ 5.6 | Voyager
 suspense: Two days later
 body: The chip could not be fixed .. Voyager team, NASA JPL
@@ -25,8 +26,8 @@ say: इंसानों की बनाई एक machine, हम से इ
 say_en: A machine made by humans has gone so far that light will now take a whole day to reach it. And on 18 November, that comes true.
 say_roman: Insaanon ki banayi ek machine, hum se itni door ja chuki hai, ki ab light ko bhi wahan tak pahunchne mein, poora ek din lagega. Aur 18 November ko, yeh sach hone wala hai.
 captions: shorts/captions.hinglish.md
-hook_shot: eso_cs0007g#0 @ 4.8
-hook_shot: esahubble_heic1906b#0 @ 4.3 | अठारह
+hook_shot: esahubble_heic1906b#0 @ 4.3
+hook_shot: esawebb_weic2212b#0 @ 0.2 | अठारह
 suspense: And from 18 November
 body: Light from the Moon .. One light-day
 body: One day .. And even then
