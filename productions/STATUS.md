@@ -24,7 +24,8 @@ Last updated 2026-10-31. Update this file and commit it at the end of every chat
 | 03 gold Short | on YouTube, **private** (https://youtu.be/cAm16FD1b44), uploaded 2026-10-30 | publish when the owner says |
 | 03 teaspoon Short | to be remade | when the owner asks |
 | 04 Before the Big Bang | **final = the 04-x version** (owner accepted 2026-10-27): no pauses, real NASA footage, photos, channel intro. On Drive: `videos/04 - What Was There Before the Big Bang? (Hindi Documentary) 1080p - FINAL (real footage, no pauses).mp4` | fill the two `AUTHOR_TBD` photo credits (Alan Guth, Arno Penzias; Wikimedia was rate-limiting), then upload private when the owner says: `productions/04-before-big-bang-x/youtube.md` |
-| 05 Voyager 1 | **finished 2026-10-30**: master 12:48, 1080p30, -13.9 LUFS. Drive `videos/05 - Voyager 1 (Hindi Documentary) 1080p - master/`: `… 1080p - FINAL.mp4` (shared by link at the owner's request, 2026-10-31) and `… 1440p - FINAL for YouTube.mp4` (the upload copy). Work dir, render chunks and stems on Drive `productions/05-voyager` | **next: Shorts** (science-shorts skill; `productions/05-voyager/shorts.spec` to write; a new local session gets the files with `pipeline.sh productions/05-voyager restore-render`). Upload only after video 04 is up (owner), private first; publish by 18 Nov 2026 |
+| 05 Voyager 1 | **finished 2026-10-30**: master 12:48, 1080p30, -13.9 LUFS. Drive `videos/05 - Voyager 1 (Hindi Documentary) 1080p - master/`: `… 1080p - FINAL.mp4` (shared by link at the owner's request, 2026-10-31) and `… 1440p - FINAL for YouTube.mp4` (the upload copy). Work dir, render chunks and stems on Drive `productions/05-voyager` | Upload only after video 04 is up (owner), private first; publish by 18 Nov 2026 |
+| 05 Shorts: fix, lightday | **rendered 2026-10-31**, waiting on the owner's review: `work/05-voyager/out/shorts/{fix,lightday}.mp4` (65.5 s, 60.4 s; hooks by the owner, one suspense beat each). Packages `productions/05-voyager/shorts/{fix,lightday}.md` | not uploaded; private, after the full video; lightday on or just before 18 Nov |
 
 ## Open decisions for the owner
 - Captions: upload the English CC track or not (pending since video 03).
@@ -37,6 +38,6 @@ Last updated 2026-10-31. Update this file and commit it at the end of every chat
 ## Accounts and budget
 - YouTube signed in again 2026-10-30 (Science Guy); it expires after 7 days (re-sign-in: `upload_youtube.py auth-url`, then `exchange`). The Google app is in
   Testing mode, so its sign-ins expire after 7 days; publishing the consent screen stops that.
-- ElevenLabs: 8,746 characters left on 2026-10-30; 131,000 a period, reset 2026-11-01 (Shorts hooks need a few hundred each; ask the owner first).
+- ElevenLabs: 8,376 characters left on 2026-10-31; 131,000 a period, reset 2026-11-01 (Shorts hooks need a few hundred each; ask the owner first).
 - All work up to 2026-10-30 (Voyager, Devanagari narration, per-production voice presets, v3 long takes) merged into
   `main` on 2026-10-30. Earlier, all work of 2026-10-20 to 10-29 was merged into `main` on 2026-10-29 (https://github.com/AzamShah668/axiom/pull/3).
