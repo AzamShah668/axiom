@@ -74,7 +74,7 @@ def parse_spec(path):
             shot, _, rest = val.partition("@")
             off, _, word = rest.partition("|")
             cur.setdefault("hook_shots", []).append((shot.strip(), float(off), word.strip()))
-        elif key in ("top", "hook", "say", "say_en", "say_roman", "land", "captions"):
+        elif key in ("top", "hook", "say", "say_en", "say_roman", "land", "captions", "suspense"):
             cur[key] = val.strip()
     return shorts
 
@@ -129,11 +129,17 @@ class Lines:
 def segments(spec, L):
     """[(a, b), ...] on the master's clock: the hook line, then each body run with the hook line taken out."""
     h = L.find(spec["hook"])
+    sus = L.find(spec["suspense"]) if spec.get("suspense") else -1  # one held beat before this line (owner, 2026-10-31)
     segs = [L.span(h)]
     for a_txt, b_txt in spec["body"]:
         i, j = L.find(a_txt), L.find(b_txt)
         run = []
         for k in range(i, j + 1):
+            if k == sus and run:
+                segs.append((run[0][0], run[-1][1]))
+                run = []
+            if k == sus:
+                spec["_gap_at"] = len(segs)
             if k == h:
                 if run:
                     segs.append((run[0][0], run[-1][1]))
@@ -177,6 +183,7 @@ def tts_line(text, cache_dir):
             al["character_end_times_seconds"])
 
 
+SUSPENSE = 1.2               # the one held beat before a reveal, master clock (1.0 s at 1.2x)
 PAUSE, BREAK = 0.15, 0.3     # longest pause inside a spoken hook: between words, between sentences (s)
 
 
@@ -416,6 +423,11 @@ def build(spec, P, L, hook=None, capw=()):
     else:
         T, body, cw = 0.0, segs, []
     for si, (a, b) in enumerate(body):
+        if spec.get("_gap_at") == si + (1 if hook else 0):  # the suspense beat: footage runs on, a riser, a hit
+            if items:
+                items[-1]["t1"] += SUSPENSE
+            sfx += [["riser", T, -1, {"d": SUSPENSE}], ["impact", T + SUSPENSE - 0.03, 0], ["sub_drop", T + SUSPENSE, -2]]
+            T += SUSPENSE
         d = T - a
         cw += [(t + d, x, brk) for t, x, brk in capw if a <= t < b]
         opening = not hook and si == 0
@@ -681,7 +693,13 @@ def main():
                             else os.path.join(a.master_work, "..", "..", "voice", "timeline.json"))
         capw = caption_words(os.path.join(os.path.dirname(os.path.abspath(a.spec)), spec["captions"]), tl, P)
         segs, Ps = build(spec, P, L, hook and hook[1:], capw)
-        voice_parts = ([hook[0]] if hook else []) + [cut(voice, x, y) for x, y in (segs[1:] if hook else segs)]
+        voice_parts = [hook[0]] if hook else []
+        for k, (x, y) in enumerate(segs):
+            if hook and k == 0:
+                continue
+            if spec.get("_gap_at") == k:
+                voice_parts.append(np.zeros(int(SUSPENSE * SR), np.float32))
+            voice_parts.append(cut(voice, x, y))
         raw, voice_wav = os.path.join(work, "voice_raw.wav"), os.path.join(work, "voice.wav")
         sf.write(raw, np.concatenate(voice_parts).astype(np.float32), SR)
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af", f"rubberband=tempo={a.speed}:pitchq=quality",
