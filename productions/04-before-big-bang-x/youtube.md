@@ -1,9 +1,9 @@
 # YouTube upload: Production 04 (final: the accepted 04-x version, 2026-10-27)
 
 This replaces productions/04-before-big-bang/youtube.md. Master on Drive: `videos/04 - What Was There Before the Big Bang? (Hindi Documentary) 1080p - FINAL (real footage, no pauses).mp4` (pull it if the local file is gone).
-**Before upload:** fill AUTHOR_TBD (the Alan Guth and Arno Penzias photos are CC licensed: the author must be named; Wikimedia was rate-limiting the container on 2026-10-27).
+**Uploaded 2026-11-05, private** (owner): https://youtu.be/CEk7vITXZzI. Not public yet. **Before publishing:** name the Arno Penzias photo's author (CC BY 3.0 DE, the 257x388 file on Commons; Wikimedia answered 429 to the container again on 2026-11-05), then update the video's description. Alan Guth: File:AlanGuthCambridge.jpg by Betsy Devine, CC BY-SA 3.0 (filled).
 
-Not uploaded yet. When the owner says, upload **private** (the uploader's default is public):
+Uploaded private with (the uploader's default is public):
 `python scripts/youtube/upload_youtube.py upload work/04-before-big-bang-x/out/04-before-big-bang-x.mp4 productions/04-before-big-bang-x/youtube.md --privacy private`
 No thumbnail (the owner makes it), no CC track for now (the owner's caption decision is pending). Pin the comment below.
 
@@ -25,7 +25,7 @@ Footage used in this video (archive video IDs):
 - NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov): 10529-cobe89, 10529-mather, 11937, 12587, 12740, 13314, 13357, 14033, 14052, 14451, 14544, 14666, 14715-launch, 14818, 14855, 14895, 14896, 14917, 20378, 20388, 30782, 30940, 30967, 30972, 31385, 4885, 5674
 - NASA Image and Video Library (images.nasa.gov): webb-launch
 Archive footage and recordings: COBE launch, 18 Nov 1989 (archival) - NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov); John Mather, COBE project scientist, 1989 (archival) - NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov); Launch of the James Webb Space Telescope, 25 Dec 2021 - NASA Image and Video Library (images.nasa.gov); The Cosmic Background Explorer (COBE) - 1989 (archival) - NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov).
-Photos: Albert Einstein, Edwin Hubble: public domain (Wikimedia Commons); Alan Guth: Wikimedia Commons, CC BY-SA 3.0 (AUTHOR_TBD); Arno Penzias: Wikimedia Commons, CC BY 3.0 DE (AUTHOR_TBD); Stephen Hawking: NASA/Paul E. Alers; BICEP2 detectors: NASA/JPL-Caltech; Planck spacecraft (artist's concept): ESA/NASA/JPL-Caltech.
+Photos: Albert Einstein, Edwin Hubble: public domain (Wikimedia Commons); Alan Guth: Betsy Devine, CC BY-SA 3.0 (Wikimedia Commons); Arno Penzias: Wikimedia Commons, CC BY 3.0 DE (AUTHOR_TBD); Stephen Hawking: NASA/Paul E. Alers; BICEP2 detectors: NASA/JPL-Caltech; Planck spacecraft (artist's concept): ESA/NASA/JPL-Caltech.
 Graphics and animation: original (including the cosmic microwave background maps, which are illustrations, not Planck data).
 
 Music by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 License (http://creativecommons.org/licenses/by/4.0/):
