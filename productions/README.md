@@ -112,7 +112,7 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   3. **Core Concept (24-38 s):** the science in one idea and one number ("Hamare Suraj ke liye... 6 km").
   4. **Payoff (38-48 s):** the ironic or emotional end, landing on the name or term ("...The Black Hole").
   - Conversational Hinglish: English words where people say them (officer, calculate, exact solution, size,
-    gate), simple spoken Hindi otherwise; "hamara Suraj", not "the Sun".
+    gate, universe, light, static, signal, problem; owner 2026-11-06: today's Hinglish, not Hindi; never "goonj"), simple spoken Hindi otherwise; "hamara Suraj", not "the Sun".
   - **Word budget:** Neel at 1.2x speaks about 2.9 words a second (Devanagari count), so a 48 s Short holds
     about 130 words. The first one ran 166 words, 64.5 s.
   - The owner writes or approves it in Hinglish; it is recorded from Devanagari (English words in Latin
