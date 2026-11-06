@@ -154,7 +154,8 @@ Production folder contents:
 For this -> use this (scripts/video/sfx.py synthesises them, licence-clean; render_v3.py and render_short.py place them):
 - **Hooks** -> bass impact (frame 0 of a Short; the first word of a video's opening)
 - **Zoom** -> large swish whoosh (zoom and whip transitions)
-- **Captions / text on screen** -> keyboard typing (headlines, key lines, name labels as they type on; not the
-  one-word burned-in captions, which would clatter under the whole voice)
+- **Captions / text on screen** -> keyboard typing **only at 1-2 chosen moments per video or Short** (owner: on every
+  text it is over-editing). Mark them in edit.spec: `K ... | typing` or `L Name @ NAME | role | typing`; all other
+  text keeps the soft tick/pop
 - **Transitions** -> camera flash (flash cuts; a Short's hook -> story join is a flash cut)
 - **CTA** -> bell ding (the FULL VIDEO BELOW end card)

@@ -138,7 +138,8 @@
      "num": {
       "template": "name",
       "value": "ARNO PENZIAS & ROBERT WILSON",
-      "sub": "radio astronomers · Bell Labs · 1964"
+      "sub": "radio astronomers · Bell Labs · 1964",
+      "typing": true
      }
     }
    ],
@@ -154,7 +155,8 @@
        "text": "*FROM EVERY DIRECTION*",
        "at": "direction"
       }
-     ]
+     ],
+     "typing": true
     }
    ],
    "s": [

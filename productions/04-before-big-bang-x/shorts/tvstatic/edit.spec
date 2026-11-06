@@ -13,12 +13,12 @@ C लेकिन उस static | But about 1 percent of that static was light f
 == tvstatic_story
 V - @ a large radio antenna under the sky | radio telescope dishes at dusk {hold}
 C - | In 1964, in America, two scientists, Arno Penzias and Robert Wilson...
-L Arno Penzias @ ARNO PENZIAS & ROBERT WILSON | radio astronomers · Bell Labs · 1964
+L Arno Penzias @ ARNO PENZIAS & ROBERT WILSON | radio astronomers · Bell Labs · 1964 | typing
 G Arno Penzias @ photo:Arno_Penzias
 V एक बड़े radio @ a radio telescope scanning the night sky timelapse | radio dishes under a starry sky
 C एक बड़े radio | ...were listening to space with a big radio antenna
 V तभी उन्हें @ a radio telescope dish turning against the sky | radio dishes moving in unison
-K तभी उन्हें @ A STRANGE SIGNAL [signal] / *FROM EVERY DIRECTION* [direction]
+K तभी उन्हें @ A STRANGE SIGNAL [signal] / *FROM EVERY DIRECTION* [direction] | typing
 S तभी उन्हें | hiss | d=4.0 | gain=-3
 C तभी उन्हें | Then they picked up a strange signal, from every direction, day and night
 V उन्होंने antenna @ close-up of a telescope structure | an observatory dome closing at dawn

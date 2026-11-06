@@ -135,9 +135,9 @@ def card_sfx(ns, t0):
         return [("roll", t0 + ns["land_t"] - ns["count_s"], 0, {"d": round(ns["count_s"], 2)}), ("hit", t0 + ns["land_t"] - 0.01, 0)]
     if tp == "chart":
         return [("whoosh", t0 + 0.1, -4, {"d": float(ns.get("draw", 2.0)), "f0": 300, "f1": 1800})]
-    if tp == "name":  # a name label types on (owner, 2026-11-06)
+    if ns.get("typing"):  # owner, 2026-11-06: keyboard typing only where the plan marks it
         return [("typing", t0 + 0.12, 0, {"d": 0.6})]
-    return [("pop", t0 + 0.05, -2)]
+    return [("pop", t0 + (0.12 if tp == "name" else 0.05), -2)]
 
 
 # ------------------------------------------------------------------ planning
@@ -242,7 +242,10 @@ def plan(edit, tl, voice_wav=None):
                 t = max(first, T.v(T.secs[sid]["char_start"][pos])) if ln.get("at") else (t_prev if i == 0 else t_prev + 0.22)
                 lines.append({"text": ln["text"], "t": t})
                 t_prev = t
-                sfx.append(("typing", t - 0.01, 0, {"d": round(min(0.9, 0.03 * len(ln["text"]) + 0.15), 2)}))  # owner: text types on
+                if kk.get("typing") and i == 0:  # owner, 2026-11-06: keyboard typing only where the plan marks it (first line)
+                    sfx.append(("typing", t - 0.01, 0, {"d": round(min(0.9, 0.03 * len(ln["text"]) + 0.15), 2)}))
+                else:
+                    sfx.append(("tick", t - 0.01, 0))
             hk = {"kind": "headline", "lines": lines, "kicker": kk.get("kicker"), "sub": kk.get("sub"),
                   "pos": kk.get("pos", "left"), "t0": lines[0]["t"] - 0.1, "t_last": lines[-1]["t"]}
             if hk["kicker"]:
@@ -369,7 +372,8 @@ def plan(edit, tl, voice_wav=None):
             print(f"  note: key line {c['text']!r} at {c['t']:.1f}s overlaps a headline/number card - skipped")
             continue
         ovl.append({"kind": "keyline", "t0": c["t"], "t1": t1, "text": c["text"]})
-        sfx.append(("typing", c["t"] - 0.01, 0, {"d": round(min(1.0, 0.03 * len(c["text"]) + 0.15), 2)}))  # owner: text types on
+        sfx.append(("pop", c["t"] - 0.01, 0))
+        sfx += [("tick", c["t"] + 0.07 * i, -5) for i in range(1, len(c["text"].split()))]
 
     items.sort(key=lambda it: it["t0"])
     # 3. transitions, camera moves, moments
