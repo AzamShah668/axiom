@@ -38,6 +38,6 @@ Last updated 2026-10-31. Update this file and commit it at the end of every chat
 ## Accounts and budget
 - YouTube signed in again 2026-10-30 (Science Guy); it expires after 7 days (re-sign-in: `upload_youtube.py auth-url`, then `exchange`). The Google app is in
   Testing mode, so its sign-ins expire after 7 days; publishing the consent screen stops that.
-- ElevenLabs: 8,376 characters left on 2026-10-31; 131,000 a period, reset 2026-11-01 (Shorts hooks need a few hundred each; ask the owner first).
+- ElevenLabs: **new account key from 2026-11-06** (saved as a cloud-environment network secret for api.elevenlabs.io; on a local machine put it in config/.env). 131,000 characters a period, full on 2026-11-06, reset 2026-12-06. Neel Story Narrator (q4KoKwFyTWQ0Fvvsl9LW) added to the new account's voices. Ask the owner before spending credits.
 - All work up to 2026-10-30 (Voyager, Devanagari narration, per-production voice presets, v3 long takes) merged into
   `main` on 2026-10-30. Earlier, all work of 2026-10-20 to 10-29 was merged into `main` on 2026-10-29 (https://github.com/AzamShah668/axiom/pull/3).
