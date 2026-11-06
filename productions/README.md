@@ -149,3 +149,12 @@ Production folder contents:
 - `footage/terms.txt`
 - `cutlist.json` (the shots used), `captions.en.srt` (v3 CC track)
 - `youtube.md`, `credits.txt`
+
+## Sound effects: the owner's five (2026-11-06, every video and Short from now on)
+For this -> use this (scripts/video/sfx.py synthesises them, licence-clean; render_v3.py and render_short.py place them):
+- **Hooks** -> bass impact (frame 0 of a Short; the first word of a video's opening)
+- **Zoom** -> large swish whoosh (zoom and whip transitions)
+- **Captions / text on screen** -> keyboard typing (headlines, key lines, name labels as they type on; not the
+  one-word burned-in captions, which would clatter under the whole voice)
+- **Transitions** -> camera flash (flash cuts; a Short's hook -> story join is a flash cut)
+- **CTA** -> bell ding (the FULL VIDEO BELOW end card)

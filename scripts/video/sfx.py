@@ -2,7 +2,9 @@
 the SFX layer is licence-clean by construction (no samples, nothing to credit).
 
   make(kind, **kw) -> stereo float (n, 2), peak 1.0; the mixer sets the level from LEVEL (LU vs the voice)
-  kinds: tick, pop, roll(d), hit, impact, sub_drop, riser(d), whoosh(d), whoosh_big, flare, sting
+  kinds: tick, pop, roll(d), hit, impact, sub_drop, riser(d), whoosh(d), whoosh_big, flare, sting, hiss(d),
+         and the owner's five (2026-11-06): bass_impact (hooks), swish_big (zooms), typing(d) (text typing on),
+         camera_flash (transitions), bell (the call to action)
   loudness(x, sr) -> (momentary LUFS every 100 ms, integrated LUFS)  (BS.1770 K-weighting and gating)
 
 Listen to the whole kit: python sfx.py <out.wav>
@@ -15,7 +17,8 @@ SR = 44100
 
 # level of each sound's loudest 400 ms vs the voice's momentary loudness while speaking (LU)
 LEVEL = {"tick": -20, "pop": -18, "roll": -24, "hit": -8, "impact": -2, "sub_drop": -8, "riser": -7,
-         "whoosh": -15, "whoosh_big": -10, "flare": -12, "sting": -3, "boom": -3, "hiss": -14}
+         "whoosh": -15, "whoosh_big": -10, "flare": -12, "sting": -3, "boom": -3, "hiss": -14,
+         "bass_impact": -3, "swish_big": -9, "typing": -19, "camera_flash": -10, "bell": -11}
 
 
 # ------------------------------------------------------------------ loudness
@@ -261,8 +264,76 @@ def hiss(d=3.0, seed=12):
     return _norm(_st(x * env, 0.0))
 
 
+
+# ------------------------------------------------------------------ the owner's five (2026-11-06)
+# For this -> use this: Hooks -> bass impact, Zoom -> large swish whoosh, Captions (text typing on) -> keyboard
+# typing, Transitions -> camera flash, CTA -> bell ding. Synthesised like the rest of the kit.
+def bass_impact(seed=13):
+    """Deep bass impact on a hook's first frame: sub glide 62 -> 36 Hz, punchy click, 1.8 s tail."""
+    tt = _t(1.8)
+    f = 36 + 26 * np.exp(-tt / 0.12)
+    sub = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.minimum(1, tt / 0.003) * np.exp(-tt / 0.55)
+    thump = 0.45 * np.sin(2 * np.pi * 120 * tt) * np.exp(-tt / 0.05)
+    click = 0.5 * _lp(_rng(seed).normal(0, 1, len(tt)), 3500) * np.exp(-tt / 0.008)
+    x = np.tanh(1.8 * (sub + thump + click))
+    return _norm(_reverb(x, 1.4, 0.15, tone=2500))
+
+
+def swish_big(seed=14):
+    """Large swish whoosh for a zoom: wide noise sweep 300 -> 5 kHz -> 1.2 kHz, hard pan, airy top (0.8 s)."""
+    w = whoosh(0.8, 300, 5000, seed)
+    tt = _t(len(w) / SR)
+    p = tt / tt[-1]
+    air = _hp(_rng(seed + 1).normal(0, 1, len(tt)), 4500) * np.exp(-((p - 0.45) / 0.12) ** 2) * 0.5
+    return _norm(w + _st(air, -0.8 + 1.6 * p))
+
+
+def typing(d=0.5, seed=15):
+    """Keyboard typing while text types on: a key every 55-95 ms for d seconds (click + body thock)."""
+    r = _rng(seed)
+    n = int((d + 0.12) * SR)
+    x = np.zeros(n)
+    tk = _t(0.05)
+    t = 0.0
+    while t < d:
+        i = int(t * SR)
+        a = r.uniform(0.55, 1.0)
+        click = _bp(r.normal(0, 1, len(tk)), 2500, 7000) * np.exp(-tk / 0.003)
+        thock = _bp(r.normal(0, 1, len(tk)), 350, 1300) * np.exp(-tk / 0.012) * 0.8
+        k = a * (click + thock)
+        x[i:i + len(k)] += k[:n - i]
+        t += r.uniform(0.055, 0.095)
+    return _norm(_reverb(x, 0.3, 0.1))
+
+
+def camera_flash(seed=16):
+    """Camera flash for a transition: flash pop, two shutter clicks 45 ms apart, a faint recharge whine (0.7 s)."""
+    tt = _t(0.7)
+    r = _rng(seed)
+    pop_ = _hp(r.normal(0, 1, len(tt)), 3000) * np.exp(-tt / 0.02)
+    x = 0.8 * pop_
+    for t0, a in ((0.0, 1.0), (0.045, 0.7)):
+        tk = _t(0.03)
+        c = a * _bp(r.normal(0, 1, len(tk)), 1500, 5500) * np.exp(-tk / 0.004)
+        i = int(t0 * SR)
+        x[i:i + len(c)] += c
+    f = 3000 * 3 ** np.clip((tt - 0.08) / 0.5, 0, 1)
+    whine = 0.06 * np.sin(2 * np.pi * np.cumsum(f) / SR) * (tt > 0.08) * np.exp(-np.maximum(tt - 0.08, 0) / 0.25)
+    return _norm(_reverb(_st(x + whine), 0.5, 0.15))
+
+
+def bell(seed=17):
+    """Bell ding for the call to action: inharmonic partials over 1320 Hz with a soft strike (2 s)."""
+    tt = _t(2.0)
+    f0 = 1320.0
+    x = sum(a * np.sin(2 * np.pi * f0 * k * tt) * np.exp(-tt / dk)
+            for k, a, dk in ((1.0, 1.0, 1.4), (2.0, 0.45, 0.9), (2.76, 0.35, 0.6), (4.07, 0.18, 0.4), (5.4, 0.1, 0.25)))
+    x += 0.3 * _bp(_rng(seed).normal(0, 1, len(tt)), 3000, 9000) * np.exp(-tt / 0.004)
+    return _norm(_reverb(_st(x), 1.2, 0.2, tone=7000))
+
 KIT = {"tick": tick, "pop": pop, "roll": roll, "hit": hit, "impact": impact, "boom": impact, "sub_drop": sub_drop,
-       "riser": riser, "whoosh": whoosh, "whoosh_big": whoosh_big, "flare": flare, "sting": sting, "hiss": hiss}
+       "riser": riser, "whoosh": whoosh, "whoosh_big": whoosh_big, "flare": flare, "sting": sting, "hiss": hiss,
+       "bass_impact": bass_impact, "swish_big": swish_big, "typing": typing, "camera_flash": camera_flash, "bell": bell}
 _CACHE = {}
 
 
@@ -277,7 +348,8 @@ def make(kind, **kw):
 if __name__ == "__main__":
     import soundfile as sf
     parts = []
-    for k in ("tick", "pop", "roll", "hit", "impact", "sub_drop", "riser", "whoosh", "whoosh_big", "flare", "sting"):
+    for k in sys.argv[2:] or ("tick", "pop", "roll", "hit", "impact", "sub_drop", "riser", "whoosh", "whoosh_big", "flare",
+                             "sting", "bass_impact", "swish_big", "typing", "camera_flash", "bell"):
         x, pl = make(k)
         x = x * 10 ** ((-20 + LEVEL[k] - pl) / 20)
         parts += [x, np.zeros((int(0.6 * SR), 2))]
