@@ -1,7 +1,7 @@
 # YouTube Short: tvstatic (video 04, the oldest light)
 
 Own script by the owner (2026-11-06), recorded fresh, 1.2x, burned-in Hinglish captions, one suspense beat, the
-owner's five sound effects. Upload **private** (owner, 2026-11-06):
+owner's five sound effects. **Uploaded private 2026-11-06:** https://youtu.be/2L17SFLqwuQ (publish when the owner says). Command used:
 `python scripts/youtube/upload_youtube.py upload work/04-shorts/tvstatic/out/shorts/tvstatic.mp4 productions/04-before-big-bang-x/shorts/tvstatic.md --privacy private`
 No thumbnail (the owner adds it). **Before publishing:** add the Arno Penzias photo's author (as for video 04). Once
 video 04 is public: set **Related video** in YouTube Studio to "What Was There Before the Big Bang? | Hindi Documentary".
