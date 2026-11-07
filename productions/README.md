@@ -159,3 +159,7 @@ For this -> use this (scripts/video/sfx.py synthesises them, licence-clean; rend
   text keeps the soft tick/pop
 - **Transitions** -> camera flash (flash cuts; a Short's hook -> story join is a flash cut)
 - **CTA** -> bell ding (the FULL VIDEO BELOW end card)
+
+## The first 2 seconds (owner, 2026-11-07, every Short and video opening)
+- Motion from frame 0: a subtle zoom or flicker on the first picture (graphics, photos and text cards too).
+- A quick cut within about 1.5-2 s; nothing holds still for the first 3 s. Check the first 2 s for motion before sending.
