@@ -112,7 +112,7 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   3. **Core Concept (24-38 s):** the science in one idea and one number ("Hamare Suraj ke liye... 6 km").
   4. **Payoff (38-48 s):** the ironic or emotional end, landing on the name or term ("...The Black Hole").
   - Conversational Hinglish: English words where people say them (officer, calculate, exact solution, size,
-    gate), simple spoken Hindi otherwise; "hamara Suraj", not "the Sun".
+    gate, static, radio antenna, signal, microwaves, discovery), simple spoken Hindi otherwise (roshni, brahmand, safar, taapman; owner 2026-11-06; never "goonj"); "hamara Suraj", not "the Sun".
   - **Word budget:** Neel at 1.2x speaks about 2.9 words a second (Devanagari count), so a 48 s Short holds
     about 130 words. The first one ran 166 words, 64.5 s.
   - The owner writes or approves it in Hinglish; it is recorded from Devanagari (English words in Latin
@@ -149,3 +149,17 @@ Production folder contents:
 - `footage/terms.txt`
 - `cutlist.json` (the shots used), `captions.en.srt` (v3 CC track)
 - `youtube.md`, `credits.txt`
+
+## Sound effects: the owner's five (2026-11-06, every video and Short from now on)
+For this -> use this (scripts/video/sfx.py synthesises them, licence-clean; render_v3.py and render_short.py place them):
+- **Hooks** -> bass impact (frame 0 of a Short; the first word of a video's opening)
+- **Zoom** -> large swish whoosh (zoom and whip transitions)
+- **Captions / text on screen** -> keyboard typing **only at 1-2 chosen moments per video or Short** (owner: on every
+  text it is over-editing). Mark them in edit.spec: `K ... | typing` or `L Name @ NAME | role | typing`; all other
+  text keeps the soft tick/pop
+- **Transitions** -> camera flash (flash cuts; a Short's hook -> story join is a flash cut)
+- **CTA** -> bell ding (the FULL VIDEO BELOW end card)
+
+## The first 2 seconds (owner, 2026-11-07, every Short and video opening)
+- Motion from frame 0: a subtle zoom or flicker on the first picture (graphics, photos and text cards too).
+- A quick cut within about 1.5-2 s; nothing holds still for the first 3 s. Check the first 2 s for motion before sending.

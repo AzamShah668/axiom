@@ -1,0 +1,310 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "music": [
+  {
+   "from": "tvstatic_hook",
+   "track": "Lightless_Dawn.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "faint distant galaxies in deep space"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "ban": [],
+ "sections": {
+  "tvstatic_hook": {
+   "v": [
+    {
+     "at": null,
+     "gfx": "tv_static"
+    },
+    {
+     "at": "लेकिन उस static",
+     "gfx": "cmb_sphere_r"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "When an old TV found no channel, the screen filled with black-and-white static"
+    },
+    {
+     "at": "सब उसे बस",
+     "text": "Everyone thought it was just useless noise"
+    },
+    {
+     "at": "लेकिन उस static",
+     "text": "But about 1 percent of that static was light from the Big Bang"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "लेकिन उस static",
+     "lines": [
+      {
+       "text": "1% OF THAT STATIC",
+       "at": "static"
+      },
+      {
+       "text": "*WAS BIG BANG LIGHT*",
+       "at": "percent"
+      }
+     ]
+    }
+   ]
+  },
+  "tvstatic_story": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a large radio antenna under the sky",
+      "radio telescope dishes at dusk"
+     ]
+    },
+    {
+     "at": "Arno Penzias",
+     "gfx": "photo:Arno_Penzias"
+    },
+    {
+     "at": "एक बड़े radio",
+     "q": [
+      "a radio telescope scanning the night sky timelapse",
+      "radio dishes under a starry sky"
+     ]
+    },
+    {
+     "at": "तभी उन्हें",
+     "q": [
+      "a radio telescope dish turning against the sky",
+      "radio dishes moving in unison"
+     ]
+    },
+    {
+     "at": "उन्होंने antenna",
+     "q": [
+      "close-up of a telescope structure",
+      "an observatory dome closing at dawn"
+     ]
+    },
+    {
+     "at": "लेकिन signal",
+     "q": [
+      "a radio telescope under the night sky",
+      "a radio dish in the dark"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "In 1964, in America, two scientists, Arno Penzias and Robert Wilson..."
+    },
+    {
+     "at": "एक बड़े radio",
+     "text": "...were listening to space with a big radio antenna"
+    },
+    {
+     "at": "तभी उन्हें",
+     "text": "Then they picked up a strange signal, from every direction, day and night"
+    },
+    {
+     "at": "उन्होंने antenna",
+     "text": "They cleaned the antenna and checked every part"
+    },
+    {
+     "at": "लेकिन signal",
+     "text": "But the signal was still there"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Arno Penzias",
+     "num": {
+      "template": "name",
+      "value": "ARNO PENZIAS & ROBERT WILSON",
+      "sub": "radio astronomers · Bell Labs · 1964",
+      "typing": true
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "तभी उन्हें",
+     "lines": [
+      {
+       "text": "A STRANGE SIGNAL",
+       "at": "signal"
+      },
+      {
+       "text": "*FROM EVERY DIRECTION*",
+       "at": "direction"
+      }
+     ],
+     "typing": true
+    }
+   ],
+   "s": [
+    {
+     "at": "तभी उन्हें",
+     "type": "hiss",
+     "d": "4.0",
+     "gain": "-3"
+    },
+    {
+     "at": "लेकिन signal",
+     "type": "hiss",
+     "d": "2.6",
+     "gain": "-5"
+    }
+   ]
+  },
+  "tvstatic_core": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "slow flight through a star field",
+      "stars drifting in deep space"
+     ]
+    },
+    {
+     "at": "वो ब्रह्मांड",
+     "gfx": "cmb_zoom"
+    },
+    {
+     "at": "रास्ते में",
+     "gfx": "stretch"
+    },
+    {
+     "at": "और उसका तापमान",
+     "q": [
+      "faint distant galaxies in deep space",
+      "a dark cold sky full of faint stars"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "It was not a fault"
+    },
+    {
+     "at": "वो ब्रह्मांड",
+     "text": "It was the oldest light in the universe..."
+    },
+    {
+     "at": "जो तेरह",
+     "text": "...travelling for 13.8 billion years"
+    },
+    {
+     "at": "रास्ते में",
+     "text": "On the way it stretched so much that it has become microwaves..."
+    },
+    {
+     "at": "और उसका तापमान",
+     "text": "...and its temperature is just minus 270 degrees Celsius"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "जो तेरह",
+     "num": {
+      "template": "hero",
+      "value": "13.8",
+      "from": "0",
+      "unit": "billion years",
+      "kicker": "travelling for",
+      "land": "आठ"
+     }
+    },
+    {
+     "at": "और उसका तापमान",
+     "num": {
+      "template": "thermo",
+      "value": "-270",
+      "from": "0",
+      "unit": "°C",
+      "kicker": "its temperature today",
+      "land": "सत्तर"
+     }
+    }
+   ]
+  },
+  "tvstatic_end": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "an observatory at dusk timelapse",
+      "telescope domes under the evening sky"
+     ]
+    },
+    {
+     "at": "और पुराने TV",
+     "gfx": "tv_static"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "In 1978, the two of them won the Nobel Prize for this discovery"
+    },
+    {
+     "at": "और पुराने TV",
+     "text": "And in that old TV static, there was this very light"
+    },
+    {
+     "at": "Big Bang का",
+     "text": "The Big Bang's signal, straight to the TV at home"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": null,
+     "lines": [
+      {
+       "text": "NOBEL PRIZE",
+       "at": "Nobel"
+      },
+      {
+       "text": "*1978*",
+       "at": "मिला"
+      }
+     ],
+     "kicker": "for this discovery"
+    },
+    {
+     "at": "Big Bang का",
+     "lines": [
+      {
+       "text": "THE BIG BANG'S SIGNAL",
+       "at": "signal"
+      },
+      {
+       "text": "*ON THE TV AT HOME*",
+       "at": "TV"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

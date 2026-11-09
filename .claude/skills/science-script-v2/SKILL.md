@@ -93,8 +93,11 @@ this to land?" If the answer isn't earlier in the script, add it. To keep the le
 context. Do the same for numbers: a number comes after the thing it measures, never before.
 
 ## 3. Language that flows when Neel reads it
-- Conversational Hinglish. Keep English words people actually say (scientist, satellite, theory,
-  calculate, inflation, Big Bounce, galaxy). Keep the emotional words Hindi (suraag, goonj, pahaili, daava).
+- **Owner's mix (2026-11-06, the 04 TV static Short as rewritten by the owner):** technical terms stay
+  English (static, radio antenna, signal, part, check, direction, stretch, microwaves, discovery, Nobel Prize);
+  the rest is simple spoken Hindi the owner likes (roshni, brahmand, safar, taapman, antariksh, kharabi, bekaar
+  shor). Never "goonj" (owner dislikes it). Example: "Woh brahmand ki sabse purani roshni thi, jo 13.8 billion
+  saal se safar kar rahi hai."
 - Avoid textbook words. Use **sateek** (not sateekta), **phailaav** (not vistaar), **Father X, ek Catholic
   padri** (not "Church Father"), and **gandagi** (not beet, which reads as crude).
 - **Short sentences.** One idea and at most one number per sentence. Put the number near the end, so a
@@ -104,7 +107,7 @@ context. Do the same for numbers: a number comes after the thing it measures, ne
 - **Nothing Neel can't say smoothly.** No catalogue names like MoM-z14 or GW250114 in the narration: say what
   it is ("ab tak ki sabse door ki galaxy") and put the name on screen.
 - **Repeat a key phrase at most 3 times** (opening, one middle callback, the end). Vary the rest ("sabse purani
-  roshni" becomes "Big Bang ki goonj", "woh roshni").
+  roshni" becomes "Big Bang ki roshni", "woh roshni"; never "goonj").
 - **Questions belong to characters,** plus the one agreed debate line at the end. Turn the rest into statements
   ("Aisa kaise?" becomes "Yahi thi pahaili.").
 - **Check grammar, especially gender agreement** (waqt is masculine: "waqt bhi, lambaai chaudaai jaisa hi ban

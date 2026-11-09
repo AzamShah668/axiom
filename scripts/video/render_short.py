@@ -74,7 +74,7 @@ def parse_spec(path):
             shot, _, rest = val.partition("@")
             off, _, word = rest.partition("|")
             cur.setdefault("hook_shots", []).append((shot.strip(), float(off), word.strip()))
-        elif key in ("top", "hook", "say", "say_en", "say_roman", "land", "captions"):
+        elif key in ("top", "hook", "say", "say_en", "say_roman", "land", "captions", "suspense"):
             cur[key] = val.strip()
     return shorts
 
@@ -91,7 +91,8 @@ class Lines:
         self.quiet = 10 ** (-45 / 20)  # 20 ms level under -45 dBFS = no speech
 
     def find(self, prefix):
-        hits = [i for i, c in enumerate(self.caps) if c["text"].strip('"').lower().startswith(prefix.lower())]
+        norm = lambda t: t.strip('"').lower().replace(",", "")  # noqa: E731  (prefixes are written without commas)
+        hits = [i for i, c in enumerate(self.caps) if norm(c["text"]).startswith(norm(prefix))]
         if len(hits) != 1:
             raise SystemExit(f"caption start {prefix!r} matches {len(hits)} lines: make it longer")
         return hits[0]
@@ -129,11 +130,17 @@ class Lines:
 def segments(spec, L):
     """[(a, b), ...] on the master's clock: the hook line, then each body run with the hook line taken out."""
     h = L.find(spec["hook"])
+    sus = L.find(spec["suspense"]) if spec.get("suspense") else -1  # one held beat before this line (owner, 2026-10-31)
     segs = [L.span(h)]
     for a_txt, b_txt in spec["body"]:
         i, j = L.find(a_txt), L.find(b_txt)
         run = []
         for k in range(i, j + 1):
+            if k == sus and run:
+                segs.append((run[0][0], run[-1][1]))
+                run = []
+            if k == sus:
+                spec["_gap_at"] = len(segs)
             if k == h:
                 if run:
                     segs.append((run[0][0], run[-1][1]))
@@ -177,6 +184,7 @@ def tts_line(text, cache_dir):
             al["character_end_times_seconds"])
 
 
+SUSPENSE = 1.2               # the one held beat before a reveal, master clock (1.0 s at 1.2x)
 PAUSE, BREAK = 0.15, 0.3     # longest pause inside a spoken hook: between words, between sentences (s)
 
 
@@ -380,6 +388,7 @@ def build(spec, P, L, hook=None, capw=()):
     spoken hook laid over the master hook line's shots, or None to use the master line itself."""
     segs = segments(spec, L)
     items, ovl, sfx, mus, caps = [], [], [], [], []
+    join_t = None
     a, b = segs[0]
     if hook:  # the spoken hook: its own footage (hook_shot:), else the master line's shots stretched to the new line
         Dh, land_t, words, order = hook
@@ -416,6 +425,11 @@ def build(spec, P, L, hook=None, capw=()):
     else:
         T, body, cw = 0.0, segs, []
     for si, (a, b) in enumerate(body):
+        if spec.get("_gap_at") == si + (1 if hook else 0):  # the suspense beat: footage runs on, a riser, a hit
+            if items:
+                items[-1]["t1"] += SUSPENSE
+            sfx += [["riser", T, -1, {"d": SUSPENSE}], ["impact", T + SUSPENSE - 0.03, 0], ["sub_drop", T + SUSPENSE, -2]]
+            T += SUSPENSE
         d = T - a
         cw += [(t + d, x, brk) for t, x, brk in capw if a <= t < b]
         opening = not hook and si == 0
@@ -443,12 +457,22 @@ def build(spec, P, L, hook=None, capw=()):
         mus += [dict(e, t0=e["t0"] + d, t1=min(e["t1"], b) + d, **({"peak": e["peak"] + d} if "peak" in e else {}))
                 for e in P["mus"] if a <= e["t0"] < b]
         caps += [dict(c, t=c["t"] + d, t1=min(c["t1"], b) + d) for c in P["caps"] if a <= c["t"] < b]
-        if si == (0 if hook else 1):
-            sfx.append(["whoosh", T - 0.25, 0])
+        if si == (0 if hook else 1):  # the hook -> story join
+            join_t = T
         T += b - a
     a_body = body[0][0]
     track = [c for c in P["music"] if c["t"] <= a_body][-1]
-    sfx.append(["hit", 0.0, -4])
+    if not any(e[0] == "bass_impact" and abs(e[1]) < 0.15 for e in sfx):  # owner, 2026-11-06: hooks -> bass impact on frame 0
+        sfx.append(["bass_impact", 0.0, 0])
+    secs = [it.get("sec") or "" for it in items]
+    if not hook and secs and secs[0].startswith(spec["id"] + "_"):  # own script: the join is where the hook beat ends
+        k = next((i for i, x in enumerate(secs) if x and x != secs[0]), None)
+        join_t = items[k]["t0"] if k is not None else join_t
+    if join_t is not None:  # owner, 2026-11-06: transitions -> camera flash (a flash cut at the join)
+        sfx.append(["camera_flash", join_t - 0.02, 0])
+        j = min(range(len(items)), key=lambda k: abs(items[k]["t0"] - join_t))
+        if abs(items[j]["t0"] - join_t) < 0.3:
+            items[j]["trans"] = "flash"
     return segs, {"style": "v3", "items": items, "ovl": ovl, "caps": caps, "capwords": cw, "sfx": sfx, "mus": mus,
                   "music": [{"t": 0.0, "track": track["track"], "gain": track.get("gain", 0.0)}],
                   "breaths": [], "total": T, "off": 0.0, "grade": P.get("grade", {})}
@@ -486,7 +510,7 @@ def add_end(Ps):
     T = Ps["total"]
     Ps["items"][-1]["t1"] = T + END
     Ps["ovl"].append({"kind": "endcard", "t0": T + 0.05, "t1": T + END})
-    Ps["sfx"] += [["whoosh", T - 0.2, -2], ["pop", T + 0.05, 2]]
+    Ps["sfx"] += [["whoosh", T - 0.2, -2], ["bell", T + 0.05, 0]]  # owner, 2026-11-06: CTA -> bell ding
     Ps["sfx"].sort(key=lambda e: e[1])
     Ps["total"] = T + END
     for it in Ps["items"]:
@@ -681,7 +705,13 @@ def main():
                             else os.path.join(a.master_work, "..", "..", "voice", "timeline.json"))
         capw = caption_words(os.path.join(os.path.dirname(os.path.abspath(a.spec)), spec["captions"]), tl, P)
         segs, Ps = build(spec, P, L, hook and hook[1:], capw)
-        voice_parts = ([hook[0]] if hook else []) + [cut(voice, x, y) for x, y in (segs[1:] if hook else segs)]
+        voice_parts = [hook[0]] if hook else []
+        for k, (x, y) in enumerate(segs):
+            if hook and k == 0:
+                continue
+            if spec.get("_gap_at") == k:
+                voice_parts.append(np.zeros(int(SUSPENSE * SR), np.float32))
+            voice_parts.append(cut(voice, x, y))
         raw, voice_wav = os.path.join(work, "voice_raw.wav"), os.path.join(work, "voice.wav")
         sf.write(raw, np.concatenate(voice_parts).astype(np.float32), SR)
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af", f"rubberband=tempo={a.speed}:pitchq=quality",

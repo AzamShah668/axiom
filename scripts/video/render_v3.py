@@ -135,6 +135,8 @@ def card_sfx(ns, t0):
         return [("roll", t0 + ns["land_t"] - ns["count_s"], 0, {"d": round(ns["count_s"], 2)}), ("hit", t0 + ns["land_t"] - 0.01, 0)]
     if tp == "chart":
         return [("whoosh", t0 + 0.1, -4, {"d": float(ns.get("draw", 2.0)), "f0": 300, "f1": 1800})]
+    if ns.get("typing"):  # owner, 2026-11-06: keyboard typing only where the plan marks it
+        return [("typing", t0 + 0.12, 0, {"d": 0.6})]
     return [("pop", t0 + (0.12 if tp == "name" else 0.05), -2)]
 
 
@@ -227,6 +229,8 @@ def plan(edit, tl, voice_wav=None):
             left = f"FACT {num} / {n_total}" if isinstance(num, int) else (title.get("main") or "")
             ovl.append({"kind": "footer", "t0": h["first"], "t1": sec_end, "left": left, "right": fl})
         first = h["first"]
+        if sid == order[0]:  # owner, 2026-11-06: hooks -> a bass impact on the first word
+            sfx.append(("bass_impact", first, 0))
         # kinetic headlines first: their windows are protected from scene cuts
         heads_k = []
         for kk in spec.get("k", []):
@@ -238,7 +242,10 @@ def plan(edit, tl, voice_wav=None):
                 t = max(first, T.v(T.secs[sid]["char_start"][pos])) if ln.get("at") else (t_prev if i == 0 else t_prev + 0.22)
                 lines.append({"text": ln["text"], "t": t})
                 t_prev = t
-                sfx.append(("tick", t - 0.01, 0))
+                if kk.get("typing") and i == 0:  # owner, 2026-11-06: keyboard typing only where the plan marks it (first line)
+                    sfx.append(("typing", t - 0.01, 0, {"d": round(min(0.9, 0.03 * len(ln["text"]) + 0.15), 2)}))
+                else:
+                    sfx.append(("tick", t - 0.01, 0))
             hk = {"kind": "headline", "lines": lines, "kicker": kk.get("kicker"), "sub": kk.get("sub"),
                   "pos": kk.get("pos", "left"), "t0": lines[0]["t"] - 0.1, "t_last": lines[-1]["t"]}
             if hk["kicker"]:
@@ -414,10 +421,10 @@ def plan(edit, tl, voice_wav=None):
             sfx.append(("whoosh", it["t0"] - 0.2, -2, {"d": 0.6}))
         elif tr == "flare":
             sfx.append(("flare", it["t0"] - 0.08, 0))
-        elif tr == "flash":
-            sfx.append(("hit", it["t0"], 0))
+        elif tr == "flash":  # owner, 2026-11-06: transitions -> camera flash, zooms -> large swish whoosh
+            sfx.append(("camera_flash", it["t0"] - 0.02, 0))
         elif tr in ("whip", "zoom"):
-            sfx.append(("whoosh", it["t0"] - 0.2, 0, {"d": 0.4, "f0": 700, "f1": 3800}))
+            sfx.append(("swish_big", it["t0"] - 0.45, 0))
     for tm, m in moments.items():
         r = float(m.get("riser", 1.8))
         if r > 0:

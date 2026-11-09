@@ -79,6 +79,15 @@ Its master has no v3 plan, so re-plan just the facts the Shorts use, over the pu
 5. `render_short.py <spec> <plan cutlist> <no-master dir> ... --narration <voice>/narration.wav`. The voice is
    laid on the plan's clock with `render_v3.voice_track`, because there is no master render to take a stem from.
 
+**The first 2 seconds (owner, 2026-11-07, from a review of the 04 TV static Short):** the opening is the biggest
+opportunity, and that Short's opening read as static (a TV-noise graphic plus text for several seconds). In every
+Short and every video opening from now on:
+1. **Motion from frame 0:** a subtle zoom (push-in) or a flicker on the very first picture, including our own
+   graphics (a still graphic, a photo or a text card never opens a Short unmoving).
+2. **A quick cut early:** the first cut comes within about 1.5-2 s; no single picture holds the first 3+ s.
+Check before sending: measure motion over the first 2 s (optical flow, review_sheet frames at 0.0/0.5/1.0/1.5 s);
+every half-second must visibly change.
+
 ## 2. Render
 ```bash
 ONLY=teaspoon scripts/science/pipeline.sh productions/NN-slug shorts   # one; without ONLY: every Short in the spec

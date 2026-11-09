@@ -83,7 +83,8 @@ def parse(spec):
             elif kind == "K":
                 trig, _, what = rest.partition(" @ ")
                 parts = what.split(" | ")
-                kv, _ = _opts(parts[1:])
+                kv, kflags = _opts(parts[1:])
+                kv.update({f: True for f in kflags})  # e.g. "typing": this headline types on with keyboard sound
                 lines = []
                 for x in parts[0].split(" / "):
                     m = re.match(r"^(.*?)\s*\[([^\]]+)\]\s*$", x)
@@ -108,7 +109,8 @@ def parse(spec):
             elif kind == "L":
                 trig, _, what = rest.partition(" @ ")
                 parts = [x.strip() for x in what.split("|")]
-                num = {"template": "name", "value": parts[0], **({"sub": parts[1]} if len(parts) > 1 else {})}
+                num = {"template": "name", "value": parts[0], **({"sub": parts[1]} if len(parts) > 1 and parts[1] != "typing" else {}),
+                       **({"typing": True} if "typing" in parts[1:] else {})}
                 cur.setdefault("n", []).append({"at": _trig(trig), "num": num})
             elif kind == "M":
                 parts = [x.strip() for x in rest.split("|")]

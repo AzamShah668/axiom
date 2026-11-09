@@ -32,7 +32,7 @@ def per_item(video, out, cutlist):
     cap = cv2.VideoCapture(video)
     ims, flags, seen = [], [], {}
     for n, it in enumerate(items):
-        k = seen[it["sec"]] = seen.get(it["sec"], -1) + 1
+        sec = it.get("sec", "short"); k = seen[sec] = seen.get(sec, -1) + 1
         t = (it["t0"] + it["t1"]) / 2
         cap.set(cv2.CAP_PROP_POS_MSEC, t * 1000)
         ok, im = cap.read()
@@ -42,7 +42,7 @@ def per_item(video, out, cutlist):
         im = cv2.resize(im, (tw, th))
         flag(im, t, flags)
         cv2.rectangle(im, (0, 0), (tw, 22), (0, 0, 0), -1)
-        cv2.putText(im, f"{n} {it['sec']}/{k} {it['kind']} {int(t // 60)}:{t % 60:04.1f}", (4, 16),
+        cv2.putText(im, f"{n} {sec}/{k} {it.get('kind', '')} {int(t // 60)}:{t % 60:04.1f}", (4, 16),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5 if tw > 300 else 0.42, (0, 255, 255), 1)
         ims.append(im)
     cols = 4 if ims and ims[0].shape[1] >= ims[0].shape[0] else 7

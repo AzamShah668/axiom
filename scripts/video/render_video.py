@@ -813,7 +813,8 @@ def gfx(name, t, D, sh):
         return f
     if name == "tv_static":  # an old TV's snow: about 1 % of it is the Big Bang's light
         f = (f * 0.35).astype(np.uint8)
-        x0, y0, tw, th = 510, 150, 900, 600
+        tw, th = 900, 600
+        x0, y0 = (W - tw) // 2, int(H * 150 / 1080)  # centred: 510, 150 on the 16:9 stage; fits a square Short too
         snow = np.random.default_rng(int(t * 25)).integers(0, 256, (th // 4, tw // 4), dtype=np.uint8)
         tv = cv2.cvtColor(cv2.resize(snow, (tw, th), interpolation=cv2.INTER_NEAREST), cv2.COLOR_GRAY2BGR).astype(np.float32) * 0.8
         e = ease((p - 0.3) / 0.25)
@@ -826,7 +827,7 @@ def gfx(name, t, D, sh):
             tv = tv + glow
         f[y0:y0 + th, x0:x0 + tw] = np.clip(tv, 0, 255).astype(np.uint8)
         cv2.rectangle(f, (x0 - 14, y0 - 14), (x0 + tw + 14, y0 + th + 14), (70, 70, 70), 10, cv2.LINE_AA)
-        op = ease((p - 0.5) / 0.15)
+        op = ease((p - 0.5) / 0.15) if W > H * 1.4 else 0.0  # a square Short carries its own headlines
         draw_text(f, "ABOUT 1% OF THE STATIC", 64, (0.5, 0.85), op=op, color=(255, 190, 110))
         draw_text(f, "WAS THE ECHO OF THE BIG BANG", 40, (0.5, 0.92), op=op, color=(235, 235, 235))
         return f
@@ -1221,7 +1222,8 @@ def gfx(name, t, D, sh):
             x = W * xf
             add_glow(f, x, y0, 22, (255, 255, 255), e)
             draw_text(f, nm, 40, (xf, 0.42), op=e, font="Montserrat", color=(240, 240, 240))
-            draw_text(f, val, 72 if k < 2 else 96, (xf, 0.66), op=e, color=(255, 205, 120))
+            vy = 0.75 if k == 1 and W < H * 1.4 else 0.66  # square Shorts frame: the Moon's and Sun's values would touch
+            draw_text(f, val, 72 if k < 2 else 96, (xf, vy), op=e, color=(255, 205, 120))
             ph = ((p - t0) * 1.6) % 1.0  # a pulse of light running home
             bx = x + (xe - x) * ph
             add_glow(f, bx, y0, 14, (255, 230, 160), e * 0.9)
@@ -1392,7 +1394,7 @@ def cmb(kind, t, D, f):
         my = (0.5 - lat / math.pi) * (tex.shape[0] - 1)
         img = cv2.remap(tex, mx.astype(np.float32), my.astype(np.float32), cv2.INTER_LINEAR) * shade[..., None]
         m = cv2.GaussianBlur(ok, (0, 0), 1.2)[..., None]
-        cx = W * 0.8 if kind == "sphere_r" else W / 2  # _r: clear of a headline on the left
+        cx = W * 0.8 if kind == "sphere_r" and W > H * 1.4 else W / 2  # _r: clear of a headline on the left (16:9 only)
         x0, y0 = int(cx - R), int(H * 0.5 - R)
         add_glow(f, cx, H * 0.5, R * 1.35, (255, 200, 150), 0.25, 1.4)
         reg = f[y0:y0 + 2 * R, x0:x0 + 2 * R].astype(np.float32)
