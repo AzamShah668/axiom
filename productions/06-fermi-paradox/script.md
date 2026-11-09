@@ -1,7 +1,7 @@
 # Video 06: The Fermi Paradox (draft, 2026-11-09, waiting for the owner's OK)
 
 Script for review: `script.txt` (Hinglish). Nothing is recorded until the owner approves it.
-`script_check.py`: 1,867 words, about 12.7 min at 1.0x; the only flag is Fermi's own question (a character's, allowed).
+`script_check.py`: 1,856 words, about 12.6 min at 1.0x; the only flag is Fermi's own question (allowed). Owner approved the topic 2026-11-09; fixes applied (deewar 2x, darawna only in the Clarke line, simpler words, ending questions in one line). `tts/narration.hi.md`: 9,554 characters, tts_check 0 problems, 37 names to probe.
 
 ## Topic from view data (yt-dlp public counts, 2026-11-09; no API token in this container)
 | Option | English demand | Best Hindi long video (>6 min) | Verdict |
