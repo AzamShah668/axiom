@@ -21,7 +21,7 @@ A star like our Sun burns for about 10 billion years, but sometimes it dies in a
 8:35 The Hunter At Home
 10:36 A Flash 200 Years Ago
 
-Footage credits: ESO (eso.org), CC BY 4.0 (65 videos); ESA/Hubble (esahubble.org), CC BY 4.0 (30 videos); ESA/Webb (esawebb.org), CC BY 4.0 (10 videos); NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov) (47 videos); Pexels (pexels.com), Pexels License (31 videos). Full list of videos in the pinned comment.
+Footage credits: ESO (eso.org), CC BY 4.0 (65 videos); ESA/Hubble (esahubble.org), CC BY 4.0 (30 videos); ESA/Webb (esawebb.org), CC BY 4.0 (10 videos); NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov) (46 videos); Pexels (pexels.com), Pexels License (31 videos). Full list of videos in the pinned comment.
 Archive footage and recordings: A black hole tears apart a star: NASA animation of Swift J1644+57 (2011) - NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov); Andromeda approaching the Milky Way, NASA visualization (2025) - NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov); Reinhard Genzel, astrophysicist, ESO, 2008 (recording) - ESO (Reinhard Genzel talks about his research, video news release eso0846c, 2008).
 Image credits (graphics):
 - First image of a black hole, M87* (EHT Collaboration, ESO eso1907a), CC BY 4.0
