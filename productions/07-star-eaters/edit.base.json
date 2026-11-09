@@ -1,0 +1,95 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "title": {
+  "kicker": "the universe's hunters",
+  "main": "Star Eaters"
+ },
+ "cards": {
+  "ch1": [
+   "",
+   "THE FLASH OF *2011*"
+  ],
+  "ch2": [
+   "",
+   "TORN *APART*"
+  ],
+  "ch3": [
+   "",
+   "THE BLACK HOLE THAT *BURPED*"
+  ],
+  "ch4": [
+   "",
+   "THE GIANT THAT SWALLOWS *WHOLE*"
+  ],
+  "ch5": [
+   "",
+   "THE HUNTER *AT HOME*"
+  ],
+  "ch6": [
+   "",
+   "A FLASH *200 YEARS* AGO"
+  ]
+ },
+ "count_total": 6,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "ch1",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "ch2",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "ch3",
+   "track": "Interloper.mp3"
+  },
+  {
+   "from": "ch4",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "ch5",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "ch6",
+   "track": "Long_Note_One.mp3"
+  },
+  {
+   "from": "ending",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "a dark black hole among stars"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {
+  "ch2/15": "arc_swift_tde#0",
+  "ending/7": "arc_mw_m31_sky#0"
+ },
+ "ban": [],
+ "crops": {},
+ "exclude": {},
+ "channel": {
+  "dur": 3.2,
+  "gfx": "channel"
+ }
+}

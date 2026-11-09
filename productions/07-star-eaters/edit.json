@@ -1,0 +1,2064 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "title": {
+  "kicker": "the universe's hunters",
+  "main": "Star Eaters"
+ },
+ "cards": {
+  "ch1": [
+   "",
+   "THE FLASH OF *2011*"
+  ],
+  "ch2": [
+   "",
+   "TORN *APART*"
+  ],
+  "ch3": [
+   "",
+   "THE BLACK HOLE THAT *BURPED*"
+  ],
+  "ch4": [
+   "",
+   "THE GIANT THAT SWALLOWS *WHOLE*"
+  ],
+  "ch5": [
+   "",
+   "THE HUNTER *AT HOME*"
+  ],
+  "ch6": [
+   "",
+   "A FLASH *200 YEARS* AGO"
+  ]
+ },
+ "count_total": 6,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "ch1",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "ch2",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "ch3",
+   "track": "Interloper.mp3"
+  },
+  {
+   "from": "ch4",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "ch5",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "ch6",
+   "track": "Long_Note_One.mp3"
+  },
+  {
+   "from": "ending",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "a dark black hole among stars"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {
+  "ch2/15": "arc_swift_tde#0",
+  "ending/7": "arc_mw_m31_sky#0"
+ },
+ "ban": [],
+ "crops": {},
+ "exclude": {},
+ "channel": {
+  "dur": 3.2,
+  "gfx": "channel"
+ },
+ "sections": {
+  "opening": {
+   "v": [
+    {
+     "at": null,
+     "opt": "flash",
+     "q": [
+      "a star torn apart into a glowing stream by a black hole",
+      "a bright star stretched into a tail of gas"
+     ]
+    },
+    {
+     "at": "लगभग दस अरब",
+     "q": [
+      "the Sun burning with solar flares close up",
+      "a bright yellow star glowing"
+     ]
+    },
+    {
+     "at": "लेकिन कभी कभी",
+     "q": [
+      "a star exploding in a flash of light",
+      "a bright flash in space"
+     ]
+    },
+    {
+     "at": "वो खिंचकर",
+     "gfx": "tidal"
+    },
+    {
+     "at": "और फिर हमेशा",
+     "q": [
+      "a glowing cloud fading into darkness",
+      "stars fading in deep black space"
+     ]
+    },
+    {
+     "at": "ब्रह्मांड में हर तारा",
+     "q": [
+      "a red giant star near the end of its life",
+      "a dying star shedding its outer layers"
+     ]
+    },
+    {
+     "at": "कुछ तारों का शिकार",
+     "q": [
+      "a star pulled towards a black hole animation",
+      "a black hole pulling in a star"
+     ]
+    },
+    {
+     "at": "और कुछ के शिकारी",
+     "opt": "hold",
+     "q": [
+      "a black hole with a glowing accretion disk",
+      "a supermassive black hole animation"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "A star like our Sun keeps burning for about 10 billion years"
+    },
+    {
+     "at": "लेकिन कभी कभी",
+     "text": "But sometimes, its end comes in just a few hours"
+    },
+    {
+     "at": "वो खिंचकर",
+     "text": "It is stretched into a glowing stream of gas millions of kilometres long"
+    },
+    {
+     "at": "और फिर हमेशा",
+     "text": "And then it disappears into the dark forever"
+    },
+    {
+     "at": "ब्रह्मांड में हर तारा",
+     "text": "Not every star in the universe dies of old age"
+    },
+    {
+     "at": "कुछ तारों का शिकार",
+     "text": "Some stars are hunted"
+    },
+    {
+     "at": "और कुछ के शिकारी",
+     "text": "And their hunters are black holes"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "लगभग दस अरब",
+     "num": {
+      "template": "hero",
+      "value": "10",
+      "unit": "billion years",
+      "kicker": "a star like our sun burns for",
+      "land": "अरब",
+      "dur": "2.6"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "लेकिन कभी कभी",
+     "lines": [
+      {
+       "text": "ITS END COMES",
+       "at": "अंत"
+      },
+      {
+       "text": "*IN A FEW HOURS*",
+       "at": "घंटों"
+      }
+     ]
+    },
+    {
+     "at": "कुछ तारों का शिकार",
+     "lines": [
+      {
+       "text": "SOME STARS",
+       "at": "तारों"
+      },
+      {
+       "text": "*ARE HUNTED*",
+       "at": "शिकार"
+      }
+     ]
+    }
+   ]
+  },
+  "ch1": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the Swift satellite in orbit above Earth",
+      "a space telescope orbiting Earth"
+     ]
+    },
+    {
+     "at": "NASA के Swift",
+     "gfx": "photo:Swift_sat"
+    },
+    {
+     "at": "ये चमक Draco",
+     "q": [
+      "the night sky constellations slowly turning",
+      "stars of a constellation rotating"
+     ]
+    },
+    {
+     "at": "शुरुआत में astronomers",
+     "q": [
+      "a gamma ray burst flash animation",
+      "a bright burst of light in space"
+     ]
+    },
+    {
+     "at": "यानी किसी मरते",
+     "q": [
+      "a massive star collapsing and exploding",
+      "a supernova explosion"
+     ]
+    },
+    {
+     "at": "लेकिन इस बार",
+     "opt": "hold",
+     "q": [
+      "a galaxy with a glowing bright core",
+      "a bright point of light in a dark galaxy"
+     ]
+    },
+    {
+     "at": "पहले घंटों तक",
+     "q": [
+      "a time-lapse of the night sky turning",
+      "stars trailing across the sky timelapse"
+     ]
+    },
+    {
+     "at": "आसमान के उसी",
+     "q": [
+      "X-ray image of an active galaxy",
+      "X-ray glow from a galaxy core"
+     ]
+    },
+    {
+     "at": "ये जगह Earth से",
+     "q": [
+      "zooming out into the distant universe",
+      "flight through thousands of galaxies"
+     ]
+    },
+    {
+     "at": "और वहाँ जो हो रहा",
+     "q": [
+      "an extremely luminous galaxy core",
+      "a blindingly bright flash in a galaxy"
+     ]
+    },
+    {
+     "at": "California के astronomer",
+     "q": [
+      "the Hubble Space Telescope in orbit",
+      "Hubble telescope above Earth"
+     ]
+    },
+    {
+     "at": "तब पता चला",
+     "opt": "hold",
+     "q": [
+      "zooming into the core of a quiet galaxy",
+      "a galaxy with a bright centre"
+     ]
+    },
+    {
+     "at": "वहाँ एक बड़ा black hole",
+     "q": [
+      "a supermassive black hole at the centre of a galaxy",
+      "black hole animation"
+     ]
+    },
+    {
+     "at": "वो black hole लंबे",
+     "q": [
+      "a dark black hole surrounded by stars",
+      "stars around an invisible black hole"
+     ]
+    },
+    {
+     "at": "लेकिन फिर, हमारे Sun",
+     "q": [
+      "a single bright star drifting through space",
+      "a star moving across a star field"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "अट्ठाईस March",
+     "text": "28 MARCH 2011",
+     "big": true
+    },
+    {
+     "at": "NASA के Swift",
+     "text": "NASA's Swift satellite suddenly detected an extremely bright flash in the sky"
+    },
+    {
+     "at": "ये चमक Draco",
+     "text": "It came from the direction of the constellation Draco, and it carried gamma rays"
+    },
+    {
+     "at": "शुरुआत में astronomers",
+     "text": "At first astronomers thought it was a normal gamma-ray burst..."
+    },
+    {
+     "at": "यानी किसी मरते",
+     "text": "...the last blast of a dying star, over in seconds or minutes"
+    },
+    {
+     "at": "लेकिन इस बार",
+     "text": "But this time, that's not what happened"
+    },
+    {
+     "at": "ये चमक बंद ही",
+     "text": "The flash didn't stop"
+    },
+    {
+     "at": "पहले घंटों तक",
+     "text": "First for hours, then days, and finally weeks"
+    },
+    {
+     "at": "आसमान के उसी",
+     "text": "X-rays kept pouring in from that same patch of sky"
+    },
+    {
+     "at": "ये जगह Earth से",
+     "text": "The place was about 3.8 billion light-years from Earth"
+    },
+    {
+     "at": "और वहाँ जो हो रहा",
+     "text": "And whatever was happening there shone brighter than 100 billion Suns"
+    },
+    {
+     "at": "California के astronomer",
+     "text": "Astronomer Joshua Bloom and his team pointed Hubble and Chandra in that direction"
+    },
+    {
+     "at": "तब पता चला",
+     "text": "The flash was coming from the very centre of a quiet galaxy"
+    },
+    {
+     "at": "वहाँ एक बड़ा black hole",
+     "text": "A big black hole sat there, perhaps twice as massive as the one in our galaxy"
+    },
+    {
+     "at": "वो black hole लंबे",
+     "text": "It had been quiet for a long time"
+    },
+    {
+     "at": "लेकिन फिर, हमारे Sun",
+     "text": "Then a star like our Sun wandered very close to it"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "NASA के Swift",
+     "num": {
+      "template": "name",
+      "value": "SWIFT",
+      "sub": "NASA gamma-ray satellite · launched 2004"
+     }
+    },
+    {
+     "at": "ये जगह Earth से",
+     "num": {
+      "template": "hero",
+      "value": "3.8",
+      "unit": "billion light years away",
+      "kicker": "the flash came from",
+      "land": "अस्सी"
+     }
+    },
+    {
+     "at": "और वहाँ जो हो रहा",
+     "num": {
+      "template": "hero",
+      "value": "100",
+      "unit": "billion suns",
+      "kicker": "brighter than",
+      "land": "अरब"
+     }
+    },
+    {
+     "at": "California के astronomer",
+     "num": {
+      "template": "name",
+      "value": "JOSHUA BLOOM",
+      "sub": "astronomer · University of California, Berkeley"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "ये चमक बंद ही",
+     "lines": [
+      {
+       "text": "THE FLASH",
+       "at": "चमक"
+      },
+      {
+       "text": "*DIDN'T STOP*",
+       "at": "बंद"
+      }
+     ]
+    }
+   ]
+  },
+  "ch2": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a black hole bending the light of stars behind it",
+      "gravitational lensing around a black hole"
+     ]
+    },
+    {
+     "at": "इस idea को",
+     "q": [
+      "an old observatory dome at night",
+      "a telescope dome under the stars"
+     ]
+    },
+    {
+     "at": "हर massive black hole",
+     "q": [
+      "a glowing ring of light around a black hole",
+      "an invisible boundary around a black hole"
+     ]
+    },
+    {
+     "at": "इस boundary के अंदर",
+     "gfx": "spacetime"
+    },
+    {
+     "at": "तारे का जो हिस्सा",
+     "gfx": "tidal"
+    },
+    {
+     "at": "अगर किसी इंसान",
+     "q": [
+      "an astronaut floating in space",
+      "a spacewalk above Earth"
+     ]
+    },
+    {
+     "at": "और धीरे धीरे पूरा",
+     "q": [
+      "a long thin stream of glowing gas",
+      "stretched streaks of light"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ अठासी में",
+     "gfx": "photo:Stephen_Hawking"
+    },
+    {
+     "at": "Spaghettification",
+     "q": [
+      "long glowing filaments of gas",
+      "streams of light stretched across space"
+     ]
+    },
+    {
+     "at": "दो हज़ार ग्यारह में उस",
+     "opt": "hold",
+     "q": [
+      "a star being torn apart by a black hole animation",
+      "a star stretched by a black hole"
+     ]
+    },
+    {
+     "at": "और कुछ ही घंटों में, वो",
+     "q": [
+      "glowing debris scattering in space",
+      "the debris of a destroyed star"
+     ]
+    },
+    {
+     "at": "लेकिन black hole ने पूरे",
+     "q": [
+      "gas spiralling into a black hole",
+      "a black hole swallowing gas"
+     ]
+    },
+    {
+     "at": "तारे की लगभग आधी",
+     "q": [
+      "gas thrown out into space at high speed",
+      "an expanding shell of gas"
+     ]
+    },
+    {
+     "at": "बाक़ी आधी gas",
+     "q": [
+      "gas swirling around a black hole",
+      "an accretion disk forming"
+     ]
+    },
+    {
+     "at": "ये gas इतनी तेज़ी",
+     "opt": "hold",
+     "q": [
+      "a glowing accretion disk around a black hole",
+      "a hot spinning disk of gas"
+     ]
+    },
+    {
+     "at": "इसी दौरान",
+     "q": [
+      "jets shooting out from the poles of a black hole",
+      "relativistic jets from a black hole"
+     ]
+    },
+    {
+     "at": "और सबसे interesting",
+     "q": [
+      "a beam of light pointing straight at the camera",
+      "a bright jet coming towards the viewer"
+     ]
+    },
+    {
+     "at": "इसी वजह से हमें",
+     "q": [
+      "the Earth seen from space",
+      "Earth with a bright light in the sky"
+     ]
+    },
+    {
+     "at": "ऐसे torn apart stars",
+     "q": [
+      "an observatory under a starry sky",
+      "telescopes observing at night"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "A black hole can break a star without swallowing it whole"
+    },
+    {
+     "at": "इस idea को",
+     "text": "Astrophysicist Jack Hills explained this idea in 1975"
+    },
+    {
+     "at": "हर massive black hole",
+     "text": "Around every massive black hole is an invisible boundary called the tidal radius"
+    },
+    {
+     "at": "इस boundary के अंदर",
+     "text": "Inside it, gravity behaves differently"
+    },
+    {
+     "at": "तारे का जो हिस्सा",
+     "text": "The side of the star nearest the black hole is pulled much harder than the far side"
+    },
+    {
+     "at": "यही difference",
+     "text": "That difference stretches the star"
+    },
+    {
+     "at": "अगर किसी इंसान",
+     "text": "For a person, the pull on the feet would be far stronger than on the head"
+    },
+    {
+     "at": "और धीरे धीरे पूरा",
+     "text": "And the whole body would slowly be pulled into a thin line"
+    },
+    {
+     "at": "उन्नीस सौ अठासी में",
+     "text": "In 1988, Stephen Hawking gave it a fun name in his book A Brief History of Time"
+    },
+    {
+     "at": "Spaghettification",
+     "text": "SPAGHETTIFICATION",
+     "big": true
+    },
+    {
+     "at": "दो हज़ार ग्यारह में उस",
+     "text": "In 2011, exactly this happened to that star"
+    },
+    {
+     "at": "तारे की अपनी gravity",
+     "text": "The star's own gravity lost to the black hole's pull"
+    },
+    {
+     "at": "पहले वो अपनी गोल",
+     "text": "First its round shape became a drop, then a long stream"
+    },
+    {
+     "at": "और कुछ ही घंटों में, वो",
+     "text": "And within hours, it was completely shredded"
+    },
+    {
+     "at": "लेकिन black hole ने पूरे",
+     "text": "But the black hole didn't swallow the whole star at once"
+    },
+    {
+     "at": "तारे की लगभग आधी",
+     "text": "About half the star's gas flew back into space at thousands of kilometres per second"
+    },
+    {
+     "at": "बाक़ी आधी gas",
+     "text": "The other half began to circle the black hole"
+    },
+    {
+     "at": "ये gas इतनी तेज़ी",
+     "text": "It spun so fast that friction heated it to millions of degrees"
+    },
+    {
+     "at": "और इस तरह बनी",
+     "text": "That made a glowing disk of light, called an accretion disk"
+    },
+    {
+     "at": "इसी दौरान",
+     "text": "Meanwhile, its magnetic fields launched some gas in two straight beams far into space"
+    },
+    {
+     "at": "इन धारों को jets",
+     "text": "These beams are called jets"
+    },
+    {
+     "at": "इनकी speed",
+     "text": "They moved at about 99.5 percent of the speed of light"
+    },
+    {
+     "at": "और सबसे interesting",
+     "text": "And one of those jets was pointed straight at Earth"
+    },
+    {
+     "at": "इसी वजह से हमें",
+     "text": "That's why the event looked so bright to us"
+    },
+    {
+     "at": "ऐसे torn apart stars",
+     "text": "Torn-apart stars had been seen before..."
+    },
+    {
+     "at": "लेकिन ये पहली बार",
+     "text": "...but this was the first time the jet from one pointed straight at Earth"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "इस idea को",
+     "num": {
+      "template": "name",
+      "value": "JACK HILLS",
+      "sub": "astrophysicist · proposed it in 1975",
+      "typing": true
+     }
+    },
+    {
+     "at": "उन्नीस सौ अठासी में",
+     "num": {
+      "template": "name",
+      "value": "STEPHEN HAWKING",
+      "sub": "A Brief History of Time · 1988"
+     }
+    },
+    {
+     "at": "दो हज़ार ग्यारह में उस",
+     "num": {
+      "template": "name",
+      "value": "NASA ANIMATION",
+      "sub": "Swift J1644+57 · 2011 · archive"
+     }
+    },
+    {
+     "at": "तारे की लगभग आधी",
+     "num": {
+      "template": "hero",
+      "value": "50",
+      "unit": "% of the gas",
+      "kicker": "flung back into space",
+      "land": "आधी"
+     }
+    },
+    {
+     "at": "इनकी speed",
+     "num": {
+      "template": "hero",
+      "value": "99.5",
+      "unit": "% of light speed",
+      "kicker": "the jets moved at",
+      "land": "पाँच"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "हर massive black hole",
+     "lines": [
+      {
+       "text": "*THE TIDAL RADIUS*",
+       "at": "radius"
+      }
+     ],
+     "kicker": "an invisible boundary"
+    },
+    {
+     "at": "यही difference",
+     "lines": [
+      {
+       "text": "THE DIFFERENCE",
+       "at": "difference"
+      },
+      {
+       "text": "*STRETCHES THE STAR*",
+       "at": "लंबा"
+      }
+     ]
+    },
+    {
+     "at": "और इस तरह बनी",
+     "lines": [
+      {
+       "text": "*ACCRETION DISK*",
+       "at": "disk"
+      }
+     ],
+     "kicker": "a glowing ring of light"
+    },
+    {
+     "at": "इन धारों को jets",
+     "lines": [
+      {
+       "text": "*JETS*",
+       "at": "jets"
+      }
+     ]
+    },
+    {
+     "at": "और सबसे interesting",
+     "lines": [
+      {
+       "text": "ONE JET",
+       "at": "jet"
+      },
+      {
+       "text": "*POINTED AT EARTH*",
+       "at": "Earth"
+      }
+     ]
+    }
+   ]
+  },
+  "ch3": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a supermassive black hole animation",
+      "a huge black hole with a glowing disk"
+     ]
+    },
+    {
+     "at": "और कुछ black holes की",
+     "q": [
+      "an active galaxy core with jets",
+      "a black hole spewing jets of gas"
+     ]
+    },
+    {
+     "at": "October, दो हज़ार अठारह",
+     "q": [
+      "a wide-field telescope observing at night",
+      "a telescope dome opening at dusk"
+     ]
+    },
+    {
+     "at": "एक telescope survey",
+     "q": [
+      "a bright transient flash in a distant galaxy",
+      "a flash of light in a galaxy"
+     ]
+    },
+    {
+     "at": "एक और black hole",
+     "q": [
+      "a star being destroyed by a black hole",
+      "tidal disruption animation"
+     ]
+    },
+    {
+     "at": "कुछ महीनों में",
+     "q": [
+      "a glow slowly fading in space",
+      "a dimming cloud of gas"
+     ]
+    },
+    {
+     "at": "लेकिन June",
+     "opt": "hold",
+     "q": [
+      "radio telescope dishes in a desert",
+      "the Very Large Array antennas"
+     ]
+    },
+    {
+     "at": "इसके लिए New Mexico",
+     "gfx": "photo:VLA"
+    },
+    {
+     "at": "और जो उन्होंने",
+     "opt": "hold",
+     "q": [
+      "radio waves from a galaxy",
+      "a radio image of a black hole jet"
+     ]
+    },
+    {
+     "at": "वो black hole एक बार",
+     "q": [
+      "a black hole erupting with an outflow",
+      "gas blasting out of a black hole"
+     ]
+    },
+    {
+     "at": "बिना किसी और तारे",
+     "q": [
+      "a fast outflow of gas from a galaxy core",
+      "a jet of matter shooting out"
+     ]
+    },
+    {
+     "at": "Cendes ने इस process",
+     "q": [
+      "a radio telescope at sunset",
+      "radio dishes against an orange sky"
+     ]
+    },
+    {
+     "at": "Scientists ने इस event",
+     "q": [
+      "a bright jet from a black hole",
+      "an artist's view of a black hole jet"
+     ]
+    },
+    {
+     "at": "लेकिन आज तक",
+     "opt": "hold",
+     "q": [
+      "a dark black hole silhouette",
+      "a black hole in the dark"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "But the 2011 black hole was nothing next to the universe's biggest predators"
+    },
+    {
+     "at": "और कुछ black holes की",
+     "text": "And some black holes still puzzle scientists"
+    },
+    {
+     "at": "October, दो हज़ार अठारह",
+     "text": "OCTOBER 2018",
+     "big": true
+    },
+    {
+     "at": "एक telescope survey",
+     "text": "In October 2018, a telescope survey spotted another unusual flash, about 665 million light-years away"
+    },
+    {
+     "at": "एक और black hole",
+     "text": "Another black hole had torn a star apart"
+    },
+    {
+     "at": "कुछ महीनों में",
+     "text": "Within months the flash faded, and scientists moved on"
+    },
+    {
+     "at": "लेकिन June",
+     "text": "In June 2021, about three years later, Harvard astronomer Yvette Cendes and her team looked at that spot again"
+    },
+    {
+     "at": "इसके लिए New Mexico",
+     "text": "They used the Very Large Array radio telescope in New Mexico"
+    },
+    {
+     "at": "और जो उन्होंने",
+     "text": "What they saw was a surprise"
+    },
+    {
+     "at": "वो black hole एक बार",
+     "text": "The black hole had become active again"
+    },
+    {
+     "at": "बिना किसी और तारे",
+     "text": "Without eating another star, it was hurling gas into space at half the speed of light"
+    },
+    {
+     "at": "Cendes ने इस process",
+     "text": "Cendes explained it with a funny example"
+    },
+    {
+     "at": "उनके मुताबिक़",
+     "text": "Like someone who suddenly burps years after a meal"
+    },
+    {
+     "at": "Scientists ने इस event",
+     "text": "Scientists jokingly named it..."
+    },
+    {
+     "at": "Jetty McJetface",
+     "text": "JETTY McJETFACE",
+     "big": true
+    },
+    {
+     "at": "लेकिन आज तक",
+     "text": "No one knows for sure where the black hole kept that gas all those years"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "एक telescope survey",
+     "num": {
+      "template": "hero",
+      "value": "665",
+      "unit": "million light years away",
+      "kicker": "a new flash",
+      "land": "छियासठ"
+     }
+    },
+    {
+     "at": "Harvard की astronomer",
+     "num": {
+      "template": "name",
+      "value": "YVETTE CENDES",
+      "sub": "astronomer · Harvard & Smithsonian"
+     }
+    },
+    {
+     "at": "बिना किसी और तारे",
+     "num": {
+      "template": "hero",
+      "value": "50",
+      "unit": "% of light speed",
+      "kicker": "gas thrown out at",
+      "land": "आधी"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "वो black hole एक बार",
+     "lines": [
+      {
+       "text": "THE BLACK HOLE",
+       "at": "black hole"
+      },
+      {
+       "text": "*WOKE UP AGAIN*",
+       "at": "active"
+      }
+     ]
+    },
+    {
+     "at": "उनके मुताबिक़",
+     "lines": [
+      {
+       "text": "YEARS AFTER A MEAL",
+       "at": "साल"
+      },
+      {
+       "text": "*A SUDDEN BURP*",
+       "at": "डकार"
+      }
+     ]
+    }
+   ]
+  },
+  "ch4": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "an extremely bright quasar in the early universe",
+      "a quasar with powerful jets"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ सत्तावन",
+     "q": [
+      "an old observatory dome in daylight",
+      "a historic telescope building"
+     ]
+    },
+    {
+     "at": "वो आसमान में blue",
+     "q": [
+      "blue stars in the night sky",
+      "a field of bright blue stars"
+     ]
+    },
+    {
+     "at": "उनकी list में number",
+     "q": [
+      "a faint blue point of light among stars",
+      "a faint dot in a star field"
+     ]
+    },
+    {
+     "at": "उस time किसी को",
+     "q": [
+      "a deep field of faint distant galaxies",
+      "faint smudges of light in deep space"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ सत्तर में",
+     "q": [
+      "radio telescope dishes at dusk",
+      "a large radio antenna array"
+     ]
+    },
+    {
+     "at": "Quasar एक ऐसी जगह",
+     "opt": "hold",
+     "q": [
+      "a quasar powered by a supermassive black hole",
+      "a brilliant galaxy core with jets"
+     ]
+    },
+    {
+     "at": "दो हज़ार चार में",
+     "q": [
+      "a supermassive black hole with a huge accretion disk",
+      "a giant black hole in space"
+     ]
+    },
+    {
+     "at": "इसका event horizon",
+     "q": [
+      "the dark edge of a giant black hole",
+      "a black hole shadow ringed by light"
+     ]
+    },
+    {
+     "at": "एक astronomical unit",
+     "q": [
+      "the Earth orbiting the Sun",
+      "Earth and the Sun from space"
+     ]
+    },
+    {
+     "at": "Comparison के लिए",
+     "gfx": "orbits"
+    },
+    {
+     "at": "अगर टॉन छह सौ अठारह को",
+     "q": [
+      "the solar system planets orbiting the Sun",
+      "the whole solar system from above"
+     ]
+    },
+    {
+     "at": "और light को इसके",
+     "q": [
+      "light travelling across space",
+      "a beam of light crossing the dark"
+     ]
+    },
+    {
+     "at": "इसके आस पास घूमती",
+     "q": [
+      "a quasar blazing with light",
+      "a brilliant galactic core"
+     ]
+    },
+    {
+     "at": "लेकिन इतने massive",
+     "opt": "hold",
+     "q": [
+      "a dark giant black hole",
+      "a silent black hole in space"
+     ]
+    },
+    {
+     "at": "इसकी वजह ये है",
+     "q": [
+      "an accretion disk around a giant black hole",
+      "a black hole with a bright ring of gas"
+     ]
+    },
+    {
+     "at": "जब black hole का mass",
+     "q": [
+      "a black hole swallowing light",
+      "darkness at the centre of a galaxy"
+     ]
+    },
+    {
+     "at": "इसका मतलब है कि अगर",
+     "q": [
+      "a star falling towards a black hole",
+      "a star approaching a dark black hole"
+     ]
+    },
+    {
+     "at": "टॉन छह सौ अठारह उसे",
+     "opt": "hold",
+     "q": [
+      "a black hole swallowing a star",
+      "darkness swallowing light"
+     ]
+    },
+    {
+     "at": "ब्रह्मांड के सबसे बड़े predators, कभी",
+     "q": [
+      "a dark galaxy core in deep space",
+      "a black hole silhouette against stars"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Now, one of the biggest predators in the universe"
+    },
+    {
+     "at": "इसका नाम है",
+     "text": "Its name is TON 618"
+    },
+    {
+     "at": "उन्नीस सौ सत्तावन",
+     "text": "1957",
+     "big": true
+    },
+    {
+     "at": "उन्नीस सौ सत्तावन",
+     "text": "In 1957, at Mexico's Tonantzintla Observatory..."
+    },
+    {
+     "at": "वो आसमान में blue",
+     "text": "...two astronomers were listing objects that glow blue"
+    },
+    {
+     "at": "उनकी list में number",
+     "text": "At number 618 was a faint blue object"
+    },
+    {
+     "at": "उस time किसी को",
+     "text": "Nobody knew what it really was"
+    },
+    {
+     "at": "उन्नीस सौ सत्तर में",
+     "text": "In 1970, radio observations in Bologna, Italy showed it was not a star but a quasar"
+    },
+    {
+     "at": "Quasar एक ऐसी जगह",
+     "text": "A quasar is where a giant black hole keeps feeding on gas..."
+    },
+    {
+     "at": "और उस process में",
+     "text": "...releasing so much energy it can outshine an entire galaxy"
+    },
+    {
+     "at": "दो हज़ार चार में",
+     "text": "In 2004, astronomers estimated its mass"
+    },
+    {
+     "at": "कुछ estimates के",
+     "text": "By some estimates, about 66 billion times the mass of our Sun"
+    },
+    {
+     "at": "इसे ultramassive",
+     "text": "It is called an ultramassive black hole"
+    },
+    {
+     "at": "इसका event horizon",
+     "text": "Its event horizon, the boundary from which not even light returns, spans about 2,600 astronomical units"
+    },
+    {
+     "at": "एक astronomical unit",
+     "text": "One astronomical unit is the distance between Earth and the Sun"
+    },
+    {
+     "at": "Comparison के लिए",
+     "text": "Neptune is only 30 astronomical units from the Sun"
+    },
+    {
+     "at": "अगर टॉन छह सौ अठारह को",
+     "text": "Put TON 618 where our Sun is, and the whole solar system would fit inside it"
+    },
+    {
+     "at": "और light को इसके",
+     "text": "Light would take about two weeks to cross it from one edge to the other"
+    },
+    {
+     "at": "इसके आस पास घूमती",
+     "text": "The gas around it shines like 140 trillion Suns"
+    },
+    {
+     "at": "लेकिन इतने massive",
+     "text": "But giant black holes like this have one strange habit..."
+    },
+    {
+     "at": "ये आम तौर पर",
+     "text": "...they usually don't tear stars apart"
+    },
+    {
+     "at": "इसकी वजह ये है",
+     "text": "The heavier a black hole, the faster its event horizon grows, but its tidal radius doesn't keep up"
+    },
+    {
+     "at": "जब black hole का mass",
+     "text": "Above about 100 million solar masses, the tidal radius falls inside the event horizon"
+    },
+    {
+     "at": "इसका मतलब है कि अगर",
+     "text": "So a star like our Sun reaching TON 618 wouldn't stretch and break"
+    },
+    {
+     "at": "कोई spectacular flash",
+     "text": "No spectacular flash"
+    },
+    {
+     "at": "टॉन छह सौ अठारह उसे",
+     "text": "TON 618 would swallow it whole, in complete silence"
+    },
+    {
+     "at": "ब्रह्मांड के सबसे बड़े predators, कभी",
+     "text": "The biggest predators in the universe sometimes hunt in total silence"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "इसका नाम है",
+     "lines": [
+      {
+       "text": "*TON 618*",
+       "at": "टॉन"
+      }
+     ],
+     "kicker": "one of the biggest black holes known",
+     "typing": true
+    },
+    {
+     "at": "Quasar एक ऐसी जगह",
+     "lines": [
+      {
+       "text": "QUASAR",
+       "at": "Quasar"
+      },
+      {
+       "text": "*BRIGHTER THAN A WHOLE GALAXY*",
+       "at": "galaxy"
+      }
+     ]
+    },
+    {
+     "at": "इसे ultramassive",
+     "lines": [
+      {
+       "text": "*ULTRAMASSIVE*",
+       "at": "ultramassive"
+      }
+     ],
+     "kicker": "black hole"
+    },
+    {
+     "at": "अगर टॉन छह सौ अठारह को",
+     "lines": [
+      {
+       "text": "THE WHOLE SOLAR SYSTEM",
+       "at": "Solar"
+      },
+      {
+       "text": "*WOULD FIT INSIDE*",
+       "at": "समा"
+      }
+     ]
+    },
+    {
+     "at": "ये आम तौर पर",
+     "lines": [
+      {
+       "text": "THEY DON'T",
+       "at": "तारों"
+      },
+      {
+       "text": "*TEAR STARS APART*",
+       "at": "तोड़ते"
+      }
+     ]
+    },
+    {
+     "at": "टॉन छह सौ अठारह उसे",
+     "lines": [
+      {
+       "text": "SWALLOWED WHOLE",
+       "at": "पूरा"
+      },
+      {
+       "text": "*IN SILENCE*",
+       "at": "ख़ामोशी"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "दो astronomers थे",
+     "num": {
+      "template": "name",
+      "value": "BRAULIO IRIARTE & ENRIQUE CHAVIRA",
+      "sub": "astronomers · Tonantzintla Observatory, Mexico · 1957"
+     }
+    },
+    {
+     "at": "कुछ estimates के",
+     "num": {
+      "template": "hero",
+      "value": "66",
+      "unit": "billion suns",
+      "kicker": "mass of ton 618 (some estimates)",
+      "land": "छियासठ"
+     }
+    },
+    {
+     "at": "इसका event horizon",
+     "num": {
+      "template": "hero",
+      "value": "2,600",
+      "unit": "au across",
+      "kicker": "its event horizon",
+      "land": "सौ"
+     }
+    },
+    {
+     "at": "और light को इसके",
+     "num": {
+      "template": "hero",
+      "value": "2",
+      "unit": "weeks",
+      "kicker": "for light to cross it",
+      "land": "दो"
+     }
+    },
+    {
+     "at": "इसके आस पास घूमती",
+     "num": {
+      "template": "hero",
+      "value": "140",
+      "unit": "trillion suns",
+      "kicker": "light from its gas",
+      "land": "चालीस"
+     }
+    },
+    {
+     "at": "जब black hole का mass",
+     "num": {
+      "template": "hero",
+      "value": "100",
+      "unit": "million suns",
+      "kicker": "above about",
+      "land": "करोड़"
+     }
+    }
+   ]
+  },
+  "ch5": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "zooming into the centre of the Milky Way",
+      "the Milky Way core"
+     ]
+    },
+    {
+     "at": "लेकिन एक massive black hole",
+     "q": [
+      "the Milky Way galaxy seen from outside",
+      "our galaxy's spiral"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ चौहत्तर में",
+     "opt": "hold",
+     "q": [
+      "large radio telescope dishes",
+      "radio antennas pointing at the sky"
+     ]
+    },
+    {
+     "at": "उन्होंने Milky Way",
+     "gfx": "photo:Chandra_sat"
+    },
+    {
+     "at": "बाद में इस object",
+     "q": [
+      "stars crowded around the galactic centre",
+      "the centre of the Milky Way in infrared"
+     ]
+    },
+    {
+     "at": "अगले तीस सालों तक",
+     "opt": "hold",
+     "q": [
+      "a giant telescope with a laser guide star",
+      "the Keck telescopes on a mountain"
+     ]
+    },
+    {
+     "at": "इसके लिए Keck",
+     "q": [
+      "the Very Large Telescope firing a laser",
+      "VLT laser guide star at night"
+     ]
+    },
+    {
+     "at": "उनमें से एक तारा है",
+     "gfx": "s2_orbit"
+    },
+    {
+     "at": "इन तारों की movements",
+     "opt": "hold",
+     "q": [
+      "stars orbiting around a black hole animation",
+      "stars circling an invisible centre"
+     ]
+    },
+    {
+     "at": "#genzel",
+     "q": [
+      "bite:genzel"
+     ]
+    },
+    {
+     "at": "इस discovery के लिए",
+     "gfx": "photo:Reinhard_Genzel"
+    },
+    {
+     "at": "और May",
+     "gfx": "photo:EHT_SgrA"
+    },
+    {
+     "at": "आज ये black hole",
+     "opt": "hold",
+     "q": [
+      "the calm centre of the Milky Way",
+      "a quiet galactic centre"
+     ]
+    },
+    {
+     "at": "लेकिन हमेशा से",
+     "q": [
+      "a black hole with a faint glow",
+      "a dark galactic core"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "TON 618 is more than 10 billion light-years from Earth"
+    },
+    {
+     "at": "लेकिन एक massive black hole",
+     "text": "But a massive black hole sits at the centre of our own galaxy too"
+    },
+    {
+     "at": "उन्नीस सौ चौहत्तर",
+     "text": "1974",
+     "big": true
+    },
+    {
+     "at": "उन्नीस सौ चौहत्तर में",
+     "text": "In 1974, American astronomers Bruce Balick and Robert Brown used the radio telescopes at Green Bank"
+    },
+    {
+     "at": "उन्होंने Milky Way",
+     "text": "They detected a powerful radio signal at the centre of the Milky Way"
+    },
+    {
+     "at": "ये जगह Earth से लगभग",
+     "text": "About 26,000 light-years from Earth"
+    },
+    {
+     "at": "बाद में इस object",
+     "text": "SAGITTARIUS A*",
+     "big": true
+    },
+    {
+     "at": "अगले तीस सालों तक",
+     "text": "For thirty years, teams led by Andrea Ghez and Reinhard Genzel tracked the stars circling that spot"
+    },
+    {
+     "at": "इसके लिए Keck",
+     "text": "With the Keck and Very Large Telescope observatories"
+    },
+    {
+     "at": "उनमें से एक तारा है",
+     "text": "One of them is a star called S2"
+    },
+    {
+     "at": "जब ये उस invisible",
+     "text": "When it passes closest to that invisible object, it reaches about 7,700 kilometres per second"
+    },
+    {
+     "at": "यानी light की",
+     "text": "About 2.5 percent of the speed of light"
+    },
+    {
+     "at": "इन तारों की movements",
+     "text": "Their motion confirmed a black hole of about 4 million Suns"
+    },
+    {
+     "at": "इस discovery के लिए",
+     "text": "For this discovery, Andrea Ghez and Reinhard Genzel received the 2020 Nobel Prize in Physics"
+    },
+    {
+     "at": "और May",
+     "text": "And in May 2022, the Event Horizon Telescope showed the world the first image of Sagittarius A*"
+    },
+    {
+     "at": "आज ये black hole",
+     "text": "Today this black hole is fairly quiet..."
+    },
+    {
+     "at": "इसके आस पास खाने",
+     "text": "...there isn't much gas around it to eat"
+    },
+    {
+     "at": "लेकिन हमेशा से",
+     "text": "But it wasn't always this way"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "उन्नीस सौ चौहत्तर में",
+     "num": {
+      "template": "name",
+      "value": "BRUCE BALICK & ROBERT BROWN",
+      "sub": "astronomers · Green Bank · 1974"
+     }
+    },
+    {
+     "at": "ये जगह Earth से लगभग",
+     "num": {
+      "template": "hero",
+      "value": "26,000",
+      "unit": "light years away",
+      "kicker": "the centre of our galaxy",
+      "land": "हज़ार"
+     }
+    },
+    {
+     "at": "अगले तीस सालों तक",
+     "num": {
+      "template": "name",
+      "value": "ANDREA GHEZ & REINHARD GENZEL",
+      "sub": "astronomers · Nobel Prize in Physics 2020"
+     }
+    },
+    {
+     "at": "जब ये उस invisible",
+     "num": {
+      "template": "hero",
+      "value": "7,700",
+      "unit": "km per second",
+      "kicker": "s2 at closest approach",
+      "land": "सौ"
+     }
+    },
+    {
+     "at": "इन तारों की movements",
+     "num": {
+      "template": "hero",
+      "value": "4,000,000",
+      "unit": "suns",
+      "kicker": "mass of sagittarius a*",
+      "land": "लाख"
+     }
+    },
+    {
+     "at": "और May",
+     "num": {
+      "template": "name",
+      "value": "SAGITTARIUS A*",
+      "sub": "first image · Event Horizon Telescope · May 2022"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "इस discovery के लिए",
+     "lines": [
+      {
+       "text": "NOBEL PRIZE",
+       "at": "Nobel"
+      },
+      {
+       "text": "*2020*",
+       "at": "Prize"
+      }
+     ]
+    }
+   ]
+  },
+  "ch6": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the centre of the Milky Way with glowing gas clouds",
+      "X-ray view of the galactic centre"
+     ]
+    },
+    {
+     "at": "France की Strasbourg",
+     "q": [
+      "an old observatory building",
+      "an observatory dome in a city"
+     ]
+    },
+    {
+     "at": "NASA के आई",
+     "gfx": "photo:IXPE_sat"
+    },
+    {
+     "at": "Sagittarius A star के आस",
+     "q": [
+      "glowing gas clouds near the galactic centre",
+      "molecular clouds in X-rays"
+     ]
+    },
+    {
+     "at": "जब scientists ने इस रोशनी",
+     "q": [
+      "light reflecting off a gas cloud",
+      "X-ray light bouncing through space"
+     ]
+    },
+    {
+     "at": "असल में, ये Sagittarius",
+     "q": [
+      "an old flash of light echoing off gas clouds",
+      "a light echo spreading through space"
+     ]
+    },
+    {
+     "at": "Calculations के मुताबिक़",
+     "opt": "hold",
+     "q": [
+      "a black hole flaring brightly",
+      "a bright flare at the centre of a galaxy"
+     ]
+    },
+    {
+     "at": "शायद उसने अपने",
+     "q": [
+      "a gas cloud falling into a black hole",
+      "gas being swallowed"
+     ]
+    },
+    {
+     "at": "लगभग एक साल तक",
+     "q": [
+      "an extremely bright flare from a black hole",
+      "a blinding flash at a galaxy core"
+     ]
+    },
+    {
+     "at": "और फिर, वो दोबारा",
+     "q": [
+      "a black hole fading back to darkness",
+      "a dark quiet black hole"
+     ]
+    },
+    {
+     "at": "Scientists के estimates",
+     "q": [
+      "a star wandering near the galactic centre",
+      "stars orbiting the centre of the Milky Way"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "June, दो हज़ार तेईस",
+     "text": "JUNE 2023",
+     "big": true
+    },
+    {
+     "at": "France की Strasbourg",
+     "text": "Astronomer Frederic Marin and his team at Strasbourg Observatory analysed data from NASA's IXPE satellite"
+    },
+    {
+     "at": "Sagittarius A star के आस",
+     "text": "Gas clouds around Sagittarius A* were glowing in X-rays"
+    },
+    {
+     "at": "जब scientists ने इस रोशनी",
+     "text": "When they measured the light's polarization, they found something surprising"
+    },
+    {
+     "at": "ये रोशनी उन gas clouds",
+     "text": "The light wasn't the clouds' own"
+    },
+    {
+     "at": "असल में, ये Sagittarius",
+     "text": "It was an old flash from Sagittarius A*..."
+    },
+    {
+     "at": "ये gas clouds से टकराकर",
+     "text": "...reflected by the clouds, and only now reaching Earth"
+    },
+    {
+     "at": "Calculations के मुताबिक़",
+     "text": "About 200 years ago, this black hole became active for a while"
+    },
+    {
+     "at": "शायद उसने अपने",
+     "text": "Perhaps it consumed a gas cloud nearby"
+    },
+    {
+     "at": "लगभग एक साल तक",
+     "text": "For about a year it was at least a million times brighter than today"
+    },
+    {
+     "at": "और फिर, वो दोबारा",
+     "text": "Then it went quiet again"
+    },
+    {
+     "at": "Scientists के estimates",
+     "text": "In our galaxy this happens once every 10,000 to 100,000 years..."
+    },
+    {
+     "at": "कोई भटकता हुआ तारा",
+     "text": "...a wandering star comes too close to this black hole and is torn apart"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "France की Strasbourg",
+     "num": {
+      "template": "name",
+      "value": "FREDERIC MARIN",
+      "sub": "astronomer · Strasbourg Observatory, France"
+     }
+    },
+    {
+     "at": "NASA के आई",
+     "num": {
+      "template": "name",
+      "value": "IXPE",
+      "sub": "NASA X-ray satellite · launched December 2021"
+     }
+    },
+    {
+     "at": "Calculations के मुताबिक़",
+     "num": {
+      "template": "hero",
+      "value": "200",
+      "unit": "years ago",
+      "kicker": "sagittarius a* woke up",
+      "land": "सौ"
+     }
+    },
+    {
+     "at": "लगभग एक साल तक",
+     "num": {
+      "template": "hero",
+      "value": "1,000,000",
+      "unit": "times brighter",
+      "kicker": "for about a year",
+      "land": "लाख"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "ये रोशनी उन gas clouds",
+     "lines": [
+      {
+       "text": "THE LIGHT WAS",
+       "at": "रोशनी"
+      },
+      {
+       "text": "*NOT THEIR OWN*",
+       "at": "नहीं"
+      }
+     ]
+    },
+    {
+     "at": "Scientists के estimates",
+     "lines": [
+      {
+       "text": "ONCE EVERY",
+       "at": "दस"
+      },
+      {
+       "text": "*10,000-100,000 YEARS*",
+       "at": "साल"
+      }
+     ]
+    }
+   ]
+  },
+  "ending": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the Andromeda galaxy",
+      "the Andromeda galaxy in the night sky"
+     ]
+    },
+    {
+     "at": "हमारी neighbouring galaxy",
+     "q": [
+      "zooming towards the Andromeda galaxy",
+      "the Andromeda galaxy approaching"
+     ]
+    },
+    {
+     "at": "पहले scientists का",
+     "q": [
+      "two galaxies colliding simulation",
+      "galaxies merging animation"
+     ]
+    },
+    {
+     "at": "लेकिन दो हज़ार पच्चीस",
+     "opt": "hold",
+     "q": [
+      "the Andromeda galaxy looming in the night sky over mountains",
+      "a huge galaxy in the sky"
+     ]
+    },
+    {
+     "at": "अगर ये collision",
+     "gfx": "collision"
+    },
+    {
+     "at": "Sagittarius A star और Andromeda",
+     "opt": "hold",
+     "q": [
+      "two black holes orbiting each other",
+      "black hole merger animation"
+     ]
+    },
+    {
+     "at": "और तब शायद हमारा",
+     "q": [
+      "a black hole waking up with jets",
+      "a quasar igniting"
+     ]
+    },
+    {
+     "at": "एक के बाद एक तारे",
+     "q": [
+      "stars being torn apart near a black hole",
+      "a bright quasar at the centre of a galaxy"
+     ]
+    },
+    {
+     "at": "दो हज़ार ग्यारह में Swift",
+     "q": [
+      "a satellite orbiting Earth",
+      "the Swift satellite above Earth"
+     ]
+    },
+    {
+     "at": "वो शायद हमारी अपनी",
+     "opt": "hold",
+     "q": [
+      "the Milky Way arching over the horizon at night",
+      "the Milky Way over a mountain"
+     ]
+    },
+    {
+     "at": "आसमान में तारे हमें",
+     "q": [
+      "a starry night sky timelapse",
+      "stars over a quiet landscape"
+     ]
+    },
+    {
+     "at": "लेकिन उस अँधेरे के",
+     "q": [
+      "a black hole bending starlight",
+      "a dark black hole among stars"
+     ]
+    },
+    {
+     "at": "और ब्रह्मांड के ये शिकारी",
+     "opt": "hold",
+     "q": [
+      "a supermassive black hole waiting in darkness",
+      "a black hole with a faint glowing disk"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "But this quiet black hole may show its true face when our galaxy meets a huge cosmic collision"
+    },
+    {
+     "at": "हमारी neighbouring galaxy",
+     "text": "Our neighbour, the Andromeda galaxy, is approaching at about 110 kilometres per second"
+    },
+    {
+     "at": "पहले scientists का",
+     "text": "Scientists used to think a collision in about 4 billion years was almost certain"
+    },
+    {
+     "at": "लेकिन दो हज़ार पच्चीस",
+     "text": "But a 2025 study puts the chance of a collision in the next 10 billion years at about 50 percent"
+    },
+    {
+     "at": "अगर ये collision",
+     "text": "If it happens, billions of stars and huge gas clouds could fall toward the centre"
+    },
+    {
+     "at": "Sagittarius A star और Andromeda",
+     "text": "Sagittarius A* and Andromeda's black hole could circle each other and finally merge"
+    },
+    {
+     "at": "और तब शायद हमारा",
+     "text": "Then our sleeping black hole might fully wake up"
+    },
+    {
+     "at": "एक के बाद एक तारे",
+     "text": "Star after star could be torn apart, and a powerful quasar could ignite at the centre"
+    },
+    {
+     "at": "दो हज़ार ग्यारह में Swift",
+     "text": "What Swift saw in 2011 wasn't just a story about a distant galaxy"
+    },
+    {
+     "at": "वो शायद हमारी अपनी",
+     "text": "It may have been a glimpse of our own galaxy's future"
+    },
+    {
+     "at": "आसमान में तारे हमें",
+     "text": "The stars look calm in the sky"
+    },
+    {
+     "at": "लेकिन उस अँधेरे के",
+     "text": "But behind that darkness, a game of gravity never stops, one we still don't fully understand"
+    },
+    {
+     "at": "और ब्रह्मांड के ये शिकारी",
+     "text": "And the universe's hunters are simply waiting for the next wandering star"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "हमारी neighbouring galaxy",
+     "num": {
+      "template": "hero",
+      "value": "110",
+      "unit": "km per second",
+      "kicker": "andromeda is approaching at",
+      "land": "दस"
+     }
+    },
+    {
+     "at": "लेकिन दो हज़ार पच्चीस",
+     "num": {
+      "template": "name",
+      "value": "NASA VISUALIZATION",
+      "sub": "Milky Way and Andromeda · 2025 study"
+     }
+    },
+    {
+     "at": "लेकिन दो हज़ार पच्चीस",
+     "num": {
+      "template": "hero",
+      "value": "50",
+      "unit": "% chance",
+      "kicker": "of a collision in 10 billion years",
+      "land": "पचास"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "एक के बाद एक तारे",
+     "lines": [
+      {
+       "text": "IN OUR GALAXY'S CENTRE",
+       "at": "galaxy"
+      },
+      {
+       "text": "*A NEW QUASAR*",
+       "at": "quasar"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
