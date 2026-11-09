@@ -84,7 +84,6 @@ G उन्नीस सौ अठासी में @ photo:Stephen_Hawking
 L उन्नीस सौ अठासी में @ STEPHEN HAWKING | A Brief History of Time · 1988
 C उन्नीस सौ अठासी में | In 1988, Stephen Hawking gave it a fun name in his book A Brief History of Time
 C Spaghettification | SPAGHETTIFICATION | big
-V Spaghettification @ long glowing filaments of gas | streams of light stretched across space
 V दो हज़ार ग्यारह में उस @ a star being torn apart by a black hole animation | a star stretched by a black hole {hold}
 L दो हज़ार ग्यारह में उस @ NASA ANIMATION | Swift J1644+57 · 2011 · archive
 C दो हज़ार ग्यारह में उस | In 2011, exactly this happened to that star
@@ -94,7 +93,7 @@ V और कुछ ही घंटों में, वो @ glowing debris sca
 C और कुछ ही घंटों में, वो | And within hours, it was completely shredded
 V लेकिन black hole ने पूरे @ gas spiralling into a black hole | a black hole swallowing gas
 C लेकिन black hole ने पूरे | But the black hole didn't swallow the whole star at once
-V तारे की लगभग आधी @ gas thrown out into space at high speed | an expanding shell of gas
+V तारे की लगभग आधी @ an expanding shell of glowing gas from an exploding star | a supernova remnant expanding
 N तारे की लगभग आधी @ hero | value=50 | unit=% of the gas | kicker=flung back into space | land=आधी | over
 C तारे की लगभग आधी | About half the star's gas flew back into space at thousands of kilometres per second
 V बाक़ी आधी gas @ gas swirling around a black hole | an accretion disk forming
@@ -103,7 +102,7 @@ V ये gas इतनी तेज़ी @ a glowing accretion disk around a bl
 C ये gas इतनी तेज़ी | It spun so fast that friction heated it to millions of degrees
 K और इस तरह बनी @ *ACCRETION DISK* [disk] | kicker=a glowing ring of light
 C और इस तरह बनी | That made a glowing disk of light, called an accretion disk
-V इसी दौरान @ jets shooting out from the poles of a black hole | relativistic jets from a black hole
+V इसी दौरान @ a beam of light shooting out of a glowing disk | a pulsar beam sweeping through space
 C इसी दौरान | Meanwhile, its magnetic fields launched some gas in two straight beams far into space
 K इन धारों को jets @ *JETS* [jets]
 C इन धारों को jets | These beams are called jets
@@ -267,11 +266,11 @@ G NASA के आई @ photo:IXPE_sat
 L NASA के आई @ IXPE | NASA X-ray satellite · launched December 2021
 V Sagittarius A star के आस @ glowing gas clouds near the galactic centre | molecular clouds in X-rays
 C Sagittarius A star के आस | Gas clouds around Sagittarius A* were glowing in X-rays
-V जब scientists ने इस रोशनी @ light reflecting off a gas cloud | X-ray light bouncing through space
+G जब scientists ने इस रोशनी @ eht_sgra
 C जब scientists ने इस रोशनी | When they measured the light's polarization, they found something surprising
 K ये रोशनी उन gas clouds @ THE LIGHT WAS [रोशनी] / *NOT THEIR OWN* [नहीं]
 C ये रोशनी उन gas clouds | The light wasn't the clouds' own
-V असल में, ये Sagittarius @ an old flash of light echoing off gas clouds | a light echo spreading through space
+V असल में, ये Sagittarius @ the glowing centre of the Milky Way | gas clouds lit by a bright flash
 C असल में, ये Sagittarius | It was an old flash from Sagittarius A*...
 C ये gas clouds से टकराकर | ...reflected by the clouds, and only now reaching Earth
 V Calculations के मुताबिक़ @ a black hole flaring brightly | a bright flare at the centre of a galaxy {hold}
@@ -316,7 +315,7 @@ V वो शायद हमारी अपनी @ the Milky Way arching over 
 C वो शायद हमारी अपनी | It may have been a glimpse of our own galaxy's future
 V आसमान में तारे हमें @ a starry night sky timelapse | stars over a quiet landscape
 C आसमान में तारे हमें | The stars look calm in the sky
-V लेकिन उस अँधेरे के @ a black hole bending starlight | a dark black hole among stars
+G लेकिन उस अँधेरे के @ starfield
 C लेकिन उस अँधेरे के | But behind that darkness, a game of gravity never stops, one we still don't fully understand
-V और ब्रह्मांड के ये शिकारी @ a supermassive black hole waiting in darkness | a black hole with a faint glowing disk {hold}
+G और ब्रह्मांड के ये शिकारी @ eht_m87
 C और ब्रह्मांड के ये शिकारी | And the universe's hunters are simply waiting for the next wandering star
