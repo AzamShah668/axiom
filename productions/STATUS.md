@@ -1,6 +1,6 @@
 # Where things stand (read this first in a new chat)
 
-Last updated 2026-10-31. Update this file and commit it at the end of every chat.
+Last updated 2026-11-09. Update this file and commit it at the end of every chat.
 
 ## How we work across chats
 - One chat per job: a script, a recording, an edit and render, Shorts, an upload. Long chats fill up; a new chat
@@ -23,9 +23,10 @@ Last updated 2026-10-31. Update this file and commit it at the end of every chat
 | 03 Neutron Stars | on YouTube, **private** (https://youtu.be/fv9M4nmAEeM) | publish when the owner says (command in `productions/03-neutron-stars/youtube.md`) |
 | 03 gold Short | on YouTube, **private** (https://youtu.be/cAm16FD1b44), uploaded 2026-10-30 | publish when the owner says |
 | 03 teaspoon Short | to be remade | when the owner asks |
-| 04 Before the Big Bang | **final = the 04-x version** (owner accepted 2026-10-27): no pauses, real NASA footage, photos, channel intro. On Drive: `videos/04 - What Was There Before the Big Bang? (Hindi Documentary) 1080p - FINAL (real footage, no pauses).mp4` | **on YouTube, private** (https://youtu.be/CEk7vITXZzI, uploaded 2026-11-05). Guth credit filled; Penzias photo author still to name (Wikimedia 429), then update the description and publish when the owner says. Shorts: **tvstatic** on YouTube **private** (https://youtu.be/2L17SFLqwuQ, 2026-11-06) |
-| 05 Voyager 1 | **finished 2026-10-30**: master 12:48, 1080p30, -13.9 LUFS. Drive `videos/05 - Voyager 1 (Hindi Documentary) 1080p - master/`: `… 1080p - FINAL.mp4` (shared by link at the owner's request, 2026-10-31) and `… 1440p - FINAL for YouTube.mp4` (the upload copy). Work dir, render chunks and stems on Drive `productions/05-voyager` | **scheduled**: https://youtu.be/dhLf0_YjElc goes public 1 Nov 2026 12:00 IST. After 12:00 the owner posts and pins `credits_full.txt` (API token can't comment) and adds a thumbnail |
-| 05 Shorts: fix, lightday | lightday **scheduled**: https://youtu.be/zvnLW2j18-E goes public 1 Nov 2026 13:00 IST. fix rendered (65.5 s), not uploaded. Packages `productions/05-voyager/shorts/{fix,lightday}.md` | owner sets Related video on lightday after 12:00 on 1 Nov; fix when the owner says |
+| 04 Before the Big Bang | **final = the 04-x version** (owner accepted 2026-10-27): no pauses, real NASA footage, photos, channel intro. On Drive: `videos/04 - What Was There Before the Big Bang? (Hindi Documentary) 1080p - FINAL (real footage, no pauses).mp4` | **on YouTube, private** (https://youtu.be/CEk7vITXZzI, uploaded 2026-11-05). Guth credit filled; Penzias photo (CC BY 3.0 DE, Wikimedia Commons) author still to name, then update the description and publish when the owner says. Owner still to post and pin `credits_full.txt`. Shorts: **tvstatic** on YouTube **private** (https://youtu.be/2L17SFLqwuQ, 2026-11-06) |
+| 05 Voyager 1 | **public since 1 Nov 2026**: https://youtu.be/dhLf0_YjElc. Master on Drive `videos/05 - Voyager 1 (Hindi Documentary) 1080p - master/` | owner posts and pins `credits_full.txt` (API token can't comment) |
+| 05 Shorts: fix, lightday | lightday **public** (https://youtu.be/zvnLW2j18-E). fix not uploaded: needs re-rendering in a fresh container (work/ is not in git). Packages `productions/05-voyager/shorts/{fix,lightday}.md` | fix when the owner says |
+| 06 Fermi Paradox | **script draft** 2026-11-09 (`productions/06-fermi-paradox/script.txt`, `script.md` with the view-data table and fact-check). Topic picked from yt-dlp public view counts | owner reviews the script; then Devanagari + tts_check + probe, character cost to the owner before any ElevenLabs request |
 
 ## Open decisions for the owner
 - Captions: upload the English CC track or not (pending since video 03).
@@ -36,6 +37,7 @@ Last updated 2026-10-31. Update this file and commit it at the end of every chat
 - Script rule "context before concept" (science-script-v2 §2c).
 
 ## Accounts and budget
+- **Fresh containers (2026-11-09):** no YT_*/DRIVE_* variables and no config/.env, so not even `upload_youtube.py auth-url` works until the owner puts YT_CLIENT_ID/YT_CLIENT_SECRET (and DRIVE_REFRESH_TOKEN) in the environment or config/.env. Topic research works without them: `pip install yt-dlp`, then `yt-dlp --flat-playlist --print "%(view_count)s|%(duration)s|%(title)s" "ytsearch15:<query>"` or a channel's /videos URL (no quota).
 - YouTube signed in again 2026-10-30 (Science Guy); it expires after 7 days (re-sign-in: `upload_youtube.py auth-url`, then `exchange`). The Google app is in
   Testing mode, so its sign-ins expire after 7 days; publishing the consent screen stops that.
 - ElevenLabs: **new account key from 2026-11-06** (saved as a cloud-environment network secret for api.elevenlabs.io; on a local machine put it in config/.env). 131,000 characters a period, full on 2026-11-06, reset 2026-12-06. Neel Story Narrator (q4KoKwFyTWQ0Fvvsl9LW) added to the new account's voices. Ask the owner before spending credits.
