@@ -80,6 +80,10 @@
   "Voyager 2": {
    "use": "Voyager Two",
    "why": "same as Voyager 1"
+  },
+  "Arecibo": {
+   "use": "एरेसिबो",
+   "why": "probe 2026-11-09 (video 06): heard as 'KRS Cibo'"
   }
  },
  "acronyms_ok": [
