@@ -1,7 +1,7 @@
 # Video 06: The Fermi Paradox (draft, 2026-11-09, waiting for the owner's OK)
 
 Script for review: `script.txt` (Hinglish). Nothing is recorded until the owner approves it.
-`script_check.py`: 1,856 words, about 12.6 min at 1.0x; the only flag is Fermi's own question (allowed). Owner approved the topic 2026-11-09; fixes applied (deewar 2x, darawna only in the Clarke line, simpler words, ending questions in one line). Merged from the owner's draft (2026-11-09): Clarke line opens the video (dropped from the ending; name on screen), 6EQUJ5 = strength, 72 s = Earth's rotation, paradox = expectation vs observation, Dark Forest in the ending question. `tts/narration.hi.md`: 9,701 characters, tts_check 0 problems.
+`script_check.py`: 1,856 words, about 12.6 min at 1.0x; the only flag is Fermi's own question (allowed). Owner approved the topic 2026-11-09; fixes applied (deewar 2x, darawna only in the Clarke line, simpler words, ending questions in one line). Merged from the owner's draft (2026-11-09): Clarke line opens the video (dropped from the ending; name on screen), 6EQUJ5 = strength, 72 s = Earth's rotation, paradox = expectation vs observation, Dark Forest in the ending question. Comma pass (owner, 2026-11-09): 185 -> 87 commas, only real pauses kept (lists, lekin/balki, agar-to, beats). `tts/narration.hi.md`: 9,602 characters, tts_check 0 problems.
 
 ## Topic from view data (yt-dlp public counts, 2026-11-09; no API token in this container)
 | Option | English demand | Best Hindi long video (>6 min) | Verdict |
