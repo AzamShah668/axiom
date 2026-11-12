@@ -1,6 +1,6 @@
 # YouTube upload: Production 07 (Star Eaters)
 
-**Not uploaded.** Upload **private** only when the owner says (the uploader's default is public):
+**Uploaded private 2026-11-12** (owner): https://youtu.be/DxALIKmmPv4. Publish when the owner says. Uploaded with:
 `python scripts/youtube/upload_youtube.py upload work/07-star-eaters/out/07-star-eaters.mp4 productions/07-star-eaters/youtube.md --privacy private`
 No thumbnail (the owner makes it). Pin `credits_full.txt` as a comment (the API token cannot comment).
 
