@@ -5,11 +5,11 @@
 No thumbnail (the owner makes it). Pin `credits_full.txt` as a comment (the API token cannot comment).
 
 **Title**
-Black Holes That Eat Stars: The Universe's Hunters | Hindi Documentary
+TON 618: The Scariest Black Hole in the Universe | Hindi Documentary
 
 **Description**
 ```
-Black Holes That Eat Stars: The Universe's Hunters | Hindi Documentary
+TON 618: The Scariest Black Hole in the Universe | Hindi Documentary
 
 A star like our Sun burns for about 10 billion years, but sometimes it dies in a few hours, torn apart by a black hole. This Hindi documentary follows the hunters: the flash NASA's Swift satellite caught on 28 March 2011, the black hole that "burped" years after its meal, TON 618 that swallows stars whole, and Sagittarius A*, the black hole at the centre of our own galaxy that flared about 200 years ago.
 
