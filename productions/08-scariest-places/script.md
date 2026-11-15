@@ -1,7 +1,8 @@
 # Video 08: The Scariest Places in the Universe (draft 2026-11-15, waiting for the owner)
 
-Script for review: `script.txt` (Hinglish, original; outline and sources in `outline.md`). 1,642 words, about
-11.2 min at 1.0x. Written the "sound human" way (science-script-v2 §3b). `script_check.py` flags only the 4
+Script for review: `script.txt` (Hinglish, original; outline and sources in `outline.md`). Rewritten 2026-11-15 in
+longer, flowing spoken sentences (owner: "these are very short sentences, continue like you are speaking"):
+1,870 words, about 12.7 min at 1.0x, sentences average 21 words (max 27). Written the "sound human" way (science-script-v2 §3b). `script_check.py` flags only the 4
 rhetorical questions, kept on purpose for the owner to decide.
 
 - **Title (draft):** The Scariest Places in the Universe | Hindi Documentary
