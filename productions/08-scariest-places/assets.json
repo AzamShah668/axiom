@@ -1,0 +1,49 @@
+{
+ "Maarten_Schmidt": {
+  "src": "wiki",
+  "q": "Maarten Schmidt astronomer",
+  "must": [
+   "Schmidt"
+  ]
+ },
+ "Robert_Kirshner": {
+  "src": "wiki",
+  "q": "Robert Kirshner astronomer",
+  "must": [
+   "Kirshner"
+  ]
+ },
+ "Greg_Aldering": {
+  "src": "wiki",
+  "q": "Greg Aldering",
+  "must": [
+   "Aldering"
+  ]
+ },
+ "Alexander_Kashlinsky": {
+  "src": "nasa",
+  "q": "Alexander Kashlinsky",
+  "must": [
+   "Kashlinsky"
+  ]
+ },
+ "Tonantzintla": {
+  "src": "wiki",
+  "q": "Tonantzintla Observatory Puebla",
+  "must": [
+   "Tonantzintla"
+  ]
+ },
+ "Planck_sat": {
+  "src": "nasa",
+  "q": "Planck Spacecraft Artist Concept",
+  "must": [
+   "Planck"
+  ]
+ },
+ "Quasar_3C273": {
+  "src": "url",
+  "url": "https://cdn.esahubble.org/archives/images/large/potw1346a.jpg",
+  "credit": "Quasar 3C 273, ESA/Hubble & NASA (potw1346a), CC BY 4.0"
+ }
+}

@@ -1,0 +1,325 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "music": [
+  {
+   "from": "ton618_hook",
+   "track": "Long_Note_Three.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "a dark black hole among stars"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "ban": [],
+ "sections": {
+  "ton618_hook": {
+   "v": [
+    {
+     "at": null,
+     "opt": "flash",
+     "q": [
+      "an extremely bright quasar with powerful jets",
+      "a supermassive black hole with a glowing disk"
+     ]
+    },
+    {
+     "at": "जिसमें पूरा Solar System",
+     "gfx": "orbits"
+    },
+    {
+     "at": "और सबसे अजीब",
+     "q": [
+      "a black hole swallowing a star",
+      "a star falling into darkness"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "There is a monstrous thing in the universe..."
+    },
+    {
+     "at": "जिसमें पूरा Solar System",
+     "text": "The whole solar system could fit inside it like a tiny dot"
+    },
+    {
+     "at": "और सबसे अजीब",
+     "text": "And strangest of all, it doesn't tear stars apart, it swallows them whole"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "जिसमें पूरा Solar System",
+     "lines": [
+      {
+       "text": "THE WHOLE SOLAR SYSTEM",
+       "at": "Solar"
+      },
+      {
+       "text": "*A TINY DOT*",
+       "at": "dot"
+      }
+     ]
+    },
+    {
+     "at": "और सबसे अजीब",
+     "lines": [
+      {
+       "text": "IT DOESN'T TEAR STARS",
+       "at": "तोड़ता"
+      },
+      {
+       "text": "*IT SWALLOWS THEM WHOLE*",
+       "at": "निगल"
+      }
+     ]
+    }
+   ]
+  },
+  "ton618_discovery": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "an old observatory dome at night",
+      "a historic telescope under the stars"
+     ]
+    },
+    {
+     "at": "List के number",
+     "q": [
+      "a faint blue point of light among stars",
+      "a field of blue stars"
+     ]
+    },
+    {
+     "at": "शुरुआत में लगा",
+     "q": [
+      "a single star in a dark sky",
+      "a bright star twinkling"
+     ]
+    },
+    {
+     "at": "लेकिन nineteen seventies",
+     "q": [
+      "a brilliant quasar blazing",
+      "a galaxy core brighter than the whole galaxy"
+     ]
+    },
+    {
+     "at": "और उस quasar के",
+     "opt": "hold",
+     "q": [
+      "zooming into the centre of a quasar",
+      "a dark black hole hidden in a glowing core"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "उन्नीस सौ सत्तावन",
+     "text": "1957",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "In 1957, two astronomers in Mexico were listing faint blue lights in the sky"
+    },
+    {
+     "at": "List के number",
+     "text": "At number 618 was a dim blue light"
+    },
+    {
+     "at": "शुरुआत में लगा",
+     "text": "At first it looked like an ordinary star..."
+    },
+    {
+     "at": "लेकिन nineteen seventies",
+     "text": "...but in the 1970s it turned out to be a super-bright quasar"
+    },
+    {
+     "at": "और उस quasar के",
+     "text": "And at its very centre was an unimaginable monster"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Mexico के दो",
+     "num": {
+      "template": "name",
+      "value": "IRIARTE & CHAVIRA",
+      "sub": "astronomers · Mexico · 1957"
+     }
+    },
+    {
+     "at": "List के number",
+     "num": {
+      "template": "hero",
+      "value": "618",
+      "unit": "on the list",
+      "kicker": "number",
+      "land": "अठारह"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "लेकिन nineteen seventies",
+     "lines": [
+      {
+       "text": "NOT A STAR",
+       "at": "star"
+      },
+      {
+       "text": "*A QUASAR*",
+       "at": "quasar"
+      }
+     ]
+    }
+   ]
+  },
+  "ton618_science": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a supermassive black hole with a huge accretion disk",
+      "a giant black hole in space"
+     ]
+    },
+    {
+     "at": "जिसका mass",
+     "q": [
+      "a black hole shadow ringed by light",
+      "a giant black hole bending light"
+     ]
+    },
+    {
+     "at": "इसका size",
+     "q": [
+      "light travelling across space",
+      "a beam of light crossing the dark"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "It's called TON 618, an ultramassive black hole"
+    },
+    {
+     "at": "जिसका mass",
+     "text": "About 66 billion times the mass of the Sun"
+    },
+    {
+     "at": "इसका size",
+     "text": "So big that even light needs about two weeks to cross it"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": null,
+     "lines": [
+      {
+       "text": "*TON 618*",
+       "at": "टॉन"
+      }
+     ],
+     "kicker": "an ultramassive black hole",
+     "typing": true
+    }
+   ],
+   "n": [
+    {
+     "at": "जिसका mass",
+     "num": {
+      "template": "hero",
+      "value": "66",
+      "unit": "billion suns",
+      "kicker": "mass (some estimates)",
+      "land": "छियासठ"
+     }
+    },
+    {
+     "at": "इसका size",
+     "num": {
+      "template": "hero",
+      "value": "2",
+      "unit": "weeks",
+      "kicker": "for light to cross it",
+      "land": "दो"
+     }
+    }
+   ]
+  },
+  "ton618_end": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a star being stretched apart by a black hole",
+      "a star torn into a stream of gas"
+     ]
+    },
+    {
+     "at": "लेकिन टॉन",
+     "q": [
+      "a star falling into a black hole",
+      "a star approaching a dark black hole"
+     ]
+    },
+    {
+     "at": "ना कोई light",
+     "gfx": "eht_m87"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Normally, black holes stretch stars and tear them to pieces"
+    },
+    {
+     "at": "लेकिन टॉन",
+     "text": "But TON 618 is so huge that a star slips straight past its event horizon without breaking"
+    },
+    {
+     "at": "ना कोई light",
+     "text": "No light, no blast, just complete silence and darkness"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "लेकिन टॉन",
+     "lines": [
+      {
+       "text": "NO TEARING",
+       "at": "टूटे"
+      },
+      {
+       "text": "*STRAIGHT IN*",
+       "at": "slip"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

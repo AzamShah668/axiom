@@ -1,0 +1,104 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "cards": {
+  "ch1": [
+   "",
+   "THE INVISIBLE *HUNTER*"
+  ],
+  "ch2": [
+   "",
+   "THE *MAGNETAR*"
+  ],
+  "ch3": [
+   "",
+   "*QUASARS*"
+  ],
+  "ch4": [
+   "",
+   "*TON 618*"
+  ],
+  "ch5": [
+   "",
+   "THE GREAT *ATTRACTOR*"
+  ],
+  "ch6": [
+   "",
+   "THE GREAT *NOTHING*"
+  ],
+  "ch7": [
+   "",
+   "THE *COLD SPOT*"
+  ],
+  "ch8": [
+   "",
+   "*DARK FLOW*"
+  ],
+  "ending": [
+   "",
+   "THE EDGE OF *EVERYTHING*"
+  ]
+ },
+ "count_total": 9,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Interloper.mp3"
+  },
+  {
+   "from": "ch1",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "ch2",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "ch3",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "ch4",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "ch5",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "ch6",
+   "track": "Ossuary_5_-_Rest.mp3"
+  },
+  {
+   "from": "ch7",
+   "track": "Long_Note_Two.mp3"
+  },
+  {
+   "from": "ch8",
+   "track": "Long_Note_One.mp3"
+  },
+  {
+   "from": "ending",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "a dark nebula drifting"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [],
+ "crops": {},
+ "exclude": {}
+}

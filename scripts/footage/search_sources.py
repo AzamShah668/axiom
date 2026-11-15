@@ -99,6 +99,40 @@ def svs_4k(sid):
             "kw": [k.get("title", "") if isinstance(k, dict) else str(k) for k in d.get("keywords", [])][:12]}
 
 
+def pexels_key():
+    k = os.environ.get("PEXELS_API_KEY")
+    env = os.path.join(os.path.dirname(__file__), "..", "..", "config", ".env")
+    if not k and os.path.exists(env):
+        for ln in open(env):
+            if ln.startswith("PEXELS_API_KEY="):
+                k = ln.split("=", 1)[1].strip()
+    return k
+
+
+def pexels_search(term, limit=15):
+    """Pexels stock video (owner, 2026-11-09: an extra source, used where the space archives have nothing).
+    Only landscape files at least 3840 px wide; Pexels License (free, no attribution required; credited anyway)."""
+    k = pexels_key()
+    if not k:
+        return {}
+    try:
+        r = requests.get("https://api.pexels.com/videos/search", headers={"Authorization": k}, timeout=30,
+                         params={"query": term, "per_page": limit, "orientation": "landscape", "size": "large"})
+        vids = r.json().get("videos", []) if r.ok else []
+    except Exception:
+        return {}
+    out = {}
+    for v in vids:
+        files = [f for f in v.get("video_files", []) if (f.get("width") or 0) >= 3840 and (f.get("height") or 0) < (f.get("width") or 0)]
+        if not files:
+            continue
+        f = min(files, key=lambda f: f["width"])
+        slug = re.sub(r"-\d+/?$", "", (v.get("url") or "").rstrip("/").rsplit("/", 1)[-1]).replace("-", " ")
+        out[str(v["id"])] = {"title": slug or term, "url": f["link"], "page": v.get("url", ""), "thumb": v.get("image", ""),
+                             "desc": f"by {(v.get('user') or {}).get('name', '')}", "bytes": 0}
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("terms")
@@ -110,11 +144,17 @@ def main():
     terms = [t.strip() for t in (open(a.terms).read().splitlines() if os.path.exists(a.terms) else a.terms.split(",")) if t.strip()]
     cand = json.load(open(a.out)) if os.path.exists(a.out) else {}
     found = {}
+    global PEX
+    PEX = {}
 
     def one(job):
         term, src = job
         if src == "svs":
             return term, src, {str(i): t for i, t in svs_search(term, a.svs_limit)}
+        if src == "pexels":
+            hits = pexels_search(term)
+            PEX.update(hits)
+            return term, src, {i: h["title"] for i, h in hits.items()}
         return term, src, django_search(src, term, a.pages)
 
     jobs = [(t, s) for t in terms for s in a.sources.split(",")]
@@ -128,6 +168,12 @@ def main():
 
     def resolve(k):
         c = found[k]
+        if c["source"] == "pexels":
+            h = PEX.get(c["id"])
+            if not h:
+                return k, None
+            c.update(url=h["url"], bytes=h["bytes"], desc=h["desc"], page=h["page"], thumb=h["thumb"])
+            return k, c
         if c["source"] == "svs":
             info = svs_4k(c["id"])
             if not info:
