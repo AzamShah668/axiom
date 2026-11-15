@@ -33,9 +33,12 @@
   open already began the story somewhere else.
 
 ## Voice
-- **Locked voice:** ElevenLabs library voice **Neel – Paranormal Story Narrator** (Hindi), model `eleven_multilingual_v2`, stability 0.5, similarity 0.75, style 0, speed 1.0. See `voice-preset.json`.
+- **Locked voice (from 2026-11-15):** ElevenLabs library voice **Rudra – Intense Documentary Narrator** (Hindi, `vIdhHAZdn1bGjKe1dFw8`), picked by the owner from 8 voices reading our opening line. Before that: **Neel – Paranormal Story Narrator** (Hindi, still pinned for 06), model `eleven_multilingual_v2`, stability 0.5, similarity 0.75, style 0, speed 1.0. See `voice-preset.json`.
 - Narration source for TTS: `productions/<NN-topic>/tts/narration.hi.md` (Devanagari, one `## <section>` per chapter).
   - English names and science words stay in English letters.
+  - **Owner's rule (2026-11-15): every English word stays exactly as written in English (Latin letters), never
+    transliterated into Devanagari: galaxy, Milky Way, signal, planets, civilization. Only Hindi words go into
+    Devanagari. A Hindi word that could come out wrong may be written in Roman Hinglish instead.**
   - Numbers are written as Hindi words.
 - Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir> --open-gap 6.4 --gap 0.8 --max-pause 0.4`
   (`pipeline.sh … narration`). This produces the narration, the timeline and per-character timings.
