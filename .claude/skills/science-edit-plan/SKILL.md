@@ -42,7 +42,9 @@ F <footer text>                          (default: the chapter card title)
 V #<name> @ bite:<name>                  a real recording's own picture, uncut and in sync with its sound
 ```
 From video 05 (owner, 2026-10-27; `productions/README.md`):
-- **No `M` lines** (the voice never waits) and no `"intro"` in edit.base.json; `"channel"` plays after the hook.
+- **No `M` lines** (the voice never waits) and no `"intro"` in edit.base.json. From video 08 also no `"channel"` and no
+  title card (owner, 2026-11-15: no intro of any kind; the video starts on its first sentence).
+  Leave `"channel"`, `"title"` and `"title_card"` out of edit.base.json; render_v3.py then draws neither.
 - **Real archive footage:** a `V` line on the sentence that names the moment, its shot pinned in edit.base.json
   (`"pin": {"ch4/8": "svs_14715-launch#2"}`: section/item number as `scripts/footage/plan_items.py` prints
   it), and an `L` card that says what and when (`L ख़ास satellite @ COBE | NASA satellite · launched 18 November

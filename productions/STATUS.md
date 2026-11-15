@@ -28,6 +28,12 @@ Last updated 2026-11-09. Update this file and commit it at the end of every chat
 | 05 Shorts: fix, lightday | lightday **public** (https://youtu.be/zvnLW2j18-E). fix not uploaded: needs re-rendering in a fresh container (work/ is not in git). Packages `productions/05-voyager/shorts/{fix,lightday}.md` | fix when the owner says |
 | 06 Fermi Paradox | **topic approved, script fixed, Devanagari written (9,554 chars, tts_check clean)** 2026-11-09 (`productions/06-fermi-paradox/script.txt`, `script.md` with the view-data table and fact-check). Topic picked from yt-dlp public view counts | name probe done 2026-11-09 (218 chars; Arecibo and Liu Cixin to LISTEN/respell). Owner kept the approved script and merged 5 points from his draft; **narration recorded 2026-11-09 without commas** (9,435 chars), then the owner asked for commas back (87-comma text restored, his opening edits kept, 9,521 chars): opening retaken with commas (696 chars, work/06-fermi-paradox/retake/). Job total 11,069. Voice test 2026-11-09: Taksh (6Iq2c772ZFrYvSuWijYS, Hindi library voice, added to the account) read the first 20 s (249 chars); job total 11,318. Waiting for the owner: voice choice, then retake ch1-ending with commas: `work/06-fermi-paradox/voice/narration.wav`, 12:21 at 1.0x, not on Drive yet (work/ is not in git). Arecibo respelt एरेसिबो. Next: owner listens, speech_check, then edit plan (stage 3), waiting for the OK to record (budget 10,100 incl. the 218 probe). ElevenLabs key re-saved 2026-11-09 (the old one was rejected); 18,925 / 131,000 used |
 
+## Standing changes (owner, 2026-11-15)
+- **No intro of any kind** from video 08: no channel intro, no title card, no gap after the opening; the video starts on its first sentence.
+- **Voice: Rudra – Intense Documentary Narrator** (vIdhHAZdn1bGjKe1dFw8) for new videos; Neel pinned for 06.
+- **English words always in Latin letters** in narration.hi.md (never transliterated); tricky Hindi words may be Roman Hinglish.
+- Next video: **08 The Scariest Places in the Universe** (`productions/08-scariest-places/outline.md`), from a small-channel outlier (`docs/research/old-hits-2026-11.md`).
+
 ## Open decisions for the owner
 - Captions: upload the English CC track or not (pending since video 03).
 - Missing photos for 04 (Lemaître, Penrose, Hoyle, Hartle, Wilson, Solvay 1927, Holmdel antenna, Mount Wilson,

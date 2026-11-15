@@ -32,7 +32,8 @@ is 100 quota units, so stay under ~30 searches a day).
   or admit it is open, only at the end.
 - **Opening (30-50 s): start in the middle of the action.** A person, a place, a year, a strange event (1964,
   two scientists cleaning a radio antenna, a hiss that won't go). Reveal what it was, add 1-2 big numbers as
-  teasers, then ask the question. Title card after it. Don't tease a mystery in a hook and then solve it 15 s
+  teasers, then ask the question, and go straight on: no title card, no channel intro (owner, 2026-11-15).
+  The first sentence is already the topic; never warm up. Don't tease a mystery in a hook and then solve it 15 s
   later in a cold open: merge the two.
 - **Chapters, not a countdown, when the title is a question.** Use "10 Facts…" countdown cards only when the
   title says "10 Facts". Chapter cards carry an English title (no number); they also become YouTube chapters.

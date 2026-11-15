@@ -40,7 +40,7 @@
     transliterated into Devanagari: galaxy, Milky Way, signal, planets, civilization. Only Hindi words go into
     Devanagari. A Hindi word that could come out wrong may be written in Roman Hinglish instead.**
   - Numbers are written as Hindi words.
-- Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir> --open-gap 6.4 --gap 0.8 --max-pause 0.4`
+- Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir> --open-gap 0.8 --gap 0.8 --max-pause 0.4`
   (`pipeline.sh … narration`). This produces the narration, the timeline and per-character timings.
 - **Pace: full videos at 1.0x** (owner, 2026-10-26, after a 1.0x vs 1.2x sample of video 04). Shorts at 1.2x.
 
@@ -78,9 +78,11 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
 
 ## Standard from video 05 (owner, 2026-10-27, after the 04-x experiment: "I accept all these changes")
 - **No opening animation, no pauses.** The voice starts at 0.5 s. No `M` moments and no "..." suspense pauses.
-  The narration stage joins with `--open-gap 6.4 --gap 0.8 --max-pause 0.4` (pipeline default).
-- **Channel intro after the opening/hook** (edit.base.json `"channel"`), then the title card. Chapter cards carry
-  a short title, no number. `"lead_in": 0.5`, no `"intro"`.
+  The narration stage joins with `--open-gap 0.8 --gap 0.8 --max-pause 0.4` (pipeline default).
+- **No intro of any kind (owner, 2026-11-15): no channel intro, no title card, no gap after the opening.** The
+  video starts on its first sentence and goes straight on ("people don't care about those things; don't waste
+  time"). Chapter cards carry a short title, no number, and sit over the running voice. `"lead_in": 0.5`, no
+  `"intro"`, no `"channel"` in edit.base.json. (Videos 05-07 had a channel intro and title card.)
 - **Show what is being said.** Photos of the people and things named, our own motion graphics for every idea
   that is explained, name cards (`L`) for people, missions and instruments, kinetic text and number cards.
 - **Real archive footage on many occasions: 10-20 clips a video when they exist.** Launches, the actual

@@ -74,14 +74,15 @@ stage() {
       bash "$ROOT/scripts/setup/fetch_media.sh" "$MEDIA" ;;
     narration)
       # no pauses (owner, 2026-10-27): 0.8 s before a chapter card, pauses inside a chapter cut to 0.4 s; the
-      # open gap holds the channel intro + title card after the opening (productions 01-04 used --open-gap 3.5 --gap 2.0)
+      # no intro of any kind from video 08 (owner, 2026-11-15): the opening flows into chapter 1 like any chapter
+      # (05-07 used --open-gap 6.4 for the channel intro + title card; 01-04 used --open-gap 3.5 --gap 2.0)
       # right the first time (owner, 2026-10-27): the text is checked before a character is paid for, and every new
       # recording is listened to (speech_check) before anything is built on it
       "$PY" "$ROOT/scripts/elevenlabs/tts_check.py" "$P/tts/narration.hi.md" ${TTS_CHECK_FLAGS:-} \
         || { echo "fix the flagged lines (new names: pipeline.sh $P probe) before recording"; exit 1; }
       # shellcheck disable=SC2086
       "$PY" "$ROOT/scripts/elevenlabs/render_narration.py" "$P/tts/narration.hi.md" "$WORK/voice" \
-        ${NARRATION_FLAGS:---open-gap 6.4 --gap 0.8 --max-pause 0.4}
+        ${NARRATION_FLAGS:---open-gap 0.8 --gap 0.8 --max-pause 0.4}
       "$PY" "$ROOT/scripts/elevenlabs/speech_check.py" "$P/tts/narration.hi.md" "$WORK/voice" \
         || echo "speech check: listen to each FLAG above (the English transcript can drop a place name)" ;;
     probe)  # new names and English terms read alone first: a few characters instead of a re-recorded section

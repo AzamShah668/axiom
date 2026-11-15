@@ -58,13 +58,14 @@ Python deps: `scripts/requirements-science.txt` (torch CPU first). Secrets: `ELE
   - **No text, logos or labels inside footage**: OCR-checked, corner labels auto-cropped, the rest excluded.
   - Stills only inside our own graphics, always moving: photos of the people and things named (`G photo:<stem>`).
 - **Standard from video 05** (owner, 2026-10-27; full list in `productions/README.md`): no opening animation and
-  no pauses (no `M` moments, narration joined with `--gap 0.8 --max-pause 0.4`), channel intro after the hook,
+  no pauses (no `M` moments, narration joined with `--gap 0.8 --max-pause 0.4`), **no intro of any kind from video 08 (owner,
+  2026-11-15): no channel intro, no title card, the video starts on its first sentence**,
   show what is said (photos, own graphics, name cards), **10-20 real archive clips** a video when they exist
   (pinned, may be SD/HD, public domain or CC only) and **real recordings of the people** in the story
   (`[bite:<name>]` + `bites.json`: the narration stops, their own voice plays with a subtitle).
 - **Editing style v3** (`docs/style-guide.md`, the owner's decisions of 2026-10-20). Every video from 03 on.
-  - **Intro:** a 15-30 s hook that names the topic in its first sentence, then the story cold open, then the
-    title card.
+  - **Opening:** a hook that names the topic in its first sentence and runs straight into the story. No title
+    card and no channel intro (owner, 2026-11-15).
   - **Pace:** cuts follow the voice (pauses, word starts), about 3 s scenes, holds for awe, 15-19 cuts/min.
   - **On-screen text:** key phrases only:
     - kinetic headlines and key lines on the spoken words
