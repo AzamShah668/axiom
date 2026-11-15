@@ -122,6 +122,24 @@ context. Do the same for numbers: a number comes after the thing it measures, ne
   - a ball for a bounce
   - bubbles in boiling water for the multiverse
 
+## 3b. Sound human, not AI (owner, 2026-11-15: "it looks like AI and has no hook")
+What professional YouTube writers do; every script from video 08:
+- **First sentence = the hook, no warm-up, no intro.** A concrete, strange, specific fact ("Hamari galaxy mein
+  lagbhag 10 crore black holes ho sakte hain"), then why it matters, then a promise of what's coming.
+- **Write for the ear.** Read every line aloud. Mix very short lines ("Woh chamakte nahi.") with longer ones;
+  fragments are fine. Never three sentences of the same length in a row.
+- **Specifics, not adjectives.** Never "one of the most terrifying/mysterious". Show it: a number made tangible
+  (600 km/s = Earth to the Moon in 11 minutes), a real moment (satellites blinded in December 2004).
+- **"But / so", not "and then".** Every beat turns: a finding, then a problem, then a twist.
+- **Reaction lines and plain talk:** "Achhi khabar yeh hai… Buri khabar yeh hai…", "Aur yahan se kahaani ajeeb
+  ho jaati hai", "Sach kahein to…". Sparingly, never two in a row.
+- **A re-hook every 60-90 s:** each chapter ends by teasing the next place.
+- **Cut the AI tells:** "a reminder that", "it's important to note", "in conclusion", stacked adjectives,
+  perfectly balanced sentences, a hedge in every line, ending every chapter on a moral.
+- **Honest twists beat hype:** when a famous claim fell apart (dark flow), say so; it is more gripping.
+- **The owner's read-aloud pass** is the last step: he reads it in his own voice and rewrites what he wouldn't
+  say.
+
 ## 4. Accuracy: say only what is known
 - **Hedge theories.** "scientists ke hisaab se" for inflation; "zyaadatar scientists is daave ko nahi maante"
   for disputed claims (Penrose's Hawking points).
