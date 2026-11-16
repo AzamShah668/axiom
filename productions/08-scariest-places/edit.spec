@@ -82,7 +82,7 @@ C Magnetar तो फिर भी | A magnetar is still just a dead star. Some 
 
 == ch3
 V - @ a faint blue star-like point in a telescope image | a bright point of light among faint galaxies
-G उन्नीस सौ तिरसठ में @ photo:Maarten_Schmidt
+V उन्नीस सौ तिरसठ में @ a giant telescope inside an observatory dome | Palomar style observatory telescope at night
 L उन्नीस सौ तिरसठ में @ MAARTEN SCHMIDT | Dutch astronomer · Caltech · 1929-2022
 C - | In 1963, Dutch astronomer Maarten Schmidt was reading the light of a small blue dot
 C वो देखने में | It looked exactly like a star
@@ -112,7 +112,7 @@ C और इन्हीं quasars | And inside one of them hides one of the he
 V - @ a quasar shining in the distant universe | a brilliant distant galaxy core {hold}
 K - @ *TON 618* [Ton] | sub=a quasar 10 billion light-years away
 C - | It's called TON 618. In 1957, a survey in Mexico listed it as a faint blue star
-G उन्नीस सौ सत्तावन में @ photo:Tonantzintla
+V उन्नीस सौ सत्तावन में @ an old observatory dome under a starry sky | a telescope dome on a mountain at night
 L उन्नीस सौ सत्तावन में @ TONANTZINTLA OBSERVATORY | Mexico · the 1957 survey
 V आज scientists का अंदाज़ा @ an enormous black hole with a huge glowing disc | supermassive black hole animation
 N आज scientists का अंदाज़ा @ hero | value=66,000,000,000 | unit=suns | kicker=a black hole of 40 to | land=छियासठ | log | over
@@ -160,7 +160,7 @@ C ब्रह्मांड में कहीं | In some places galaxies c
 
 == ch6
 V - @ astronomers measuring galaxy distances with a telescope | a large telescope at night
-G उन्नीस सौ इक्यासी में @ photo:Robert_Kirshner
+V उन्नीस सौ इक्यासी में @ a telescope dome opening at dusk | an observatory telescope pointing at the night sky
 L उन्नीस सौ इक्यासी में @ ROBERT KIRSHNER | astronomer · Harvard · found the Boötes Void in 1981
 C - | In 1981, astronomer Robert Kirshner and his team were measuring galaxy distances when their numbers ran out
 V वहाँ galaxies थीं ही @ a vast dark empty region of space | a cosmic void with almost no galaxies {hold}
@@ -171,7 +171,6 @@ V इतनी बड़ी जगह में @ a few lonely galaxies in empty
 N इतनी बड़ी जगह में @ hero | value=60 | unit=galaxies | kicker=thousands expected, found | land=साठ | over
 C इतनी बड़ी जगह में | A space that size should hold thousands of galaxies; scientists found about 60
 V Greg Aldering ने @ the Milky Way alone in darkness | a single galaxy in empty black space
-G Greg Aldering ने @ photo:Greg_Aldering
 L Greg Aldering ने @ GREG ALDERING | astronomer · Lawrence Berkeley National Laboratory
 C Greg Aldering ने | Astronomer Greg Aldering said: if the Milky Way sat in this void, we wouldn't have known other galaxies existed until the 1960s
 V रात का आसमान अपनी @ the night sky with only nearby stars | a dark night sky over a landscape
@@ -207,7 +206,6 @@ C और दूसरे ब्रह्मांड | And the other-universe st
 
 == ch8
 V - @ galaxy clusters streaming in one direction | hundreds of galaxies moving across the sky
-G - @ photo:Alexander_Kashlinsky
 L - @ ALEXANDER KASHLINSKY | astrophysicist · NASA Goddard · dark flow, 2008
 C - | Astronomer Alexander Kashlinsky's team measured the motion of huge galaxy clusters: hundreds seemed to flow one way
 V ये बिल्कुल वैसा था @ a river current carrying leaves | leaves floating down a stream

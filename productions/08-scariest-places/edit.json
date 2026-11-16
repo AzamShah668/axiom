@@ -615,7 +615,10 @@
     },
     {
      "at": "उन्नीस सौ तिरसठ में",
-     "gfx": "photo:Maarten_Schmidt"
+     "q": [
+      "a giant telescope inside an observatory dome",
+      "Palomar style observatory telescope at night"
+     ]
     },
     {
      "at": "लेकिन जैसे जैसे",
@@ -786,7 +789,10 @@
     },
     {
      "at": "उन्नीस सौ सत्तावन में",
-     "gfx": "photo:Tonantzintla"
+     "q": [
+      "an old observatory dome under a starry sky",
+      "a telescope dome on a mountain at night"
+     ]
     },
     {
      "at": "आज scientists का अंदाज़ा",
@@ -1091,7 +1097,10 @@
     },
     {
      "at": "उन्नीस सौ इक्यासी में",
-     "gfx": "photo:Robert_Kirshner"
+     "q": [
+      "a telescope dome opening at dusk",
+      "an observatory telescope pointing at the night sky"
+     ]
     },
     {
      "at": "वहाँ galaxies थीं ही",
@@ -1114,10 +1123,6 @@
       "the Milky Way alone in darkness",
       "a single galaxy in empty black space"
      ]
-    },
-    {
-     "at": "Greg Aldering ने",
-     "gfx": "photo:Greg_Aldering"
     },
     {
      "at": "रात का आसमान अपनी",
@@ -1364,10 +1369,6 @@
       "galaxy clusters streaming in one direction",
       "hundreds of galaxies moving across the sky"
      ]
-    },
-    {
-     "at": null,
-     "gfx": "photo:Alexander_Kashlinsky"
     },
     {
      "at": "ये बिल्कुल वैसा था",
