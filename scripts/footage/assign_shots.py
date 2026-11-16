@@ -319,6 +319,7 @@ def main():
             used.add(j)
         print("greedy pass resolved the remaining clashes", flush=True)
     # final gate: OCR the frames each item will really show; text -> that shot is out, re-solve the rest in place
+    text_out = set()
     for rnd in range(40):  # every re-solve is checked again: the result never skips the gate
         hits = text_gate(a.lib, items, pool, r, c, need, os.path.join(a.lib, "text_gate.json"))
         hits = [k for k in hits if sec_n[r[k]] not in edit.get("pin", {})  # a pin is a deliberate choice
@@ -329,20 +330,24 @@ def main():
         if rnd == 39:
             raise SystemExit("text gate did not converge: ban the clips it keeps hitting or add footage: "
                              + ", ".join(f"{sec_n[r[k]]}={pool[c[k]]['id']}" for k in hits))
-        for k in hits:
-            cost[:, c[k]] += 100.0  # the shot is out for every item
+        # a text shot is out for good; everyone else keeps their shot for this re-solve only. (The keep bias used to
+        # pile up round after round and outgrew the +100 ban, so the same text shots kept coming back: video 08.)
+        text_out.update(c[k] for k in hits)
+        bias = np.zeros_like(cost)
         for k in range(len(r)):
-            if k not in hits:  # everyone else keeps their shot
-                cost[r[k], :] += 50.0
-                cost[r[k], c[k]] -= 50.0
-        r, c = linear_sum_assignment(cost + blocked)
+            if k not in hits:
+                bias[r[k], :] += 50.0
+                bias[r[k], c[k]] -= 50.0
+        bias[:, sorted(text_out)] += 1000.0
+        rc = cost + bias
+        r, c = linear_sum_assignment(rc + blocked)
         r, c = list(r), list(c)
         chosen = []
         for k in sorted(range(len(r)), key=lambda k: (r[k] not in pinned_rows, cost[r[k], c[k]])):
             i, j = r[k], c[k]
             if i not in pinned_rows and i not in own_rows and same_footage(SE, SH, j, chosen):
-                for j2 in np.argsort(cost[i] + blocked[i]):
-                    if j2 not in c and cost[i, j2] < 50 and not same_footage(SE, SH, j2, chosen):
+                for j2 in np.argsort(rc[i] + blocked[i]):
+                    if j2 not in c and cost[i, j2] < 50 and j2 not in text_out and not same_footage(SE, SH, j2, chosen):
                         c[k] = j = int(j2)
                         break
             chosen.append(j)
