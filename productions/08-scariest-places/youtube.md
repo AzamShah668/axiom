@@ -24,7 +24,7 @@ A black hole drifting alone through our galaxy, a dead star that hit Earth from 
 8:51 Dark Flow
 9:50 The Edge Of Everything
 
-FOOTAGE_CREDITS
+Footage credits: ESO (eso.org), CC BY 4.0 (56 videos); ESA/Hubble (esahubble.org), CC BY 4.0 (51 videos); ESA/Webb (esawebb.org), CC BY 4.0 (61 videos); NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov) (22 videos). Full list of videos in the pinned comment.
 Photos: 3C 273, ESA/Hubble & NASA (CC BY 4.0); Planck spacecraft artist concept, ESA/NASA/JPL-Caltech (NASA image library, PIA13953).
 Graphics and animation: original.
 

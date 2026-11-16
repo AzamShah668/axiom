@@ -648,18 +648,13 @@
    "dir": -1,
    "f0": 2204,
    "f1": 2421,
-   "shot": "esahubble_heic2304a#2",
-   "clip": "esahubble_heic2304a",
-   "ss": 31.7,
-   "crop": [
-    0.0,
-    0.0,
-    0.75,
-    0.75
-   ],
-   "score": 0.3788,
+   "shot": "esahubble_potw2540a#0",
+   "clip": "esahubble_potw2540a",
+   "ss": 2.18,
+   "crop": null,
+   "score": 0.3218,
    "ref": "ch1/10",
-   "title": "Space Sparks Episode 18: Hubble celebrates its 33rd anniversary"
+   "title": "Pan: NGC 6951"
   },
   {
    "sec": "ch1",
@@ -728,18 +723,13 @@
    "dir": -1,
    "f0": 2602,
    "f1": 2684,
-   "shot": "esawebb_final_JWST_spacesparks009#0",
-   "clip": "esawebb_final_JWST_spacesparks009",
-   "ss": 4.55,
-   "crop": [
-    0.0,
-    0.0,
-    0.9,
-    0.9
-   ],
-   "score": 0.352,
+   "shot": "esahubble_potw2502a#0",
+   "clip": "esahubble_potw2502a",
+   "ss": 4.41,
+   "crop": null,
+   "score": 0.3173,
    "ref": "ch1/13",
-   "title": "Webb Sets Out to Study Exoplanets: Space Sparks Episode 9"
+   "title": "Pan: HOPS 150 and HOPS 153"
   },
   {
    "sec": "ch1",
@@ -1295,7 +1285,7 @@
    "beat": 7,
    "kind": "clip",
    "t0": 163.703,
-   "t1": 164.542,
+   "t1": 164.206,
    "q": [
     "a giant flare erupting from a neutron star",
     "an explosive flash from a magnetar"
@@ -1305,10 +1295,10 @@
    "move": "impact",
    "rate": 0.12,
    "f0": 4911,
-   "f1": 4936,
+   "f1": 4926,
    "shot": "esawebb_potm2604a#0",
    "clip": "esawebb_potm2604a",
-   "ss": 5.51,
+   "ss": 5.67,
    "crop": [
     0.0,
     0.0,
@@ -1323,8 +1313,8 @@
    "sec": "ch2",
    "beat": 7,
    "kind": "clip",
-   "t0": 164.542,
-   "t1": 165.483,
+   "t0": 164.206,
+   "t1": 165.088,
    "q": [
     "a giant flare erupting from a neutron star",
     "an explosive flash from a magnetar"
@@ -1333,21 +1323,50 @@
    "trans": "cut",
    "move": "impact",
    "rate": 0.12,
-   "f0": 4936,
-   "f1": 4964,
-   "shot": "esawebb_potm2604c#0",
-   "clip": "esawebb_potm2604c",
-   "ss": 5.32,
+   "f0": 4926,
+   "f1": 4953,
+   "shot": "svs_20367#1",
+   "clip": "svs_20367",
+   "ss": 6.01,
    "crop": null,
-   "score": 0.3504,
+   "score": 0.3103,
    "ref": "ch2/13",
-   "title": "Transition video: M77"
+   "title": "Gravitational Wave"
   },
   {
    "sec": "ch2",
    "beat": 7,
    "kind": "clip",
-   "t0": 165.483,
+   "t0": 165.088,
+   "t1": 165.599,
+   "q": [
+    "a giant flare erupting from a neutron star",
+    "an explosive flash from a magnetar"
+   ],
+   "opt": "flash",
+   "trans": "cut",
+   "move": "impact",
+   "rate": 0.12,
+   "f0": 4953,
+   "f1": 4968,
+   "shot": "svs_14645#0",
+   "clip": "svs_14645",
+   "ss": 2.93,
+   "crop": [
+    0.0,
+    0.2,
+    0.8,
+    1.0
+   ],
+   "score": 0.3591,
+   "ref": "ch2/14",
+   "title": "Hubble’s Inside the Image: Cat's Eye Nebula"
+  },
+  {
+   "sec": "ch2",
+   "beat": 7,
+   "kind": "clip",
+   "t0": 165.599,
    "t1": 166.11,
    "q": [
     "a giant flare erupting from a neutron star",
@@ -1357,20 +1376,20 @@
    "trans": "cut",
    "move": "impact",
    "rate": 0.12,
-   "f0": 4964,
+   "f0": 4968,
    "f1": 4983,
-   "shot": "eso_esocast190a#2",
-   "clip": "eso_esocast190a",
-   "ss": 14.26,
+   "shot": "svs_13113#0",
+   "clip": "svs_13113",
+   "ss": 1.67,
    "crop": [
     0.0,
     0.0,
-    0.8,
-    0.8
+    0.85,
+    0.85
    ],
-   "score": 0.3195,
-   "ref": "ch2/14",
-   "title": "ESOcast 190: Chile Chill 12 — Fire in the Heavens"
+   "score": 0.2959,
+   "ref": "ch2/15",
+   "title": "AGU 2018 - Expected Data and Scientific Discovery from NASA’s Parker Solar Probe"
   },
   {
    "sec": "ch2",
@@ -1393,7 +1412,7 @@
    "ss": 5.02,
    "crop": null,
    "score": 0.3214,
-   "ref": "ch2/15",
+   "ref": "ch2/16",
    "title": "Pan of the Southern Ring Nebula (MIRI Image)"
   },
   {
@@ -1417,7 +1436,7 @@
    "ss": 5.46,
    "crop": null,
    "score": 0.3444,
-   "ref": "ch2/16",
+   "ref": "ch2/17",
    "title": "Panning across HH 24"
   },
   {
@@ -1425,7 +1444,7 @@
    "beat": 7,
    "kind": "clip",
    "t0": 167.584,
-   "t1": 168.086,
+   "t1": 168.181,
    "q": [
     "a giant flare erupting from a neutron star",
     "an explosive flash from a magnetar"
@@ -1435,21 +1454,21 @@
    "move": "impact",
    "rate": 0.12,
    "f0": 5028,
-   "f1": 5043,
+   "f1": 5045,
    "shot": "eso_eso1319a#0",
    "clip": "eso_eso1319a",
-   "ss": 5.54,
+   "ss": 5.49,
    "crop": null,
    "score": 0.3491,
-   "ref": "ch2/17",
+   "ref": "ch2/18",
    "title": "Artist’s impression of the pulsar PSR J0348+0432 and its white dwarf companion"
   },
   {
    "sec": "ch2",
    "beat": 7,
    "kind": "clip",
-   "t0": 168.086,
-   "t1": 168.588,
+   "t0": 168.181,
+   "t1": 169.006,
    "q": [
     "a giant flare erupting from a neutron star",
     "an explosive flash from a magnetar"
@@ -1458,22 +1477,27 @@
    "trans": "cut",
    "move": "impact",
    "rate": 0.12,
-   "f0": 5043,
-   "f1": 5058,
-   "shot": "eso_esocast190a#3",
+   "f0": 5045,
+   "f1": 5070,
+   "shot": "eso_esocast190a#2",
    "clip": "eso_esocast190a",
-   "ss": 18.91,
-   "crop": null,
-   "score": 0.3173,
-   "ref": "ch2/18",
+   "ss": 14.16,
+   "crop": [
+    0.0,
+    0.0,
+    0.8,
+    0.8
+   ],
+   "score": 0.3195,
+   "ref": "ch2/19",
    "title": "ESOcast 190: Chile Chill 12 — Fire in the Heavens"
   },
   {
    "sec": "ch2",
    "beat": 7,
    "kind": "clip",
-   "t0": 168.588,
-   "t1": 169.47,
+   "t0": 169.006,
+   "t1": 169.725,
    "q": [
     "a giant flare erupting from a neutron star",
     "an explosive flash from a magnetar"
@@ -1482,26 +1506,21 @@
    "trans": "cut",
    "move": "impact",
    "rate": 0.12,
-   "f0": 5058,
-   "f1": 5084,
-   "shot": "svs_14645#0",
-   "clip": "svs_14645",
-   "ss": 2.75,
-   "crop": [
-    0.0,
-    0.2,
-    0.8,
-    1.0
-   ],
-   "score": 0.3591,
-   "ref": "ch2/19",
-   "title": "Hubble’s Inside the Image: Cat's Eye Nebula"
+   "f0": 5070,
+   "f1": 5092,
+   "shot": "eso_esocast190a#3",
+   "clip": "eso_esocast190a",
+   "ss": 18.8,
+   "crop": null,
+   "score": 0.3173,
+   "ref": "ch2/20",
+   "title": "ESOcast 190: Chile Chill 12 — Fire in the Heavens"
   },
   {
    "sec": "ch2",
    "beat": 7,
    "kind": "clip",
-   "t0": 169.47,
+   "t0": 169.725,
    "t1": 170.236,
    "q": [
     "a giant flare erupting from a neutron star",
@@ -1511,15 +1530,15 @@
    "trans": "cut",
    "move": "impact",
    "rate": 0.12,
-   "f0": 5084,
+   "f0": 5092,
    "f1": 5107,
-   "shot": "esahubble_potm2602a#0",
-   "clip": "esahubble_potm2602a",
-   "ss": 5.41,
+   "shot": "esahubble_potw2340a#0",
+   "clip": "esahubble_potw2340a",
+   "ss": 5.53,
    "crop": null,
-   "score": 0.3277,
-   "ref": "ch2/20",
-   "title": "Pan video: Cat's Eye Nebula (Hubble image)"
+   "score": 0.2895,
+   "ref": "ch2/21",
+   "title": "Pan: Leaving on a jet"
   },
   {
    "sec": "ch2",
@@ -1542,7 +1561,7 @@
    "ss": 0.44,
    "crop": null,
    "score": 0.3415,
-   "ref": "ch2/21",
+   "ref": "ch2/22",
    "title": "Flickering quasar images"
   },
   {
@@ -1572,7 +1591,7 @@
     0.75
    ],
    "score": 0.3586,
-   "ref": "ch2/22",
+   "ref": "ch2/23",
    "title": "Space Spark Episode 26: Image highlights from Hubble's 36th year"
   },
   {
@@ -1597,7 +1616,7 @@
    "ss": 0.4,
    "crop": null,
    "score": 0.2834,
-   "ref": "ch2/23",
+   "ref": "ch2/24",
    "title": "PUNCH Instruments"
   },
   {
@@ -1622,7 +1641,7 @@
    "ss": 5.19,
    "crop": null,
    "score": 0.2803,
-   "ref": "ch2/24",
+   "ref": "ch2/25",
    "title": "What’s the true shape of a supernova? | ESO News"
   },
   {
@@ -1652,7 +1671,7 @@
     0.8
    ],
    "score": 0.3174,
-   "ref": "ch2/25",
+   "ref": "ch2/26",
    "title": "ESOcast 190: Chile Chill 12 — Fire in the Heavens"
   },
   {
@@ -1677,7 +1696,7 @@
    "ss": 4.47,
    "crop": null,
    "score": 0.3076,
-   "ref": "ch2/26",
+   "ref": "ch2/27",
    "title": "Animation of Saturn’s Moon"
   },
   {
@@ -1707,7 +1726,7 @@
     1.0
    ],
    "score": 0.3394,
-   "ref": "ch2/27",
+   "ref": "ch2/28",
    "title": "Gravity waves disturbing the stratospheric polar vortex"
   },
   {
@@ -1732,7 +1751,7 @@
    "ss": 4.41,
    "crop": null,
    "score": 0.3699,
-   "ref": "ch2/28",
+   "ref": "ch2/29",
    "title": "Pan: NGC 4694"
   },
   {
@@ -1757,7 +1776,7 @@
    "ss": 2.82,
    "crop": null,
    "score": 0.3687,
-   "ref": "ch2/29",
+   "ref": "ch2/30",
    "title": "Zooming in on Messier 77"
   },
   {
@@ -1782,7 +1801,7 @@
    "ss": 3.38,
    "crop": null,
    "score": 0.3631,
-   "ref": "ch2/30",
+   "ref": "ch2/31",
    "title": "Zoom video: Centaurus A"
   },
   {
@@ -2547,13 +2566,13 @@
    "dir": -1,
    "f0": 8613,
    "f1": 8738,
-   "shot": "eso_potw2401a#0",
-   "clip": "eso_potw2401a",
-   "ss": 3.69,
+   "shot": "esawebb_potm2608a#0",
+   "clip": "esawebb_potm2608a",
+   "ss": 3.7,
    "crop": null,
-   "score": 0.3544,
+   "score": 0.3225,
    "ref": "ch4/9",
-   "title": "Starting off the year with a bang"
+   "title": "Pan video: Arp 263"
   },
   {
    "sec": "ch4",
@@ -3171,13 +3190,13 @@
    "dir": -1,
    "f0": 10927,
    "f1": 11002,
-   "shot": "esawebb_weic2608c#0",
-   "clip": "esawebb_weic2608c",
-   "ss": 0.17,
+   "shot": "esawebb_potm2405a#0",
+   "clip": "esawebb_potm2405a",
+   "ss": 4.53,
    "crop": null,
-   "score": 0.3343,
+   "score": 0.3313,
    "ref": "ch5/19",
-   "title": "Zoom video: M51"
+   "title": "Pan: NGC 4449 (NIRCam+MIRI image)"
   },
   {
    "sec": "ch5",
@@ -3347,13 +3366,18 @@
    "dir": 1,
    "f0": 11774,
    "f1": 11864,
-   "shot": "eso_potw2512a#0",
-   "clip": "eso_potw2512a",
-   "ss": 4.29,
-   "crop": null,
-   "score": 0.3478,
+   "shot": "eso_eso1837a#1",
+   "clip": "eso_eso1837a",
+   "ss": 25.07,
+   "crop": [
+    0.0,
+    0.25,
+    0.75,
+    1.0
+   ],
+   "score": 0.3063,
    "ref": "ch6/1",
-   "title": "A full Moon rises behind the ELT"
+   "title": "ESOcast 184 Light: Super-Earth Orbiting Barnard’s Star (4K UHD)"
   },
   {
    "sec": "ch6",
@@ -3987,13 +4011,13 @@
    "dir": -1,
    "f0": 14558,
    "f1": 14711,
-   "shot": "esawebb_potm2405e#0",
-   "clip": "esawebb_potm2405e",
-   "ss": 3.24,
+   "shot": "esahubble_tarantula-neb_4kultrahd#0",
+   "clip": "esahubble_tarantula-neb_4kultrahd",
+   "ss": 0.22,
    "crop": null,
-   "score": 0.346,
+   "score": 0.3196,
    "ref": "ch7/5",
-   "title": "Transition video: Hubble and Webb's views of NGC 4449"
+   "title": "Flight through the Tarantula Nebula"
   },
   {
    "sec": "ch7",
@@ -5398,7 +5422,7 @@
   },
   {
    "kind": "num",
-   "t0": 163.881,
+   "t0": 168.181,
    "t1": 171.92499999999998,
    "num": {
     "template": "hero",
@@ -5406,9 +5430,9 @@
     "unit": "years of the Sun's energy",
     "kicker": "in 0.1 seconds",
     "land": "लाख",
-    "land_t": 5.843999999999994,
+    "land_t": 1.5439999999999827,
     "count_s": 1.3,
-    "dur": 8.043999999999983
+    "dur": 3.7439999999999714
    }
   },
   {
