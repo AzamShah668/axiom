@@ -201,6 +201,10 @@ def build(P, tl, clock, cfg, beat_t, cap_words, cta0):
             t0, land = clock(o["t0"]), clock(n["land_t"])
             nums.append({"t0": t0, "land": max(land, t0 + 0.5), "t1": max(land, t0 + 0.5) + 1.3, "value": n["value"],
                          "unit": n.get("unit", ""), "kicker": n.get("kicker", "")})
+    if sus:  # nothing else on screen during the suspense beat
+        for o in heads + nums:
+            if o["t0"] < sus[0]:
+                o["t1"] = min(o["t1"], sus[0] - 0.12)
     return items, heads, nums, sus
 
 
@@ -391,7 +395,7 @@ class Text:
         if not hidden:
             f[:520] *= self.band
             p = ease_back(t / 0.28)
-            paste(f, self.title, W / 2, 285, op=min(1, t / 0.1 + 0.4), scale=0.85 + 0.15 * p)
+            paste(f, self.title, W / 2, 285, op=1.0, scale=0.85 + 0.15 * p)
         # number cards
         shown = False
         for n in self.nums:

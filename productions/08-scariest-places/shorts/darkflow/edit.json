@@ -47,6 +47,7 @@
   "esawebb_weic2608c#0",
   "esawebb_weic2615c#0",
   "esawebb_weic2619a",
+  "esawebb_weic2622c#0",
   "eso_eso1151c",
   "eso_eso1229a",
   "eso_eso1507d#0",
@@ -69,6 +70,7 @@
   "eso_eso2314c#0",
   "eso_eso2315a",
   "eso_eso2402c#0",
+  "eso_eso2407a#0",
   "eso_eso2409b",
   "eso_eso2502d#0",
   "eso_eso2518b",
@@ -105,6 +107,8 @@
  "exclude": {},
  "ban_extra": [
   "esawebb_final_JWST_spacesparks009#1",
+  "esawebb_weic2622c#0",
+  "eso_eso2407a#0",
   "svs_5423#0"
  ],
  "sections": {
@@ -115,6 +119,13 @@
      "q": [
       "flight to the edge of the observable universe",
       "flying through galaxies at high speed"
+     ]
+    },
+    {
+     "at": "एक scientist ने",
+     "q": [
+      "a black hole bending the light of stars behind it",
+      "an exploding star"
      ]
     },
     {

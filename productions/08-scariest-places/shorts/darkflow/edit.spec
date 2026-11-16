@@ -1,6 +1,7 @@
 == darkflow_hook
 V - @ flight to the edge of the observable universe | flying through galaxies at high speed
 C - | In 2008, a NASA scientist made a claim that shook everyone
+V एक scientist ने @ a black hole bending the light of stars behind it | an exploding star
 V जिसने सबको हिला दिया @ a blinding flash of light in space | an exploding star
 V कि हमारे दिखने वाले @ the edge of the observable universe | the observable universe sphere of galaxies
 K कि हमारे दिखने वाले @ SOMETHING BEYOND [दिखने] / *OUR UNIVERSE* [बाहर]
