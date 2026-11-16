@@ -325,6 +325,10 @@ def main():
         hits = [k for k in hits if sec_n[r[k]] not in edit.get("pin", {})  # a pin is a deliberate choice
                 and r[k] not in own_rows]  # an own graphic's placeholder is never seen
         print(f"text gate {rnd}: {len(hits)} shown segments with text", flush=True)
+        if os.environ.get("GATE_DEBUG"):
+            for k in hits[:6]:
+                print("   ", sec_n[r[k]], pool[c[k]]["id"], "seen" if c[k] in text_out else "new",
+                      "need", round(float(need[r[k]]), 2), "L", round(float(L[c[k]]), 2), flush=True)
         if not hits:
             break
         if rnd == 39:
