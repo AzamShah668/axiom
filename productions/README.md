@@ -140,7 +140,7 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
 - **Shorts v2 style (owner, 2026-11-16, video 08):** `scripts/video/render_short_v2.py`, full-screen 9:16, beat-snapped cuts
   every 2-3 s with zoom punches, flash/glitch transitions, slam headlines, count-up numbers, one-word gold captions, a
   beat-driven music bed, and a curiosity script that stops before the answer and ends on a spoken and written
-  "WATCH THE FULL VIDEO". **No suspense stop** (owner: "it kills the rhythm"): the voice flows straight into the twist.
+  "WATCH THE FULL VIDEO". Voice at **1.1x** (owner: 1.2x "too fast" for these). **No suspense stop** (owner: "it kills the rhythm"): the voice flows straight into the twist.
 - **Everyday comparisons are allowed in Shorts hooks and titles** (owner's exception, 2026-10-22), e.g. "Maggi
   की तरह" for spaghettification. The science term stays, and the full videos stay universal (no India-specific
   comparisons there).
