@@ -201,6 +201,8 @@ def build(P, tl, clock, cfg, beat_t, cap_words, cta0):
             t0, land = clock(o["t0"]), clock(n["land_t"])
             nums.append({"t0": t0, "land": max(land, t0 + 0.5), "t1": max(land, t0 + 0.5) + 1.3, "value": n["value"],
                          "unit": n.get("unit", ""), "kicker": n.get("kicker", "")})
+    for o in heads + nums:  # nor under the end card
+        o["t1"] = min(o["t1"], cta0 - 0.3)
     if sus:  # nothing else on screen during the suspense beat
         for o in heads + nums:
             if o["t0"] < sus[0]:
