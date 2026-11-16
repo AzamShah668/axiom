@@ -1,0 +1,336 @@
+{
+ "style": "v3",
+ "lead_in": 0.0,
+ "cards": {},
+ "count_total": 0,
+ "music": [],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "pin": {},
+ "ban": [
+  "esahubble_heic1417a",
+  "esahubble_heic1502a",
+  "esahubble_heic1513b",
+  "esahubble_heic1526b",
+  "esahubble_heic1909b",
+  "esahubble_heic2202a#2",
+  "esahubble_heic2304a",
+  "esahubble_heic2304a#2",
+  "esahubble_heic2505b",
+  "esahubble_heic2603a#0",
+  "esahubble_heic2608b",
+  "esahubble_opo1742a",
+  "esahubble_potm2601b",
+  "esahubble_potm2602e",
+  "esahubble_potm2603b",
+  "esahubble_potw2317a",
+  "esawebb_final_JWST_spacesparks009",
+  "esawebb_final_JWST_spacesparks009#0",
+  "esawebb_potm2507a",
+  "esawebb_potm2604a",
+  "esawebb_potm2604c#0",
+  "esawebb_weic2218b#0",
+  "esawebb_weic2301b",
+  "esawebb_weic2324c",
+  "esawebb_weic2411c#0",
+  "esawebb_weic2426b",
+  "esawebb_weic2510b#0",
+  "esawebb_weic2517b#0",
+  "esawebb_weic2519b",
+  "esawebb_weic2602a#0",
+  "esawebb_weic2608c#0",
+  "esawebb_weic2615c#0",
+  "esawebb_weic2619a",
+  "esawebb_weic2622c#0",
+  "eso_eso1131a-bis",
+  "eso_eso1151c",
+  "eso_eso1229a",
+  "eso_eso1507d#0",
+  "eso_eso1612a",
+  "eso_eso1701d#0",
+  "eso_eso1707b",
+  "eso_eso1718b#0",
+  "eso_eso1719c",
+  "eso_eso1726b#0",
+  "eso_eso1727a",
+  "eso_eso1809b#0",
+  "eso_eso1814b#0",
+  "eso_eso2015b#0",
+  "eso_eso2018b",
+  "eso_eso2105b",
+  "eso_eso2116a#2",
+  "eso_eso2117a",
+  "eso_eso2117b#0",
+  "eso_eso2314c#0",
+  "eso_eso2315a",
+  "eso_eso2402c#0",
+  "eso_eso2407a",
+  "eso_eso2409b",
+  "eso_eso2502d#0",
+  "eso_eso2606c#0",
+  "eso_esocast82c#0",
+  "eso_paotrailer-notext",
+  "eso_potw2401a#0",
+  "eso_potw2421a#0",
+  "eso_potw2512a#0",
+  "eso_potw2622a#0",
+  "eso_potw2643a#0",
+  "eso_uhd_photogr5_2014#0",
+  "svs_13237#0",
+  "svs_13672#0",
+  "svs_13710#0",
+  "svs_14477#0",
+  "svs_14649#0",
+  "svs_14835#8",
+  "svs_14967#0",
+  "svs_15000#0",
+  "svs_15023#0",
+  "svs_15080#0",
+  "svs_15091#0",
+  "svs_20367",
+  "svs_31372",
+  "svs_4877#0",
+  "svs_5366#1",
+  "svs_5423",
+  "svs_5519#0"
+ ],
+ "crops": {},
+ "exclude": {},
+ "ban_extra": [
+  "esawebb_weic2411c#0",
+  "esawebb_weic2622c#0"
+ ],
+ "sections": {
+  "attractor_hook": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "the Milky Way galaxy moving through space",
+      "flying through galaxies at high speed"
+     ]
+    },
+    {
+     "at": "किसी चीज़ की तरफ़",
+     "q": [
+      "zooming into a galaxy cluster",
+      "galaxies streaming in one direction"
+     ]
+    },
+    {
+     "at": "और वो चीज़ क्या है",
+     "q": [
+      "a dark empty region among countless stars",
+      "deep dark space with faint stars"
+     ]
+    },
+    {
+     "at": "ये आज तक",
+     "q": [
+      "a mysterious glow behind dust clouds",
+      "thick interstellar dust clouds"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Right now, you are being pulled towards something at about 600 km every second"
+    },
+    {
+     "at": "और वो चीज़ क्या है",
+     "text": "And what that thing is, nobody has properly seen to this day"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "लगभग छह सौ",
+     "num": {
+      "template": "hero",
+      "value": "600",
+      "unit": "km every second",
+      "kicker": "you are moving at",
+      "land": "सौ"
+     }
+    }
+   ]
+  },
+  "attractor_problem": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "planet Earth from space",
+      "the Earth rotating seen from space"
+     ]
+    },
+    {
+     "at": "हमारा सूरज",
+     "q": [
+      "the Sun seen up close",
+      "the Sun's surface with flares"
+     ]
+    },
+    {
+     "at": "हमारी Milky Way",
+     "q": [
+      "the Milky Way galaxy seen from outside",
+      "a spiral galaxy rotating"
+     ]
+    },
+    {
+     "at": "और आस पास की",
+     "q": [
+      "the Local Group of galaxies moving together",
+      "a group of galaxies in space"
+     ]
+    },
+    {
+     "at": "सब एक ही direction में",
+     "q": [
+      "thousands of galaxies flowing in one direction",
+      "a stream of galaxies sweeping past"
+     ]
+    },
+    {
+     "at": "Scientists ने उस अनजान",
+     "q": [
+      "a massive galaxy cluster",
+      "a rich cluster of galaxies"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Not just you. The whole Earth, our Sun, our Milky Way"
+    },
+    {
+     "at": "और आस पास की",
+     "text": "and thousands of galaxies around us, all flowing in one direction"
+    },
+    {
+     "at": "Scientists ने उस अनजान",
+     "text": "Scientists named that unknown place The Great Attractor"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "Scientists ने उस अनजान",
+     "lines": [
+      {
+       "text": "THE GREAT",
+       "at": "Great"
+      },
+      {
+       "text": "*ATTRACTOR*",
+       "at": "Attractor"
+      }
+     ]
+    }
+   ]
+  },
+  "attractor_twist": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "thick dust lanes hiding the centre of the Milky Way",
+      "the dusty disc of the Milky Way edge on"
+     ]
+    },
+    {
+     "at": "वहाँ धूल और",
+     "q": [
+      "thick interstellar dust clouds",
+      "dark dust clouds blocking starlight"
+     ]
+    },
+    {
+     "at": "कि रोशनी आर पार",
+     "q": [
+      "dark dust clouds blocking starlight",
+      "a dark nebula against stars"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "The problem is, it lies right behind our own galaxy"
+    },
+    {
+     "at": "वहाँ धूल और",
+     "text": "There the wall of dust and stars is so thick"
+    },
+    {
+     "at": "कि रोशनी आर पार",
+     "text": "that light cannot get through it"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "वहाँ धूल और",
+     "lines": [
+      {
+       "text": "A WALL OF",
+       "at": "दीवार"
+      },
+      {
+       "text": "*DUST AND STARS*",
+       "at": "घनी"
+      }
+     ]
+    }
+   ]
+  },
+  "attractor_end": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "the Milky Way over Earth at night",
+      "an observatory under a starry sky"
+     ]
+    },
+    {
+     "at": "और वहाँ उन्हें",
+     "q": [
+      "radio telescopes under the night sky",
+      "astronomers studying sky data"
+     ]
+    },
+    {
+     "at": "पूरी कहानी",
+     "q": [
+      "zooming out from the Milky Way into the universe",
+      "flying through galaxies"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "So how did scientists look behind that wall?"
+    },
+    {
+     "at": "और वहाँ उन्हें",
+     "text": "And what did they find there?"
+    },
+    {
+     "at": "पूरी कहानी",
+     "text": "The whole story is in the full video"
+    }
+   ],
+   "sfx": []
+  }
+ }
+}

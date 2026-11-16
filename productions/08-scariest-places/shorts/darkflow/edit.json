@@ -1,0 +1,334 @@
+{
+ "style": "v3",
+ "lead_in": 0.0,
+ "cards": {},
+ "count_total": 0,
+ "music": [],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "pin": {},
+ "ban": [
+  "esahubble_heic1502a",
+  "esahubble_heic1502b",
+  "esahubble_heic1503b",
+  "esahubble_heic1506a",
+  "esahubble_heic1513b",
+  "esahubble_heic1709b",
+  "esahubble_heic1807a",
+  "esahubble_heic1811a",
+  "esahubble_heic2011c",
+  "esahubble_heic2202a#2",
+  "esahubble_heic2304a",
+  "esahubble_heic2304a#2",
+  "esahubble_heic2505b",
+  "esahubble_heic2603a#0",
+  "esahubble_heic2608b",
+  "esahubble_opo1742a",
+  "esahubble_potm2602e",
+  "esawebb_final_JWST_spacesparks009#0",
+  "esawebb_final_JWST_spacesparks009#1",
+  "esawebb_potm2604a",
+  "esawebb_potm2604c#0",
+  "esawebb_weic2211c",
+  "esawebb_weic2218b#0",
+  "esawebb_weic2324c",
+  "esawebb_weic2410b",
+  "esawebb_weic2420b",
+  "esawebb_weic2510b#0",
+  "esawebb_weic2517b#0",
+  "esawebb_weic2519b",
+  "esawebb_weic2602a#0",
+  "esawebb_weic2608a",
+  "esawebb_weic2608c#0",
+  "esawebb_weic2615c#0",
+  "esawebb_weic2619a",
+  "eso_eso1151c",
+  "eso_eso1229a",
+  "eso_eso1507d#0",
+  "eso_eso1547a",
+  "eso_eso1635c",
+  "eso_eso1701d#0",
+  "eso_eso1707b",
+  "eso_eso1708b",
+  "eso_eso1718b#0",
+  "eso_eso1726b#0",
+  "eso_eso1809b#0",
+  "eso_eso1814b#0",
+  "eso_eso2009c",
+  "eso_eso2015b#0",
+  "eso_eso2018b",
+  "eso_eso2105b",
+  "eso_eso2116a#2",
+  "eso_eso2117a",
+  "eso_eso2117b#0",
+  "eso_eso2314c#0",
+  "eso_eso2315a",
+  "eso_eso2402c#0",
+  "eso_eso2409b",
+  "eso_eso2502d#0",
+  "eso_eso2518b",
+  "eso_eso2606c#0",
+  "eso_esocast82c#0",
+  "eso_pao-vistamoonlit",
+  "eso_potw2401a#0",
+  "eso_potw2421a#0",
+  "eso_potw2512a#0",
+  "eso_potw2622a#0",
+  "eso_potw2643a#0",
+  "eso_timelapse_horalek_alma1",
+  "eso_uhd_bt_paranal_03",
+  "eso_uhd_photogr5_2014#0",
+  "svs_13237#0",
+  "svs_13672#0",
+  "svs_13710#0",
+  "svs_14477#0",
+  "svs_14649#0",
+  "svs_14835#8",
+  "svs_14967#0",
+  "svs_15000#0",
+  "svs_15023#0",
+  "svs_15080#0",
+  "svs_15091#0",
+  "svs_20367",
+  "svs_31173",
+  "svs_4877#0",
+  "svs_5366#1",
+  "svs_5423#0",
+  "svs_5519#0"
+ ],
+ "crops": {},
+ "exclude": {},
+ "ban_extra": [
+  "esawebb_final_JWST_spacesparks009#1",
+  "svs_5423#0"
+ ],
+ "sections": {
+  "darkflow_hook": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "flight to the edge of the observable universe",
+      "flying through galaxies at high speed"
+     ]
+    },
+    {
+     "at": "जिसने सबको हिला दिया",
+     "q": [
+      "a blinding flash of light in space",
+      "an exploding star"
+     ]
+    },
+    {
+     "at": "कि हमारे दिखने वाले",
+     "q": [
+      "the edge of the observable universe",
+      "the observable universe sphere of galaxies"
+     ]
+    },
+    {
+     "at": "कोई चीज़ galaxies को",
+     "q": [
+      "galaxy clusters streaming in one direction",
+      "galaxies flowing across the sky"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "In 2008, a NASA scientist made a claim that shook everyone"
+    },
+    {
+     "at": "कि हमारे दिखने वाले",
+     "text": "Something from beyond our visible universe"
+    },
+    {
+     "at": "कोई चीज़ galaxies को",
+     "text": "is pulling galaxies towards it"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "कि हमारे दिखने वाले",
+     "lines": [
+      {
+       "text": "SOMETHING BEYOND",
+       "at": "दिखने"
+      },
+      {
+       "text": "*OUR UNIVERSE*",
+       "at": "बाहर"
+      }
+     ]
+    }
+   ]
+  },
+  "darkflow_problem": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "astronomers studying sky data",
+      "radio telescopes under the night sky"
+     ]
+    },
+    {
+     "at": "कि सैकड़ों galaxy clusters",
+     "q": [
+      "galaxy clusters drifting through space",
+      "a massive galaxy cluster"
+     ]
+    },
+    {
+     "at": "जैसे नदी में",
+     "q": [
+      "a stream of galaxies sweeping past in one direction",
+      "galaxies flowing across the sky"
+     ]
+    },
+    {
+     "at": "लेकिन जितना दूर",
+     "q": [
+      "distant galaxies in a deep field",
+      "the deep field full of faint galaxies"
+     ]
+    },
+    {
+     "at": "उतनी दूर तक",
+     "q": [
+      "a vast empty supervoid between galaxies",
+      "deep dark space with faint stars"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Alexander Kashlinsky and his team saw hundreds of galaxy clusters"
+    },
+    {
+     "at": "जैसे नदी में",
+     "text": "flowing one way, like leaves on a river"
+    },
+    {
+     "at": "लेकिन जितना दूर",
+     "text": "But as far as we can see in that direction"
+    },
+    {
+     "at": "उतनी दूर तक",
+     "text": "there was nothing heavy enough"
+    }
+   ],
+   "sfx": []
+  },
+  "darkflow_twist": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "the edge of the observable universe",
+      "dark fog of distant galaxies fading"
+     ]
+    },
+    {
+     "at": "एक ऐसी जगह से",
+     "q": [
+      "darkness slowly covering a field of galaxies",
+      "unknown galaxies beyond the horizon"
+     ]
+    },
+    {
+     "at": "इसे नाम दिया गया",
+     "q": [
+      "galaxies receding faster and faster",
+      "galaxy clusters streaming in one direction"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "They said the pull was coming from beyond the edge of the observable universe"
+    },
+    {
+     "at": "एक ऐसी जगह से",
+     "text": "from a place whose light can never reach us"
+    },
+    {
+     "at": "इसे नाम दिया गया",
+     "text": "It was named Dark Flow"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "इसे नाम दिया गया",
+     "lines": [
+      {
+       "text": "*DARK FLOW*",
+       "at": "Dark"
+      }
+     ]
+    }
+   ]
+  },
+  "darkflow_end": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "the Planck satellite in space",
+      "ESA Planck space telescope"
+     ]
+    },
+    {
+     "at": "उसने क्या देखा",
+     "q": [
+      "the cosmic microwave background map",
+      "a map of the whole sky"
+     ]
+    },
+    {
+     "at": "ये जानने के लिए",
+     "q": [
+      "zooming out from the Milky Way into the universe",
+      "flying through galaxies"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Then in 2013, the Planck satellite checked it again with far better data"
+    },
+    {
+     "at": "उसने क्या देखा",
+     "text": "What did it see?"
+    },
+    {
+     "at": "ये जानने के लिए",
+     "text": "Watch the full video to find out"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "फिर दो हज़ार तेरह में",
+     "num": {
+      "template": "hero",
+      "value": "2013",
+      "unit": "planck checks again",
+      "land": "तेरह"
+     }
+    }
+   ]
+  }
+ }
+}

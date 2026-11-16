@@ -1,0 +1,346 @@
+{
+ "style": "v3",
+ "lead_in": 0.0,
+ "cards": {},
+ "count_total": 0,
+ "music": [],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "pin": {},
+ "ban": [
+  "esahubble_heic2202a#2",
+  "esahubble_heic2304a#2",
+  "esahubble_heic2603a#0",
+  "esawebb_final_JWST_spacesparks009#0",
+  "esawebb_potm2604c#0",
+  "esawebb_weic2218b#0",
+  "esawebb_weic2510b#0",
+  "esawebb_weic2517b#0",
+  "esawebb_weic2519b#0",
+  "esawebb_weic2602a#0",
+  "esawebb_weic2608c#0",
+  "esawebb_weic2615c#0",
+  "eso_eso1507d#0",
+  "eso_eso1701d#0",
+  "eso_eso1718b#0",
+  "eso_eso1726b#0",
+  "eso_eso1809b#0",
+  "eso_eso1814b#0",
+  "eso_eso2015b#0",
+  "eso_eso2116a#2",
+  "eso_eso2117b#0",
+  "eso_eso2314c#0",
+  "eso_eso2402c#0",
+  "eso_eso2502d#0",
+  "eso_eso2606c#0",
+  "eso_esocast82c#0",
+  "eso_potw2401a#0",
+  "eso_potw2421a#0",
+  "eso_potw2512a#0",
+  "eso_potw2622a#0",
+  "eso_potw2643a#0",
+  "eso_uhd_photogr5_2014#0",
+  "svs_13237#0",
+  "svs_13672#0",
+  "svs_13710#0",
+  "svs_14477#0",
+  "svs_14649#0",
+  "svs_14835#8",
+  "svs_14967#0",
+  "svs_15000#0",
+  "svs_15023#0",
+  "svs_15080#0",
+  "svs_15091#0",
+  "svs_4877#0",
+  "svs_5366#1",
+  "svs_5519#0"
+ ],
+ "crops": {},
+ "exclude": {},
+ "ban_extra": [
+  "esawebb_weic2519b#0"
+ ],
+ "sections": {
+  "hunter_hook": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a black hole drifting through a star field animation",
+      "a black hole bending the light of stars behind it"
+     ]
+    },
+    {
+     "at": "और उनमें से",
+     "q": [
+      "a dark empty region among countless stars",
+      "deep dark space with faint stars"
+     ]
+    },
+    {
+     "at": "न रोशनी",
+     "q": [
+      "a black hole swallowing light animation",
+      "an isolated black hole artist impression"
+     ]
+    },
+    {
+     "at": "बस अँधेरे में",
+     "q": [
+      "a black hole drifting alone through space",
+      "stars drifting in the dark"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Our galaxy has about 100 million black holes roaming through it"
+    },
+    {
+     "at": "और उनमें से",
+     "text": "and we can't see most of them"
+    },
+    {
+     "at": "न रोशनी",
+     "text": "No light, no sound, just drifting silently in the dark"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "दस करोड़",
+     "num": {
+      "template": "hero",
+      "value": "100,000,000",
+      "unit": "black holes",
+      "kicker": "in our galaxy",
+      "land": "करोड़"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "न रोशनी",
+     "lines": [
+      {
+       "text": "NO LIGHT",
+       "at": "रोशनी"
+      },
+      {
+       "text": "NO SOUND",
+       "at": "आवाज़"
+      },
+      {
+       "text": "*JUST DRIFTING*",
+       "at": "भटकते"
+      }
+     ]
+    }
+   ]
+  },
+  "hunter_problem": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "deep dark space with faint stars",
+      "a black hole hidden among stars"
+     ]
+    },
+    {
+     "at": "उसे ढूँढा",
+     "q": [
+      "astronomers telescope dome opening at night",
+      "an observatory telescope at night"
+     ]
+    },
+    {
+     "at": "Scientists भी",
+     "q": [
+      "the Hubble Space Telescope in orbit",
+      "a telescope pointing at the night sky"
+     ]
+    },
+    {
+     "at": "फिर दो हज़ार ग्यारह में",
+     "q": [
+      "zooming into a dense star field",
+      "the centre of the Milky Way star field"
+     ]
+    },
+    {
+     "at": "दूर का एक तारा",
+     "q": [
+      "a distant star suddenly brightening",
+      "a bright star flaring"
+     ]
+    },
+    {
+     "at": "लगभग दो सौ सत्तर",
+     "q": [
+      "a bright star with diffraction spikes",
+      "a glowing star in a star field"
+     ]
+    },
+    {
+     "at": "और फिर धीरे धीरे",
+     "q": [
+      "a star fading in a star field",
+      "stars twinkling in deep space"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "So how do you find something that gives off no light at all?"
+    },
+    {
+     "at": "Scientists भी",
+     "text": "Scientists wondered the same for years"
+    },
+    {
+     "at": "फिर दो हज़ार ग्यारह में",
+     "text": "Then in 2011, a distant star suddenly started to brighten"
+    },
+    {
+     "at": "लगभग दो सौ सत्तर",
+     "text": "for about 270 days, and then slowly went back to normal"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "लगभग दो सौ सत्तर",
+     "num": {
+      "template": "hero",
+      "value": "270",
+      "unit": "days",
+      "kicker": "the star brightened for",
+      "land": "सत्तर"
+     }
+    }
+   ]
+  },
+  "hunter_twist": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a single bright star in a star field",
+      "a star with diffraction spikes"
+     ]
+    },
+    {
+     "at": "उसके सामने से",
+     "q": [
+      "gravitational lens distorting background galaxies",
+      "a black hole bending the light of stars behind it"
+     ]
+    },
+    {
+     "at": "कुछ ऐसा",
+     "q": [
+      "an isolated black hole artist impression",
+      "a black hole drifting alone through space"
+     ]
+    },
+    {
+     "at": "लेकिन जिसका वज़न",
+     "q": [
+      "the Sun seen up close",
+      "the Sun's surface with flares"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Nothing had happened to the star"
+    },
+    {
+     "at": "उसके सामने से",
+     "text": "Something had passed in front of it"
+    },
+    {
+     "at": "कुछ ऐसा",
+     "text": "Something you can't see, but many times heavier than our Sun"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "उसके सामने से",
+     "lines": [
+      {
+       "text": "SOMETHING",
+       "at": "कुछ"
+      },
+      {
+       "text": "*PASSED IN FRONT*",
+       "at": "गुज़रा"
+      }
+     ]
+    }
+   ]
+  },
+  "hunter_end": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a black hole drifting through a star field animation",
+      "dark space with a black hole"
+     ]
+    },
+    {
+     "at": "और उसे पक्का",
+     "q": [
+      "the Hubble Space Telescope in orbit",
+      "Hubble telescope above Earth"
+     ]
+    },
+    {
+     "at": "पूरी कहानी",
+     "q": [
+      "zooming out from the Milky Way into the universe",
+      "flying through galaxies"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "What was it?"
+    },
+    {
+     "at": "और उसे पक्का",
+     "text": "And why did it take scientists six whole years to confirm it?"
+    },
+    {
+     "at": "पूरी कहानी",
+     "text": "The whole story is in the full video"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "पूरे छह साल",
+     "num": {
+      "template": "hero",
+      "value": "6",
+      "unit": "years",
+      "kicker": "to confirm it took",
+      "land": "छह"
+     }
+    }
+   ]
+  }
+ }
+}
