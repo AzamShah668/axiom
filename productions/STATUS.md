@@ -1,6 +1,6 @@
 # Where things stand (read this first in a new chat)
 
-Last updated 2026-11-09. Update this file and commit it at the end of every chat.
+Last updated 2026-11-16. Update this file and commit it at the end of every chat.
 
 ## How we work across chats
 - One chat per job: a script, a recording, an edit and render, Shorts, an upload. Long chats fill up; a new chat
@@ -27,6 +27,7 @@ Last updated 2026-11-09. Update this file and commit it at the end of every chat
 | 05 Voyager 1 | **public since 1 Nov 2026**: https://youtu.be/dhLf0_YjElc. Master on Drive `videos/05 - Voyager 1 (Hindi Documentary) 1080p - master/` | owner posts and pins `credits_full.txt` (API token can't comment) |
 | 05 Shorts: fix, lightday | lightday **public** (https://youtu.be/zvnLW2j18-E). fix not uploaded: needs re-rendering in a fresh container (work/ is not in git). Packages `productions/05-voyager/shorts/{fix,lightday}.md` | fix when the owner says |
 | 06 Fermi Paradox | **topic approved, script fixed, Devanagari written (9,554 chars, tts_check clean)** 2026-11-09 (`productions/06-fermi-paradox/script.txt`, `script.md` with the view-data table and fact-check). Topic picked from yt-dlp public view counts | name probe done 2026-11-09 (218 chars; Arecibo and Liu Cixin to LISTEN/respell). Owner kept the approved script and merged 5 points from his draft; **narration recorded 2026-11-09 without commas** (9,435 chars), then the owner asked for commas back (87-comma text restored, his opening edits kept, 9,521 chars): opening retaken with commas (696 chars, work/06-fermi-paradox/retake/). Job total 11,069. Voice test 2026-11-09: Taksh (6Iq2c772ZFrYvSuWijYS, Hindi library voice, added to the account) read the first 20 s (249 chars); job total 11,318. Waiting for the owner: voice choice, then retake ch1-ending with commas: `work/06-fermi-paradox/voice/narration.wav`, 12:21 at 1.0x, not on Drive yet (work/ is not in git). Arecibo respelt एरेसिबो. Next: owner listens, speech_check, then edit plan (stage 3), waiting for the OK to record (budget 10,100 incl. the 218 probe). ElevenLabs key re-saved 2026-11-09 (the old one was rejected); 18,925 / 131,000 used |
+| 08 Scariest Places | **in production 2026-11-15/16** (owner: full video by 16 Nov): script approved (flowing human style), Devanagari, Rudra narration 10:59 (9,073 chars + 422 probe), speech check clean, edit plan compiled (195 items, no intro); footage stage re-running after a fix (select_candidates --avoid did nothing on a fresh library: first pull was mostly earlier videos' clips) | assign, review, render, review, package, upload private |
 
 ## Standing changes (owner, 2026-11-15)
 - **No intro of any kind** from video 08: no channel intro, no title card, no gap after the opening; the video starts on its first sentence.
