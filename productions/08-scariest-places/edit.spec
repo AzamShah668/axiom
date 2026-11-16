@@ -208,7 +208,7 @@ C और दूसरे ब्रह्मांड | And the other-universe st
 V - @ galaxy clusters streaming in one direction | hundreds of galaxies moving across the sky
 L - @ ALEXANDER KASHLINSKY | astrophysicist · NASA Goddard · dark flow, 2008
 C - | Astronomer Alexander Kashlinsky's team measured the motion of huge galaxy clusters: hundreds seemed to flow one way
-V ये बिल्कुल वैसा था @ a river current carrying leaves | leaves floating down a stream
+V ये बिल्कुल वैसा था @ a stream of galaxies sweeping past in one direction | galaxies flowing across the sky
 K ये बिल्कुल वैसा था @ *DARK FLOW* [Dark]
 C ये बिल्कुल वैसा था | like leaves drifting down a river; they called it Dark Flow
 V उनका idea ये था @ the edge of the observable universe | beyond the farthest galaxies into darkness

@@ -98,7 +98,45 @@
   "faint distant galaxies in dark space"
  ],
  "pin": {},
- "ban": [],
+ "ban": [
+  "esahubble_heic2202a#2",
+  "esahubble_heic2603a#0",
+  "esawebb_weic2218b#0",
+  "esawebb_weic2510b#0",
+  "esawebb_weic2517b#0",
+  "esawebb_weic2602a#0",
+  "esawebb_weic2615c#0",
+  "eso_eso1507d#0",
+  "eso_eso1701d#0",
+  "eso_eso1718b#0",
+  "eso_eso1809b#0",
+  "eso_eso1814b#0",
+  "eso_eso2015b#0",
+  "eso_eso2117b#0",
+  "eso_eso2314c#0",
+  "eso_eso2402c#0",
+  "eso_eso2502d#0",
+  "eso_eso2606c#0",
+  "eso_esocast82c#0",
+  "eso_potw2421a#0",
+  "eso_potw2622a#0",
+  "eso_potw2643a#0",
+  "eso_uhd_photogr5_2014#0",
+  "svs_13237#0",
+  "svs_13672#0",
+  "svs_13710#0",
+  "svs_14477#0",
+  "svs_14649#0",
+  "svs_14835#8",
+  "svs_14967#0",
+  "svs_15000#0",
+  "svs_15023#0",
+  "svs_15080#0",
+  "svs_15091#0",
+  "svs_4877#0",
+  "svs_5366#1",
+  "svs_5519#0"
+ ],
  "crops": {},
  "exclude": {},
  "sections": {
@@ -1373,8 +1411,8 @@
     {
      "at": "ये बिल्कुल वैसा था",
      "q": [
-      "a river current carrying leaves",
-      "leaves floating down a stream"
+      "a stream of galaxies sweeping past in one direction",
+      "galaxies flowing across the sky"
      ]
     },
     {
