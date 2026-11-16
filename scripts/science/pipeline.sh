@@ -117,6 +117,10 @@ stage() {
         --review "$WORK/review_assign" --avoid "$ROOT/productions" --local-only ${keep[@]+"${keep[@]}"} ;;
     render)  # edit.json "style": "v3" -> render_v3.py (docs/style-guide.md), else the v2 renderer
       mkdir -p "$WORK/out"
+      # build the CMB sky texture (cmb_* graphics) before the render forks its workers: made inside them, scipy
+      # deadlocked after the fork and the render hung (video 08). Cached in $MEDIA/assets/cmb_sky.png.
+      grep -q '"cmb_' "$P/edit.json" && (cd "$ROOT/scripts/video" && "$PY" -c \
+        "import sys, render_video as rv; rv.G['assets'] = sys.argv[1]; rv.cmb_tex()" "$MEDIA/assets")
       style=$("$PY" -c "import json,sys; print(json.load(open(sys.argv[1])).get('style', 'v2'))" "$P/edit.json")
       "$PY" "$ROOT/scripts/video/render_${style}.py" "$WORK/cutlist.json" "$WORK/voice/narration.wav" "$P/edit.json" "$TL" \
         "$MEDIA/music" "$MEDIA/fonts" "$MEDIA/assets" "$MASTER" --workers "$WORKERS"
