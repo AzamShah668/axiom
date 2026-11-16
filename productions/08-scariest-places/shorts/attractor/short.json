@@ -1,2 +1,9 @@
-{"title": "SOMETHING IS PULLING US / AT *600 KM EVERY SECOND*", "music": "Hitman.mp3", "music_start": 52.0, "music_gain": 3.0,
- "suspense_after": "attractor_problem", "suspense_text": "BUT...", "cta_at": "पूरी", "stills": {}, "speed": 1.2}
+{
+ "title": "SOMETHING IS PULLING US / AT *600 KM EVERY SECOND*",
+ "music": "Hitman.mp3",
+ "music_start": 52.0,
+ "music_gain": 3.0,
+ "cta_at": "पूरी",
+ "stills": {},
+ "speed": 1.2
+}

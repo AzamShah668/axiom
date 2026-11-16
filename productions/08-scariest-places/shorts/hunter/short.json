@@ -1,2 +1,9 @@
-{"title": "100 MILLION BLACK HOLES / *YOU CAN'T SEE*", "music": "Darkest_Child.mp3", "music_start": 64.0, "music_gain": 4.0,
- "suspense_after": "hunter_problem", "suspense_text": "WHY?", "cta_at": "पूरी", "stills": {}, "speed": 1.2}
+{
+ "title": "100 MILLION BLACK HOLES / *YOU CAN'T SEE*",
+ "music": "Darkest_Child.mp3",
+ "music_start": 64.0,
+ "music_gain": 4.0,
+ "cta_at": "पूरी",
+ "stills": {},
+ "speed": 1.2
+}
