@@ -71,7 +71,7 @@ C कहा जाता है | It's said it could wipe a credit card from hal
 V उस रात उस तारे @ a neutron star crust cracking and flaring | a starquake on a neutron star animation
 C उस रात उस तारे | That night, a starquake struck the star
 V और एक second के @ a giant flare erupting from a neutron star | an explosive flash from a magnetar {flash}
-N और एक second के @ hero | value=100,000 | unit=years of the Sun's energy | kicker=in 0.1 seconds | land=लाख | over
+N जितनी हमारा सूरज @ hero | value=100,000 | unit=years of the Sun's energy | kicker=in 0.1 seconds | land=लाख | over
 C और एक second के | In a tenth of a second it released as much energy as our Sun does in 100,000 years
 V इतनी लंबी दूरी @ Earth's atmosphere glowing from space | aurora seen from orbit
 C इतनी लंबी दूरी | Even after crossing that distance it shook Earth, and that is what stunned scientists
