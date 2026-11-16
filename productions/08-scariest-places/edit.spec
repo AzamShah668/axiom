@@ -184,10 +184,10 @@ C लेकिन दो हज़ार पंद्रह | But in 2015 a far 
 G - @ recombination
 C - | About 380,000 years after the Big Bang, the universe cooled enough for light to travel freely
 V वो रोशनी आज भी @ the cosmic microwave background all-sky map | Planck map of the Big Bang afterglow
-G वो रोशनी आज भी @ cmb_sky
+G वो रोशनी आज भी @ cmb_map
 C वो रोशनी आज भी | That light still arrives from every direction as microwaves, almost the same temperature everywhere
 V लेकिन दो हज़ार चार में @ a cold region on the cosmic microwave background | WMAP sky map
-G लेकिन दो हज़ार चार में @ cmb_patch
+G लेकिन दो हज़ार चार में @ cmb_zoom
 K उसका नाम पड़ा @ THE *COLD SPOT* [Cold]
 C लेकिन दो हज़ार चार में | But in 2004 a patch of sky turned up that was too cold to be chance: the Cold Spot
 V दो हज़ार पंद्रह में @ a vast empty supervoid between galaxies | flight through an empty region of space {hold}
