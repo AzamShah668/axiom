@@ -16,8 +16,10 @@ Files in `productions/NN-slug/`:
 Build and check:
 ```bash
 scripts/science/pipeline.sh productions/NN-slug edit
-# make_edit.py spec+base -> edit.json, then assign_shots.py --plan-only: every trigger must exist in the
-# narration; prints items, overlays, breaths, cuts/min, SFX/min and scene lengths
+# make_edit.py spec+base -> edit.json (+ music energy warnings), then assign_shots.py --plan-only: every trigger
+# must exist in the narration; prints items, overlays, breaths, cuts/min, SFX/min and scene lengths; then
+# pace_lint.py: a per-minute table and warnings (below). Nothing fails the stage.
+python3 scripts/video/pace_lint.py productions/NN-slug/cutlist.json   # the same lint on a finished cut list
 ```
 
 ## edit.spec syntax
@@ -79,12 +81,25 @@ From video 05 (owner, 2026-10-27; `productions/README.md`):
    - Use `over` when the footage itself is the subject (Sgr A* animation + "4,000,000 SUNS"); otherwise the
      card gets its own dimmed beat with `q=`.
    - Values are written with commas the way they should read (`4,000,000`, `99.7`).
-5. **M moments: 3-5 per video**, at the end of the hook, at the cold-open reveal and at one or two big
+   - **`hero` for at most half the cards** (08 had 17/17 hero; the lint warns). Pick the template from the claim:
+
+     | The claim | Template | Example |
+     |---|---|---|
+     | a ratio, "N times bigger" | `scale` (`from=1`, `log` for huge) | quasar ×1,000 a galaxy's light |
+     | A = B | `equation` (`a=`, `a_label=`, `b=`, `b_label=`, `op=`) | 0.1 s = 100,000 years of the Sun |
+     | a distance, speed or journey | `route` over footage (`left=`, `right=`) / `line` | 600 km/s: Earth to the Moon in 11 min |
+     | a share, "60 of thousands" | `progress` / `gauge` (`max=`) | 10% of all magnetar flares |
+     | a spot in the shot | `callout` over footage (`x=`, `y=`, `label=`) | the cold spot on `cmb_map`, SGR 1806-20 |
+     | a bare record number | `hero` | 100,000,000 black holes |
+5. **Opening teasers.** When the script previews 2-3 later chapters in the opening, give each teaser line a
+   `V` beat cut into 2 s scenes and an `over` number card, so the opening shows the whole ride in quick hits:
+   `V <teaser trigger> @ <its strongest shot> {2s}` + `N <number word> @ scale|route|hero | value=.. | land=.. | over`.
+6. **M moments: 3-5 per video**, at the end of the hook, at the cold-open reveal and at one or two big
    reveals in the facts.
    - The breath is spliced into the pause before the trigger.
    - `drop` makes it a designed silence.
    - A `V` beat on the same trigger makes the cut land on the reveal word.
-6. **G diagrams** (`render_video.gfx`), for explanations that footage can't show:
+7. **G diagrams** (`render_video.gfx`), for explanations that footage can't show:
    - `flyapart`, `year_counter`, `orbits`, `rotation_curve`
    - `mw_spiral`, `halo_expand`, `halo_full`, `spectrum`, `spacetime`
    - `collision`, `balance`, `pie`, `cosmic_web`, `cosmic_web_glow`, `galactic_orbit`, `wind`
@@ -92,14 +107,14 @@ From video 05 (owner, 2026-10-27; `productions/README.md`):
    - `bh_shrink`, `dark_star`, `hidden_companion`, …
 
    Keep each under ~10 s. Prefer an `N` card when the point is a number.
-7. **L lower thirds** for every person the first time the story names them ("KARL SCHWARZSCHILD | German
+8. **L lower thirds** for every person the first time the story names them ("KARL SCHWARZSCHILD | German
    astronomer · 1873-1916"). **callout / route / hud** over footage when the shot shows the thing:
    - a ring on Sgr A*
    - a line from Earth to Cygnus X-1
    - the Webb view
 
    Set `x`/`y` from the review sheet frame. Charts only with published data.
-8. **T** only when the rule (cut, dip in long pauses, flare on moments) is wrong for a spot, e.g. a whip for
+9. **T** only when the rule (cut, dip in long pauses, flare on moments) is wrong for a spot, e.g. a whip for
    a jump in scale.
 
 ## edit.base.json (v3)
@@ -115,6 +130,12 @@ From video 05 (owner, 2026-10-27; `productions/README.md`):
 ```
 - Music: about one cue per act (2 facts), from `$MEDIA/music` (`fetch_media.sh <dir> "<Track Name>"` adds
   Kevin MacLeod tracks). Pick a pulsing track for the hook and darker beds for the story.
+- **Music energy.** `scripts/video/music_energy.json` tags each track `low` (drones: Long Note One-Four, Echoes
+  of Time, Ossuary 5/6, Lost Frontier), `mid` (Interloper, Lightless Dawn, Phantasm, Darkest Child, Unholy
+  Knight) or `high` (Dark Fog, Hitman, Ice Flow, Volatile Reaction). `make_edit.py` warns on 3 `low` cues in a
+  row and when no `mid`/`high` cue plays after the midpoint: 08 ran five drones from 5:07 to the end, where
+  retention sags. Keep one `mid`/`high` cue in the second half and for the last chapter. New track: tag it with
+  `python3 scripts/video/pace_lint.py --measure-music $MEDIA/music --write`.
 - Grade preset: by the topic's colour world (style guide §7).
 - **Chapter cards without a number** (videos titled as a question, e.g. 04): `"cards": {"ch1": ["", "THE UNIVERSE
   HAS A *BIRTHDAY*"]}`. A non-numeric first entry (empty, or a kicker such as "PART ONE") gives a title card with
@@ -133,10 +154,22 @@ observatory, simulation, zoom.
 | Footage scenes | about 220-250 (a different shot each) |
 | Cuts per minute | 15-19 |
 | Scene length | median about 3 s, p10-p90 2-5.5 s |
-| SFX per minute | 18-25 |
+| SFX per minute | 18-25 (style guide); the pace lint warns outside 8-15, pending the owner (plan §4.12) |
 | Breaths | 3-5 |
 | Headlines | 12-25 |
 | Key lines | about 30-40 |
 | Number cards | at least 2 per fact that has numbers |
+
+## Pace lint (`scripts/video/pace_lint.py`, run by the edit stage)
+A visual event is a headline, key line, number or name card, recording quote, chapter card, diagram, own
+graphic, photo, flash montage, or a whip/flash/dip/flare transition. It prints a per-minute table (cuts,
+overlays by kind, SFX) and warns on:
+- **a gap of 20 s with no new event** (`--window`); 30 s (`--gap`) is marked, and fails only with `--strict`.
+  Fill it with what the narration offers there: a K headline on the claim, a `big` C on a name or year, an N
+  card, an L for a person, a G diagram or a T whip on a jump in scale. 08 had 30 s+ gaps at 5:41, 6:58, 9:19.
+- `hero` over half the number cards; SFX outside 8-15/min;
+- fewer than 15 key lines or 12 headlines per 11 minutes (scaled to the length);
+- the last third holding under 25% of the overlays (keep the text going to the end).
+`--edit edit.json --timeline timeline.json` lints a plan before any footage exists (it runs `render_v3.plan()`).
 
 Production 01/02 plans are v2 (no `style`): `render_v2.py`, a running subtitle, 2.5 s scenes.

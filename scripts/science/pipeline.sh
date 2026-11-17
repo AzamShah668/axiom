@@ -8,7 +8,8 @@
 #   probe      read the names/terms never heard yet alone (a few characters) -> $WORK/voice_probe/probe.mp3
 #   narration  ElevenLabs render of tts/narration.hi.md -> $WORK/voice (narration.wav, timeline.json)
 #              (tts_check.py first: refuses to record while a line is flagged; speech_check.py after)
-#   edit       edit.spec + edit.base.json -> edit.json, then check every trigger against the narration
+#   edit       edit.spec + edit.base.json -> edit.json, then check every trigger against the narration, then
+#              the pace lint (scripts/video/pace_lint.py: dead zones, number-card mix, SFX rate, music curve; warns only)
 #   footage    4K search -> CLIP pick -> 1080p proxies -> shots + QC (text, black, frozen, people)
 #              (shared library $LIB, grows over time)
 #   topup      more 4K candidates for items that matched weakly (score < 0.37) -> fetch -> shots
@@ -87,9 +88,11 @@ stage() {
         || echo "speech check: listen to each FLAG above (the English transcript can drop a place name)" ;;
     probe)  # new names and English terms read alone first: a few characters instead of a re-recorded section
       "$PY" "$ROOT/scripts/elevenlabs/probe_words.py" "$P/tts/narration.hi.md" ${PROBE_FLAGS:-} ;;
-    edit)
-      "$PY" "$ROOT/scripts/video/make_edit.py" "$P/edit.spec" "$P/edit.base.json" "$P/edit.json"
-      "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" --plan-only ;;
+    edit)  # make_edit warns on a flat music curve; pace_lint (warnings only) on dead zones and a thin last third
+      "$PY" "$ROOT/scripts/video/make_edit.py" "$P/edit.spec" "$P/edit.base.json" "$P/edit.json" --timeline "$TL"
+      "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" --plan-only
+      "$PY" "$ROOT/scripts/video/pace_lint.py" --edit "$P/edit.json" --timeline "$TL" --no-music \
+        || echo "pace lint failed (see above); the edit itself is fine" ;;
     footage)
       "$PY" "$ROOT/scripts/footage/search_sources.py" "$P/footage/terms.txt" "$LIB/candidates.json"
       "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks.json" \
