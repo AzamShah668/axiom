@@ -4,7 +4,9 @@ Credentials live in config/.env (gitignored) or in environment variables of the 
   YT_CLIENT_ID, YT_CLIENT_SECRET   OAuth client of type "Desktop app" (the client_secret_*.json values)
   YT_REFRESH_TOKEN                 refresh token for the channel's Google account
 
-  python upload_youtube.py auth-url                         # print the consent link (sign in with the CHANNEL's account)
+  python upload_youtube.py auth-url [--analytics]           # print the consent link (sign in with the CHANNEL's account)
+                                                            # --analytics also asks for read-only YouTube Analytics
+                                                            # (scripts/youtube/analytics.py); tokens without it keep working
   python upload_youtube.py exchange "<code or full redirect URL>"   # store YT_REFRESH_TOKEN in config/.env
   python upload_youtube.py whoami                           # which channel the token belongs to
   python upload_youtube.py channel [--description productions/channel/description.txt] [--keywords "a b \"c d\""]
@@ -12,12 +14,14 @@ Credentials live in config/.env (gitignored) or in environment variables of the 
   python upload_youtube.py publish <video_id> [--comment credits_full.txt]   # private -> public (+ credits comment)
   python upload_youtube.py delete <video_id>
   python upload_youtube.py upload <video.mp4> <youtube.md> [--thumbnail t.jpg] [--comment credits_full.txt]
-                                  [--captions captions.en.srt] [--privacy public|unlisted|private]
+                                  [--captions captions.en.srt] [--privacy private|unlisted|public]  (default private)
                                   [--publish-at 2026-10-16T12:00:00Z]
   python upload_youtube.py captions <video_id> <captions.en.srt> [--language en] [--name English]
                                                             # add the English CC track (v3 style)
 
-youtube.md is the production's package file: **Title** line, **Description** ``` block, **Tags** line.
+youtube.md is the production's package file: **Title** line, **Description** ``` block, **Tags** line. An optional
+**Titles (A/B)** block (one title per line, "T1: ..." or "- ...") lists the A/B-test titles; with no **Title** line the
+first of them is uploaded, and the others are added by hand in Studio (Test & Compare has no API).
 Note: projects that have not passed YouTube's API audit get uploads locked to private; custom thumbnails need
 a verified channel. The pinned comment is posted but YouTube's API cannot pin it - pin it in YouTube Studio.
 """
@@ -27,6 +31,7 @@ import requests
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 ENV = os.path.join(ROOT, "config", ".env")
 SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.force-ssl"
+ANALYTICS_SCOPE = "https://www.googleapis.com/auth/yt-analytics.readonly"  # only with auth-url --analytics
 REDIRECT = "http://localhost"
 
 
@@ -57,9 +62,33 @@ def access_token(e):
     return r.json()["access_token"]
 
 
+def parse_titles(s):
+    """The optional **Titles (A/B)** block: the non-empty lines after it, up to the next blank line or ** heading.
+    Leading "T1:", "A:", "1.", "-" or "*" markers and surrounding backticks are dropped."""
+    m = re.search(r"\*\*Titles \(A/B\)\*\*[^\n]*\n((?:[ \t]*\S.*\n?)+)", s)
+    if not m:
+        return []
+    out = []
+    for ln in m.group(1).splitlines():
+        ln = ln.strip()
+        if ln.startswith("**") or ln.startswith("```"):
+            break
+        ln = re.sub(r"^(?:[-*]\s+|(?:T?\d|[A-C])\s*[:.)]\s*)", "", ln).strip().strip("`").strip()
+        if ln:
+            out.append(ln)
+    return out
+
+
 def parse_package(path):
     s = open(path, encoding="utf-8").read()
-    title = re.search(r"\*\*Title\*\*\s*\n(.+)", s).group(1).strip()
+    m = re.search(r"\*\*Title\*\*\s*\n(.+)", s)
+    ab = parse_titles(s)
+    if not (m or ab):
+        raise SystemExit("youtube.md has no **Title** line and no **Titles (A/B)** block")
+    title = m.group(1).strip() if m else ab[0]
+    for t in ab:
+        if len(t) > 100:
+            raise SystemExit(f"A/B title is {len(t)} chars (YouTube max 100): {t}")
     desc = re.search(r"\*\*Description\*\*\s*\n```\n(.*?)\n```", s, re.S).group(1).strip()
     tags = [t.strip() for t in re.search(r"\*\*Tags\*\*\s*\n(.+)", s).group(1).split(",") if t.strip()]
     if len(title) > 100:
@@ -73,6 +102,7 @@ def parse_package(path):
 
 def upload(a, e):
     title, desc, tags = parse_package(a.package)
+    others = [t for t in parse_titles(open(a.package, encoding="utf-8").read()) if t != title]
     tok = access_token(e)
     status = {"privacyStatus": a.privacy, "selfDeclaredMadeForKids": False, "embeddable": True}
     if a.publish_at:
@@ -115,6 +145,8 @@ def upload(a, e):
     vid = video["id"]
     print(f"video: https://youtu.be/{vid}  status: {video['status'].get('privacyStatus')} "
           f"upload: {video['status'].get('uploadStatus')}")
+    if others:
+        print("A/B titles to add in Studio (Test & Compare, at publish):", *others, sep="\n  ")
     if a.thumbnail:
         t = requests.post(f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={vid}",
                           headers={"Authorization": f"Bearer {tok}", "Content-Type": "image/jpeg"},
@@ -181,7 +213,9 @@ def channel(a, e):
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
-    sub.add_parser("auth-url")
+    au = sub.add_parser("auth-url")
+    au.add_argument("--analytics", action="store_true",
+                    help="also request yt-analytics.readonly (for analytics.py); then run exchange as usual")
     ex = sub.add_parser("exchange")
     ex.add_argument("code")
     sub.add_parser("whoami")
@@ -199,7 +233,8 @@ def main():
     up.add_argument("--thumbnail", default="")
     up.add_argument("--comment", default="")
     up.add_argument("--captions", default="", help="English caption track (.srt) to add after the upload")
-    up.add_argument("--privacy", default="public", choices=["public", "unlisted", "private"])
+    up.add_argument("--privacy", default="private", choices=["private", "unlisted", "public"],
+                    help="default private: the owner publishes (publish <video_id>)")
     up.add_argument("--publish-at", default="")
     cc = sub.add_parser("captions")
     cc.add_argument("video_id")
@@ -211,7 +246,8 @@ def main():
     if a.cmd == "auth-url":
         print("https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode({
             "client_id": e["YT_CLIENT_ID"], "redirect_uri": REDIRECT, "response_type": "code",
-            "scope": SCOPES, "access_type": "offline", "prompt": "consent"}))
+            "scope": SCOPES + (" " + ANALYTICS_SCOPE if a.analytics else ""),
+            "access_type": "offline", "prompt": "consent"}))
     elif a.cmd == "exchange":
         code = a.code
         if code.startswith("http"):
