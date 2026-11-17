@@ -7,9 +7,19 @@ short.json (next to the Short's edit.spec):
   {"title": "100 MILLION BLACK HOLES / *YOU CAN'T SEE*",   top title (English, *gold*), on screen until the end card
    "music": "Darkest_Child.mp3", "music_start": 32.0, "music_gain": 4.0,
    "suspense_after": "hunter_problem", "suspense_text": "BUT...",   a designed silence (freeze, heartbeat, text)
-   "cta_at": "पूरी कहानी",            the end card starts on this word of the last section ("WATCH THE FULL VIDEO", arrow)
+   "cta_at": "पूरी कहानी",            the end card starts on this word of the last section ("WATCH THE FULL VIDEO", arrow);
+                                      "पूरी#2" = its second occurrence
    "stills": {"darkflow_end/0": "photos/Planck_sat.jpg"},   items shown as a moving still (media/assets/...)
-   "speed": 1.2}
+   "speed": 1.1}                      voice speed (default 1.1, the owner's rule for these Shorts)
+ Optional keys (2026-11 plan, WP4; without them a Short renders exactly as before):
+   "end_hold": 2.4       seconds of end card after the last word (recommended 0.7: no dead tail)
+   "loop": true          the ending loops into the hook: the bell rings on the end card's first frame, not on the seam
+   "hook_number": true   the first section's number card counts from frame 0 and lands on its word; no caption before
+   "hook_cut": true      item 0 longer than 1.8 s: a real cut to the next item's shot at <= 1.5 s (not a jump zoom)
+   "safe_zone": true     all text inside the Shorts safe area x 48-888, y 288-1248 (captions at 492,1170; title,
+                         numbers and headlines centred at x 500); the end-card arrow at (300, 1330), at the Related pill
+   "cta_sub": "DARK FLOW · CHAPTER 8"   a silver line above WATCH THE FULL VIDEO (where in the full video)
+   "key_scale": 1.2, "key_words": ["crore", "black"]   these caption words and numeric captions drawn larger
 
 Picture: every item of the plan (assign_shots.py over the Short's own edit.spec) fetched again from its 4K source as a
 9:16 window around the subject (render_short.vclip), with a push-in or pull-out and a zoom punch on every cut; items
@@ -17,9 +27,11 @@ longer than 2.7 s get a jump-zoom in the middle (a new frame every 2-3 s). Cuts 
 Transitions: punch on every cut, a flash every third cut, a glitch at each new section, a light leak sweep.
 Grade: teal-orange curve, vignette, grain. Text: the title on top, one burned-in Hinglish caption word at a time
 (gold, popping), headlines that slam in (K lines), count-up numbers (N lines), the suspense text, the end card, a
-progress bar. Sound: the voice at 1.2x (rubberband, pitch kept), a beat-driven Kevin MacLeod bed that drops out for
+progress bar. Sound: the voice at 1.1x (rubberband, pitch kept), a beat-driven Kevin MacLeod bed that drops out for
 the suspense, the owner's five SFX (bass_impact on the hook and slams, swish_big on glitches, camera_flash on flashes,
 typing on the title, bell on the end card) plus whooshes on cuts and a riser into the twist.
+Writes <out>.plan.json with the items, total, cta0, tail (s after cta0), first_cut (first new shot) and text_boxes (the union of
+every drawn text's ink box per kind, to check the safe zone).
 """
 import argparse, json, math, os, re, subprocess, sys, tempfile
 from concurrent.futures import ThreadPoolExecutor
@@ -35,6 +47,7 @@ import render_v3 as r3  # noqa: E402
 W, H, FPS, SR = 1080, 1920, 30, 44100
 SW, SH = 1188, 2112          # fetched footage: 10% larger than the frame, room for camera moves
 GAP, SUS, END_HOLD = 0.12, 1.35, 2.4
+SAFE = (48, 288, 888, 1248)  # Shorts safe area (x0, y0, x1, y1): clear of the title/search icons, buttons and caption
 
 
 # ------------------------------------------------------------------ helpers
@@ -95,7 +108,7 @@ def fmt_value(v, spec):
 class Clock:
     """Narration time (1.0x, per section) -> Short time (speed x, sections joined with short gaps)."""
     def __init__(self, tl, cfg, voice_wav, work):
-        self.k = cfg.get("speed", 1.2)
+        self.k = cfg.get("speed", 1.1)
         self.secs = tl["sections"]
         v = r3._load(voice_wav, 1)
         parts, self.out0, self.out1, cur = [], {}, {}, 0.0
@@ -112,7 +125,7 @@ class Clock:
             parts.append((cur, y))
             cur += len(y) / SR
             last = i == len(self.secs) - 1
-            cur += END_HOLD if last else (SUS if s["id"] == cfg.get("suspense_after") else GAP)
+            cur += cfg.get("end_hold", END_HOLD) if last else (SUS if s["id"] == cfg.get("suspense_after") else GAP)
         self.total = cur
         self.voice = np.zeros(int(cur * SR) + SR)
         for t, y in parts:
@@ -146,10 +159,15 @@ def caption_words(path, tl, clock):
 
 
 def word_time(tl, clock, sec_id, word):
+    """Short time of `word` in a section; "word#2" = its second occurrence."""
+    word, _, nth = word.partition("#")
+    nth = int(nth or 1)
     s = next(x for x in tl["sections"] if x["id"] == sec_id)
     for t, w in rs.spoken_words(s["chars"], s["char_start"]):
         if w.strip("।,?!.") == word or w.startswith(word):
-            return clock(t, sec_id)
+            nth -= 1
+            if nth == 0:
+                return clock(t, sec_id)
     raise SystemExit(f"cta_at: '{word}' not spoken in {sec_id}")
 
 
@@ -172,6 +190,10 @@ def build(P, tl, clock, cfg, beat_t, cap_words, cta0):
             if abs(b - a) <= 0.12:
                 a = float(b)
         starts.append(a)
+    if cfg.get("hook_cut") and len(items) > 1 and items[1]["sec"] == items[0]["sec"] and starts[1] - starts[0] > 1.8:
+        # a real cut by 1.5 s: the next item's shot comes in early (on a beat in 1.0-1.5 s when there is one)
+        near = [float(b) for b in beat_t if 1.0 <= b <= 1.5]
+        starts[1] = min(near, key=lambda b: abs(b - 1.4)) if near else 1.4
     sus = None
     if cfg.get("suspense_after"):
         sid = cfg["suspense_after"]
@@ -192,12 +214,20 @@ def build(P, tl, clock, cfg, beat_t, cap_words, cta0):
         it["trans"] = "none" if i == 0 else "glitch" if it["first_of_sec"] else "flash" if i % 3 == 2 else "punch"
     # overlays on the Short's clock
     heads, nums = [], []
+    first, hooked = tl["sections"][0], False
     for o in P["ovl"]:
         if o["kind"] == "headline":
             ls = [(clock(x["t"]),) + words_of(x["text"]) for x in o["lines"]]
             heads.append({"lines": ls, "t0": ls[0][0], "t1": min(clock(o["t1"]), ls[-1][0] + 1.8)})
         elif o["kind"] == "num":
             n = o["num"]
+            if cfg.get("hook_number") and not hooked and first["start"] <= o["t0"] < first["end"]:
+                # the hook's number: up and counting from frame 0, landing on its word (land_t is s into the card)
+                hooked = True
+                land = max(0.35, clock(o["t0"] + n["land_t"], first["id"]))
+                nums.append({"t0": 0.0, "land": land, "t1": land + 1.3, "value": n["value"], "hook": True,
+                             "unit": n.get("unit", ""), "kicker": n.get("kicker", "")})
+                continue
             t0, land = clock(o["t0"]), clock(n["land_t"])
             nums.append({"t0": t0, "land": max(land, t0 + 0.5), "t1": max(land, t0 + 0.5) + 1.3, "value": n["value"],
                          "unit": n.get("unit", ""), "kicker": n.get("kicker", "")})
@@ -337,11 +367,21 @@ def paste(f, lay, cx, cy, op=1.0, scale=1.0):
 # ------------------------------------------------------------------ text
 class Text:
     def __init__(self, cfg, cap_words, heads, nums):
-        self.cache = {}
+        self.cache, self.ink, self.boxes = {}, {}, {}
         self.cfg = cfg
+        self.safe = bool(cfg.get("safe_zone"))
+        self.cx = 500 if self.safe else W / 2          # centre of titles, numbers, headlines and the end card
+        self.wide = 860 if self.safe else None          # their fit width (None: today's W - 70/80)
         self.title = self.title_layer(cfg["title"])
+        self.title_y = 285
+        if self.safe:  # y 330, lowered just enough for the title's top to clear the safe area
+            iy0 = self.ink_box(self.title)[1]
+            self.title_y = max(330, SAFE[1] + 4 + self.title.shape[0] / 2 - iy0)
         self.caps = cap_words
         self.heads, self.nums = heads, nums
+        self.cap_from = max([n["land"] for n in nums if n.get("hook")], default=0.0)  # no caption before the hook lands
+        self.key_scale = float(cfg.get("key_scale", 1.0))
+        self.key_words = {w.upper().strip("?!.,") for w in cfg.get("key_words", [])}
         self.arrow = self.arrow_layer()
         self.band = (1 - 0.55 * np.clip(1 - np.arange(520) / 520, 0, 1) ** 1.5)[:, None, None].astype(np.float32)
 
@@ -349,6 +389,38 @@ class Text:
         if key not in self.cache:
             self.cache[key] = fn()
         return self.cache[key]
+
+    def fitw(self, lay, default):
+        return fit(lay, self.wide or default)
+
+    def ink_box(self, lay):
+        """Bounding box (x0, y0, x1, y1) of the layer's visible ink, in layer pixels."""
+        k = id(lay)
+        if k not in self.ink:
+            ys, xs = np.where(lay[..., 3] > 40)
+            self.ink[k] = (lay, (xs.min(), ys.min(), xs.max() + 1, ys.max() + 1) if len(xs) else (0, 0, 1, 1))
+        return self.ink[k][1]
+
+    def put(self, f, lay, kind, cx, cy, op=1.0, scale=1.0):
+        """paste() that records the ink box per kind and, with safe_zone, caps the scale so the ink stays inside SAFE."""
+        if op <= 0.01 or scale <= 0.01:
+            return
+        x0, y0, x1, y1 = self.ink_box(lay)
+        h, w = lay.shape[:2]
+        if self.safe and kind != "arrow":
+            lim = [scale]  # ink reaches cx - s * (w/2 - x0) ... cx + s * (x1 - w/2), the same in y
+            for d, room in ((w / 2 - x0, cx - SAFE[0]), (x1 - w / 2, SAFE[2] - cx),
+                            (h / 2 - y0, cy - SAFE[1]), (y1 - h / 2, SAFE[3] - cy)):
+                if d > 0:
+                    lim.append(max(0.02, room / d))
+            scale = min(lim)
+        paste(f, lay, cx, cy, op, scale)
+        sw, sh = (max(1, int(w * scale)), max(1, int(h * scale))) if abs(scale - 1) > 1e-3 else (w, h)  # as paste() does
+        bx0, by0 = int(cx - sw / 2), int(cy - sh / 2)
+        k = sw / w
+        b = (bx0 + x0 * k, by0 + y0 * k, bx0 + x1 * k, by0 + y1 * k)
+        o = self.boxes.get(kind)
+        self.boxes[kind] = b if o is None else (min(o[0], b[0]), min(o[1], b[1]), max(o[2], b[2]), max(o[3], b[3]))
 
     def title_layer(self, text):
         lines = [[words_of(w) for w in re.findall(r"\*[^*]+\*|[^*\s][^*]*?(?=\s*\*|$)", ln.strip())] for ln in text.split(" / ")]
@@ -377,7 +449,7 @@ class Text:
             sub[..., :3] = (sub[..., :3] * (1 - a) + l_[..., :3] * a).astype(np.uint8)
             sub[..., 3] = np.maximum(sub[..., 3], l_[..., 3])
             y += l_.shape[0] - 40
-        s = fit(box, W - 80)
+        s = self.fitw(box, W - 80)
         return cv2.resize(box, (int(box.shape[1] * s), int(box.shape[0] * s)), interpolation=cv2.INTER_AREA) if s < 1 else box
 
     def arrow_layer(self):
@@ -388,7 +460,11 @@ class Text:
         col[:] = (40, 190, 255)
         return np.dstack([col, a])
 
+    def is_key(self, txt):
+        return self.key_scale != 1.0 and (txt.upper().strip("?!.,") in self.key_words or any(c.isdigit() for c in txt))
+
     def draw(self, f, t, total, cta0, sus, busy_cap):
+        cx = self.cx
         # progress bar
         f[0:10, :] *= 0.35
         f[0:10, :int(W * min(1, t / total))] = np.array((40, 190, 255), np.float32)
@@ -397,26 +473,30 @@ class Text:
         if not hidden:
             f[:520] *= self.band
             p = ease_back(t / 0.28)
-            paste(f, self.title, W / 2, 285, op=1.0, scale=0.85 + 0.15 * p)
+            self.put(f, self.title, "title", cx, self.title_y, op=1.0, scale=0.85 + 0.15 * p)
         # number cards
         shown = False
         for n in self.nums:
             if n["t0"] <= t < n["t1"] + 0.15:
                 shown = True
                 p = min(1, (t - n["t0"]) / max(0.05, n["land"] - n["t0"]))
+                if n.get("hook"):  # counting as if it had started 0.25 s earlier: frame 0 already shows a big number
+                    p = min(1, (t + 0.25) / (n["land"] + 0.25))
                 val = mg.parse_num(n["value"]) * ease_out(p)
                 txt = fmt_value(val, n["value"])
                 op = min(1, (t - n["t0"]) / 0.12) * (1 - max(0, (t - n["t1"]) / 0.15))
+                if n.get("hook") and t < 0.12:
+                    op = 1.0  # the hook's number is fully up on frame 0
                 f *= 1 - 0.38 * op
                 bounce = 1 + 0.22 * max(0, 1 - (t - n["land"]) / 0.18) if t >= n["land"] else 1.0
                 lay = self.get(("num", txt), lambda: stroke_layer(txt, 250, "Anton", None, mg.GOLD, 0.05, ((255, 140, 40), 0.55)))
-                paste(f, lay, W / 2, H * 0.44, op, fit(lay, W - 70) * bounce)
+                self.put(f, lay, "number", cx, H * 0.44, op, self.fitw(lay, W - 70) * bounce)
                 if n["kicker"]:
                     k = self.get(("k", n["kicker"]), lambda: stroke_layer(n["kicker"].upper(), 50, "Montserrat", "Bold", mg.SILVER, 0.08))
-                    paste(f, k, W / 2, H * 0.44 - 185, op, fit(k, W - 80))
+                    self.put(f, k, "number", cx, H * 0.44 - 185, op, self.fitw(k, W - 80))
                 if n["unit"]:
                     u = self.get(("u", n["unit"]), lambda: stroke_layer(n["unit"].upper(), 64, "Montserrat", "ExtraBold", mg.SILVER, 0.08))
-                    paste(f, u, W / 2, H * 0.44 + 175, op, fit(u, W - 80))
+                    self.put(f, u, "number", cx, H * 0.44 + 175, op, self.fitw(u, W - 80))
         # headline slams
         for hd in self.heads:
             if hd["t0"] <= t < hd["t1"] + 0.15 and not shown:
@@ -431,15 +511,16 @@ class Text:
                     lay = self.get(("h", txt, gold), lambda: stroke_layer(
                         txt, 150 if gold else 120, "Anton", None, mg.GOLD if gold else mg.SILVER, 0.06,
                         ((255, 140, 40), 0.5) if gold else None))
-                    sc = fit(lay, W - 80) * (2.1 - 1.1 * ease_out(p))
-                    paste(f, lay, W / 2, H * 0.42 + (j - (n - 1) / 2) * 165, min(1, p * 1.6) * (1 - out), sc)
+                    sc = self.fitw(lay, W - 80) * (2.1 - 1.1 * ease_out(p))
+                    self.put(f, lay, "headline", cx, H * 0.42 + (j - (n - 1) / 2) * 165, min(1, p * 1.6) * (1 - out), sc)
         # suspense text
         if sus and sus[0] + 0.12 <= t < sus[1]:
             shown = True
             p = (t - sus[0] - 0.12) / 0.2
             lay = self.get(("s",), lambda: stroke_layer(self.cfg.get("suspense_text", "?"), 170, "Anton", None, mg.GOLD, 0.06,
                                                       ((255, 140, 40), 0.6)))
-            paste(f, lay, W / 2, H * 0.45, min(1, p * 2), fit(lay, W - 80) * (1.6 - 0.6 * ease_out(p)) * (1 + 0.03 * (t - sus[0])))
+            self.put(f, lay, "suspense", cx, H * 0.45, min(1, p * 2),
+                     self.fitw(lay, W - 80) * (1.6 - 0.6 * ease_out(p)) * (1 + 0.03 * (t - sus[0])))
         # end card
         if t >= cta0:
             shown = True
@@ -447,22 +528,29 @@ class Text:
             f *= 1 - 0.5 * min(1, p / 0.2)
             a = self.get(("c1",), lambda: stroke_layer("WATCH THE", 120, "Anton", None, mg.SILVER, 0.06))
             b = self.get(("c2",), lambda: stroke_layer("FULL VIDEO", 190, "Anton", None, mg.GOLD, 0.05, ((255, 140, 40), 0.6)))
-            paste(f, a, W / 2, H * 0.36, min(1, p / 0.15), fit(a, W - 80) * (1.8 - 0.8 * ease_out(p / 0.18)))
+            if self.cfg.get("cta_sub"):  # where in the full video, above the card
+                c = self.get(("c0",), lambda: stroke_layer(self.cfg["cta_sub"].upper(), 60, "Montserrat", "ExtraBold", mg.SILVER, 0.08))
+                self.put(f, c, "endcard", cx, H * 0.36 - 135, min(1, p / 0.15), self.fitw(c, W - 80))
+            self.put(f, a, "endcard", cx, H * 0.36, min(1, p / 0.15), self.fitw(a, W - 80) * (1.8 - 0.8 * ease_out(p / 0.18)))
             q = p - 0.18
             if q > 0:
-                paste(f, b, W / 2, H * 0.36 + 175, min(1, q / 0.12), fit(b, W - 70) * (2.0 - 1.0 * ease_out(q / 0.18)))
+                self.put(f, b, "endcard", cx, H * 0.36 + 175, min(1, q / 0.12), self.fitw(b, W - 70) * (2.0 - 1.0 * ease_out(q / 0.18)))
             r = p - 0.45
             if r > 0:
                 bob = 26 * abs(math.sin(r * 5.0))
-                paste(f, self.arrow, W / 2, H * 0.62 + bob, min(1, r / 0.15))
+                ax, ay = (300, 1330) if self.safe else (W / 2, H * 0.62)  # safe: at the Related-video pill
+                self.put(f, self.arrow, "arrow", ax, ay + bob, min(1, r / 0.15))
         # captions: one word at a time, gold, popping (hidden while other text is up)
-        if not shown and not busy_cap:
+        if not shown and not busy_cap and t >= self.cap_from:
             for i, (tw, txt, brk, sid) in enumerate(self.caps):
                 nxt = self.caps[i + 1][0] if i + 1 < len(self.caps) else tw + 0.8
                 if tw - 0.03 <= t < min(nxt - 0.03, tw + 0.9):
                     lay = self.get(("w", txt), lambda: stroke_layer(txt.upper(), 112, "Montserrat", "Black", mg.GOLD, 0.1))
                     p = (t - tw + 0.03) / 0.1
-                    paste(f, lay, W / 2, H * 0.69, 1.0, fit(lay, W - 90) * (1.3 - 0.3 * ease_back(p)))
+                    sc = (fit(lay, 780) if self.safe else fit(lay, W - 90)) * (1.3 - 0.3 * ease_back(p))
+                    if self.is_key(txt):
+                        sc *= self.key_scale
+                    self.put(f, lay, "caption", 492 if self.safe else W / 2, 1170 if self.safe else H * 0.69, 1.0, sc)
                     break
 
 
@@ -507,7 +595,7 @@ def render(a):
         ev += [["sub_drop", sus[0], 0], ["riser", sus[1] - 1.0, 0, {"d": 1.0}], ["impact", sus[1], 0]]
         impacts += [sus[0] + 0.05, sus[0] + 0.55, sus[1]]
         mus.append({"kind": "drop", "t0": sus[0], "t1": sus[1]})
-    ev += [["bell", cta0 + 0.2, 0], ["bass_impact", cta0, -2]]
+    ev += [["bell", cta0 if cfg.get("loop") else cta0 + 0.2, 0], ["bass_impact", cta0, -2]]
     impacts.append(cta0)
     for it in items:
         if it["first_of_sec"] and it["a"] > 0:
@@ -595,7 +683,10 @@ def render(a):
                     "-af", "alimiter=limit=0.89:attack=3:release=80:level=false", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
                     "-t", f"{total:.3f}", "-movflags", "+faststart", a.out], check=True)
     json.dump({"items": [{k_: v for k_, v in it.items() if k_ in ("ref", "shot", "clip", "a", "b", "trans", "still")} for it in items],
-               "total": total, "cta0": cta0, "sus": sus}, open(os.path.splitext(a.out)[0] + ".plan.json", "w"), indent=1)
+               "total": total, "cta0": cta0, "sus": sus, "speed": clock.k, "tail": round(total - cta0, 3),
+               "first_cut": items[1]["a"] if len(items) > 1 else None,  # the first new picture (jump zooms not counted)
+               "text_boxes": {k_: [round(float(x), 1) for x in b] for k_, b in sorted(text.boxes.items())}},
+              open(os.path.splitext(a.out)[0] + ".plan.json", "w"), indent=1)
     print(f"wrote {a.out} ({total:.1f}s)")
 
 
