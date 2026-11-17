@@ -44,6 +44,23 @@ python scripts/footage/add_archive.py bites productions/NN-slug/bites.json   # b
 ```
 The library entry is marked `"archival"` (credited by name). Pin the shots in edit.base.json.
 
+## Photos of the people named (`G photo:<stem>`)
+```bash
+python scripts/video/fetch_assets.py portrait "Maarten Schmidt" --out work/media/assets/photos --dry-run --all  # look
+python scripts/video/fetch_assets.py portrait "Maarten Schmidt" --out work/media/assets/photos [--alias "M. Schmidt"]
+# or in assets.json: "Maarten_Schmidt": {"src": "portrait", "name": "Maarten Schmidt"}
+```
+- Asks, in order: NASA Image Library (PD), Library of Congress ("No known restrictions" only), ESO archive
+  (CC BY 4.0, credit line from the image page), Internet Archive (licence URL CC BY / BY-SA / CC0 / PD Mark).
+  A hit must name the person in its title, keywords/subject or a "this photograph shows" caption sentence.
+- Writes `<Stem>.jpg`, the credit line into `credits.json` (read by `credits.py`), the full record (source,
+  author, licence, page, file URL) into `portraits.json`, every request into `portrait_requests.log`.
+- Never requests Wikimedia, Flickr or Openverse (refused in code, redirects too); stops on any 429 (exit 2); keeps
+  loc.gov's 5 s crawl delay. No press, Nobel or AIP photos, no generated likenesses.
+- Check the pick by eye: group photos need a crop, and a miss means a name card (`L`) and graphics instead.
+  Living astronomers outside NASA are often missing (08's Schmidt, Kirshner, Aldering, Kashlinsky: none, Nov 2026);
+  the Nationaal Archief (Anefo, CC0) is a by-hand check for Dutch astronomers.
+
 ## Budget
 - Decoding 4K costs ~2 CPU-seconds per video second; 4 cores manage ~2.5 videos a minute.
 - Keep proxies short: `--cap-single 12 --cap-multi 60 --preset ultrafast --limit 400`. Each shot is used
