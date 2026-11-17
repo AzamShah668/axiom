@@ -10,11 +10,27 @@ description: Package a finished science-channel video for YouTube - English titl
 (`--captions`) so the whole story is readable in English. It also helps search and accessibility.
 
 ## Thumbnail: the owner makes it
-Do not make a thumbnail (owner's rule, 2026-10-21). The owner designs and sets it in YouTube Studio. Upload
-without `--thumbnail`. `scripts/video/thumbnail.py` stays only for when the owner asks for one.
+Do not make a thumbnail unless the owner asks (owner's rule, 2026-10-21). The owner designs and sets it in YouTube
+Studio. Upload without `--thumbnail`. When he asks for drafts, `scripts/youtube/make_thumbnail.py` makes three
+(no pipeline stage runs it):
+```bash
+python scripts/youtube/make_thumbnail.py productions/NN-slug --out $WORK/thumbs   # reads productions/NN-slug/thumbs.json
+```
+- `thumbs.json`: three entries `{"id","query","lines":["IT HIT EARTH","*FROM 50,000 LY*"],"title","shot","t","focus",
+  "zoom","pos","ring","void"}` (docstring). Each differs in idea, not colour; 2-6 words, English/Roman only,
+  `*line*` = yellow. Frames come only from the cutlist's shots (CLIP-ranked); pin a frame from
+  `candidates_X.jpg` with `shot`/`t`.
+- It writes `thumb_{A,B,C}.jpg` (1280x720, <= 2 MB), `preview_grid.jpg` (mobile-feed mock) and `thumbs.out.json`
+  (shot, source and the credit line to add to the description). It exits 1 if a lint fails (cap height, contrast,
+  corners, word overlap with the titles, size).
+- The owner sets A as the default and adds B and C in Studio > Test & Compare at publish (no API; not on private
+  videos).
 
 ## youtube.md
-- **Title:** `<Topic hook> | Hindi Documentary`.
+- **Title:** `<Topic hook> | Hindi Documentary`, <= 60 characters with the hook in the first 45.
+- **Titles (A/B)** (optional, only if the owner wants an A/B test): a block of up to three lines under that heading,
+  `T1: ...` (search keyword), `T2: ...` (a true number), `T3: ...` (Hinglish). With no **Title** line the uploader
+  uses T1; the others are added in Studio.
 - **Description:**
   - two short English paragraphs (hook + what the story covers, no spoilers of the last fact)
   - then the credits block from `pipeline.sh ... credits` (`credits.txt`)
@@ -32,6 +48,10 @@ without `--thumbnail`. `scripts/video/thumbnail.py` stays only for when the owne
   documentary hindi"), plus key names from the script.
 - **Chapters:** list `0:00 Intro` plus each card's start time (the cutlist's card items, `t0`) as YouTube chapters.
 
+## Package lint
+`python scripts/youtube/package_lint.py productions/NN-slug/youtube.md` warns (never fails) on: title > 60 chars or
+hook > 45, description line 1 repeating the title, > 12 tags, missing footage/licence/music credits, > 5,000 bytes.
+
 ## Upload checklist
 - The master plays end to end and is 1080p30 at -14 LUFS (`ffmpeg -i master.mp4 -af ebur128 -f null -`).
 - Title, description, credits, tags and chapters are all in English.
@@ -43,7 +63,7 @@ Needs `YT_CLIENT_ID`, `YT_CLIENT_SECRET` and `YT_REFRESH_TOKEN` in `config/.env`
 ```bash
 python scripts/youtube/upload_youtube.py whoami          # must print the Science Guy channel (UC6-6ZqXKuT7BQSx-c6zbNBg)
 python scripts/youtube/upload_youtube.py upload $WORK/out/NN-slug.mp4 productions/NN-slug/youtube.md \
-  --captions productions/NN-slug/captions.en.srt --privacy private   # check it in Studio, then:
+  --captions productions/NN-slug/captions.en.srt   # private is the default; check it in Studio, then:
 python scripts/youtube/upload_youtube.py publish <video_id> --comment productions/NN-slug/credits_full.txt
 ```
 - The credits comment must be pinned by hand in YouTube Studio (the API can't pin).
@@ -52,3 +72,17 @@ python scripts/youtube/upload_youtube.py publish <video_id> --comment production
 - The channel About text lives in `productions/channel/description.txt` (max 1000 characters, no `<` or `>`).
   Apply it with `upload_youtube.py channel --description productions/channel/description.txt`.
   Run `channel` with no options to show the current text.
+
+## Measurement (`scripts/youtube/analytics.py`)
+Needs the read-only Analytics scope once: `upload_youtube.py auth-url --analytics`, sign in with the channel's
+account, `exchange "<redirect URL>"` (the new token keeps the upload scopes; old tokens still upload).
+```bash
+python scripts/youtube/analytics.py retention <video_id> productions/NN-slug --label 7d   # -> retention.md
+python scripts/youtube/analytics.py summary <video_id> productions/NN-slug --label 48h \
+  --impressions <Studio> --ctr <Studio %>                                                  # appends to stats.md
+```
+- `retention.md`: Intro % at 0:30, the 5 steepest drops after 0:30 with the line spoken, the shot and the
+  on-screen text (from `cutlist.json`), spikes, loss per chapter, relative retention.
+- Run at 48 h, 7 d and 28 d. Impressions and CTR are not in the API: type them from Studio > Reach.
+- `--save-json raw.json` keeps the API response; `--from-json raw.json` re-makes the report offline.
+- Act on a pattern seen in 2+ videos, never on one dip.
