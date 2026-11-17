@@ -111,6 +111,34 @@ ONLY=teaspoon scripts/science/pipeline.sh productions/NN-slug shorts   # one; wi
 
 Output: `$WORK/out/shorts/<id>.mp4`, `<id>.en.srt` and `<id>.plan.json`.
 
+### v2 Shorts (full-screen 9:16, `render_short_v2.py`, from video 08)
+```bash
+python scripts/video/short_lint.py productions/NN-slug/shorts/<id>     # before recording: words, length, hook
+python scripts/video/render_short_v2.py <short.json> <cutlist.json> <voice_dir> <captions.hinglish.md> \
+    work/library work/media $WORK/out/<id>.mp4
+```
+- `short_lint.py` warns (never fails): words over `--max-words` (130), predicted length outside 35-60 s (3.0
+  words/s at 1.1x), no number or claim in the first 8 words, a comma in the first 3, a date first, a leftover
+  `[SUSPENSE]`, no `"speed"`. Script rewrites it suggests are proposals for the owner, in Hinglish; never re-record without him.
+- `short.json` keys added 2026-11 (research 02; all off by default, so old Shorts render unchanged; voice stays 1.1x):
+  - `"end_hold": 0.7` + `"loop": true`: no dead tail; the bell moves to the end card's first frame, off the loop seam.
+    Write the last spoken line to run back into the first ("…chhe saal kyun lage?" → "Das crore black holes…").
+    The tail after `cta0` is the spoken CTA plus the hold; `"cta_at": "पूरी#2"` starts the card on a later occurrence.
+  - `"hook_number": true`: the hook's number card is up and counting on frame 0 and lands on its word; no caption before.
+  - `"hook_cut": true`: a real cut to the next shot by 1.5 s instead of the same-shot jump zoom.
+  - `"safe_zone": true`: every text inside x 48-888, y 288-1248 (captions at 492,1170; title, numbers, headlines and
+    the end card centred at x 500, scaled down when a word would leave the area); the arrow at (300, 1330), over the
+    Related-video pill (check its position on a phone with the private upload).
+  - `"cta_sub": "DARK FLOW · CHAPTER 8"`: where in the full video, above WATCH THE FULL VIDEO.
+  - `"key_scale": 1.2` + `"key_words": [...]`: those caption words and numeric captions drawn larger (still gold, one word).
+- `<out>.plan.json` gives `tail`, `first_cut` and `text_boxes` (ink box per text kind) to check the above.
+- Description's first line: the chapter and its timestamp, e.g. "Full video (Dark Flow at 8:51)": a Related-video
+  tap opens at 0:00.
+- Aim for 6-8 Shorts per video (one per chapter with a hook), released inside the first 72 h after the full video
+  goes public, then one a day. After 7 days record per Short in `productions/NN/shorts/<id>.md`: viewed vs swiped
+  away, average % viewed, **engaged views** (replays count as views since 2025), subscribers gained, and the full
+  video's views from the Shorts traffic source.
+
 ## 3. Review
 - `python scripts/video/review_sheet.py $WORK/out/shorts/<id>.mp4 <dir> --cutlist $WORK/out/shorts/<id>.plan.json`
   gives one frame per shot.
