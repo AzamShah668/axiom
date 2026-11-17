@@ -76,13 +76,36 @@ thread per worker), then mixes and muxes. Per frame:
 - **Audio** (`mix()`):
   - the narration with the breaths spliced in
   - the music cues levelled to 16 LU under the voice while speaking, +3 dB in pauses, plus swells and drops
-    at moments and the title
+    at moments and the title (`music_arc`: swells at section starts and typing moments instead of the pause lift)
   - the synthesised SFX (`sfx.py`), levelled against the voice
   - a linear gain to -14 LUFS plus a peak limiter (no dynamic loudnorm)
   - stems are written to `<out>_work/stem_*.wav` for checks
 - **Captions:** `<out>.en.srt` from the C lines; `pipeline.sh` copies it to `captions.en.srt`.
 - Chunks are cached in `<out>_work/v3_<f0>_<f1>.mp4`. After a change, delete the chunks it touches (or the
   whole `_work` dir if the plan changed) and render again.
+
+### v3.1 options (on trial, 2026-11; all off by default)
+The keys and what they do are in `docs/style-guide.md` §9b: `opening_pace`, `end_tail`, `music_arc`,
+`grade.finish "v2"` (plan keys: run `edit assign` after setting them) and `render` {`resample`, `fades`, `upload`,
+`fps`} (read from `edit.json` at render time). Notes:
+- `"render": {"upload": "1440"}` writes `<name>-1440p.mp4` (upload this one) and `<name>.mp4` (1080p, made from
+  it, for review/preview/Shorts). No separate 1440p transcode.
+- `"render": {"fps": 25}` needs 25 fps proxies and `--clips-dir`:
+  `render_v3.py <usual args> --clips-dir $LIB/clips25` (pipeline.sh does not pass it yet: run the command by hand).
+  New picks: `fetch_proxies.py <picks> $LIB --fps 25` (same seconds as `clips/`). Existing library, once (about
+  15 min; not run yet, the owner decides on the trial): ESO/ESA proxies drop their duplicate frame, others blend:
+  ```bash
+  mkdir -p $LIB/clips25
+  python3 -c "import json,sys; [print(k, v['source']) for k, v in json.load(open(sys.argv[1])).items()]" $LIB/sources.json |
+  while read name src; do
+    [ -f "$LIB/clips/$name.mp4" ] && [ ! -f "$LIB/clips25/$name.mp4" ] || continue
+    case $src in eso|esahubble|esawebb) vf="decimate=cycle=6" ;; *) vf="framerate=fps=25" ;; esac
+    ffmpeg -v error -nostdin -i "$LIB/clips/$name.mp4" -vf "$vf" -r 25 -c:v libx264 -preset veryfast -crf 18 -g 25 \
+      -pix_fmt yuv420p "$LIB/clips25/$name.mp4"
+  done
+  ```
+- Phone voice chain (trial): `scripts/elevenlabs/voice_post.sh narration_raw.wav out.wav 0 preserved phone`, then
+  re-mix and mux (video chunks stay cached). No ElevenLabs call. The owner A/Bs 30 s on a phone first.
 
 v2 productions (01, 02) still render with `render_v2.py`: running captions, 2.5 s scenes, Ken Burns zoom,
 xfade/zoom/flash/whip/blur transitions, a bed 22 dB under the voice.

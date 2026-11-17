@@ -1,10 +1,13 @@
 """Transcode picked 4K source videos into 1080p30 editing proxies (streamed straight from the archive URL).
 
-  python fetch_proxies.py <picks.json> <library_dir> [--jobs 3] [--min-width 3840]
+  python fetch_proxies.py <picks.json> <library_dir> [--jobs 3] [--min-width 3840] [--fps 25]
 
 Sources narrower than --min-width are skipped (the channel only uses 4K-sourced footage).
 Writes <library_dir>/clips/<name>.mp4 and <library_dir>/sources.json {name: {key, url, page, title, source,
 src_w, src_h, src_dur, cap_s}}. Re-running skips finished clips; failed ones are retried.
+--fps 25 (v3.1 render.fps 25, on trial) writes 25 fps proxies to <library_dir>/clips25/ instead, cut from the same
+seconds as clips/ (shots are stored in seconds): fps=25 for 25/50 fps sources (ESO, ESA), framerate=fps=25 (blended,
+no stutter) for 30/60 fps ones (NASA SVS).
 """
 import argparse, json, os, re, subprocess, sys, threading
 from concurrent.futures import ThreadPoolExecutor
@@ -13,14 +16,29 @@ LOCK = threading.Lock()
 CAPS = [16.0, 90.0]     # max seconds per proxy: [single-shot video, multi-shot episode]
 PRESET = ["veryfast"]
 FROM_END = [False]
+FPS = [30]
 
 
-def probe(url):
-    r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height:format=duration",
-                        "-of", "json", url], capture_output=True, text=True, timeout=120)
+def probe(url, rate=False):
+    r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+                        "stream=width,height,r_frame_rate:format=duration", "-of", "json", url],
+                       capture_output=True, text=True, timeout=120)
     d = json.loads(r.stdout or "{}")
     st = (d.get("streams") or [{}])[0]
-    return st.get("width", 0), st.get("height", 0), float((d.get("format") or {}).get("duration") or 0)
+    out = st.get("width", 0), st.get("height", 0), float((d.get("format") or {}).get("duration") or 0)
+    if not rate:
+        return out
+    n, _, m = (st.get("r_frame_rate") or "30/1").partition("/")
+    return out + (float(n) / float(m or 1),)
+
+
+def fps_filter(src_fps):
+    """The proxy's frame-rate filter: 30 fps as always, or 25 fps without duplicated or dropped-frame stutter."""
+    if FPS[0] == 30:
+        return "fps=30"
+    if abs(src_fps / 25 - round(src_fps / 25)) < 0.02 and src_fps >= 24.5:  # 25, 50, 100 fps: whole frames
+        return "fps=25"
+    return "framerate=fps=25"  # 30/60/24 fps sources: blended frames
 
 
 def name_of(key):
@@ -29,11 +47,11 @@ def name_of(key):
 
 def work(p, lib, minw, sources):
     name = name_of(p["key"])
-    out = os.path.join(lib, "clips", name + ".mp4")
+    out = os.path.join(lib, "clips" if FPS[0] == 30 else f"clips{FPS[0]}", name + ".mp4")
     if os.path.exists(out) and name in sources:
         return name, "have"
     try:
-        w, h, dur = probe(p["url"])
+        w, h, dur, src_fps = probe(p["url"], rate=True)
     except Exception as e:  # noqa: BLE001
         return name, f"probe failed {e}"
     if w < minw:
@@ -44,18 +62,23 @@ def work(p, lib, minw, sources):
         # long single-shot zooms/pans: take the END, where the video shows its own target (the start of many
         # ESO zooms is the same all-sky Milky Way panorama, which would look like a repeated shot)
         ss = max(1.0, dur - t - 1.5)
+    rec = sources.get(name) or {}
+    if FPS[0] != 30 and rec.get("cap_s"):  # the very seconds of clips/<name>.mp4, so every shot (in seconds) still fits
+        ss, t = rec["ss"], rec["cap_s"]
     if os.path.exists(out):  # finished earlier but not yet recorded (interrupted run)
         with LOCK:
             sources[name] = {"key": p["key"], "url": p["url"], "page": p.get("page", ""), "title": p["title"],
                              "source": p["source"], "src_w": w, "src_h": h, "src_dur": round(dur, 2), "ss": ss, "cap_s": None}
         return name, "recorded"
     cmd = ["ffmpeg", "-v", "error", "-y", "-ss", str(ss), "-t", f"{t:.2f}", "-i", p["url"], "-an",
-           "-vf", "scale=1920:1080:force_original_aspect_ratio=increase:flags=bilinear,crop=1920:1080,fps=30",
-           "-c:v", "libx264", "-preset", PRESET[0], "-crf", "20", "-pix_fmt", "yuv420p", "-g", "30", out + ".part.mp4"]
+           "-vf", f"scale=1920:1080:force_original_aspect_ratio=increase:flags=bilinear,crop=1920:1080,{fps_filter(src_fps)}",
+           "-c:v", "libx264", "-preset", PRESET[0], "-crf", "20", "-pix_fmt", "yuv420p", "-g", str(FPS[0]), out + ".part.mp4"]
     for attempt in range(2):
         r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode == 0 and os.path.getsize(out + ".part.mp4") > 10000:
             os.replace(out + ".part.mp4", out)
+            if FPS[0] != 30 and rec:
+                return name, f"ok {FPS[0]} fps ({fps_filter(src_fps)})"
             with LOCK:
                 sources[name] = {"key": p["key"], "url": p["url"], "page": p.get("page", ""), "title": p["title"],
                                  "source": p["source"], "src_w": w, "src_h": h, "src_dur": round(dur, 2),
@@ -75,11 +98,13 @@ def main():
     ap.add_argument("--preset", default="veryfast", help="x264 preset for proxies (ultrafast = quicker, bigger files)")
     ap.add_argument("--limit", type=int, default=0, help="only the first N picks")
     ap.add_argument("--from-end", action="store_true", help="cut long single-shot videos from their end")
+    ap.add_argument("--fps", type=int, default=30, choices=(30, 25), help="25: proxies in clips25/ for render.fps 25")
     a = ap.parse_args()
     FROM_END[0] = a.from_end
+    FPS[0] = a.fps
     CAPS[:] = [a.cap_single, a.cap_multi]
     PRESET[0] = a.preset
-    os.makedirs(os.path.join(a.lib, "clips"), exist_ok=True)
+    os.makedirs(os.path.join(a.lib, "clips" if a.fps == 30 else f"clips{a.fps}"), exist_ok=True)
     spath = os.path.join(a.lib, "sources.json")
     sources = json.load(open(spath)) if os.path.exists(spath) else {}
     picks = json.load(open(a.picks))[:a.limit or None]

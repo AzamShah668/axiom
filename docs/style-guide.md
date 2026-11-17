@@ -172,6 +172,25 @@ SFX placement (automatic):
   folder. Upload it with the video (science-publish).
 - Quick look at one part: `render_v3.py … --range 20,45` renders only those seconds.
 
+## 9b. v3.1 options (on trial, 2026-11; research `docs/research/improve-2026-11/` 01 and 05)
+All off by default: a production without these keys renders exactly as v3. The owner decides after a trial
+(plan §4: 25 fps, end tail, phone voice). Keys go in `edit.base.json`.
+
+| Key | What it does | Takes effect |
+|---|---|---|
+| `"opening_pace": {"target": 2.2, "max": 4.0}` | default scenes of the first section aim at 2.2 s, never over 4.0 s (else 3.0 / 6.5); `{hold}`, `{flash}`, `{Ns}` beats unchanged | `edit assign render` |
+| `"end_tail": 12` | the last shot runs 12 s past the story end for the end screen: slow push (1.5 %/s), dimmed to 70 % over 2 s, one +4 dB music swell, the usual 4 s fade. No text, no overlay. It plays on at real speed while the shot's usable footage lasts, slower if short, and holds its last frame under 0.4x | `edit assign render` |
+| `"music_arc": true` | a +4 dB swell (0.3 s up, 1.2 s down) on each section start and each typing moment; the bed leveller keeps 40 % of a track's swing (else 25 %); no pause lift. `BED_LU` stays 16. Shorts never set it | `edit assign render` |
+| `"grade": {"finish": "v2"}` | colour (LUT + saturation) before the camera move, vignette + grain after it, on footage: the vignette stays put on push/roll, the grain is fine, new every frame, none on pure black, added both ways; strength 2.0 at `grain` 3 | `edit assign render` |
+| `"render": {"resample": "cubic"}` | the corner-label crop folded into the camera warp: one `INTER_CUBIC` resample instead of two linear ones (about +2 min) | `render` |
+| `"render": {"fades": "round"}` | dips and fades rounded, not truncated (no darkening or banding) | `render` |
+| `"render": {"upload": "1440"}` | chunks encoded once at 2560x1440 (lanczos, veryfast CRF 16, `aq-mode=3:bframes=2`, GOP FPS/2) into `<name>-1440p.mp4`, the upload copy; `<name>.mp4` is a 1080p copy made from it for review and previews. AAC 384k in both. Replaces the separate 1440p transcode | `render` |
+| `"render": {"fps": 25}` | renders at 25 fps (transition, fade and logo frame counts keep their durations), with `render_v3.py … --clips-dir $LIB/clips25`. 25 fps proxies: `fetch_proxies.py … --fps 25`, or convert the library once (below). Removes the 5 Hz judder of 25 fps ESO/ESA sources forced to 30 | `render` |
+
+`render` keys are read from `edit.json` at render time; the others live in `cutlist.json`, so run `edit` and
+`assign` (shots are kept) after setting them. Voice for phones: `voice_post.sh <in> <out> 0 preserved phone`
+(4th-order 70 Hz high-pass, -3 dB at 280 Hz, presence and air, de-ess last); `legacy` stays the default.
+
 ## 10. Proof
 `productions/02-black-holes/v3-proof/` re-cuts production 02's cold open and fact 10 in this style, with a new
 hook. Its README shows how it was built and what it measured.
