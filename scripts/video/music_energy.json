@@ -1,0 +1,20 @@
+{
+ "_about": "Energy of each $MEDIA/music track for the music-curve warnings (make_edit.py, pace_lint.py). Measured by pace_lint.py --measure-music <music_dir> --write: strong onsets/s < 0.5 = low (drone), >= 2.5 with loudness range <= 14 LU = high, else mid.",
+ "Dark_Fog.mp3": "high",
+ "Darkest_Child.mp3": "mid",
+ "Echoes_of_Time_v2.mp3": "low",
+ "Hitman.mp3": "high",
+ "Ice_Flow.mp3": "high",
+ "Interloper.mp3": "mid",
+ "Lightless_Dawn.mp3": "mid",
+ "Long_Note_Four.mp3": "low",
+ "Long_Note_One.mp3": "low",
+ "Long_Note_Three.mp3": "low",
+ "Long_Note_Two.mp3": "low",
+ "Lost_Frontier.mp3": "low",
+ "Ossuary_5_-_Rest.mp3": "low",
+ "Ossuary_6_-_Air.mp3": "low",
+ "Phantasm.mp3": "mid",
+ "Unholy_Knight.mp3": "mid",
+ "Volatile_Reaction.mp3": "high"
+}

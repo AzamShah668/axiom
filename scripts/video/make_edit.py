@@ -1,6 +1,10 @@
 """Build edit.json from a human-editable edit.spec plus edit.base.json.
 
-  python make_edit.py <edit.spec> <edit.base.json> <out edit.json>
+  python make_edit.py <edit.spec> <edit.base.json> <out edit.json> [--timeline <timeline.json>]
+
+After building it checks the music curve against scripts/video/music_energy.json (pace_lint.py): a warning on
+3 `low` cues in a row and on no `mid`/`high` cue after the midpoint (by narration time with --timeline, else by
+section count). Warnings only: edit.json is the same either way.
 
 edit.spec, one line per item, grouped by "== <section_id>" (section ids = "## " headers of narration.hi.md).
 A trigger is the first occurrence of that exact text in the section's narration ("-" = section start).
@@ -31,7 +35,7 @@ v3 only (edit.base.json "style": "v3", see docs/style-guide.md):
 edit.base.json holds the rest: lead_in, title_card / title, cards, music, card_query, bg_query, pin, ban, crops,
 exclude, and for v3: style, grade, count_total.
 """
-import json, re, sys
+import json, os, re, sys
 
 
 def _opts(parts):
@@ -135,12 +139,42 @@ def parse(spec):
     return sections
 
 
+def music_check(edit, timeline=None):
+    """Music energy curve warnings (docs/research/improve-2026-11/00-plan.md WP2)."""
+    cues = [m for m in edit.get("music", []) if m.get("track")]
+    if not cues:
+        return []
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from pace_lint import load_energy, music_warnings
+    order = list(edit["sections"])
+    if timeline:
+        tl = json.load(open(timeline, encoding="utf-8"))
+        starts = {s["id"]: s["start"] for s in tl["sections"]}
+        pts = [(0.0 if i == 0 else starts.get(m.get("from"), 0.0), m["track"]) for i, m in enumerate(cues)]
+        warn = music_warnings(pts, load_energy(), tl["total"] / 2)
+    else:  # by section: the midpoint is the middle section of the spec
+        idx = {sid: i for i, sid in enumerate(order)}
+        pts = [(0 if i == 0 else idx.get(m.get("from"), 0), m["track"]) for i, m in enumerate(cues)]
+        name = lambda i: order[int(i)] if int(i) < len(order) else str(i)  # noqa: E731
+        warn = music_warnings(pts, load_energy(), len(order) // 2, label=lambda i: "section " + name(i))
+    for w in warn:
+        print("  WARN " + w)
+    return warn
+
+
 def main():
-    spec, base, out = sys.argv[1:4]
+    args = sys.argv[1:]
+    timeline = None
+    if "--timeline" in args:
+        i = args.index("--timeline")
+        timeline = args[i + 1]
+        del args[i:i + 2]
+    spec, base, out = args[:3]
     edit = json.load(open(base, encoding="utf-8"))
     edit["sections"] = parse(spec)
     json.dump(edit, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print({k: {x: len(v[x]) for x in ("v", "c", "k", "n", "m") if v.get(x)} for k, v in edit["sections"].items()})
+    music_check(edit, timeline if timeline and os.path.exists(timeline) else None)
 
 
 if __name__ == "__main__":
