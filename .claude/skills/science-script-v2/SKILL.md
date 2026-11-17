@@ -50,6 +50,22 @@ is 100 quota units, so stay under ~30 searches a day).
   numbered poll of the ideas. The full footage list then moves to the description, which must stay under 5,000
   characters.
 
+## 2d. Hook, chapter and list method (proposed 2026-11, on trial until the owner approves)
+From `docs/research/improve-2026-11/04-script.md`. Fill `productions/outline.template.md` into
+`productions/NN-slug/outline.md` at topic time, with **three title ideas** (the proven keyword, one with a number,
+one in Hinglish). Until the owner approves these rules, the checker only advises (`~` lines).
+- **Hook order:** a present-tense scene that proves the title (first sentence <=12 words, no hedge, something the
+  footage can show) -> stakes for Earth or insaan by 15 s -> 2-3 concrete third-person teasers (pictures, not
+  themes; the last one is the ending's idea) -> the open loop. <=130 words, about 45 s.
+- **Chapter order:** what people believed -> a person and a year -> the *lekin* -> the payoff -> a bridge that
+  names one concrete next picture (not a category, and not the same template every chapter).
+- **List topics need a spine:** escalate along one axis (distance, size, time, danger) and say it in every
+  chapter (08 by distance: 5,000 ly -> 50,000 -> ... -> the edge).
+- **Re-engagement:** the outline puts the strongest real event near 2:30-3:30 and near 6:00; no chapter over 95 s.
+- **Rhythm:** keep the flowing lines, and add a 3-7 word punch line at a turn every 4-6 sentences; no sentence
+  over 24 words. Numbers get an everyday picture; "lagbhag" only where the number really is uncertain.
+- **Ending <=45 s:** the final payoff, a callback to the hook scene, then a third-person hand-off.
+
 ## 2b. Archive hunt: real footage and real voices (owner, 2026-10-27, standard from video 05)
 While researching, list every real clip and recording the story could use, in `footage/archive.md`: the moment,
 the source page, the licence, and the in/out seconds. Aim for **10-20 clips** a video: launches, the actual
@@ -153,7 +169,8 @@ What professional YouTube writers do; every script from video 08:
   source.
 
 ## 5. Length and pace
-- **Length:** Neel reads about 147 words a minute at 1.0x, so about 1,600 words is 11 minutes.
+- **Length:** Neel reads about 147 words a minute at 1.0x, so about 1,600 words is 11 minutes. Rudra (07 on)
+  reads about 170 (08: 1,866 words in 11:02), so about 1,870 words is 11 minutes.
 - **Record at normal pace.** Before planning the edit, send the owner a 60 s sample at 1.0x and 1.2x
   (rubberband time-stretch of the recording, no credits). Build the edit at the chosen speed, so the master
   renders only once. Video 04: the owner chose **1.0x** for full videos (2026-10-26); Shorts stay at 1.2x.
@@ -182,7 +199,12 @@ What professional YouTube writers do; every script from video 08:
    python scripts/science/script_check.py productions/NN-slug/script.txt
    ```
    It counts "...", flags catalogue-style names, repeated phrases and narrator questions, and estimates the
-   length.
+   length (`!` lines, exit 1). It also prints each section's start time and `~` advice (proposed 2026-11, on
+   trial): `hook`, `rhythm`, `turns`, `person`, `numbers`, `hedges`, `tells` ("sabse X mein se", one bridge
+   template, 4+ reaction lines) and `rehook` (a section over 95 s); see §2d. Advice never fails the run unless
+   `--strict`; `--skip person,numbers` turns checks off; `--objects "Name One|Name Two"` marks things that are
+   not people. The pace comes from the nearest `voice-preset.json` (Rudra 170 wpm, Neel 147); `--voice neel`
+   for 04-06, `--wpm` wins. `--selftest` runs the fixtures.
 6. Only after the OK, write `tts/narration.hi.md` in Devanagari, one `##` section per script section.
    Use the same section ids and commas instead of dashes, and record.
 
