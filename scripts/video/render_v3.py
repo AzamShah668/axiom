@@ -16,6 +16,15 @@ edit.json sections (make_edit.py builds them from edit.spec) may hold, besides v
   "t"  transition overrides {"at", "trans"};  "s" explicit sounds {"at", "type", "gain"};  "footer" text
 Top level: "style": "v3", "lead_in", "title" {"kicker", "main"} or "title_card", "cards", "count_total",
 "music" [{"from": section, "track", "gain"}], "grade" {...}, "card_query", "bg_query".
+
+v3.1 options (on trial, docs/style-guide.md; absent = the v3 render exactly as before):
+  plan (live in cutlist.json, so re-run assign):  "opening_pace" {"target": 2.2, "max": 4.0} for the first section's
+  default scenes; "end_tail": 12 s of the last shot after the story (slow push, darkened, a music swell, no text);
+  "music_arc": true (swells at section starts and typing moments, a looser bed leveller, no pause lift);
+  "grade" {"finish": "v2"} (grade.py: vignette and fine grain after the camera move).
+  render (read from edit.json at render time): "render" {"resample": "cubic" (crop folded into one cubic warp),
+  "fades": "round", "upload": "1440" (chunks encoded once at 1440p -> <out>-1440p.mp4, <out> is a 1080p copy of it,
+  AAC 384k), "fps": 25 (with --clips-dir pointing at 25 fps proxies, e.g. <library>/clips25)}.
 """
 import argparse, json, math, os, subprocess, sys
 from multiprocessing import Pool
@@ -38,6 +47,7 @@ TD = {"dip": 12, "dissolve": 12, "flare": 10, "flash": 8, "whip": 9, "zoom": 10,
 BED_LU = 16.0      # music bed under the voice while speaking (LU); pauses get +PAUSE_LIFT dB
 PAUSE_LIFT = 3.0
 DIP_PAUSE = 0.5    # a cut inside a pause at least this long becomes a dip to black
+TAIL_PUSH, TAIL_DIM, TAIL_DIM_S = 0.015, 0.7, 2.0   # end_tail: 1.5 %/s push, down to 70 % over 2 s
 
 
 # ------------------------------------------------------------------ timing
@@ -165,6 +175,7 @@ def plan(edit, tl, voice_wav=None):
         kick, _, main = tc.partition(" ABOUT ")
         title = {"kicker": kick + " ABOUT", "main": main} if main else {"kicker": "", "main": tc}
 
+    pace = edit.get("opening_pace") or {}  # v3.1: shorter default scenes in the first section
     items, ovl, caps, sfx, mus = [], [], [], [], []
     moments = {}     # video time of the reveal word -> moment spec (with "_vb": video time the breath starts)
     for sid in order:
@@ -296,6 +307,9 @@ def plan(edit, tl, voice_wav=None):
                 continue
             opt = b.get("opt", "default")
             tgt = float(opt[:-1]) if opt.endswith("s") and opt[:-1].replace(".", "").isdigit() else TARGET.get(opt, 3.0)
+            fast = bool(pace) and sid == order[0] and opt == "default"
+            if fast:
+                tgt = float(pace.get("target", 2.2))
             mn = MIN_SCENE.get(opt if opt in MIN_SCENE else "default", 1.4)
             L = b1 - b0
             n = max(1, round(L / tgt))
@@ -312,6 +326,8 @@ def plan(edit, tl, voice_wav=None):
                     cuts.append(ideal)
             cuts.append(b1)
             mx = MAX_SCENE.get(opt if opt in MAX_SCENE else "default", 6.5)
+            if fast:
+                mx = float(pace.get("max", 4.0))
             q = 0
             while q < len(cuts) - 1:  # split anything still longer than the cap, protected windows or not
                 c0, c1 = cuts[q], cuts[q + 1]
@@ -457,7 +473,18 @@ def plan(edit, tl, voice_wav=None):
         nxt["trans"] = "flash"
     for it in items:
         it["f0"], it["f1"] = round(it["t0"] * FPS), round(it["t1"] * FPS)
+    tail = float(edit.get("end_tail") or 0)
+    if tail > 0:  # v3.1 end-screen tail: the last scene runs on (t1 stays the story's end, so assign is unchanged)
+        for o in ovl:
+            o["t1"] = min(o["t1"], total)  # no text over the tail
+        items[-1]["tail"] = round(total, 3)
+        pk = total + min(1.5, 0.3 * tail)
+        mus.append({"kind": "swell", "t0": total - 1.5, "peak": pk, "t1": max(pk + 0.6, total + tail - 2.0), "db": 4.0})
+        total += tail
     items[-1]["f1"] = round(total * FPS)
+    if edit.get("music_arc"):  # v3.1: a short swell (0.3 s up, 1.2 s down) at each section start and typing moment
+        arc = [heads[sid]["t"] for sid in order[1:]] + [x[1] for x in sfx if x[0] == "typing"]
+        mus += [{"kind": "swell", "t0": t - 0.3, "peak": t, "hold": 0.0, "t1": t + 1.2, "db": 4.0} for t in sorted(arc)]
     for m in moments.values():
         m.pop("_tb", None), m.pop("_vb", None)
     sfx = [list(x) for x in sorted(sfx, key=lambda x: x[1])]
@@ -468,8 +495,11 @@ def plan(edit, tl, voice_wav=None):
     for i, m in enumerate(edit.get("music", [])):
         t0 = (float(intro["dur"]) if intro and intro.get("track") else 0.0) if i == 0 else starts[m["from"]] - 1.5
         music.append({"t": t0, "track": m["track"], "gain": m.get("gain", 0.0)})
-    return {"style": "v3", "items": items, "ovl": ovl, "caps": caps, "sfx": sfx, "mus": mus, "music": music,
-            "breaths": T.breaths, "total": total, "off": T.off, "grade": edit.get("grade", {})}
+    out = {"style": "v3", "items": items, "ovl": ovl, "caps": caps, "sfx": sfx, "mus": mus, "music": music,
+           "breaths": T.breaths, "total": total, "off": T.off, "grade": edit.get("grade", {})}
+    if edit.get("music_arc"):
+        out["music_arc"] = True
+    return out
 
 
 # ------------------------------------------------------------------ frames
@@ -481,7 +511,12 @@ class Readers:
 
     def get(self, it, f):
         key = id(it)
-        src = int(max(0, f - it["f0"]) * it.get("speed", 1.0))  # a slightly short shot plays slowed (assign: >= 0.7x)
+        sp = it.get("speed", 1.0)
+        ft = round(it["tail"] * FPS) if it.get("tail") is not None else None
+        if ft is not None and f > ft:  # end tail: the shot plays on at tail_rate (0 = holds its last frame)
+            src = int(max(0, ft - it["f0"]) * sp + (f - ft) * it.get("tail_rate", 1.0))
+        else:
+            src = int(max(0, f - it["f0"]) * sp)  # a slightly short shot plays slowed (assign: >= 0.7x)
         rd = self.r.get(key)
         if rd is not None and rd[1] == src and rd[0].last is not None:  # slow motion: the same frame again
             return rd[0].last
@@ -489,7 +524,7 @@ class Readers:
             if rd:
                 rd[0].cap.release()
             rd = [render_v2.ClipReader(os.path.join(G["clips"], it["clip"] + ".mp4"), it["ss"] + src / FPS,
-                                       it.get("crop")), src - 1]
+                                       None if G.get("fold_crop") else it.get("crop")), src - 1]
             self.r[key] = rd
         fr = rd[0].read()
         rd[1] = src
@@ -501,7 +536,9 @@ class Readers:
         self.r = {}
 
 
-def camera(fr, it, t, D):
+def camera(fr, it, t, D, crop=None, z2=1.0):
+    """The scene's camera move as one warp. crop (render.resample "cubic"): the corner-label crop of an uncropped
+    proxy frame, folded into the same matrix; z2: an extra push about the centre (end tail)."""
     m, r, d = it.get("move", "push"), it.get("rate", 0.03), it.get("dir", 1)
     z, rot, dx, dy = 1.0, 0.0, 0.0, 0.0
     if m == "push":
@@ -519,7 +556,16 @@ def camera(fr, it, t, D):
     M = cv2.getRotationMatrix2D((W / 2, H / 2), rot, z)
     M[0, 2] += dx
     M[1, 2] += dy
-    return cv2.warpAffine(fr, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+    if crop or z2 != 1.0:
+        M = np.vstack([M, [0.0, 0.0, 1.0]])
+        if crop:  # the same pixels ClipReader's crop + resize would give
+            X0, Y0 = int(crop[0] * W), int(crop[1] * H)
+            sx, sy = (int(crop[2] * W) - X0) / W, (int(crop[3] * H) - Y0) / H
+            M = M @ np.array([[1 / sx, 0, (0.5 - X0) / sx - 0.5], [0, 1 / sy, (0.5 - Y0) / sy - 0.5], [0, 0, 1]])
+        if z2 != 1.0:
+            M = np.array([[z2, 0, W / 2 * (1 - z2)], [0, z2, H / 2 * (1 - z2)], [0, 0, 1]]) @ M
+        M = M[:2]
+    return cv2.warpAffine(fr, M, (W, H), flags=G.get("interp", cv2.INTER_LINEAR), borderMode=cv2.BORDER_REFLECT)
 
 
 OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "rewind:big", "photo",
@@ -537,32 +583,56 @@ def dim(fr, k=0.45, blur=2.5):
     return (cv2.GaussianBlur(fr, (0, 0), blur) * k).astype(np.uint8)
 
 
+def scale_fr(fr, k):
+    """Frame times k for dips and fades: rounded with render.fades "round", truncated (as before) otherwise."""
+    return cv2.convertScaleAbs(fr, alpha=k) if G.get("round_fades") else (fr * k).astype(np.uint8)
+
+
+def tail_fx(fr, tt, push=True):
+    """End tail, tt s after the story's end: a slow push (unless the camera already did it) and a dim to 70 %."""
+    if tt <= 0:
+        return fr
+    if push:
+        z = 1 + TAIL_PUSH * tt
+        fr = cv2.warpAffine(fr, np.float32([[z, 0, W / 2 * (1 - z)], [0, z, H / 2 * (1 - z)]]), (W, H),
+                            flags=G.get("interp", cv2.INTER_LINEAR), borderMode=cv2.BORDER_REFLECT)
+    return cv2.convertScaleAbs(fr, alpha=1 - (1 - TAIL_DIM) * mg.ease_in_out(min(1.0, tt / TAIL_DIM_S)))
+
+
 def item_frame(it, f):
     t = (f - it["f0"]) / FPS
     D = max((it["f1"] - it["f0"]) / FPS, 0.1)
+    tt = 0.0
+    if it.get("tail") is not None:  # end tail: the scene keeps its last camera position, then pushes in slowly
+        Ds = max((round(it["tail"] * FPS) - it["f0"]) / FPS, 0.1)
+        tt, t, D = max(0.0, t - Ds), min(t, Ds), Ds
     if own_gfx(it):
         it.setdefault("flash_t", D * 0.45)
-        return rv.gfx(it["gfx"], t, D, it)
-    src = G["grade"](G["rd"].get(it, f), f)
+        return tail_fx(rv.gfx(it["gfx"], t, D, it), tt)
+    raw, gr = G["rd"].get(it, f), G["grade"]
+    crop = it.get("crop") if G.get("fold_crop") else None
     if it["kind"] == "clip":
-        return camera(src, it, t, D)
-    bg = camera(src, {"move": "push", "rate": 0.012}, t, D)
+        if getattr(gr, "v2", False):  # finish v2: colour, camera move, then vignette and grain (they stay put)
+            return tail_fx(gr.finish(camera(gr.color(raw), it, t, D, crop, 1 + TAIL_PUSH * tt), f), tt, False)
+        return tail_fx(camera(gr(raw, f), it, t, D, crop, 1 + TAIL_PUSH * tt), tt, False)
+    src = gr(raw, f)
+    bg = camera(src, {"move": "push", "rate": 0.012}, t, D, crop)
     if it["kind"] == "num":
         fr = dim(bg, 0.5, 2.0)
-        return mg.card(fr, it["num"], t, D)
+        return tail_fx(mg.card(fr, it["num"], t, D), tt)
     if it["kind"] == "card":
         fr = dim(bg, 0.42)
         mg.chapter(fr, it["num"], it["n_total"], it["ctitle"], t, D, it.get("idx"))
-        return fr
+        return tail_fx(fr, tt)
     if it["kind"] == "title":
         fr = dim(bg, 0.42)
         mg.title(fr, it["ttl"].get("kicker", ""), it["ttl"]["main"], t, D)
-        return fr
+        return tail_fx(fr, tt)
     G["bgframe"] = dim(bg, 0.4)
     it.setdefault("flash_t", D * 0.45)
     fr = rv.gfx(it["gfx"], t, D, it)
     G["bgframe"] = None
-    return fr
+    return tail_fx(fr, tt)
 
 
 def _flare_light(p):
@@ -581,7 +651,7 @@ def _flare_light(p):
 def transition(a, b, p, kind):
     if kind == "dip":
         e = mg.ease_in_out(p)
-        return (a * (1 - 2 * e)).astype(np.uint8) if e < 0.5 else (b * (2 * e - 1)).astype(np.uint8)
+        return scale_fr(a, 1 - 2 * e) if e < 0.5 else scale_fr(b, 2 * e - 1)
     if kind in ("dissolve", "soft"):
         return cv2.addWeighted(a, 1 - mg.ease_in_out(p), b, mg.ease_in_out(p), 0)
     if kind == "flare":
@@ -622,8 +692,9 @@ def draw_ovl(fr, ovl, t):
             mg.captions(fr, o, t)
 
 
-def init(clips, fonts, assets, grade):
+def init(clips, fonts, assets, grade, opts=None):
     render_v2.init(clips, fonts, assets)
+    G.update(opts or {})  # v3.1 render options (main): fold_crop, interp, round_fades, venc, fades and logo frames
     mg.set_fonts(fonts)
     G["grade"] = Grade(**grade)
     G["rd"] = Readers()
@@ -634,7 +705,8 @@ def render_chunk(args):
     if os.path.exists(path):
         return path
     ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS),
-                           "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", "-g", "60",
+                           "-i", "-", *(G.get("venc") or ["-c:v", "libx264", "-preset", "veryfast", "-crf", "18",
+                                                          "-pix_fmt", "yuv420p", "-g", "60"]),
                            path + ".part.mp4"], stdin=subprocess.PIPE)
     k = 0
     for f in range(c0, c1):
@@ -648,11 +720,11 @@ def render_chunk(args):
         t = f / FPS
         draw_ovl(fr, ovl, t)
         fi, fo = G.get("fade_in", 12), G.get("fade_out", 75)  # Shorts: 0, 0 (the hook hits on frame 0, the end loops)
-        mg.logo(fr, 0.8 * mg.clamp01((t - 0.6) / 0.5) * (mg.clamp01((total_f - f) / 60) if fo else 1.0))
+        mg.logo(fr, 0.8 * mg.clamp01((t - 0.6) / 0.5) * (mg.clamp01((total_f - f) / G.get("logo_fade", 60)) if fo else 1.0))
         if f < fi:
-            fr = (fr * (f / fi)).astype(np.uint8)
+            fr = scale_fr(fr, f / fi)
         elif fo and f > total_f - fo:
-            fr = (fr * max(0, (total_f - f) / fo)).astype(np.uint8)
+            fr = scale_fr(fr, max(0, (total_f - f) / fo))
         ff.stdin.write(np.ascontiguousarray(fr).tobytes())
     ff.stdin.close()
     ff.wait()
@@ -746,7 +818,8 @@ def mix(narr, P, music_dir):
     spk = (env > thr).astype(float)
     k = int(0.35 * SR)
     spk = np.convolve(spk, np.ones(k) / k, "same")  # ~0.35 s attack/release
-    lift = PAUSE_LIFT * (1 - np.clip(spk * 1.5, 0, 1))
+    arc = P.get("music_arc")  # v3.1 (long-form plan only; Shorts never set it): swells instead of the pause lift
+    lift = (0.0 if arc else PAUSE_LIFT) * (1 - np.clip(spk * 1.5, 0, 1))
     # music cues, each levelled to BED_LU under the voice, 2.5 s crossfades, looped with crossfades
     music = np.zeros((n, 2))
     xf = int(2.5 * SR)
@@ -758,7 +831,7 @@ def mix(narr, P, music_dir):
         a, b = int(c["t"] * SR), min(n, int(nxt["t"] * SR) + xf)
         L = b - a
         seg = _loop(y, L, xf)
-        seg, I = _level(seg)
+        seg, I = _level(seg, keep=0.4) if arc else _level(seg)
         seg *= 10 ** ((Vm - BED_LU + c.get("gain", 0.0) - I) / 20)
         g = np.ones(L)
         m = min(xf, L)
@@ -769,7 +842,9 @@ def mix(narr, P, music_dir):
     db = lift.copy()
     for e in P["mus"]:
         if e["kind"] == "swell":
-            db += _curve(n, [(0, 0), (e["t0"], 0), (e["peak"], e["db"]), (e["peak"] + 0.3, e["db"]), (e["t1"], 0), (total, 0)])
+            hold = e.get("hold", 0.3)
+            db += _curve(n, [(0, 0), (e["t0"], 0), (e["peak"], e["db"])] + ([(e["peak"] + hold, e["db"])] if hold else [])
+                         + [(e["t1"], 0), (total, 0)])
         elif e["kind"] == "intro":  # loud from frame 0, out on the impact, back slowly once the voice is on
             db += _curve(n, [(0, e["db"]), (e["t1"] - 0.15, e["db"]), (e["t1"] + 0.05, -40), (e["back0"], -40),
                              (e["back1"], 0), (total, 0)])
@@ -805,6 +880,44 @@ def write_srt(caps, path):
             f.write(f"{i}\n{ts(c['t'])} --> {ts(max(c['t1'], c['t'] + 0.8))}\n{text}\n\n")
 
 
+def tail_rate(it, clips_dir):
+    """How fast the last shot plays on through the end tail: real time while its usable footage (library
+    shots.json) lasts, slower when it runs short; under 0.4x it holds its last frame instead (0)."""
+    used = it["ss"] + (it["tail"] - it["t0"]) * it.get("speed", 1.0)
+    end, spath = None, os.path.join(os.path.dirname(os.path.abspath(clips_dir)), "shots.json")
+    if os.path.exists(spath):
+        sh = next((x for x in json.load(open(spath)) if x["id"] == it.get("shot")), None)
+        end = next((r1 for r0, r1 in (sh or {}).get("usable", []) if r0 - 0.05 <= it["ss"] <= r1), None)
+    if end is None:
+        cap = cv2.VideoCapture(os.path.join(clips_dir, it["clip"] + ".mp4"))
+        end = cap.get(cv2.CAP_PROP_FRAME_COUNT) / max(1.0, cap.get(cv2.CAP_PROP_FPS)) - 0.3
+        cap.release()
+    r = min(1.0, max(0.0, end - used) / max(0.1, it["_tail_d"]))
+    return round(r, 3) if r >= 0.4 else 0.0
+
+
+def render_opts(R, P):
+    """v3.1 "render" options -> worker settings (G), and FPS for this module, render_video and render_v2."""
+    global FPS, TD
+    o = {}
+    fps = int(R.get("fps", 30))
+    if fps != FPS:  # before the pool forks; frame-count constants keep their durations
+        FPS = rv.FPS = render_v2.FPS = fps
+        TD = {k: round(v * FPS / 30) for k, v in TD.items()}
+        o.update(fade_in=round(12 * FPS / 30), fade_out=round(75 * FPS / 30), logo_fade=2 * FPS)
+        for it in P["items"]:
+            it["f0"], it["f1"] = round(it["t0"] * FPS), round(it["t1"] * FPS)
+        P["items"][-1]["f1"] = round(P["total"] * FPS)
+    if R.get("resample") == "cubic":
+        o.update(fold_crop=True, interp=cv2.INTER_CUBIC)
+    if R.get("fades") == "round":
+        o["round_fades"] = True
+    if str(R.get("upload", "")) == "1440":  # the upload copy, encoded once (05 P1-b)
+        o["venc"] = ["-vf", "scale=2560:1440:flags=lanczos", "-c:v", "libx264", "-preset", "veryfast", "-crf", "16",
+                     "-x264-params", "aq-mode=3:bframes=2", "-g", str(FPS // 2), "-pix_fmt", "yuv420p"]
+    return o
+
+
 def main():
     ap = argparse.ArgumentParser()
     for a in ("cutlist", "narration", "edit", "timeline", "music", "fonts", "assets", "out"):
@@ -812,9 +925,18 @@ def main():
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--range", default="", help="a,b: render only these seconds of the timeline")
     ap.add_argument("--chunk", type=float, default=10.0)
+    ap.add_argument("--clips-dir", default="", help="footage proxies instead of the cutlist's clips_dir "
+                    "(e.g. <library>/clips25 with render.fps 25)")
     a = ap.parse_args()
     P = json.load(open(a.cutlist))
+    R = (json.load(open(a.edit)).get("render") or {}) if os.path.exists(a.edit) else {}
+    opts = render_opts(R, P)
+    clips_dir = a.clips_dir or P["clips_dir"]
     items, ovl, total = P["items"], P["ovl"], P["total"]
+    if items[-1].get("tail") is not None and items[-1].get("clip"):
+        items[-1]["_tail_d"] = total - items[-1]["tail"]
+        items[-1]["tail_rate"] = tail_rate(items[-1], clips_dir)
+        print(f"end tail {items[-1]['_tail_d']:.1f}s: the last shot plays on at {items[-1]['tail_rate']}x")
     total_f = round(total * FPS)
     r0, r1 = (float(x) for x in a.range.split(",")) if a.range else (0.0, total)
     f_a, f_b = round(r0 * FPS), min(total_f, round(r1 * FPS))
@@ -831,7 +953,8 @@ def main():
         t0, t1 = c0 / FPS, c1 / FPS
         its = [it for it in items if it.get("f0", 0) < c1 + 30 and it.get("f1", 1 << 30) > c0 - 30]
         ovs = [o for o in ovl if o.get("t0", 0) < t1 + 1 and o.get("t1", 1e9) > t0 - 1]
-        blob = json.dumps([its, ovs, P.get("grade", {}), code], sort_keys=True, default=str)
+        extra = {k: v for k, v in (("render", R), ("clips_dir", a.clips_dir)) if v}  # v3.1 only: v3 chunks keep their names
+        blob = json.dumps([its, ovs, P.get("grade", {}), code] + ([extra] if extra else []), sort_keys=True, default=str)
         return hashlib.sha1(blob.encode()).hexdigest()[:10]
 
     jobs = [(c, min(c + step, f_b), items, ovl, total_f,
@@ -842,7 +965,7 @@ def main():
         for fn in os.listdir(work):
             if fn.startswith("v3_") and fn.endswith(".mp4") and os.path.join(work, fn) not in keep:
                 os.remove(os.path.join(work, fn))
-    with Pool(a.workers, initializer=init, initargs=(P["clips_dir"], a.fonts, a.assets, P.get("grade", {}))) as pool:
+    with Pool(a.workers, initializer=init, initargs=(clips_dir, a.fonts, a.assets, P.get("grade", {}), opts)) as pool:
         for k, pth in enumerate(pool.imap(render_chunk, jobs)):
             print(f"  [{k + 1}/{len(jobs)}] {os.path.basename(pth)}", flush=True)
     import soundfile as sf
@@ -855,9 +978,16 @@ def main():
         sf.write(os.path.join(work, f"stem_{k_}.wav"), np.clip(x, -1, 1).astype(np.float32), SR)
     lst = os.path.join(work, "list.txt")
     open(lst, "w").write("".join(f"file '{os.path.basename(j[5])}'\n" for j in jobs))
+    up = "venc" in opts  # render.upload "1440": the chunks are the upload copy; <out> is a 1080p copy made from it
+    vout = os.path.splitext(a.out)[0] + "-1440p.mp4" if up else a.out
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-ss", f"{r0:.3f}", "-t", f"{(f_b - f_a) / FPS:.3f}",
                     "-i", wav, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "alimiter=limit=0.84:attack=3:release=80:level=false",
-                    "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", a.out], check=True)
+                    "-c:a", "aac", "-b:a", "384k" if up else "192k", "-ar", "48000", "-movflags", "+faststart", vout], check=True)
+    if up:
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", vout, "-vf", "scale=1920:1080:flags=lanczos", "-c:v", "libx264",
+                        "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", "-g", str(2 * FPS), "-c:a", "copy",
+                        "-movflags", "+faststart", a.out], check=True)
+        print("wrote the upload copy", vout)
     srt = os.path.splitext(a.out)[0] + ".en.srt"
     write_srt([dict(c, t=c["t"] - r0, t1=c["t1"] - r0) for c in P["caps"] if r0 <= c["t"] < r1], srt)
     print("wrote", a.out, "and", srt, f"(mix {I:.1f} LUFS -> -14 linear, voice {Vm:.1f} LUFS while speaking)")

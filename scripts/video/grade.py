@@ -11,6 +11,10 @@ Parameters (edit.base.json "grade"):
   vignette  corner darkening, 0-1 (0.35 = corners about 1 stop darker)
   grain     film grain strength in 8-bit levels (3 default; 0 = off)
   lift      black level lift (0.0-0.05) so deep space keeps detail
+  finish    "v2" (on trial, docs/style-guide.md "v3.1 options"): render_v3 calls color() before the camera move
+            and finish() after it, so vignette and grain stay still while the picture moves. The v2 grain is fine
+            (full resolution), new every frame, weighted by luma (none on pure black) and added both ways; its
+            strength is 2.0 at the default grain 3 (scaled with grain). __call__ is unchanged.
 """
 import numpy as np, cv2
 
@@ -25,7 +29,7 @@ PRESETS = {  # split-tone: (shadow tint BGR, highlight tint BGR), amount; true b
 
 
 class Grade:
-    def __init__(self, preset="amber_teal", contrast=0.25, sat=1.3, vignette=0.35, grain=3.0, lift=0.01, **_):
+    def __init__(self, preset="amber_teal", contrast=0.25, sat=1.3, vignette=0.35, grain=3.0, lift=0.01, finish=None, **_):
         sh, hi, amt = PRESETS.get(preset, PRESETS["amber_teal"])
         x = np.arange(256) / 255.0
         s = x + contrast * (x - 0.5) * (1 - np.abs(2 * x - 1)) * 2       # gentle S around mid grey
@@ -45,6 +49,30 @@ class Grade:
             self.grain = [np.repeat(cv2.resize(cv2.GaussianBlur(r.normal(0, grain, (H // 2, W // 2)).astype(np.float32), (0, 0), 0.6),
                                                (W, H), interpolation=cv2.INTER_NEAREST).round().astype(np.int16)[..., None], 3, 2)
                           for _ in range(4)]
+        self.v2, self.plate = finish == "v2", None
+        if finish == "v2" and grain:  # one fine float32 plate; each frame reads it at its own random offset
+            self.plate = np.random.default_rng(7).normal(0, 2.0 * grain / 3.0, (H + 64, W + 64)).astype(np.float32)
+
+    def color(self, fr):
+        """LUT + saturation only (finish "v2": before the camera move)."""
+        out = cv2.LUT(fr, self.lut)
+        if self.sat != 1.0:
+            g = cv2.cvtColor(cv2.cvtColor(out, cv2.COLOR_BGR2GRAY), cv2.COLOR_GRAY2BGR)
+            out = cv2.addWeighted(out, self.sat, g, 1 - self.sat, 0)
+        return out
+
+    def finish(self, fr, f=0):
+        """Vignette + fine grain (finish "v2": after the camera move, so both stay put on screen)."""
+        out = fr
+        if self.vig is not None:
+            out = cv2.multiply(out, self.vig, scale=1 / 255)
+        if self.plate is not None:
+            oy, ox = np.random.default_rng(f).integers(0, 65, 2)  # deterministic per frame (cached chunks match)
+            y = cv2.cvtColor(out, cv2.COLOR_BGR2GRAY).astype(np.float32)
+            w = np.clip(y / 24, 0, 1) * np.clip((255 - y) / 80, 0, 1)  # no grain on black, less in highlights
+            n = np.rint(self.plate[oy:oy + H, ox:ox + W] * w).astype(np.int16)
+            out = np.clip(out.astype(np.int16) + n[..., None], 0, 255).astype(np.uint8)
+        return out
 
     def __call__(self, fr, f=0):
         out = cv2.LUT(fr, self.lut)
