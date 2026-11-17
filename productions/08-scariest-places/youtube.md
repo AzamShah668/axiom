@@ -1,6 +1,6 @@
 # YouTube upload: Production 08 (The Scariest Places in the Universe)
 
-Upload **private** (owner publishes). No thumbnail (the owner makes it). CC track: `captions.en.srt`.
+**Uploaded 2026-11-17, private:** https://youtu.be/IrluRcVgOyk (1440p, EN captions). Upload **private** (owner publishes). No thumbnail (the owner makes it). CC track: `captions.en.srt`.
 `python scripts/youtube/upload_youtube.py upload work/08-scariest-places/out/08-scariest-places-1440p.mp4 productions/08-scariest-places/youtube.md --captions productions/08-scariest-places/captions.en.srt --privacy private`
 (the 1440p copy: YouTube gives 1440p uploads its better encoding). Pin `credits_full.txt` as a comment.
 
