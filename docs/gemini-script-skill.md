@@ -235,7 +235,8 @@ opening shape from an earlier script.
 
 ## 6. Stage 4b: the edit pass (a separate turn after the full draft, with proof)
 
-Do not report "passed". In a new turn, act as a strict editor of the finished draft and show the evidence:
+**Mandatory: a script is never presented as final until this pass is done.** Do not report "passed". In a
+new turn, act as a strict editor of the finished draft and show the evidence:
 1. **Opening check:** quote the first sentence with its word count; quote where the title's promise is first said.
 2. **Bridges side by side:** list the last line of every chapter in one table. Rewrite any two that share a shape.
 3. **Long sentences:** list every sentence over 22 words with its word count. Split anything over 25.
