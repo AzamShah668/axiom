@@ -584,7 +584,7 @@ def render(a):
     import soundfile as sf
     vw = os.path.join(out_dir, "voice.wav")
     sf.write(vw, clock.voice[:int(total * SR)].astype(np.float32), SR)
-    Pm = {"total": total, "off": 0.0, "breaths": [], "sfx": ev, "mus": mus,
+    Pm = {"total": total, "off": 0.0, "breaths": [], "sfx": ev, "mus": mus, "sfx_kit": cfg.get("sfx_kit", "kaz"),
           "music": [{"t": 0.0, "track": cfg["music"], "start": cfg.get("music_start", 0.0), "gain": cfg.get("music_gain", 4.0)}]}
     mix, _, _ = r3.mix(vw, Pm, os.path.join(a.media, "music"))
     _, I = fx.loudness(mix)

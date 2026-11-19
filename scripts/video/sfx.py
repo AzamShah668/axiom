@@ -19,7 +19,8 @@ SR = 44100
 LEVEL = {"tick": -20, "pop": -18, "roll": -24, "hit": -8, "impact": -2, "sub_drop": -8, "riser": -7,
          "whoosh": -15, "whoosh_big": -10, "flare": -12, "sting": -3, "boom": -3, "hiss": -14,
          "bass_impact": -3, "swish_big": -9, "typing": -19, "camera_flash": -10, "bell": -11,
-         "kz_whoosh": -13, "kz_thud": -5, "kz_shot": -6, "kz_typing": -18, "kz_scratch": -19}
+         "kz_whoosh": -13, "kz_thud": -5, "kz_shot": -6, "kz_typing": -18, "kz_scratch": -19, "kz_film": -22, "kz_drone": -20,
+         "mark_scratch": -19}
 
 
 # ------------------------------------------------------------------ loudness
@@ -363,10 +364,59 @@ def kz_scratch(d=0.45, seed=25): # marker scratch (red circles, underlines, stri
     return _norm(rng.normal(0, 1, n) * .5 * (1 + np.sin(np.arange(n) / SR * 90)))
 
 
+def kz_film(d=3.0, seed=26):     # projector clatter at 24/s + hiss (old film, archive moments)
+    rng = _rng(seed); n = int(d * SR); m = int(.012 * SR); y = rng.normal(0, 1, n) * .33
+    for k in range(int(d * 24)):
+        p = int(k * SR / 24)
+        if p + m < n:
+            y[p:p + m] += rng.normal(0, 1, m) * np.exp(-np.arange(m) / SR * 400)
+    return _norm(y)
+
+
+def kz_drone(d=8.0, seed=27):    # dark low drone with a soft pulse every 1.25 s (tension under a still moment)
+    tt = _t(d)
+    pad = sum(a * np.sin(2 * np.pi * f * tt + np.sin(2 * np.pi * .07 * tt) * 2)
+              for f, a in [(55, 1), (65.4, .6), (82.4, .5), (110, .35), (130.8, .2)])
+    pad *= np.clip(tt / 1.5, 0, 1) * np.clip((d - tt) / 1.5, 0, 1)
+    for b in np.arange(.5, d - .5, 1.25):
+        i = int(b * SR); L = min(int(.25 * SR), len(pad) - i)
+        pad[i:i + L] += 3 * np.sin(2 * np.pi * 48 * np.arange(L) / SR) * np.exp(-np.arange(L) / SR * 18)
+    return _norm(pad)
+
+
+# Sound kits (owner 2026-11-19: "use all of these SFX ... whenever necessary"). "kaz" (the default for new videos and
+# Shorts) plays each slot with the kaz-documentary sound; "classic" keeps the sounds videos 01-08 were mixed with.
+# A swapped sound keeps its slot's level (LEVEL of the original kind), so the balance of the mix stays the same.
+# mark_scratch (a ring or route drawing on over footage) is silent in the classic kit.
+KITS = {
+    "kaz": {"bass_impact": ("kz_thud", None), "hit": ("kz_thud", None), "impact": ("kz_shot", None),
+            "boom": ("kz_shot", None), "camera_flash": ("kz_shot", None),
+            "swish_big": ("kz_whoosh", {"d": 0.8}), "whoosh_big": ("kz_whoosh", {"d": 0.9}),
+            "whoosh": ("kz_whoosh", "d"), "typing": ("kz_typing", "n"), "mark_scratch": ("kz_scratch", "d")},
+    "classic": {"mark_scratch": (None, None)},
+}
+
+
+def kit_swap(kind, kw, kit):
+    """(kind, kwargs) to play for a planned sound in this kit; kind None = play nothing."""
+    to = KITS.get(kit or "classic", {}).get(kind)
+    if to is None:
+        return kind, kw
+    k2, a = to
+    if k2 is None:
+        return None, {}
+    if a == "d":
+        return k2, ({"d": float(kw["d"])} if "d" in kw else {})
+    if a == "n":
+        return k2, {"n": max(4, int(round(float(kw.get("d", 0.5)) * 22)))}
+    return k2, dict(a or {})
+
+
 KIT = {"tick": tick, "pop": pop, "roll": roll, "hit": hit, "impact": impact, "boom": impact, "sub_drop": sub_drop,
        "riser": riser, "whoosh": whoosh, "whoosh_big": whoosh_big, "flare": flare, "sting": sting, "hiss": hiss,
        "bass_impact": bass_impact, "swish_big": swish_big, "typing": typing, "camera_flash": camera_flash, "bell": bell,
-       "kz_whoosh": kz_whoosh, "kz_thud": kz_thud, "kz_shot": kz_shot, "kz_typing": kz_typing, "kz_scratch": kz_scratch}
+       "kz_whoosh": kz_whoosh, "kz_thud": kz_thud, "kz_shot": kz_shot, "kz_typing": kz_typing, "kz_scratch": kz_scratch,
+       "kz_film": kz_film, "kz_drone": kz_drone}
 _CACHE = {}
 
 

@@ -185,6 +185,15 @@ For this -> use this (scripts/video/sfx.py synthesises them, licence-clean; rend
 - **Transitions** -> camera flash (flash cuts; a Short's hook -> story join is a flash cut)
 - **CTA** -> bell ding (the FULL VIDEO BELOW end card)
 
+**The kaz sound kit (owner, 2026-11-19: "use all of these SFX ... whenever necessary").** From video 09 on, every
+slot above plays the kaz-documentary sound (sfx.py `KITS["kaz"]`, the default for new edits and Shorts): hook ->
+`kz_thud`, zooms/whooshes -> `kz_whoosh`, typing -> `kz_typing`, flash transitions and impacts -> `kz_shot`, number
+landings -> `kz_thud`; the bell, ticks, pops, rolls and risers have no kaz version and stay. Rings and routes drawing
+over footage get a marker scratch (`kz_scratch`); evidence boards bring their own. Two more for moments that need
+them, by hand: `S <trigger> | kz_film | d=3` (projector clatter: archive film, old photos, history flashbacks) and
+`S <trigger> | kz_drone | d=8` (dark drone under a tense, still moment). Videos 01-08 and their Shorts keep
+`"sfx_kit": "classic"` so a re-render sounds as uploaded.
+
 ## The first 2 seconds (owner, 2026-11-07, every Short and video opening)
 - Motion from frame 0: a subtle zoom or flicker on the first picture (graphics, photos and text cards too).
 - A quick cut within about 1.5-2 s; nothing holds still for the first 3 s. Check the first 2 s for motion before sending.

@@ -8,5 +8,6 @@
   "darkflow_end/0": "photos/Planck_sat.jpg",
   "darkflow_end/2": "cmb_sky.png"
  },
- "speed": 1.1
+ "speed": 1.1,
+ "sfx_kit": "classic"
 }

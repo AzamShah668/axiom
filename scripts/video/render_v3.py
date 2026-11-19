@@ -138,7 +138,10 @@ def card_sfx(ns, t0):
         return [("whoosh", t0 + 0.1, -4, {"d": float(ns.get("draw", 2.0)), "f0": 300, "f1": 1800})]
     if ns.get("typing"):  # owner, 2026-11-06: keyboard typing only where the plan marks it
         return [("typing", t0 + 0.12, 0, {"d": 0.6})]
-    return [("pop", t0 + (0.12 if tp == "name" else 0.05), -2)]
+    pop = [("pop", t0 + (0.12 if tp == "name" else 0.05), -2)]
+    if tp in ("callout", "route"):  # a ring / route drawing on: marker scratch (kaz kit; silent in the classic kit)
+        pop.append(("mark_scratch", t0 + 0.1, 0, {"d": 0.45}))
+    return pop
 
 
 # ------------------------------------------------------------------ planning
@@ -476,7 +479,7 @@ def plan(edit, tl, voice_wav=None):
         t0 = (float(intro["dur"]) if intro and intro.get("track") else 0.0) if i == 0 else starts[m["from"]] - 1.5
         music.append({"t": t0, "track": m["track"], "gain": m.get("gain", 0.0)})
     return {"style": "v3", "items": items, "ovl": ovl, "caps": caps, "sfx": sfx, "mus": mus, "music": music,
-            "breaths": T.breaths, "total": total, "off": T.off, "grade": edit.get("grade", {})}
+            "breaths": T.breaths, "total": total, "off": T.off, "grade": edit.get("grade", {}), "sfx_kit": edit.get("sfx_kit", "kaz")}
 
 
 # ------------------------------------------------------------------ frames
@@ -789,7 +792,10 @@ def mix(narr, P, music_dir):
     for ev in P["sfx"]:
         kind, at, gain = ev[0], ev[1], ev[2]
         kw = ev[3] if len(ev) > 3 else {}
-        x, pl = fx.make(kind, **kw)
+        play, pkw = fx.kit_swap(kind, kw, P.get("sfx_kit", "classic"))  # owner 2026-11-19: the kaz sounds by default
+        if play is None:
+            continue
+        x, pl = fx.make(play, **pkw)
         i = int(at * SR)
         if i >= n or i + len(x) <= 0:
             continue
