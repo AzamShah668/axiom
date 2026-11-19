@@ -32,7 +32,7 @@
   {
    "from": "opening",
    "track": "Hitman.mp3",
-   "gain": 6.0
+   "gain": 4.0
   },
   {
    "from": "ch1",
@@ -40,7 +40,8 @@
   },
   {
    "from": "ch2",
-   "track": "Volatile_Reaction.mp3"
+   "track": "Volatile_Reaction.mp3",
+   "gain": -4.0
   },
   {
    "from": "ch3",
