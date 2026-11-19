@@ -26,7 +26,7 @@ C आख़िरी black hole भी | and even the last black hole disappears
 V तीसरे रास्ते में @ galaxies rushing together into a bright point | the universe collapsing animation
 K तीसरे रास्ते में @ THE UNIVERSE [universe] / *SWALLOWS ITSELF* [निगल] | kicker=path three
 C तीसरे रास्ते में | In the third, the whole universe shrinks back and swallows itself
-V इन तीनों रास्तों का @ the expanding universe simulation | dark energy pushing galaxies apart animation {hold}
+V इन तीनों रास्तों का @ flight through a field of galaxies | dark energy pushing galaxies apart animation {hold}
 K इन तीनों रास्तों का @ ONE FORCE DECIDES [फ़ैसला] / *FOUND IN 1998* [अट्ठानवे]
 C इन तीनों रास्तों का | Which path we take is in the hands of a force discovered in 1998
 
@@ -36,7 +36,7 @@ C - | In the 1990s, two separate teams of astronomers were watching exploding st
 V Saul Perlmutter @ a white dwarf star exploding animation | a type Ia supernova brightening
 K Saul Perlmutter @ PERLMUTTER [Saul] / SCHMIDT [Brian] / *RIESS* [Adam] | kicker=the supernova hunters
 C Saul Perlmutter | Saul Perlmutter, Brian Schmidt and Adam Riess used the light of these Type Ia supernova explosions to measure the speed of the universe
-V उस time तक @ galaxies drifting apart in the expanding universe | galaxy clusters moving away
+V उस time तक @ galaxies scattered across deep space | galaxy clusters moving away
 K उस time तक @ THE EXPANSION [फैलाव] / *IS SLOWING DOWN* [धीमा] | kicker=what everyone believed
 C उस time तक | Until then, every scientist believed the expansion of the universe was slowing down
 V इसका logic @ a cricket ball flying through the air | a cricket match in a stadium | planet Earth from space
@@ -46,7 +46,7 @@ C जब कोई cricket ball | Throw a cricket ball straight up, and Earth's 
 C Ball ऊपर | It slows as it rises, stops for a moment, and falls back to the ground
 V Scientists को लगा था @ a cluster of galaxies held by gravity | galaxies in a cluster
 C Scientists को लगा था | Scientists thought galaxies must be doing exactly the same
-V Big Bang के बाद @ the Big Bang animation expanding from a bright point | the early universe expanding
+V Big Bang के बाद @ a bright glowing nebula core | the early universe expanding
 C Big Bang के बाद | After the Big Bang everything is flying apart, but gravity must be pulling it back
 G लेकिन जब उन्नीस सौ अट्ठानवे @ board:1998
 C लेकिन जब उन्नीस | But when the 1998 data came up on the computer screen, the whole calculation came out backwards
@@ -86,15 +86,15 @@ V अब तक यही माना @ a cluster of galaxies held together by 
 C अब तक यही माना | Until then it was believed that however strong dark energy was, galaxies would always hold together
 V क्योंकि galaxies के अंदर @ a rotating spiral galaxy | spiral galaxy turning slowly
 C क्योंकि galaxies के अंदर | because gravity inside galaxies is strong enough
-V लेकिन Caldwell की team @ space expanding violently animation | galaxies flying apart
+V लेकिन Caldwell की team @ a vast glowing nebula | galaxies flying apart
 K लेकिन Caldwell की team @ *PHANTOM* [phantom] / ENERGY [energy] | kicker=a different dark energy
 C लेकिन Caldwell की team | But Caldwell's team worked out a different kind of dark energy, called phantom energy
-V अगर dark energy की density @ galaxies drifting apart faster and faster | expansion of the universe accelerating
+G अगर dark energy की density @ starfield
 C अगर dark energy की density | If the density of dark energy kept rising with time, gravity's grip would begin to loosen
 V इसे Big Rip @ a galaxy being torn apart | stars ripped out of a galaxy {hold}
 C Big Rip | THE BIG RIP | big
 C इसे Big Rip | They called it the Big Rip
-V Planck satellite के data @ the Planck satellite in space | Planck spacecraft animation
+G Planck satellite के data @ photo:Planck_sat
 L Planck satellite @ PLANCK | ESA space observatory · 2009-2013
 N कम से कम दो सौ @ hero | value=200 | unit=billion years | kicker=if it happens at all, at least | land=सौ | over
 C Planck satellite के data | By the Planck satellite's data, even if it happens, it would take at least 200 billion years
@@ -112,7 +112,7 @@ C कुछ minutes पहले | A few minutes before the end, planets and sta
 C आख़िरी second से | In less than the last second, space will grow faster than light
 V Atoms को बाँध @ particles flying apart animation | a burst of light breaking into particles
 C Atoms को बाँध | Even the nuclear force that holds atoms together will give up
-V हर atom फट @ a flash of light in space | an explosion of light
+V हर atom फट @ a bright star flaring in a star field | an explosion of light
 K हर atom फट @ EVERY ATOM [atom] / *TEARS APART* [फट]
 C हर atom फट | Every atom will tear apart
 V Space इतनी तेज़ी से @ lone glowing particles drifting in darkness | sparse points of light in empty space
@@ -151,7 +151,7 @@ N लगभग सौ trillion @ hero | value=100 | unit=trillion years | kicker
 C Scientists का अंदाज़ा | Scientists estimate the last star will go out in about 100 trillion years
 V उसके बाद अँधेरे में @ a black hole in empty darkness | a dead star in black space
 C उसके बाद अँधेरे में | After that, only black holes and cold dead stars will be left in the dark
-V लगता था black holes @ a supermassive black hole animation | black hole with a glowing disc
+V लगता था black holes @ the bright core of a giant galaxy | black hole with a glowing disc
 C लगता था black holes | Black holes seemed immortal
 V लेकिन उन्नीस सौ चौहत्तर @ a black hole evaporating animation | radiation escaping a black hole
 L Stephen Hawking @ STEPHEN HAWKING | physicist · 1942-2018
@@ -163,7 +163,7 @@ C इसे Hawking radiation | This is called Hawking radiation
 V सबसे बड़े supermassive @ a supermassive black hole at the heart of a galaxy | giant black hole in a galaxy centre
 N लगभग ten to the power सौ @ hero | value=10¹⁰⁰ | unit=years | kicker=the biggest black holes vanish in about | land=सौ | over
 C सबसे बड़े supermassive | The biggest supermassive black holes will take about ten to the power 100 years to vanish completely
-V सालों तक सबको @ a white dwarf star | a neutron star spinning
+V सालों तक सबको @ a bright white star in a star cluster | a neutron star spinning
 C सालों तक सबको | For years everyone thought white dwarfs and neutron stars would last even longer
 N उनकी उम्र ten @ hero | value=10¹¹⁰⁰ | unit=years | kicker=their life, it was thought | land=ग्यारह | over
 C उनकी उम्र ten | Their lifetime was put at ten to the power 1,100 years
@@ -177,7 +177,7 @@ C उनके equations ने | Their equations showed that everything with gr
 V चाँद भी @ the Moon | the full Moon in space
 C चाँद भी | EVEN THE MOON | big
 C चाँद भी | The Moon too, and neutron stars too
-V इस हिसाब से आख़िरी @ a cooling white dwarf star | a small white star fading
+V इस हिसाब से आख़िरी @ a small faint star in a dark star field | a small white star fading
 N ten to the power अठहत्तर @ hero | value=10⁷⁸ | unit=years | kicker=the last white dwarfs are gone in | land=अठहत्तर | over
 C इस हिसाब से आख़िरी | By this count, the last white dwarf stars will be gone in ten to the power 78 years
 V अंत में पूरा @ completely dark empty space | a black void with no stars {hold}
@@ -209,7 +209,7 @@ C Scientists dark energy की | Scientists wanted to measure the strength of d
 V सभी को उम्मीद थी @ a calm star field | slow drift through stars
 K सभी को उम्मीद थी @ DARK ENERGY [dark] / *CONSTANT* [constant] | kicker=what everyone expected
 C सभी को उम्मीद थी | Everyone expected dark energy to come out perfectly constant, like Einstein's cosmological constant
-V लेकिन दो हज़ार चौबीस @ a 3D galaxy map rotating | galaxy survey map
+V लेकिन दो हज़ार चौबीस @ thousands of distant galaxies in a deep field | galaxy survey map
 C दो हज़ार चौबीस से | 2024 - 2026 | big
 C लेकिन दो हज़ार चौबीस | But the data from 2024 to 2026 showed a different pattern
 V Signals बताते हैं @ a fading glow in deep space | galaxies drifting in darkness
@@ -223,7 +223,7 @@ V Physicists अभी और @ scientists looking at data on computer screens |
 C Physicists अभी और | Physicists are waiting for more data to check it fully
 V लेकिन अगर ये hint @ galaxies slowing down and turning back | the universe changing direction
 C लेकिन अगर ये hint | But if this hint turns out true, the universe won't end in Heat Death
-V September दो हज़ार पच्चीस @ a university campus building | a scientist working at a computer | a simulation of the universe
+V September दो हज़ार पच्चीस @ scientists working in a lab | a scientist working at a computer | a telescope dome at night
 L Henry Tye @ HENRY TYE | physicist, Cornell University
 C September दो हज़ार पच्चीस | SEPTEMBER 2025 | big
 C September दो हज़ार पच्चीस | In September 2025, Cornell physicist Henry Tye and colleagues built a model on this same data
@@ -258,16 +258,16 @@ K जैसे जैसे space @ THE UNIVERSE [universe] / *HEATS UP* [temper
 C जैसे जैसे space | As space shrinks, the temperature of the whole universe keeps rising
 V हर जगह गर्मी @ a blazing star field | glowing hot gas everywhere
 C हर जगह गर्मी | It gets hotter everywhere
-V Collapse के आख़िरी @ the boiling surface of a star | a star's surface churning with heat
+V Collapse के आख़िरी @ the Sun's churning surface close up | a star's surface churning with heat
 C Collapse के आख़िरी | In the last stage of the collapse, radiation in space gets so hot that stars begin melting from the outside
 V उसके बाद black holes @ two black holes merging animation | black holes spiralling together
 C उसके बाद black holes | Then black holes will collide and merge with each other
-V आख़िरी पल में @ everything collapsing into a single bright point | a blinding point of light
+G आख़िरी पल में @ starfield
 C आख़िरी पल में | In the final moment, the whole universe shrinks into a tiny point
 V Scientists इसे Big Crunch @ a brilliant flash at the centre of space | an intense burst of light {hold}
 C Big Crunch | THE BIG CRUNCH | big
 C Scientists इसे Big Crunch | Scientists call this the Big Crunch
-V पुरानी physics के @ a black hole singularity animation | warped space around a point
+V पुरानी physics के @ a dark nebula with a bright centre | warped space around a point {hold}
 C infinite | INFINITE | big
 C पुरानी physics के | In the old physics, density becomes infinite at this point and everything ends
 G Einstein की general @ spacetime
@@ -309,7 +309,7 @@ C और अगर ये कमज़ोर | And if it is weakening, gravity w
 V फ़ैसला अभी बाक़ी @ a telescope dome opening at night | astronomers' observatory under the stars
 K फ़ैसला अभी बाक़ी @ THE VERDICT [फ़ैसला] / *IS STILL OPEN* [बाक़ी]
 C फ़ैसला अभी बाक़ी | The verdict is still open
-V जिस आख़िरी तारे @ a single star fading into darkness | a lone star in black space
+V जिस आख़िरी तारे @ a single bright star in a dark star field | a lone star in black space
 C जिस आख़िरी तारे | The darkness of the last star, where this story began,
 V अगले आसमान की @ the first light of the early universe | a bright dawn of stars being born {hold}
 C अगले आसमान की | may become the first light of the next sky

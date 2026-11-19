@@ -75,15 +75,41 @@
  ],
  "pin": {},
  "ban": [
+  "esahubble_heic1813b",
+  "esahubble_heic2202a",
   "esahubble_heic2603a",
   "esawebb_final_JWST_spacesparks009",
+  "esawebb_potm2601a",
   "esawebb_potm2604c",
+  "esawebb_weic2218b",
+  "esawebb_weic2517b",
+  "esawebb_weic2518b",
+  "esawebb_weic2602a",
   "esawebb_weic2608c",
+  "eso_ELT-Timelapses-2025-2026",
+  "eso_elt2020-day1_3840x2160",
+  "eso_eltsegtimelapse12m",
+  "eso_eso0908a",
   "eso_eso1507d",
+  "eso_eso1518a",
+  "eso_eso1601a",
   "eso_eso1701d",
+  "eso_eso1718b",
+  "eso_eso1726b",
   "eso_eso1809b",
+  "eso_eso1814b",
+  "eso_eso1914d",
+  "eso_eso2015b",
+  "eso_eso2106c",
+  "eso_eso2116a",
   "eso_eso2209b",
+  "eso_eso2303b",
+  "eso_eso2314c",
   "eso_eso2402c",
+  "eso_eso2502d",
+  "eso_eso2606c",
+  "eso_potw2421a",
+  "eso_potw2512a",
   "eso_potw2622a",
   "pexels_10157156#0",
   "pexels_10469563#0",
@@ -144,6 +170,7 @@
   "pexels_32779852#0",
   "pexels_33430409#0",
   "pexels_33430414#0",
+  "pexels_33453191",
   "pexels_33474466#0",
   "pexels_33483595#0",
   "pexels_33637800#0",
@@ -237,9 +264,11 @@
   "pexels_39346070#0",
   "pexels_39371135#0",
   "pexels_39675112#0",
+  "pexels_39790273",
   "pexels_3995973#0",
   "pexels_40631969#0",
   "pexels_4182916#0",
+  "pexels_4980037",
   "pexels_4997704#0",
   "pexels_4997704#1",
   "pexels_5651047#0",
@@ -258,6 +287,7 @@
   "pexels_7184620#0",
   "pexels_7615697#0",
   "pexels_7670835#0",
+  "pexels_7708980",
   "pexels_8327074#0",
   "pexels_8381407#0",
   "pexels_8381442#0",
@@ -268,8 +298,31 @@
   "pexels_9573569#0",
   "pexels_9573759#0",
   "pexels_9665239#0",
+  "svs_13237",
+  "svs_13672",
+  "svs_13710",
+  "svs_13726",
+  "svs_14477",
+  "svs_14488",
+  "svs_14742",
+  "svs_14756",
+  "svs_14835",
+  "svs_14881",
+  "svs_14907",
+  "svs_15000",
+  "svs_15023",
+  "svs_15080",
+  "svs_15081",
   "svs_15091",
-  "svs_5366"
+  "svs_20398",
+  "svs_30187",
+  "svs_31343",
+  "svs_4469",
+  "svs_4877",
+  "svs_5158",
+  "svs_5366",
+  "svs_5519",
+  "svs_5675"
  ],
  "crops": {},
  "exclude": {},
@@ -344,7 +397,7 @@
      "at": "इन तीनों रास्तों का",
      "opt": "hold",
      "q": [
-      "the expanding universe simulation",
+      "flight through a field of galaxies",
       "dark energy pushing galaxies apart animation"
      ]
     }
@@ -500,7 +553,7 @@
     {
      "at": "उस time तक",
      "q": [
-      "galaxies drifting apart in the expanding universe",
+      "galaxies scattered across deep space",
       "galaxy clusters moving away"
      ]
     },
@@ -526,7 +579,7 @@
     {
      "at": "Big Bang के बाद",
      "q": [
-      "the Big Bang animation expanding from a bright point",
+      "a bright glowing nebula core",
       "the early universe expanding"
      ]
     },
@@ -1216,16 +1269,13 @@
     {
      "at": "लेकिन Caldwell की team",
      "q": [
-      "space expanding violently animation",
+      "a vast glowing nebula",
       "galaxies flying apart"
      ]
     },
     {
      "at": "अगर dark energy की density",
-     "q": [
-      "galaxies drifting apart faster and faster",
-      "expansion of the universe accelerating"
-     ]
+     "gfx": "starfield"
     },
     {
      "at": "इसे Big Rip",
@@ -1237,10 +1287,7 @@
     },
     {
      "at": "Planck satellite के data",
-     "q": [
-      "the Planck satellite in space",
-      "Planck spacecraft animation"
-     ]
+     "gfx": "photo:Planck_sat"
     },
     {
      "at": "शुरुआत में बड़े",
@@ -1277,7 +1324,7 @@
     {
      "at": "हर atom फट",
      "q": [
-      "a flash of light in space",
+      "a bright star flaring in a star field",
       "an explosion of light"
      ]
     },
@@ -1574,7 +1621,7 @@
     {
      "at": "लगता था black holes",
      "q": [
-      "a supermassive black hole animation",
+      "the bright core of a giant galaxy",
       "black hole with a glowing disc"
      ]
     },
@@ -1602,7 +1649,7 @@
     {
      "at": "सालों तक सबको",
      "q": [
-      "a white dwarf star",
+      "a bright white star in a star cluster",
       "a neutron star spinning"
      ]
     },
@@ -1630,7 +1677,7 @@
     {
      "at": "इस हिसाब से आख़िरी",
      "q": [
-      "a cooling white dwarf star",
+      "a small faint star in a dark star field",
       "a small white star fading"
      ]
     },
@@ -1956,7 +2003,7 @@
     {
      "at": "लेकिन दो हज़ार चौबीस",
      "q": [
-      "a 3D galaxy map rotating",
+      "thousands of distant galaxies in a deep field",
       "galaxy survey map"
      ]
     },
@@ -2002,9 +2049,9 @@
     {
      "at": "September दो हज़ार पच्चीस",
      "q": [
-      "a university campus building",
+      "scientists working in a lab",
       "a scientist working at a computer",
-      "a simulation of the universe"
+      "a telescope dome at night"
      ]
     },
     {
@@ -2339,7 +2386,7 @@
     {
      "at": "Collapse के आख़िरी",
      "q": [
-      "the boiling surface of a star",
+      "the Sun's churning surface close up",
       "a star's surface churning with heat"
      ]
     },
@@ -2352,10 +2399,7 @@
     },
     {
      "at": "आख़िरी पल में",
-     "q": [
-      "everything collapsing into a single bright point",
-      "a blinding point of light"
-     ]
+     "gfx": "starfield"
     },
     {
      "at": "Scientists इसे Big Crunch",
@@ -2367,8 +2411,9 @@
     },
     {
      "at": "पुरानी physics के",
+     "opt": "hold",
      "q": [
-      "a black hole singularity animation",
+      "a dark nebula with a bright centre",
       "warped space around a point"
      ]
     },
@@ -2633,7 +2678,7 @@
     {
      "at": "जिस आख़िरी तारे",
      "q": [
-      "a single star fading into darkness",
+      "a single bright star in a dark star field",
       "a lone star in black space"
      ]
     },
