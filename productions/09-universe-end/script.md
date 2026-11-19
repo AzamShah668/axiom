@@ -1,6 +1,6 @@
 # Video 09: How Will the Universe End? (draft 2026-11-19, waiting for the owner)
 
-Script for review: `script.txt` (Hinglish, original). Written with science-script-v2 including §3c (Indian audience
+Script: `script.txt` is now the owner's version (his Gemini draft with the fixes he chose, 2026-11-19); my first draft is `script_draft_claude.txt`. Written with science-script-v2 including §3c (Indian audience
 rules): varied sentence length with short punch lines, spoken numbers, 2 Indian comparisons (a cricket ball thrown
 up; a rush-hour Mumbai local coach), a named person in every chapter, no intro. 1,723 words, about 10.5-11 min with
 Rudra at 1.0x. `script_check.py`: nothing flagged.

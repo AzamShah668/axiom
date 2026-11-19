@@ -1,137 +1,136 @@
-Video 09: How Will the Universe End? (draft 2026-11-19, waiting for the owner)
-Written with science-script-v2 incl. §3c (Indian audience rules). Topic from docs/research/old-hits-2026-11.md:
-Kurzgesagt "Three Ways to Destroy the Universe" (28M, 2014); best Hindi version 73k. Our own script, facts re-checked.
+Video 09: How Will the Universe End? Owner's version (Gemini draft, owner-chosen fixes applied 2026-11-19)
 
 OPENING
-Ek din, yeh poora universe khatam ho jaayega.
-Har taara bujh jaayega, har galaxy bikhar jaayegi, aur aakhir mein shaayad kuch bhi nahi bachega.
-Yeh koi kahaani nahi hai.
-Yeh woh baat hai jo aaj ki physics, telescopes ke data ke saath, seedhe seedhe keh rahi hai.
-Scientists ke paas iske chaar raaste hain.
-Ek mein universe dheere dheere thanda hokar hamesha ke liye andhera ho jaata hai.
-Doosre mein woh khud ko phaad deta hai, galaxies se lekar atoms tak.
-Teesre mein sab kuch wapas simatkar ek point par aa girta hai.
-Aur chauthe mein, bina kisi chetawni ke, roshni ki speed se ek bubble aata hai, aur sab kuch mita deta hai.
-Do hazaar pachchees mein, ek telescope ke data ne in chaaron ki race hi badal di.
-Lekin yeh kahaani shuru hoti hai ek galti se, jo galti nikli hi nahi.
+Ek din is universe ka aakhiri taara bhi bujh jaayega.
+Scientists ke paas universe ke ant ke teen alag raaste hain, aur 2026 ke data ne poori baazi palat di hai.
+Har galaxy, har planet aur har zinda cheez ka aakhiri anjaam inhi teen raaston mein chhupa hai.
+Teeno ke nateeje bilkul alag hain.
+Pehle raaste mein space itni tezi se phailta hai ki har atom tukdon mein phat jaata hai.
+Doosre raaste mein sab kuch barf ki tarah thanda pad jaata hai, aur aakhiri black hole bhi gayab ho jaata hai.
+Teesre raaste mein poora universe wapas simat kar khud ko nigal leta hai.
+In teeno raaston ka faisla ek aisi taaqat ke haath mein hai, jiska pata 1998 mein chala tha.
 
-CHAPTER: THE MISTAKE THAT WASN'T
-Sau saal pehle, Albert Einstein ko yakeen tha ki universe hamesha se ek jaisa hai, na badhta hai, na ghatta hai.
-Unki apni equations kehti thi ki universe ko ya to phailna chahiye ya simatna, isliye unhone usme ek extra number jod diya, jise cosmological constant kehte hain.
-Phir unnees sau untees mein Edwin Hubble ne dikhaya, ki door ki galaxies Earth se door bhaag rahi hain.
-Universe phail raha tha.
-Kaha jaata hai ki Einstein ne baad mein us extra number ko apni sabse badi galti maana.
-Saath saal baad, wahi number ek bilkul alag raaste se wapas aaya.
-Unnees sau nabbe ke dashak mein, astronomers ki do teams ek hi kaam mein lagi thi.
-Ek team ko Saul Perlmutter lead kar rahe the, aur doosri ko Brian Schmidt.
-Dono door ki galaxies mein phatte hue taaron ko dhoondh rahi thi, jinhe supernova kehte hain.
-Ek khaas kism ka supernova hamesha ek jitni roshni deta hai, isliye uski chamak se pata chal jaata hai ki woh kitna door hai.
-Plan seedha tha.
-Big Bang ke baad se universe phail raha hai, aur gravity har cheez ko ek doosre ki taraf kheenchti hai.
-To yeh phailaav dheema hona chahiye tha.
-Bilkul waise hi, jaise seedha upar uchhali gayi cricket ball har pal dheemi hoti jaati hai, aur phir wapas neeche aa jaati hai.
-Scientists bas yeh naapna chahte the, ki yeh ball kitni tezi se dheemi ho rahi hai.
-Lekin data ne kuch aur hi dikhaya.
-Door ke supernova ummeed se zyaada feeke the, yaani woh ummeed se zyaada door the.
-Ball dheemi nahi ho rahi thi.
-Woh aur tez ho rahi thi.
-Schmidt ki team mein data dekh rahe Adam Riess ko laga, ki unse hisaab mein kahin galti ho gayi hai.
-Unhone hafton tak woh galti dhoondhi, lekin galti mili hi nahi.
-Unnees sau atthaanve mein dono teams ne alag alag yahi nateeja chhapa, ki universe ka phailaav tez ho raha hai.
-Do hazaar gyaarah mein Perlmutter, Schmidt aur Riess ko is khoj ke liye Nobel Prize mila.
-Is tezi ke peeche jo cheez hai, uska naam rakha gaya dark energy.
-Aur use samjhaane ka sabse aasaan tareeka nikla, Einstein ka wahi extra number, jise unhone apni galti maana tha.
-Universe ka sattar percent hissa yahi dark energy hai, aur aaj tak koi nahi jaanta ki woh asal mein hai kya.
-Aur universe ka ant isi ek cheez par tika hai.
-Agar dark energy hamesha aisi hi rahi, to pehla raasta khulta hai.
-
-CHAPTER: THE BIG FREEZE
-Ise kehte hain Big Freeze.
-Is raaste mein universe hamesha phailta rahega, aur galaxies ek doosre se itni door chali jaayengi, ki unki roshni kabhi kisi tak pahunchegi hi nahi.
-Sau billion saal baad, aasmaan mein sirf apni galaxy ke taare dikhenge.
-Baaki sab, hamesha ke liye nazar se gaayab.
-Unnees sau sattaanve mein do astronomers, Fred Adams aur Gregory Laughlin, ne universe ke is lambe bhavishya ka poora hisaab lagaya.
-Unke hisaab se sau trillion saal baad, woh gas khatam ho jaayegi jisse taare bante hain.
-Phir jo chhote laal taare bachenge, woh bhi ek ek karke bujh jaayenge.
-Is time ko ek chhota sa hisaab samjhaata hai.
-Agar Big Bang se aaj tak ke terah point aath billion saal ko ek din maan liya jaaye, to taaron ka banna bees saal baad band hoga.
-Uske baad universe mein sirf thande, mare hue taare bachenge, aur black holes.
-Black holes bhi hamesha nahi rahenge.
-Stephen Hawking ne dikhaya tha, ki black holes bhi bahut dheere dheere radiation ke roop mein apna wazan kho dete hain.
-Sabse bade black holes ko khatam hone mein, ten to the power sau se bhi zyaada saal lagenge.
-Aur phir, kuch nahi.
-Na roshni, na garmi, na koi badlaav.
-Universe ek thanda, khaali aur hamesha ke liye shaant andhera ban jaayega, jise scientists heat death kehte hain.
-Yeh ant dheema hai, lekin shaant hai.
-Doosra raasta, iska bilkul ulta hai.
+CHAPTER: THE FALLING BALL
+Unnees sau nabbe ke dashak mein astronomers ki do alag teams door ki galaxies mein phatne wale taaron ko dekh rahi thi.
+Saul Perlmutter, Brian Schmidt aur Adam Riess in Type 1A supernovae ki roshni se universe ki speed naap rahe the.
+Us time tak har scientist ka yahi maanna tha ki universe ka phailaav dheema ho raha hai.
+Iska logic bilkul seedha tha.
+Jab koi cricket ball seedha aasmaan ki taraf phenki jaati hai, toh Earth ki gravity use neeche kheenchti hai.
+Ball upar jaate jaate dheemi hoti hai, aur ek pal ruk kar wapas zameen par gir jaati hai.
+Scientists ko laga tha galaxies ke saath bhi bilkul yahi ho raha hoga.
+Big Bang ke baad sab kuch door bhaag raha hai, lekin gravity use wapas kheench rahi hogi.
+Lekin jab 1998 ka data computer screen par aaya, toh poora hisaab ulta nikla.
+Door ki supernovae ummeed se kahin zyada dhundhli dikh rahi thi.
+Iska matlab tha ki woh galaxies door toh jaa rahi hain, aur unki speed kam hone ke bajaye badh rahi hai.
+Matlab cricket ball hawa mein aur tez hoti jaa rahi thi.
+Yeh baat samajh se baahar thi.
+Is ajeeb acceleration ke peeche jo anjaan taaqat thi, use scientists ne dark energy naam diya.
+Aaj ke hisaab se poore universe ka lagbhag 68 percent hissa isi dark energy se bana hai.
+Is discovery ke liye 2011 mein in teeno scientists ko Physics ka Nobel Prize mila.
+Dilchasp baat yeh hai ki aisi ek taaqat ka khayal Albert Einstein ko 1917 mein hi aa gaya tha.
+Unhone apne equations mein cosmological constant naam ka ek number joda tha.
+Lekin 1929 mein Edwin Hubble ne dikhaya ki universe phail raha hai.
+Einstein ne ise chhod diya.
+Baad mein physicist George Gamow ne daava kiya ki Einstein ise apni sabse badi galti maante the.
+Halanki Einstein ke khud ke likhe kaagazon mein aisa koi saboot nahi milta.
+Jo bhi ho, 1998 ke baad wahi purana idea phir se science ke centre mein aa gaya.
+Ab sabse bada sawaal yeh tha ki agar dark energy aur taaqatwar ho gayi, toh kya hoga.
 
 CHAPTER: THE BIG RIP
-Agar dark energy time ke saath aur taaqatwar hoti gayi, to universe dheere dheere nahi marega.
-Woh khud ko phaad dega.
-Do hazaar teen mein, physicist Robert Caldwell aur unke saathiyon ne is ant ka hisaab chhapa, aur paper ka naam rakha, Phantom Energy and Cosmic Doomsday.
-Unke ek example mein yeh ant aaj se baais billion saal baad aata hai, aur uski ulti ginti kuch aisi hai.
-Ant se saath million saal pehle, Milky Way bikharne lagti hai.
-Teen mahine pehle, planets Suraj se chhoot jaate hain.
-Aakhri aadhe ghante mein, Earth khud phat jaati hai.
-Aur aakhri second ke ek bahut hi chhote hisse mein, atoms bhi toot jaate hain.
-Caldwell ne ek interview mein kaha tha, ki aakhri aadha ghanta bachega zaroor, lekin woh achha time nahi hoga.
-Achhi khabar yeh hai, ki baad ke measurements ne is raaste ko kaafi peeche dhakel diya hai.
-Planck satellite ke data ke hisaab se, agar Big Rip hua bhi, to woh kam se kam do sau billion saal door hai.
-Lekin pichhle saal ek telescope ne kuch aisa dekha, jisne scientists ka dhyaan teesre raaste ki taraf mod diya.
+Saal 2003 mein physicist Robert Caldwell aur unke do saathiyon ne ek daraawna equation solve kiya.
+Ab tak yahi maana jaata tha ki dark energy chahe kitni bhi taaqatwar ho, galaxies hamesha judi rahengi.
+Kyunki galaxies ke andar gravity kaafi mazboot hoti hai.
+Lekin Caldwell ki team ne phantom energy naam ki ek alag tarah ki dark energy ka hisaab lagaya.
+Agar dark energy ki density time ke saath badhti gayi, toh gravity ki pakad dheeli padne lagegi.
+Ise Big Rip naam diya gaya.
+Planck satellite ke data ke hisaab se, agar aisa hua bhi, toh ismein kam se kam 200 billion saal lagenge.
+Shuruaat mein bade galaxy clusters ek doosre se alag ho kar bikhar jaayenge.
+Uske baad Milky Way jaisi akeli galaxies bhi apna aakaar nahi bacha paayengi.
+Har orbit toot jaayegi.
+Taare andhere mein bhatak jaayenge, aur aakhiri kuch mahinon mein planets apne taaron se alag ho jaayenge.
+Kuch minutes pehle, planets aur taare khud andar se phat kar tukdon mein bikhar jaayenge.
+Aakhiri second se bhi kam time mein, space ki speed light se bhi tez ho jaayegi.
+Atoms ko baandh kar rakhne wali nuclear force bhi haar maan legi.
+Har atom phat jaayega.
+Space itni tezi se badhega ki universe ka koi bhi particle doosre particle tak pahunch hi nahi paayega.
+Har ek particle apne aap mein ek akela universe ban kar reh jaayega.
+Lekin zyadaatar scientists ka maanna hai ki phantom energy shayad asliyat mein maujood hi nahi hai.
+Unke hisaab se universe phatega nahi. Woh dheere dheere thanda pad kar khamosh ho jaayega.
 
-CHAPTER: THE BIG CRUNCH
-Arizona mein Kitt Peak naam ke pahaad par, ek telescope par DESI naam ka instrument laga hai.
-Usme paanch hazaar chhote robot hain, jo har baar paanch hazaar alag galaxies ki roshni ek saath pakadte hain.
-Teen saal mein DESI ne teen crore se zyaada galaxies aur quasars ki doori naapi, aur universe ka ab tak ka sabse bada 3D map banaya.
-Do hazaar pachchees mein jab is data ka nateeja aaya, to usme ek ajeeb ishaara tha.
-Dark energy shaayad hamesha ek jaisi nahi hai.
-Woh dheere dheere kamzor ho rahi hai.
-Agar aisa hai, to ek din phailaav ruk sakta hai, aur universe wapas simatne lag sakta hai.
-Ise kehte hain Big Crunch.
-Unnees sau atthaanve ke baad yeh idea lagbhag mar chuka tha, kyunki dark energy universe ko tezi se phaila rahi thi.
-Ab wahi purana idea, phir se zinda ho gaya hai.
-Tab sab kuch ek doosre ki taraf girega, jaise rush hour mein Mumbai local ka coach, jo har station par aur bharta jaata hai, jab tak khade hone ki bhi jagah na bache.
-Galaxies takrayengi, aasmaan garam hota jaayega, aur aakhir mein sab kuch ek point mein sama jaayega, bilkul Big Bang ka ulta.
-Pichhle saal hi Cornell University ke physicist Henry Tye aur unke saathiyon ne isi data se ek hisaab lagaya.
-Unke model mein universe ki poori umar taintees billion saal nikli.
-Yaani aaj se bees billion saal baad, sab khatam.
-Lekin yeh ishaara abhi pakka nahi hai.
-Physics mein kisi khoj ko pakka maanne ke liye jitna bharosa chahiye, DESI ka nateeja abhi wahan tak nahi pahuncha.
-Aur Tye ki team khud kehti hai, ki yeh koi pakka forecast nahi, sirf ek ho sakne waali tasveer hai.
-Yeh teeno raaste arbon saal door hain.
-Lekin chautha raasta, kisi bhi din aa sakta hai.
+CHAPTER: THE LONG FREEZE
+Saal 1852 mein British physicist Lord Kelvin ne universe ke ant ki ek alag tasveer pesh ki thi.
+Unka hisaab thermodynamics ke ek basic niyam par tika tha, jise aaj entropy ke naam se jaana jaata hai.
+Har garam cheez apni garmi baant kar thandi ho jaati hai.
+Kamre mein rakha garam chai ka cup kuch hi minutes mein kamre ke temperature par aa jaata hai.
+Poora universe bhi bilkul isi raaste par chal raha hai.
+Heat Death yahi hai.
+Is scenario mein space phailta rehta hai, aur galaxies itni door chali jaati hain ki dikhna band ho jaati hain.
+Taare banne ke liye jo gas clouds chahiye, woh dheere dheere khatam hone lagte hain.
+Scientists ka andaaza hai ki lagbhag 100 trillion saal baad aakhiri taara bhi bujh jaayega.
+Uske baad andhere mein sirf black holes aur thande pad chuke taare bachenge.
+Lagta tha black holes amar hain.
+Lekin 1974 mein Stephen Hawking ne saabit kiya ki black holes bhi dheere dheere apni energy khote hain.
+Ise Hawking radiation kehte hain.
+Sabse bade supermassive black holes ko poori tarah gayab hone mein lagbhag ten to the power 100 saal lagenge.
+Saalon tak sabko laga ki white dwarfs aur neutron stars isse bhi zyada time tak tike rahenge.
+Unki umr ten to the power 1100 saal maani jaati thi.
+Lekin May 2025 mein Netherlands ke physicist Heino Falcke aur unki team ne is hisaab ko badal diya.
+Unke equations ne dikhaya ki gravity rakhne wali har cheez dheere dheere bhaap ban kar gayab hoti hai.
+Chaand bhi, aur neutron stars bhi.
+Is hisaab se aakhiri white dwarf stars ten to the power 78 saal mein khatam ho jaayenge.
+Ant mein poora universe barabar thanda aur khamosh ho jaayega, jahan koi badlaav nahi hoga.
+Dashakon tak Heat Death ko hi sabse pakka ant maana jaata raha.
+Par Arizona ke ek pahad par lage telescope ne is pakke yakeen mein daraar daal di.
 
-CHAPTER: THE BUBBLE
-Do hazaar baarah mein, Switzerland ki CERN lab mein Higgs boson mila, woh particle jo baaki particles ko wazan deta hai.
-Uska wazan naapne ke baad, physicists ne ek pareshaan karne waali baat dekhi.
-Higgs boson aur top quark ke wazan ke hisaab se, universe ki khaali jagah, jise vacuum kehte hain, shaayad poori tarah stable nahi hai.
-Ek tasveer se yeh baat saaf hoti hai.
-Ek gend pahaad ki dhalaan par, ek chhote se gaddhe mein ruki hui hai.
-Woh aaram se baithi dikhti hai.
-Lekin neeche ek aur gehri ghaati hai.
-Physicists ko lagta hai, ki universe ka vacuum bhi aisi hi gend ho sakta hai.
-Quantum physics ke ajeeb niyam ke hisaab se, kahin bhi, kabhi bhi, woh gend achanak us deewar ke paar nikal sakti hai.
-Agar aisa hua, to wahan ek chhota sa bubble banega, jiske andar physics ke niyam hi alag honge.
-Woh bubble roshni ki speed ke kareeb phailega, aur raaste mein aane waali har cheez, taare, planets aur atoms, sab mita dega.
-Aur kyunki woh roshni jitni tezi se aata hai, uske aane ki khabar pehle pahunch hi nahi sakti.
-Na koi chetawni, na koi dard.
-Bas ek pal, aur sab khatam.
-Do hazaar atthaarah mein Harvard ke physicists Anders Andreassen, William Frost aur Matthew Schwartz ne iska hisaab lagaya.
-Unke hisaab se aisa hone mein, ten to the power sau se bhi zyaada saal lagenge.
-Yeh universe ki ab tak ki umar se bhi kahin, kahin zyaada hai.
-Aur yeh hisaab sirf un particles par tika hai jo ab tak mile hain.
-Agar physics mein koi aur particle chhupa hai, to shaayad yeh bubble kabhi bane hi nahi.
-Aur ek ajeeb baat aur hai.
-Ho sakta hai aisa bubble kahin bahut door ban bhi chuka ho.
-Lekin universe ab itni tezi se phail raha hai, ki bahut door bana bubble kabhi yahan tak pahunch hi nahi paayega.
-Jis dark energy se universe ka ant ho sakta hai, wahi shaayad us bubble se bachaa bhi rahi hai.
+CHAPTER: THE FADING FORCE
+Arizona ke registan mein Kitt Peak pahad par ek 4 meter ka telescope laga hai, jiska naam Mayall Telescope hai.
+Iske andar DESI naam ka ek khaas instrument fit hai.
+DESI mein 5,000 chhote optical fibres lage hain, jo ek saath hazaaron galaxies ki roshni pakadte hain.
+Pichle paanch saalon mein is instrument ne 47 million se zyada galaxies aur quasars ka 3D map banaya hai.
+Iska maksad bilkul saaf tha.
+Scientists dark energy ki taaqat ko pehle se kahin behtar tarike se naapna chahte the.
+Sabhi ko ummeed thi ki dark energy bilkul constant niklegi, jaisa Einstein ke cosmological constant mein tha.
+Lekin 2024 se 2026 ke beech aaye data mein ek alag hi pattern nazar aaya.
+Signals batate hain ki dark energy shayad kamzor pad rahi hai.
+Pichle kuch billion saalon mein iski taaqat lagbhag 10 percent kam hone ke hints mile hain.
+Yeh abhi koi pakki discovery nahi hai.
+Physicists abhi aur data ka intezaar kar rahe hain, taaki is baat ko poori tarah verify kiya jaa sake.
+Lekin agar yeh hint sach saabit hua, toh universe ka ant Heat Death nahi hoga.
+September 2025 mein Cornell University ke physicist Henry Tye aur unke saathiyon ne isi data par ek model banaya.
+Unke hisaab ke mutaabik, universe ki poori umr lagbhag 33 billion saal ho sakti hai.
+Abhi yeh 13.8 billion saal ka hai.
+Yaani apni zindagi ka lagbhag aadha raasta poora ho chuka hai.
+Is model ke hisaab se, agle 11 billion saal mein universe apni sabse badi size par pahunch kar ruk jaayega.
+Uske baad dark energy haar maan legi, aur gravity phir se control apne haath mein le legi.
+Lagbhag 20 billion saal baad, poora universe wapas simat kar ek hi point mein sama jaayega.
+Ek Indian physicist ke equations dikhate hain ki yeh takraav aakhiri manzil nahi hoga.
+
+CHAPTER: THE COSMIC BOUNCE
+Agar dark energy sach mein kamzor pad gayi, toh universe ka phailaav ruk kar ulta chalne lagega.
+Galaxies ek doosre ki taraf tezi se aane lagengi.
+Jaise jaise space chhota hoga, poore universe ka temperature badhta jaayega.
+Har jagah garmi badhegi.
+Collapse ke aakhiri daur mein, space ki radiation itni garam ho jaayegi ki taare baahar se pighalne lagenge.
+Uske baad black holes ek doosre se takra kar aapas mein milne lagenge.
+Aakhiri pal mein poora universe simat kar ek bahut chhote point mein badal jaayega.
+Scientists ise Big Crunch kehte hain.
+Purani physics ke hisaab se, is point par density infinite ho jaati hai aur sab kuch khatam ho jaata hai.
+Einstein ki general relativity yahan aakar kaam karna band kar deti hai.
+Lekin Maharashtra mein janme physicist Abhay Ashtekar ne is aakhiri pal ko alag nazar se dekha.
+Unhone Loop Quantum Cosmology par kaam karte hue quantum mechanics aur gravity ko saath joda.
+Unke equations ne ek ajeeb nateeja dikhaya.
+Is theory ke mutaabik, space bahut chhote quantum tukdon se milkar bana hai.
+Isliye jab universe simat kar ek limit tak pahunchta hai, toh woh aur nahi dab sakta.
+Us hadd par pahunchte hi, gravity kheenchne ke bajaye dhakka dene lagti hai.
+Aur wahin se poora universe wapas baahar ki taraf uchhal padta hai.
+Ise Big Bounce kaha jaata hai.
+Yaani jis Big Bang se hamara universe shuru hua tha, woh shayad kisi pichle universe ka ant tha.
+Abhi tak is theory ka koi seedha saboot nahi mila hai, kyunki aise halat lab mein nahi banaaye jaa sakte.
 
 ENDING
-Ek thanda andhera, ek phata hua aasmaan, wapas simatta hua universe, ya ek bubble jo pal bhar mein sab mita de.
-Inme se kaunsa sach hoga, science abhi tak faisla nahi kar paayi.
-DESI ne apna paanch saal ka kaam poora kar liya hai, aur Euclid jaise space telescope dark energy ko aur baareeki se naap rahe hain.
-Agle kuch saalon mein shaayad pata chal jaaye, ki dark energy sach mein kamzor ho rahi hai ya nahi.
-Ek baat pakki hai.
-Zyaadatar scientists ke hisaab se, jo bhi raasta ho, woh aaj se arbon saal door hai.
-Ek din, yeh poora universe khatam ho jaayega.
-Kaise, yeh shaayad dark energy hi batayegi.
+Dark energy ka aakhiri sach abhi tak kisi ke paas nahi hai.
+Science yeh tay nahi kar paayi hai ki yeh taaqat hamesha ek jaisi rahegi ya dheere dheere khatam ho jaayegi.
+Agar yeh constant rahi, toh universe arbon kharbon saal baad thanda pad kar hamesha ke liye khamosh ho jaayega.
+Aur agar yeh kamzor pad rahi hai, toh gravity poori duniya ko wapas samet kar ek alag universe ki shuruaat kar degi.
+Faisla abhi baaki hai.
+Jis aakhiri taare ke bujhne se yeh kahaani shuru hui thi, uska andhera shayad agle aasmaan ki pehli roshni ban jaaye.
