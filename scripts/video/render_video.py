@@ -284,6 +284,10 @@ def overlay(frame, kind, p):
 
 # ---------------------------------------------------------------- graphics
 def gfx(name, t, D, sh):
+    if name.startswith("board:"):  # evidence-board scene (board.py, owner 2026-11-19); sh = the scene item
+        import board
+        board.W, board.H, board.FPS = W, H, FPS
+        return board.frame(sh["board"], t, D, G["assets"], G["fonts"], key=name)
     p = t / D
     f = starfield(t, dim=0.8)
     if name.split(":")[0] in ("countdown", "stamp", "journal", "compare", "blueprint"):  # gfx_extra.py (owner, 2026-11-19)

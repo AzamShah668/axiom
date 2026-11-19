@@ -107,6 +107,24 @@ From video 05 (owner, 2026-10-27; `productions/README.md`):
      thrown up and falling back. The size is your verified number (`~20 M LONG`).
    - `blueprint:<TITLE>` the dark navy grid with corner brackets (the explainer backdrop).
    Use 2-4 of these per video, on beats where footage can't show the idea; they also fill text-free stretches.
+   **Evidence-board scenes** (`G <trigger> @ board:<name>`, `scripts/video/board.py`, owner 2026-11-19, from the
+   kaz-documentary plugin): one continuous camera over a dark board of pinned photos and typed papers, red strings,
+   hand-drawn red circles, black-tape labels that type on, a stamp, a rolling year card and a thesis card (old idea
+   typed, struck through in red, new answer in serif). For the **history beats** (people, years, a result, a prize):
+   **1-2 scenes of 15-40 s per video**; the space footage stays the base. The scene runs until the next V/G line.
+   - Write `productions/<NN>/boards/<name>.json` (format in board.py's docstring; worked example
+     `productions/09-universe-end/boards/1998.json`). Every time is a Devanagari trigger from that section (searched
+     from the G line's trigger on), `"word+0.3"`, or seconds from the scene start. make_edit.py inlines the file.
+   - Land every mark on its word: circle on the word it proves, strike on the old idea's word, stamp on the name of
+     the thing, pie/underline on the number or prize. One stamp per board. Pull out at the end (`reveal`).
+   - Photos: `$MEDIA/assets/photos/<stem>.jpg` with a credit in `photos/credits.json` (credits.py adds them to the
+     description); list them in `productions/<NN>/assets.json`. People: NASA / LoC / ESO / Internet Archive /
+     Wikimedia Commons (free licences only; Wikimedia often rate-limits the container, never route around it). No
+     free photo -> a typed paper card with the name. Never news, press-agency or Nobel Foundation photos.
+   - Sounds come with it (render_v3 adds them): plugin whoosh on camera moves, typing on labels, marker scratch on
+     circles/underlines/strikes, thud on the stamp and the year card (`kz_*` in sfx.py).
+   - Check stills before the render: `python scripts/video/board.py <resolved.json> <assets> <fonts> out.mp4 t1,t2,..`
+     or render the range with `render_v3.py --range`.
 7. **L lower thirds** for every person the first time the story names them ("KARL SCHWARZSCHILD | German
    astronomer · 1873-1916"). **callout / route / hud** over footage when the shot shows the thing:
    - a ring on Sgr A*

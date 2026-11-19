@@ -167,6 +167,14 @@ Production folder contents:
 - `cutlist.json` (the shots used), `captions.en.srt` (v3 CC track)
 - `youtube.md`, `credits.txt`
 
+## Evidence-board scenes (owner, 2026-11-19)
+- 1-2 per video, 15-40 s, on the history beats (who found it, when, what result, the prize), in the style of the
+  kaz-documentary plugin: pinned photos and typed papers, red strings and circles, typed labels, a stamp, year and
+  thesis cards, one continuous camera. Space footage stays the base (about 75-80% of the video).
+- `G <trigger> @ board:<name>` + `productions/<NN>/boards/<name>.json` (science-edit-plan skill, step 6).
+- Photos of people: free licences only (NASA, Library of Congress, ESO, Internet Archive, Wikimedia Commons). No free
+  photo -> a typed name card.
+
 ## Sound effects: the owner's five (2026-11-06, every video and Short from now on)
 For this -> use this (scripts/video/sfx.py synthesises them, licence-clean; render_v3.py and render_short.py place them):
 - **Hooks** -> bass impact (frame 0 of a Short; the first word of a video's opening)

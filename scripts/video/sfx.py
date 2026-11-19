@@ -18,7 +18,8 @@ SR = 44100
 # level of each sound's loudest 400 ms vs the voice's momentary loudness while speaking (LU)
 LEVEL = {"tick": -20, "pop": -18, "roll": -24, "hit": -8, "impact": -2, "sub_drop": -8, "riser": -7,
          "whoosh": -15, "whoosh_big": -10, "flare": -12, "sting": -3, "boom": -3, "hiss": -14,
-         "bass_impact": -3, "swish_big": -9, "typing": -19, "camera_flash": -10, "bell": -11}
+         "bass_impact": -3, "swish_big": -9, "typing": -19, "camera_flash": -10, "bell": -11,
+         "kz_whoosh": -13, "kz_thud": -5, "kz_shot": -6, "kz_typing": -18, "kz_scratch": -19}
 
 
 # ------------------------------------------------------------------ loudness
@@ -331,9 +332,41 @@ def bell(seed=17):
     x += 0.3 * _bp(_rng(seed).normal(0, 1, len(tt)), 3000, 9000) * np.exp(-tt / 0.004)
     return _norm(_reverb(_st(x), 1.2, 0.2, tone=7000))
 
+# ---- the kaz-documentary plugin's sounds (owner 2026-11-19: "they have better sound effects"); used by board scenes
+def kz_whoosh(d=0.6, seed=21):   # one-pole filtered noise that opens and closes with the swell
+    rng = _rng(seed); n = int(d * SR); r = rng.normal(0, 1, n); env = np.sin(np.linspace(0, np.pi, n)) ** 2
+    y = np.zeros(n); a = 0.0
+    for k in range(n):
+        a += (.02 + .25 * env[k]) * (r[k] - a); y[k] = a
+    return _norm(y * env)
+
+
+def kz_thud(seed=22):            # falling sine knock + a short noise attack (stamps, year cards)
+    rng = _rng(seed); tt = _t(1.2)
+    return _norm(np.sin(2 * np.pi * (70 * np.exp(-tt * 6) + 40) * tt) * np.exp(-tt * 7) + .3 * rng.normal(0, 1, len(tt)) * np.exp(-tt * 40))
+
+
+def kz_shot(seed=23):            # noise burst over a low tone (hard hits)
+    rng = _rng(seed); tt = _t(1.2)
+    return _norm(rng.normal(0, 1, len(tt)) * np.exp(-tt * 9) + .8 * np.sin(2 * np.pi * 55 * tt) * np.exp(-tt * 4))
+
+
+def kz_typing(n=12, seed=24):    # n typewriter clicks at 22 per second (labels typing on)
+    rng = _rng(seed); m = int(.03 * SR); y = np.zeros(int((n / 22 + .1) * SR))
+    for j in range(int(n)):
+        i = int(j / 22 * SR); y[i:i + m] += rng.normal(0, 1, m) * np.exp(-np.arange(m) / SR * 250)
+    return _norm(y)
+
+
+def kz_scratch(d=0.45, seed=25): # marker scratch (red circles, underlines, strike-throughs)
+    rng = _rng(seed); n = int(d * SR)
+    return _norm(rng.normal(0, 1, n) * .5 * (1 + np.sin(np.arange(n) / SR * 90)))
+
+
 KIT = {"tick": tick, "pop": pop, "roll": roll, "hit": hit, "impact": impact, "boom": impact, "sub_drop": sub_drop,
        "riser": riser, "whoosh": whoosh, "whoosh_big": whoosh_big, "flare": flare, "sting": sting, "hiss": hiss,
-       "bass_impact": bass_impact, "swish_big": swish_big, "typing": typing, "camera_flash": camera_flash, "bell": bell}
+       "bass_impact": bass_impact, "swish_big": swish_big, "typing": typing, "camera_flash": camera_flash, "bell": bell,
+       "kz_whoosh": kz_whoosh, "kz_thud": kz_thud, "kz_shot": kz_shot, "kz_typing": kz_typing, "kz_scratch": kz_scratch}
 _CACHE = {}
 
 
