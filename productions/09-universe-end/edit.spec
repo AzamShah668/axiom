@@ -68,9 +68,10 @@ V Einstein ने इसे छोड़ @ a quiet slow drift through dark space
 C Einstein ने इसे छोड़ | Einstein dropped it
 V बाद में physicist @ a distant spiral galaxy | galaxy in deep space
 L George Gamow @ GEORGE GAMOW | physicist · 1904-1968
-K बाद में physicist @ "MY BIGGEST [सबसे] / *BLUNDER*" [ग़लती] | kicker=Gamow's story
+K बाद में physicist @ MY BIGGEST [सबसे] / *BLUNDER* [ग़लती] | kicker=Gamow's story: Einstein called it
 C बाद में physicist | Later, physicist George Gamow claimed Einstein called it his biggest blunder
-G हालाँकि Einstein के @ stamp:UNPROVEN;not in Einstein's own papers
+V हालाँकि Einstein के @ a distant spiral galaxy in deep space | faint galaxies in dark space
+G ऐसा कोई सबूत @ stamp:UNPROVEN;not in Einstein's own papers
 C हालाँकि Einstein के | But Einstein's own papers hold no such evidence
 V जो भी हो @ zooming into a deep field of galaxies | thousands of galaxies
 C जो भी हो | Either way, after 1998 that old idea came back to the centre of science
@@ -153,7 +154,7 @@ V उसके बाद अँधेरे में @ a black hole in empty da
 C उसके बाद अँधेरे में | After that, only black holes and cold dead stars will be left in the dark
 V लगता था black holes @ the bright core of a giant galaxy | black hole with a glowing disc
 C लगता था black holes | Black holes seemed immortal
-V लेकिन उन्नीस सौ चौहत्तर @ a black hole evaporating animation | radiation escaping a black hole
+G लेकिन उन्नीस सौ चौहत्तर @ evaporate
 L Stephen Hawking @ STEPHEN HAWKING | physicist · 1942-2018
 C उन्नीस सौ चौहत्तर | 1974 | big
 C लेकिन उन्नीस सौ चौहत्तर | But in 1974 Stephen Hawking showed that black holes slowly lose their energy too

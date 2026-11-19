@@ -299,6 +299,7 @@
   "pexels_9573759#0",
   "pexels_9665239#0",
   "svs_13237",
+  "svs_13578",
   "svs_13672",
   "svs_13710",
   "svs_13726",
@@ -1053,6 +1054,13 @@
     },
     {
      "at": "हालाँकि Einstein के",
+     "q": [
+      "a distant spiral galaxy in deep space",
+      "faint galaxies in dark space"
+     ]
+    },
+    {
+     "at": "ऐसा कोई सबूत",
      "gfx": "stamp:UNPROVEN;not in Einstein's own papers"
     },
     {
@@ -1211,15 +1219,15 @@
      "at": "बाद में physicist",
      "lines": [
       {
-       "text": "\"MY BIGGEST",
+       "text": "MY BIGGEST",
        "at": "सबसे"
       },
       {
-       "text": "*BLUNDER*\"",
+       "text": "*BLUNDER*",
        "at": "ग़लती"
       }
      ],
-     "kicker": "Gamow's story"
+     "kicker": "Gamow's story: Einstein called it"
     }
    ],
    "n": [
@@ -1627,10 +1635,7 @@
     },
     {
      "at": "लेकिन उन्नीस सौ चौहत्तर",
-     "q": [
-      "a black hole evaporating animation",
-      "radiation escaping a black hole"
-     ]
+     "gfx": "evaporate"
     },
     {
      "at": "इसे Hawking radiation",
