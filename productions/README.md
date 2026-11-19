@@ -21,6 +21,13 @@
 - **Subjects are the characters of the story:** scientists, Earth, the galaxy, insaan / insaaniyat. Avoid "hum/hamara" as a way of addressing the viewer.
 - The narration runs as one continuous story with a cold open. List and countdown structure lives **only on screen** (chapter cards); the voice flows from one fact into the next.
 - Calm, awe-filled documentary tone with steady pacing and no hype.
+- **Indian audience rules (owner, 2026-11-19; details in science-script-v2 §3c):**
+  - Vary sentence length inside the flowing style: a short punch line every 4-6 sentences.
+  - Numbers as people say them ("saadhe teen", "dedh sau", lakh/crore where clearer), metric units.
+  - The read-aloud test: nothing that sounds like a news anchor or Google Translate.
+  - **Indian comparisons allowed in full videos** (2-3 per video: auto-rickshaw, Maruti Swift, cricket pitch, local
+    train coach...), every comparison number verified by search and listed in the fact-check table.
+  - Cultural care: respectful on religion, caste, regions and tragedies; casualty numbers sourced.
 - **Simple, spoken Hindi (owner's rule, 2026-10-21).** Write the way people talk, not the way a textbook reads.
   Every line is heard only once, so a viewer has to understand it on first hearing.
   - Avoid formal, Sanskritised or literary Urdu words, for example कण (particle), घनत्व (density), तत्व
@@ -142,8 +149,8 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   beat-driven music bed, and a curiosity script that stops before the answer and ends on a spoken and written
   "WATCH THE FULL VIDEO". Voice at **1.1x** (owner: 1.2x "too fast" for these). **No suspense stop** (owner: "it kills the rhythm"): the voice flows straight into the twist.
 - **Everyday comparisons are allowed in Shorts hooks and titles** (owner's exception, 2026-10-22), e.g. "Maggi
-  की तरह" for spaghettification. The science term stays, and the full videos stay universal (no India-specific
-  comparisons there).
+  की तरह" for spaghettification. The science term stays. From 2026-11-19 Indian comparisons are allowed in full
+  videos too (see "Indian audience rules" above).
 - **The full video is linked with YouTube Studio's "Related video"** on each Short (links typed into a Short's
   description don't click). The full video must be public first.
 - Uploads stay private until the owner says publish; the footage and music credits go in every Short's description.

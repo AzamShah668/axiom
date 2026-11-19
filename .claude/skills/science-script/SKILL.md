@@ -43,7 +43,7 @@ Production 01 (`productions/01-dark-matter/script.md`) is the reference example.
   - no "aaj hum jaanenge" and no "number 10..."
   - no like/subscribe
 - Questions only belong to characters ("sabse bada sawaal wahin khada hai...").
-- No India-specific comparisons or examples; the channel is about the universe.
+- Indian comparisons are allowed (owner, 2026-11-19): 2-3 per video, numbers verified; see science-script-v2 §3c.
 - Calm, awe-filled documentary tone. Short sentences: every sentence becomes one CC caption and one visual beat.
 - Say numbers so they can land: one number per sentence, near its end ("…जिसका वज़न लगभग चालीस लाख Suns के
   बराबर है।"), so the count-up stops on the spoken word.

@@ -5,8 +5,8 @@ description: Write the script for a science-channel video the owner's improved w
 
 # Science script v2 (stage 1, improved)
 
-Everything in `science-script` still holds (research, fact-check table, Devanagari TTS file, third person, no
-India-specific comparisons, simple spoken Hindi). This skill adds what the owner and two review rounds on video 04
+Everything in `science-script` still holds (research, fact-check table, Devanagari TTS file, third person, simple
+spoken Hindi), except that Indian comparisons are now allowed in full videos (§3c, owner 2026-11-19). This skill adds what the owner and two review rounds on video 04
 taught us. Reference: `productions/04-before-big-bang/` (`script.txt`, `script.md`).
 
 ## 1. Pick the topic from data, not taste
@@ -139,6 +139,31 @@ What professional YouTube writers do; every script from video 08:
 - **Honest twists beat hype:** when a famous claim fell apart (dark flow), say so; it is more gripping.
 - **The owner's read-aloud pass** is the last step: he reads it in his own voice and rewrites what he wouldn't
   say.
+
+## 3c. Indian audience rules (owner, 2026-11-19)
+On top of everything above; they change no stage, visual mode or render step.
+- **Vary sentence length, inside the flow.** Keep the owner's long, flowing spoken sentences, but drop a short punch
+  line (3-7 words) in every 4-6 sentences: "Koi signal nahi." / "Aur phir sab badal gaya." Video 08 had only 2 of 94
+  sentences at 6 words or fewer (05 Voyager: 25), and it read flat. Never three sentences of similar length in a row.
+- **Numbers the way people say them:** "saadhe teen", "dedh sau", "dhai lakh", "paune do" instead of exact decimals,
+  when the exact figure doesn't matter. Metric units. lakh/crore when an Indian-scale number is clearer that way
+  ("das crore black holes"); "billion" stays for astronomy-scale numbers viewers already hear that way. In the
+  Devanagari file write them as spoken words (साढ़े तीन, डेढ़ सौ, ढाई लाख).
+- **The anchor/translate test (read-aloud pass):** if a line sounds like a news anchor or a Google Translate output,
+  rewrite it. Spoken Hinglish is the target: "socho", "lekin", "asli kahani", "yahin se sab badal gaya".
+- **Indian comparisons are welcome in full videos too** (owner, 2026-11-19; before, Shorts only). 2-3 well-chosen
+  ones per video, where they make a scale land instantly:
+  - auto-rickshaw, Maruti Swift / 800, Royal Enfield, a Mumbai local train coach
+  - a cricket pitch (22 yards, about 20 m), a cricket ground, the Western Express Highway, Delhi to Mumbai
+  - two cups of chai, a grain of rice, Maggi (as in the Shorts)
+
+  The science term always stays next to it. **Verify every comparison number by web search** and put it in the
+  fact-check table (e.g. a Maruti Swift is about 3.85 m long), like any other fact.
+- **Cultural care:** respectful tone whenever a story touches religion, caste, regions or real tragedies; no
+  stereotypes; every death toll or casualty number factual and sourced.
+- **Formats (unchanged):** the owner reviews the Roman Hinglish; ElevenLabs reads the Devanagari file (English words
+  stay in Latin letters). Pure Hindi in Devanagari only if the owner asks. On-screen text stays short English labels
+  in Roman script (`20 KM WIDE`, `MYTH`, `CONFIRMED`); dates on screen as `14 July 1916`.
 
 ## 4. Accuracy: say only what is known
 - **Hedge theories.** "scientists ke hisaab se" for inflation; "zyaadatar scientists is daave ko nahi maante"
