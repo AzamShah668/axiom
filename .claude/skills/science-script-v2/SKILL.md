@@ -150,7 +150,8 @@ On top of everything above; they change no stage, visual mode or render step.
   ("das crore black holes"); "billion" stays for astronomy-scale numbers viewers already hear that way. In the
   Devanagari file write them as spoken words (साढ़े तीन, डेढ़ सौ, ढाई लाख).
 - **The anchor/translate test (read-aloud pass):** if a line sounds like a news anchor or a Google Translate output,
-  rewrite it. Spoken Hinglish is the target: "socho", "lekin", "asli kahani", "yahin se sab badal gaya".
+  rewrite it. Spoken Hinglish is the target: "lekin", "asli kahani", "yahin se sab badal gaya" (the narrator still never talks to
+  the viewer, so no "socho"/"samjho" aimed at them).
 - **Indian comparisons are welcome in full videos too** (owner, 2026-11-19; before, Shorts only). 2-3 well-chosen
   ones per video, where they make a scale land instantly:
   - auto-rickshaw, Maruti Swift / 800, Royal Enfield, a Mumbai local train coach
