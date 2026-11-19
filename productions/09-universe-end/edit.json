@@ -1,0 +1,2496 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "cards": {
+  "ch1": [
+   "",
+   "THE FALLING *BALL*"
+  ],
+  "ch2": [
+   "",
+   "THE BIG *RIP*"
+  ],
+  "ch3": [
+   "",
+   "THE LONG *FREEZE*"
+  ],
+  "ch4": [
+   "",
+   "THE FADING *FORCE*"
+  ],
+  "ch5": [
+   "",
+   "THE COSMIC *BOUNCE*"
+  ],
+  "ending": [
+   "",
+   "NO *VERDICT* YET"
+  ]
+ },
+ "count_total": 6,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Interloper.mp3"
+  },
+  {
+   "from": "ch1",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "ch2",
+   "track": "Volatile_Reaction.mp3"
+  },
+  {
+   "from": "ch3",
+   "track": "Ice_Flow.mp3"
+  },
+  {
+   "from": "ch4",
+   "track": "Lost_Frontier.mp3"
+  },
+  {
+   "from": "ch5",
+   "track": "Darkest_Child.mp3"
+  },
+  {
+   "from": "ending",
+   "track": "Long_Note_Three.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "a dark nebula drifting"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [],
+ "crops": {},
+ "exclude": {},
+ "sections": {
+  "opening": {
+   "v": [
+    {
+     "at": null,
+     "opt": "flash",
+     "q": [
+      "a single dim red star fading out in dark empty space",
+      "the last stars of the universe going out"
+     ]
+    },
+    {
+     "at": "Scientists के पास",
+     "q": [
+      "observatory telescopes under a starry night sky",
+      "telescope dome opening at night"
+     ]
+    },
+    {
+     "at": "और दो हज़ार छब्बीस",
+     "q": [
+      "flight through a 3D map of galaxies",
+      "galaxy survey map of the cosmic web"
+     ]
+    },
+    {
+     "at": "हर galaxy, हर planet",
+     "q": [
+      "a spiral galaxy slowly rotating",
+      "planets orbiting a bright star"
+     ]
+    },
+    {
+     "at": "तीनों के नतीजे",
+     "q": [
+      "zooming out through thousands of galaxies",
+      "deep field full of galaxies"
+     ]
+    },
+    {
+     "at": "पहले रास्ते में",
+     "q": [
+      "a galaxy being torn apart animation",
+      "stars ripped apart in a violent explosion"
+     ]
+    },
+    {
+     "at": "दूसरे रास्ते में",
+     "q": [
+      "a cold blue nebula fading into darkness",
+      "dim cooling stars in black space"
+     ]
+    },
+    {
+     "at": "आख़िरी black hole भी",
+     "q": [
+      "a black hole slowly evaporating animation",
+      "a black hole glowing faintly"
+     ]
+    },
+    {
+     "at": "तीसरे रास्ते में",
+     "q": [
+      "galaxies rushing together into a bright point",
+      "the universe collapsing animation"
+     ]
+    },
+    {
+     "at": "इन तीनों रास्तों का",
+     "opt": "hold",
+     "q": [
+      "the expanding universe simulation",
+      "dark energy pushing galaxies apart animation"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "One day, the last star in this universe will go out"
+    },
+    {
+     "at": "Scientists के पास",
+     "text": "Scientists have three different paths for the end of the universe"
+    },
+    {
+     "at": "और दो हज़ार छब्बीस",
+     "text": "and the 2026 data has turned the game around"
+    },
+    {
+     "at": "हर galaxy, हर planet",
+     "text": "The final fate of every galaxy, every planet and every living thing hides in these three paths"
+    },
+    {
+     "at": "तीनों के नतीजे",
+     "text": "And the three outcomes are completely different"
+    },
+    {
+     "at": "पहले रास्ते में",
+     "text": "In the first, space expands so fast that every atom bursts into pieces"
+    },
+    {
+     "at": "दूसरे रास्ते में",
+     "text": "In the second, everything goes cold as ice"
+    },
+    {
+     "at": "आख़िरी black hole भी",
+     "text": "and even the last black hole disappears"
+    },
+    {
+     "at": "तीसरे रास्ते में",
+     "text": "In the third, the whole universe shrinks back and swallows itself"
+    },
+    {
+     "at": "इन तीनों रास्तों का",
+     "text": "Which path we take is in the hands of a force discovered in 1998"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": null,
+     "lines": [
+      {
+       "text": "ONE DAY",
+       "at": "दिन"
+      },
+      {
+       "text": "THE LAST STAR",
+       "at": "आख़िरी"
+      },
+      {
+       "text": "*WILL GO OUT*",
+       "at": "बुझ"
+      }
+     ]
+    },
+    {
+     "at": "पहले रास्ते में",
+     "lines": [
+      {
+       "text": "EVERY ATOM",
+       "at": "atom"
+      },
+      {
+       "text": "*RIPPED APART*",
+       "at": "टुकड़ों"
+      }
+     ],
+     "kicker": "path one"
+    },
+    {
+     "at": "दूसरे रास्ते में",
+     "lines": [
+      {
+       "text": "EVERYTHING",
+       "at": "सब"
+      },
+      {
+       "text": "*FREEZES*",
+       "at": "बर्फ़"
+      }
+     ],
+     "kicker": "path two"
+    },
+    {
+     "at": "तीसरे रास्ते में",
+     "lines": [
+      {
+       "text": "THE UNIVERSE",
+       "at": "universe"
+      },
+      {
+       "text": "*SWALLOWS ITSELF*",
+       "at": "निगल"
+      }
+     ],
+     "kicker": "path three"
+    },
+    {
+     "at": "इन तीनों रास्तों का",
+     "lines": [
+      {
+       "text": "ONE FORCE DECIDES",
+       "at": "फ़ैसला"
+      },
+      {
+       "text": "*FOUND IN 1998*",
+       "at": "अट्ठानवे"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "universe के अंत के तीन",
+     "num": {
+      "template": "hero",
+      "value": "3",
+      "unit": "possible endings",
+      "kicker": "scientists see",
+      "land": "तीन",
+      "dur": "2.4"
+     }
+    }
+   ]
+  },
+  "ch1": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a supernova exploding in a distant galaxy",
+      "a bright stellar explosion"
+     ]
+    },
+    {
+     "at": "Saul Perlmutter",
+     "q": [
+      "a white dwarf star exploding animation",
+      "a type Ia supernova brightening"
+     ]
+    },
+    {
+     "at": "उस time तक",
+     "q": [
+      "galaxies drifting apart in the expanding universe",
+      "galaxy clusters moving away"
+     ]
+    },
+    {
+     "at": "इसका logic",
+     "q": [
+      "planet Earth from space",
+      "the blue Earth slowly turning"
+     ]
+    },
+    {
+     "at": "जब कोई cricket ball",
+     "gfx": "compare:ball;THROWN STRAIGHT UP"
+    },
+    {
+     "at": "Scientists को लगा था",
+     "q": [
+      "a cluster of galaxies held by gravity",
+      "galaxies in a cluster"
+     ]
+    },
+    {
+     "at": "Big Bang के बाद",
+     "q": [
+      "the Big Bang animation expanding from a bright point",
+      "the early universe expanding"
+     ]
+    },
+    {
+     "at": "लेकिन जब उन्नीस सौ अट्ठानवे",
+     "gfx": "board:1998",
+     "board": {
+      "_note": "ch1, 'लेकिन जब उन्नीस सौ अट्ठानवे का data' -> 'Nobel Prize मिला' (owner approved the test 2026-11-19)",
+      "cards": [
+       {
+        "id": "graph",
+        "at": "computer",
+        "pos": [
+         2050,
+         1150
+        ],
+        "rot": 0,
+        "w": 860,
+        "h": 620,
+        "draw": "hubble"
+       },
+       {
+        "id": "teamA",
+        "at": "computer+0.45",
+        "pos": [
+         750,
+         1050
+        ],
+        "rot": -3,
+        "w": 640,
+        "h": 520,
+        "paper": [
+         [
+          "SUPERNOVA",
+          34
+         ],
+         [
+          "COSMOLOGY PROJECT",
+          34
+         ],
+         [
+          "",
+          16
+         ],
+         [
+          "BERKELEY, USA",
+          26
+         ],
+         [
+          "",
+          12
+         ],
+         [
+          "LEAD:",
+          24
+         ],
+         [
+          "SAUL PERLMUTTER",
+          30
+         ]
+        ]
+       },
+       {
+        "id": "riess",
+        "at": "computer+0.4",
+        "pos": [
+         3330,
+         830
+        ],
+        "rot": 4,
+        "w": 420,
+        "photo": "Riess",
+        "crop": [
+         330,
+         60,
+         1050,
+         800
+        ]
+       },
+       {
+        "id": "teamB",
+        "at": "computer+0.7",
+        "pos": [
+         3380,
+         1420
+        ],
+        "rot": 2,
+        "w": 700,
+        "h": 400,
+        "paper": [
+         [
+          "HIGH-Z SUPERNOVA",
+          34
+         ],
+         [
+          "SEARCH TEAM",
+          34
+         ],
+         [
+          "",
+          12
+         ],
+         [
+          "LEAD: BRIAN SCHMIDT",
+          26
+         ],
+         [
+          "WITH: ADAM RIESS",
+          26
+         ]
+        ]
+       },
+       {
+        "id": "sn",
+        "at": "दूर की supernovae-0.2",
+        "pos": [
+         1900,
+         2250
+        ],
+        "rot": -2,
+        "w": 900,
+        "photo": "sn1994d",
+        "crop": [
+         100,
+         600,
+         2500,
+         2500
+        ]
+       },
+       {
+        "id": "pie",
+        "at": "आज के",
+        "pos": [
+         3150,
+         2380
+        ],
+        "rot": 0,
+        "w": 620,
+        "h": 640,
+        "draw": "pie",
+        "title": "TODAY'S UNIVERSE",
+        "pct": 68,
+        "fill_at": "अड़सठ"
+       },
+       {
+        "id": "nobel",
+        "at": "इस discovery+0.2",
+        "pos": [
+         950,
+         2420
+        ],
+        "rot": -2,
+        "w": 760,
+        "h": 500,
+        "paper": [
+         [
+          "NOBEL PRIZE",
+          40
+         ],
+         [
+          "IN PHYSICS, 2011",
+          34
+         ],
+         [
+          "",
+          18
+         ],
+         [
+          "PERLMUTTER",
+          30
+         ],
+         [
+          "SCHMIDT  .  RIESS",
+          30
+         ]
+        ]
+       }
+      ],
+      "camera": [
+       {
+        "at": 0,
+        "look": [
+         2100,
+         1650
+        ],
+        "zoom": 0.4,
+        "drift": 1.075
+       },
+       {
+        "at": "computer-0.6",
+        "look": [
+         2080,
+         1120
+        ],
+        "zoom": 0.53,
+        "drift": 1.075
+       },
+       {
+        "at": "उल्टा-0.37",
+        "look": [
+         2150,
+         1180
+        ],
+        "zoom": 1.05,
+        "rot": -1,
+        "move": 0.6,
+        "drift": 1.07
+       },
+       {
+        "at": "दूर की supernovae-0.1",
+        "look": [
+         1900,
+         2250
+        ],
+        "zoom": 0.95,
+        "rot": 1,
+        "drift": 1.24
+       },
+       {
+        "at": "दूर तो-0.3",
+        "look": [
+         2100,
+         1650
+        ],
+        "zoom": 0.62,
+        "drift": 1.13
+       },
+       {
+        "at": "ये बात",
+        "look": [
+         2150,
+         1700
+        ],
+        "zoom": 0.44,
+        "move": 0.8,
+        "drift": 1.09
+       },
+       {
+        "at": "dark energy नाम-0.8",
+        "look": [
+         2350,
+         1760
+        ],
+        "zoom": 0.8,
+        "rot": -1,
+        "move": 0.5,
+        "drift": 1.06
+       },
+       {
+        "at": "आज के-0.45",
+        "look": [
+         3150,
+         2380
+        ],
+        "zoom": 1.0,
+        "rot": 1,
+        "drift": 1.15
+       },
+       {
+        "at": "इस discovery-0.5",
+        "look": [
+         950,
+         2420
+        ],
+        "zoom": 1.0,
+        "rot": -1,
+        "drift": 1.12
+       },
+       {
+        "at": "Nobel-0.8",
+        "look": [
+         2100,
+         1700
+        ],
+        "zoom": 0.42,
+        "move": 0.9,
+        "drift": 0.95
+       }
+      ],
+      "year": {
+       "at": 0.05,
+       "end": "computer-0.1",
+       "kicker": "THE DATA ARRIVES",
+       "from": 1990,
+       "year": 1998
+      },
+      "tags": [
+       {
+        "on": "riess",
+        "text": "ADAM RIESS",
+        "at": "computer+0.7",
+        "off": [
+         -330,
+         -150
+        ]
+       },
+       {
+        "on": "graph",
+        "uv": [
+         0.76,
+         0.47
+        ],
+        "text": "FARTHER = DIMMER",
+        "at": "उल्टा+0.5",
+        "off": [
+         60,
+         -120
+        ]
+       },
+       {
+        "on": "sn",
+        "uv": [
+         0.82,
+         0.16
+        ],
+        "text": "TYPE IA SUPERNOVA",
+        "at": "दूर की supernovae+0.6",
+        "off": [
+         60,
+         -60
+        ]
+       },
+       {
+        "on": "sn",
+        "uv": [
+         0.223,
+         0.811
+        ],
+        "text": "TOO DIM",
+        "at": "धुंधली+0.3",
+        "off": [
+         90,
+         30
+        ]
+       },
+       {
+        "on": "pie",
+        "uv": [
+         1.0,
+         0.41
+        ],
+        "text": "DARK ENERGY: 68%",
+        "at": "अड़सठ+1.1",
+        "off": [
+         70,
+         -30
+        ]
+       }
+      ],
+      "strings": [
+       {
+        "from": "teamA",
+        "to": "graph",
+        "at": "computer+1.0"
+       },
+       {
+        "from": "teamB",
+        "to": "graph",
+        "at": "computer+1.5"
+       },
+       {
+        "from": "graph",
+        "to": "sn",
+        "at": "दूर की supernovae-0.1"
+       },
+       {
+        "from": "sn",
+        "to": "pie",
+        "at": "आज के-0.35"
+       },
+       {
+        "from": "nobel",
+        "to": "teamA",
+        "at": "Nobel+0.2",
+        "dur": 0.6
+       },
+       {
+        "from": "nobel",
+        "to": "teamB",
+        "at": "Nobel+0.4"
+       }
+      ],
+      "circles": [
+       {
+        "on": "graph",
+        "uv": [
+         0.76,
+         0.47
+        ],
+        "r": [
+         230,
+         150
+        ],
+        "at": "उल्टा-0.05"
+       },
+       {
+        "on": "sn",
+        "uv": [
+         0.223,
+         0.811
+        ],
+        "r": [
+         70,
+         60
+        ],
+        "at": "धुंधली-0.05",
+        "dur": 0.4
+       }
+      ],
+      "underlines": [
+       {
+        "on": "nobel",
+        "uv": [
+         [
+          0.066,
+          0.8
+         ],
+         [
+          0.89,
+          0.8
+         ]
+        ],
+        "at": "Nobel"
+       }
+      ],
+      "stamp": {
+       "text": "DARK ENERGY",
+       "at": "dark energy नाम",
+       "pos": [
+        2350,
+        1760
+       ],
+       "rot": -10
+      },
+      "thesis": {
+       "at": "दूर तो-0.2",
+       "end": "ये बात",
+       "old": "THE UNIVERSE IS SLOWING DOWN",
+       "strike": "speed कम",
+       "new": "IT IS SPEEDING UP",
+       "new_at": "बढ़ रही"
+      },
+      "reveal": "Nobel+0.1"
+     }
+    },
+    {
+     "at": "दिलचस्प बात",
+     "gfx": "journal:February 1917;Einstein adds one number to his equations;a force that pushes space apart;*the cosmological constant*"
+    },
+    {
+     "at": "लेकिन उन्नीस सौ उनतीस",
+     "q": [
+      "an old observatory telescope at night",
+      "galaxies moving away from each other"
+     ]
+    },
+    {
+     "at": "Einstein ने इसे छोड़",
+     "q": [
+      "a quiet slow drift through dark space",
+      "faint stars drifting"
+     ]
+    },
+    {
+     "at": "बाद में physicist",
+     "q": [
+      "a distant spiral galaxy",
+      "galaxy in deep space"
+     ]
+    },
+    {
+     "at": "हालाँकि Einstein के",
+     "gfx": "stamp:UNPROVEN;not in Einstein's own papers"
+    },
+    {
+     "at": "जो भी हो",
+     "q": [
+      "zooming into a deep field of galaxies",
+      "thousands of galaxies"
+     ]
+    },
+    {
+     "at": "अब सबसे बड़ा सवाल",
+     "q": [
+      "the universe expanding faster and faster animation",
+      "galaxies racing apart"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "In the 1990s, two separate teams of astronomers were watching exploding stars in distant galaxies"
+    },
+    {
+     "at": "Saul Perlmutter",
+     "text": "Saul Perlmutter, Brian Schmidt and Adam Riess used the light of these Type Ia supernova explosions to measure the speed of the universe"
+    },
+    {
+     "at": "उस time तक",
+     "text": "Until then, every scientist believed the expansion of the universe was slowing down"
+    },
+    {
+     "at": "इसका logic",
+     "text": "The logic was simple"
+    },
+    {
+     "at": "जब कोई cricket ball",
+     "text": "Throw a cricket ball straight up, and Earth's gravity pulls it back down"
+    },
+    {
+     "at": "Ball ऊपर",
+     "text": "It slows as it rises, stops for a moment, and falls back to the ground"
+    },
+    {
+     "at": "Scientists को लगा था",
+     "text": "Scientists thought galaxies must be doing exactly the same"
+    },
+    {
+     "at": "Big Bang के बाद",
+     "text": "After the Big Bang everything is flying apart, but gravity must be pulling it back"
+    },
+    {
+     "at": "लेकिन जब उन्नीस",
+     "text": "But when the 1998 data came up on the computer screen, the whole calculation came out backwards"
+    },
+    {
+     "at": "दूर की supernovae",
+     "text": "The distant supernova explosions looked much dimmer than expected"
+    },
+    {
+     "at": "इसका मतलब था",
+     "text": "It meant those galaxies were moving away, and their speed was rising instead of falling"
+    },
+    {
+     "at": "मतलब cricket ball",
+     "text": "As if the cricket ball kept speeding up in the air"
+    },
+    {
+     "at": "ये बात समझ से",
+     "text": "It made no sense"
+    },
+    {
+     "at": "इस अजीब",
+     "text": "Scientists named the unknown force behind this strange acceleration dark energy"
+    },
+    {
+     "at": "आज के हिसाब से",
+     "text": "Today, about 68 percent of the whole universe is thought to be this dark energy"
+    },
+    {
+     "at": "इस discovery के लिए",
+     "text": "For this discovery, the three scientists won the 2011 Nobel Prize in Physics"
+    },
+    {
+     "at": "दिलचस्प बात",
+     "text": "Interestingly, Albert Einstein had thought of such a force back in 1917"
+    },
+    {
+     "at": "उन्होंने अपने equations",
+     "text": "He added a number called the cosmological constant to his equations"
+    },
+    {
+     "at": "उन्नीस सौ उनतीस",
+     "text": "1929",
+     "big": true
+    },
+    {
+     "at": "लेकिन उन्नीस सौ उनतीस",
+     "text": "But in 1929 Edwin Hubble showed that the universe is expanding"
+    },
+    {
+     "at": "Einstein ने इसे छोड़",
+     "text": "Einstein dropped it"
+    },
+    {
+     "at": "बाद में physicist",
+     "text": "Later, physicist George Gamow claimed Einstein called it his biggest blunder"
+    },
+    {
+     "at": "हालाँकि Einstein के",
+     "text": "But Einstein's own papers hold no such evidence"
+    },
+    {
+     "at": "जो भी हो",
+     "text": "Either way, after 1998 that old idea came back to the centre of science"
+    },
+    {
+     "at": "अब सबसे बड़ा सवाल",
+     "text": "Now the biggest question was: what happens if dark energy grows stronger?"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "Saul Perlmutter",
+     "lines": [
+      {
+       "text": "PERLMUTTER",
+       "at": "Saul"
+      },
+      {
+       "text": "SCHMIDT",
+       "at": "Brian"
+      },
+      {
+       "text": "*RIESS*",
+       "at": "Adam"
+      }
+     ],
+     "kicker": "the supernova hunters"
+    },
+    {
+     "at": "उस time तक",
+     "lines": [
+      {
+       "text": "THE EXPANSION",
+       "at": "फैलाव"
+      },
+      {
+       "text": "*IS SLOWING DOWN*",
+       "at": "धीमा"
+      }
+     ],
+     "kicker": "what everyone believed"
+    },
+    {
+     "at": "बाद में physicist",
+     "lines": [
+      {
+       "text": "\"MY BIGGEST",
+       "at": "सबसे"
+      },
+      {
+       "text": "*BLUNDER*\"",
+       "at": "ग़लती"
+      }
+     ],
+     "kicker": "Gamow's story"
+    }
+   ],
+   "n": [
+    {
+     "at": "Edwin Hubble",
+     "num": {
+      "template": "name",
+      "value": "EDWIN HUBBLE",
+      "sub": "astronomer · 1929: the universe is expanding"
+     }
+    },
+    {
+     "at": "George Gamow",
+     "num": {
+      "template": "name",
+      "value": "GEORGE GAMOW",
+      "sub": "physicist · 1904-1968"
+     }
+    }
+   ]
+  },
+  "ch2": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "the cosmic web simulation",
+      "dark matter and galaxies simulation"
+     ]
+    },
+    {
+     "at": "अब तक यही माना",
+     "q": [
+      "a cluster of galaxies held together by gravity",
+      "galaxy cluster in deep space"
+     ]
+    },
+    {
+     "at": "क्योंकि galaxies के अंदर",
+     "q": [
+      "a rotating spiral galaxy",
+      "spiral galaxy turning slowly"
+     ]
+    },
+    {
+     "at": "लेकिन Caldwell की team",
+     "q": [
+      "space expanding violently animation",
+      "galaxies flying apart"
+     ]
+    },
+    {
+     "at": "अगर dark energy की density",
+     "q": [
+      "galaxies drifting apart faster and faster",
+      "expansion of the universe accelerating"
+     ]
+    },
+    {
+     "at": "इसे Big Rip",
+     "opt": "hold",
+     "q": [
+      "a galaxy being torn apart",
+      "stars ripped out of a galaxy"
+     ]
+    },
+    {
+     "at": "Planck satellite के data",
+     "q": [
+      "the Planck satellite in space",
+      "Planck spacecraft animation"
+     ]
+    },
+    {
+     "at": "शुरुआत में बड़े",
+     "q": [
+      "galaxy clusters drifting apart",
+      "a cluster of galaxies scattering"
+     ]
+    },
+    {
+     "at": "उसके बाद Milky Way",
+     "q": [
+      "the Milky Way galaxy seen from outside",
+      "our galaxy spiral from above"
+     ]
+    },
+    {
+     "at": "हर orbit टूट",
+     "q": [
+      "planets orbiting a star animation",
+      "a planetary system orbits"
+     ]
+    },
+    {
+     "at": "तारे अँधेरे में",
+     "gfx": "countdown:THE FINAL COUNTDOWN;LAST MONTHS=planets torn from their stars;LAST MINUTES=stars and planets explode;LAST SECOND=space outruns light"
+    },
+    {
+     "at": "Atoms को बाँध",
+     "q": [
+      "particles flying apart animation",
+      "a burst of light breaking into particles"
+     ]
+    },
+    {
+     "at": "हर atom फट",
+     "q": [
+      "a flash of light in space",
+      "an explosion of light"
+     ]
+    },
+    {
+     "at": "Space इतनी तेज़ी से",
+     "q": [
+      "lone glowing particles drifting in darkness",
+      "sparse points of light in empty space"
+     ]
+    },
+    {
+     "at": "हर एक particle",
+     "opt": "hold",
+     "q": [
+      "a single point of light in total darkness",
+      "one faint star in black space"
+     ]
+    },
+    {
+     "at": "लेकिन ज़्यादातर scientists",
+     "q": [
+      "observatory domes under the night sky",
+      "astronomers' telescope at night"
+     ]
+    },
+    {
+     "at": "उनके हिसाब से",
+     "q": [
+      "a quiet galaxy fading slowly",
+      "dim cold stars fading"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "दो हज़ार तीन",
+     "text": "2003",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "In 2003, physicist Robert Caldwell and two colleagues solved a frightening equation"
+    },
+    {
+     "at": "अब तक यही माना",
+     "text": "Until then it was believed that however strong dark energy was, galaxies would always hold together"
+    },
+    {
+     "at": "क्योंकि galaxies के अंदर",
+     "text": "because gravity inside galaxies is strong enough"
+    },
+    {
+     "at": "लेकिन Caldwell की team",
+     "text": "But Caldwell's team worked out a different kind of dark energy, called phantom energy"
+    },
+    {
+     "at": "अगर dark energy की density",
+     "text": "If the density of dark energy kept rising with time, gravity's grip would begin to loosen"
+    },
+    {
+     "at": "Big Rip",
+     "text": "THE BIG RIP",
+     "big": true
+    },
+    {
+     "at": "इसे Big Rip",
+     "text": "They called it the Big Rip"
+    },
+    {
+     "at": "Planck satellite के data",
+     "text": "By the Planck satellite's data, even if it happens, it would take at least 200 billion years"
+    },
+    {
+     "at": "शुरुआत में बड़े",
+     "text": "First, the big galaxy clusters will separate and scatter"
+    },
+    {
+     "at": "उसके बाद Milky Way",
+     "text": "Then even lone galaxies like the Milky Way won't keep their shape"
+    },
+    {
+     "at": "हर orbit टूट",
+     "text": "EVERY ORBIT BREAKS",
+     "big": true
+    },
+    {
+     "at": "हर orbit टूट",
+     "text": "Every orbit will break"
+    },
+    {
+     "at": "तारे अँधेरे में",
+     "text": "Stars will wander into the dark, and in the last few months planets will be pulled away from their stars"
+    },
+    {
+     "at": "कुछ minutes पहले",
+     "text": "A few minutes before the end, planets and stars will burst apart from inside"
+    },
+    {
+     "at": "आख़िरी second से",
+     "text": "In less than the last second, space will grow faster than light"
+    },
+    {
+     "at": "Atoms को बाँध",
+     "text": "Even the nuclear force that holds atoms together will give up"
+    },
+    {
+     "at": "हर atom फट",
+     "text": "Every atom will tear apart"
+    },
+    {
+     "at": "Space इतनी तेज़ी से",
+     "text": "Space will grow so fast that no particle can ever reach another"
+    },
+    {
+     "at": "हर एक particle",
+     "text": "Each particle will be left as a lonely universe of its own"
+    },
+    {
+     "at": "लेकिन ज़्यादातर scientists",
+     "text": "But most scientists think phantom energy probably doesn't exist at all"
+    },
+    {
+     "at": "उनके हिसाब से",
+     "text": "In their view the universe won't rip apart. It will slowly cool down and fall silent"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Robert Caldwell",
+     "num": {
+      "template": "name",
+      "value": "ROBERT CALDWELL",
+      "sub": "physicist, Dartmouth College · 2003"
+     }
+    },
+    {
+     "at": "Planck satellite",
+     "num": {
+      "template": "name",
+      "value": "PLANCK",
+      "sub": "ESA space observatory · 2009-2013"
+     }
+    },
+    {
+     "at": "कम से कम दो सौ",
+     "num": {
+      "template": "hero",
+      "value": "200",
+      "unit": "billion years",
+      "kicker": "if it happens at all, at least",
+      "land": "सौ"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "लेकिन Caldwell की team",
+     "lines": [
+      {
+       "text": "*PHANTOM*",
+       "at": "phantom"
+      },
+      {
+       "text": "ENERGY",
+       "at": "energy"
+      }
+     ],
+     "kicker": "a different dark energy"
+    },
+    {
+     "at": "शुरुआत में बड़े",
+     "lines": [
+      {
+       "text": "FIRST",
+       "at": "शुरुआत"
+      },
+      {
+       "text": "*CLUSTERS SCATTER*",
+       "at": "बिखर"
+      }
+     ]
+    },
+    {
+     "at": "हर atom फट",
+     "lines": [
+      {
+       "text": "EVERY ATOM",
+       "at": "atom"
+      },
+      {
+       "text": "*TEARS APART*",
+       "at": "फट"
+      }
+     ]
+    },
+    {
+     "at": "हर एक particle",
+     "lines": [
+      {
+       "text": "EVERY PARTICLE",
+       "at": "particle"
+      },
+      {
+       "text": "*A UNIVERSE OF ITS OWN*",
+       "at": "अकेला"
+      }
+     ]
+    }
+   ]
+  },
+  "ch3": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a cold blue nebula slowly drifting",
+      "icy blue gas cloud in space"
+     ]
+    },
+    {
+     "at": "उनका हिसाब thermodynamics",
+     "q": [
+      "the Sun's glowing surface",
+      "heat pouring off a star"
+     ]
+    },
+    {
+     "at": "हर गरम चीज़",
+     "q": [
+      "a hot star cooling down",
+      "a red glowing star dimming"
+     ]
+    },
+    {
+     "at": "कमरे में रखा",
+     "num": {
+      "template": "thermo",
+      "value": "25",
+      "from": "90",
+      "unit": "°C",
+      "kicker": "a hot cup of chai cools to",
+      "land": "temperature"
+     },
+     "q": [
+      "a warm glowing nebula",
+      "soft orange gas cloud"
+     ]
+    },
+    {
+     "at": "पूरा universe भी",
+     "q": [
+      "slow flight through a field of galaxies",
+      "drifting past distant galaxies"
+     ]
+    },
+    {
+     "at": "Heat Death यही",
+     "opt": "hold",
+     "q": [
+      "the last stars going out in a dark universe",
+      "a dark empty universe"
+     ]
+    },
+    {
+     "at": "इस scenario में",
+     "q": [
+      "distant galaxies fading into darkness",
+      "galaxies receding"
+     ]
+    },
+    {
+     "at": "तारे बनने के लिए",
+     "q": [
+      "a star-forming gas cloud",
+      "a nebula where stars are born"
+     ]
+    },
+    {
+     "at": "Scientists का अंदाज़ा",
+     "q": [
+      "a dim red dwarf star",
+      "the last faint red star"
+     ]
+    },
+    {
+     "at": "उसके बाद अँधेरे में",
+     "q": [
+      "a black hole in empty darkness",
+      "a dead star in black space"
+     ]
+    },
+    {
+     "at": "लगता था black holes",
+     "q": [
+      "a supermassive black hole animation",
+      "black hole with a glowing disc"
+     ]
+    },
+    {
+     "at": "लेकिन उन्नीस सौ चौहत्तर",
+     "q": [
+      "a black hole evaporating animation",
+      "radiation escaping a black hole"
+     ]
+    },
+    {
+     "at": "इसे Hawking radiation",
+     "q": [
+      "glowing particles escaping a black hole",
+      "a black hole emitting light"
+     ]
+    },
+    {
+     "at": "सबसे बड़े supermassive",
+     "q": [
+      "a supermassive black hole at the heart of a galaxy",
+      "giant black hole in a galaxy centre"
+     ]
+    },
+    {
+     "at": "सालों तक सबको",
+     "q": [
+      "a white dwarf star",
+      "a neutron star spinning"
+     ]
+    },
+    {
+     "at": "लेकिन May दो हज़ार पच्चीस",
+     "q": [
+      "radio telescope dishes at night",
+      "an array of radio telescopes"
+     ]
+    },
+    {
+     "at": "उनके equations ने",
+     "q": [
+      "a neutron star slowly glowing",
+      "a dead star evaporating"
+     ]
+    },
+    {
+     "at": "चाँद भी",
+     "q": [
+      "the Moon",
+      "the full Moon in space"
+     ]
+    },
+    {
+     "at": "इस हिसाब से आख़िरी",
+     "q": [
+      "a cooling white dwarf star",
+      "a small white star fading"
+     ]
+    },
+    {
+     "at": "अंत में पूरा",
+     "opt": "hold",
+     "q": [
+      "completely dark empty space",
+      "a black void with no stars"
+     ]
+    },
+    {
+     "at": "दशकों तक",
+     "q": [
+      "a starry sky over an observatory",
+      "the Milky Way over a telescope"
+     ]
+    },
+    {
+     "at": "पर Arizona के",
+     "q": [
+      "an observatory on a mountain under the night sky",
+      "telescope dome on a mountain at night"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "अठारह सौ बावन",
+     "text": "1852",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "In 1852, British physicist Lord Kelvin painted a different picture of the end of the universe"
+    },
+    {
+     "at": "उनका हिसाब thermodynamics",
+     "text": "His calculation rested on a basic law of thermodynamics, known today as entropy"
+    },
+    {
+     "at": "हर गरम चीज़",
+     "text": "Every hot thing shares its heat and cools down"
+    },
+    {
+     "at": "कमरे में रखा",
+     "text": "A hot cup of chai left in a room reaches room temperature in a few minutes"
+    },
+    {
+     "at": "पूरा universe भी",
+     "text": "The whole universe is on exactly the same road"
+    },
+    {
+     "at": "Heat Death",
+     "text": "HEAT DEATH",
+     "big": true
+    },
+    {
+     "at": "Heat Death यही",
+     "text": "That is the Heat Death"
+    },
+    {
+     "at": "इस scenario में",
+     "text": "Here space keeps expanding, and galaxies drift so far away they can no longer be seen"
+    },
+    {
+     "at": "तारे बनने के लिए",
+     "text": "The gas clouds needed to make new stars slowly run out"
+    },
+    {
+     "at": "Scientists का अंदाज़ा",
+     "text": "Scientists estimate the last star will go out in about 100 trillion years"
+    },
+    {
+     "at": "उसके बाद अँधेरे में",
+     "text": "After that, only black holes and cold dead stars will be left in the dark"
+    },
+    {
+     "at": "लगता था black holes",
+     "text": "Black holes seemed immortal"
+    },
+    {
+     "at": "उन्नीस सौ चौहत्तर",
+     "text": "1974",
+     "big": true
+    },
+    {
+     "at": "लेकिन उन्नीस सौ चौहत्तर",
+     "text": "But in 1974 Stephen Hawking showed that black holes slowly lose their energy too"
+    },
+    {
+     "at": "इसे Hawking radiation",
+     "text": "This is called Hawking radiation"
+    },
+    {
+     "at": "सबसे बड़े supermassive",
+     "text": "The biggest supermassive black holes will take about ten to the power 100 years to vanish completely"
+    },
+    {
+     "at": "सालों तक सबको",
+     "text": "For years everyone thought white dwarfs and neutron stars would last even longer"
+    },
+    {
+     "at": "उनकी उम्र ten",
+     "text": "Their lifetime was put at ten to the power 1,100 years"
+    },
+    {
+     "at": "May दो हज़ार पच्चीस",
+     "text": "MAY 2025",
+     "big": true
+    },
+    {
+     "at": "लेकिन May दो हज़ार पच्चीस",
+     "text": "But in May 2025, Dutch physicist Heino Falcke and his team changed that calculation"
+    },
+    {
+     "at": "उनके equations ने",
+     "text": "Their equations showed that everything with gravity slowly evaporates away"
+    },
+    {
+     "at": "चाँद भी",
+     "text": "EVEN THE MOON",
+     "big": true
+    },
+    {
+     "at": "चाँद भी",
+     "text": "The Moon too, and neutron stars too"
+    },
+    {
+     "at": "इस हिसाब से आख़िरी",
+     "text": "By this count, the last white dwarf stars will be gone in ten to the power 78 years"
+    },
+    {
+     "at": "अंत में पूरा",
+     "text": "In the end the whole universe will be evenly cold and silent, where nothing ever changes"
+    },
+    {
+     "at": "दशकों तक",
+     "text": "For decades, Heat Death was seen as the surest ending"
+    },
+    {
+     "at": "पर Arizona के",
+     "text": "But a telescope on a mountain in Arizona cracked that certainty"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Lord Kelvin",
+     "num": {
+      "template": "name",
+      "value": "LORD KELVIN",
+      "sub": "British physicist · 1824-1907"
+     }
+    },
+    {
+     "at": "लगभग सौ trillion",
+     "num": {
+      "template": "hero",
+      "value": "100",
+      "unit": "trillion years",
+      "kicker": "the last star goes out in about",
+      "land": "सौ"
+     }
+    },
+    {
+     "at": "Stephen Hawking",
+     "num": {
+      "template": "name",
+      "value": "STEPHEN HAWKING",
+      "sub": "physicist · 1942-2018"
+     }
+    },
+    {
+     "at": "लगभग ten to the power सौ",
+     "num": {
+      "template": "hero",
+      "value": "10¹⁰⁰",
+      "unit": "years",
+      "kicker": "the biggest black holes vanish in about",
+      "land": "सौ"
+     }
+    },
+    {
+     "at": "उनकी उम्र ten",
+     "num": {
+      "template": "hero",
+      "value": "10¹¹⁰⁰",
+      "unit": "years",
+      "kicker": "their life, it was thought",
+      "land": "ग्यारह"
+     }
+    },
+    {
+     "at": "Heino Falcke",
+     "num": {
+      "template": "name",
+      "value": "HEINO FALCKE",
+      "sub": "astrophysicist, Radboud University · Netherlands"
+     }
+    },
+    {
+     "at": "ten to the power अठहत्तर",
+     "num": {
+      "template": "hero",
+      "value": "10⁷⁸",
+      "unit": "years",
+      "kicker": "the last white dwarfs are gone in",
+      "land": "अठहत्तर"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "उनका हिसाब thermodynamics",
+     "lines": [
+      {
+       "text": "*ENTROPY*",
+       "at": "entropy"
+      }
+     ],
+     "kicker": "a basic law of heat"
+    },
+    {
+     "at": "इसे Hawking radiation",
+     "lines": [
+      {
+       "text": "*HAWKING*",
+       "at": "Hawking"
+      },
+      {
+       "text": "RADIATION",
+       "at": "radiation"
+      }
+     ]
+    },
+    {
+     "at": "उनके equations ने",
+     "lines": [
+      {
+       "text": "EVERYTHING",
+       "at": "हर"
+      },
+      {
+       "text": "*EVAPORATES*",
+       "at": "भाप"
+      }
+     ]
+    },
+    {
+     "at": "अंत में पूरा",
+     "lines": [
+      {
+       "text": "COLD",
+       "at": "ठंडा"
+      },
+      {
+       "text": "*SILENT*",
+       "at": "ख़ामोश"
+      },
+      {
+       "text": "FOREVER",
+       "at": "बदलाव"
+      }
+     ]
+    }
+   ]
+  },
+  "ch4": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "an observatory on a desert mountain at night",
+      "a large telescope dome under the stars"
+     ]
+    },
+    {
+     "at": "इसके अंदर डेज़ी",
+     "q": [
+      "inside a large telescope dome",
+      "a telescope mirror and instrument"
+     ]
+    },
+    {
+     "at": "डेज़ी में पाँच हज़ार",
+     "q": [
+      "a telescope pointing at a field of galaxies",
+      "thousands of galaxies in one view"
+     ]
+    },
+    {
+     "at": "पिछले पाँच सालों में",
+     "opt": "hold",
+     "q": [
+      "flight through a 3D map of galaxies",
+      "the cosmic web of galaxies"
+     ]
+    },
+    {
+     "at": "इसका मक़सद",
+     "q": [
+      "a spiral galaxy in deep space",
+      "a distant galaxy"
+     ]
+    },
+    {
+     "at": "Scientists dark energy की",
+     "q": [
+      "the expanding universe animation",
+      "galaxies moving apart"
+     ]
+    },
+    {
+     "at": "सभी को उम्मीद थी",
+     "q": [
+      "a calm star field",
+      "slow drift through stars"
+     ]
+    },
+    {
+     "at": "लेकिन दो हज़ार चौबीस",
+     "q": [
+      "a 3D galaxy map rotating",
+      "galaxy survey map"
+     ]
+    },
+    {
+     "at": "Signals बताते हैं",
+     "q": [
+      "a fading glow in deep space",
+      "galaxies drifting in darkness"
+     ]
+    },
+    {
+     "at": "पिछले कुछ billion",
+     "num": {
+      "template": "hero",
+      "value": "10",
+      "unit": "% weaker",
+      "kicker": "hints, over the last few billion years",
+      "land": "दस"
+     },
+     "q": [
+      "a faint galaxy fading",
+      "dim distant galaxies"
+     ]
+    },
+    {
+     "at": "ये अभी कोई पक्की",
+     "gfx": "stamp:NOT CONFIRMED YET;a hint, not a discovery"
+    },
+    {
+     "at": "Physicists अभी और",
+     "q": [
+      "a telescope dome opening at night",
+      "observatory under the stars"
+     ]
+    },
+    {
+     "at": "लेकिन अगर ये hint",
+     "q": [
+      "galaxies slowing down and turning back",
+      "the universe changing direction"
+     ]
+    },
+    {
+     "at": "September दो हज़ार पच्चीस",
+     "q": [
+      "a simulation of the universe",
+      "cosmic web simulation"
+     ]
+    },
+    {
+     "at": "उनके हिसाब के मुताबिक़",
+     "q": [
+      "the universe from Big Bang to today animation",
+      "the history of the universe timeline"
+     ]
+    },
+    {
+     "at": "अभी ये तेरह",
+     "q": [
+      "the deep field of distant galaxies",
+      "Hubble ultra deep field"
+     ]
+    },
+    {
+     "at": "यानी अपनी ज़िंदगी",
+     "q": [
+      "a galaxy in the middle of its life",
+      "a spiral galaxy"
+     ]
+    },
+    {
+     "at": "इस model के हिसाब से",
+     "q": [
+      "the expanding universe slowing to a stop",
+      "galaxies drifting slower"
+     ]
+    },
+    {
+     "at": "उसके बाद dark energy हार",
+     "q": [
+      "galaxies turning back towards each other",
+      "gravity pulling galaxies together"
+     ]
+    },
+    {
+     "at": "लगभग बीस billion",
+     "q": [
+      "galaxies rushing together into a bright point",
+      "the universe collapsing"
+     ]
+    },
+    {
+     "at": "एक Indian physicist",
+     "q": [
+      "India from space at night",
+      "Earth at night with city lights"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": "Kitt Peak",
+     "text": "KITT PEAK, ARIZONA",
+     "big": true
+    },
+    {
+     "at": null,
+     "text": "On Kitt Peak in the Arizona desert stands a four-metre telescope called the Mayall Telescope"
+    },
+    {
+     "at": "इसके अंदर डेज़ी",
+     "text": "Inside it sits a special instrument called DESI"
+    },
+    {
+     "at": "डेज़ी में पाँच हज़ार",
+     "text": "DESI has 5,000 small optical fibres that catch the light of thousands of galaxies at once"
+    },
+    {
+     "at": "पिछले पाँच सालों में",
+     "text": "In the last five years it has mapped more than 47 million galaxies and quasars in 3D"
+    },
+    {
+     "at": "इसका मक़सद",
+     "text": "Its goal was clear"
+    },
+    {
+     "at": "Scientists dark energy की",
+     "text": "Scientists wanted to measure the strength of dark energy better than ever"
+    },
+    {
+     "at": "सभी को उम्मीद थी",
+     "text": "Everyone expected dark energy to come out perfectly constant, like Einstein's cosmological constant"
+    },
+    {
+     "at": "दो हज़ार चौबीस से",
+     "text": "2024 - 2026",
+     "big": true
+    },
+    {
+     "at": "लेकिन दो हज़ार चौबीस",
+     "text": "But the data from 2024 to 2026 showed a different pattern"
+    },
+    {
+     "at": "Signals बताते हैं",
+     "text": "The signals suggest dark energy may be weakening"
+    },
+    {
+     "at": "पिछले कुछ billion",
+     "text": "There are hints its strength has dropped by about ten percent over the last few billion years"
+    },
+    {
+     "at": "ये अभी कोई पक्की",
+     "text": "This is not a confirmed discovery yet"
+    },
+    {
+     "at": "Physicists अभी और",
+     "text": "Physicists are waiting for more data to check it fully"
+    },
+    {
+     "at": "लेकिन अगर ये hint",
+     "text": "But if this hint turns out true, the universe won't end in Heat Death"
+    },
+    {
+     "at": "September दो हज़ार पच्चीस",
+     "text": "SEPTEMBER 2025",
+     "big": true
+    },
+    {
+     "at": "September दो हज़ार पच्चीस",
+     "text": "In September 2025, Cornell physicist Henry Tye and colleagues built a model on this same data"
+    },
+    {
+     "at": "उनके हिसाब के मुताबिक़",
+     "text": "By their calculation, the universe's whole life may be about 33 billion years"
+    },
+    {
+     "at": "अभी ये तेरह",
+     "text": "Right now it is 13.8 billion years old"
+    },
+    {
+     "at": "यानी अपनी ज़िंदगी",
+     "text": "So it has already lived about half its life"
+    },
+    {
+     "at": "इस model के हिसाब से",
+     "text": "In this model the universe reaches its largest size in the next 11 billion years, then stops"
+    },
+    {
+     "at": "उसके बाद dark energy हार",
+     "text": "Then dark energy gives up, and gravity takes control again"
+    },
+    {
+     "at": "लगभग बीस billion",
+     "text": "After about 20 billion years, the whole universe would shrink back into a single point"
+    },
+    {
+     "at": "एक Indian physicist",
+     "text": "An Indian physicist's equations show this crash would not be the final stop"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "जिसका नाम Mayall",
+     "num": {
+      "template": "name",
+      "value": "MAYALL TELESCOPE",
+      "sub": "4-metre telescope · Kitt Peak, Arizona"
+     }
+    },
+    {
+     "at": "डेज़ी में पाँच हज़ार",
+     "num": {
+      "template": "hero",
+      "value": "5,000",
+      "unit": "optical fibres",
+      "kicker": "one galaxy each",
+      "land": "हज़ार"
+     }
+    },
+    {
+     "at": "सैंतालीस million",
+     "num": {
+      "template": "hero",
+      "value": "47,000,000",
+      "unit": "galaxies and quasars",
+      "kicker": "mapped in 3D",
+      "land": "सैंतालीस"
+     }
+    },
+    {
+     "at": "Henry Tye",
+     "num": {
+      "template": "name",
+      "value": "HENRY TYE",
+      "sub": "physicist, Cornell University"
+     }
+    },
+    {
+     "at": "लगभग तैंतीस billion",
+     "num": {
+      "template": "hero",
+      "value": "33",
+      "unit": "billion years",
+      "kicker": "the universe's whole life, maybe",
+      "land": "तैंतीस"
+     }
+    },
+    {
+     "at": "अभी ये तेरह",
+     "num": {
+      "template": "hero",
+      "value": "13.8",
+      "unit": "billion years old",
+      "kicker": "the universe today",
+      "land": "आठ"
+     }
+    },
+    {
+     "at": "अगले ग्यारह billion",
+     "num": {
+      "template": "hero",
+      "value": "11",
+      "unit": "billion years",
+      "kicker": "biggest size, in about",
+      "land": "ग्यारह"
+     }
+    },
+    {
+     "at": "लगभग बीस billion",
+     "num": {
+      "template": "hero",
+      "value": "20",
+      "unit": "billion years",
+      "kicker": "back to a single point in about",
+      "land": "बीस"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "इसके अंदर डेज़ी",
+     "lines": [
+      {
+       "text": "*DESI*",
+       "at": "डेज़ी"
+      }
+     ],
+     "sub": "Dark Energy Spectroscopic Instrument"
+    },
+    {
+     "at": "सभी को उम्मीद थी",
+     "lines": [
+      {
+       "text": "DARK ENERGY",
+       "at": "dark"
+      },
+      {
+       "text": "*CONSTANT*",
+       "at": "constant"
+      }
+     ],
+     "kicker": "what everyone expected"
+    },
+    {
+     "at": "Signals बताते हैं",
+     "lines": [
+      {
+       "text": "DARK ENERGY",
+       "at": "dark"
+      },
+      {
+       "text": "*MAY BE WEAKENING*",
+       "at": "कमज़ोर"
+      }
+     ]
+    },
+    {
+     "at": "यानी अपनी ज़िंदगी",
+     "lines": [
+      {
+       "text": "*HALFWAY*",
+       "at": "आधा"
+      },
+      {
+       "text": "THROUGH ITS LIFE",
+       "at": "पूरा"
+      }
+     ],
+     "kicker": "if Tye is right"
+    },
+    {
+     "at": "एक Indian physicist",
+     "lines": [
+      {
+       "text": "NOT THE",
+       "at": "आख़िरी"
+      },
+      {
+       "text": "*LAST STOP*",
+       "at": "मंज़िल"
+      }
+     ],
+     "kicker": "an Indian physicist's equations"
+    }
+   ]
+  },
+  "ch5": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "galaxies rushing towards each other",
+      "two galaxies colliding"
+     ]
+    },
+    {
+     "at": "Galaxies एक दूसरे",
+     "q": [
+      "a galaxy collision animation",
+      "galaxies merging"
+     ]
+    },
+    {
+     "at": "जैसे जैसे space",
+     "q": [
+      "a glowing hot red nebula",
+      "a fiery cloud of gas"
+     ]
+    },
+    {
+     "at": "हर जगह गर्मी",
+     "q": [
+      "a blazing star field",
+      "glowing hot gas everywhere"
+     ]
+    },
+    {
+     "at": "Collapse के आख़िरी",
+     "q": [
+      "the boiling surface of a star",
+      "a star's surface churning with heat"
+     ]
+    },
+    {
+     "at": "उसके बाद black holes",
+     "q": [
+      "two black holes merging animation",
+      "black holes spiralling together"
+     ]
+    },
+    {
+     "at": "आख़िरी पल में",
+     "q": [
+      "everything collapsing into a single bright point",
+      "a blinding point of light"
+     ]
+    },
+    {
+     "at": "Scientists इसे Big Crunch",
+     "opt": "hold",
+     "q": [
+      "a brilliant flash at the centre of space",
+      "an intense burst of light"
+     ]
+    },
+    {
+     "at": "पुरानी physics के",
+     "q": [
+      "a black hole singularity animation",
+      "warped space around a point"
+     ]
+    },
+    {
+     "at": "Einstein की general",
+     "gfx": "spacetime"
+    },
+    {
+     "at": "लेकिन महाराष्ट्र में",
+     "q": [
+      "India from space",
+      "the Indian subcontinent seen from orbit"
+     ]
+    },
+    {
+     "at": "उन्होंने Loop Quantum",
+     "q": [
+      "a glowing web of light in space",
+      "the cosmic web glowing"
+     ]
+    },
+    {
+     "at": "उनके equations ने",
+     "q": [
+      "a strange glowing structure in space",
+      "swirling light in a nebula"
+     ]
+    },
+    {
+     "at": "इस theory के मुताबिक़",
+     "q": [
+      "a grid of glowing points of light",
+      "a fine web of light"
+     ]
+    },
+    {
+     "at": "इसलिए जब universe",
+     "q": [
+      "the universe collapsing to a point",
+      "galaxies squeezed together"
+     ]
+    },
+    {
+     "at": "उस हद पर पहुँचते",
+     "q": [
+      "an explosion of light expanding outward",
+      "a burst of light from a point"
+     ]
+    },
+    {
+     "at": "और वहीं से पूरा",
+     "opt": "hold",
+     "q": [
+      "the Big Bang expanding outward animation",
+      "the early universe expanding"
+     ]
+    },
+    {
+     "at": "इसे Big Bounce",
+     "q": [
+      "galaxies forming in the young universe",
+      "the first galaxies"
+     ]
+    },
+    {
+     "at": "यानी जिस Big Bang",
+     "gfx": "cmb_map"
+    },
+    {
+     "at": "अभी तक इस theory",
+     "gfx": "stamp:NO PROOF YET;these conditions can't be made in a lab"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "If dark energy really weakens, the expansion will stop and run backwards"
+    },
+    {
+     "at": "Galaxies एक दूसरे",
+     "text": "Galaxies will come racing towards each other"
+    },
+    {
+     "at": "जैसे जैसे space",
+     "text": "As space shrinks, the temperature of the whole universe keeps rising"
+    },
+    {
+     "at": "हर जगह गर्मी",
+     "text": "It gets hotter everywhere"
+    },
+    {
+     "at": "Collapse के आख़िरी",
+     "text": "In the last stage of the collapse, radiation in space gets so hot that stars begin melting from the outside"
+    },
+    {
+     "at": "उसके बाद black holes",
+     "text": "Then black holes will collide and merge with each other"
+    },
+    {
+     "at": "आख़िरी पल में",
+     "text": "In the final moment, the whole universe shrinks into a tiny point"
+    },
+    {
+     "at": "Big Crunch",
+     "text": "THE BIG CRUNCH",
+     "big": true
+    },
+    {
+     "at": "Scientists इसे Big Crunch",
+     "text": "Scientists call this the Big Crunch"
+    },
+    {
+     "at": "infinite",
+     "text": "INFINITE",
+     "big": true
+    },
+    {
+     "at": "पुरानी physics के",
+     "text": "In the old physics, density becomes infinite at this point and everything ends"
+    },
+    {
+     "at": "Einstein की general",
+     "text": "Einstein's general relativity stops working here"
+    },
+    {
+     "at": "लेकिन महाराष्ट्र में",
+     "text": "But Maharashtra-born physicist Abhay Ashtekar saw this final moment differently"
+    },
+    {
+     "at": "उन्होंने Loop Quantum",
+     "text": "Working on Loop Quantum Cosmology, he brought quantum mechanics and gravity together"
+    },
+    {
+     "at": "उनके equations ने",
+     "text": "His equations gave a strange result"
+    },
+    {
+     "at": "इस theory के मुताबिक़",
+     "text": "In this theory, space is built from tiny quantum pieces"
+    },
+    {
+     "at": "इसलिए जब universe",
+     "text": "So when the universe shrinks down to a limit, it can't be squeezed any further"
+    },
+    {
+     "at": "उस हद पर पहुँचते",
+     "text": "At that limit, gravity starts pushing instead of pulling"
+    },
+    {
+     "at": "और वहीं से पूरा",
+     "text": "And from there the whole universe bounces back outward"
+    },
+    {
+     "at": "Big Bounce",
+     "text": "THE BIG BOUNCE",
+     "big": true
+    },
+    {
+     "at": "इसे Big Bounce",
+     "text": "This is called the Big Bounce"
+    },
+    {
+     "at": "यानी जिस Big Bang",
+     "text": "So the Big Bang that began our universe may have been the end of an earlier one"
+    },
+    {
+     "at": "अभी तक इस theory",
+     "text": "There is no direct proof of this theory yet, because such conditions can't be created in a lab"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "जैसे जैसे space",
+     "lines": [
+      {
+       "text": "THE UNIVERSE",
+       "at": "universe"
+      },
+      {
+       "text": "*HEATS UP*",
+       "at": "temperature"
+      }
+     ]
+    },
+    {
+     "at": "उन्होंने Loop Quantum",
+     "lines": [
+      {
+       "text": "LOOP QUANTUM",
+       "at": "Loop"
+      },
+      {
+       "text": "*COSMOLOGY*",
+       "at": "Cosmology"
+      }
+     ]
+    },
+    {
+     "at": "उस हद पर पहुँचते",
+     "lines": [
+      {
+       "text": "GRAVITY",
+       "at": "gravity"
+      },
+      {
+       "text": "*PUSHES BACK*",
+       "at": "धक्का"
+      }
+     ]
+    }
+   ],
+   "n": [
+    {
+     "at": "अभय अष्टेकर",
+     "num": {
+      "template": "name",
+      "value": "ABHAY ASHTEKAR",
+      "sub": "physicist, born in Maharashtra · Penn State"
+     }
+    }
+   ]
+  },
+  "ending": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a faint galaxy alone in dark space",
+      "a slow drift through dark space"
+     ]
+    },
+    {
+     "at": "Science ये तय नहीं",
+     "q": [
+      "an observatory telescope at night",
+      "telescope dome under the Milky Way"
+     ]
+    },
+    {
+     "at": "अगर ये constant रही",
+     "q": [
+      "the last stars fading in a cold universe",
+      "dim stars going dark"
+     ]
+    },
+    {
+     "at": "और अगर ये कमज़ोर",
+     "q": [
+      "galaxies falling back together",
+      "the universe collapsing and a new one beginning"
+     ]
+    },
+    {
+     "at": "फ़ैसला अभी बाक़ी",
+     "q": [
+      "a telescope dome opening at night",
+      "astronomers' observatory under the stars"
+     ]
+    },
+    {
+     "at": "जिस आख़िरी तारे",
+     "q": [
+      "a single star fading into darkness",
+      "a lone star in black space"
+     ]
+    },
+    {
+     "at": "अगले आसमान की",
+     "opt": "hold",
+     "q": [
+      "the first light of the early universe",
+      "a bright dawn of stars being born"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Nobody yet has the final truth about dark energy"
+    },
+    {
+     "at": "Science ये तय नहीं",
+     "text": "Science hasn't decided whether this force stays the same forever or slowly fades away"
+    },
+    {
+     "at": "अगर ये constant रही",
+     "text": "If it stays constant, the universe will cool down over trillions of years and fall silent forever"
+    },
+    {
+     "at": "और अगर ये कमज़ोर",
+     "text": "And if it is weakening, gravity will gather everything back and begin a different universe"
+    },
+    {
+     "at": "फ़ैसला अभी बाक़ी",
+     "text": "The verdict is still open"
+    },
+    {
+     "at": "जिस आख़िरी तारे",
+     "text": "The darkness of the last star, where this story began,"
+    },
+    {
+     "at": "अगले आसमान की",
+     "text": "may become the first light of the next sky"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "फ़ैसला अभी बाक़ी",
+     "lines": [
+      {
+       "text": "THE VERDICT",
+       "at": "फ़ैसला"
+      },
+      {
+       "text": "*IS STILL OPEN*",
+       "at": "बाक़ी"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
