@@ -84,6 +84,10 @@
   "Arecibo": {
    "use": "एरेसिबो",
    "why": "probe 2026-11-09 (video 06): heard as 'KRS Cibo'"
+  },
+  "supernovae": {
+   "use": "supernova",
+   "why": "owner, 2026-11-19: the voice reads the silent 'e' oddly; always write supernova (also for the plural)"
   }
  },
  "acronyms_ok": [

@@ -128,6 +128,7 @@ Give the owner:
   - naye / nayi / nae (नए, नई) → alag / abhi abhi bane / rephrase (the voice says it like "nahi")
   - goonj → never use it (the owner dislikes it)
   - sarsarahat → signal / aawaaz
+  - supernovae → supernova (also for the plural; the voice reads the silent "e" oddly)
 - **The read-aloud test:** if a line sounds like a news anchor or Google Translate, rewrite it.
 
 ### 5.4 Rhythm
