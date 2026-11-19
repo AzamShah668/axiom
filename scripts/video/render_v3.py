@@ -482,7 +482,7 @@ def plan(edit, tl, voice_wav=None):
         music.append({"t": 0.0, "track": intro["track"], "gain": intro.get("gain", 0.0), "start": intro.get("start", 0.0)})
     for i, m in enumerate(edit.get("music", [])):
         t0 = (float(intro["dur"]) if intro and intro.get("track") else 0.0) if i == 0 else starts[m["from"]] - 1.5
-        music.append({"t": t0, "track": m["track"], "gain": m.get("gain", 0.0)})
+        music.append({"t": t0, "track": m["track"], "gain": m.get("gain", 0.0), **({"start": m["start"]} if "start" in m else {})})
     return {"style": "v3", "items": items, "ovl": ovl, "caps": caps, "sfx": sfx, "mus": mus, "music": music,
             "breaths": T.breaths, "total": total, "off": T.off, "grade": edit.get("grade", {}), "sfx_kit": edit.get("sfx_kit", "kaz")}
 

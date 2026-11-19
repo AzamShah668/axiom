@@ -31,33 +31,9 @@
  "music": [
   {
    "from": "opening",
-   "track": "Hitman.mp3",
-   "gain": 4.0
-  },
-  {
-   "from": "ch1",
-   "track": "Echoes_of_Time_v2.mp3"
-  },
-  {
-   "from": "ch2",
-   "track": "Volatile_Reaction.mp3",
-   "gain": -4.0
-  },
-  {
-   "from": "ch3",
-   "track": "Ice_Flow.mp3"
-  },
-  {
-   "from": "ch4",
-   "track": "Lost_Frontier.mp3"
-  },
-  {
-   "from": "ch5",
-   "track": "Darkest_Child.mp3"
-  },
-  {
-   "from": "ending",
-   "track": "Long_Note_Three.mp3"
+   "track": "Darkest_Child.mp3",
+   "gain": -3.0,
+   "start": 32.0
   }
  ],
  "grade": {
@@ -76,7 +52,20 @@
   "faint distant galaxies in dark space"
  ],
  "pin": {
-  "opening/9": "pexels_16693722#0"
+  "ch3/31": "noirlab_02102025-DESI-b-roll#0",
+  "ch4/1": "noirlab_desi_begins_shortened_loop#0",
+  "ch4/2": "noirlab_02112025-DESI-b-roll-telescope-movement#0",
+  "ch4/3": "noirlab_noirlab2203b#0",
+  "ch4/4": "noirlab_noirlab2203b#1",
+  "ch4/5": "noirlab_noirlab2610c#0",
+  "ch4/6": "noirlab_6V6A0013-004-CC#0",
+  "ch4/7": "noirlab_noirlab2408c#0",
+  "ch4/8": "noirlab_noirlab2408b#1",
+  "ch4/9": "noirlab_noirlab2512a#0",
+  "ch4/10": "noirlab_noirlab2512f#0",
+  "ch4/11": "noirlab_noirlab2610d#0",
+  "ch4/12": "noirlab_noirlab2610f#0",
+  "ch4/16": "noirlab_Rob-Mayall-DESI-Timelapse-2-11-25-CC#0"
  },
  "ban": [
   "esahubble_heic1813b",
@@ -393,11 +382,7 @@
     },
     {
      "at": "का आख़िरी अंजाम",
-     "gfx": "scene:three_paths;mode=b;split=0;hi=तीन"
-    },
-    {
-     "at": "तीनों के नतीजे",
-     "gfx": "scene:three_paths;mode=c;split=0;hi=अलग"
+     "gfx": "scene:triptych;show=तीन;name=अलग"
     },
     {
      "at": "पहले रास्ते में",
@@ -496,28 +481,14 @@
     },
     {
      "at": "Saul Perlmutter",
-     "q": [
-      "a white dwarf star exploding animation",
-      "a type Ia supernova brightening"
-     ]
+     "gfx": "photo:Riess"
     },
     {
      "at": "उस time तक",
-     "q": [
-      "galaxies scattered across deep space",
-      "galaxy clusters moving away"
-     ]
+     "gfx": "scene:expansion_slow"
     },
     {
      "at": "इसका logic",
-     "q": [
-      "a cricket ball flying through the air",
-      "a cricket match in a stadium",
-      "planet Earth from space"
-     ]
-    },
-    {
-     "at": "जब कोई cricket ball",
      "gfx": "compare:ball;THROWN STRAIGHT UP"
     },
     {
@@ -529,10 +500,7 @@
     },
     {
      "at": "Big Bang के बाद",
-     "q": [
-      "a bright glowing nebula core",
-      "the early universe expanding"
-     ]
+     "gfx": "scene:bigbang;pull=gravity"
     },
     {
      "at": "लेकिन जब उन्नीस सौ अट्ठानवे",
@@ -978,22 +946,22 @@
     },
     {
      "at": "दिलचस्प बात",
+     "gfx": "photo:Einstein"
+    },
+    {
+     "at": "उन्होंने अपने equations",
      "gfx": "journal:February 1917;Einstein adds one number to his equations;a force that pushes space apart;*the cosmological constant*"
     },
     {
      "at": "लेकिन उन्नीस सौ उनतीस",
      "q": [
-      "an old observatory telescope at night",
-      "a vintage brass telescope",
-      "galaxies moving away from each other"
+      "galaxies moving away from each other",
+      "an old observatory telescope at night"
      ]
     },
     {
      "at": "Einstein ने इसे छोड़",
-     "q": [
-      "a quiet slow drift through dark space",
-      "faint stars drifting"
-     ]
+     "gfx": "scene:strike;at_=छोड़"
     },
     {
      "at": "बाद में physicist",
@@ -1005,13 +973,10 @@
     {
      "at": "हालाँकि Einstein के",
      "q": [
-      "a distant spiral galaxy in deep space",
+      "old handwritten letters and papers",
+      "a stack of old documents",
       "faint galaxies in dark space"
      ]
-    },
-    {
-     "at": "ऐसा कोई सबूत",
-     "gfx": "stamp:UNPROVEN;not in Einstein's own papers"
     },
     {
      "at": "जो भी हो",
@@ -1178,9 +1143,30 @@
       }
      ],
      "kicker": "Gamow's story: Einstein called it"
+    },
+    {
+     "at": "हालाँकि Einstein के",
+     "lines": [
+      {
+       "text": "HIS OWN PAPERS",
+       "at": "काग़ज़ों"
+      },
+      {
+       "text": "*NO PROOF*",
+       "at": "सबूत"
+      }
+     ]
     }
    ],
    "n": [
+    {
+     "at": "Albert Einstein",
+     "num": {
+      "template": "name",
+      "value": "ALBERT EINSTEIN",
+      "sub": "physicist · 1879-1955"
+     }
+    },
     {
      "at": "Edwin Hubble",
      "num": {
@@ -1206,8 +1192,7 @@
      "opt": "hold",
      "q": [
       "equations written on a chalkboard",
-      "a scientist writing formulas",
-      "the cosmic web simulation"
+      "a scientist writing formulas"
      ]
     },
     {
@@ -1233,7 +1218,7 @@
     },
     {
      "at": "अगर dark energy की density",
-     "gfx": "starfield"
+     "gfx": "scene:grip;snap=ढीली"
     },
     {
      "at": "इसे Big Rip",
@@ -1256,17 +1241,11 @@
     },
     {
      "at": "उसके बाद Milky Way",
-     "q": [
-      "the Milky Way galaxy seen from outside",
-      "our galaxy spiral from above"
-     ]
+     "gfx": "scene:galaxy_tear;tear=आकार"
     },
     {
      "at": "हर orbit टूट",
-     "q": [
-      "planets orbiting a star animation",
-      "a planetary system orbits"
-     ]
+     "gfx": "scene:orbit_break;brk=टूट+0.1"
     },
     {
      "at": "तारे अँधेरे में",
@@ -1498,11 +1477,7 @@
    "v": [
     {
      "at": null,
-     "opt": "hold",
-     "q": [
-      "a cold blue nebula slowly drifting",
-      "icy blue gas cloud in space"
-     ]
+     "gfx": "photo:Kelvin"
     },
     {
      "at": "उनका हिसाब thermodynamics",
@@ -1585,14 +1560,11 @@
     },
     {
      "at": "लेकिन उन्नीस सौ चौहत्तर",
-     "gfx": "evaporate"
+     "gfx": "photo:Hawking"
     },
     {
      "at": "इसे Hawking radiation",
-     "q": [
-      "glowing particles escaping a black hole",
-      "a black hole emitting light"
-     ]
+     "gfx": "evaporate"
     },
     {
      "at": "सबसे बड़े supermassive",
@@ -1617,10 +1589,7 @@
     },
     {
      "at": "उनके equations ने",
-     "q": [
-      "a neutron star slowly glowing",
-      "a dead star evaporating"
-     ]
+     "gfx": "scene:dissolve"
     },
     {
      "at": "चाँद भी",
@@ -1908,66 +1877,62 @@
      "opt": "hold",
      "q": [
       "an observatory on a desert mountain at night",
-      "the Arizona desert under the stars",
-      "a large telescope dome under the stars"
+      "the Arizona desert under the stars"
      ]
     },
     {
      "at": "इसके अंदर डेज़ी",
      "q": [
-      "inside a large telescope dome",
-      "a telescope mirror and instrument"
+      "inside the Mayall telescope dome",
+      "a big telescope moving"
      ]
     },
     {
      "at": "डेज़ी में पाँच हज़ार",
      "q": [
-      "a telescope pointing at a field of galaxies",
-      "thousands of galaxies in one view"
+      "DESI fibre positioners at work",
+      "thousands of optical fibres"
      ]
     },
     {
      "at": "पिछले पाँच सालों में",
      "opt": "hold",
      "q": [
-      "flight through a 3D map of galaxies",
+      "the DESI 3D map of galaxies rotating",
       "the cosmic web of galaxies"
      ]
     },
     {
      "at": "इसका मक़सद",
      "q": [
-      "a spiral galaxy in deep space",
-      "a distant galaxy"
+      "a telescope dome rotating",
+      "an observatory dome"
      ]
     },
     {
      "at": "Scientists dark energy की",
      "q": [
-      "the expanding universe animation",
-      "galaxies moving apart"
+      "flying through the DESI galaxy map",
+      "a 3D galaxy map"
      ]
     },
     {
      "at": "सभी को उम्मीद थी",
      "q": [
-      "a calm star field",
-      "slow drift through stars"
+      "the DESI map from far away",
+      "a galaxy survey map"
      ]
     },
     {
      "at": "लेकिन दो हज़ार चौबीस",
      "q": [
-      "thousands of distant galaxies in a deep field",
-      "galaxy survey map"
+      "the DESI galaxy map",
+      "a dense map of galaxies"
      ]
     },
     {
      "at": "Signals बताते हैं",
-     "q": [
-      "a fading glow in deep space",
-      "galaxies drifting in darkness"
-     ]
+     "gfx": "scene:weaken_graph;bend=कमज़ोर"
     },
     {
      "at": "पिछले कुछ billion",
@@ -1990,8 +1955,8 @@
     {
      "at": "Physicists अभी और",
      "q": [
-      "scientists looking at data on computer screens",
-      "a telescope dome opening at night"
+      "a telescope under the night sky timelapse",
+      "an observatory at night"
      ]
     },
     {
@@ -2005,51 +1970,12 @@
      "at": "September दो हज़ार पच्चीस",
      "q": [
       "scientists working in a lab",
-      "a scientist working at a computer",
-      "a telescope dome at night"
+      "a scientist working at a computer"
      ]
     },
     {
      "at": "उनके हिसाब के मुताबिक़",
-     "q": [
-      "the universe from Big Bang to today animation",
-      "the history of the universe timeline"
-     ]
-    },
-    {
-     "at": "अभी ये तेरह",
-     "q": [
-      "the deep field of distant galaxies",
-      "Hubble ultra deep field"
-     ]
-    },
-    {
-     "at": "यानी अपनी ज़िंदगी",
-     "q": [
-      "a galaxy in the middle of its life",
-      "a spiral galaxy"
-     ]
-    },
-    {
-     "at": "इस model के हिसाब से",
-     "q": [
-      "the expanding universe slowing to a stop",
-      "galaxies drifting slower"
-     ]
-    },
-    {
-     "at": "उसके बाद dark energy हार",
-     "q": [
-      "galaxies turning back towards each other",
-      "gravity pulling galaxies together"
-     ]
-    },
-    {
-     "at": "लगभग बीस billion",
-     "q": [
-      "galaxies rushing together into a bright point",
-      "the universe collapsing"
-     ]
+     "gfx": "scene:lifetime;total=तैंतीस;now=तेरह;half=आधा;max=ग्यारह;turn=gravity;end=बीस"
     },
     {
      "at": "एक Indian physicist",
@@ -2197,46 +2123,6 @@
       "value": "HENRY TYE",
       "sub": "physicist, Cornell University"
      }
-    },
-    {
-     "at": "लगभग तैंतीस billion",
-     "num": {
-      "template": "hero",
-      "value": "33",
-      "unit": "billion years",
-      "kicker": "the universe's whole life, maybe",
-      "land": "तैंतीस"
-     }
-    },
-    {
-     "at": "अभी ये तेरह",
-     "num": {
-      "template": "hero",
-      "value": "13.8",
-      "unit": "billion years old",
-      "kicker": "the universe today",
-      "land": "आठ"
-     }
-    },
-    {
-     "at": "अगले ग्यारह billion",
-     "num": {
-      "template": "hero",
-      "value": "11",
-      "unit": "billion years",
-      "kicker": "biggest size, in about",
-      "land": "ग्यारह"
-     }
-    },
-    {
-     "at": "लगभग बीस billion",
-     "num": {
-      "template": "hero",
-      "value": "20",
-      "unit": "billion years",
-      "kicker": "back to a single point in about",
-      "land": "बीस"
-     }
     }
    ],
    "k": [
@@ -2263,33 +2149,6 @@
       }
      ],
      "kicker": "what everyone expected"
-    },
-    {
-     "at": "Signals बताते हैं",
-     "lines": [
-      {
-       "text": "DARK ENERGY",
-       "at": "dark"
-      },
-      {
-       "text": "*MAY BE WEAKENING*",
-       "at": "कमज़ोर"
-      }
-     ]
-    },
-    {
-     "at": "यानी अपनी ज़िंदगी",
-     "lines": [
-      {
-       "text": "*HALFWAY*",
-       "at": "आधा"
-      },
-      {
-       "text": "THROUGH ITS LIFE",
-       "at": "पूरा"
-      }
-     ],
-     "kicker": "if Tye is right"
     },
     {
      "at": "एक Indian physicist",
@@ -2354,14 +2213,17 @@
     },
     {
      "at": "आख़िरी पल में",
-     "gfx": "starfield"
+     "q": [
+      "a blinding point of light",
+      "a brilliant flash at the centre of space"
+     ]
     },
     {
      "at": "Scientists इसे Big Crunch",
      "opt": "hold",
      "q": [
-      "a brilliant flash at the centre of space",
-      "an intense burst of light"
+      "an intense burst of light",
+      "a brilliant flash"
      ]
     },
     {
@@ -2399,32 +2261,11 @@
     },
     {
      "at": "इस theory के मुताबिक़",
-     "q": [
-      "a grid of glowing points of light",
-      "a fine web of light"
-     ]
+     "gfx": "scene:quantum_grid"
     },
     {
      "at": "इसलिए जब universe",
-     "q": [
-      "the universe collapsing to a point",
-      "galaxies squeezed together"
-     ]
-    },
-    {
-     "at": "उस हद पर पहुँचते",
-     "q": [
-      "an explosion of light expanding outward",
-      "a burst of light from a point"
-     ]
-    },
-    {
-     "at": "और वहीं से पूरा",
-     "opt": "hold",
-     "q": [
-      "the Big Bang expanding outward animation",
-      "the early universe expanding"
-     ]
+     "gfx": "scene:bounce2;limit=limit;push=धक्का;out=उछल"
     },
     {
      "at": "इसे Big Bounce",
@@ -2439,7 +2280,10 @@
     },
     {
      "at": "अभी तक इस theory",
-     "gfx": "stamp:NO PROOF YET;these conditions can't be made in a lab"
+     "q": [
+      "scientists working in a lab",
+      "a laboratory"
+     ]
     }
    ],
    "c": [
@@ -2579,6 +2423,19 @@
        "at": "धक्का"
       }
      ]
+    },
+    {
+     "at": "अभी तक इस theory",
+     "lines": [
+      {
+       "text": "NO PROOF YET",
+       "at": "सबूत"
+      },
+      {
+       "text": "*NOT IN ANY LAB*",
+       "at": "lab"
+      }
+     ]
     }
    ],
    "n": [
@@ -2620,7 +2477,7 @@
      "at": "और अगर ये कमज़ोर",
      "q": [
       "galaxies falling back together",
-      "the universe collapsing and a new one beginning"
+      "the universe collapsing"
      ]
     },
     {
@@ -2632,18 +2489,7 @@
     },
     {
      "at": "जिस आख़िरी तारे",
-     "q": [
-      "a single bright star in a dark star field",
-      "a lone star in black space"
-     ]
-    },
-    {
-     "at": "अगले आसमान की",
-     "opt": "hold",
-     "q": [
-      "the first light of the early universe",
-      "a bright dawn of stars being born"
-     ]
+     "gfx": "scene:first_light;ignite=पहली"
     }
    ],
    "c": [

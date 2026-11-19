@@ -566,3 +566,417 @@ KINDS = {"last_star": last_star, "three_paths": three_paths, "survey": survey, "
 def frame(sc, t, D, fonts_dir=""):
     FONTS["dir"] = fonts_dir
     return KINDS[sc["kind"]](t, D, sc)
+
+
+# ================================================================== chapter scenes (owner 2026-11-19: each used once)
+def _tri_panel(f, x0, x1, i, t, op):
+    """One panel of the triptych: a live mini-scene of one ending."""
+    cx, cy = (x0 + x1) / 2, H * 0.52
+    c = NAMES3[i][1]
+    rng = np.random.default_rng(30 + i)
+    if i == 0:    # rip: shards flying out of a point, forever
+        for k in range(70):
+            a = rng.uniform(0, 2 * math.pi)
+            ph = (t * rng.uniform(0.3, 0.7) + rng.random()) % 1.0
+            r = 20 + ph * 260
+            x, y = cx + r * math.cos(a), cy + r * math.sin(a)
+            if x0 + 10 < x < x1 - 10:
+                cv2.line(f, (int(cx + (r - 30) * math.cos(a)), int(cy + (r - 30) * math.sin(a))), (int(x), int(y)),
+                         tuple(float(v) * op * (1 - ph) for v in c), 2, cv2.LINE_AA)
+        glow(f, cx, cy, 14, (255, 255, 255), 1.4 * op)
+    elif i == 1:  # freeze: dim stars going out, frost creeping in from the edges
+        for k in range(60):
+            x, y = rng.uniform(x0 + 20, x1 - 20), rng.uniform(H * 0.22, H * 0.82)
+            a = max(0, 1 - ((t * 0.25 + rng.random()) % 1.0) * 1.3)
+            glow(f, x, y, 2, (255, 230, 200), 1.2 * a * op)
+        frost = int(60 + 40 * math.sin(t))
+        for side in (x0, x1):
+            lay = np.zeros((H, W, 3), np.float32)
+            cv2.rectangle(lay, (int(side - frost), int(H * 0.15)), (int(side + frost), int(H * 0.88)), c, -1)
+            f += cv2.GaussianBlur(lay, (0, 0), 30) * 0.35 * op
+    else:         # crunch: everything falling into a point
+        for k in range(90):
+            a = rng.uniform(0, 2 * math.pi)
+            ph = 1 - ((t * rng.uniform(0.3, 0.6) + rng.random()) % 1.0)
+            r = 10 + ph * 260
+            x, y = cx + r * math.cos(a), cy + r * math.sin(a) * 0.8
+            if x0 + 10 < x < x1 - 10:
+                glow(f, x, y, 2, c, 1.3 * op)
+        glow(f, cx, cy, 20, (200, 230, 255), 1.6 * op)
+
+
+def triptych(t, D, p):
+    """Three panels, one ending each, appearing on `show`; their end states are named on `name`."""
+    show, name = p.get("show", 0.3), p.get("name", 1e9)
+    f = background(t, push=0.01, dim=0.35, seed=31)
+    gap, pw = 30, (W - 2 * 90 - 2 * 30) / 3
+    ends = ["TORN APART", "FROZEN", "CRUSHED"]
+    for i in range(3):
+        op = eo((t - show - 0.18 * i) / 0.45)
+        if op <= 0:
+            continue
+        x0 = 90 + i * (pw + gap)
+        x1 = x0 + pw
+        dy = (1 - op) * 60
+        lay = np.zeros((H, W, 3), np.float32)
+        cv2.rectangle(lay, (int(x0), int(H * 0.15 + dy)), (int(x1), int(H * 0.88 + dy)), (255, 255, 255), 2, cv2.LINE_AA)
+        f *= 1 - 0.0
+        f += lay * 0.35 * op
+        _tri_panel(f, x0, x1, i, t, op)
+        text(f, NAMES3[i][0], (x0 + x1) / 2, H * 0.10 + dy, 58, "Anton", NAMES3[i][1], op, "mm")
+        nop = eo((t - name - 0.15 * i) / 0.35)
+        text(f, ends[i], (x0 + x1) / 2, H * 0.80, 64, "Anton", (255, 255, 255), nop, "mm")
+    bloom(f, 0.4)
+    return finish(f, t)
+
+
+def expansion_slow(t, D, p):
+    """Galaxies flying apart but slowing down (what everyone believed): speed arrows shrinking."""
+    f = background(t, push=0.0, dim=0.5, seed=33)
+    r0, a, z, col, size = _galaxies(260)
+    cx, cy = W / 2, H / 2
+    e = 1 + 0.55 * (1 - math.exp(-t * 0.6))           # decelerating expansion
+    v = math.exp(-t * 0.6)
+    for i in range(len(r0)):
+        rr = r0[i] * W * 0.42 * e / z[i]
+        x, y = cx + rr * math.cos(a[i]), cy + rr * math.sin(a[i]) * 0.62
+        cv2.ellipse(f, (int(x), int(y)), (int(size[i] * 1.8), int(size[i] * 0.9)), (a[i] * 57) % 180, 0, 360,
+                    tuple(float(c) for c in col[i]), -1, cv2.LINE_AA)
+        if i % 4 == 0:
+            L = 70 * v
+            cv2.arrowedLine(f, (int(x + 10 * math.cos(a[i])), int(y + 10 * math.sin(a[i]))),
+                            (int(x + (10 + L) * math.cos(a[i])), int(y + (10 + L) * math.sin(a[i]))),
+                            (120, 200, 255), 2, cv2.LINE_AA, tipLength=0.35)
+    text(f, "SPEED", 110, H - 170, 30, "Montserrat", (220, 220, 220), 1, weight="Bold")
+    cv2.rectangle(f, (110, H - 120), (int(110 + 500 * v), H - 100), (120, 200, 255), -1)
+    bloom(f, 0.35)
+    return finish(f, t)
+
+
+def bigbang(t, D, p):
+    """A flash, everything flies out, and gravity's pull (arrows inward) slows it down."""
+    pull = p.get("pull", 2.0)
+    f = background(t, push=0.0, dim=0.4 * cl(t / 1.0), seed=34)
+    cx, cy = W / 2, H / 2
+    f += 255 * math.exp(-t * 4)
+    rng = np.random.default_rng(35)
+    n = 500
+    a = rng.uniform(0, 2 * math.pi, n)
+    sp = rng.uniform(0.3, 1.0, n)
+    r = sp * W * 0.55 * (1 - math.exp(-t * 1.3))
+    for i in range(n):
+        x, y = cx + r[i] * math.cos(a[i]), cy + r[i] * math.sin(a[i]) * 0.7
+        glow(f, x, y, 2, (255, 225, 190), 1.6)
+    if t > pull:
+        op = eo((t - pull) / 0.5)
+        for k in range(12):
+            ang = k * math.pi / 6
+            R1, R0 = 420, 300
+            cv2.arrowedLine(f, (int(cx + R1 * math.cos(ang)), int(cy + R1 * math.sin(ang) * 0.7)),
+                            (int(cx + R0 * math.cos(ang)), int(cy + R0 * math.sin(ang) * 0.7)),
+                            tuple(float(v) * op for v in (90, 200, 255)), 3, cv2.LINE_AA, tipLength=0.3)
+        text(f, "GRAVITY PULLS BACK", W / 2, H * 0.88, 64, "Anton", AMBER, op, "mm")
+    bloom(f)
+    return finish(f, t)
+
+
+def strike(t, D, p):
+    """A term typed on a dark card, then struck through in red (an idea dropped)."""
+    s = p.get("text", "COSMOLOGICAL CONSTANT")
+    at = p.get("at_", 1.0)
+    f = background(t, push=0.01, dim=0.35, seed=36)
+    n = min(len(s), int(max(0, t - 0.2) * 26))
+    fnt = _font("Anton", 120)
+    w = fnt.getbbox(s)[2]
+    x0 = (W - w) / 2
+    text(f, s[:n], x0, H * 0.42, 120, "Anton", (235, 235, 235), 1.0)
+    if t > at:
+        u = eo((t - at) / 0.45)
+        cv2.line(f, (int(x0 - 20), int(H * 0.42 + 78)), (int(x0 - 20 + (w + 40) * u), int(H * 0.42 + 70)), (60, 60, 230), 12, cv2.LINE_AA)
+        text(f, p.get("note", "DROPPED, 1931"), W / 2, H * 0.70, 56, "Montserrat", (200, 200, 255), eo((t - at - 0.4) / 0.4), "mm", "Bold")
+    bloom(f, 0.3)
+    return finish(f, t)
+
+
+def grip(t, D, p):
+    """Two galaxies held by a glowing gravity bond; the bond stretches thin and snaps on `snap`."""
+    snap = p.get("snap", D * 0.7)
+    f = background(t, push=0.0, dim=0.6, seed=37)
+    pre = cl(t / max(0.5, snap))
+    sep = 260 + 380 * ei(pre) + (900 * eo((t - snap) / 1.5) if t > snap else 0)
+    cx, cy = W / 2, H / 2
+    xa, xb = cx - sep / 2, cx + sep / 2
+    for x, c in ((xa, (255, 210, 180)), (xb, (200, 220, 255))):
+        glow(f, x, cy, 60, c, 0.5)
+        glow(f, x, cy, 18, (255, 255, 255), 1.6)
+        lay = np.zeros((H, W, 3), np.float32)
+        cv2.ellipse(lay, (int(x), int(cy)), (110, 40), 20, 0, 360, c, 3, cv2.LINE_AA)
+        f += cv2.GaussianBlur(lay, (0, 0), 6) * 1.2
+    if t < snap:
+        th = max(1, int(14 * (1 - pre) + 1))
+        jit = 8 * pre * math.sin(t * 40)
+        lay = np.zeros((H, W, 3), np.float32)
+        cv2.line(lay, (int(xa + 60), int(cy + jit)), (int(xb - 60), int(cy - jit)), (110, 200, 255), th, cv2.LINE_AA)
+        f += lay + cv2.GaussianBlur(lay, (0, 0), 8) * 2
+        text(f, "GRAVITY", W / 2, cy - 90, 52, "Anton", (110, 200, 255), 1 - pre * 0.5, "mm")
+    elif t < snap + 0.4:
+        glow(f, W / 2, cy, 60, (180, 230, 255), 2.0 * (1 - (t - snap) / 0.4))
+    bloom(f)
+    return finish(f, t)
+
+
+def galaxy_tear(t, D, p):
+    """A spiral galaxy loses its shape: its arms unwind and its stars fly off into the dark."""
+    tear = p.get("tear", 0.8)
+    f = background(t, push=0.0, dim=0.5, seed=38)
+    if "spiral" not in _CACHE:
+        rng = np.random.default_rng(39)
+        n = 5000
+        arm = rng.integers(0, 2, n)
+        rr = rng.power(1.6, n)
+        th = rr * 7 + arm * math.pi + rng.normal(0, 0.25, n)
+        col = np.where(rr[:, None] < 0.25, np.array([200, 230, 255]), np.array([255, 210, 170]))
+        _CACHE["spiral"] = (rr, th, col, rng.uniform(0.4, 1.0, n))
+    rr, th, col, sp = _CACHE["spiral"]
+    u = max(0.0, t - tear)
+    unwind = 1 - math.exp(-u * 0.8)
+    R = rr * 380 * (1 + 2.8 * ei(cl(u / 3.0)) * sp)
+    ang = th * (1 - 0.6 * unwind) + t * 0.15
+    x = W / 2 + R * np.cos(ang)
+    y = H / 2 + R * np.sin(ang) * 0.55
+    img = np.zeros((H, W, 3), np.float32)
+    ok = (x >= 0) & (x < W) & (y >= 0) & (y < H)
+    np.add.at(img, (y[ok].astype(int), x[ok].astype(int)), col[ok] * 0.9)
+    f += cv2.GaussianBlur(img, (0, 0), 1.2) * 2.5 + cv2.GaussianBlur(img, (0, 0), 6) * 2
+    glow(f, W / 2, H / 2, 40 * (1 - 0.7 * unwind), (200, 230, 255), 1.2)
+    bloom(f)
+    return finish(f, t)
+
+
+def orbit_break(t, D, p):
+    """A star with planets on orbits; on `brk` the orbits vanish and the planets fly off along straight lines."""
+    brk = p.get("brk", 1.0)
+    f = background(t, push=0.0, dim=0.55, seed=40)
+    cx, cy = W / 2, H / 2
+    glow(f, cx, cy, 70, (120, 200, 255), 0.6)
+    glow(f, cx, cy, 22, (220, 245, 255), 2.0)
+    planets = [(170, 1.6, (200, 160, 120), 9), (260, 1.1, (120, 180, 255), 12), (370, 0.75, (90, 150, 230), 15), (480, 0.5, (210, 200, 170), 11)]
+    for R, w, c, s in planets:
+        ry = R * 0.42
+        if t < brk:
+            cv2.ellipse(f, (int(cx), int(cy)), (int(R), int(ry)), 0, 0, 360, (90, 90, 90), 1, cv2.LINE_AA)
+            th = w * t
+            x, y = cx + R * math.cos(th), cy + ry * math.sin(th)
+        else:
+            th = w * brk
+            x0, y0 = cx + R * math.cos(th), cy + ry * math.sin(th)
+            vx, vy = -R * w * math.sin(th), ry * w * math.cos(th)
+            u = t - brk
+            x, y = x0 + vx * u * (1 + u), y0 + vy * u * (1 + u)
+            cv2.line(f, (int(x0), int(y0)), (int(x), int(y)), tuple(float(v) * 0.5 for v in c), 1, cv2.LINE_AA)
+        cv2.circle(f, (int(x), int(y)), s, c, -1, cv2.LINE_AA)
+        glow(f, x, y, s, c, 0.5)
+    if brk < t < brk + 0.3:
+        f += 60 * (1 - (t - brk) / 0.3)
+    bloom(f, 0.4)
+    return finish(f, t)
+
+
+def dissolve(t, D, p):
+    """A grey sphere (a dead star, a moon) slowly evaporating into a mist of particles."""
+    f = background(t, push=0.0, dim=0.5, seed=41)
+    cx, cy = W / 2, H / 2
+    k = cl(t / max(1.0, D))
+    R = 230 * (1 - 0.45 * k)
+    lay = np.zeros((H, W, 3), np.float32)
+    cv2.circle(lay, (int(cx), int(cy)), int(R), (175, 180, 185), -1, cv2.LINE_AA)
+    shade = np.zeros((H, W, 3), np.float32)
+    cv2.circle(shade, (int(cx + R * 0.35), int(cy + R * 0.3)), int(R * 1.05), (1, 1, 1), -1, cv2.LINE_AA)
+    lay *= 1 - 0.55 * cv2.GaussianBlur(shade, (0, 0), R * 0.4)
+    f = f * (1 - (lay.sum(-1, keepdims=True) > 0)) + lay
+    rng = np.random.default_rng(42)
+    for i in range(400):
+        a0 = rng.uniform(0, 2 * math.pi)
+        ph = (t * rng.uniform(0.15, 0.4) + rng.random()) % 1.0
+        r = R + ph * 380
+        drift = ph * 80
+        glow(f, cx + r * math.cos(a0), cy + r * math.sin(a0) - drift, 2, (220, 225, 235), 1.2 * (1 - ph))
+    bloom(f, 0.3)
+    return finish(f, t)
+
+
+def weaken_graph(t, D, p):
+    """Dark energy's strength over time: the expected flat line, then the data line bending down on `bend`."""
+    bend = p.get("bend", 1.0)
+    f = background(t, push=0.0, dim=0.35, seed=43)
+    x0, x1, y0, y1 = 260, W - 260, H * 0.78, H * 0.22
+    cv2.line(f, (x0, int(y0)), (x1, int(y0)), (200, 200, 200), 2, cv2.LINE_AA)
+    cv2.line(f, (x0, int(y0)), (x0, int(y1)), (200, 200, 200), 2, cv2.LINE_AA)
+    text(f, "PAST", x0, y0 + 20, 30, "Montserrat", (200, 200, 200), 1, weight="Bold")
+    text(f, "TODAY", x1 - 110, y0 + 20, 30, "Montserrat", (200, 200, 200), 1, weight="Bold")
+    text(f, "DARK ENERGY STRENGTH", x0, y1 - 60, 30, "Montserrat", (200, 200, 200), 1, weight="Bold")
+    ym = H * 0.40
+    u = eo(t / 0.9)
+    xe = x0 + (x1 - x0) * u
+    for x in range(x0, int(xe), 26):
+        cv2.line(f, (x, int(ym)), (min(int(xe), x + 14), int(ym)), (180, 180, 180), 3, cv2.LINE_AA)
+    if u > 0.9:
+        text(f, "EXPECTED: CONSTANT", x1 - 470, ym - 70, 40, "Anton", (200, 200, 200), 1)
+    if t > bend:
+        v = eo((t - bend) / 1.2)
+        pts = []
+        for k in range(101):
+            q = k / 100
+            if q > v:
+                break
+            drop = 0 if q < 0.55 else ((q - 0.55) / 0.45) ** 2 * (H * 0.16)
+            pts.append((x0 + (x1 - x0) * q, ym + drop))
+        if len(pts) > 1:
+            lay = np.zeros((H, W, 3), np.float32)
+            cv2.polylines(lay, [np.array(pts, np.int32)], False, AMBER, 6, cv2.LINE_AA)
+            f += lay + cv2.GaussianBlur(lay, (0, 0), 8) * 1.5
+        if v > 0.95:
+            text(f, "DESI DATA: WEAKENING?", x1 - 560, ym + H * 0.17 + 20, 46, "Anton", AMBER, eo((t - bend - 1.2) / 0.4))
+    bloom(f, 0.3)
+    return finish(f, t)
+
+
+def lifetime(t, D, p):
+    """The universe's whole life on one bar (Tye's model): 0 -> 33 billion years, NOW at 13.8, the biggest size
+    at 24.8, gravity takes over, the end at 33. Marks appear on their words."""
+    f = background(t, push=0.0, dim=0.4, seed=44)
+    x0, x1, y = 170, W - 170, H * 0.56
+    X = lambda gy: x0 + (x1 - x0) * gy / 33.0
+    u = eo(t / 1.0)
+    lay = np.zeros((H, W, 3), np.float32)
+    cv2.line(lay, (x0, int(y)), (int(x0 + (x1 - x0) * u), int(y)), (230, 230, 230), 6, cv2.LINE_AA)
+    f += lay + cv2.GaussianBlur(lay, (0, 0), 5)
+    text(f, "BIG BANG", x0, y + 40, 34, "Montserrat", (220, 220, 220), u, "lt", "Bold")
+    marks = [("total", 33.0, "33 BILLION YEARS", (60, 60, 230), "END"),
+             ("now", 13.8, "13.8", AMBER, "YOU ARE HERE"),
+             ("half", None, None, None, None),
+             ("max", 24.8, "+11", (255, 220, 150), "BIGGEST SIZE"),
+             ("turn", None, None, None, None),
+             ("end", 33.0, "+20", (60, 60, 230), "BACK TO A POINT")]
+    for key, gy, big, c, small in marks:
+        at = p.get(key)
+        if at is None or gy is None or t < at:
+            continue
+        op = eo((t - at) / 0.4)
+        x = X(gy)
+        cv2.line(f, (int(x), int(y - 30)), (int(x), int(y + 30)), tuple(float(v) * op for v in c), 4, cv2.LINE_AA)
+        glow(f, x, y, 12, c, 1.4 * op)
+        if key == "total":
+            text(f, big, W / 2, H * 0.22, 96, "Anton", (255, 255, 255), op, "mm")
+        else:
+            text(f, big, x, y - 120, 72, "Anton", c, op, "mm")
+            text(f, small, x, y + 70, 30, "Montserrat", (230, 230, 230), op, "mm", "Bold")
+    if p.get("half") is not None and t > p["half"]:   # the lived half glows
+        op = eo((t - p["half"]) / 0.6)
+        lay = np.zeros((H, W, 3), np.float32)
+        cv2.line(lay, (x0, int(y)), (int(X(13.8)), int(y)), AMBER, 10, cv2.LINE_AA)
+        f += (lay + cv2.GaussianBlur(lay, (0, 0), 10) * 1.5) * op
+        text(f, "HALF ITS LIFE", X(6.9), y - 70, 44, "Anton", AMBER, op, "mm")
+    if p.get("turn") is not None and t > p["turn"]:   # gravity takes control: arrows turning back
+        op = eo((t - p["turn"]) / 0.5)
+        cv2.arrowedLine(f, (int(X(30.5)), int(y - 170)), (int(X(26)), int(y - 170)), tuple(float(v) * op for v in (90, 200, 255)), 4, cv2.LINE_AA, tipLength=0.25)
+        text(f, "GRAVITY WINS", X(28.3), y - 230, 40, "Anton", (90, 200, 255), op, "mm")
+    bloom(f, 0.3)
+    return finish(f, t)
+
+
+def quantum_grid(t, D, p):
+    """Space as tiny quantum pieces: a smooth glow resolves, zooming in, into a lattice of discrete cells."""
+    f = background(t, push=0.0, dim=0.4, seed=45)
+    z = 1 + 3.5 * ss(t / max(1.0, D * 0.6))
+    cell = 46 * z
+    lay = np.zeros((H, W, 3), np.float32)
+    rng = np.random.default_rng(46)
+    nx, ny = int(W / cell) + 2, int(H / cell) + 2
+    ox, oy = (W / 2) % cell, (H / 2) % cell
+    for i in range(-1, nx):
+        for j in range(-1, ny):
+            x, y = ox + i * cell, oy + j * cell
+            b = 0.45 + 0.55 * math.sin(t * 2 + i * 1.7 + j * 2.3) ** 2
+            s = cell * 0.42
+            pts = np.array([(x, y - s), (x + s, y), (x, y + s), (x - s, y)], np.int32)
+            cv2.polylines(lay, [pts], True, (255, 200, 120), max(1, int(z * 0.8)), cv2.LINE_AA)
+            glow(f, x, y, max(2, int(z * 2)), (255, 220, 170), 0.6 * b)
+    op = ss((t - 0.4) / 1.0)
+    f += lay * op + cv2.GaussianBlur(lay, (0, 0), 4) * op
+    bloom(f, 0.4)
+    return finish(f, t)
+
+
+def bounce2(t, D, p):
+    """The universe shrinks to a limit (a ring it cannot pass), flashes and rebounds outward."""
+    lim, push, out = p.get("limit", 1.5), p.get("push", 3.0), p.get("out", 4.0)
+    f = background(t, push=0.0, dim=0.35, seed=47)
+    cx, cy = W / 2, H / 2
+    rmin = 70
+    if t < lim:
+        R = rmin + (520 - rmin) * (1 - ei(t / lim))
+    elif t < push:
+        R = rmin + 6 * math.sin((t - lim) * 30) * math.exp(-(t - lim) * 3)
+    else:
+        R = rmin + 900 * eo((t - push) / 2.5)
+    rng = np.random.default_rng(48)
+    for i in range(700):
+        a0 = rng.uniform(0, 2 * math.pi)
+        rr = rng.power(0.6) * R
+        heat = cl(1 - (R - rmin) / 450)
+        c = np.array([255, 215, 180]) * (1 - heat) + np.array([120, 200, 255]) * heat
+        glow(f, cx + rr * math.cos(a0), cy + rr * math.sin(a0) * 0.8, 2, c, 1.4)
+    if t > lim - 0.1:
+        op = eo((t - lim + 0.1) / 0.3) * (1 - ss((t - push - 0.4) / 0.4))
+        cv2.circle(f, (int(cx), int(cy)), rmin + 14, tuple(float(v) * op for v in (90, 200, 255)), 3, cv2.LINE_AA)
+        text(f, "THE LIMIT", cx, cy - rmin - 70, 48, "Anton", (90, 200, 255), op, "mm")
+    if push < t < push + 0.5:
+        f += 255 * (1 - (t - push) / 0.5) ** 2
+    bloom(f)
+    return finish(f, t)
+
+
+def first_light(t, D, p):
+    """Darkness; then one new star ignites and its light spreads (the first light of the next sky)."""
+    ig = p.get("ignite", 1.0)
+    f = background(t, push=0.03, dim=0.25 * cl((t - ig) / 3), seed=49)
+    cx, cy = W / 2, H / 2
+    if t > ig:
+        u = t - ig
+        a = eo(u / 1.2)
+        glow(f, cx, cy, 160 * a, (190, 220, 255), 0.25 * a)
+        glow(f, cx, cy, 30 * a, (210, 235, 255), 1.6 * a)
+        glow(f, cx, cy, 6, (255, 255, 255), 2.2 * a)
+        L = int(300 * a)
+        sp = np.zeros((H, W, 3), np.float32)
+        cv2.line(sp, (int(cx - L), int(cy)), (int(cx + L), int(cy)), (220, 235, 255), 2, cv2.LINE_AA)
+        cv2.line(sp, (int(cx), int(cy - L)), (int(cx), int(cy + L)), (220, 235, 255), 2, cv2.LINE_AA)
+        f += cv2.GaussianBlur(sp, (0, 0), 2.5) * a
+        ring = ((u * 0.45) % 1.0)
+        cv2.circle(f, (int(cx), int(cy)), int(60 + ring * 900), tuple(float(v) * (1 - ring) * 0.5 for v in (200, 225, 255)), 2, cv2.LINE_AA)
+    bloom(f)
+    return finish(f, t)
+
+
+KINDS.update({"triptych": triptych, "expansion_slow": expansion_slow, "bigbang": bigbang, "strike": strike, "grip": grip,
+              "galaxy_tear": galaxy_tear, "orbit_break": orbit_break, "dissolve": dissolve, "weaken_graph": weaken_graph,
+              "lifetime": lifetime, "quantum_grid": quantum_grid, "bounce2": bounce2, "first_light": first_light})
+TIME_KEYS.update({"show", "name", "pull", "at_", "snap", "tear", "brk", "bend", "total", "now", "half", "max", "turn",
+                  "end", "limit", "push", "ignite"})
+_CUES2 = {"triptych": [("kz_whoosh", "show", -2)], "bigbang": [("kz_shot", 0.0, -2), ("kz_thud", "pull", -4)],
+          "strike": [("kz_typing", 0.2, 0), ("kz_scratch", "at_", 0)], "grip": [("kz_shot", "snap", -2)],
+          "galaxy_tear": [("kz_whoosh", "tear", -2)], "orbit_break": [("kz_thud", "brk", -2)],
+          "weaken_graph": [("kz_scratch", "bend", 0)], "lifetime": [("kz_thud", "total", -4), ("kz_thud", "now", -4),
+          ("kz_thud", "max", -6), ("kz_thud", "end", -4)], "bounce2": [("kz_shot", "push", 0)],
+          "first_light": [("kz_thud", "ignite", -6)]}
+_cues1 = cues
+
+
+def cues(sc):  # noqa: F811  (extends the opening scenes' sounds)
+    out = _cues1(sc)
+    for kind, at, g in _CUES2.get(sc["kind"], []):
+        t = at if isinstance(at, float) else sc.get(at)
+        if t is not None:
+            out.append((kind, t, g, {"n": 20} if kind == "kz_typing" else {}))
+    return out

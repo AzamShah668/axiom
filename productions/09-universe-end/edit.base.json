@@ -31,33 +31,9 @@
  "music": [
   {
    "from": "opening",
-   "track": "Hitman.mp3",
-   "gain": 4.0
-  },
-  {
-   "from": "ch1",
-   "track": "Echoes_of_Time_v2.mp3"
-  },
-  {
-   "from": "ch2",
-   "track": "Volatile_Reaction.mp3",
-   "gain": -4.0
-  },
-  {
-   "from": "ch3",
-   "track": "Ice_Flow.mp3"
-  },
-  {
-   "from": "ch4",
-   "track": "Lost_Frontier.mp3"
-  },
-  {
-   "from": "ch5",
-   "track": "Darkest_Child.mp3"
-  },
-  {
-   "from": "ending",
-   "track": "Long_Note_Three.mp3"
+   "track": "Darkest_Child.mp3",
+   "gain": -3.0,
+   "start": 32.0
   }
  ],
  "grade": {
@@ -76,7 +52,20 @@
   "faint distant galaxies in dark space"
  ],
  "pin": {
-  "opening/9": "pexels_16693722#0"
+  "ch3/31": "noirlab_02102025-DESI-b-roll#0",
+  "ch4/1": "noirlab_desi_begins_shortened_loop#0",
+  "ch4/2": "noirlab_02112025-DESI-b-roll-telescope-movement#0",
+  "ch4/3": "noirlab_noirlab2203b#0",
+  "ch4/4": "noirlab_noirlab2203b#1",
+  "ch4/5": "noirlab_noirlab2610c#0",
+  "ch4/6": "noirlab_6V6A0013-004-CC#0",
+  "ch4/7": "noirlab_noirlab2408c#0",
+  "ch4/8": "noirlab_noirlab2408b#1",
+  "ch4/9": "noirlab_noirlab2512a#0",
+  "ch4/10": "noirlab_noirlab2512f#0",
+  "ch4/11": "noirlab_noirlab2610d#0",
+  "ch4/12": "noirlab_noirlab2610f#0",
+  "ch4/16": "noirlab_Rob-Mayall-DESI-Timelapse-2-11-25-CC#0"
  },
  "ban": [
   "esahubble_heic1813b",
