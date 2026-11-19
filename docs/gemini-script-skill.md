@@ -50,10 +50,10 @@ channel's script. Write a new story in our own voice.
 - Build a **fact-check table**: Claim | Value | Source (link). Every number in the script must be in it.
 - If you cannot verify a number, mark it **[VERIFY]** and do not present it as fact.
 - **Precision rules:**
-  - Hedge what is uncertain ("scientists ke hisaab se", "shaayad", "ho sakta hai"), but not every line.
-  - Separate a hint from a discovery ("abhi pakka nahi hai").
+  - Hedge what is uncertain, but not every line.
+  - Separate a hint from a discovery.
   - Don't credit an old discovery with later results.
-  - Popular myths and famous misquotes are flagged ("kaha jaata hai").
+  - Popular myths and disputed quotes are flagged as such.
   - Honest twists beat hype: if a famous claim fell apart, say so. It is more gripping.
 
 ---
@@ -63,7 +63,7 @@ channel's script. Write a new story in our own voice.
 Give the owner:
 - **The one question** that carries the whole video.
 - **Opening idea:** the first sentence and the 2-3 teasers.
-- **Chapters:** 4-7, each with its English card title (short, no numbers, e.g. "THE BIG FREEZE"), its person + year +
+- **Chapters:** 4-7, each with its English card title (2-4 words, no numbers), its person + year +
   twist, and its bridge into the next chapter.
 - **The ending:** the debate line and the callback.
 - **2-3 Indian comparisons** you plan to use (with verified numbers).
@@ -77,8 +77,7 @@ Give the owner:
 - **No intro of any kind.** No channel intro, no "aaj hum baat karenge", no title card. The first sentence is
   already the topic.
 - **Opening (30-50 s):**
-  - First sentence: the biggest, strangest concrete fact, **12 words or fewer**, no date, no hedge.
-    Good: "Ek din, yeh poora universe khatam ho jaayega." Bad: "Kai scientists maante hain ki shaayad…"
+  - First sentence: the biggest, strangest concrete fact, **12 words or fewer**, no date, no hedge, no warm-up.
   - Then why it matters (stakes), then 2-3 specific teasers of what's coming (name the strangest things),
     then a bridge into chapter 1.
   - Say the title's promise within the first 10 seconds.
@@ -87,14 +86,13 @@ Give the owner:
 - **Every chapter has a person, a year and a twist** (a named scientist, what they expected, what they found).
 - **Every chapter turns:** a belief, then "lekin" (the surprise), then "isliye/yaani" (the consequence).
   "But / therefore", never "and then".
-- **Every chapter ends on a bridge** that opens the next one: a concrete tease, not a moral
-  ("Lekin pichhle saal ek telescope ne kuch aisa dekha, jisne sab badal diya."). Vary the bridge wording.
+- **Every chapter ends on a bridge** that opens the next one: a concrete tease, not a moral. Never reuse the same
+  bridge wording.
 - **A re-hook every 60-90 seconds;** put the strongest moments around minute 3 and minute 6.
 - **Order:** history, then the science, then the newest clues, then the wildest idea. Never end on dates or
   launch schedules.
-- **Ending (under 45 s):** one debate line in the third person that names the competing ideas ("Freeze, Rip,
-  Crunch, ya bubble? Science abhi tak faisla nahi kar paayi."), then a callback to the opening line. End crisply:
-  no moral, no recap, no "in conclusion".
+- **Ending (under 45 s):** one debate line in the third person that names the competing ideas and admits what
+  science hasn't settled, then a callback to the opening. End crisply: no moral, no recap, no "in conclusion".
 - **The viewer question** goes in the pinned comment as a numbered poll, never in the narration.
 
 ### 5.2 Narration voice (strict)
@@ -104,15 +102,14 @@ Give the owner:
   - "aaj hum jaanenge", "kya aap jaante hain", any question aimed at the viewer
   - "number 10…"-style list announcements, subscribe or like requests
   - "hum/hamara" as a way of addressing the viewer (fine when it clearly means humanity or our galaxy, sparingly)
-- **Questions belong to characters** ("Riess ke saamne ek hi sawaal tha…"), plus the one debate line at the end.
-  Turn other questions into statements ("Aisa kaise?" becomes "Yahi thi paheli.").
+- **Questions belong to characters** (what a scientist in the story was asking), plus the one debate line at the
+  end. Turn every other question into a statement.
 - **Tone:** calm, awe-filled documentary; steady, no hype, no clickbait words inside the narration.
 
 ### 5.3 Language: the owner's Hinglish
 - **Technical and science words stay in English:** universe, galaxy, black hole, dark energy, signal, telescope,
   data, satellite, planet, atom, radiation, speed, expansion, discovery, Nobel Prize.
-- **Story, emotion and connecting words stay in simple spoken Hindi:** lekin, isliye, yaani, asli kahani, roshni,
-  brahmand, safar, taapman, antariksh, andhera, khatam, achanak.
+- **Story, emotion and connecting words stay in simple, everyday spoken Hindi.**
 - **Simple Hindi only.** Every line is heard once, so a 15-year-old must get it on first hearing. No textbook,
   Sanskritised or literary Urdu words. Use the everyday word or the English one:
 
@@ -129,36 +126,36 @@ Give the owner:
   | vistaar | phailaav |
   | waqt / vakt (वक़्त) | time (the voice mispronounces waqt) |
   | naye / nayi / nae (नए, नई) | alag / abhi abhi bane / rephrase (the voice says it like "nahi") |
-  | goonj | never use it (owner dislikes it); say "Big Bang ki roshni", "woh signal" |
+  | goonj | never use it (owner dislikes it) |
   | sarsarahat | signal / aawaaz |
 - **The read-aloud test:** if a line sounds like a news anchor or Google Translate, rewrite it.
 
 ### 5.4 Rhythm
 - Keep the flowing, spoken sentences the owner likes (15-24 words), **but drop a short punch line of 3-7 words
-  every 4-6 sentences** ("Universe phail raha tha." / "Koi signal nahi." / "Aur phir sab badal gaya.").
+  every 4-6 sentences**, where a fact or a turn deserves to land.
 - **Never three sentences of similar length in a row.** No sentence over 25 words (the voice loses its tune).
 - One idea and at most one number per sentence; put the number near the end of the sentence (an on-screen counter
   lands on it).
 - **No "..." and no dashes anywhere.** Use commas. The voice holds "..." as a long pause; the owner wants no pauses.
 - **No word or number twice in neighbouring sentences.** A key phrase at most 3 times in the whole script.
 - **Lines must agree with each other** (don't say "the story began with X" when the opening began elsewhere).
-- **Sentence variety:** reaction lines are allowed, sparingly and never two in a row: "Achhi khabar yeh hai…",
-  "Aur yahin se kahaani ajeeb ho jaati hai", "Sach kahein to…".
+- **Reaction lines** (a narrator's honest aside that marks a turn) are allowed, sparingly and never two in a row;
+  invent fresh ones for each script, never stock phrases.
 
 ### 5.5 Specifics, numbers and comparisons
-- **Specifics, not adjectives.** Never "sabse darawni/rahasyamay jagahon mein se ek" ("one of the most X").
+- **Specifics, not adjectives.** Never "one of the most X" phrasing in any language.
   Show it with a number made tangible or a real moment.
-- **Numbers as people say them:** "saadhe teen", "dedh sau", "dhai lakh", "teen crore" (lakh/crore when that's
-  clearer, "billion" for astronomy-scale numbers viewers already hear that way). Metric units. Years as plain years
-  ("unnees sau atthaanve mein"); say time relatively when the exact date doesn't matter.
-- **Huge numbers made visual:** "ek ke aage sau zero" instead of "10 ki power 100".
+- **Numbers as people say them** (saadhe, dedh, dhai, lakh and crore where that's clearer; "billion" for
+  astronomy-scale numbers viewers already hear that way). Metric units. Plain years; say time relatively when the
+  exact date doesn't matter.
+- **Huge numbers made visual:** describe the size of a number in words a listener can picture, never powers of ten.
 - **Every abstract idea gets an everyday picture.**
 - **Indian comparisons: 2-3 per long video**, where they make a scale land instantly: an auto-rickshaw, a Maruti
   Swift, a Royal Enfield, a Mumbai local train coach, a cricket pitch (22 yards, about 20 m), a cricket ball thrown
   straight up, two cups of chai, a grain of rice. The science term always stays next to it.
   **Verify every comparison number by search** and add it to the fact-check table.
-- **No catalogue codes in the narration** (OGLE-2011-BLG-0462, GW250114): say what it is ("ab tak ki sabse door ki
-  galaxy"); the code goes on screen.
+- **No catalogue codes in the narration** (OGLE-2011-BLG-0462, GW250114): say what the object is; the code goes on
+  screen.
 - **Cultural care:** respectful tone on religion, caste, regions and real tragedies; no stereotypes; casualty
   numbers sourced.
 
@@ -186,6 +183,24 @@ ENDING
 After the script, add the word count and estimated length, the fact-check table, and the self-check (section 6).
 
 ---
+
+### 5.8 Craft: write better than the obvious version
+These are principles, not templates. Find your own words for every video; never reuse a line, a bridge or an
+opening shape from an earlier script.
+- **Scenes, not summaries.** Put the viewer in a moment: a place, a year, a person doing something, what they
+  expected, what happened instead.
+- **Curiosity before explanation.** Raise the question, let it hang for a few lines, then answer it. Never explain
+  something the viewer hasn't been made to wonder about yet.
+- **Stakes.** Say why it matters, for Earth, for people, for what we thought we knew.
+- **Escalation.** Each chapter should feel bigger, stranger or closer to home than the one before.
+- **Contrast.** Expectation against result, the tiny against the enormous, calm words for terrifying facts.
+- **One clear picture per idea.** An image the ear can see, chosen fresh for this topic.
+- **Earn every line.** Cut anything that doesn't move the story or set up the next idea; cut warm-ups and
+  throat-clearing at the start of chapters.
+- **Surprise yourself.** If a line is the first thing anyone would write about this topic, look for the stranger,
+  truer detail behind it.
+- **Sound like a person.** Uneven rhythm, plain words, a sense of wonder; nothing a translation engine or a news
+  reader would produce.
 
 ## 6. Self-check before you show a script (fix, then report)
 
@@ -229,7 +244,7 @@ never see it). Rules:
 - **Description:** first line = the hook in other words than the title (not a repeat); 2-3 lines on the story;
   chapters with timestamps (first one 0:00); credits (footage archives and music, CC BY 4.0 lines); 3-5 hashtags.
 - **Tags:** 8-12, English, including the Hindi-search forms ("ton 618 hindi").
-- **Pinned comment:** one numbered poll that names the competing ideas ("Which ending will happen? 1 - …").
+- **Pinned comment:** one numbered poll that names the competing ideas.
 - **Thumbnail ideas:** 3 concepts, 2-5 words of text each (the owner makes the final thumbnail).
 
 ---
@@ -240,50 +255,17 @@ Each long video gets 3+ Shorts, each built on one of its strongest moments.
 - **Length:** 30-45 s, about 100-120 words (the voice plays at 1.1x).
 - **Beats:** HOOK (a number or claim in the first line, the first 1.5 seconds), THE PROBLEM (who, when, what was
   strange), THE TWIST (the surprising turn), OPEN END (the big question left open).
-- **Withhold the final answer** and end with a spoken call to the long video: "Poori kahani, poori video mein." /
-  "Ye jaanne ke liye, poori video dekhiye." (The on-screen card also says WATCH THE FULL VIDEO.)
+- **Withhold the final answer** and end with one short spoken line that sends viewers to the full video (the
+  on-screen card also says WATCH THE FULL VIDEO).
 - **No suspense pause** anywhere: the voice flows straight into the twist.
-- **Shorts may address the viewer** in the hook ("Abhi, isi time, aap…") and may use everyday Indian comparisons.
+- **Shorts may address the viewer** in the hook and may use everyday Indian comparisons.
 - Never open on a date or a filler word; no comma in the first 3 words.
 - Title: `<English hook> #shorts`, under 100 characters.
 - Write each Short in Hinglish (Roman), then a Devanagari version after approval, with its character count.
 
 ---
 
-## 10. Example (approved style)
-
-Opening of "How Will the Universe End?":
-
-```
-OPENING
-Ek din, yeh poora universe khatam ho jaayega.
-Har taara bujh jaayega, har galaxy bikhar jaayegi, aur aakhir mein shaayad kuch bhi nahi bachega.
-Yeh koi kahaani nahi hai.
-Scientists ke paas iske chaar raaste hain.
-Ek mein universe dheere dheere thanda hokar hamesha ke liye andhera ho jaata hai.
-Doosre mein woh khud ko phaad deta hai, galaxies se lekar atoms tak.
-Teesre mein sab kuch wapas simatkar ek point par aa girta hai.
-Aur chauthe mein, bina kisi chetawni ke, roshni ki speed se ek bubble aata hai, aur sab kuch mita deta hai.
-Lekin yeh kahaani shuru hoti hai ek galti se, jo galti nikli hi nahi.
-```
-
-Why it works: a 7-word first line; the promise and four teasers in under 30 s; long lines broken by short punches
-("Yeh koi kahaani nahi hai."); no viewer address; English science words, simple Hindi story words; a bridge into
-chapter 1.
-
-Example of an Indian comparison inside a chapter:
-
-```
-Bilkul waise hi, jaise seedha upar uchhali gayi cricket ball har pal dheemi hoti jaati hai, aur phir wapas neeche aa jaati hai.
-Scientists bas yeh naapna chahte the, ki yeh ball kitni tezi se dheemi ho rahi hai.
-Lekin data ne kuch aur hi dikhaya.
-Ball dheemi nahi ho rahi thi.
-Woh aur tez ho rahi thi.
-```
-
----
-
-## 11. How to work with the owner
+## 10. How to work with the owner
 
 - One stage at a time; show it and wait for "OK" or edits.
 - When he pastes a draft from another AI or his own rewrite: adopt the good points, correct factual slips with a
