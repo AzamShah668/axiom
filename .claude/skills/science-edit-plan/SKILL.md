@@ -92,6 +92,21 @@ From video 05 (owner, 2026-10-27; `productions/README.md`):
    - `bh_shrink`, `dark_star`, `hidden_companion`, …
 
    Keep each under ~10 s. Prefer an `N` card when the point is a number.
+
+   **Explainer graphics** (`scripts/video/gfx_extra.py`, owner 2026-11-19; items split with `;`, drawn over the beat's
+   dimmed footage):
+   - `countdown:<KICKER>;<VALUE>=<label>;...` 3-5 cards that appear one by one with arrows: a progression or countdown
+     (the Big Rip: `60 MILLION YEARS=Milky Way torn apart;3 MONTHS=planets fly off;...`).
+   - `stamp:<WORD>[;<small line>]` a rubber stamp slams on: CONFIRMED/PROVEN/SACH green, DEBUNKED/MYTH red, anything
+     else amber (`NOT CONFIRMED YET`, `OPEN QUESTION`). Use it on the honest twists.
+   - `journal:<date>;<line>;...;*<underlined line>*` a dated notebook page that writes itself (Caveat handwriting, Lora
+     italic date, crimson underline). For history beats and quotes, and in place of a photo when no free portrait
+     exists. Dates as `14 July 1916`.
+   - `compare:<auto|swift|pitch|coach|ball>;<LABEL>[;<size>]` an amber wireframe of an everyday Indian object with a
+     size bar (science-script-v2 §3c): auto-rickshaw, Maruti Swift, cricket pitch, local train coach, or a cricket ball
+     thrown up and falling back. The size is your verified number (`~20 M LONG`).
+   - `blueprint:<TITLE>` the dark navy grid with corner brackets (the explainer backdrop).
+   Use 2-4 of these per video, on beats where footage can't show the idea; they also fill text-free stretches.
 7. **L lower thirds** for every person the first time the story names them ("KARL SCHWARZSCHILD | German
    astronomer · 1873-1916"). **callout / route / hud** over footage when the shot shows the thing:
    - a ring on Sgr A*

@@ -27,6 +27,11 @@ is 100 quota units, so stay under ~30 searches a day).
    Only the topic and the facts are free; the script, footage, music and edit are always our own.
 5. Give the owner 3-5 options with the numbers behind each, and recommend one.
 
+**Indian angle (owner, 2026-11-19):** when two topics score alike, prefer the one with an Indian connection, and look
+for one inside any topic: an Indian scientist (Chandrasekhar, Meghnad Saha, C.V. Raman, Jayant Narlikar), an
+Indian mission or instrument (Chandrayaan, Aditya-L1, AstroSat, the GMRT radio telescope near Pune, the Hanle
+observatory in Ladakh). Only when it really belongs to the story; verify it like any fact.
+
 ## 2. Structure: one mystery, told as a story
 - **One question carries the whole video** ("us se pehle kya tha?"). Open it in the first 30 s and answer it,
   or admit it is open, only at the end.

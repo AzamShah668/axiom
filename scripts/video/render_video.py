@@ -286,6 +286,10 @@ def overlay(frame, kind, p):
 def gfx(name, t, D, sh):
     p = t / D
     f = starfield(t, dim=0.8)
+    if name.split(":")[0] in ("countdown", "stamp", "journal", "compare", "blueprint"):  # gfx_extra.py (owner, 2026-11-19)
+        import gfx_extra
+        gfx_extra.W, gfx_extra.H = W, H
+        return gfx_extra.draw(name, t, D, f, G["fonts"])
     if name == "starfield":  # a clean deep field drifting slowly, a faint Milky Way band across it (own graphic)
         if "sf_band" not in G:
             yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)

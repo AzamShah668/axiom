@@ -12,6 +12,8 @@ get "$gf/anton/Anton-Regular.ttf" "$dir/fonts/Anton.ttf"
 get "$gf/montserrat/Montserrat%5Bwght%5D.ttf" "$dir/fonts/Montserrat.ttf"
 get "$gf/fredoka/Fredoka%5Bwdth,wght%5D.ttf" "$dir/fonts/Fredoka.ttf"
 get "$gf/cinzel/Cinzel%5Bwght%5D.ttf" "$dir/fonts/Cinzel.ttf"
+get "$gf/caveat/Caveat%5Bwght%5D.ttf" "$dir/fonts/Caveat.ttf"          # handwriting (notebook, journal cards)
+get "$gf/lora/Lora-Italic%5Bwght%5D.ttf" "$dir/fonts/LoraItalic.ttf"  # journal card dates
 tracks=("$@")
 [ ${#tracks[@]} -gt 0 ] || tracks=("Lightless Dawn" "Dark Fog" "Long Note One" "Long Note Two" "Long Note Three" "Long Note Four" "Phantasm" "Ossuary 5 - Rest" "Interloper" "Echoes of Time v2")
 for t in "${tracks[@]}"; do
