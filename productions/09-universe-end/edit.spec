@@ -31,7 +31,9 @@ C इन तीनों रास्तों का | Which path we take is in
 
 == ch1
 V - @ a supernova exploding in a distant galaxy | a bright stellar explosion {hold}
-G Saul Perlmutter @ photo:Riess_face
+G Saul Perlmutter @ photo:Perlmutter
+G Brian Schmidt @ photo:Schmidt
+G Adam Riess @ photo:Riess_face
 K Saul Perlmutter @ PERLMUTTER [Saul] / SCHMIDT [Brian] / *RIESS* [Adam] | kicker=the supernova hunters
 G उस time तक @ scene:expansion_slow
 K उस time तक @ THE EXPANSION [फैलाव] / *IS SLOWING DOWN* [धीमा] | kicker=what everyone believed
@@ -43,9 +45,10 @@ G दिलचस्प बात @ photo:Einstein
 L Albert Einstein @ ALBERT EINSTEIN | physicist · 1879-1955
 G उन्होंने अपने equations @ journal:February 1917;Einstein adds one number to his equations;a force that pushes space apart;*the cosmological constant*
 V लेकिन उन्नीस सौ उनतीस @ galaxies moving away from each other | an old observatory telescope at night
+G Edwin Hubble @ photo:Hubble
 L Edwin Hubble @ EDWIN HUBBLE | astronomer · 1929: the universe is expanding
 G Einstein ने इसे छोड़ @ scene:strike;at_=छोड़
-V बाद में physicist @ a distant spiral galaxy | galaxy in deep space
+G बाद में physicist @ photo:Gamow
 L George Gamow @ GEORGE GAMOW | physicist · 1904-1968
 K बाद में physicist @ MY BIGGEST [सबसे] / *BLUNDER* [ग़लती] | kicker=Gamow's story: Einstein called it
 V हालाँकि Einstein के @ old handwritten letters and papers | a stack of old documents | faint galaxies in dark space
@@ -150,6 +153,7 @@ N लगभग ten to the power सौ @ hero | value=10¹⁰⁰ | unit=years | 
 V सालों तक सबको @ a bright white star in a star cluster | a neutron star spinning
 N उनकी उम्र ten @ hero | value=10¹¹⁰⁰ | unit=years | kicker=their life, it was thought | land=ग्यारह | over
 V लेकिन May दो हज़ार पच्चीस @ radio telescope dishes at night | an array of radio telescopes
+G Heino Falcke @ photo:Falcke
 L Heino Falcke @ HEINO FALCKE | astrophysicist, Radboud University · Netherlands
 G उनके equations ने @ scene:dissolve
 K उनके equations ने @ EVERYTHING [हर] / *EVAPORATES* [भाप]
@@ -251,6 +255,7 @@ V Scientists इसे Big Crunch @ an intense burst of light | a brilliant flas
 V पुरानी physics के @ a dark nebula with a bright centre | warped space around a point {hold}
 G Einstein की general @ spacetime
 V लेकिन महाराष्ट्र में @ India from space | the Indian subcontinent seen from orbit
+G अभय अष्टेकर @ photo:Ashtekar
 L अभय अष्टेकर @ ABHAY ASHTEKAR | physicist, born in Maharashtra · Penn State
 V उन्होंने Loop Quantum @ a glowing web of light in space | the cosmic web glowing
 K उन्होंने Loop Quantum @ LOOP QUANTUM [Loop] / *COSMOLOGY* [Cosmology]

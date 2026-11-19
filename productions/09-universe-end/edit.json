@@ -481,6 +481,14 @@
     },
     {
      "at": "Saul Perlmutter",
+     "gfx": "photo:Perlmutter"
+    },
+    {
+     "at": "Brian Schmidt",
+     "gfx": "photo:Schmidt"
+    },
+    {
+     "at": "Adam Riess",
      "gfx": "photo:Riess_face"
     },
     {
@@ -960,15 +968,16 @@
      ]
     },
     {
+     "at": "Edwin Hubble",
+     "gfx": "photo:Hubble"
+    },
+    {
      "at": "Einstein ने इसे छोड़",
      "gfx": "scene:strike;at_=छोड़"
     },
     {
      "at": "बाद में physicist",
-     "q": [
-      "a distant spiral galaxy",
-      "galaxy in deep space"
-     ]
+     "gfx": "photo:Gamow"
     },
     {
      "at": "हालाँकि Einstein के",
@@ -1586,6 +1595,10 @@
       "radio telescope dishes at night",
       "an array of radio telescopes"
      ]
+    },
+    {
+     "at": "Heino Falcke",
+     "gfx": "photo:Falcke"
     },
     {
      "at": "उनके equations ने",
@@ -2244,6 +2257,10 @@
       "India from space",
       "the Indian subcontinent seen from orbit"
      ]
+    },
+    {
+     "at": "अभय अष्टेकर",
+     "gfx": "photo:Ashtekar"
     },
     {
      "at": "उन्होंने Loop Quantum",
