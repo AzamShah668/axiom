@@ -148,7 +148,9 @@ Give the owner:
 - **Numbers as people say them** (saadhe, dedh, dhai, lakh and crore where that's clearer; "billion" for
   astronomy-scale numbers viewers already hear that way). Metric units. Plain years; say time relatively when the
   exact date doesn't matter.
-- **Huge numbers made visual:** describe the size of a number in words a listener can picture, never powers of ten.
+- **Huge numbers as powers of ten (owner's rule):** say "ten to the power <number>" (e.g. for 10^100), never
+  "ek ke aage sau zero". In the Devanagari voice file "ten to the power" stays in English letters and the exponent
+  is a Hindi number word.
 - **Every abstract idea gets an everyday picture.**
 - **Indian comparisons: 2-3 per long video**, where they make a scale land instantly: an auto-rickshaw, a Maruti
   Swift, a Royal Enfield, a Mumbai local train coach, a cricket pitch (22 yards, about 20 m), a cricket ball thrown

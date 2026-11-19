@@ -23,7 +23,8 @@
 - Calm, awe-filled documentary tone with steady pacing and no hype.
 - **Indian audience rules (owner, 2026-11-19; details in science-script-v2 §3c):**
   - Vary sentence length inside the flowing style: a short punch line every 4-6 sentences.
-  - Numbers as people say them ("saadhe teen", "dedh sau", lakh/crore where clearer), metric units.
+  - Numbers as people say them ("saadhe teen", "dedh sau", lakh/crore where clearer), metric units. **Huge numbers
+    as powers of ten: "ten to the power sau"**, never "ek ke aage sau zero" (owner, 2026-11-19).
   - The read-aloud test: nothing that sounds like a news anchor or Google Translate.
   - **Indian comparisons allowed in full videos** (2-3 per video: auto-rickshaw, Maruti Swift, cricket pitch, local
     train coach...), every comparison number verified by search and listed in the fact-check table.

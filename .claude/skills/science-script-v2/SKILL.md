@@ -118,8 +118,11 @@ context. Do the same for numbers: a number comes after the thing it measures, ne
   ("Aisa kaise?" becomes "Yahi thi pahaili.").
 - **Check grammar, especially gender agreement** (waqt is masculine: "waqt bhi, lambaai chaudaai jaisa hi ban
   jaata hai").
-- **Numbers should be easy to picture.** "1 ke aage 43 zero", not "10 ki power minus 43". Check the zero count
-  (10⁻⁴³ s = 1 second cut into 1 followed by 43 zeros pieces). Big numbers go in Hindi words in the Devanagari
+- **Huge numbers as powers of ten (owner, 2026-11-19, replaces "1 ke aage 43 zero"):** say "ten to the power
+  sau", "ten to the power minus taintalees", never "ek ke aage sau zero" (it doesn't sound good in the voice). In
+  the Devanagari file "ten to the power" stays in English letters and the exponent is a Hindi number word
+  (ten to the power सौ); probe it the first time. On screen it reads 10¹⁰⁰. Smaller big numbers stay as people say
+  them (crore, billion). Big numbers go in Hindi words in the Devanagari
   file.
 - **Every abstract idea gets an everyday comparison:**
   - an orange for the early observable universe
