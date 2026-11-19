@@ -31,7 +31,7 @@ C इन तीनों रास्तों का | Which path we take is in
 
 == ch1
 V - @ a supernova exploding in a distant galaxy | a bright stellar explosion {hold}
-G Saul Perlmutter @ photo:Riess
+G Saul Perlmutter @ photo:Riess_face
 K Saul Perlmutter @ PERLMUTTER [Saul] / SCHMIDT [Brian] / *RIESS* [Adam] | kicker=the supernova hunters
 G उस time तक @ scene:expansion_slow
 K उस time तक @ THE EXPANSION [फैलाव] / *IS SLOWING DOWN* [धीमा] | kicker=what everyone believed
