@@ -3,31 +3,34 @@
 # (compare ball, journal, countdown, stamps) on the beats footage can't show. Motion from frame 0, a cut within ~2 s.
 
 == opening
-V - @ a single dim red star fading out in dark empty space | the last stars of the universe going out {flash}
-K - @ ONE DAY [दिन] / THE LAST STAR [आख़िरी] / *WILL GO OUT* [बुझ]
+# Owner 2026-11-19: "whatever the speaker is saying, it should be shown". Every line is literal: own scenes
+# (scenes.py) where footage can't show it, footage only where it shows exactly the words.
+G - @ scene:last_star;out=बुझ+0.15
 C - | One day, the last star in this universe will go out
-V Scientists के पास @ observatory telescopes under a starry night sky | telescope dome opening at night
-N universe के अंत के तीन @ hero | value=3 | unit=possible endings | kicker=scientists see | land=तीन | over | dur=2.4
+G Scientists के पास @ scene:three_paths;split=तीन
 C Scientists के पास | Scientists have three different paths for the end of the universe
-V और दो हज़ार छब्बीस @ flight through a 3D map of galaxies | galaxy survey map of the cosmic web
+G और दो हज़ार छब्बीस @ scene:survey;flip=पलट
 C और दो हज़ार छब्बीस | and the 2026 data has turned the game around
-V हर galaxy, हर planet @ a spiral galaxy slowly rotating | planets orbiting a bright star
+V हर galaxy, @ a bright spiral galaxy in deep space | a grand spiral galaxy
+K हर galaxy, @ EVERY GALAXY [galaxy]
+V हर planet @ the planet Jupiter rotating | the planet Earth rotating in space
+K हर planet @ EVERY PLANET [planet]
+V हर ज़िंदा चीज़ @ a herd of elephants walking | a flock of birds flying | wildlife in a forest
+K हर ज़िंदा चीज़ @ EVERY *LIVING THING* [ज़िंदा]
 C हर galaxy, हर planet | The final fate of every galaxy, every planet and every living thing hides in these three paths
-V तीनों के नतीजे @ zooming out through thousands of galaxies | deep field full of galaxies
+G का आख़िरी अंजाम @ scene:three_paths;mode=b;split=0;hi=तीन
+G तीनों के नतीजे @ scene:three_paths;mode=c;split=0;hi=अलग
 C तीनों के नतीजे | And the three outcomes are completely different
-V पहले रास्ते में @ a galaxy being torn apart animation | stars ripped apart in a violent explosion
-K पहले रास्ते में @ EVERY ATOM [atom] / *RIPPED APART* [टुकड़ों] | kicker=path one
+G पहले रास्ते में @ scene:atom_rip;atom=atom;burst=फट
 C पहले रास्ते में | In the first, space expands so fast that every atom bursts into pieces
-V दूसरे रास्ते में @ a cold blue nebula fading into darkness | dim cooling stars in black space
+V दूसरे रास्ते में @ frost forming on glass timelapse | ice crystals growing close up | a frozen icy landscape
 K दूसरे रास्ते में @ EVERYTHING [सब] / *FREEZES* [बर्फ़] | kicker=path two
 C दूसरे रास्ते में | In the second, everything goes cold as ice
-V आख़िरी black hole भी @ a black hole slowly evaporating animation | a black hole glowing faintly
+G आख़िरी black hole भी @ scene:bh_vanish;gone=ग़ायब+0.3
 C आख़िरी black hole भी | and even the last black hole disappears
-V तीसरे रास्ते में @ galaxies rushing together into a bright point | the universe collapsing animation
-K तीसरे रास्ते में @ THE UNIVERSE [universe] / *SWALLOWS ITSELF* [निगल] | kicker=path three
+G तीसरे रास्ते में @ scene:crunch;shrink=सिमट-0.4;swallow=निगल
 C तीसरे रास्ते में | In the third, the whole universe shrinks back and swallows itself
-V इन तीनों रास्तों का @ flight through a field of galaxies | dark energy pushing galaxies apart animation {hold}
-K इन तीनों रास्तों का @ ONE FORCE DECIDES [फ़ैसला] / *FOUND IN 1998* [अट्ठानवे]
+G इन तीनों रास्तों का @ scene:dark_force;force=ताक़त;year=अट्ठानवे
 C इन तीनों रास्तों का | Which path we take is in the hands of a force discovered in 1998
 
 == ch1

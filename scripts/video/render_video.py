@@ -284,6 +284,10 @@ def overlay(frame, kind, p):
 
 # ---------------------------------------------------------------- graphics
 def gfx(name, t, D, sh):
+    if name.startswith("scene:"):  # literal animated scene (scenes.py, owner 2026-11-19); sh = the scene item
+        import scenes
+        scenes.W, scenes.H, scenes.FPS = W, H, FPS
+        return scenes.frame(sh["scene"], t, D, G["fonts"])
     if name.startswith("board:"):  # evidence-board scene (board.py, owner 2026-11-19); sh = the scene item
         import board
         board.W, board.H, board.FPS = W, H, FPS

@@ -31,7 +31,8 @@
  "music": [
   {
    "from": "opening",
-   "track": "Interloper.mp3"
+   "track": "Hitman.mp3",
+   "gain": 6.0
   },
   {
    "from": "ch1",
@@ -334,75 +335,69 @@
    "v": [
     {
      "at": null,
-     "opt": "flash",
-     "q": [
-      "a single dim red star fading out in dark empty space",
-      "the last stars of the universe going out"
-     ]
+     "gfx": "scene:last_star;out=बुझ+0.15"
     },
     {
      "at": "Scientists के पास",
-     "q": [
-      "observatory telescopes under a starry night sky",
-      "telescope dome opening at night"
-     ]
+     "gfx": "scene:three_paths;split=तीन"
     },
     {
      "at": "और दो हज़ार छब्बीस",
+     "gfx": "scene:survey;flip=पलट"
+    },
+    {
+     "at": "हर galaxy,",
      "q": [
-      "flight through a 3D map of galaxies",
-      "galaxy survey map of the cosmic web"
+      "a bright spiral galaxy in deep space",
+      "a grand spiral galaxy"
      ]
     },
     {
-     "at": "हर galaxy, हर planet",
+     "at": "हर planet",
      "q": [
-      "a spiral galaxy slowly rotating",
-      "planets orbiting a bright star"
+      "the planet Jupiter rotating",
+      "the planet Earth rotating in space"
      ]
+    },
+    {
+     "at": "हर ज़िंदा चीज़",
+     "q": [
+      "a herd of elephants walking",
+      "a flock of birds flying",
+      "wildlife in a forest"
+     ]
+    },
+    {
+     "at": "का आख़िरी अंजाम",
+     "gfx": "scene:three_paths;mode=b;split=0;hi=तीन"
     },
     {
      "at": "तीनों के नतीजे",
-     "q": [
-      "zooming out through thousands of galaxies",
-      "deep field full of galaxies"
-     ]
+     "gfx": "scene:three_paths;mode=c;split=0;hi=अलग"
     },
     {
      "at": "पहले रास्ते में",
-     "q": [
-      "a galaxy being torn apart animation",
-      "stars ripped apart in a violent explosion"
-     ]
+     "gfx": "scene:atom_rip;atom=atom;burst=फट"
     },
     {
      "at": "दूसरे रास्ते में",
      "q": [
-      "a cold blue nebula fading into darkness",
-      "dim cooling stars in black space"
+      "frost forming on glass timelapse",
+      "ice crystals growing close up",
+      "a frozen icy landscape"
      ]
     },
     {
      "at": "आख़िरी black hole भी",
-     "q": [
-      "a black hole slowly evaporating animation",
-      "a black hole glowing faintly"
-     ]
+     "gfx": "scene:bh_vanish;gone=ग़ायब+0.3"
     },
     {
      "at": "तीसरे रास्ते में",
-     "q": [
-      "galaxies rushing together into a bright point",
-      "the universe collapsing animation"
-     ]
+     "gfx": "scene:crunch;shrink=सिमट-0.4;swallow=निगल"
     },
     {
      "at": "इन तीनों रास्तों का",
-     "opt": "hold",
-     "q": [
-      "flight through a field of galaxies",
-      "dark energy pushing galaxies apart animation"
-     ]
+     "gfx": "scene:dark_force;force=ताक़त;year=अट्ठानवे"
     }
    ],
    "c": [
@@ -450,35 +445,31 @@
    "sfx": [],
    "k": [
     {
-     "at": null,
+     "at": "हर galaxy,",
      "lines": [
       {
-       "text": "ONE DAY",
-       "at": "दिन"
-      },
-      {
-       "text": "THE LAST STAR",
-       "at": "आख़िरी"
-      },
-      {
-       "text": "*WILL GO OUT*",
-       "at": "बुझ"
+       "text": "EVERY GALAXY",
+       "at": "galaxy"
       }
      ]
     },
     {
-     "at": "पहले रास्ते में",
+     "at": "हर planet",
      "lines": [
       {
-       "text": "EVERY ATOM",
-       "at": "atom"
-      },
-      {
-       "text": "*RIPPED APART*",
-       "at": "टुकड़ों"
+       "text": "EVERY PLANET",
+       "at": "planet"
       }
-     ],
-     "kicker": "path one"
+     ]
+    },
+    {
+     "at": "हर ज़िंदा चीज़",
+     "lines": [
+      {
+       "text": "EVERY *LIVING THING*",
+       "at": "ज़िंदा"
+      }
+     ]
     },
     {
      "at": "दूसरे रास्ते में",
@@ -493,46 +484,6 @@
       }
      ],
      "kicker": "path two"
-    },
-    {
-     "at": "तीसरे रास्ते में",
-     "lines": [
-      {
-       "text": "THE UNIVERSE",
-       "at": "universe"
-      },
-      {
-       "text": "*SWALLOWS ITSELF*",
-       "at": "निगल"
-      }
-     ],
-     "kicker": "path three"
-    },
-    {
-     "at": "इन तीनों रास्तों का",
-     "lines": [
-      {
-       "text": "ONE FORCE DECIDES",
-       "at": "फ़ैसला"
-      },
-      {
-       "text": "*FOUND IN 1998*",
-       "at": "अट्ठानवे"
-      }
-     ]
-    }
-   ],
-   "n": [
-    {
-     "at": "universe के अंत के तीन",
-     "num": {
-      "template": "hero",
-      "value": "3",
-      "unit": "possible endings",
-      "kicker": "scientists see",
-      "land": "तीन",
-      "dur": "2.4"
-     }
     }
    ]
   },

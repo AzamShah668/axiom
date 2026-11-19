@@ -31,7 +31,8 @@
  "music": [
   {
    "from": "opening",
-   "track": "Interloper.mp3"
+   "track": "Hitman.mp3",
+   "gain": 6.0
   },
   {
    "from": "ch1",

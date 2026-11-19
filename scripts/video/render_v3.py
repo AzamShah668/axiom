@@ -27,6 +27,7 @@ import render_v2  # noqa: E402  (worker init, zoom/whip transitions)
 import mograph as mg  # noqa: E402
 import sfx as fx  # noqa: E402
 import board  # noqa: E402  (evidence-board scenes, owner 2026-11-19)
+import scenes  # noqa: E402  (literal animated scenes, owner 2026-11-19)
 from grade import Grade  # noqa: E402
 
 W, H, FPS, SR = rv.W, rv.H, rv.FPS, rv.SR
@@ -289,6 +290,10 @@ def plan(edit, tl, voice_wav=None):
                 continue
             if "gfx" in b:
                 it = {**base, "kind": "gfx", "t0": b0, "t1": b1, "gfx": b["gfx"], "q": edit["bg_query"]}
+                if str(b["gfx"]).startswith("scene:"):  # literal animated scene (scenes.py): triggers -> scene seconds
+                    after = T.idx(sid, b["at"]) if b.get("at") else 0
+                    it["scene"] = scenes.resolve(scenes.parse(b["gfx"]), lambda trg, _b0=b0, _a=after: T.vt(sid, trg, _a) - _b0)
+                    sfx += [(k, b0 + t, g, kw) for k, t, g, kw in scenes.cues(it["scene"]) if b0 - 2 <= b0 + t < b1 + 0.5]
                 if b.get("board"):  # evidence-board scene (board.py): spoken triggers -> seconds from the scene start
                     after = T.idx(sid, b["at"]) if b.get("at") else 0
                     it["board"] = board.resolve(b["board"], lambda trg, _b0=b0, _a=after: T.vt(sid, trg, _a) - _b0)
@@ -534,7 +539,7 @@ def camera(fr, it, t, D):
 
 OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "rewind:big", "photo",
            "channel", "converge", "recombination", "stretch", "notebook", "two_theories", "no_boundary", "cycles",
-           "memory_fix", "gravity_assist", "light_ladder", "starfield", "board"}
+           "memory_fix", "gravity_assist", "light_ladder", "starfield", "board", "scene"}
 
 
 def own_gfx(it):
@@ -838,7 +843,7 @@ def main():
     import hashlib
     here = os.path.dirname(os.path.abspath(__file__))
     code = hashlib.sha1(b"".join(open(os.path.join(here, f), "rb").read() for f in
-                                 ("render_v3.py", "render_video.py", "mograph.py", "grade.py", "render_v2.py", "board.py", "gfx_extra.py"))).hexdigest()
+                                 ("render_v3.py", "render_video.py", "mograph.py", "grade.py", "render_v2.py", "board.py", "gfx_extra.py", "scenes.py"))).hexdigest()
 
     def sig(c0, c1):  # a chunk is re-rendered when anything it shows changes: its scenes, overlays, grade or the code
         t0, t1 = c0 / FPS, c1 / FPS
