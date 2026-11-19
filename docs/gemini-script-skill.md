@@ -83,7 +83,9 @@ Give the owner:
   - Say the title's promise within the first 10 seconds.
 - **Chapters, not a countdown.** The voice flows as one story; the list structure lives only on screen (chapter
   cards).
-- **Every chapter has a person, a year and a twist** (a named scientist, what they expected, what they found).
+- **Most chapters have a person, a year and a twist** (a named scientist, what they expected, what they found).
+  Let 1-2 chapters break the mould on purpose: built around a strange piece of data, an instrument, an object or a
+  single moment instead. Vary chapter shapes and lengths so no two chapters feel stamped from the same template.
 - **Every chapter turns:** a belief, then "lekin" (the surprise), then "isliye/yaani" (the consequence).
   "But / therefore", never "and then".
 - **Every chapter ends on a bridge** that opens the next one: a concrete tease, not a moral. Never reuse the same
@@ -113,21 +115,19 @@ Give the owner:
 - **Simple Hindi only.** Every line is heard once, so a 15-year-old must get it on first hearing. No textbook,
   Sanskritised or literary Urdu words. Use the everyday word or the English one:
 
-  | Don't write | Write |
-  |---|---|
-  | kan (कण) | particles |
-  | ghanatva (घनत्व) | density |
-  | tatva (तत्व) | elements |
-  | sateekta, sateek (सटीक) | exact / bilkul theek |
-  | shaktishaali (शक्तिशाली) | taaqatwar |
-  | vaayumandal (वायुमंडल) | atmosphere |
-  | kendra (केंद्र) | beech mein / centre |
-  | ghaatak (घातक) | khatarnaak |
-  | vistaar | phailaav |
-  | waqt / vakt (वक़्त) | time (the voice mispronounces waqt) |
-  | naye / nayi / nae (नए, नई) | alag / abhi abhi bane / rephrase (the voice says it like "nahi") |
-  | goonj | never use it (owner dislikes it) |
-  | sarsarahat | signal / aawaaz |
+  - kan (कण) → particles
+  - ghanatva (घनत्व) → density
+  - tatva (तत्व) → elements
+  - sateek, sateekta (सटीक) → exact / bilkul theek
+  - shaktishaali (शक्तिशाली) → taaqatwar
+  - vaayumandal (वायुमंडल) → atmosphere
+  - kendra (केंद्र) → beech mein / centre
+  - ghaatak (घातक) → khatarnaak
+  - vistaar → phailaav
+  - waqt / vakt (वक़्त) → time (the voice mispronounces waqt)
+  - naye / nayi / nae (नए, नई) → alag / abhi abhi bane / rephrase (the voice says it like "nahi")
+  - goonj → never use it (the owner dislikes it)
+  - sarsarahat → signal / aawaaz
 - **The read-aloud test:** if a line sounds like a news anchor or Google Translate, rewrite it.
 
 ### 5.4 Rhythm
@@ -163,6 +163,15 @@ Give the owner:
 - Rudra speaks about 165-170 words a minute. **11 minutes is about 1,800-1,900 words** (count the Roman script).
 - Cut side facts that don't serve the one story. Every line either moves the story or sets up the next idea.
 
+### 5.6b Write in chunks, not in one go
+Long drafts drift back into generic AI rhythm after a few minutes. So:
+1. **Turn 1:** OPENING + the first 2 chapters.
+2. **Turn 2:** the next 2-3 chapters. **Turn 3:** the rest + ENDING. (Wait for the owner's "next" or edits between
+   turns if he wants to steer; otherwise continue.)
+3. Before each new chunk, re-read sections 5.2-5.10 and keep a short **style ledger** at the end of each chunk:
+   bridges used so far, comparisons used, chapter shapes used, sentence openers used 3+ times. The next chunk must
+   not repeat what the ledger shows.
+
 ### 5.7 Output format of the script
 Plain text the owner can copy, with section labels, no markdown inside the narration:
 
@@ -180,11 +189,33 @@ ENDING
 <lines>
 ```
 
-After the script, add the word count and estimated length, the fact-check table, and the self-check (section 6).
+After the last chunk, add the word count, the estimated length and the fact-check table, then run the edit pass (section 6) in a separate turn.
 
 ---
 
-### 5.8 Craft: write better than the obvious version
+### 5.8 Banned AI patterns (they read as machine-written in any language)
+Never use these shapes, in Hinglish or English. If one appears in a draft, rewrite the sentence with a concrete fact.
+- **"Not just X, but Y":** "Ye sirf ek X nahi tha, balki…", "Yeh sirf … nahi, yeh …"
+- **Empty teasers:** "Sab kuch badalne wala tha", "Ye toh bas shuruaat thi", "Kisi ne socha bhi nahi tha", "Lekin
+  kahaani yahin khatam nahi hoti/hui", "Aur yahin se sab badal gaya", "Jo hua, woh hairaan kar dene wala tha",
+  "Iska jawaab chaunkaane wala hai", "Aage jo hua…"
+- **Hype words:** hairaan kar dene wala, chaunkaane wala, mind-blowing, fascinating, incredible, game changer,
+  journey (safar as a metaphor for a story), rahasya / rahasyamay as decoration, "history ka sabse…", "science ki
+  duniya mein".
+- **Stacked intensifiers:** "bahut hi zyaada", "behad hi", "sach mein bahut".
+- **Fake suspense formulas:** "Ek aisi cheez jo…" (then the reveal), "Yakeen karna mushkil hai, lekin…", "Socho
+  agar…", rhetorical questions to the viewer, three dramatic one-word sentences in a row.
+- **Automatic triples:** lists of exactly three adjectives or three parallel clauses, again and again.
+- **Morals and summaries:** "Isse humein yeh seekh milti hai", "Yeh hamein yaad dilata hai ki…", "Aakhir mein…".
+- **Mirror sentences:** perfectly balanced "Jitna X, utna Y" lines repeated as a rhythm device.
+- **The same sentence opener** ("Aur", "Lekin", "Yeh") starting three sentences in a row.
+
+### 5.9 Optional voice reference
+If the owner pastes a few lines he loves (his own writing or a past script), study their rhythm, word choice and
+energy, then write new lines in that spirit. Never copy, rephrase or reuse those lines, and never treat them as a
+template.
+
+### 5.10 Craft: write better than the obvious version
 These are principles, not templates. Find your own words for every video; never reuse a line, a bridge or an
 opening shape from an earlier script.
 - **Scenes, not summaries.** Put the viewer in a moment: a place, a year, a person doing something, what they
@@ -202,22 +233,22 @@ opening shape from an earlier script.
 - **Sound like a person.** Uneven rhythm, plain words, a sense of wonder; nothing a translation engine or a news
   reader would produce.
 
-## 6. Self-check before you show a script (fix, then report)
+## 6. Stage 4b: the edit pass (a separate turn after the full draft, with proof)
 
-Go through this list and fix every problem before showing the script. Then report "Self-check: passed" or list
-what you left on purpose and why.
-1. First sentence 12 words or fewer, no hedge, no date; title promise within 10 s; 2-3 specific teasers.
-2. No viewer address (aap, tum, socho, samjho, dekhiye, questions to the viewer), no intro, no recap.
-3. Every chapter: a named person, a year, a "lekin" turn, a concrete bridge (bridges not all worded alike).
-4. A short punch line every 4-6 sentences; no three similar-length sentences in a row; nothing over 25 words.
-5. No "...", no dashes, no textbook words, no naye/nayi, no waqt, no goonj.
-6. Numbers spoken naturally; every number and comparison in the fact-check table; uncertain claims hedged.
-7. 2-3 Indian comparisons, verified.
-8. No catalogue codes; no word or number repeated in neighbouring sentences.
-9. Ending under 45 s, crisp, debate line + callback; poll question saved for the pinned comment.
-10. Length within 1,700-1,950 words for an 11-12 minute video.
-
----
+Do not report "passed". In a new turn, act as a strict editor of the finished draft and show the evidence:
+1. **Opening check:** quote the first sentence with its word count; quote where the title's promise is first said.
+2. **Bridges side by side:** list the last line of every chapter in one table. Rewrite any two that share a shape.
+3. **Long sentences:** list every sentence over 22 words with its word count. Split anything over 25.
+4. **Rhythm:** list every run of three sentences of similar length (within 3 words of each other) and every stretch of
+   6+ sentences with no punch line of 3-7 words. Fix them.
+5. **Openers:** list sentence openers used 3+ times in a row or 6+ times in a chapter.
+6. **Banned words and patterns:** quote every hit from 5.2, 5.3 and 5.8 with its line, or write "none found" only
+   after listing what you searched for.
+7. **Repeats:** any word or number repeated in neighbouring sentences; any key phrase used more than 3 times.
+8. **Facts:** every number in the script mapped to its fact-check row; anything without a row is marked [VERIFY].
+9. **Chapter shapes:** one line per chapter: person/year/twist, or which chapter breaks the mould and how.
+10. **Length:** word count and estimated minutes (165-170 words a minute).
+Then output the corrected full script.
 
 ## 7. Stage 5 (only after the owner approves): the voice-over file in Devanagari
 

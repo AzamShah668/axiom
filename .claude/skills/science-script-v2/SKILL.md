@@ -141,6 +141,14 @@ What professional YouTube writers do; every script from video 08:
 - **A re-hook every 60-90 s:** each chapter ends by teasing the next place.
 - **Cut the AI tells:** "a reminder that", "it's important to note", "in conclusion", stacked adjectives,
   perfectly balanced sentences, a hedge in every line, ending every chapter on a moral.
+- **Banned AI patterns (owner, 2026-11-19, from a Gemini review of our script skill):** "Ye sirf X nahi tha, balki
+  Y"; empty teasers ("Sab kuch badalne wala tha", "Ye toh bas shuruaat thi", "Kisi ne socha bhi nahi tha", "Lekin
+  kahaani yahin khatam nahi hui", "Iska jawaab chaunkaane wala hai"); hype words (hairaan kar dene wala, mind-blowing,
+  rahasyamay as decoration, "history ka sabse…"); stacked intensifiers ("bahut hi zyaada"); "Ek aisi cheez jo…"
+  reveals; automatic triples; morals ("Yeh hamein yaad dilata hai…"); the same opener three sentences in a row.
+  Rewrite each with a concrete fact.
+- **Vary chapter shapes:** most chapters run person + year + twist, but let 1-2 break the mould (a strange piece of
+  data, an instrument, an object, one moment), so the video doesn't feel stamped from a template.
 - **Honest twists beat hype:** when a famous claim fell apart (dark flow), say so; it is more gripping.
 - **The owner's read-aloud pass** is the last step: he reads it in his own voice and rewrites what he wouldn't
   say.
