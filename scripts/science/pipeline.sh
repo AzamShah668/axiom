@@ -91,7 +91,8 @@ stage() {
       "$PY" "$ROOT/scripts/video/make_edit.py" "$P/edit.spec" "$P/edit.base.json" "$P/edit.json"
       "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" --plan-only ;;
     footage)
-      "$PY" "$ROOT/scripts/footage/search_sources.py" "$P/footage/terms.txt" "$LIB/candidates.json"
+      "$PY" "$ROOT/scripts/footage/search_sources.py" "$P/footage/terms.txt" "$LIB/candidates.json" \
+        --sources "${SOURCES:-eso,esahubble,esawebb,svs,pexels,pixabay}"   # stock sites need their key in config/.env
       "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks.json" \
         --max "$LIMIT" --avoid "$ROOT/productions" --lib "$LIB"
       library_pull "$WORK/picks.json"

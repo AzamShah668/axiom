@@ -311,8 +311,9 @@
     {
      "at": "इसका logic",
      "q": [
-      "planet Earth from space",
-      "the blue Earth slowly turning"
+      "a cricket ball flying through the air",
+      "a cricket match in a stadium",
+      "planet Earth from space"
      ]
     },
     {
@@ -783,6 +784,7 @@
      "at": "लेकिन उन्नीस सौ उनतीस",
      "q": [
       "an old observatory telescope at night",
+      "a vintage brass telescope",
       "galaxies moving away from each other"
      ]
     },
@@ -996,8 +998,9 @@
      "at": null,
      "opt": "hold",
      "q": [
-      "the cosmic web simulation",
-      "dark matter and galaxies simulation"
+      "equations written on a chalkboard",
+      "a scientist writing formulas",
+      "the cosmic web simulation"
      ]
     },
     {
@@ -1304,14 +1307,14 @@
      "at": "उनका हिसाब thermodynamics",
      "q": [
       "the Sun's glowing surface",
-      "heat pouring off a star"
+      "a glowing fire cooling to embers"
      ]
     },
     {
      "at": "हर गरम चीज़",
      "q": [
-      "a hot star cooling down",
-      "a red glowing star dimming"
+      "glowing hot metal cooling down",
+      "a hot star cooling down"
      ]
     },
     {
@@ -1325,8 +1328,8 @@
       "land": "temperature"
      },
      "q": [
-      "a warm glowing nebula",
-      "soft orange gas cloud"
+      "steam rising from a hot cup of tea",
+      "a cup of chai on a table"
      ]
     },
     {
@@ -1707,6 +1710,7 @@
      "opt": "hold",
      "q": [
       "an observatory on a desert mountain at night",
+      "the Arizona desert under the stars",
       "a large telescope dome under the stars"
      ]
     },
@@ -1788,8 +1792,8 @@
     {
      "at": "Physicists अभी और",
      "q": [
-      "a telescope dome opening at night",
-      "observatory under the stars"
+      "scientists looking at data on computer screens",
+      "a telescope dome opening at night"
      ]
     },
     {
@@ -1802,8 +1806,9 @@
     {
      "at": "September दो हज़ार पच्चीस",
      "q": [
-      "a simulation of the universe",
-      "cosmic web simulation"
+      "a university campus building",
+      "a scientist working at a computer",
+      "a simulation of the universe"
      ]
     },
     {
@@ -2192,7 +2197,7 @@
     {
      "at": "उनके equations ने",
      "q": [
-      "a strange glowing structure in space",
+      "mathematical equations on a blackboard",
       "swirling light in a nebula"
      ]
     },

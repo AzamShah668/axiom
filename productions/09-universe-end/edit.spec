@@ -39,7 +39,7 @@ C Saul Perlmutter | Saul Perlmutter, Brian Schmidt and Adam Riess used the light
 V उस time तक @ galaxies drifting apart in the expanding universe | galaxy clusters moving away
 K उस time तक @ THE EXPANSION [फैलाव] / *IS SLOWING DOWN* [धीमा] | kicker=what everyone believed
 C उस time तक | Until then, every scientist believed the expansion of the universe was slowing down
-V इसका logic @ planet Earth from space | the blue Earth slowly turning
+V इसका logic @ a cricket ball flying through the air | a cricket match in a stadium | planet Earth from space
 C इसका logic | The logic was simple
 G जब कोई cricket ball @ compare:ball;THROWN STRAIGHT UP
 C जब कोई cricket ball | Throw a cricket ball straight up, and Earth's gravity pulls it back down
@@ -60,7 +60,7 @@ C इस discovery के लिए | For this discovery, the three scientists w
 G दिलचस्प बात @ journal:February 1917;Einstein adds one number to his equations;a force that pushes space apart;*the cosmological constant*
 C दिलचस्प बात | Interestingly, Albert Einstein had thought of such a force back in 1917
 C उन्होंने अपने equations | He added a number called the cosmological constant to his equations
-V लेकिन उन्नीस सौ उनतीस @ an old observatory telescope at night | galaxies moving away from each other
+V लेकिन उन्नीस सौ उनतीस @ an old observatory telescope at night | a vintage brass telescope | galaxies moving away from each other
 L Edwin Hubble @ EDWIN HUBBLE | astronomer · 1929: the universe is expanding
 C उन्नीस सौ उनतीस | 1929 | big
 C लेकिन उन्नीस सौ उनतीस | But in 1929 Edwin Hubble showed that the universe is expanding
@@ -79,7 +79,7 @@ C अब सबसे बड़ा सवाल | Now the biggest question was: 
 
 == ch2
 C दो हज़ार तीन | 2003 | big
-V - @ the cosmic web simulation | dark matter and galaxies simulation {hold}
+V - @ equations written on a chalkboard | a scientist writing formulas | the cosmic web simulation {hold}
 L Robert Caldwell @ ROBERT CALDWELL | physicist, Dartmouth College · 2003
 C - | In 2003, physicist Robert Caldwell and two colleagues solved a frightening equation
 V अब तक यही माना @ a cluster of galaxies held together by gravity | galaxy cluster in deep space
@@ -130,12 +130,12 @@ C अठारह सौ बावन | 1852 | big
 V - @ a cold blue nebula slowly drifting | icy blue gas cloud in space {hold}
 L Lord Kelvin @ LORD KELVIN | British physicist · 1824-1907
 C - | In 1852, British physicist Lord Kelvin painted a different picture of the end of the universe
-V उनका हिसाब thermodynamics @ the Sun's glowing surface | heat pouring off a star
+V उनका हिसाब thermodynamics @ the Sun's glowing surface | a glowing fire cooling to embers
 K उनका हिसाब thermodynamics @ *ENTROPY* [entropy] | kicker=a basic law of heat
 C उनका हिसाब thermodynamics | His calculation rested on a basic law of thermodynamics, known today as entropy
-V हर गरम चीज़ @ a hot star cooling down | a red glowing star dimming
+V हर गरम चीज़ @ glowing hot metal cooling down | a hot star cooling down
 C हर गरम चीज़ | Every hot thing shares its heat and cools down
-N कमरे में रखा @ thermo | value=25 | from=90 | unit=°C | kicker=a hot cup of chai cools to | land=temperature | q=a warm glowing nebula; soft orange gas cloud
+N कमरे में रखा @ thermo | value=25 | from=90 | unit=°C | kicker=a hot cup of chai cools to | land=temperature | q=steam rising from a hot cup of tea; a cup of chai on a table
 C कमरे में रखा | A hot cup of chai left in a room reaches room temperature in a few minutes
 V पूरा universe भी @ slow flight through a field of galaxies | drifting past distant galaxies
 C पूरा universe भी | The whole universe is on exactly the same road
@@ -189,7 +189,7 @@ V पर Arizona के @ an observatory on a mountain under the night sky | tel
 C पर Arizona के | But a telescope on a mountain in Arizona cracked that certainty
 
 == ch4
-V - @ an observatory on a desert mountain at night | a large telescope dome under the stars {hold}
+V - @ an observatory on a desert mountain at night | the Arizona desert under the stars | a large telescope dome under the stars {hold}
 L जिसका नाम Mayall @ MAYALL TELESCOPE | 4-metre telescope · Kitt Peak, Arizona
 C Kitt Peak | KITT PEAK, ARIZONA | big
 C - | On Kitt Peak in the Arizona desert stands a four-metre telescope called the Mayall Telescope
@@ -219,11 +219,11 @@ N पिछले कुछ billion @ hero | value=10 | unit=% weaker | kicker=h
 C पिछले कुछ billion | There are hints its strength has dropped by about ten percent over the last few billion years
 G ये अभी कोई पक्की @ stamp:NOT CONFIRMED YET;a hint, not a discovery
 C ये अभी कोई पक्की | This is not a confirmed discovery yet
-V Physicists अभी और @ a telescope dome opening at night | observatory under the stars
+V Physicists अभी और @ scientists looking at data on computer screens | a telescope dome opening at night
 C Physicists अभी और | Physicists are waiting for more data to check it fully
 V लेकिन अगर ये hint @ galaxies slowing down and turning back | the universe changing direction
 C लेकिन अगर ये hint | But if this hint turns out true, the universe won't end in Heat Death
-V September दो हज़ार पच्चीस @ a simulation of the universe | cosmic web simulation
+V September दो हज़ार पच्चीस @ a university campus building | a scientist working at a computer | a simulation of the universe
 L Henry Tye @ HENRY TYE | physicist, Cornell University
 C September दो हज़ार पच्चीस | SEPTEMBER 2025 | big
 C September दो हज़ार पच्चीस | In September 2025, Cornell physicist Henry Tye and colleagues built a model on this same data
@@ -278,7 +278,7 @@ C लेकिन महाराष्ट्र में | But Maharashtra-bor
 V उन्होंने Loop Quantum @ a glowing web of light in space | the cosmic web glowing
 K उन्होंने Loop Quantum @ LOOP QUANTUM [Loop] / *COSMOLOGY* [Cosmology]
 C उन्होंने Loop Quantum | Working on Loop Quantum Cosmology, he brought quantum mechanics and gravity together
-V उनके equations ने @ a strange glowing structure in space | swirling light in a nebula
+V उनके equations ने @ mathematical equations on a blackboard | swirling light in a nebula
 C उनके equations ने | His equations gave a strange result
 V इस theory के मुताबिक़ @ a grid of glowing points of light | a fine web of light
 C इस theory के मुताबिक़ | In this theory, space is built from tiny quantum pieces

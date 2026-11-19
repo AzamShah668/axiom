@@ -99,14 +99,42 @@ def svs_4k(sid):
             "kw": [k.get("title", "") if isinstance(k, dict) else str(k) for k in d.get("keywords", [])][:12]}
 
 
-def pexels_key():
-    k = os.environ.get("PEXELS_API_KEY")
+def env_key(name):
+    """An API key from the environment or the git-ignored config/.env (never printed)."""
+    k = os.environ.get(name)
     env = os.path.join(os.path.dirname(__file__), "..", "..", "config", ".env")
     if not k and os.path.exists(env):
         for ln in open(env):
-            if ln.startswith("PEXELS_API_KEY="):
+            if ln.startswith(name + "="):
                 k = ln.split("=", 1)[1].strip()
     return k
+
+
+def pexels_key():
+    return env_key("PEXELS_API_KEY")
+
+
+def pixabay_search(term, limit=20):
+    """Pixabay stock video (owner, 2026-11-19: more variety for what the voice names: places, objects, people at work).
+    Only landscape files at least 3840 px wide; Pixabay Content License (free, no attribution required; credited
+    anyway). The key goes in the query string, so it lives in config/.env as PIXABAY_API_KEY."""
+    k = env_key("PIXABAY_API_KEY")
+    if not k:
+        return {}
+    try:
+        r = requests.get("https://pixabay.com/api/videos/", timeout=30,
+                         params={"key": k, "q": term[:100], "per_page": max(3, min(limit, 200)), "safesearch": "true"})
+        hits = r.json().get("hits", []) if r.ok else []
+    except Exception:
+        return {}
+    out = {}
+    for v in hits:
+        f = (v.get("videos") or {}).get("large") or {}
+        if (f.get("width") or 0) < 3840 or (f.get("height") or 0) >= (f.get("width") or 0) or not f.get("url"):
+            continue
+        out[str(v["id"])] = {"title": (v.get("tags") or term).replace(",", ""), "url": f["url"], "page": v.get("pageURL", ""),
+                             "thumb": f.get("thumbnail", ""), "desc": f"by {v.get('user', '')}", "bytes": f.get("size", 0)}
+    return out
 
 
 def pexels_search(term, limit=15):
@@ -151,9 +179,9 @@ def main():
         term, src = job
         if src == "svs":
             return term, src, {str(i): t for i, t in svs_search(term, a.svs_limit)}
-        if src == "pexels":
-            hits = pexels_search(term)
-            PEX.update(hits)
+        if src in ("pexels", "pixabay"):
+            hits = (pexels_search if src == "pexels" else pixabay_search)(term)
+            PEX.update({f"{src}:{i}": h for i, h in hits.items()})
             return term, src, {i: h["title"] for i, h in hits.items()}
         return term, src, django_search(src, term, a.pages)
 
@@ -168,8 +196,8 @@ def main():
 
     def resolve(k):
         c = found[k]
-        if c["source"] == "pexels":
-            h = PEX.get(c["id"])
+        if c["source"] in ("pexels", "pixabay"):
+            h = PEX.get(f"{c['source']}:{c['id']}")
             if not h:
                 return k, None
             c.update(url=h["url"], bytes=h["bytes"], desc=h["desc"], page=h["page"], thumb=h["thumb"])
