@@ -12,11 +12,8 @@ C Scientists के पास | Scientists have three different paths for the en
 G और दो हज़ार छब्बीस @ scene:survey;flip=पलट
 C और दो हज़ार छब्बीस | and the 2026 data has turned the game around
 V हर galaxy, @ a bright spiral galaxy in deep space | a grand spiral galaxy
-K हर galaxy, @ EVERY GALAXY [galaxy]
 V हर planet @ the planet Jupiter rotating | the planet Earth rotating in space
-K हर planet @ EVERY PLANET [planet]
 V हर ज़िंदा चीज़ @ a herd of elephants walking | a flock of birds flying | wildlife in a forest
-K हर ज़िंदा चीज़ @ EVERY *LIVING THING* [ज़िंदा]
 C हर galaxy, हर planet | The final fate of every galaxy, every planet and every living thing hides in these three paths
 G का आख़िरी अंजाम @ scene:three_paths;mode=b;split=0;hi=तीन
 G तीनों के नतीजे @ scene:three_paths;mode=c;split=0;hi=अलग

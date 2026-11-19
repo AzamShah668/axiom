@@ -22,6 +22,7 @@ ARCHIVE = {
     "svs": "NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov)",
     "pexels": "Pexels (pexels.com), Pexels License",
     "pixabay": "Pixabay (pixabay.com), Pixabay Content License",
+    "noirlab": "NSF NOIRLab (noirlab.edu), CC BY 4.0",
     "nasa": "NASA Image and Video Library (images.nasa.gov)",
 }
 GFX_IMAGES = {"mw_spiral": "milkyway", "halo_expand": "milkyway", "halo_full": "milkyway", "galactic_orbit": "milkyway",
@@ -48,12 +49,12 @@ def main():
             arch[s["title"]] = s.get("credit") or ARCHIVE.get(s["source"], s["source"])
         by.setdefault(s["source"], {})[s["key"].split(":", 1)[1]] = s["title"]
     full = ["Footage used in this video (archive video IDs):"]
-    for k in ("eso", "esahubble", "esawebb", "svs", "nasa", "pexels", "pixabay"):
+    for k in ("eso", "esahubble", "esawebb", "noirlab", "svs", "nasa", "pexels", "pixabay"):
         if k in by:
             full.append(f"- {ARCHIVE[k]}: " + ", ".join(sorted(by[k])))
     if a.full:
         open(a.full, "w").write("\n".join(full) + "\n")
-    lines = ["Footage credits: " + "; ".join(f"{ARCHIVE[k]} ({len(by[k])} videos)" for k in ("eso", "esahubble", "esawebb", "svs", "nasa", "pexels", "pixabay")
+    lines = ["Footage credits: " + "; ".join(f"{ARCHIVE[k]} ({len(by[k])} videos)" for k in ("eso", "esahubble", "esawebb", "noirlab", "svs", "nasa", "pexels", "pixabay")
                                              if k in by) + ". Full list of videos in the pinned comment."]
     if arch:
         lines.append("Archive footage and recordings: " + "; ".join(f"{t} - {c}" for t, c in sorted(arch.items())) + ".")

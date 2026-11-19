@@ -17,10 +17,13 @@ DJANGO = {
     "eso": ("https://www.eso.org/public/videos/list/{p}/?search={q}", "https://www.eso.org/public/videos/{id}/", "https://cdn.eso.org/videos/ultra_hd/{id}.mp4"),
     "esahubble": ("https://esahubble.org/videos/page/{p}/?search={q}", "https://esahubble.org/videos/{id}/", "https://cdn.esahubble.org/archives/videos/ultra_hd/{id}.mp4"),
     "esawebb": ("https://esawebb.org/videos/page/{p}/?search={q}", "https://esawebb.org/videos/{id}/", "https://cdn.esawebb.org/archives/videos/ultra_hd/{id}.mp4"),
+    # NSF NOIRLab (Kitt Peak, DESI, Mayall, Rubin, Gemini): CC BY 4.0 like ESO (owner 2026-11-19: topic-specific footage)
+    "noirlab": ("https://noirlab.edu/public/videos/page/{p}/?search={q}", "https://noirlab.edu/public/videos/{id}/", "https://storage.noirlab.edu/media/archives/videos/ultra_hd/{id}.mp4"),
 }
 THUMB = {"eso": "https://cdn.eso.org/videos/videoframe/{id}.jpg",
          "esahubble": "https://cdn.esahubble.org/archives/videos/videoframe/{id}.jpg",
-         "esawebb": "https://cdn.esawebb.org/archives/videos/videoframe/{id}.jpg"}
+         "esawebb": "https://cdn.esawebb.org/archives/videos/videoframe/{id}.jpg",
+         "noirlab": "https://storage.noirlab.edu/media/archives/videos/videoframe/{id}.jpg"}
 SKIP_ID = re.compile(r"(-FD|fulldome|dome|_vr|360|-vr)", re.I)  # fulldome / VR renders are not 16:9
 
 

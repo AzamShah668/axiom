@@ -513,8 +513,8 @@ def crunch(t, D, p):
             if abs(xp - x) + abs(yp - y) > 3:
                 cv2.line(lay, (int(xp), int(yp)), (int(x), int(y)), tuple(float(v) * 0.7 for v in c), 2, cv2.LINE_AA)
             else:
-                cv2.circle(lay, (int(x), int(y)), int(size[i] * 0.6), tuple(float(v) for v in c), -1, cv2.LINE_AA)
-        f += lay + cv2.GaussianBlur(lay, (0, 0), 3) * 1.2
+                cv2.circle(lay, (int(x), int(y)), max(1, int(size[i] * 0.9)), tuple(float(v) for v in c), -1, cv2.LINE_AA)
+        f += lay * 1.4 + cv2.GaussianBlur(lay, (0, 0), 3) * 1.6
         glow(f, cx, cy, 30 + 160 * heat, (180, 220, 255), 0.6 + 2.5 * heat)
     else:
         v = t - sw
@@ -543,9 +543,10 @@ def dark_force(t, D, p):
     for i in range(len(r0)):
         rr = r0[i] * W * 0.5 * e / z[i]
         x, y = cx + rr * math.cos(a[i]), cy + rr * math.sin(a[i]) * 0.62
-        if 0 <= x < W and 0 <= y < H:
-            cv2.circle(lay, (int(x), int(y)), int(size[i] * 0.6), tuple(float(v) for v in col[i]), -1, cv2.LINE_AA)
-    f += lay + cv2.GaussianBlur(lay, (0, 0), 3)
+        if 0 <= x < W and 0 <= y < H:   # small elliptical galaxies, bright cores
+            cv2.ellipse(lay, (int(x), int(y)), (int(size[i] * 1.6), int(size[i] * 0.8)), (a[i] * 57) % 180, 0, 360,
+                        tuple(float(v) for v in col[i]), -1, cv2.LINE_AA)
+    f += lay * 1.3 + cv2.GaussianBlur(lay, (0, 0), 4) * 1.6
     if t > force:
         op = eo((t - force) / 0.4)
         s = "AN UNKNOWN FORCE"

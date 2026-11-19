@@ -75,7 +75,9 @@
   "dark star field slowly drifting",
   "faint distant galaxies in dark space"
  ],
- "pin": {},
+ "pin": {
+  "opening/9": "pexels_16693722#0"
+ },
  "ban": [
   "esahubble_heic1813b",
   "esahubble_heic2202a",
@@ -115,6 +117,13 @@
   "eso_potw2622a",
   "eso_potw2643a",
   "eso_potw2643a#0",
+  "noirlab_noirlab2408d#0",
+  "noirlab_noirlab2428c#0",
+  "noirlab_noirlab2619c#0",
+  "noirlab_robots_merge_map#0",
+  "noirlab_robots_merge_map#1",
+  "noirlab_robots_merge_map#2",
+  "noirlab_robots_merge_map#3",
   "pexels_10157156#0",
   "pexels_10469563#0",
   "pexels_10469564#0",
@@ -152,6 +161,8 @@
   "pexels_29780240#0",
   "pexels_29857693#0",
   "pexels_29857700#0",
+  "pexels_29993032#0",
+  "pexels_29993032#1",
   "pexels_30550599#0",
   "pexels_31084223#0",
   "pexels_31226586#0",
@@ -170,8 +181,10 @@
   "pexels_31541538#0",
   "pexels_31541538#1",
   "pexels_32336493#0",
+  "pexels_32779014#0",
   "pexels_32779840#0",
   "pexels_32779852#0",
+  "pexels_32883135#0",
   "pexels_33430409#0",
   "pexels_33430414#0",
   "pexels_33453191",
@@ -195,8 +208,10 @@
   "pexels_34645139#0",
   "pexels_34645663#0",
   "pexels_34651404#0",
+  "pexels_34707654#0",
   "pexels_34707820#0",
   "pexels_34722389#0",
+  "pexels_34767784#0",
   "pexels_34767792#0",
   "pexels_34875776#0",
   "pexels_34901465#0",
@@ -209,6 +224,8 @@
   "pexels_35831724#0",
   "pexels_35831725#0",
   "pexels_35831726#0",
+  "pexels_35831745#0",
+  "pexels_35831745#1",
   "pexels_35833144#0",
   "pexels_35833144#1",
   "pexels_35833442#0",
@@ -223,6 +240,7 @@
   "pexels_38461260#0",
   "pexels_38461260#1",
   "pexels_38560011#0",
+  "pexels_38560813#0",
   "pexels_38594546#0",
   "pexels_38614588#0",
   "pexels_38615167#0",
@@ -238,6 +256,7 @@
   "pexels_38623191#1",
   "pexels_38623682#0",
   "pexels_38623682#1",
+  "pexels_38645820#0",
   "pexels_38711653#0",
   "pexels_38765530#0",
   "pexels_38766182#0",
@@ -259,6 +278,8 @@
   "pexels_38917448#0",
   "pexels_38917448#1",
   "pexels_38917448#2",
+  "pexels_38964846#0",
+  "pexels_38964846#1",
   "pexels_38977835#0",
   "pexels_38977835#1",
   "pexels_38996729#0",
@@ -267,6 +288,8 @@
   "pexels_39103355#0",
   "pexels_39346070#0",
   "pexels_39371135#0",
+  "pexels_39371136#0",
+  "pexels_39371136#1",
   "pexels_39675112#0",
   "pexels_39790273",
   "pexels_3995973#0",
@@ -445,33 +468,6 @@
    ],
    "sfx": [],
    "k": [
-    {
-     "at": "हर galaxy,",
-     "lines": [
-      {
-       "text": "EVERY GALAXY",
-       "at": "galaxy"
-      }
-     ]
-    },
-    {
-     "at": "हर planet",
-     "lines": [
-      {
-       "text": "EVERY PLANET",
-       "at": "planet"
-      }
-     ]
-    },
-    {
-     "at": "हर ज़िंदा चीज़",
-     "lines": [
-      {
-       "text": "EVERY *LIVING THING*",
-       "at": "ज़िंदा"
-      }
-     ]
-    },
     {
      "at": "दूसरे रास्ते में",
      "lines": [
