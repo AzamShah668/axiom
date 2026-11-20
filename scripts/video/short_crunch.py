@@ -80,7 +80,7 @@ def band_scene(t, st, ev, morph=None):
         y = (rng.uniform(0, H) - t * rng.uniform(2, 8)) % H
         X.glow(f, x, y, rng.uniform(1, 3), (200, 210, 230), rng.uniform(0.2, 0.6))
     cy = H * 0.50
-    d0, d1 = 150, 380
+    d0, d1 = 130, 320
     if ev["stretch"] <= t < ev["chhodo"]:
         d = d0 + (d1 - d0) * eio((t - ev["stretch"]) / max(0.5, ev["door"] - ev["stretch"] + 0.3))
         wob = 0.0
@@ -92,7 +92,7 @@ def band_scene(t, st, ev, morph=None):
         d = d0
         wob = 0.0
     zoom = 1.3 + 0.08 * (t - st[1]) / 7
-    pegL, pegR = W / 2 - (d + 90) * zoom, W / 2 + (d + 90) * zoom
+    pegL, pegR = W / 2 - d * zoom, W / 2 + d * zoom   # the band ends ARE the two dots
     xs = np.linspace(pegL, pegR, 80)
     sag = (14 if d < 300 else 4) * zoom
     ys = cy + sag * np.sin(np.linspace(0, math.pi, 80)) + wob * np.sin(np.linspace(0, 3 * math.pi, 80) + t * 30) * np.sin(np.linspace(0, math.pi, 80))
@@ -105,16 +105,14 @@ def band_scene(t, st, ev, morph=None):
     msk = (lay.sum(-1, keepdims=True) > 0).astype(np.float32)
     f = f * (1 - msk) + lay
     f += cv2.GaussianBlur(lay, (0, 0), 14) * 0.25
-    for px in (pegL, pegR):                                                            # pegs
-        X.put(f, X.sphere_sprite((160, 160, 170), 120), px, cy, 0.55 * zoom, 0, 1.0, add=False)
     for sgn in (-1, 1):
         x = W / 2 + sgn * d * zoom
-        y = cy + sag * 0.9
+        y = cy + 40
         if morph is not None and t > morph - 0.15:
             p = eo((t - morph + 0.15) / 0.6)
             X.put(f, X.sphere_sprite((235, 240, 250), 200), x, y - 40, 0.45 * zoom * (1 - p), 0, 1 - p, add=False)
-            X.put(f, X.galaxy_sprite(2 if sgn < 0 else 5), x, y - 170, 1.5 * p * zoom, 30 * sgn + t * 20, p, True, 0.75)
-            X.glow(f, x, y - 170, 70, (220, 230, 255), 2.5 * math.exp(-(t - morph) * 5) if t > morph else 0)
+            X.put(f, X.galaxy_sprite(2 if sgn < 0 else 5), x, y - 40, 1.2 * p * zoom, 30 * sgn + t * 20, p, True, 0.75)
+            X.glow(f, x, y - 40, 70, (220, 230, 255), 2.5 * math.exp(-(t - morph) * 5) if t > morph else 0)
         else:
             X.glow(f, x, y - 40, 60, (210, 220, 255), 0.35)
             X.put(f, X.sphere_sprite((235, 240, 250), 200), x, y - 40, 0.45 * zoom, 0, 1.0, add=False)
