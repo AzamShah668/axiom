@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#000;overflow:hidden}canvas{display:block}
+@font-face{font-family:Anton;src:url(/assets/fonts/Anton.ttf)}@font-face{font-family:Montserrat;src:url(/assets/fonts/Montserrat.ttf)}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/","postprocessing":"/node_modules/postprocessing/build/index.js","rapier":"/node_modules/@dimforge/rapier3d-compat/rapier.es.js"}}</script>
+</head><body><script type="module">
+import * as THREE from 'three';
+const q = new URLSearchParams(location.search), W = +q.get('w'), H = +q.get('h');
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H);
+renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping;
+document.body.appendChild(renderer.domElement);
+window.START = async p => {
+  const mod = await import(`./scenes/${q.get('scene')}.js`);
+  await Promise.all(['Anton', 'Montserrat'].map(f => document.fonts.load(`80px ${f}`).catch(() => 0)));
+  await mod.init({ THREE, renderer, W, H, dur: +q.get('dur'), params: JSON.parse(p || '{}') });
+  window.frameAt = t => { mod.render(t); return renderer.domElement.toDataURL('image/jpeg', 0.93).split(',')[1]; };
+  window.READY = true;
+};
+</script></body></html>

@@ -154,3 +154,7 @@ python scripts/youtube/upload_youtube.py upload $WORK/out/shorts/<id>.mp4 produc
 
 ## Current Shorts style (owner 2026-11-20)
 Motion graphics only: `scripts/video/short_crunch.py` + `space3d.py` (see productions/README.md). The owner writes the Short scripts; Rudra (voice-preset.json) at 1.1x; one continuous zoom journey timed to the words; quote ElevenLabs characters and wait for OK before recording.
+
+
+## 3D Shorts with web3d (2026-11-20)
+For motion-graphics Shorts, write a scene in `scripts/video/web3d/scenes/` and render it with `scripts/video/short_web3d.py` (see productions/README.md, "3D motion-graphics engine"). Check `--stills` before the full render. Plain text only; photos whole.
