@@ -280,3 +280,7 @@ Shorts scripts follow the owner's 4-beat format and the Shorts rules in `product
 - about 130 words for 48 s at 1.2x
 - one-word gold captions
 - FULL VIDEO BELOW written on screen, never spoken
+
+
+## Retention rules (owner 2026-11-20, from YouTube Analytics of all videos)
+Read `productions/README.md` "Owner rules from video 09" and apply every Script rule there: opening <= 30 s with no date/definition/chapter summary in the first minute, chapters open on an event, expectation and result back to back, image -> fact -> "matlab", open question every 20-30 s early, 7-9 min (1,000-1,200 words). The worked before/after example of 09's opening is the model.

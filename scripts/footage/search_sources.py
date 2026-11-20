@@ -102,6 +102,14 @@ def svs_4k(sid):
             "kw": [k.get("title", "") if isinstance(k, dict) else str(k) for k in d.get("keywords", [])][:12]}
 
 
+# Stock footage is for real-world things only (night skies, observatories, places, objects, nature). CGI "space"
+# renders (spaceships, abstract nebulae, cartoon planets) are refused at search time (owner 2026-11-19).
+STOCK_DENY = re.compile(r"spaceship|spacecraft|space station|futuristic|sci.?fi|alien|ufo|abstract|trippy|kaleidoscope|"
+                        r"firework|spider|plasma|magical|digital|illustration|3d|animation|render|celestial|cosmic|nebula|"
+                        r"galax|black hole|meteor|asteroid|vortex|tunnel|warp|particle|sphere|concept|journey|voyage|"
+                        r"adventure|epic|outer space|deep space", re.I)
+
+
 def env_key(name):
     """An API key from the environment or the git-ignored config/.env (never printed)."""
     k = os.environ.get(name)
@@ -135,6 +143,8 @@ def pixabay_search(term, limit=20):
         f = (v.get("videos") or {}).get("large") or {}
         if (f.get("width") or 0) < 3840 or (f.get("height") or 0) >= (f.get("width") or 0) or not f.get("url"):
             continue
+        if STOCK_DENY.search(v.get("tags") or ""):
+            continue
         out[str(v["id"])] = {"title": (v.get("tags") or term).replace(",", ""), "url": f["url"], "page": v.get("pageURL", ""),
                              "thumb": f.get("thumbnail", ""), "desc": f"by {v.get('user', '')}", "bytes": f.get("size", 0)}
     return out
@@ -159,6 +169,8 @@ def pexels_search(term, limit=15):
             continue
         f = min(files, key=lambda f: f["width"])
         slug = re.sub(r"-\d+/?$", "", (v.get("url") or "").rstrip("/").rsplit("/", 1)[-1]).replace("-", " ")
+        if STOCK_DENY.search(slug):
+            continue
         out[str(v["id"])] = {"title": slug or term, "url": f["link"], "page": v.get("url", ""), "thumb": v.get("image", ""),
                              "desc": f"by {(v.get('user') or {}).get('name', '')}", "bytes": 0}
     return out

@@ -173,3 +173,7 @@ observatory, simulation, zoom.
 | Number cards | at least 2 per fact that has numbers |
 
 Production 01/02 plans are v2 (no `style`): `render_v2.py`, a running subtitle, 2.5 s scenes.
+
+
+## Literal visuals (owner 2026-11-19/20)
+Every line shows what is said: footage only when it shows the words, else `G <trigger> @ scene:<kind>;k=<trigger>` (scripts/video/scenes.py; catalogue and rules in productions/README.md "Owner rules from video 09"), a board, a photo (every named person) or an explainer graphic. No motion graphic twice in one video; no hold over ~2.5 s; no K headline on beats under ~3 s. Pin NOIRLab/real footage where the script names the thing. One music bed for the whole video (`music` entry with `start`).

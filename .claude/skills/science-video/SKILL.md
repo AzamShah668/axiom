@@ -132,3 +132,7 @@ Drive folder `axiom-science-channel` (README.txt there explains it):
 - The 4K archives overlap a lot between topics: production 02's first 330 picks were 252 clips already in the
   library. `--avoid` removes every shot an earlier production used *and* its look-alikes, so plan on a `topup`.
 - Drive downloads can arrive gzip-encoded; `drive_sync.py` decodes and MD5-checks every download.
+
+
+## Before starting a new video (2026-11-20)
+Read `productions/README.md` section "Owner rules from video 09" first: script retention rules, voice preset, literal visuals with scenes/photos/NOIRLab, no repeated graphics, one music bed, Shorts style, analytics after upload.

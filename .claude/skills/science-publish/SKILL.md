@@ -52,3 +52,7 @@ python scripts/youtube/upload_youtube.py publish <video_id> --comment production
 - The channel About text lives in `productions/channel/description.txt` (max 1000 characters, no `<` or `>`).
   Apply it with `upload_youtube.py channel --description productions/channel/description.txt`.
   Run `channel` with no options to show the current text.
+
+
+## After upload (2026-11-20)
+Run `scripts/youtube/analytics.py retention <id> productions/<NN>` once the video has views; Shorts packages go in productions/<NN>/shorts/<id>.md (title, description with the full-video link and the music credit, tags, pinned comment, Related video).

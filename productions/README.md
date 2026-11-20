@@ -197,3 +197,54 @@ them, by hand: `S <trigger> | kz_film | d=3` (projector clatter: archive film, o
 ## The first 2 seconds (owner, 2026-11-07, every Short and video opening)
 - Motion from frame 0: a subtle zoom or flicker on the first picture (graphics, photos and text cards too).
 - A quick cut within about 1.5-2 s; nothing holds still for the first 3 s. Check the first 2 s for motion before sending.
+
+## Owner rules from video 09 (2026-11-19/20): read these before every new video
+**Script (from YouTube retention data of all published videos, `docs/research/retention/README.md`)**
+- Viewers are lost in the first 60-90 s (35-43 points in every video), right after the hook, when the script turns to
+  background. After ~3 min the curve is flat. So:
+  - Opening <= 30 s: the most dramatic image/fact first, ONE question the video answers, a real-world anchor
+    (a telescope, a place, a person at work), and a promise of the payoff. No date, place-name list, definition or
+    summary of the chapters in the first minute.
+  - Chapter 1 = the strongest story; every chapter opens on an event or image, never on history.
+  - Expectation and result back to back (cricket ball slows -> supernovae were dimmer than expected).
+  - Image -> fact -> "matlab" line: every hard fact is followed by what it means, in everyday words.
+  - An open question every 20-30 s for the first 3 min, then every 45-60 s; a small payoff every 30-45 s.
+  - One number per chapter at most; one hedge per claim; tell each idea once; the ending returns to the opening image.
+  - Length 7-9 min (about 1,000-1,200 words).
+- Shorts may talk to the viewer ("Socho...", "dekho"); the owner writes Short scripts himself.
+
+**Voice**: Rudra, `eleven_multilingual_v2`, stability 0.35, style 0.45, similarity 0.75, speaker boost
+(`productions/voice-preset.json`, the Shorts take the owner liked best). Full-video speed is decided per video:
+render 1.0x and 1.1x at the end and let the owner pick. Shorts play at 1.1x.
+
+**Every line shows what is said** ("whatever the speaker is saying, it should be shown")
+- Footage only where it shows exactly the words; otherwise an own animated scene (`G <trigger> @ scene:<kind>;...`,
+  `scripts/video/scenes.py`: last_star, three_paths, survey, atom_rip, bh_vanish, crunch, dark_force, triptych,
+  expansion_slow, bigbang, strike, grip, galaxy_tear, orbit_break, dissolve, weaken_graph, lifetime, quantum_grid,
+  bounce2, first_light; times are spoken triggers), an evidence board (`board:<name>`), or an explainer graphic.
+- **No motion graphic is shown twice in a video** (one stamp, one countdown, one board scene per idea...).
+- Nothing holds longer than ~2.5 s without a visible change; headlines (K) never on beats shorter than ~3 s (they lag).
+- A photo on screen when a person is named (`G <name> @ photo:<Stem>` + `L` card). Sources: NASA images, Library of
+  Congress (`loc.gov` JSON API, "No known restrictions"), ESO, Wikimedia Commons (its API is rate-limited from the
+  container: write `productions/<NN>/photos_needed.md` like 09's and the owner sends a Drive folder link; download
+  it with `gdown --folder`). Credits go to `work/media/assets/photos/credits.json`. No Nobel Foundation/press photos.
+- Topic-specific real footage first: NSF NOIRLab (`noirlab` source in search_sources.py, CC BY 4.0: Kitt Peak, DESI,
+  Mayall, Rubin, Gemini), pinned in edit.base.json `pin` when the script names the thing.
+- Stock (Pexels; Pixabay when PIXABAY_API_KEY is in config/.env) only for real-world shots; CGI space renders are
+  refused in code (STOCK_DENY) and must be banned if any slip through.
+
+**Music and sound**: one bed under the whole video that fits the topic (09: "Darkest Child", -3 dB, from 32 s;
+edit.base.json `music` with `start`); never a track that sounds unrelated. The kaz sound kit (default) with hits on
+every scene event.
+
+**Shorts style (motion graphics only)**: `scripts/video/short_crunch.py` on `scripts/video/space3d.py` (3D camera,
+procedural galaxies, motion blur, bloom, flares, shockwaves, kinetic type) is the current best; `short_motion.py` is
+the simpler first version. One continuous journey, every sentence a zoom in/out, one-word gold captions, top title,
+"WATCH THE FULL VIDEO" end card, Darkest Child low, Rudra at 1.1x. Package per Short in `productions/<NN>/shorts/<id>.md`.
+
+**After upload**: `python scripts/youtube/analytics.py retention <video_id> productions/<NN>` (YouTube Analytics; the
+token has yt-analytics.readonly and the API is enabled) matches every drop to its line and shot; act on patterns seen
+in 2+ videos. Drive: `drive_sync.py put`; making a file public needs the owner's explicit request each time.
+
+**Later**: Blender for hero 3D shots, rendered on the owner's Colab Pro GPU through a Drive job folder
+(`blender -b -P scene.py`); mcp-for-blender does not fit (needs Blender's UI).
