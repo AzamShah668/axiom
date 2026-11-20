@@ -94,7 +94,7 @@ export async function init(ctx) {
   for (let i = 0; i < 90; i++) {
     const u = rr2() * 2 - 1, th = rr2() * 6.283, s = Math.sqrt(1 - u * u), d = new THREE.Vector3(s * Math.cos(th), u, s * Math.sin(th));
     const m = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 1, 6), new THREE.MeshBasicMaterial({ color: i % 3 ? 0xcfe6ff : AMBER_HEX, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false }));
-    rays.add(m); rayBase.push([d, 25 + 30 * rr2(), rr2()]);
+    rays.add(m); rayBase.push([d, 8 + 14 * rr2(), rr2()]);
   }
   const core = glow(0xffffff, 3); core.name = 'core'; rays.add(core); S.add(rays);
 
@@ -185,24 +185,24 @@ export function render(t) {
     const q = cl(u / (st[7] - st[6])); C.position.set(0, 0, 34 - 6 * q); C.lookAt(0, 0, 0);
     rays.children.forEach((m, k) => { if (!rayBase[k]) return; const [d, r0, ph] = rayBase[k];
       const rr = ((r0 * (1 - ((u * 0.55 + ph) % 1))) + 0.5); m.position.copy(d).multiplyScalar(rr + 1.5); m.scale.set(1, 3, 1);
-      m.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d); m.material.opacity = cl(rr / 6) * 0.9; });
+      m.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d); m.material.opacity = cl(rr / 4) * 0.7; });
     rays.getObjectByName('core').scale.setScalar(3 + 0.6 * Math.sin(u * 6));
     ov.text('?', W / 2, H * 0.50, { size: 300, font: 'Anton', weight: 400, color: AMBER, alpha: ease((t - ev.chala) / 0.12) });
   }
 
   // Einstein: the whole photo as a framed print, upper half; the dropped term Λ below it (never under text)
   if (i === 5 && photo) {
-    const a = ease(u / 0.3), maxW = W * 0.62, maxH = H * 0.34, k = Math.min(maxW / photo.width, maxH / photo.height) * (1 + 0.03 * u / 5);
-    const pw = photo.width * k, ph = photo.height * k, px = W / 2 - pw / 2, py = H * 0.47 - ph, g = ov.x;
+    const a = ease(u / 0.3), maxW = W * 0.62, maxH = H * 0.26, k = Math.min(maxW / photo.width, maxH / photo.height) * (1 + 0.03 * u / 5);
+    const pw = photo.width * k, ph = photo.height * k, px = W / 2 - pw / 2, py = H * 0.50 - ph, g = ov.x;
     g.save(); g.globalAlpha = a; g.shadowColor = 'rgba(0,0,0,.8)'; g.shadowBlur = 40; g.fillStyle = '#f2efe8'; g.fillRect(px - 16, py - 16, pw + 32, ph + 64);
     g.shadowBlur = 0; g.drawImage(photo, px, py, pw, ph); g.restore();
     ov.text('ALBERT EINSTEIN', W / 2, py + ph + 25, { size: 30, font: 'Montserrat', weight: 800, color: '#222', alpha: a, shadow: false });
     const back = t > ev.accel, off = t > ev.hata && !back, la = ease((t - ev.einstein - 0.5) / 0.2);
     const col = back ? AMBER : off ? 'rgba(255,255,255,.35)' : '#ffffff';
-    ov.text('Λ', W / 2, H * 0.60, { size: 210, font: 'Montserrat', weight: 800, color: col, alpha: la });
-    ov.text(back ? 'BACK IN THE MODEL' : 'COSMOLOGICAL CONSTANT', W / 2, H * 0.695, { size: 44, font: 'Montserrat', weight: 800, color: back ? AMBER : '#fff', alpha: la });
+    ov.text('Λ', W / 2, H * 0.625, { size: 210, font: 'Montserrat', weight: 800, color: col, alpha: la });
+    ov.text(back ? 'BACK IN THE MODEL' : 'COSMOLOGICAL CONSTANT', W / 2, H * 0.715, { size: 44, font: 'Montserrat', weight: 800, color: back ? AMBER : '#fff', alpha: la });
     if (off) { const s = easeOut((t - ev.hata) / 0.25), g2 = ov.x; g2.save(); g2.strokeStyle = '#ff5a4a'; g2.lineWidth = 16; g2.lineCap = 'round';
-      g2.beginPath(); g2.moveTo(W / 2 - 120, H * 0.60 + 70); g2.lineTo(W / 2 - 120 + 240 * s, H * 0.60 - 70 * (2 * s - 1)); g2.stroke(); g2.restore(); }
+      g2.beginPath(); g2.moveTo(W / 2 - 120, H * 0.625 + 70); g2.lineTo(W / 2 - 120 + 240 * s, H * 0.625 - 70 * (2 * s - 1)); g2.stroke(); g2.restore(); }
   }
   graph(t, i);
 

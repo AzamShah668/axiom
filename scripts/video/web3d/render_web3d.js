@@ -1,6 +1,6 @@
 // Headless three.js renderer for our editing styles (three + postprocessing + rapier, all MIT).
 // The picture is a pure function of time: each scene exports init(ctx) and render(t).
-//   node scripts/video/web3d/render_web3d.js <scene> --dur 6 --out x.mp4 [--fps 30] [--size 1920x1080] [--workers 3] [--params '{"k":1}' | --params @file.json] [--assets work/media]
+//   node scripts/video/web3d/render_web3d.js <scene> --dur 6 --out x.mp4 [--fps 30] [--size 1920x1080] [--workers 3] [--params '{"k":1}' | --params @file.json] [--assets work/media] [--from S --total S: render a slice of a longer film]
 // Needs: sh scripts/setup/fetch_motion_tools.sh (puts node_modules in $WEB3D, default /home/user/tools/web3d).
 const http = require('http'), fs = require('fs'), path = require('path'), os = require('os');
 const { execFileSync } = require('child_process');
@@ -9,7 +9,7 @@ const a = process.argv.slice(2), opt = (k, d) => { const i = a.indexOf('--' + k)
 const scene = a[0], fps = +opt('fps', 30), dur = +opt('dur', 6), out = path.resolve(opt('out', `${scene}.mp4`));
 const [W, H] = opt('size', '1920x1080').split('x').map(Number), workers = +opt('workers', 3);
 let params = opt('params', '{}'); if (params.startsWith('@')) params = fs.readFileSync(params.slice(1), 'utf8');
-const ASSETS = path.resolve(opt('assets', 'work/media')), from = +opt('from', 0), ffmpeg = process.env.FFMPEG || 'ffmpeg';
+const ASSETS = path.resolve(opt('assets', 'work/media')), from = +opt('from', 0), total = +opt('total', 0) || dur, ffmpeg = process.env.FFMPEG || 'ffmpeg';
 const HERE = __dirname, MODS = path.join(process.env.WEB3D || '/home/user/tools/web3d', 'node_modules');
 const TYPES = { '.js': 'text/javascript', '.mjs': 'text/javascript', '.html': 'text/html', '.wasm': 'application/wasm', '.jpg': 'image/jpeg', '.png': 'image/png', '.ttf': 'font/ttf' };
 const srv = http.createServer((q, r) => {
@@ -26,7 +26,7 @@ const srv = http.createServer((q, r) => {
   if (stills) {
     const page = await browser.newPage({ viewport: { width: W, height: H } });
     page.on('pageerror', e => { console.error('[pageerror]', e.message); process.exit(1); });
-    await page.goto(`http://127.0.0.1:${port}/page.html?scene=${scene}&w=${W}&h=${H}&dur=${dur}`);
+    await page.goto(`http://127.0.0.1:${port}/page.html?scene=${scene}&w=${W}&h=${H}&dur=${total}`);
     await page.evaluate(p => window.START(p), params);
     await page.waitForFunction('window.READY === true', null, { timeout: 120000 });
     fs.mkdirSync(out, { recursive: true });
@@ -37,7 +37,7 @@ const srv = http.createServer((q, r) => {
     const page = await browser.newPage({ viewport: { width: W, height: H } });
     page.on('pageerror', e => { console.error('[pageerror]', e.message); process.exit(1); });
     page.on('console', m => m.type() === 'error' && console.error('[page]', m.text()));
-    await page.goto(`http://127.0.0.1:${port}/page.html?scene=${scene}&w=${W}&h=${H}&dur=${dur}`);
+    await page.goto(`http://127.0.0.1:${port}/page.html?scene=${scene}&w=${W}&h=${H}&dur=${total}`);
     await page.evaluate(p => window.START(p), params);
     await page.waitForFunction('window.READY === true', null, { timeout: 120000 });
     for (let i = w; i < N; i += workers) {
