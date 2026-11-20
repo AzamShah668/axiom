@@ -197,20 +197,168 @@ def shot_end(u, T, f):
     cv2.arrowedLine(f, (int(W / 2), int(y)), (int(W / 2), int(y + 220)), tuple(float(v) * a for v in AMBER), 14, cv2.LINE_AA, tipLength=0.35)
 
 
-SHOTS = [shot_orbit, shot_cluster, shot_grip, shot_dive, shot_break, shot_gauge, shot_end]
-ZOOM_IN = [None, False, True, True, True, False, False]       # how each shot enters: zoom in or out of the last
+
+
+# ------------------------------------------------------------------ Short "crunch" (owner's script, 2026-11-20)
+def _gal(f, x, y, s, c, ang=20, op=1.0):
+    cv2.ellipse(f, (int(x), int(y)), (int(s * 2.2), int(s)), ang, 0, 360, tuple(float(v) * op for v in c), -1, cv2.LINE_AA)
+    S.glow(f, x, y, s * 1.4, c, 0.6 * op)
+    S.glow(f, x, y, max(2, s * 0.35), (255, 255, 255), 1.4 * op)
+
+
+def shot_shrink(u, T, f):
+    """The whole universe shrinking: galaxies pulled in towards the centre."""
+    r0, a, zz, col, size = S._galaxies(260)
+    cx, cy = W / 2, H * 0.47
+    e = 1.5 - 1.1 * ei(cl((u - T["shrink"] + 0.6) / 2.2))
+    for i in range(len(r0)):
+        rr = r0[i] * 520 * e / zz[i]
+        x, y = cx + rr * math.cos(a[i] + 0.4 * (1.5 - e)), cy + rr * math.sin(a[i] + 0.4 * (1.5 - e)) * 1.25
+        _gal(f, x, y, size[i] * 1.6, col[i], (a[i] * 57) % 180)
+    S.glow(f, cx, cy, 60 + 120 * (1.5 - e), (180, 220, 255), 0.4 + 1.2 * (1.5 - e))
+
+
+def _band(f, u, T, morph=None):
+    """A rubber band between two pegs with two dots: stretched apart on stretch->door, released on chhodo."""
+    cy = H * 0.50
+    d0, d1 = 130, 400
+    if T.get("stretch") is not None and u < T.get("chhodo", 1e9):
+        d = d0 + (d1 - d0) * eo((u - T["stretch"]) / max(0.4, T["door"] - T["stretch"] + 0.3))
+    elif T.get("chhodo") is not None and u >= T["chhodo"]:
+        k = u - T["chhodo"]
+        d = d0 + (d1 - d0) * math.exp(-k * 3.2) * math.cos(k * 7)
+    else:
+        d = d0
+    th = max(5, int(26 * (d0 / d)))
+    lay = np.zeros((H, W, 3), np.float32)
+    pts = np.array([(W / 2 - d - 60, cy), (W / 2 - d, cy - 8), (W / 2, cy + (6 if d > 300 else 14)), (W / 2 + d, cy - 8), (W / 2 + d + 60, cy)], np.int32)
+    cv2.polylines(lay, [pts], False, (60, 120, 230), th, cv2.LINE_AA)
+    f += lay + cv2.GaussianBlur(lay, (0, 0), 4) * 0.6
+    for sgn in (-1, 1):
+        x = W / 2 + sgn * d
+        if morph is not None and u > morph:
+            op = eo((u - morph) / 0.5)
+            cv2.circle(f, (int(x), int(cy - 10)), 18, tuple(float(v) * (1 - op) for v in (255, 255, 255)), -1, cv2.LINE_AA)
+            _gal(f, x, cy - 10, 60, (255, 210, 180) if sgn < 0 else (200, 225, 255), 25 * sgn, op)
+        else:
+            cv2.circle(f, (int(x), int(cy - 10)), 30, (255, 255, 255), -1, cv2.LINE_AA)
+            S.glow(f, x, cy - 10, 30, (255, 255, 255), 0.6)
+    return d
+
+
+def shot_band(u, T, f):
+    d = _band(f, u, T)
+    if T.get("stretch") is not None and u > T["stretch"] and u < T["chhodo"]:
+        S.text(f, "STRETCH", W / 2, H * 0.36, 90, "Anton", (255, 255, 255), eo((u - T["stretch"]) / 0.3), "mm")
+    if u > T["chhodo"]:
+        S.text(f, "RELEASE", W / 2, H * 0.36, 90, "Anton", AMBER, eo((u - T["chhodo"]) / 0.3), "mm")
+
+
+def shot_band_gal(u, T, f):
+    _band(f, u, {}, morph=T["gal"])
+    S.text(f, "GALAXIES", W / 2, H * 0.36, 90, "Anton", AMBER, eo((u - T["gal"]) / 0.4), "mm")
+
+
+def shot_stop(u, T, f):
+    """Galaxies flying apart, slowing until the expansion stops on T['band']."""
+    r0, a, zz, col, size = S._galaxies(160)
+    cx, cy = W / 2, H * 0.47
+    k = cl(u / max(0.5, T["band"]))
+    e = 0.7 + 0.6 * (1 - (1 - k) ** 2)
+    for i in range(len(r0)):
+        rr = r0[i] * 520 * e / zz[i]
+        x, y = cx + rr * math.cos(a[i]), cy + rr * math.sin(a[i]) * 1.25
+        _gal(f, x, y, size[i] * 1.6, col[i], (a[i] * 57) % 180)
+        if i % 5 == 0 and k < 1:
+            L = 90 * (1 - k)
+            cv2.arrowedLine(f, (int(x), int(y)), (int(x + L * math.cos(a[i])), int(y + L * math.sin(a[i]) * 1.25)), (120, 200, 255), 3, cv2.LINE_AA, tipLength=0.35)
+    S.text(f, "EXPANSION STOPS", W / 2, H * 0.70, 84, "Anton", (255, 255, 255), eo((u - T["band"]) / 0.4), "mm")
+
+
+def shot_together(u, T, f):
+    """Then galaxies start coming back together."""
+    r0, a, zz, col, size = S._galaxies(160)
+    cx, cy = W / 2, H * 0.47
+    e = 1.3 - 0.8 * ei(cl(u / 3.0))
+    for i in range(len(r0)):
+        rr = r0[i] * 520 * e / zz[i]
+        x, y = cx + rr * math.cos(a[i]), cy + rr * math.sin(a[i]) * 1.25
+        _gal(f, x, y, size[i] * 1.6, col[i], (a[i] * 57) % 180)
+        if i % 5 == 0:
+            L = 40 + 80 * ei(cl(u / 3.0))
+            cv2.arrowedLine(f, (int(x), int(y)), (int(x - L * math.cos(a[i])), int(y - L * math.sin(a[i]) * 1.25)), (90, 170, 255), 3, cv2.LINE_AA, tipLength=0.35)
+
+
+def shot_bigcrunch(u, T, f):
+    """Everything falls into one blazing point: BIG CRUNCH, then the time: 20 billion years."""
+    r0, a, zz, col, size = S._galaxies(300)
+    cx, cy = W / 2, H * 0.47
+    k = ei(cl(u / max(0.5, T["bc"] + 0.4)))
+    for i in range(len(r0)):
+        rr = r0[i] * 520 * (1 - 0.97 * k) / zz[i]
+        x, y = cx + rr * math.cos(a[i] + 2 * k), cy + rr * math.sin(a[i] + 2 * k) * 1.25
+        cv2.circle(f, (int(x), int(y)), max(1, int(size[i])), tuple(float(v) for v in col[i]), -1, cv2.LINE_AA)
+    S.glow(f, cx, cy, 30 + 120 * k, (180, 220, 255), 0.4 + 1.3 * k)
+    if u > T["bc"]:
+        f += 120 * math.exp(-(u - T["bc"]) * 6)
+        S.text(f, "BIG CRUNCH", W / 2, H * 0.24, 130, "Anton", (255, 255, 255), eo((u - T["bc"]) / 0.3), "mm")
+    if u > T["crore"] - 0.4:
+        p = eo((u - T["crore"] + 0.4) / 0.4)
+        S.text(f, "20 BILLION YEARS", W / 2, H * 0.64, 100, "Anton", AMBER, p, "mm")
+        S.text(f, "(2,000 CRORE SAAL)", W / 2, H * 0.70, 52, "Montserrat", (230, 230, 230), p, "mm", "Bold")
+
+
+def shot_light(u, T, f):
+    """Space shrinking squeezes light: the wave's wavelength gets shorter and it shifts towards blue-white."""
+    k = ei(cl((u - T["light"] + 0.6) / 2.4))
+    lam = 420 * (1 - 0.75 * k)
+    c = np.array([60, 80, 255]) * (1 - k) + np.array([255, 220, 160]) * k
+    lay = np.zeros((H, W, 3), np.float32)
+    pts = [(x, H * 0.47 + 140 * math.sin(2 * math.pi * (x / lam) - u * 6)) for x in range(0, W, 4)]
+    cv2.polylines(lay, [np.array(pts, np.int32)], False, tuple(float(v) for v in c), 8, cv2.LINE_AA)
+    f += lay + cv2.GaussianBlur(lay, (0, 0), 10) * 1.5
+    S.text(f, "LIGHT", W / 2, H * 0.30, 100, "Anton", tuple(float(v) for v in c), eo((u - T["light"]) / 0.3), "mm")
+    S.text(f, "?", W / 2, H * 0.70, 240, "Anton", AMBER, eo((u - T["kya"]) / 0.3), "mm")
+
+
+PLANS = {
+    "rip": {"title": ("COULD SPACE", "TEAR AN ATOM?"),
+            "shots": [shot_orbit, shot_cluster, shot_grip, shot_dive, shot_break, shot_gauge, shot_end],
+            "zoom": [None, False, True, True, True, False, False],
+            "starts": ["", "Big", "फिर", "अब", "क्या", "इसके", "वो"],
+            "events": {"free": "छूट", "scatter": "बिखरने", "grow": "फैलाव", "grav": "gravity", "lose": "खो", "atom": "zoom",
+                       "tod": "तोड़", "khas": "ख़ास"},
+            "hits": [("kz_thud", "@0", 0.0), ("kz_shot", "free", -6), ("kz_whoosh", "s1", -2), ("kz_whoosh", "scatter", -6),
+                     ("kz_whoosh", "s2", -2), ("kz_shot", "lose", -3), ("kz_whoosh", "s3", -2), ("kz_thud", "atom", -4),
+                     ("kz_scratch", "tod", -4), ("kz_whoosh", "s5", -4), ("kz_thud", "khas", -6), ("bell", "s6", -6)]},
+    "crunch": {"title": ("WILL THE UNIVERSE", "SHRINK BACK?"),
+               "shots": [shot_shrink, shot_band, shot_band_gal, shot_stop, shot_together, shot_bigcrunch, shot_light, shot_end],
+               "zoom": [None, True, False, False, True, True, True, False],
+               "starts": ["", "Rubber", "अब", "एक", "फिर", "उस", "और", "नीचे"],
+               "events": {"shrink": "shrink", "stretch": "Stretch", "door": "दूर", "chhodo": "छोड़ो", "gal": "galaxies@2",
+                          "band": "बंद", "bc": "Crunch", "crore": "करोड़", "light": "light", "kya": "क्या"},
+               "hits": [("kz_thud", "@0", 0.0), ("kz_whoosh", "s1", -2), ("kz_whoosh", "stretch", -4), ("kz_thud", "chhodo", -4),
+                        ("kz_whoosh", "s2", -3), ("kz_whoosh", "s3", -3), ("kz_thud", "band", -6), ("kz_whoosh", "s4", -3),
+                        ("kz_shot", "bc", -2), ("kz_thud", "crore", -6), ("kz_whoosh", "s6", -3), ("bell", "s7", -6)]},
+}
+PLAN = PLANS["rip"]
 
 
 def build_timing(wd):
-    """Shot starts on sentence starts; local event times from the words (seconds, at speed)."""
+    """Shot starts on sentence starts (first word, searched after the previous start); events from the words.
+    An event word 'x@k' is searched from shot k's start."""
     def at(word, after=0.0):
         for t, w in wd:
-            if t >= after and word in w:
+            if t >= after - 1e-6 and word in w:
                 return t
         raise SystemExit(f"word not found: {word}")
-    starts = [0.0, at("Big"), at("फिर"), at("अब"), at("क्या"), at("इसके"), at("वो")]
-    ev = {"free": at("छूट"), "scatter": at("बिखरने"), "grow": at("फैलाव"), "grav": at("gravity"), "lose": at("खो"),
-          "atom": at("zoom"), "tod": at("तोड़"), "khas": at("ख़ास")}
+    starts = [0.0]
+    for w in PLAN["starts"][1:]:
+        starts.append(at(w, starts[-1] + 0.01))
+    ev = {}
+    for k, w in PLAN["events"].items():
+        word, _, sh = w.partition("@")
+        ev[k] = at(word, starts[int(sh)] if sh else 0.0)
     return starts, ev
 
 
@@ -221,14 +369,14 @@ def frame(t, starts, ev, total, caps, fonts):
         g = S.background(tt, push=0.0, dim=0.8 if j != 1 else 0.6, seed=1 + j)
         u = tt - starts[j]
         T = {k: v - starts[j] for k, v in ev.items()}
-        SHOTS[j](u, T, g)
+        PLAN["shots"][j](u, T, g)
         return g
     f = draw(i, t)
     tr = 0.4
     if i > 0 and t - starts[i] < tr:                  # zoom transition from the previous shot
         p = eo((t - starts[i]) / tr)
         prev = draw(i - 1, t)
-        zin = ZOOM_IN[i]
+        zin = PLAN["zoom"][i]
         s_prev = 1 + (2.2 * p if zin else -0.6 * p)
         s_new = (0.45 + 0.55 * p) if zin else (1.8 - 0.8 * p)
         Mp = cv2.getRotationMatrix2D((W / 2, H * 0.47), 0, s_prev)
@@ -243,8 +391,8 @@ def frame(t, starts, ev, total, caps, fonts):
     band = np.zeros((H, W, 1), np.float32)
     band[:330] = 0.55
     f = f * (1 - band)
-    S.text(f, "COULD SPACE", W / 2, 120, 92, "Anton", (255, 255, 255), 1.0, "mm")
-    S.text(f, "TEAR AN ATOM?", W / 2, 230, 104, "Anton", AMBER, 1.0, "mm")
+    S.text(f, PLAN["title"][0], W / 2, 120, 92, "Anton", (255, 255, 255), 1.0, "mm")
+    S.text(f, PLAN["title"][1], W / 2, 230, 104, "Anton", AMBER, 1.0, "mm")
     if t < starts[-1]:
         cur = [w for (wt, w) in caps if wt <= t]
         if cur:
@@ -260,8 +408,11 @@ def main():
     for a in ("timeline", "voice", "captions", "music", "fonts", "out"):
         ap.add_argument(a)
     ap.add_argument("--speed", type=float, default=1.1)
+    ap.add_argument("--kind", default="rip", help=", ".join(PLANS))
     ap.add_argument("--tail", type=float, default=1.6)
     a = ap.parse_args()
+    global PLAN
+    PLAN = PLANS[a.kind]
     tl = json.load(open(a.timeline))
     wd = words(tl, a.speed)
     roman = open(a.captions).read().split()
@@ -284,10 +435,9 @@ def main():
                     f"loudnorm=I=-31:TP=-6,afade=t=out:st={total - 1.2}:d=1.2", "-ar", "44100", "-ac", "2", mw], check=True)
     m, _ = sf.read(mw)
     mix[:len(m)] += m[:n]
-    hits = [("kz_thud", 0.0, 0.0), ("kz_shot", ev["free"], -6), ("kz_whoosh", starts[1] - 0.2, -2), ("kz_whoosh", ev["scatter"], -6),
-            ("kz_whoosh", starts[2] - 0.2, -2), ("kz_shot", ev["lose"], -3), ("kz_whoosh", starts[3] - 0.2, -2),
-            ("riser", ev["atom"] - 1.2, -8), ("kz_thud", ev["atom"], -4), ("kz_scratch", ev["tod"], -4), ("kz_whoosh", starts[5] - 0.2, -4),
-            ("kz_thud", ev["khas"], -6), ("bell", starts[6] + 0.2, -6)]
+    def when(k):
+        return 0.0 if k == "@0" else (starts[int(k[1:])] - 0.2 if k[0] == "s" and k[1:].isdigit() else ev[k])
+    hits = [(kind, when(k), g) for kind, k, g in PLAN["hits"]]
     for kind, t0, g in hits:
         x, pl = fx.make(kind) if kind != "riser" else fx.make(kind, d=1.2)
         x = x * 10 ** ((-16 + fx.LEVEL.get(kind, -15) + g + 3 - pl) / 20)
