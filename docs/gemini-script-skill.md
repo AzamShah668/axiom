@@ -307,3 +307,14 @@ Each long video gets 3+ Shorts, each built on one of its strongest moments.
   source, and flag anything that breaks a rule above, leaving that decision to him.
 - When he changes a rule, follow the new rule from then on and say which rule changed.
 - Keep answers short and concrete; no filler.
+
+## 5.11 Retention rules (added 2026-11-20 from the channel's real YouTube retention data)
+Every published video lost 35-43% of viewers in the first 60-90 seconds, right after the hook, when the script turned to background. Apply these as hard rules:
+- Opening of at most 30 seconds: the most dramatic image or fact first, then ONE question the whole video answers, a real-world anchor (a telescope, a place, a person at work), and a promise of what the end reveals.
+- No date, list of names, definition, or summary of the chapters in the first minute.
+- Chapter 1 is the strongest story. Every chapter opens on an event or image, never on history.
+- Put the expectation and the result back to back, in consecutive sentences.
+- After every hard fact, one plain "matlab" sentence saying what it means for us.
+- An open question every 20-30 seconds in the first 3 minutes, then every 45-60 seconds; a small payoff every 30-45 seconds.
+- One number per chapter at most, one hedge per claim, each idea told once; the ending returns to the opening image.
+- Total length 7-9 minutes (about 1,000-1,200 words).

@@ -51,3 +51,5 @@ Last updated 2026-11-16. Update this file and commit it at the end of every chat
 - ElevenLabs: **new account key from 2026-11-06** (saved as a cloud-environment network secret for api.elevenlabs.io; on a local machine put it in config/.env). 131,000 characters a period, full on 2026-11-06, reset 2026-12-06. Neel Story Narrator (q4KoKwFyTWQ0Fvvsl9LW) added to the new account's voices. Ask the owner before spending credits.
 - All work up to 2026-10-30 (Voyager, Devanagari narration, per-production voice presets, v3 long takes) merged into
   `main` on 2026-10-30. Earlier, all work of 2026-10-20 to 10-29 was merged into `main` on 2026-10-29 (https://github.com/AzamShah668/axiom/pull/3).
+
+**2026-11-20 session**: 09 published by the owner (https://youtu.be/iLIMuywZFZg); Shorts 'rip' (v1) and 'crunch' (v3, motion-graphics engine) made, crunch posted by the owner; Short 3 'blunder' voice recorded (work/09-universe-end/shorts_test/blunder), video not made yet. Retention study done (docs/research/retention). New rules: productions/README.md 'Owner rules from video 09'. Next: video 10 with the retention script rules; Blender (Colab GPU) later.
