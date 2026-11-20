@@ -1,0 +1,53 @@
+{
+ "_note": "ch1, 'लेकिन जब उन्नीस सौ अट्ठानवे का data' -> 'Nobel Prize मिला' (owner approved the test 2026-11-19)",
+ "cards": [
+  {"id": "graph", "at": "computer", "pos": [2050, 1150], "rot": 0, "w": 860, "h": 620, "draw": "hubble"},
+  {"id": "teamA", "at": "computer+0.45", "pos": [750, 1050], "rot": -3, "w": 640, "h": 520,
+   "paper": [["SUPERNOVA", 34], ["COSMOLOGY PROJECT", 34], ["", 16], ["BERKELEY, USA", 26], ["", 12], ["LEAD:", 24], ["SAUL PERLMUTTER", 30]]},
+  {"id": "riess", "at": "computer+0.4", "pos": [3330, 830], "rot": 4, "w": 420, "photo": "Riess", "crop": [330, 60, 1050, 800]},
+  {"id": "teamB", "at": "computer+0.7", "pos": [3380, 1420], "rot": 2, "w": 700, "h": 400,
+   "paper": [["HIGH-Z SUPERNOVA", 34], ["SEARCH TEAM", 34], ["", 12], ["LEAD: BRIAN SCHMIDT", 26], ["WITH: ADAM RIESS", 26]]},
+  {"id": "sn", "at": "दूर की supernovae-0.2", "pos": [1900, 2250], "rot": -2, "w": 900, "photo": "sn1994d", "crop": [100, 600, 2500, 2500]},
+  {"id": "pie", "at": "आज के", "pos": [3150, 2380], "rot": 0, "w": 620, "h": 640, "draw": "pie", "title": "TODAY'S UNIVERSE",
+   "pct": 68, "fill_at": "अड़सठ"},
+  {"id": "nobel", "at": "इस discovery+0.2", "pos": [950, 2420], "rot": -2, "w": 760, "h": 500,
+   "paper": [["NOBEL PRIZE", 40], ["IN PHYSICS, 2011", 34], ["", 18], ["PERLMUTTER", 30], ["SCHMIDT  .  RIESS", 30]]}
+ ],
+ "camera": [
+  {"at": 0, "look": [2100, 1650], "zoom": 0.40, "drift": 1.075},
+  {"at": "computer-0.6", "look": [2080, 1120], "zoom": 0.53, "drift": 1.075},
+  {"at": "उल्टा-0.37", "look": [2150, 1180], "zoom": 1.05, "rot": -1, "move": 0.6, "drift": 1.07},
+  {"at": "दूर की supernovae-0.1", "look": [1900, 2250], "zoom": 0.95, "rot": 1, "drift": 1.24},
+  {"at": "दूर तो-0.3", "look": [2100, 1650], "zoom": 0.62, "drift": 1.13},
+  {"at": "ये बात", "look": [2150, 1700], "zoom": 0.44, "move": 0.8, "drift": 1.09},
+  {"at": "dark energy नाम-0.8", "look": [2350, 1760], "zoom": 0.80, "rot": -1, "move": 0.5, "drift": 1.06},
+  {"at": "आज के-0.45", "look": [3150, 2380], "zoom": 1.0, "rot": 1, "drift": 1.15},
+  {"at": "इस discovery-0.5", "look": [950, 2420], "zoom": 1.0, "rot": -1, "drift": 1.12},
+  {"at": "Nobel-0.8", "look": [2100, 1700], "zoom": 0.42, "move": 0.9, "drift": 0.95}
+ ],
+ "year": {"at": 0.05, "end": "computer-0.1", "kicker": "THE DATA ARRIVES", "from": 1990, "year": 1998},
+ "tags": [
+  {"on": "riess", "text": "ADAM RIESS", "at": "computer+0.7", "off": [-330, -150]},
+  {"on": "graph", "uv": [0.76, 0.47], "text": "FARTHER = DIMMER", "at": "उल्टा+0.5", "off": [60, -120]},
+  {"on": "sn", "uv": [0.82, 0.16], "text": "TYPE IA SUPERNOVA", "at": "दूर की supernovae+0.6", "off": [60, -60]},
+  {"on": "sn", "uv": [0.223, 0.811], "text": "TOO DIM", "at": "धुंधली+0.3", "off": [90, 30]},
+  {"on": "pie", "uv": [1.0, 0.41], "text": "DARK ENERGY: 68%", "at": "अड़सठ+1.1", "off": [70, -30]}
+ ],
+ "strings": [
+  {"from": "teamA", "to": "graph", "at": "computer+1.0"},
+  {"from": "teamB", "to": "graph", "at": "computer+1.5"},
+  {"from": "graph", "to": "sn", "at": "दूर की supernovae-0.1"},
+  {"from": "sn", "to": "pie", "at": "आज के-0.35"},
+  {"from": "nobel", "to": "teamA", "at": "Nobel+0.2", "dur": 0.6},
+  {"from": "nobel", "to": "teamB", "at": "Nobel+0.4"}
+ ],
+ "circles": [
+  {"on": "graph", "uv": [0.76, 0.47], "r": [230, 150], "at": "उल्टा-0.05"},
+  {"on": "sn", "uv": [0.223, 0.811], "r": [70, 60], "at": "धुंधली-0.05", "dur": 0.4}
+ ],
+ "underlines": [{"on": "nobel", "uv": [[0.066, 0.8], [0.89, 0.8]], "at": "Nobel"}],
+ "stamp": {"text": "DARK ENERGY", "at": "dark energy नाम", "pos": [2350, 1760], "rot": -10},
+ "thesis": {"at": "दूर तो-0.2", "end": "ये बात", "old": "THE UNIVERSE IS SLOWING DOWN", "strike": "speed कम",
+            "new": "IT IS SPEEDING UP", "new_at": "बढ़ रही"},
+ "reveal": "Nobel+0.1"
+}

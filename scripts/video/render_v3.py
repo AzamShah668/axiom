@@ -26,6 +26,8 @@ import render_video as rv  # noqa: E402  (diagram graphics)
 import render_v2  # noqa: E402  (worker init, zoom/whip transitions)
 import mograph as mg  # noqa: E402
 import sfx as fx  # noqa: E402
+import board  # noqa: E402  (evidence-board scenes, owner 2026-11-19)
+import scenes  # noqa: E402  (literal animated scenes, owner 2026-11-19)
 from grade import Grade  # noqa: E402
 
 W, H, FPS, SR = rv.W, rv.H, rv.FPS, rv.SR
@@ -137,7 +139,10 @@ def card_sfx(ns, t0):
         return [("whoosh", t0 + 0.1, -4, {"d": float(ns.get("draw", 2.0)), "f0": 300, "f1": 1800})]
     if ns.get("typing"):  # owner, 2026-11-06: keyboard typing only where the plan marks it
         return [("typing", t0 + 0.12, 0, {"d": 0.6})]
-    return [("pop", t0 + (0.12 if tp == "name" else 0.05), -2)]
+    pop = [("pop", t0 + (0.12 if tp == "name" else 0.05), -2)]
+    if tp in ("callout", "route"):  # a ring / route drawing on: marker scratch (kaz kit; silent in the classic kit)
+        pop.append(("mark_scratch", t0 + 0.1, 0, {"d": 0.45}))
+    return pop
 
 
 # ------------------------------------------------------------------ planning
@@ -284,7 +289,17 @@ def plan(edit, tl, voice_wav=None):
                               "bite_lead": round(T.v(bt["t"]) - b0, 3)})
                 continue
             if "gfx" in b:
-                items.append({**base, "kind": "gfx", "t0": b0, "t1": b1, "gfx": b["gfx"], "q": edit["bg_query"]})
+                it = {**base, "kind": "gfx", "t0": b0, "t1": b1, "gfx": b["gfx"], "q": edit["bg_query"]}
+                if str(b["gfx"]).startswith("scene:"):  # literal animated scene (scenes.py): triggers -> scene seconds
+                    after = T.idx(sid, b["at"]) if b.get("at") else 0
+                    it["scene"] = scenes.resolve(scenes.parse(b["gfx"]), lambda trg, _b0=b0, _a=after: T.vt(sid, trg, _a) - _b0)
+                    sfx += [(k, b0 + t, g, kw) for k, t, g, kw in scenes.cues(it["scene"]) if b0 - 2 <= b0 + t < b1 + 0.5]
+                if b.get("board"):  # evidence-board scene (board.py): spoken triggers -> seconds from the scene start
+                    after = T.idx(sid, b["at"]) if b.get("at") else 0
+                    it["board"] = board.resolve(b["board"], lambda trg, _b0=b0, _a=after: T.vt(sid, trg, _a) - _b0)
+                    it["photos"] = board.photos(b["board"])
+                    sfx += [(k, b0 + t, g, kw) for k, t, g, kw in board.cues(it["board"]) if b0 <= b0 + t < b1]
+                items.append(it)
                 continue
             if "num" in b:
                 ns = dict(b["num"])
@@ -467,9 +482,9 @@ def plan(edit, tl, voice_wav=None):
         music.append({"t": 0.0, "track": intro["track"], "gain": intro.get("gain", 0.0), "start": intro.get("start", 0.0)})
     for i, m in enumerate(edit.get("music", [])):
         t0 = (float(intro["dur"]) if intro and intro.get("track") else 0.0) if i == 0 else starts[m["from"]] - 1.5
-        music.append({"t": t0, "track": m["track"], "gain": m.get("gain", 0.0)})
+        music.append({"t": t0, "track": m["track"], "gain": m.get("gain", 0.0), **({"start": m["start"]} if "start" in m else {})})
     return {"style": "v3", "items": items, "ovl": ovl, "caps": caps, "sfx": sfx, "mus": mus, "music": music,
-            "breaths": T.breaths, "total": total, "off": T.off, "grade": edit.get("grade", {})}
+            "breaths": T.breaths, "total": total, "off": T.off, "grade": edit.get("grade", {}), "sfx_kit": edit.get("sfx_kit", "kaz")}
 
 
 # ------------------------------------------------------------------ frames
@@ -524,7 +539,7 @@ def camera(fr, it, t, D):
 
 OWN_GFX = {"tv_static", "horizon", "inflate", "south_pole", "bounce", "bubbles", "three_answers", "zeros", "rewind", "rewind:big", "photo",
            "channel", "converge", "recombination", "stretch", "notebook", "two_theories", "no_boundary", "cycles",
-           "memory_fix", "gravity_assist", "light_ladder", "starfield"}
+           "memory_fix", "gravity_assist", "light_ladder", "starfield", "board", "scene"}
 
 
 def own_gfx(it):
@@ -782,7 +797,10 @@ def mix(narr, P, music_dir):
     for ev in P["sfx"]:
         kind, at, gain = ev[0], ev[1], ev[2]
         kw = ev[3] if len(ev) > 3 else {}
-        x, pl = fx.make(kind, **kw)
+        play, pkw = fx.kit_swap(kind, kw, P.get("sfx_kit", "classic"))  # owner 2026-11-19: the kaz sounds by default
+        if play is None:
+            continue
+        x, pl = fx.make(play, **pkw)
         i = int(at * SR)
         if i >= n or i + len(x) <= 0:
             continue
@@ -825,7 +843,7 @@ def main():
     import hashlib
     here = os.path.dirname(os.path.abspath(__file__))
     code = hashlib.sha1(b"".join(open(os.path.join(here, f), "rb").read() for f in
-                                 ("render_v3.py", "render_video.py", "mograph.py", "grade.py", "render_v2.py"))).hexdigest()
+                                 ("render_v3.py", "render_video.py", "mograph.py", "grade.py", "render_v2.py", "board.py", "gfx_extra.py", "scenes.py"))).hexdigest()
 
     def sig(c0, c1):  # a chunk is re-rendered when anything it shows changes: its scenes, overlays, grade or the code
         t0, t1 = c0 / FPS, c1 / FPS

@@ -20,6 +20,9 @@ ARCHIVE = {
     "esahubble": "ESA/Hubble (esahubble.org), CC BY 4.0",
     "esawebb": "ESA/Webb (esawebb.org), CC BY 4.0",
     "svs": "NASA's Goddard Space Flight Center / Scientific Visualization Studio (svs.gsfc.nasa.gov)",
+    "pexels": "Pexels (pexels.com), Pexels License",
+    "pixabay": "Pixabay (pixabay.com), Pixabay Content License",
+    "noirlab": "NSF NOIRLab (noirlab.edu), CC BY 4.0",
     "nasa": "NASA Image and Video Library (images.nasa.gov)",
 }
 GFX_IMAGES = {"mw_spiral": "milkyway", "halo_expand": "milkyway", "halo_full": "milkyway", "galactic_orbit": "milkyway",
@@ -46,12 +49,12 @@ def main():
             arch[s["title"]] = s.get("credit") or ARCHIVE.get(s["source"], s["source"])
         by.setdefault(s["source"], {})[s["key"].split(":", 1)[1]] = s["title"]
     full = ["Footage used in this video (archive video IDs):"]
-    for k in ("eso", "esahubble", "esawebb", "svs", "nasa"):
+    for k in ("eso", "esahubble", "esawebb", "noirlab", "svs", "nasa", "pexels", "pixabay"):
         if k in by:
             full.append(f"- {ARCHIVE[k]}: " + ", ".join(sorted(by[k])))
     if a.full:
         open(a.full, "w").write("\n".join(full) + "\n")
-    lines = ["Footage credits: " + "; ".join(f"{ARCHIVE[k]} ({len(by[k])} videos)" for k in ("eso", "esahubble", "esawebb", "svs", "nasa")
+    lines = ["Footage credits: " + "; ".join(f"{ARCHIVE[k]} ({len(by[k])} videos)" for k in ("eso", "esahubble", "esawebb", "noirlab", "svs", "nasa", "pexels", "pixabay")
                                              if k in by) + ". Full list of videos in the pinned comment."]
     if arch:
         lines.append("Archive footage and recordings: " + "; ".join(f"{t} - {c}" for t, c in sorted(arch.items())) + ".")
@@ -60,10 +63,12 @@ def main():
         cred = json.load(open(a.assets))
         lines.append("Image credits (graphics):")
         lines += [f"- {cred[i]}" for i in imgs if i in cred]
-    stems = sorted({it["gfx"].split(":")[1] for it in cl["items"] if str(it.get("gfx", "")).startswith("photo:")})
+    stems = {it["gfx"].split(":")[1] for it in cl["items"] if str(it.get("gfx", "")).startswith("photo:")}
+    stems = sorted(stems | {p for it in cl["items"] for p in it.get("photos", [])})  # + photos pinned on boards
     pc = os.path.join(os.path.dirname(a.assets), "photos", "credits.json") if a.assets else ""
-    if stems and os.path.exists(pc):  # photos of people and things (G photo:<stem>), fetched by fetch_assets.py
-        cred = json.load(open(pc))
+    if stems and (os.path.exists(pc) or os.path.exists(a.assets)):  # photos of people and things, fetch_assets.py
+        cred = {**(json.load(open(a.assets)) if os.path.exists(a.assets) else {}),
+                **(json.load(open(pc)) if os.path.exists(pc) else {})}
         lines.append("Photos: " + "; ".join(cred.get(k, f"{k} (CREDIT_TBD)") for k in stems) + ".")
     lines.append("Graphics and animation: original.")
     tracks = [m["track"].rsplit(".", 1)[0].replace("_", " ") for m in edit.get("music", [])]

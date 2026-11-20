@@ -42,7 +42,9 @@ F <footer text>                          (default: the chapter card title)
 V #<name> @ bite:<name>                  a real recording's own picture, uncut and in sync with its sound
 ```
 From video 05 (owner, 2026-10-27; `productions/README.md`):
-- **No `M` lines** (the voice never waits) and no `"intro"` in edit.base.json; `"channel"` plays after the hook.
+- **No `M` lines** (the voice never waits) and no `"intro"` in edit.base.json. From video 08 also no `"channel"` and no
+  title card (owner, 2026-11-15: no intro of any kind; the video starts on its first sentence).
+  Leave `"channel"`, `"title"` and `"title_card"` out of edit.base.json; render_v3.py then draws neither.
 - **Real archive footage:** a `V` line on the sentence that names the moment, its shot pinned in edit.base.json
   (`"pin": {"ch4/8": "svs_14715-launch#2"}`: section/item number as `scripts/footage/plan_items.py` prints
   it), and an `L` card that says what and when (`L ख़ास satellite @ COBE | NASA satellite · launched 18 November
@@ -90,6 +92,39 @@ From video 05 (owner, 2026-10-27; `productions/README.md`):
    - `bh_shrink`, `dark_star`, `hidden_companion`, …
 
    Keep each under ~10 s. Prefer an `N` card when the point is a number.
+
+   **Explainer graphics** (`scripts/video/gfx_extra.py`, owner 2026-11-19; items split with `;`, drawn over the beat's
+   dimmed footage):
+   - `countdown:<KICKER>;<VALUE>=<label>;...` 3-5 cards that appear one by one with arrows: a progression or countdown
+     (the Big Rip: `60 MILLION YEARS=Milky Way torn apart;3 MONTHS=planets fly off;...`).
+   - `stamp:<WORD>[;<small line>]` a rubber stamp slams on: CONFIRMED/PROVEN/SACH green, DEBUNKED/MYTH red, anything
+     else amber (`NOT CONFIRMED YET`, `OPEN QUESTION`). Use it on the honest twists.
+   - `journal:<date>;<line>;...;*<underlined line>*` a dated notebook page that writes itself (Caveat handwriting, Lora
+     italic date, crimson underline). For history beats and quotes, and in place of a photo when no free portrait
+     exists. Dates as `14 July 1916`.
+   - `compare:<auto|swift|pitch|coach|ball>;<LABEL>[;<size>]` an amber wireframe of an everyday Indian object with a
+     size bar (science-script-v2 §3c): auto-rickshaw, Maruti Swift, cricket pitch, local train coach, or a cricket ball
+     thrown up and falling back. The size is your verified number (`~20 M LONG`).
+   - `blueprint:<TITLE>` the dark navy grid with corner brackets (the explainer backdrop).
+   Use 2-4 of these per video, on beats where footage can't show the idea; they also fill text-free stretches.
+   **Evidence-board scenes** (`G <trigger> @ board:<name>`, `scripts/video/board.py`, owner 2026-11-19, from the
+   kaz-documentary plugin): one continuous camera over a dark board of pinned photos and typed papers, red strings,
+   hand-drawn red circles, black-tape labels that type on, a stamp, a rolling year card and a thesis card (old idea
+   typed, struck through in red, new answer in serif). For the **history beats** (people, years, a result, a prize):
+   **1-2 scenes of 15-40 s per video**; the space footage stays the base. The scene runs until the next V/G line.
+   - Write `productions/<NN>/boards/<name>.json` (format in board.py's docstring; worked example
+     `productions/09-universe-end/boards/1998.json`). Every time is a Devanagari trigger from that section (searched
+     from the G line's trigger on), `"word+0.3"`, or seconds from the scene start. make_edit.py inlines the file.
+   - Land every mark on its word: circle on the word it proves, strike on the old idea's word, stamp on the name of
+     the thing, pie/underline on the number or prize. One stamp per board. Pull out at the end (`reveal`).
+   - Photos: `$MEDIA/assets/photos/<stem>.jpg` with a credit in `photos/credits.json` (credits.py adds them to the
+     description); list them in `productions/<NN>/assets.json`. People: NASA / LoC / ESO / Internet Archive /
+     Wikimedia Commons (free licences only; Wikimedia often rate-limits the container, never route around it). No
+     free photo -> a typed paper card with the name. Never news, press-agency or Nobel Foundation photos.
+   - Sounds come with it (render_v3 adds them): plugin whoosh on camera moves, typing on labels, marker scratch on
+     circles/underlines/strikes, thud on the stamp and the year card (`kz_*` in sfx.py).
+   - Check stills before the render: `python scripts/video/board.py <resolved.json> <assets> <fonts> out.mp4 t1,t2,..`
+     or render the range with `render_v3.py --range`.
 7. **L lower thirds** for every person the first time the story names them ("KARL SCHWARZSCHILD | German
    astronomer · 1873-1916"). **callout / route / hud** over footage when the shot shows the thing:
    - a ring on Sgr A*
@@ -138,3 +173,7 @@ observatory, simulation, zoom.
 | Number cards | at least 2 per fact that has numbers |
 
 Production 01/02 plans are v2 (no `style`): `render_v2.py`, a running subtitle, 2.5 s scenes.
+
+
+## Literal visuals (owner 2026-11-19/20)
+Every line shows what is said: footage only when it shows the words, else `G <trigger> @ scene:<kind>;k=<trigger>` (scripts/video/scenes.py; catalogue and rules in productions/README.md "Owner rules from video 09"), a board, a photo (every named person) or an explainer graphic. No motion graphic twice in one video; no hold over ~2.5 s; no K headline on beats under ~3 s. Pin NOIRLab/real footage where the script names the thing. One music bed for the whole video (`music` entry with `start`).

@@ -8,7 +8,7 @@ description: Render the Hindi voice-over for a science-channel production with t
 ```bash
 scripts/science/pipeline.sh productions/NN-slug narration
 # = python scripts/elevenlabs/render_narration.py productions/NN-slug/tts/narration.hi.md $WORK/voice \
-#     --open-gap 6.4 --gap 0.8 --max-pause 0.4      (no pauses: owner, 2026-10-27; NARRATION_FLAGS overrides)
+#     --open-gap 0.8 --gap 0.8 --max-pause 0.4      (no pauses: owner, 2026-10-27; no intro gap: 2026-11-15)
 # real recordings: [bite:<name>] markers + productions/NN-slug/bites.json (see render_narration.py's docstring).
 # The voice stops at a marker, the recording is levelled to the voice before it and mixed in, and
 # timeline.json "bites" + a "#<name>" pseudo-word mark where it plays. Re-joining costs no ElevenLabs credits.

@@ -74,14 +74,15 @@ stage() {
       bash "$ROOT/scripts/setup/fetch_media.sh" "$MEDIA" ;;
     narration)
       # no pauses (owner, 2026-10-27): 0.8 s before a chapter card, pauses inside a chapter cut to 0.4 s; the
-      # open gap holds the channel intro + title card after the opening (productions 01-04 used --open-gap 3.5 --gap 2.0)
+      # no intro of any kind from video 08 (owner, 2026-11-15): the opening flows into chapter 1 like any chapter
+      # (05-07 used --open-gap 6.4 for the channel intro + title card; 01-04 used --open-gap 3.5 --gap 2.0)
       # right the first time (owner, 2026-10-27): the text is checked before a character is paid for, and every new
       # recording is listened to (speech_check) before anything is built on it
       "$PY" "$ROOT/scripts/elevenlabs/tts_check.py" "$P/tts/narration.hi.md" ${TTS_CHECK_FLAGS:-} \
         || { echo "fix the flagged lines (new names: pipeline.sh $P probe) before recording"; exit 1; }
       # shellcheck disable=SC2086
       "$PY" "$ROOT/scripts/elevenlabs/render_narration.py" "$P/tts/narration.hi.md" "$WORK/voice" \
-        ${NARRATION_FLAGS:---open-gap 6.4 --gap 0.8 --max-pause 0.4}
+        ${NARRATION_FLAGS:---open-gap 0.8 --gap 0.8 --max-pause 0.4}
       "$PY" "$ROOT/scripts/elevenlabs/speech_check.py" "$P/tts/narration.hi.md" "$WORK/voice" \
         || echo "speech check: listen to each FLAG above (the English transcript can drop a place name)" ;;
     probe)  # new names and English terms read alone first: a few characters instead of a re-recorded section
@@ -90,7 +91,8 @@ stage() {
       "$PY" "$ROOT/scripts/video/make_edit.py" "$P/edit.spec" "$P/edit.base.json" "$P/edit.json"
       "$PY" "$ROOT/scripts/footage/assign_shots.py" "$P/edit.json" "$TL" "$LIB" "$WORK/cutlist.json" --plan-only ;;
     footage)
-      "$PY" "$ROOT/scripts/footage/search_sources.py" "$P/footage/terms.txt" "$LIB/candidates.json"
+      "$PY" "$ROOT/scripts/footage/search_sources.py" "$P/footage/terms.txt" "$LIB/candidates.json" \
+        --sources "${SOURCES:-eso,esahubble,esawebb,svs,pexels,pixabay}"   # stock sites need their key in config/.env
       "$PY" "$ROOT/scripts/footage/select_candidates.py" "$LIB/candidates.json" "$P/edit.json" "$TL" "$LIB" "$WORK/picks.json" \
         --max "$LIMIT" --avoid "$ROOT/productions" --lib "$LIB"
       library_pull "$WORK/picks.json"
@@ -116,6 +118,10 @@ stage() {
         --review "$WORK/review_assign" --avoid "$ROOT/productions" --local-only ${keep[@]+"${keep[@]}"} ;;
     render)  # edit.json "style": "v3" -> render_v3.py (docs/style-guide.md), else the v2 renderer
       mkdir -p "$WORK/out"
+      # build the CMB sky texture (cmb_* graphics) before the render forks its workers: made inside them, scipy
+      # deadlocked after the fork and the render hung (video 08). Cached in $MEDIA/assets/cmb_sky.png.
+      grep -q '"cmb_' "$P/edit.json" && (cd "$ROOT/scripts/video" && "$PY" -c \
+        "import sys, render_video as rv; rv.G['assets'] = sys.argv[1]; rv.cmb_tex()" "$MEDIA/assets")
       style=$("$PY" -c "import json,sys; print(json.load(open(sys.argv[1])).get('style', 'v2'))" "$P/edit.json")
       "$PY" "$ROOT/scripts/video/render_${style}.py" "$WORK/cutlist.json" "$WORK/voice/narration.wav" "$P/edit.json" "$TL" \
         "$MEDIA/music" "$MEDIA/fonts" "$MEDIA/assets" "$MASTER" --workers "$WORKERS"

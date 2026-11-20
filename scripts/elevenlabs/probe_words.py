@@ -27,18 +27,30 @@ def snippet(term, sentence, n=3):
 def main():
     path = sys.argv[1]
     _, terms, ctx = tts_check.check(path, allow_pauses=True)
+    opt = lambda k: [x.strip() for a in sys.argv if a.startswith(k + "=") for x in a.split("=", 1)[1].split(",") if x.strip()]
+    skip = set(opt("--skip"))
+    terms = [t for t in terms if t not in skip]
+    if opt("--extra"):
+        sents = re.split(r"(?<=[।?!.])\s+", open(path, encoding="utf-8").read())
+        for t in opt("--extra"):
+            ctx[t] = next(x for x in sents if t in x)
+            terms.append(t)
     if not terms:
         sys.exit("nothing new to probe")
     slug = os.path.basename(os.path.dirname(os.path.dirname(os.path.abspath(path))))
     out = os.path.join(ROOT, "work", slug, "voice_probe")
     os.makedirs(out, exist_ok=True)
     order = list(terms)
-    pieces = [snippet(t, ctx[t]) for t in order]
+    n = int((opt("--context") or ["3"])[0])  # words either side; fewer = cheaper
+    pieces = [snippet(t, ctx[t], n) for t in order]
     text = "। ".join(pieces) + "।"
     for f in ("probe.mp3", "probe.align.json"):
         if os.path.exists(os.path.join(out, f)):
             os.remove(os.path.join(out, f))
     print(f"probing {len(order)} terms, {len(text)} characters")
+    if "--dry" in sys.argv:
+        print(text)
+        return
     render({"id": "probe", "text": text}, "", "", out)
     al = json.load(open(os.path.join(out, "probe.align.json")))
     joined, cs, ce = "".join(al["characters"]), al["character_start_times_seconds"], al["character_end_times_seconds"]

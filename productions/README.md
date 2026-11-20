@@ -21,6 +21,14 @@
 - **Subjects are the characters of the story:** scientists, Earth, the galaxy, insaan / insaaniyat. Avoid "hum/hamara" as a way of addressing the viewer.
 - The narration runs as one continuous story with a cold open. List and countdown structure lives **only on screen** (chapter cards); the voice flows from one fact into the next.
 - Calm, awe-filled documentary tone with steady pacing and no hype.
+- **Indian audience rules (owner, 2026-11-19; details in science-script-v2 §3c):**
+  - Vary sentence length inside the flowing style: a short punch line every 4-6 sentences.
+  - Numbers as people say them ("saadhe teen", "dedh sau", lakh/crore where clearer), metric units. **Huge numbers
+    as powers of ten: "ten to the power sau"**, never "ek ke aage sau zero" (owner, 2026-11-19).
+  - The read-aloud test: nothing that sounds like a news anchor or Google Translate.
+  - **Indian comparisons allowed in full videos** (2-3 per video: auto-rickshaw, Maruti Swift, cricket pitch, local
+    train coach...), every comparison number verified by search and listed in the fact-check table.
+  - Cultural care: respectful on religion, caste, regions and tragedies; casualty numbers sourced.
 - **Simple, spoken Hindi (owner's rule, 2026-10-21).** Write the way people talk, not the way a textbook reads.
   Every line is heard only once, so a viewer has to understand it on first hearing.
   - Avoid formal, Sanskritised or literary Urdu words, for example कण (particle), घनत्व (density), तत्व
@@ -33,11 +41,14 @@
   open already began the story somewhere else.
 
 ## Voice
-- **Locked voice:** ElevenLabs library voice **Neel – Paranormal Story Narrator** (Hindi), model `eleven_multilingual_v2`, stability 0.5, similarity 0.75, style 0, speed 1.0. See `voice-preset.json`.
+- **Locked voice (from 2026-11-15):** ElevenLabs library voice **Rudra – Intense Documentary Narrator** (Hindi, `vIdhHAZdn1bGjKe1dFw8`), picked by the owner from 8 voices reading our opening line. Before that: **Neel – Paranormal Story Narrator** (Hindi, still pinned for 06), model `eleven_multilingual_v2`, stability 0.5, similarity 0.75, style 0, speed 1.0. See `voice-preset.json`.
 - Narration source for TTS: `productions/<NN-topic>/tts/narration.hi.md` (Devanagari, one `## <section>` per chapter).
   - English names and science words stay in English letters.
+  - **Owner's rule (2026-11-15): every English word stays exactly as written in English (Latin letters), never
+    transliterated into Devanagari: galaxy, Milky Way, signal, planets, civilization. Only Hindi words go into
+    Devanagari. A Hindi word that could come out wrong may be written in Roman Hinglish instead.**
   - Numbers are written as Hindi words.
-- Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir> --open-gap 6.4 --gap 0.8 --max-pause 0.4`
+- Render: `python scripts/elevenlabs/render_narration.py <narration.hi.md> <out_dir> --open-gap 0.8 --gap 0.8 --max-pause 0.4`
   (`pipeline.sh … narration`). This produces the narration, the timeline and per-character timings.
 - **Pace: full videos at 1.0x** (owner, 2026-10-26, after a 1.0x vs 1.2x sample of video 04). Shorts at 1.2x.
 
@@ -75,9 +86,11 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
 
 ## Standard from video 05 (owner, 2026-10-27, after the 04-x experiment: "I accept all these changes")
 - **No opening animation, no pauses.** The voice starts at 0.5 s. No `M` moments and no "..." suspense pauses.
-  The narration stage joins with `--open-gap 6.4 --gap 0.8 --max-pause 0.4` (pipeline default).
-- **Channel intro after the opening/hook** (edit.base.json `"channel"`), then the title card. Chapter cards carry
-  a short title, no number. `"lead_in": 0.5`, no `"intro"`.
+  The narration stage joins with `--open-gap 0.8 --gap 0.8 --max-pause 0.4` (pipeline default).
+- **No intro of any kind (owner, 2026-11-15): no channel intro, no title card, no gap after the opening.** The
+  video starts on its first sentence and goes straight on ("people don't care about those things; don't waste
+  time"). Chapter cards carry a short title, no number, and sit over the running voice. `"lead_in": 0.5`, no
+  `"intro"`, no `"channel"` in edit.base.json. (Videos 05-07 had a channel intro and title card.)
 - **Show what is being said.** Photos of the people and things named, our own motion graphics for every idea
   that is explained, name cards (`L`) for people, missions and instruments, kinetic text and number cards.
 - **Real archive footage on many occasions: 10-20 clips a video when they exist.** Launches, the actual
@@ -132,9 +145,13 @@ Rules that still hold (from the owner's reviews of v1 and v2; enforced by the pi
   one word at a time (owner, 2026-10-22), in gold as it is spoken. No caption while other text is on
   screen (a name card, a date, a headline or number card already says it). `captions:` file per Short (`say_roman:` for a spoken hook).
 - **The end card is written, never said:** `FULL VIDEO BELOW ↓` on screen.
+- **Shorts v2 style (owner, 2026-11-16, video 08):** `scripts/video/render_short_v2.py`, full-screen 9:16, beat-snapped cuts
+  every 2-3 s with zoom punches, flash/glitch transitions, slam headlines, count-up numbers, one-word gold captions, a
+  beat-driven music bed, and a curiosity script that stops before the answer and ends on a spoken and written
+  "WATCH THE FULL VIDEO". Voice at **1.1x** (owner: 1.2x "too fast" for these). **No suspense stop** (owner: "it kills the rhythm"): the voice flows straight into the twist.
 - **Everyday comparisons are allowed in Shorts hooks and titles** (owner's exception, 2026-10-22), e.g. "Maggi
-  की तरह" for spaghettification. The science term stays, and the full videos stay universal (no India-specific
-  comparisons there).
+  की तरह" for spaghettification. The science term stays. From 2026-11-19 Indian comparisons are allowed in full
+  videos too (see "Indian audience rules" above).
 - **The full video is linked with YouTube Studio's "Related video"** on each Short (links typed into a Short's
   description don't click). The full video must be public first.
 - Uploads stay private until the owner says publish; the footage and music credits go in every Short's description.
@@ -150,6 +167,14 @@ Production folder contents:
 - `cutlist.json` (the shots used), `captions.en.srt` (v3 CC track)
 - `youtube.md`, `credits.txt`
 
+## Evidence-board scenes (owner, 2026-11-19)
+- 1-2 per video, 15-40 s, on the history beats (who found it, when, what result, the prize), in the style of the
+  kaz-documentary plugin: pinned photos and typed papers, red strings and circles, typed labels, a stamp, year and
+  thesis cards, one continuous camera. Space footage stays the base (about 75-80% of the video).
+- `G <trigger> @ board:<name>` + `productions/<NN>/boards/<name>.json` (science-edit-plan skill, step 6).
+- Photos of people: free licences only (NASA, Library of Congress, ESO, Internet Archive, Wikimedia Commons). No free
+  photo -> a typed name card.
+
 ## Sound effects: the owner's five (2026-11-06, every video and Short from now on)
 For this -> use this (scripts/video/sfx.py synthesises them, licence-clean; render_v3.py and render_short.py place them):
 - **Hooks** -> bass impact (frame 0 of a Short; the first word of a video's opening)
@@ -160,6 +185,68 @@ For this -> use this (scripts/video/sfx.py synthesises them, licence-clean; rend
 - **Transitions** -> camera flash (flash cuts; a Short's hook -> story join is a flash cut)
 - **CTA** -> bell ding (the FULL VIDEO BELOW end card)
 
+**The kaz sound kit (owner, 2026-11-19: "use all of these SFX ... whenever necessary").** From video 09 on, every
+slot above plays the kaz-documentary sound (sfx.py `KITS["kaz"]`, the default for new edits and Shorts): hook ->
+`kz_thud`, zooms/whooshes -> `kz_whoosh`, typing -> `kz_typing`, flash transitions and impacts -> `kz_shot`, number
+landings -> `kz_thud`; the bell, ticks, pops, rolls and risers have no kaz version and stay. Rings and routes drawing
+over footage get a marker scratch (`kz_scratch`); evidence boards bring their own. Two more for moments that need
+them, by hand: `S <trigger> | kz_film | d=3` (projector clatter: archive film, old photos, history flashbacks) and
+`S <trigger> | kz_drone | d=8` (dark drone under a tense, still moment). Videos 01-08 and their Shorts keep
+`"sfx_kit": "classic"` so a re-render sounds as uploaded.
+
 ## The first 2 seconds (owner, 2026-11-07, every Short and video opening)
 - Motion from frame 0: a subtle zoom or flicker on the first picture (graphics, photos and text cards too).
 - A quick cut within about 1.5-2 s; nothing holds still for the first 3 s. Check the first 2 s for motion before sending.
+
+## Owner rules from video 09 (2026-11-19/20): read these before every new video
+**Script (DRAFT, the owner is still working on the script rules; proposals from the YouTube retention data in `docs/research/retention/README.md`)**
+- Viewers are lost in the first 60-90 s (35-43 points in every video), right after the hook, when the script turns to
+  background. After ~3 min the curve is flat. So:
+  - Opening <= 30 s: the most dramatic image/fact first, ONE question the video answers, a real-world anchor
+    (a telescope, a place, a person at work), and a promise of the payoff. No date, place-name list, definition or
+    summary of the chapters in the first minute.
+  - Chapter 1 = the strongest story; every chapter opens on an event or image, never on history.
+  - Expectation and result back to back (cricket ball slows -> supernovae were dimmer than expected).
+  - Image -> fact -> "matlab" line: every hard fact is followed by what it means, in everyday words.
+  - An open question every 20-30 s for the first 3 min, then every 45-60 s; a small payoff every 30-45 s.
+  - One number per chapter at most; one hedge per claim; tell each idea once; the ending returns to the opening image.
+  - Length 7-9 min (about 1,000-1,200 words).
+- Shorts may talk to the viewer ("Socho...", "dekho"); the owner writes Short scripts himself.
+
+**Voice**: Rudra, `eleven_multilingual_v2`, stability 0.35, style 0.45, similarity 0.75, speaker boost
+(`productions/voice-preset.json`, the Shorts take the owner liked best). Full-video speed is decided per video:
+render 1.0x and 1.1x at the end and let the owner pick. Shorts play at 1.1x.
+
+**Every line shows what is said** ("whatever the speaker is saying, it should be shown")
+- Footage only where it shows exactly the words; otherwise an own animated scene (`G <trigger> @ scene:<kind>;...`,
+  `scripts/video/scenes.py`: last_star, three_paths, survey, atom_rip, bh_vanish, crunch, dark_force, triptych,
+  expansion_slow, bigbang, strike, grip, galaxy_tear, orbit_break, dissolve, weaken_graph, lifetime, quantum_grid,
+  bounce2, first_light; times are spoken triggers), an evidence board (`board:<name>`), or an explainer graphic.
+- **No motion graphic is shown twice in a video** (one stamp, one countdown, one board scene per idea...).
+- Nothing holds longer than ~2.5 s without a visible change; headlines (K) never on beats shorter than ~3 s (they lag).
+- A photo on screen when a person is named (`G <name> @ photo:<Stem>` + `L` card). The WHOLE photo is always visible
+  (never cropped to fill), on the right half, never under a headline or name card (owner 2026-11-20). Sources: NASA images, Library of
+  Congress (`loc.gov` JSON API, "No known restrictions"), ESO, Wikimedia Commons (its API is rate-limited from the
+  container: write `productions/<NN>/photos_needed.md` like 09's and the owner sends a Drive folder link; download
+  it with `gdown --folder`). Credits go to `work/media/assets/photos/credits.json`. No Nobel Foundation/press photos.
+- Topic-specific real footage first: NSF NOIRLab (`noirlab` source in search_sources.py, CC BY 4.0: Kitt Peak, DESI,
+  Mayall, Rubin, Gemini), pinned in edit.base.json `pin` when the script names the thing.
+- Stock (Pexels; Pixabay when PIXABAY_API_KEY is in config/.env) only for real-world shots; CGI space renders are
+  refused in code (STOCK_DENY) and must be banned if any slip through.
+
+**Music and sound**: one bed under the whole video that fits the topic (09: "Darkest Child", -3 dB, from 32 s;
+edit.base.json `music` with `start`); never a track that sounds unrelated. The kaz sound kit (default) with hits on
+every scene event.
+
+**Shorts style (motion graphics only)**: `scripts/video/short_crunch.py` on `scripts/video/space3d.py` (3D camera,
+procedural galaxies, motion blur, bloom, flares, shockwaves) is the current best. Text in Shorts is PLAIN: no pop-in
+and no glow (owner 2026-11-20; `space3d.PLAIN_TEXT = True`); `short_motion.py` is
+the simpler first version. One continuous journey, every sentence a zoom in/out, one-word gold captions, top title,
+"WATCH THE FULL VIDEO" end card, Darkest Child low, Rudra at 1.1x. Package per Short in `productions/<NN>/shorts/<id>.md`.
+
+**After upload**: `python scripts/youtube/analytics.py retention <video_id> productions/<NN>` (YouTube Analytics; the
+token has yt-analytics.readonly and the API is enabled) matches every drop to its line and shot; act on patterns seen
+in 2+ videos. Drive: `drive_sync.py put`; making a file public needs the owner's explicit request each time.
+
+**Later**: Blender for hero 3D shots, rendered on the owner's Colab Pro GPU through a Drive job folder
+(`blender -b -P scene.py`); mcp-for-blender does not fit (needs Blender's UI).

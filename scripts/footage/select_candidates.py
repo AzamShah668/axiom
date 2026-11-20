@@ -114,7 +114,11 @@ def main():
         for s in json.load(open(os.path.join(a.lib, "shots.json"))):
             free[s["clip"]] = free.get(s["clip"], 0) + int(bool(s["usable"]) and not s["dup_of"] and s["id"] not in used)
         name = lambda k: re.sub(r"[^A-Za-z0-9_-]", "_", k.replace(":", "_"))
-        spent = {k for k in keys if free.get(name(k), 1) == 0}
+        # a clip an earlier production used is spent outright (owner, 2026-11-15: no footage from earlier videos), also
+        # when the library has no shots for it yet (a fresh container: free{} is empty, so the line below alone
+        # avoided nothing and 08's first pull was mostly old clips)
+        used_clips = {u.split("#")[0] for u in used}
+        spent = {k for k in keys if free.get(name(k), 1) == 0 or name(k) in used_clips}
         skip |= spent
         print(f"avoid: {len(spent)} library clips have no unused shot left", flush=True)
     qs = sorted({q for it in items for q in it["q"]})

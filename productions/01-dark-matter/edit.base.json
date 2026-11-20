@@ -143,5 +143,6 @@
   "svs_5668"
  ],
  "crops": {},
- "exclude": {}
+ "exclude": {},
+ "sfx_kit": "classic"
 }

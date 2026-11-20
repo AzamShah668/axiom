@@ -1,0 +1,151 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "cards": {
+  "ch1": [
+   "",
+   "THE INVISIBLE *HUNTER*"
+  ],
+  "ch2": [
+   "",
+   "THE *MAGNETAR*"
+  ],
+  "ch3": [
+   "",
+   "*QUASARS*"
+  ],
+  "ch4": [
+   "",
+   "*TON 618*"
+  ],
+  "ch5": [
+   "",
+   "THE GREAT *ATTRACTOR*"
+  ],
+  "ch6": [
+   "",
+   "THE GREAT *NOTHING*"
+  ],
+  "ch7": [
+   "",
+   "THE *COLD SPOT*"
+  ],
+  "ch8": [
+   "",
+   "*DARK FLOW*"
+  ],
+  "ending": [
+   "",
+   "THE EDGE OF *EVERYTHING*"
+  ]
+ },
+ "count_total": 9,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Interloper.mp3"
+  },
+  {
+   "from": "ch1",
+   "track": "Dark_Fog.mp3"
+  },
+  {
+   "from": "ch2",
+   "track": "Phantasm.mp3"
+  },
+  {
+   "from": "ch3",
+   "track": "Echoes_of_Time_v2.mp3"
+  },
+  {
+   "from": "ch4",
+   "track": "Lightless_Dawn.mp3"
+  },
+  {
+   "from": "ch5",
+   "track": "Long_Note_Three.mp3"
+  },
+  {
+   "from": "ch6",
+   "track": "Ossuary_5_-_Rest.mp3"
+  },
+  {
+   "from": "ch7",
+   "track": "Long_Note_Two.mp3"
+  },
+  {
+   "from": "ch8",
+   "track": "Long_Note_One.mp3"
+  },
+  {
+   "from": "ending",
+   "track": "Long_Note_Four.mp3"
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "a dark nebula drifting"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [
+  "esahubble_heic2202a#2",
+  "esahubble_heic2304a#2",
+  "esahubble_heic2603a#0",
+  "esawebb_final_JWST_spacesparks009#0",
+  "esawebb_potm2604c#0",
+  "esawebb_weic2218b#0",
+  "esawebb_weic2510b#0",
+  "esawebb_weic2517b#0",
+  "esawebb_weic2602a#0",
+  "esawebb_weic2608c#0",
+  "esawebb_weic2615c#0",
+  "eso_eso1507d#0",
+  "eso_eso1701d#0",
+  "eso_eso1718b#0",
+  "eso_eso1726b#0",
+  "eso_eso1809b#0",
+  "eso_eso1814b#0",
+  "eso_eso2015b#0",
+  "eso_eso2116a#2",
+  "eso_eso2117b#0",
+  "eso_eso2314c#0",
+  "eso_eso2402c#0",
+  "eso_eso2502d#0",
+  "eso_eso2606c#0",
+  "eso_esocast82c#0",
+  "eso_potw2401a#0",
+  "eso_potw2421a#0",
+  "eso_potw2512a#0",
+  "eso_potw2622a#0",
+  "eso_potw2643a#0",
+  "eso_uhd_photogr5_2014#0",
+  "svs_13237#0",
+  "svs_13672#0",
+  "svs_13710#0",
+  "svs_14477#0",
+  "svs_14649#0",
+  "svs_14835#8",
+  "svs_14967#0",
+  "svs_15000#0",
+  "svs_15023#0",
+  "svs_15080#0",
+  "svs_15091#0",
+  "svs_4877#0",
+  "svs_5366#1",
+  "svs_5519#0"
+ ],
+ "crops": {},
+ "exclude": {},
+ "sfx_kit": "classic"
+}

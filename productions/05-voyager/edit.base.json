@@ -405,5 +405,6 @@
  "channel": {
   "dur": 3.2,
   "gfx": "channel"
- }
+ },
+ "sfx_kit": "classic"
 }

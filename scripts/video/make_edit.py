@@ -8,6 +8,7 @@ A trigger is the first occurrence of that exact text in the section's narration 
                                        v3 {opt}: hold (5.5 s scenes, slow push) | flash (0.6 s montage) | 4s (length)
                                        | shrink (fast pull-back: the subject visibly shrinks)
   G <trigger|-> @ <graphic name>       explanatory diagram (render_video.gfx) over dark footage
+                                       (board:<name> = an evidence-board scene from boards/<name>.json, see board.py)
   C <trigger|-> | <English sentence> [| big]
                                        v2: caption on screen. v3: the English CC track; "big" also shows the phrase
                                        as a burned-in key line (names, years, short reveals)
@@ -26,12 +27,12 @@ v3 only (edit.base.json "style": "v3", see docs/style-guide.md):
                                        it, an impact, a music swell (drop = the music falls silent for the breath)
   L <trigger> @ <NAME> [| <role line>]  lower third for a person (= N ... @ name | value=NAME | sub=role | over)
   T <trigger> | <cut|dip|dissolve|flare|flash|whip|zoom>    transition override at the cut nearest the trigger
-  S <trigger> | <sound> [| gain=<dB>] [| d=<s>]  extra sound (scripts/video/sfx.py kinds; d for riser/hiss/roll)
+  S <trigger> | <sound> [| gain=<dB>] [| d=<s>]  extra sound (scripts/video/sfx.py kinds; d for riser/hiss/roll/kz_film/kz_drone)
   F <text>                             footer text for this section (default: the chapter card title)
 edit.base.json holds the rest: lead_in, title_card / title, cards, music, card_query, bg_query, pin, ban, crops,
 exclude, and for v3: style, grade, count_total.
 """
-import json, re, sys
+import json, os, re, sys
 
 
 def _opts(parts):
@@ -139,6 +140,13 @@ def main():
     spec, base, out = sys.argv[1:4]
     edit = json.load(open(base, encoding="utf-8"))
     edit["sections"] = parse(spec)
+    for sid, sec in edit["sections"].items():  # G ... @ board:<name> -> inline productions/<NN>/boards/<name>.json
+        for b in sec["v"]:
+            if str(b.get("gfx", "")).startswith("board:"):
+                bp = os.path.join(os.path.dirname(os.path.abspath(spec)), "boards", b["gfx"][6:] + ".json")
+                if not os.path.exists(bp):
+                    raise SystemExit(f"[{sid}] {b['gfx']}: no board file {bp}")
+                b["board"] = json.load(open(bp, encoding="utf-8"))
     json.dump(edit, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print({k: {x: len(v[x]) for x in ("v", "c", "k", "n", "m") if v.get(x)} for k, v in edit["sections"].items()})
 

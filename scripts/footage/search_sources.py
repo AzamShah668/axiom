@@ -17,10 +17,13 @@ DJANGO = {
     "eso": ("https://www.eso.org/public/videos/list/{p}/?search={q}", "https://www.eso.org/public/videos/{id}/", "https://cdn.eso.org/videos/ultra_hd/{id}.mp4"),
     "esahubble": ("https://esahubble.org/videos/page/{p}/?search={q}", "https://esahubble.org/videos/{id}/", "https://cdn.esahubble.org/archives/videos/ultra_hd/{id}.mp4"),
     "esawebb": ("https://esawebb.org/videos/page/{p}/?search={q}", "https://esawebb.org/videos/{id}/", "https://cdn.esawebb.org/archives/videos/ultra_hd/{id}.mp4"),
+    # NSF NOIRLab (Kitt Peak, DESI, Mayall, Rubin, Gemini): CC BY 4.0 like ESO (owner 2026-11-19: topic-specific footage)
+    "noirlab": ("https://noirlab.edu/public/videos/page/{p}/?search={q}", "https://noirlab.edu/public/videos/{id}/", "https://storage.noirlab.edu/media/archives/videos/ultra_hd/{id}.mp4"),
 }
 THUMB = {"eso": "https://cdn.eso.org/videos/videoframe/{id}.jpg",
          "esahubble": "https://cdn.esahubble.org/archives/videos/videoframe/{id}.jpg",
-         "esawebb": "https://cdn.esawebb.org/archives/videos/videoframe/{id}.jpg"}
+         "esawebb": "https://cdn.esawebb.org/archives/videos/videoframe/{id}.jpg",
+         "noirlab": "https://storage.noirlab.edu/media/archives/videos/videoframe/{id}.jpg"}
 SKIP_ID = re.compile(r"(-FD|fulldome|dome|_vr|360|-vr)", re.I)  # fulldome / VR renders are not 16:9
 
 
@@ -99,6 +102,80 @@ def svs_4k(sid):
             "kw": [k.get("title", "") if isinstance(k, dict) else str(k) for k in d.get("keywords", [])][:12]}
 
 
+# Stock footage is for real-world things only (night skies, observatories, places, objects, nature). CGI "space"
+# renders (spaceships, abstract nebulae, cartoon planets) are refused at search time (owner 2026-11-19).
+STOCK_DENY = re.compile(r"spaceship|spacecraft|space station|futuristic|sci.?fi|alien|ufo|abstract|trippy|kaleidoscope|"
+                        r"firework|spider|plasma|magical|digital|illustration|3d|animation|render|celestial|cosmic|nebula|"
+                        r"galax|black hole|meteor|asteroid|vortex|tunnel|warp|particle|sphere|concept|journey|voyage|"
+                        r"adventure|epic|outer space|deep space", re.I)
+
+
+def env_key(name):
+    """An API key from the environment or the git-ignored config/.env (never printed)."""
+    k = os.environ.get(name)
+    env = os.path.join(os.path.dirname(__file__), "..", "..", "config", ".env")
+    if not k and os.path.exists(env):
+        for ln in open(env):
+            if ln.startswith(name + "="):
+                k = ln.split("=", 1)[1].strip()
+    return k
+
+
+def pexels_key():
+    return env_key("PEXELS_API_KEY")
+
+
+def pixabay_search(term, limit=20):
+    """Pixabay stock video (owner, 2026-11-19: more variety for what the voice names: places, objects, people at work).
+    Only landscape files at least 3840 px wide; Pixabay Content License (free, no attribution required; credited
+    anyway). The key goes in the query string, so it lives in config/.env as PIXABAY_API_KEY."""
+    k = env_key("PIXABAY_API_KEY")
+    if not k:
+        return {}
+    try:
+        r = requests.get("https://pixabay.com/api/videos/", timeout=30,
+                         params={"key": k, "q": term[:100], "per_page": max(3, min(limit, 200)), "safesearch": "true"})
+        hits = r.json().get("hits", []) if r.ok else []
+    except Exception:
+        return {}
+    out = {}
+    for v in hits:
+        f = (v.get("videos") or {}).get("large") or {}
+        if (f.get("width") or 0) < 3840 or (f.get("height") or 0) >= (f.get("width") or 0) or not f.get("url"):
+            continue
+        if STOCK_DENY.search(v.get("tags") or ""):
+            continue
+        out[str(v["id"])] = {"title": (v.get("tags") or term).replace(",", ""), "url": f["url"], "page": v.get("pageURL", ""),
+                             "thumb": f.get("thumbnail", ""), "desc": f"by {v.get('user', '')}", "bytes": f.get("size", 0)}
+    return out
+
+
+def pexels_search(term, limit=15):
+    """Pexels stock video (owner, 2026-11-09: an extra source, used where the space archives have nothing).
+    Only landscape files at least 3840 px wide; Pexels License (free, no attribution required; credited anyway)."""
+    k = pexels_key()
+    if not k:
+        return {}
+    try:
+        r = requests.get("https://api.pexels.com/videos/search", headers={"Authorization": k}, timeout=30,
+                         params={"query": term, "per_page": limit, "orientation": "landscape", "size": "large"})
+        vids = r.json().get("videos", []) if r.ok else []
+    except Exception:
+        return {}
+    out = {}
+    for v in vids:
+        files = [f for f in v.get("video_files", []) if (f.get("width") or 0) >= 3840 and (f.get("height") or 0) < (f.get("width") or 0)]
+        if not files:
+            continue
+        f = min(files, key=lambda f: f["width"])
+        slug = re.sub(r"-\d+/?$", "", (v.get("url") or "").rstrip("/").rsplit("/", 1)[-1]).replace("-", " ")
+        if STOCK_DENY.search(slug):
+            continue
+        out[str(v["id"])] = {"title": slug or term, "url": f["link"], "page": v.get("url", ""), "thumb": v.get("image", ""),
+                             "desc": f"by {(v.get('user') or {}).get('name', '')}", "bytes": 0}
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("terms")
@@ -110,11 +187,17 @@ def main():
     terms = [t.strip() for t in (open(a.terms).read().splitlines() if os.path.exists(a.terms) else a.terms.split(",")) if t.strip()]
     cand = json.load(open(a.out)) if os.path.exists(a.out) else {}
     found = {}
+    global PEX
+    PEX = {}
 
     def one(job):
         term, src = job
         if src == "svs":
             return term, src, {str(i): t for i, t in svs_search(term, a.svs_limit)}
+        if src in ("pexels", "pixabay"):
+            hits = (pexels_search if src == "pexels" else pixabay_search)(term)
+            PEX.update({f"{src}:{i}": h for i, h in hits.items()})
+            return term, src, {i: h["title"] for i, h in hits.items()}
         return term, src, django_search(src, term, a.pages)
 
     jobs = [(t, s) for t in terms for s in a.sources.split(",")]
@@ -128,6 +211,12 @@ def main():
 
     def resolve(k):
         c = found[k]
+        if c["source"] in ("pexels", "pixabay"):
+            h = PEX.get(f"{c['source']}:{c['id']}")
+            if not h:
+                return k, None
+            c.update(url=h["url"], bytes=h["bytes"], desc=h["desc"], page=h["page"], thumb=h["thumb"])
+            return k, c
         if c["source"] == "svs":
             info = svs_4k(c["id"])
             if not info:

@@ -64,3 +64,7 @@ If the assignment review shows weak matches for a beat (no 4K footage of the thi
 3. Or turn the beat into a graphic.
 
 Never fall back to 1080p footage or repeat a shot.
+
+
+## Sources added 2026-11-19
+`noirlab` (CC BY 4.0) for Kitt Peak/DESI/Mayall/Rubin footage; Pexels (and Pixabay with a key) only for real-world shots, CGI refused by STOCK_DENY in search_sources.py. Default `--sources` in pipeline.sh: eso,esahubble,esawebb,svs,pexels,pixabay (add noirlab when the topic needs it: SOURCES=noirlab).

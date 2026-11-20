@@ -5,8 +5,8 @@ description: Write the script for a science-channel video the owner's improved w
 
 # Science script v2 (stage 1, improved)
 
-Everything in `science-script` still holds (research, fact-check table, Devanagari TTS file, third person, no
-India-specific comparisons, simple spoken Hindi). This skill adds what the owner and two review rounds on video 04
+Everything in `science-script` still holds (research, fact-check table, Devanagari TTS file, third person, simple
+spoken Hindi), except that Indian comparisons are now allowed in full videos (§3c, owner 2026-11-19). This skill adds what the owner and two review rounds on video 04
 taught us. Reference: `productions/04-before-big-bang/` (`script.txt`, `script.md`).
 
 ## 1. Pick the topic from data, not taste
@@ -27,12 +27,18 @@ is 100 quota units, so stay under ~30 searches a day).
    Only the topic and the facts are free; the script, footage, music and edit are always our own.
 5. Give the owner 3-5 options with the numbers behind each, and recommend one.
 
+**Indian angle (owner, 2026-11-19):** when two topics score alike, prefer the one with an Indian connection, and look
+for one inside any topic: an Indian scientist (Chandrasekhar, Meghnad Saha, C.V. Raman, Jayant Narlikar), an
+Indian mission or instrument (Chandrayaan, Aditya-L1, AstroSat, the GMRT radio telescope near Pune, the Hanle
+observatory in Ladakh). Only when it really belongs to the story; verify it like any fact.
+
 ## 2. Structure: one mystery, told as a story
 - **One question carries the whole video** ("us se pehle kya tha?"). Open it in the first 30 s and answer it,
   or admit it is open, only at the end.
 - **Opening (30-50 s): start in the middle of the action.** A person, a place, a year, a strange event (1964,
   two scientists cleaning a radio antenna, a hiss that won't go). Reveal what it was, add 1-2 big numbers as
-  teasers, then ask the question. Title card after it. Don't tease a mystery in a hook and then solve it 15 s
+  teasers, then ask the question, and go straight on: no title card, no channel intro (owner, 2026-11-15).
+  The first sentence is already the topic; never warm up. Don't tease a mystery in a hook and then solve it 15 s
   later in a cold open: merge the two.
 - **Chapters, not a countdown, when the title is a question.** Use "10 Facts…" countdown cards only when the
   title says "10 Facts". Chapter cards carry an English title (no number); they also become YouTube chapters.
@@ -112,14 +118,69 @@ context. Do the same for numbers: a number comes after the thing it measures, ne
   ("Aisa kaise?" becomes "Yahi thi pahaili.").
 - **Check grammar, especially gender agreement** (waqt is masculine: "waqt bhi, lambaai chaudaai jaisa hi ban
   jaata hai").
-- **Numbers should be easy to picture.** "1 ke aage 43 zero", not "10 ki power minus 43". Check the zero count
-  (10⁻⁴³ s = 1 second cut into 1 followed by 43 zeros pieces). Big numbers go in Hindi words in the Devanagari
+- **Huge numbers as powers of ten (owner, 2026-11-19, replaces "1 ke aage 43 zero"):** say "ten to the power
+  sau", "ten to the power minus taintalees", never "ek ke aage sau zero" (it doesn't sound good in the voice). In
+  the Devanagari file "ten to the power" stays in English letters and the exponent is a Hindi number word
+  (ten to the power सौ); probe it the first time. On screen it reads 10¹⁰⁰. Smaller big numbers stay as people say
+  them (crore, billion). Big numbers go in Hindi words in the Devanagari
   file.
 - **Every abstract idea gets an everyday comparison:**
   - an orange for the early observable universe
   - the South Pole for "no before"
   - a ball for a bounce
   - bubbles in boiling water for the multiverse
+
+## 3b. Sound human, not AI (owner, 2026-11-15: "it looks like AI and has no hook")
+What professional YouTube writers do; every script from video 08:
+- **First sentence = the hook, no warm-up, no intro.** A concrete, strange, specific fact ("Hamari galaxy mein
+  lagbhag 10 crore black holes ho sakte hain"), then why it matters, then a promise of what's coming.
+- **Write for the ear.** Read every line aloud. Mix very short lines ("Woh chamakte nahi.") with longer ones;
+  fragments are fine. Never three sentences of the same length in a row.
+- **Specifics, not adjectives.** Never "one of the most terrifying/mysterious". Show it: a number made tangible
+  (600 km/s = Earth to the Moon in 11 minutes), a real moment (satellites blinded in December 2004).
+- **"But / so", not "and then".** Every beat turns: a finding, then a problem, then a twist.
+- **Reaction lines and plain talk:** "Achhi khabar yeh hai… Buri khabar yeh hai…", "Aur yahan se kahaani ajeeb
+  ho jaati hai", "Sach kahein to…". Sparingly, never two in a row.
+- **A re-hook every 60-90 s:** each chapter ends by teasing the next place.
+- **Cut the AI tells:** "a reminder that", "it's important to note", "in conclusion", stacked adjectives,
+  perfectly balanced sentences, a hedge in every line, ending every chapter on a moral.
+- **Banned AI patterns (owner, 2026-11-19, from a Gemini review of our script skill):** "Ye sirf X nahi tha, balki
+  Y"; empty teasers ("Sab kuch badalne wala tha", "Ye toh bas shuruaat thi", "Kisi ne socha bhi nahi tha", "Lekin
+  kahaani yahin khatam nahi hui", "Iska jawaab chaunkaane wala hai"); hype words (hairaan kar dene wala, mind-blowing,
+  rahasyamay as decoration, "history ka sabse…"); stacked intensifiers ("bahut hi zyaada"); "Ek aisi cheez jo…"
+  reveals; automatic triples; morals ("Yeh hamein yaad dilata hai…"); the same opener three sentences in a row.
+  Rewrite each with a concrete fact.
+- **Vary chapter shapes:** most chapters run person + year + twist, but let 1-2 break the mould (a strange piece of
+  data, an instrument, an object, one moment), so the video doesn't feel stamped from a template.
+- **Honest twists beat hype:** when a famous claim fell apart (dark flow), say so; it is more gripping.
+- **The owner's read-aloud pass** is the last step: he reads it in his own voice and rewrites what he wouldn't
+  say.
+
+## 3c. Indian audience rules (owner, 2026-11-19)
+On top of everything above; they change no stage, visual mode or render step.
+- **Vary sentence length, inside the flow.** Keep the owner's long, flowing spoken sentences, but drop a short punch
+  line (3-7 words) in every 4-6 sentences: "Koi signal nahi." / "Aur phir sab badal gaya." Video 08 had only 2 of 94
+  sentences at 6 words or fewer (05 Voyager: 25), and it read flat. Never three sentences of similar length in a row.
+- **Numbers the way people say them:** "saadhe teen", "dedh sau", "dhai lakh", "paune do" instead of exact decimals,
+  when the exact figure doesn't matter. Metric units. lakh/crore when an Indian-scale number is clearer that way
+  ("das crore black holes"); "billion" stays for astronomy-scale numbers viewers already hear that way. In the
+  Devanagari file write them as spoken words (साढ़े तीन, डेढ़ सौ, ढाई लाख).
+- **The anchor/translate test (read-aloud pass):** if a line sounds like a news anchor or a Google Translate output,
+  rewrite it. Spoken Hinglish is the target: "lekin", "asli kahani", "yahin se sab badal gaya" (the narrator still never talks to
+  the viewer, so no "socho"/"samjho" aimed at them).
+- **Indian comparisons are welcome in full videos too** (owner, 2026-11-19; before, Shorts only). 2-3 well-chosen
+  ones per video, where they make a scale land instantly:
+  - auto-rickshaw, Maruti Swift / 800, Royal Enfield, a Mumbai local train coach
+  - a cricket pitch (22 yards, about 20 m), a cricket ground, the Western Express Highway, Delhi to Mumbai
+  - two cups of chai, a grain of rice, Maggi (as in the Shorts)
+
+  The science term always stays next to it. **Verify every comparison number by web search** and put it in the
+  fact-check table (e.g. a Maruti Swift is about 3.85 m long), like any other fact.
+- **Cultural care:** respectful tone whenever a story touches religion, caste, regions or real tragedies; no
+  stereotypes; every death toll or casualty number factual and sourced.
+- **Formats (unchanged):** the owner reviews the Roman Hinglish; ElevenLabs reads the Devanagari file (English words
+  stay in Latin letters). Pure Hindi in Devanagari only if the owner asks. On-screen text stays short English labels
+  in Roman script (`20 KM WIDE`, `MYTH`, `CONFIRMED`); dates on screen as `14 July 1916`.
 
 ## 4. Accuracy: say only what is known
 - **Hedge theories.** "scientists ke hisaab se" for inflation; "zyaadatar scientists is daave ko nahi maante"
@@ -219,3 +280,7 @@ Shorts scripts follow the owner's 4-beat format and the Shorts rules in `product
 - about 130 words for 48 s at 1.2x
 - one-word gold captions
 - FULL VIDEO BELOW written on screen, never spoken
+
+
+## Retention rules (owner 2026-11-20, from YouTube Analytics of all videos)
+Read `productions/README.md` "Owner rules from video 09" and apply every Script rule there: opening <= 30 s with no date/definition/chapter summary in the first minute, chapters open on an event, expectation and result back to back, image -> fact -> "matlab", open question every 20-30 s early, 7-9 min (1,000-1,200 words). The worked before/after example of 09's opening is the model.

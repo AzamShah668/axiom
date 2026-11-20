@@ -1,0 +1,13 @@
+{
+ "title": "SOMETHING BEYOND OUR UNIVERSE / *IS PULLING GALAXIES?*",
+ "music": "Ice_Flow.mp3",
+ "music_start": 50.0,
+ "music_gain": 2.0,
+ "cta_at": "ये",
+ "stills": {
+  "darkflow_end/0": "photos/Planck_sat.jpg",
+  "darkflow_end/2": "cmb_sky.png"
+ },
+ "speed": 1.1,
+ "sfx_kit": "classic"
+}

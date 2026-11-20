@@ -1,0 +1,14 @@
+{
+ "Andrea_Ghez": {"src": "wiki", "q": "Andrea Ghez", "must": ["Ghez"]},
+ "Reinhard_Genzel": {"src": "wiki", "q": "Reinhard Genzel", "must": ["Genzel"]},
+ "Joshua_Bloom": {"src": "wiki", "q": "Joshua Bloom astronomer", "must": ["Bloom"]},
+ "Yvette_Cendes": {"src": "wiki", "q": "Yvette Cendes", "must": ["Cendes"]},
+ "Jack_Hills": {"src": "wiki", "q": "Jack G. Hills astrophysicist", "must": ["Hills"]},
+ "Swift_sat": {"src": "nasa", "q": "Swift Gamma-Ray Burst Mission spacecraft", "must": ["Swift"]},
+ "Chandra_sat": {"src": "nasa", "q": "Chandra X-ray Observatory illustration", "must": ["Chandra"]},
+ "IXPE_sat": {"src": "nasa", "q": "IXPE spacecraft illustration", "must": ["IXPE"]},
+ "VLA": {"src": "wiki", "q": "Very Large Array New Mexico", "must": ["Very Large Array"]},
+ "Keck": {"src": "wiki", "q": "W. M. Keck Observatory Mauna Kea", "must": ["Keck"]},
+ "EHT_SgrA": {"src": "url", "url": "https://cdn.eso.org/images/large/eso2208-eht-mwa.jpg", "credit": "First image of Sagittarius A*, EHT Collaboration (ESO, eso2208-eht-mwa), CC BY 4.0"},
+ "Tonantzintla": {"src": "wiki", "q": "Tonantzintla Observatory Puebla", "must": ["Tonantzintla"]}
+}

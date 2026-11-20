@@ -233,5 +233,6 @@
   "svs_5627#0"
  ],
  "crops": {},
- "exclude": {}
+ "exclude": {},
+ "sfx_kit": "classic"
 }
