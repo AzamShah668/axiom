@@ -1,14 +1,15 @@
 {
-  "voice_name": "Rudra – Intense Documentary Narrator (ElevenLabs voice library, Hindi)",
-  "voice_id": "vIdhHAZdn1bGjKe1dFw8",
-  "model_id": "eleven_multilingual_v2",
-  "voice_settings": {
-    "stability": 0.5,
-    "similarity_boost": 0.75,
-    "style": 0.0,
-    "use_speaker_boost": true,
-    "speed": 1.0
-  },
-  "post_processing": "scripts/elevenlabs/voice_post.sh <in> <out.wav> 0",
-  "chosen": "2026-11-15: owner picked Rudra (Intense Documentary Narrator) over Neel and 6 other library voices for videos from 07 on; Neel (q4KoKwFyTWQ0Fvvsl9LW, picked 2026-10-08) is pinned in productions/06-fermi-paradox/voice-preset.json"
+ "voice_name": "Rudra – Intense Documentary Narrator (ElevenLabs voice library, Hindi)",
+ "voice_id": "vIdhHAZdn1bGjKe1dFw8",
+ "model_id": "eleven_multilingual_v2",
+ "voice_settings": {
+  "stability": 0.35,
+  "similarity_boost": 0.75,
+  "style": 0.45,
+  "use_speaker_boost": true,
+  "speed": 1.0
+ },
+ "post_processing": "scripts/elevenlabs/voice_post.sh <in> <out.wav> 0",
+ "chosen": "2026-11-15: owner picked Rudra (Intense Documentary Narrator) over Neel and 6 other library voices for videos from 07 on; Neel (q4KoKwFyTWQ0Fvvsl9LW, picked 2026-10-08) is pinned in productions/06-fermi-paradox/voice-preset.json",
+ "note_2026_11_20": "Owner: the Shorts' Rudra take is the best -> stability 0.35, style 0.45 for all narration from video 10 on."
 }
