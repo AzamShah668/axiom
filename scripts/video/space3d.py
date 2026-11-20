@@ -106,12 +106,12 @@ def put(f, spr, x, y, scale=1.0, angle=0.0, alpha=1.0, add=True, tilt=1.0):
     s = scale
     if s * max(h, w) < 1.5 or alpha <= 0.01:
         return
-    M = cv2.getRotationMatrix2D((w / 2, h / 2), angle, 1.0)
-    M[:, :2] *= s
-    M[1, :2] *= tilt
+    ca, sa_ = math.cos(math.radians(angle)), math.sin(math.radians(angle))
+    A = np.array([[ca, sa_], [-sa_ * tilt, ca * tilt]], np.float32) * s       # rotate, then squash (tilt), then scale
     out_w, out_h = int(w * s * 1.45) + 4, int(h * s * 1.45) + 4
-    M[0, 2] += out_w / 2 - (M[0, 0] * w / 2 + M[0, 1] * h / 2)
-    M[1, 2] += out_h / 2 - (M[1, 0] * w / 2 + M[1, 1] * h / 2)
+    M = np.zeros((2, 3), np.float32)
+    M[:, :2] = A
+    M[:, 2] = np.array([out_w / 2, out_h / 2], np.float32) - A @ np.array([w / 2, h / 2], np.float32)
     x0, y0 = int(x - out_w / 2), int(y - out_h / 2)
     xa, ya, xb, yb = max(0, x0), max(0, y0), min(W, x0 + out_w), min(H, y0 + out_h)
     if xa >= xb or ya >= yb:
@@ -251,14 +251,14 @@ def galaxy_field(n=420, seed=5, spread=30.0):
         size = rng.uniform(0.6, 1.6, n).astype(np.float32)
         ang = rng.uniform(0, 360, n).astype(np.float32)
         tilt = rng.uniform(0.35, 1.0, n).astype(np.float32)
-        _C[key] = (P, sid, size, ang, tilt)
+        _C[key] = (P, sid, size, ang, tilt, rng.uniform(0.35, 1.0, n).astype(np.float32))
     return _C[key]
 
 
-def draw_galaxies(f, cam, scale_factor=1.0, t=0.0, amt=1.0, n=420, seed=5, center=(0, 0, 0), heat=0.0, blur_from=None):
+def draw_galaxies(f, cam, scale_factor=1.0, t=0.0, amt=1.0, n=280, seed=5, center=(0, 0, 0), heat=0.0, blur_from=None):
     """Draw the galaxy field at cosmic scale factor `scale_factor` (positions scaled about `center`).
     blur_from: previous scale factor -> motion streak towards/away from the centre."""
-    P, sid, size, ang, tilt = galaxy_field(n, seed)
+    P, sid, size, ang, tilt, bri = galaxy_field(n, seed)
     C = np.array(center, np.float32)
     Q = C + (P - C) * scale_factor
     x, y, z, ok = cam.project(Q)
@@ -272,7 +272,7 @@ def draw_galaxies(f, cam, scale_factor=1.0, t=0.0, amt=1.0, n=420, seed=5, cente
         if s * 320 < 2 or x[i] < -300 or x[i] > W + 300 or y[i] < -300 or y[i] > H + 300:
             continue
         spr = galaxy_sprite(int(sid[i]))
-        a = amt * cl((z[i] - 0.6) / 2.0) * cl(1.5 - z[i] / 90)
+        a = amt * bri[i] * cl((z[i] - 0.6) / 2.0) * cl(1.5 - z[i] / 90)
         if blur_from is not None and abs(x[i] - x0[i]) + abs(y[i] - y0[i]) > 4:
             steps = 5
             for k in range(steps):
