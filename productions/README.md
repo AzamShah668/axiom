@@ -199,7 +199,7 @@ them, by hand: `S <trigger> | kz_film | d=3` (projector clatter: archive film, o
 - A quick cut within about 1.5-2 s; nothing holds still for the first 3 s. Check the first 2 s for motion before sending.
 
 ## Owner rules from video 09 (2026-11-19/20): read these before every new video
-**Script (from YouTube retention data of all published videos, `docs/research/retention/README.md`)**
+**Script (DRAFT, the owner is still working on the script rules; proposals from the YouTube retention data in `docs/research/retention/README.md`)**
 - Viewers are lost in the first 60-90 s (35-43 points in every video), right after the hook, when the script turns to
   background. After ~3 min the curve is flat. So:
   - Opening <= 30 s: the most dramatic image/fact first, ONE question the video answers, a real-world anchor
@@ -224,7 +224,8 @@ render 1.0x and 1.1x at the end and let the owner pick. Shorts play at 1.1x.
   bounce2, first_light; times are spoken triggers), an evidence board (`board:<name>`), or an explainer graphic.
 - **No motion graphic is shown twice in a video** (one stamp, one countdown, one board scene per idea...).
 - Nothing holds longer than ~2.5 s without a visible change; headlines (K) never on beats shorter than ~3 s (they lag).
-- A photo on screen when a person is named (`G <name> @ photo:<Stem>` + `L` card). Sources: NASA images, Library of
+- A photo on screen when a person is named (`G <name> @ photo:<Stem>` + `L` card). The WHOLE photo is always visible
+  (never cropped to fill), on the right half, never under a headline or name card (owner 2026-11-20). Sources: NASA images, Library of
   Congress (`loc.gov` JSON API, "No known restrictions"), ESO, Wikimedia Commons (its API is rate-limited from the
   container: write `productions/<NN>/photos_needed.md` like 09's and the owner sends a Drive folder link; download
   it with `gdown --folder`). Credits go to `work/media/assets/photos/credits.json`. No Nobel Foundation/press photos.
@@ -238,7 +239,8 @@ edit.base.json `music` with `start`); never a track that sounds unrelated. The k
 every scene event.
 
 **Shorts style (motion graphics only)**: `scripts/video/short_crunch.py` on `scripts/video/space3d.py` (3D camera,
-procedural galaxies, motion blur, bloom, flares, shockwaves, kinetic type) is the current best; `short_motion.py` is
+procedural galaxies, motion blur, bloom, flares, shockwaves) is the current best. Text in Shorts is PLAIN: no pop-in
+and no glow (owner 2026-11-20; `space3d.PLAIN_TEXT = True`); `short_motion.py` is
 the simpler first version. One continuous journey, every sentence a zoom in/out, one-word gold captions, top title,
 "WATCH THE FULL VIDEO" end card, Darkest Child low, Rudra at 1.1x. Package per Short in `productions/<NN>/shorts/<id>.md`.
 

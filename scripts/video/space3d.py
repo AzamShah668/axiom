@@ -13,6 +13,7 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1080, 1920
 FONTS = {"dir": ""}
 _C = {}
+PLAIN_TEXT = True   # owner 2026-11-20: no animated/glowing text in Shorts
 
 
 def cl(x, a=0.0, b=1.0): return max(a, min(b, x))
@@ -319,8 +320,11 @@ def ktext(f, s, x, y, size, color, t, t_in, font="Anton", weight=None, glow_amt=
     """Kinetic text: pops in with overshoot (scale 0.6 -> 1), fades, soft glow and shadow; out = fade-out time."""
     if t < t_in or not s:
         return
-    p = cl((t - t_in) / 0.32)
-    sc = 0.55 + 0.45 * back(p)
+    if PLAIN_TEXT:        # owner 2026-11-20: Shorts text plain (no pop-in, no glow), just a short fade
+        p, sc, glow_amt = cl((t - t_in) / 0.12), 1.0, 0.0
+    else:
+        p = cl((t - t_in) / 0.32)
+        sc = 0.55 + 0.45 * back(p)
     op = eo(p) * (1 - ss((t - out) / 0.25) if out is not None else 1)
     if op <= 0.01:
         return
