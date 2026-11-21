@@ -9,13 +9,13 @@ V नासा के एक satellite @ the Swift observatory satellite orbitin
 N एक सौ दो seconds @ hero | value=102 | unit=SECONDS | land=दो | over
 C - | In 2006 there was an explosion in space that a NASA satellite caught for 102 seconds
 # FLOW 10-op-02
-V उससे इतनी energy @ the surface of the Sun with solar flares | the Sun glowing in space
+V उससे इतनी energy @ the surface of the Sun with solar flares | the Sun glowing in space {6s}
 K उससे इतनी energy @ MORE ENERGY [energy] / *THAN THE SUN'S WHOLE LIFE* [सूरज] | kicker=in 102 seconds
 C उससे इतनी energy | It released more energy than our Sun gives off in its whole life
 V दुनिया की सबसे बड़ी @ giant telescopes turning at night | observatory domes opening under the stars
 C दुनिया की सबसे बड़ी | The world's biggest telescopes looked there at once
 # FLOW 10-op-01
-V तब कुछ scientists ने @ a bright white glowing sphere pouring light outward in space | a brilliant outburst of light from a point
+V तब कुछ scientists ने @ a bright white glowing sphere pouring light outward in space | a brilliant outburst of light from a point {6s}
 C तब कुछ scientists ने | Then some scientists named something strange, a white hole, the exact opposite of a black hole
 V लेकिन क्या white holes @ a black hole bending the light of stars behind it | a black hole visualization with a glowing disk
 K लेकिन क्या white holes @ DO WHITE HOLES [white] / *REALLY EXIST?* [exist]
@@ -23,7 +23,7 @@ C लेकिन क्या white holes | But do white holes really exist?
 
 == ch1
 # FLOW 10-ch1-01
-V - @ a massive star collapsing inward under its own gravity | a dying giant star shrinking {hold}
+V - @ a massive star collapsing inward under its own gravity | a dying giant star shrinking {6s}
 C - | When a very big star runs out of fuel, it starts to fall inward under its own weight
 V और इतना दब जाता है @ light bending around a black hole | a black hole swallowing light
 C और इतना दब जाता है | and is squeezed so much that not even light can escape its gravity
@@ -37,13 +37,13 @@ K ये equations time के @ TIME FORWARD [आगे] / *TIME BACKWARD* [प
 C लेकिन इनमें | but they hid something strange
 C ये equations time के | These equations work exactly the same with time running forward or backward
 # FLOW 10-ch1-02
-V अगर cricket match का replay @ a cricket ball flying backwards from the wicketkeeper's gloves to the bowler's hand | a cricket match at a stadium
+V अगर cricket match का replay @ a cricket ball flying backwards from the wicketkeeper's gloves to the bowler's hand | a cricket match at a stadium {8s}
 C अगर cricket match का replay | Run a cricket replay backwards and the ball leaves the keeper's gloves and goes straight back to the bowler's hand
 V और physics के हिसाब से @ a cricket stadium under floodlights at night | a packed cricket ground
 K और physics के हिसाब से @ BOTH VIDEOS [video] / *LOOK RIGHT* [सही] | kicker=to physics
 C और physics के हिसाब से | and to physics, both videos look perfectly right
 # FLOW 10-ch1-03
-V इसी तरह black hole का replay @ matter and light streaming out of a glowing sphere | a bright jet of light streaming into space
+V इसी तरह black hole का replay @ matter and light streaming out of a glowing sphere | a bright jet of light streaming into space {6s}
 C इसी तरह black hole का replay | Run a black hole's replay backwards the same way and you get a white hole
 V एक ऐसी boundary @ a quasar jet shooting out of a galaxy | jets of gas blasting from a galaxy core
 K एक ऐसी boundary @ EVERYTHING COMES OUT [बाहर] / *NOTHING GOES IN* [अंदर] | kicker=a white hole
@@ -62,7 +62,7 @@ C Maths ने white hole को | Maths allowed the white hole, yet most scient
 V - @ sand falling through an hourglass | a clock ticking close up
 C - | Their first doubt was about the direction of time
 # FLOW 10-ch2-01
-V क्योंकि kitchen में @ milk boiling over from a steel pot on a gas stove | milk boiling in a pot
+V क्योंकि kitchen में @ milk boiling over from a steel pot on a gas stove | milk boiling in a pot {7s}
 C क्योंकि kitchen में | because milk boils over in the kitchen, but spilt milk never climbs back into the pot by itself
 V Nature में चीज़ें @ ink spreading in water | smoke spreading in the air
 C Nature में चीज़ें | In nature things spread out; they never gather back by themselves
@@ -75,10 +75,10 @@ G Douglas Eardley @ photo:Eardley
 L Douglas Eardley @ DOUGLAS EARDLEY | physicist · 1974
 C लेकिन दस साल बाद | but ten years later Douglas Eardley showed a big problem with it
 # FLOW 10-ch2-02
-V White hole के अंदर कुछ @ dust and radiation piling up around a glowing sphere in space | dust clouds gathering around a star
+V White hole के अंदर कुछ @ dust and radiation piling up around a glowing sphere in space | dust clouds gathering around a star {9s}
 C White hole के अंदर कुछ | Nothing can enter a white hole, but its gravity piles dust and radiation up just outside its boundary
 # FLOW 10-ch2-03 (chain: starts on the last frame of 10-ch2-02)
-V Eardley के हिसाब से ये @ a glowing sphere collapsing into a black hole | a star collapsing into a black hole
+V Eardley के हिसाब से ये @ a glowing sphere collapsing into a black hole | a star collapsing into a black hole {8s}
 C Eardley के हिसाब से ये | By Eardley's account this piled-up matter grows so heavy that the whole white hole collapses into a black hole
 G मतलब ये बन भी जाए @ stamp:UNSTABLE;it would not last
 C मतलब ये बन भी जाए | So even if one formed, it would not last
@@ -104,13 +104,14 @@ V दो हज़ार छह का वो धमाका @ an empty dark pa
 K दो हज़ार छह का वो धमाका @ 102 SECONDS [दो] / *NO SUPERNOVA* [supernova] | kicker=the 2006 burst
 C दो हज़ार छह का वो धमाका | The 2006 blast lasted 102 seconds, a long one, but no supernova followed
 # FLOW 10-ch3-02
-V Scientists ने उसे hybrid @ telescope images of a gamma ray burst afterglow | a fading point of light in deep space
+V Scientists ने उसे hybrid @ telescope images of a gamma ray burst afterglow | a fading point of light in deep space {5s}
 C Scientists ने उसे hybrid | Scientists called it a hybrid, because it fit no category
+V दो हज़ार ग्यारह में @ a large telescope observing the night sky | an observatory dome open at night
 L Alon Retter @ ALON RETTER | astronomer · 2011
 L Shlomo Heller @ SHLOMO HELLER | 2011
 C दो हज़ार ग्यारह में | In 2011 Alon Retter and Shlomo Heller suggested it was perhaps a white hole
 # FLOW 10-ch3-01
-V जो दिवाली के अनार @ a Diwali anaar fountain firework spraying sparks at night | fireworks fountain at night
+V जो दिवाली के अनार @ a Diwali anaar fountain firework spraying sparks at night | fireworks fountain at night {6s}
 C जो दिवाली के अनार | which, like a Diwali anaar, threw out all its matter in one burst and was gone
 V उन्होंने इसे Small Bang @ a burst of light expanding in dark space | an explosion of light in darkness
 K उन्होंने इसे Small Bang @ A *SMALL BANG* [Bang] | kicker=Retter and Heller
@@ -132,13 +133,13 @@ L Hal Haggard @ HAL HAGGARD | physicist · 2014
 C दो हज़ार चौदह में | In 2014 Carlo Rovelli and Hal Haggard suggested that matter may never reach that point
 V दबते दबते एक limit @ a supernova core collapse simulation rebounding | a shockwave bursting outward from a collapsing star core
 # FLOW 10-ch4-01
-V बिल्कुल वैसे जैसे @ a steel spring pressed flat and springing back | a coiled spring bouncing
+V बिल्कुल वैसे जैसे @ a steel spring pressed flat and springing back | a coiled spring bouncing {5s}
 C दबते दबते एक limit | Squeezed to a limit it bounces back, the way a spring pressed all the way springs back hard
 # FLOW 10-ch4-02
-V और यही bounce @ a black hole flashing and turning into a bright white glowing sphere | a burst of white light from a dark sphere
+V और यही bounce @ a black hole flashing and turning into a bright white glowing sphere | a burst of white light from a dark sphere {4s}
 C और यही bounce | and that bounce turns the black hole into a white hole
 # FLOW 10-ch4-03
-V यहाँ सारा खेल time का @ a pocket watch ticking in slow motion | clock hands turning slowly
+V यहाँ सारा खेल time का @ a pocket watch ticking in slow motion | clock hands turning slowly {5s}
 C यहाँ सारा खेल time का | Here it is all about time, because near a black hole time runs very slowly
 V अंदर के matter के लिए @ stars orbiting a black hole | a black hole with a slowly turning disk
 K अंदर के matter के लिए @ INSIDE: ONE MOMENT [second] / *OUTSIDE: BILLIONS OF YEARS* [billions]
@@ -151,7 +152,7 @@ G परमप्रीत सिंह @ photo:Parampreet
 L परमप्रीत सिंह @ PARAMPREET SINGH | physicist · 2018
 C दो हज़ार अठारह में | In 2018, with Javier Olmedo and Parampreet Singh, he showed that in this theory the infinite-density point at the centre disappears
 # FLOW 10-ch4-04
-V बल्कि वहाँ एक bridge @ a wormhole tunnel through space visualization | a tunnel of light through spacetime
+V बल्कि वहाँ एक bridge @ a wormhole tunnel through space visualization | a tunnel of light through spacetime {6s}
 C बल्कि वहाँ एक bridge | and a bridge forms there instead, joining the black hole to its opposite, a white hole
 
 == ch5
@@ -160,10 +161,10 @@ C - | If black holes really become white holes, the change comes first in the sm
 V कुछ scientists के हिसाब से @ tiny black holes forming in the early universe animation | the young universe expanding
 C कुछ scientists के हिसाब से | Some scientists think many tiny black holes formed just after the Big Bang and, over billions of years, became white holes
 # FLOW 10-ch5-01
-V और उनके बचे हुए pieces @ tiny faint glowing specks drifting through dark space | faint points of light drifting in the dark
+V और उनके बचे हुए pieces @ tiny faint glowing specks drifting through dark space | faint points of light drifting in the dark {5s}
 C और उनके बचे हुए pieces | and their leftover pieces may still be drifting through space
 # FLOW 10-ch5-02
-V एक piece का size @ grains of sand close up | sand grains falling in slow motion
+V एक piece का size @ grains of sand close up | sand grains falling in slow motion {9s}
 K एक piece का size @ SMALLER THAN AN ATOM [atom] / *AS HEAVY AS A GRAIN OF SAND* [रेत]
 C एक piece का size | Each piece is smaller than an atom and weighs like a small grain of sand; they neither shine nor collide with anything
 V उनका पता सिर्फ़ gravity @ a galaxy cluster bending light by gravity | gravitational lensing around a galaxy cluster
@@ -182,5 +183,5 @@ V - @ distant galaxies slowly drifting in deep space | a slow flight through a s
 K - @ BLACK HOLES' LAST STAGE [stage] / BIG BANG'S TWIN [twin] / *OR JUST MATHS?* [maths]
 C - | So what are white holes? The last stage of black holes, the Big Bang's twin, or just maths that nature never lets happen?
 # FLOW 10-end-01
-V Science अभी तक @ a lone flash of light in dark space | a distant burst of light in the dark
+V Science अभी तक @ a lone flash of light in dark space | a distant burst of light in the dark {9s}
 C Science अभी तक | Science hasn't decided yet, but whenever a blast without a star appears in space, scientists ask that same 2006 question again

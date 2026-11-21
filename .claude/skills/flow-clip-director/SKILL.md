@@ -84,7 +84,7 @@ Locked style block at the top, then:
 - Plays once, forward only, then cut to the next visual. No boomerang, last-frame hold or slow-zoom stretch.
 - Check first, middle and last frame of every clip: reject for watermark, stray text, player bar, wrong style, or movement that does not show the line. Remake once as a genuinely different shot.
 - Fails twice -> a detailed still for that slice (setting and emotion, slow zoom), more detailed than a video, never a placeholder.
-- Every Flow clip has a visible Gemini sparkle (bottom right): cleaned before the edit. The invisible SynthID mark is never stripped; clips are never presented as filmed footage, and AI use is disclosed (YouTube "altered or synthetic content" where realistic).
+- Every Flow clip has a visible Gemini sparkle (bottom right): cleaned before the edit with `scripts/video/flow_clean.py` (1920x1080 box x 1685, y 850, w 110, h 115, TELEA radius 5; also strips the audio). Where the fill smears a detailed background (a star's edge, a busy field), crop the top-left 87.5% instead (`crop=1680:945:0:0`, scaled back to 1920x1080), which removes the corner entirely. The invisible SynthID mark is never stripped; clips are never presented as filmed footage, and AI use is disclosed (YouTube "altered or synthetic content" where realistic).
 - Report every batch honestly: done, missing, fallback. A missing clip is never counted as done.
 
 ## Order of work (never change it)
@@ -113,3 +113,5 @@ Locked style block at the top, then:
 - 2026-11-21: Google's help page (Veo 4/6/8 s) disagreed with the live screen (fixed 8 s). The live screen governs.
 - Before Flow (09 video): random stock clips that did not match the narration and repeated static galaxy zooms. Every clip must show exactly the line it sits on, and never repeat.
 - 2026-11-21: the rulebook had a 10-clips-per-video cap; the owner removed it. No limit; always show the credit total.
+- 2026-11-21: the 1080p upscale costs 0 credits (not 5), and the manual create bar has no "Confirm before generating" toggle: checking the cost in the settings panel before Start is the approval (Muse's correction).
+- 2026-11-21: generic 'galaxies' prompts still produce repeated face-on spirals; name the mix of galaxy types, or keep galaxies out of frame when they are not the subject (10-ch5-01). Show scale with an everyday object in frame (a fingertip for a grain of sand, 10-ch5-02).

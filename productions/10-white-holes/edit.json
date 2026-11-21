@@ -51,7 +51,29 @@
   "dark star field slowly drifting",
   "faint distant galaxies in dark space"
  ],
- "pin": {},
+ "pin": {
+  "opening/2": "flow10_10_op_02#0",
+  "opening/4": "flow10_10_op_01#0",
+  "ch1/1": "flow10_10_ch1_01#0",
+  "ch1/7": "flow10_10_ch1_02_a#0",
+  "ch1/8": "flow10_10_ch1_02_b#0",
+  "ch1/10": "flow10_10_ch1_03#0",
+  "ch2/2": "flow10_10_ch2_01#0",
+  "ch2/9": "flow10_10_ch2_02_a#0",
+  "ch2/10": "flow10_10_ch2_02_b#0",
+  "ch2/11": "flow10_10_ch2_03_a#0",
+  "ch2/12": "flow10_10_ch2_03_b#0",
+  "ch3/7": "flow10_10_ch3_02#0",
+  "ch3/10": "flow10_10_ch3_01#0",
+  "ch4/6": "flow10_10_ch4_01#0",
+  "ch4/7": "flow10_10_ch4_02#0",
+  "ch4/8": "flow10_10_ch4_03#0",
+  "ch4/14": "flow10_10_ch4_04#0",
+  "ch5/7": "flow10_10_ch5_01#0",
+  "ch5/8": "flow10_10_ch5_02_a#0",
+  "ch5/9": "flow10_10_ch5_02_b#0",
+  "ending/2": "flow10_10_end_01#0"
+ },
  "ban": [
   "noirlab_noirlab2403c",
   "pexels_11336047",
@@ -83,6 +105,7 @@
     },
     {
      "at": "उससे इतनी energy",
+     "opt": "6s",
      "q": [
       "the surface of the Sun with solar flares",
       "the Sun glowing in space"
@@ -97,6 +120,7 @@
     },
     {
      "at": "तब कुछ scientists ने",
+     "opt": "6s",
      "q": [
       "a bright white glowing sphere pouring light outward in space",
       "a brilliant outburst of light from a point"
@@ -178,7 +202,7 @@
    "v": [
     {
      "at": null,
-     "opt": "hold",
+     "opt": "6s",
      "q": [
       "a massive star collapsing inward under its own gravity",
       "a dying giant star shrinking"
@@ -204,6 +228,7 @@
     },
     {
      "at": "अगर cricket match का replay",
+     "opt": "8s",
      "q": [
       "a cricket ball flying backwards from the wicketkeeper's gloves to the bowler's hand",
       "a cricket match at a stadium"
@@ -218,6 +243,7 @@
     },
     {
      "at": "इसी तरह black hole का replay",
+     "opt": "6s",
      "q": [
       "matter and light streaming out of a glowing sphere",
       "a bright jet of light streaming into space"
@@ -408,6 +434,7 @@
     },
     {
      "at": "क्योंकि kitchen में",
+     "opt": "7s",
      "q": [
       "milk boiling over from a steel pot on a gas stove",
       "milk boiling in a pot"
@@ -437,6 +464,7 @@
     },
     {
      "at": "White hole के अंदर कुछ",
+     "opt": "9s",
      "q": [
       "dust and radiation piling up around a glowing sphere in space",
       "dust clouds gathering around a star"
@@ -444,6 +472,7 @@
     },
     {
      "at": "Eardley के हिसाब से ये",
+     "opt": "8s",
      "q": [
       "a glowing sphere collapsing into a black hole",
       "a star collapsing into a black hole"
@@ -595,13 +624,22 @@
     },
     {
      "at": "Scientists ने उसे hybrid",
+     "opt": "5s",
      "q": [
       "telescope images of a gamma ray burst afterglow",
       "a fading point of light in deep space"
      ]
     },
     {
+     "at": "दो हज़ार ग्यारह में",
+     "q": [
+      "a large telescope observing the night sky",
+      "an observatory dome open at night"
+     ]
+    },
+    {
      "at": "जो दिवाली के अनार",
+     "opt": "6s",
      "q": [
       "a Diwali anaar fountain firework spraying sparks at night",
       "fireworks fountain at night"
@@ -745,6 +783,7 @@
     },
     {
      "at": "बिल्कुल वैसे जैसे",
+     "opt": "5s",
      "q": [
       "a steel spring pressed flat and springing back",
       "a coiled spring bouncing"
@@ -752,6 +791,7 @@
     },
     {
      "at": "और यही bounce",
+     "opt": "4s",
      "q": [
       "a black hole flashing and turning into a bright white glowing sphere",
       "a burst of white light from a dark sphere"
@@ -759,6 +799,7 @@
     },
     {
      "at": "यहाँ सारा खेल time का",
+     "opt": "5s",
      "q": [
       "a pocket watch ticking in slow motion",
       "clock hands turning slowly"
@@ -781,6 +822,7 @@
     },
     {
      "at": "बल्कि वहाँ एक bridge",
+     "opt": "6s",
      "q": [
       "a wormhole tunnel through space visualization",
       "a tunnel of light through spacetime"
@@ -906,6 +948,7 @@
     },
     {
      "at": "और उनके बचे हुए pieces",
+     "opt": "5s",
      "q": [
       "tiny faint glowing specks drifting through dark space",
       "faint points of light drifting in the dark"
@@ -913,6 +956,7 @@
     },
     {
      "at": "एक piece का size",
+     "opt": "9s",
      "q": [
       "grains of sand close up",
       "sand grains falling in slow motion"
@@ -1027,6 +1071,7 @@
     },
     {
      "at": "Science अभी तक",
+     "opt": "9s",
      "q": [
       "a lone flash of light in dark space",
       "a distant burst of light in the dark"
