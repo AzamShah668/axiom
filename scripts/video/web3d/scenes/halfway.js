@@ -8,7 +8,7 @@ const AMBER = '#f5c242', AMBER_HEX = 0xf5c242, BLUE = '#9fd0ff';
 const SHOT_WORDS = [0, 7, 26, 44, 56, 80, 97, 110];
 const TITLE = ['THE UNIVERSE IS', 'HALFWAY DEAD'], PATCH = 380;
 let R, W, H, S, C, comp, ov, wd, st, ev, total;
-let gal, galBase, galCol, desi, beam, wedge, wedgeBase, pushers, core, ring, photos = {};
+let pt, gal, galBase, galCol, desi, beam, wedge, wedgeBase, pushers, core, ring, photos = {};
 const w = i => wd[i][0];
 const shotAt = t => { let i = 0; for (let k = 0; k < st.length; k++) if (t >= st[k]) i = k; return i; };
 const img = src => new Promise(ok => { const im = new Image(); im.onload = () => ok(im); im.onerror = () => ok(null); im.src = src; });
@@ -54,7 +54,7 @@ export async function init(ctx) {
   for (let i = 0; i < 26; i++) { const u = pr() * 2 - 1, th = pr() * 6.283, s = Math.sqrt(1 - u * u), d = new THREE.Vector3(s * Math.cos(th), u, s * Math.sin(th));
     const a = new THREE.ArrowHelper(d, d.clone().multiplyScalar(46), 14, 0x9fd0ff, 5, 3.4); a.userData.d = d; pushers.add(a); }
   S.add(pushers);
-  core = glow(0xffffff, 1); S.add(core);
+  core = glow(0xffffff, 1); S.add(core); pt = glow(0xffffff, 1); S.add(pt);
   ring = new THREE.Mesh(new THREE.RingGeometry(0.95, 1, 128), new THREE.MeshBasicMaterial({ color: 0xffe2a0, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide })); S.add(ring);
   photos.tye = await img('/assets/assets/photos/Tye.jpg'); photos.ash = await img('/assets/assets/photos/Ashtekar.jpg');
   ov = new Overlay(W, H);
@@ -91,7 +91,7 @@ export function render(t) {
   const i = shotAt(t), u = t - st[i]; ov.clear();
   let size = 1, fov = 50, glowAmt = 0;
   desi.visible = i === 1; wedge.visible = i === 1 && t > ev.galaxies - 0.3; gal.visible = i !== 1; pushers.visible = i === 2;
-  core.visible = ring.visible = i >= 5;
+  core.visible = pt.visible = i >= 5; ring.visible = i >= 5 && ring.material.opacity > 0.01;
   if (i > 0 && u < 0.35) fov += 9 * Math.pow(1 - u / 0.35, 2);
 
   if (i === 0) {                                              // the universe and its life bar, filling to the halfway mark
@@ -151,6 +151,8 @@ export function render(t) {
       g.beginPath(); g.moveTo(W / 2, H * 0.55 + b); g.lineTo(W / 2, H * 0.55 + b + 140); g.stroke();
       g.beginPath(); g.moveTo(W / 2, H * 0.55 + b + 175); g.lineTo(W / 2 - 34, H * 0.55 + b + 125); g.lineTo(W / 2 + 34, H * 0.55 + b + 125); g.closePath(); g.fill(); g.restore(); }
   }
+  pt.scale.setScalar(core.scale.x * 0.35); pt.material.opacity = core.material.opacity; pt.position.set(0, 0, 0.5);
+  gal.material.opacity = i >= 5 ? cl((size - 0.1) / 0.4) : 1; if (i >= 5 && size < 0.1) gal.visible = false;   // additive pile-up of all points at one spot blows the bloom to black
   if (gal.visible) { const gp = gal.geometry.attributes.position; for (let k = 0; k < gp.count; k++) gp.setXYZ(k, galBase[k * 3] * size, galBase[k * 3 + 1] * size, galBase[k * 3 + 2] * size); gp.needsUpdate = true; }
 
   // solid black title patch (owner rule), plain title, one-word caption, progress bar, cut flash
