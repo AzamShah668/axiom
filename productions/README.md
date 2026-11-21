@@ -261,3 +261,6 @@ Owner: "use only those repos that you think we can integrate… if something doe
 - **Beat sync** (`scripts/video/beats.py`, librosa): cuts stay on the words; the music start point is chosen so its beats land on the cuts (Short 3: 204 ms -> 98 ms average miss).
 - **lemo-opuscar** (MIT code, CC BY-NC style docs, so it lives outside the repo): tested. `dark-documentary` fits our look but needs a GPU (7 s a frame here); keep for the Colab GPU step. `flat-space-explainer` renders fast but is cartoon, `hardcore-info` is a white product teardown (29 s a frame): not our style, not used.
 - Not used: video-shotcraft (product promos), pixelfx, the Claude character base, mcp-for-blender (needs a desktop app; Blender comes later via Colab). joeseesun/opus-video-prompts has no licence: read only.
+
+## Google Flow clips (owner, 2026-11-21)
+Visuals that real footage or photos cannot show exactly come from Google Flow, directed with the `flow-clip-director` skill: Claude writes the clip table (exact Hindi quote, meaning, needed length, one-paragraph prompt with a locked style block), the owner's executor generates 8 s silent clips (max 10 per video, 15 credits each) and returns them in a Drive folder; raw cut goes to the owner for approval before finishing. Real people stay photos.

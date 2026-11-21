@@ -161,3 +161,6 @@ For motion-graphics Shorts, write a scene in `scripts/video/web3d/scenes/` and r
 
 ## Scripts (2026-11-21)
 Write or fix every Short script with the `youtube-shorts-scriptwriter` skill (`.claude/skills/youtube-shorts-scriptwriter/SKILL.md`) and add each new lesson to its log.
+
+## Google Flow clips (2026-11-21)
+Where real footage or photos cannot show a line exactly, write Flow clips with the `flow-clip-director` skill (`.claude/skills/flow-clip-director/SKILL.md`): measured voice first, then the clip table, max 10 clips per video.

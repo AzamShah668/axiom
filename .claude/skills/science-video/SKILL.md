@@ -136,3 +136,6 @@ Drive folder `axiom-science-channel` (README.txt there explains it):
 
 ## Before starting a new video (2026-11-20)
 Read `productions/README.md` section "Owner rules from video 09" first: script retention rules, voice preset, literal visuals with scenes/photos/NOIRLab, no repeated graphics, one music bed, Shorts style, analytics after upload.
+
+## Google Flow clips (2026-11-21)
+Where real footage or photos cannot show a line exactly, write Flow clips with the `flow-clip-director` skill (`.claude/skills/flow-clip-director/SKILL.md`): measured voice first, then the clip table, max 10 clips per video.
