@@ -251,6 +251,9 @@ in 2+ videos. Drive: `drive_sync.py put`; making a file public needs the owner's
 **Later**: Blender for hero 3D shots, rendered on the owner's Colab Pro GPU through a Drive job folder
 (`blender -b -P scene.py`); mcp-for-blender does not fit (needs Blender's UI).
 
+## Names on screen (owner, 2026-11-21)
+When a person is named (photo or name card), write the name the previous way: animated, styled like the earlier name captions in our long videos. The static plain name box in the halfway Short (Henry Tye) was not liked. (Captions and headings in Shorts stay plain; this is about how names appear.)
+
 ## Not in the pipeline: the repo experiments (owner, 2026-11-21)
 The owner did not like the 3D engine (web3d) Shorts (blunder, halfway v1) or the other add-ons from the motion-graphics repos. They are kept separately in `experimental/motion-repos/` and are NOT used. Shorts use our own Python engine (`scripts/video/space3d.py`, as in the posted Short 2 'crunch').
 

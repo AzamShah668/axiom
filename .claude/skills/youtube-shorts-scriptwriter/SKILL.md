@@ -47,4 +47,5 @@ Render with our own Python engine (`scripts/video/space3d.py`, the way `scripts/
 - 2026-11-21: clipped CTA "Poori kahani, poori video mein." sounds robotic; use one natural sentence pointing to the linked video.
 - 2026-11-21: "lakhon galaxies" undersold DESI (more than 14 million galaxies and quasars, DR2 2025): say "ek crore se zyada".
 - 2026-11-21: a bold hook ("Universe apni aadhi zindagi jee chuka hai") must be attributed in the body ("Unke hisaab se ...") because it is one model on a hint.
+- 2026-11-21 (halfway, owner): the Henry Tye name card was a static plain box with no animation - not good. Names of people (on a photo or a name card) are written the previous way, animated and styled like the earlier name captions in our long videos, not a flat card.
 - Voice traps: avoid "waqt" (say "time"), "naye/nayi" (Rudra reads it like "nahi"), heavy textbook Hindi.
