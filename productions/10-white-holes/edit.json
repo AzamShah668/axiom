@@ -1,0 +1,1059 @@
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "cards": {
+  "ch1": [
+   "",
+   "THE BLACK HOLE *PLAYED BACKWARDS*"
+  ],
+  "ch2": [
+   "",
+   "TOO STRANGE *TO EXIST*"
+  ],
+  "ch3": [
+   "",
+   "THE BURST *WITHOUT A STAR*"
+  ],
+  "ch4": [
+   "",
+   "WHEN A BLACK HOLE *TURNS WHITE*"
+  ],
+  "ch5": [
+   "",
+   "HIDDEN IN *PLAIN SIGHT*"
+  ],
+  "ending": [
+   "",
+   "NO *VERDICT* YET"
+  ]
+ },
+ "count_total": 6,
+ "music": [
+  {
+   "from": "opening",
+   "track": "Darkest_Child.mp3",
+   "gain": -3.0,
+   "start": 32.0
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "a dark nebula drifting"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [],
+ "crops": {},
+ "exclude": {},
+ "sections": {
+  "opening": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "a gamma ray burst exploding in deep space",
+      "a powerful flash of light from a distant explosion"
+     ]
+    },
+    {
+     "at": "नासा के एक satellite",
+     "q": [
+      "the Swift observatory satellite orbiting Earth",
+      "a NASA satellite in orbit"
+     ]
+    },
+    {
+     "at": "उससे इतनी energy",
+     "q": [
+      "the surface of the Sun with solar flares",
+      "the Sun glowing in space"
+     ]
+    },
+    {
+     "at": "दुनिया की सबसे बड़ी",
+     "q": [
+      "giant telescopes turning at night",
+      "observatory domes opening under the stars"
+     ]
+    },
+    {
+     "at": "तब कुछ scientists ने",
+     "q": [
+      "a bright white glowing sphere pouring light outward in space",
+      "a brilliant outburst of light from a point"
+     ]
+    },
+    {
+     "at": "लेकिन क्या white holes",
+     "q": [
+      "a black hole bending the light of stars behind it",
+      "a black hole visualization with a glowing disk"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "In 2006 there was an explosion in space that a NASA satellite caught for 102 seconds"
+    },
+    {
+     "at": "उससे इतनी energy",
+     "text": "It released more energy than our Sun gives off in its whole life"
+    },
+    {
+     "at": "दुनिया की सबसे बड़ी",
+     "text": "The world's biggest telescopes looked there at once"
+    },
+    {
+     "at": "तब कुछ scientists ने",
+     "text": "Then some scientists named something strange, a white hole, the exact opposite of a black hole"
+    },
+    {
+     "at": "लेकिन क्या white holes",
+     "text": "But do white holes really exist?"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "एक सौ दो seconds",
+     "num": {
+      "template": "hero",
+      "value": "102",
+      "unit": "SECONDS",
+      "land": "दो"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "उससे इतनी energy",
+     "lines": [
+      {
+       "text": "MORE ENERGY",
+       "at": "energy"
+      },
+      {
+       "text": "*THAN THE SUN'S WHOLE LIFE*",
+       "at": "सूरज"
+      }
+     ],
+     "kicker": "in 102 seconds"
+    },
+    {
+     "at": "लेकिन क्या white holes",
+     "lines": [
+      {
+       "text": "DO WHITE HOLES",
+       "at": "white"
+      },
+      {
+       "text": "*REALLY EXIST?*",
+       "at": "exist"
+      }
+     ]
+    }
+   ]
+  },
+  "ch1": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a massive star collapsing inward under its own gravity",
+      "a dying giant star shrinking"
+     ]
+    },
+    {
+     "at": "और इतना दब जाता है",
+     "q": [
+      "light bending around a black hole",
+      "a black hole swallowing light"
+     ]
+    },
+    {
+     "at": "यही black hole होता है",
+     "q": [
+      "black hole event horizon visualization",
+      "a black hole with a bright ring of light"
+     ]
+    },
+    {
+     "at": "उन्नीस सौ पंद्रह में",
+     "gfx": "photo:Einstein"
+    },
+    {
+     "at": "अगर cricket match का replay",
+     "q": [
+      "a cricket ball flying backwards from the wicketkeeper's gloves to the bowler's hand",
+      "a cricket match at a stadium"
+     ]
+    },
+    {
+     "at": "और physics के हिसाब से",
+     "q": [
+      "a cricket stadium under floodlights at night",
+      "a packed cricket ground"
+     ]
+    },
+    {
+     "at": "इसी तरह black hole का replay",
+     "q": [
+      "matter and light streaming out of a glowing sphere",
+      "a bright jet of light streaming into space"
+     ]
+    },
+    {
+     "at": "एक ऐसी boundary",
+     "q": [
+      "a quasar jet shooting out of a galaxy",
+      "jets of gas blasting from a galaxy core"
+     ]
+    },
+    {
+     "at": "Martin Kruskal",
+     "gfx": "photo:Kruskal"
+    },
+    {
+     "at": "George Szekeres",
+     "gfx": "photo:Szekeres"
+    },
+    {
+     "at": "तो equations में",
+     "gfx": "spacetime"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "When a very big star runs out of fuel, it starts to fall inward under its own weight"
+    },
+    {
+     "at": "और इतना दब जाता है",
+     "text": "and is squeezed so much that not even light can escape its gravity"
+    },
+    {
+     "at": "यही black hole होता है",
+     "text": "That is a black hole, ringed by a boundary called the event horizon; past it, nothing comes back"
+    },
+    {
+     "at": "उन्नीस सौ पंद्रह में",
+     "text": "In 1915 Einstein wrote the equations of gravity, and black holes came out of those very equations"
+    },
+    {
+     "at": "लेकिन इनमें",
+     "text": "but they hid something strange"
+    },
+    {
+     "at": "ये equations time के",
+     "text": "These equations work exactly the same with time running forward or backward"
+    },
+    {
+     "at": "अगर cricket match का replay",
+     "text": "Run a cricket replay backwards and the ball leaves the keeper's gloves and goes straight back to the bowler's hand"
+    },
+    {
+     "at": "और physics के हिसाब से",
+     "text": "and to physics, both videos look perfectly right"
+    },
+    {
+     "at": "इसी तरह black hole का replay",
+     "text": "Run a black hole's replay backwards the same way and you get a white hole"
+    },
+    {
+     "at": "एक ऐसी boundary",
+     "text": "a boundary from which light and matter only come out, and nothing can go in"
+    },
+    {
+     "at": "उन्नीस सौ साठ में",
+     "text": "In 1960, Martin Kruskal and George Szekeres drew the full mathematical map of a black hole's spacetime"
+    },
+    {
+     "at": "तो equations में",
+     "text": "and this second part turned up hidden in the equations"
+    },
+    {
+     "at": "Maths ने white hole को",
+     "text": "Maths allowed the white hole, yet most scientists refused to accept it"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "यही black hole होता है",
+     "lines": [
+      {
+       "text": "EVENT HORIZON",
+       "at": "event"
+      },
+      {
+       "text": "*NO WAY BACK*",
+       "at": "वापस"
+      }
+     ],
+     "kicker": "the boundary"
+    },
+    {
+     "at": "ये equations time के",
+     "lines": [
+      {
+       "text": "TIME FORWARD",
+       "at": "आगे"
+      },
+      {
+       "text": "*TIME BACKWARD*",
+       "at": "पीछे"
+      }
+     ],
+     "kicker": "the same equations"
+    },
+    {
+     "at": "और physics के हिसाब से",
+     "lines": [
+      {
+       "text": "BOTH VIDEOS",
+       "at": "video"
+      },
+      {
+       "text": "*LOOK RIGHT*",
+       "at": "सही"
+      }
+     ],
+     "kicker": "to physics"
+    },
+    {
+     "at": "एक ऐसी boundary",
+     "lines": [
+      {
+       "text": "EVERYTHING COMES OUT",
+       "at": "बाहर"
+      },
+      {
+       "text": "*NOTHING GOES IN*",
+       "at": "अंदर"
+      }
+     ],
+     "kicker": "a white hole"
+    },
+    {
+     "at": "Maths ने white hole को",
+     "lines": [
+      {
+       "text": "MATHS",
+       "at": "Maths"
+      },
+      {
+       "text": "*ALLOWED IT*",
+       "at": "allow"
+      }
+     ],
+     "kicker": "but scientists refused"
+    }
+   ],
+   "n": [
+    {
+     "at": "Einstein ने",
+     "num": {
+      "template": "name",
+      "value": "ALBERT EINSTEIN",
+      "sub": "general relativity · 1915"
+     }
+    },
+    {
+     "at": "Martin Kruskal",
+     "num": {
+      "template": "name",
+      "value": "MARTIN KRUSKAL",
+      "sub": "mathematician · 1960"
+     }
+    },
+    {
+     "at": "George Szekeres",
+     "num": {
+      "template": "name",
+      "value": "GEORGE SZEKERES",
+      "sub": "mathematician · 1960"
+     }
+    }
+   ]
+  },
+  "ch2": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "sand falling through an hourglass",
+      "a clock ticking close up"
+     ]
+    },
+    {
+     "at": "क्योंकि kitchen में",
+     "q": [
+      "milk boiling over from a steel pot on a gas stove",
+      "milk boiling in a pot"
+     ]
+    },
+    {
+     "at": "Nature में चीज़ें",
+     "q": [
+      "ink spreading in water",
+      "smoke spreading in the air"
+     ]
+    },
+    {
+     "at": "जबकि white hole",
+     "q": [
+      "glowing gas flowing outward from a star",
+      "a nebula expanding"
+     ]
+    },
+    {
+     "at": "Igor Novikov",
+     "gfx": "photo:Novikov"
+    },
+    {
+     "at": "Douglas Eardley",
+     "gfx": "photo:Eardley"
+    },
+    {
+     "at": "White hole के अंदर कुछ",
+     "q": [
+      "dust and radiation piling up around a glowing sphere in space",
+      "dust clouds gathering around a star"
+     ]
+    },
+    {
+     "at": "Eardley के हिसाब से ये",
+     "q": [
+      "a glowing sphere collapsing into a black hole",
+      "a star collapsing into a black hole"
+     ]
+    },
+    {
+     "at": "मतलब ये बन भी जाए",
+     "gfx": "stamp:UNSTABLE;it would not last"
+    },
+    {
+     "at": "उसी साल",
+     "q": [
+      "Mumbai skyline at night",
+      "the Mumbai coastline at dusk"
+     ]
+    },
+    {
+     "at": "जयंत नार्लीकर",
+     "gfx": "photo:Narlikar"
+    },
+    {
+     "at": "और famous journal Nature",
+     "gfx": "journal:1974;Nature, volume 251;Narlikar, Apparao, Dadhich;*High energy radiation from white holes*"
+    },
+    {
+     "at": "उनके लिए ये space के",
+     "q": [
+      "an active galaxy with powerful jets",
+      "a bright quasar in deep space"
+     ]
+    },
+    {
+     "at": "फिर दो हज़ार छह में",
+     "q": [
+      "the Swift satellite above Earth",
+      "a satellite detecting a flash of gamma rays"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Their first doubt was about the direction of time"
+    },
+    {
+     "at": "क्योंकि kitchen में",
+     "text": "because milk boils over in the kitchen, but spilt milk never climbs back into the pot by itself"
+    },
+    {
+     "at": "Nature में चीज़ें",
+     "text": "In nature things spread out; they never gather back by themselves"
+    },
+    {
+     "at": "जबकि white hole",
+     "text": "while a white hole does exactly that reverse, which we have never seen happen"
+    },
+    {
+     "at": "फिर भी उन्नीस सौ चौंसठ",
+     "text": "Still, in 1964 the Russian scientist Igor Novikov said white holes could exist"
+    },
+    {
+     "at": "लेकिन दस साल बाद",
+     "text": "but ten years later Douglas Eardley showed a big problem with it"
+    },
+    {
+     "at": "White hole के अंदर कुछ",
+     "text": "Nothing can enter a white hole, but its gravity piles dust and radiation up just outside its boundary"
+    },
+    {
+     "at": "Eardley के हिसाब से ये",
+     "text": "By Eardley's account this piled-up matter grows so heavy that the whole white hole collapses into a black hole"
+    },
+    {
+     "at": "मतलब ये बन भी जाए",
+     "text": "So even if one formed, it would not last"
+    },
+    {
+     "at": "उसी साल",
+     "text": "The same year, 1974, Jayant Narlikar and his team at TIFR in Mumbai took a different angle"
+    },
+    {
+     "at": "और famous journal Nature",
+     "text": "and wrote in the famous journal Nature that white holes could be behind the fastest radiation in space"
+    },
+    {
+     "at": "उनके लिए ये space के",
+     "text": "For them it was a big clue to the biggest explosions in space, but for years nobody caught such a blast"
+    },
+    {
+     "at": "फिर दो हज़ार छह में",
+     "text": "Then in 2006 the Swift satellite saw that strange flash"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Igor Novikov",
+     "num": {
+      "template": "name",
+      "value": "IGOR NOVIKOV",
+      "sub": "Russian astrophysicist · 1964"
+     }
+    },
+    {
+     "at": "Douglas Eardley",
+     "num": {
+      "template": "name",
+      "value": "DOUGLAS EARDLEY",
+      "sub": "physicist · 1974"
+     }
+    },
+    {
+     "at": "जयंत नार्लीकर",
+     "num": {
+      "template": "name",
+      "value": "JAYANT NARLIKAR",
+      "sub": "astrophysicist · TIFR Mumbai · 1974"
+     }
+    }
+   ]
+  },
+  "ch3": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "a gamma ray burst jet blasting from a collapsing star",
+      "a beam of gamma rays shooting into space"
+     ]
+    },
+    {
+     "at": "छोटे वाले",
+     "gfx": "countdown:TWO KINDS;UNDER 2 SECONDS=two dead stars collide;OVER 2 SECONDS=a big star dies, then a supernova"
+    },
+    {
+     "at": "जबकि लंबे वाले",
+     "q": [
+      "a supernova explosion",
+      "a massive star exploding"
+     ]
+    },
+    {
+     "at": "दो हज़ार छह का वो धमाका",
+     "q": [
+      "an empty dark patch of sky with faint galaxies",
+      "a deep field of distant galaxies"
+     ]
+    },
+    {
+     "at": "Scientists ने उसे hybrid",
+     "q": [
+      "telescope images of a gamma ray burst afterglow",
+      "a fading point of light in deep space"
+     ]
+    },
+    {
+     "at": "जो दिवाली के अनार",
+     "q": [
+      "a Diwali anaar fountain firework spraying sparks at night",
+      "fireworks fountain at night"
+     ]
+    },
+    {
+     "at": "उन्होंने इसे Small Bang",
+     "q": [
+      "a burst of light expanding in dark space",
+      "an explosion of light in darkness"
+     ]
+    },
+    {
+     "at": "और उन्हें kilonova",
+     "q": [
+      "two neutron stars merging animation",
+      "a neutron star collision with a kilonova glow"
+     ]
+    },
+    {
+     "at": "कोई पक्का proof",
+     "gfx": "stamp:NOT CONFIRMED;no proof yet"
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Sometimes a very bright flash of gamma rays comes from space; it is called a gamma ray burst, and there are two kinds"
+    },
+    {
+     "at": "छोटे वाले",
+     "text": "Short ones last under two seconds and come from two dead stars colliding"
+    },
+    {
+     "at": "जबकि लंबे वाले",
+     "text": "while long ones come from a big star dying, and a supernova's light always follows"
+    },
+    {
+     "at": "दो हज़ार छह का वो धमाका",
+     "text": "The 2006 blast lasted 102 seconds, a long one, but no supernova followed"
+    },
+    {
+     "at": "Scientists ने उसे hybrid",
+     "text": "Scientists called it a hybrid, because it fit no category"
+    },
+    {
+     "at": "दो हज़ार ग्यारह में",
+     "text": "In 2011 Alon Retter and Shlomo Heller suggested it was perhaps a white hole"
+    },
+    {
+     "at": "जो दिवाली के अनार",
+     "text": "which, like a Diwali anaar, threw out all its matter in one burst and was gone"
+    },
+    {
+     "at": "उन्होंने इसे Small Bang",
+     "text": "They called it a Small Bang, but the story twisted when scientists later re-checked the burst's old light"
+    },
+    {
+     "at": "और उन्हें kilonova",
+     "text": "and found signs of a kilonova"
+    },
+    {
+     "at": "Kilonova वो हल्की light",
+     "text": "A kilonova is the faint light after two dead stars, neutron stars, collide, so most astronomers think it was a neutron star crash, not a white hole"
+    },
+    {
+     "at": "कोई पक्का proof",
+     "text": "There is no firm proof, but the white hole idea came back by another road"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "दो हज़ार छह का वो धमाका",
+     "lines": [
+      {
+       "text": "102 SECONDS",
+       "at": "दो"
+      },
+      {
+       "text": "*NO SUPERNOVA*",
+       "at": "supernova"
+      }
+     ],
+     "kicker": "the 2006 burst"
+    },
+    {
+     "at": "उन्होंने इसे Small Bang",
+     "lines": [
+      {
+       "text": "A *SMALL BANG*",
+       "at": "Bang"
+      }
+     ],
+     "kicker": "Retter and Heller"
+    }
+   ],
+   "n": [
+    {
+     "at": "Alon Retter",
+     "num": {
+      "template": "name",
+      "value": "ALON RETTER",
+      "sub": "astronomer · 2011"
+     }
+    },
+    {
+     "at": "Shlomo Heller",
+     "num": {
+      "template": "name",
+      "value": "SHLOMO HELLER",
+      "sub": "2011"
+     }
+    }
+   ]
+  },
+  "ch4": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "flying into a black hole visualization",
+      "zooming into the centre of a black hole"
+     ]
+    },
+    {
+     "at": "लेकिन जहाँ कोई number",
+     "gfx": "blueprint:WHERE PHYSICS BREAKS"
+    },
+    {
+     "at": "Carlo Rovelli",
+     "gfx": "photo:Rovelli"
+    },
+    {
+     "at": "दबते दबते एक limit",
+     "q": [
+      "a supernova core collapse simulation rebounding",
+      "a shockwave bursting outward from a collapsing star core"
+     ]
+    },
+    {
+     "at": "बिल्कुल वैसे जैसे",
+     "q": [
+      "a steel spring pressed flat and springing back",
+      "a coiled spring bouncing"
+     ]
+    },
+    {
+     "at": "और यही bounce",
+     "q": [
+      "a black hole flashing and turning into a bright white glowing sphere",
+      "a burst of white light from a dark sphere"
+     ]
+    },
+    {
+     "at": "यहाँ सारा खेल time का",
+     "q": [
+      "a pocket watch ticking in slow motion",
+      "clock hands turning slowly"
+     ]
+    },
+    {
+     "at": "अंदर के matter के लिए",
+     "q": [
+      "stars orbiting a black hole",
+      "a black hole with a slowly turning disk"
+     ]
+    },
+    {
+     "at": "अभय अश्टेकर",
+     "gfx": "photo:Ashtekar"
+    },
+    {
+     "at": "परमप्रीत सिंह",
+     "gfx": "photo:Parampreet"
+    },
+    {
+     "at": "बल्कि वहाँ एक bridge",
+     "q": [
+      "a wormhole tunnel through space visualization",
+      "a tunnel of light through spacetime"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "Now the very centre of a black hole, where Einstein's equations say all matter is crushed into a tiny point and density becomes infinite"
+    },
+    {
+     "at": "लेकिन जहाँ कोई number",
+     "text": "But where a number becomes infinite, physics fails: at such tiny scales quantum physics rules, and no theory yet joins it with gravity"
+    },
+    {
+     "at": "दो हज़ार चौदह में",
+     "text": "In 2014 Carlo Rovelli and Hal Haggard suggested that matter may never reach that point"
+    },
+    {
+     "at": "दबते दबते एक limit",
+     "text": "Squeezed to a limit it bounces back, the way a spring pressed all the way springs back hard"
+    },
+    {
+     "at": "और यही bounce",
+     "text": "and that bounce turns the black hole into a white hole"
+    },
+    {
+     "at": "यहाँ सारा खेल time का",
+     "text": "Here it is all about time, because near a black hole time runs very slowly"
+    },
+    {
+     "at": "अंदर के matter के लिए",
+     "text": "For the matter inside, the bounce takes a second, but for anyone outside it can take billions of years, so today's black holes haven't turned white yet"
+    },
+    {
+     "at": "और यहीं एक बड़ा Indian नाम",
+     "text": "And here comes a big Indian name, Abhay Ashtekar, one of the founders of loop quantum gravity"
+    },
+    {
+     "at": "दो हज़ार अठारह में",
+     "text": "In 2018, with Javier Olmedo and Parampreet Singh, he showed that in this theory the infinite-density point at the centre disappears"
+    },
+    {
+     "at": "बल्कि वहाँ एक bridge",
+     "text": "and a bridge forms there instead, joining the black hole to its opposite, a white hole"
+    }
+   ],
+   "sfx": [],
+   "n": [
+    {
+     "at": "Carlo Rovelli",
+     "num": {
+      "template": "name",
+      "value": "CARLO ROVELLI",
+      "sub": "physicist · loop quantum gravity"
+     }
+    },
+    {
+     "at": "Hal Haggard",
+     "num": {
+      "template": "name",
+      "value": "HAL HAGGARD",
+      "sub": "physicist · 2014"
+     }
+    },
+    {
+     "at": "अभय अश्टेकर",
+     "num": {
+      "template": "name",
+      "value": "ABHAY ASHTEKAR",
+      "sub": "physicist · a founder of loop quantum gravity"
+     }
+    },
+    {
+     "at": "Javier Olmedo",
+     "num": {
+      "template": "name",
+      "value": "JAVIER OLMEDO",
+      "sub": "physicist · 2018"
+     }
+    },
+    {
+     "at": "परमप्रीत सिंह",
+     "num": {
+      "template": "name",
+      "value": "PARAMPREET SINGH",
+      "sub": "physicist · 2018"
+     }
+    }
+   ],
+   "k": [
+    {
+     "at": "अंदर के matter के लिए",
+     "lines": [
+      {
+       "text": "INSIDE: ONE MOMENT",
+       "at": "second"
+      },
+      {
+       "text": "*OUTSIDE: BILLIONS OF YEARS*",
+       "at": "billions"
+      }
+     ]
+    }
+   ]
+  },
+  "ch5": {
+   "v": [
+    {
+     "at": null,
+     "q": [
+      "the hot early universe after the Big Bang",
+      "a simulation of the early universe"
+     ]
+    },
+    {
+     "at": "कुछ scientists के हिसाब से",
+     "q": [
+      "tiny black holes forming in the early universe animation",
+      "the young universe expanding"
+     ]
+    },
+    {
+     "at": "और उनके बचे हुए pieces",
+     "q": [
+      "tiny faint glowing specks drifting through dark space",
+      "faint points of light drifting in the dark"
+     ]
+    },
+    {
+     "at": "एक piece का size",
+     "q": [
+      "grains of sand close up",
+      "sand grains falling in slow motion"
+     ]
+    },
+    {
+     "at": "उनका पता सिर्फ़ gravity",
+     "q": [
+      "a galaxy cluster bending light by gravity",
+      "gravitational lensing around a galaxy cluster"
+     ]
+    },
+    {
+     "at": "बिल्कुल dark matter की तरह",
+     "gfx": "halo_full"
+    },
+    {
+     "at": "इसलिए Carlo Rovelli",
+     "q": [
+      "a map of dark matter around a galaxy cluster",
+      "a dark matter simulation"
+     ]
+    },
+    {
+     "at": "ये अभी सिर्फ़ एक idea",
+     "q": [
+      "a field of distant galaxies",
+      "deep space with many galaxies"
+     ]
+    },
+    {
+     "at": "Big Bang में सारा matter",
+     "q": [
+      "the Big Bang explosion animation",
+      "the universe expanding from a single point"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "If black holes really become white holes, the change comes first in the smallest ones, because with less mass their bounce comes sooner"
+    },
+    {
+     "at": "कुछ scientists के हिसाब से",
+     "text": "Some scientists think many tiny black holes formed just after the Big Bang and, over billions of years, became white holes"
+    },
+    {
+     "at": "और उनके बचे हुए pieces",
+     "text": "and their leftover pieces may still be drifting through space"
+    },
+    {
+     "at": "एक piece का size",
+     "text": "Each piece is smaller than an atom and weighs like a small grain of sand; they neither shine nor collide with anything"
+    },
+    {
+     "at": "उनका पता सिर्फ़ gravity",
+     "text": "We know them only by gravity, just like dark matter, which holds galaxies together but can't be seen"
+    },
+    {
+     "at": "इसलिए Carlo Rovelli",
+     "text": "so Carlo Rovelli and colleagues suggested part of dark matter could be such white holes"
+    },
+    {
+     "at": "ये अभी सिर्फ़ एक idea",
+     "text": "This is only an idea for now, but there is a theory even bigger"
+    },
+    {
+     "at": "Big Bang में सारा matter",
+     "text": "In the Big Bang all matter and energy came out of one place and nothing went in; a white hole does exactly this, so some physicists think our Big Bang was like a giant white hole"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": "एक piece का size",
+     "lines": [
+      {
+       "text": "SMALLER THAN AN ATOM",
+       "at": "atom"
+      },
+      {
+       "text": "*AS HEAVY AS A GRAIN OF SAND*",
+       "at": "रेत"
+      }
+     ]
+    },
+    {
+     "at": "और white hole भी",
+     "lines": [
+      {
+       "text": "THE BIG BANG",
+       "at": "Big"
+      },
+      {
+       "text": "*A GIANT WHITE HOLE?*",
+       "at": "जैसा"
+      }
+     ]
+    }
+   ]
+  },
+  "ending": {
+   "v": [
+    {
+     "at": null,
+     "opt": "hold",
+     "q": [
+      "distant galaxies slowly drifting in deep space",
+      "a slow flight through a star field"
+     ]
+    },
+    {
+     "at": "Science अभी तक",
+     "q": [
+      "a lone flash of light in dark space",
+      "a distant burst of light in the dark"
+     ]
+    }
+   ],
+   "c": [
+    {
+     "at": null,
+     "text": "So what are white holes? The last stage of black holes, the Big Bang's twin, or just maths that nature never lets happen?"
+    },
+    {
+     "at": "Science अभी तक",
+     "text": "Science hasn't decided yet, but whenever a blast without a star appears in space, scientists ask that same 2006 question again"
+    }
+   ],
+   "sfx": [],
+   "k": [
+    {
+     "at": null,
+     "lines": [
+      {
+       "text": "BLACK HOLES' LAST STAGE",
+       "at": "stage"
+      },
+      {
+       "text": "BIG BANG'S TWIN",
+       "at": "twin"
+      },
+      {
+       "text": "*OR JUST MATHS?*",
+       "at": "maths"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
