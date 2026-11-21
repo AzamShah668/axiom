@@ -227,7 +227,7 @@ C अंदर के matter के लिए | For the matter inside, the bounc
 V बस एक second @ [M:two_clocks] inside and outside clocks
 V billions of years लग @ [W:cooper_shock] astronaut shocked by lost years
 G इसलिए आज के black holes @ eht_m87
-V और यहीं एक बड़ा Indian नाम @ the Indian national flag waving | the tricolour flag of India
+V और यहीं एक बड़ा Indian नाम @ [W:india_flag] the Indian flag waving
 C और यहीं एक बड़ा Indian नाम | And here comes a big Indian name, Abhay Ashtekar, one of the founders of loop quantum gravity
 G अभय अश्टेकर @ photo:Ashtekar
 L अभय अश्टेकर @ ABHAY ASHTEKAR | physicist · a founder of loop quantum gravity
@@ -248,7 +248,7 @@ C - | If black holes really become white holes, the change comes first in the sm
 G तो ये change सबसे पहले @ evaporate
 G सबसे छोटे black holes @ bh_shrink
 V क्योंकि उनमें mass कम @ a feather on a weighing scale | a balance scale weighing
-V तो इसी वजह से उनका bounce @ a ball bouncing in slow motion | a rubber ball bouncing
+V तो इसी वजह से उनका bounce @ [W:ball_bounce] a ball bouncing
 V कुछ scientists के हिसाब से Big Bang @ the Big Bang explosion animation | the universe expanding from a point
 C कुछ scientists के हिसाब से | Some scientists think many tiny black holes formed just after the Big Bang and, over billions of years, became white holes
 V ऐसे बहुत छोटे black holes @ the hot early universe simulation | the young universe
