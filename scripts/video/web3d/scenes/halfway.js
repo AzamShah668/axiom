@@ -91,7 +91,7 @@ export function render(t) {
   const i = shotAt(t), u = t - st[i]; ov.clear();
   let size = 1, fov = 50, glowAmt = 0;
   desi.visible = i === 1; wedge.visible = i === 1 && t > ev.galaxies - 0.3; gal.visible = i !== 1; pushers.visible = i === 2;
-  core.visible = pt.visible = i >= 5; ring.visible = i >= 5 && ring.material.opacity > 0.01;
+  core.visible = i >= 5; pt.visible = false; ring.visible = i >= 5 && ring.material.opacity > 0.01;
   if (i > 0 && u < 0.35) fov += 9 * Math.pow(1 - u / 0.35, 2);
 
   if (i === 0) {                                              // the universe and its life bar, filling to the halfway mark
@@ -152,7 +152,7 @@ export function render(t) {
       g.beginPath(); g.moveTo(W / 2, H * 0.55 + b + 175); g.lineTo(W / 2 - 34, H * 0.55 + b + 125); g.lineTo(W / 2 + 34, H * 0.55 + b + 125); g.closePath(); g.fill(); g.restore(); }
   }
   pt.scale.setScalar(core.scale.x * 0.35); pt.material.opacity = core.material.opacity; pt.position.set(0, 0, 0.5);
-  gal.material.opacity = i >= 5 ? cl((size - 0.1) / 0.4) : 1; if (i >= 5 && size < 0.1) gal.visible = false;   // additive pile-up of all points at one spot blows the bloom to black
+  gal.material.opacity = i >= 5 ? cl((size - 0.3) / 0.6) : 1; if (i >= 5 && size < 0.3) gal.visible = false;   // additive pile-up of all points at one spot blows the bloom to black
   if (gal.visible) { const gp = gal.geometry.attributes.position; for (let k = 0; k < gp.count; k++) gp.setXYZ(k, galBase[k * 3] * size, galBase[k * 3 + 1] * size, galBase[k * 3 + 2] * size); gp.needsUpdate = true; }
 
   // solid black title patch (owner rule), plain title, one-word caption, progress bar, cut flash
