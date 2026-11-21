@@ -18,7 +18,7 @@ Research basis: Google Flow help (edit and scene pages), a hands-on Omni 1.2 Fla
 ## 2. The editing style we would build with it
 
 - **Flow carries the "cinema" moments, our pipeline carries the story.** Flow clips for the visual that explains each key claim; real NOIRLab/ESO/NASA footage for real observations; photos (with animated names) for people; our graphs/labels on top; voice, captions, music and SFX from our pipeline.
-- **Where the budget goes first:** the opening 90 s (where we lose 35-43% of viewers) and each chapter's turn ("lekin…"). Max 10 clips per video, so they go where retention is decided.
+- **Where the budget goes first:** the opening 90 s (where we lose 35-43% of viewers) and each chapter's turn ("lekin…"). The strongest clips go where retention is decided (no clip limit; owner 2026-11-21).
 - **Camera language, one per video** (part of the locked style block): slow, smooth, one move per clip - dolly-in to reveal, pull-back to show scale, slow orbit for a 3D object, fly-through for a journey. No handheld shake, no whip pans.
 - **Zoom in / zoom out happens inside Flow,** never faked in the edit on a Flow clip (clips play once, forward).
 - **Continuous sequences:** 2-4 clips chained by end-frame -> start-frame for big moments (the Big Crunch, a scale journey), so the cuts feel like one shot. Everything else: hard cuts on the spoken word, as now.
@@ -59,7 +59,7 @@ The current template locks the camera ("the camera stays completely locked with 
 - The first 90 s, where we lose most viewers, get the strongest visuals.
 
 ## 7. Budget (Pro, ~1,050 credits a month)
-A typical video: 10 clips x ~6 s at 720p = ~180 credits, + a few 360p drafts (~30) + 1080p upscales (10 x 5 = 50) = **~260 credits a video, about 4 videos a month**. Extends and long clips (11-15 s at 6 credits/s) cost more; the table always shows the total first.
+Example, a video with 10 clips x ~6 s at 720p = ~180 credits, + a few 360p drafts (~30) + 1080p upscales (10 x 5 = 50) = **~260 credits** (about 4 such videos a month on ~1,050 credits; more clips cost proportionally more). Extends and long clips (11-15 s at 6 credits/s) cost more; the table always shows the total first.
 
 ## 8. First test (proposed, ~60-80 credits)
 Three clips for video 10's opening: one pull-back (scale), one dolly-in (reveal), one chained pair (end frame -> start frame). Check: warping during camera moves, continuity across the chain, how the 720p->1080p upscale looks next to our 4K footage, and whether the camera edit mode works on an existing clip.

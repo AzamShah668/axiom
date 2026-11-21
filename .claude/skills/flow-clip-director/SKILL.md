@@ -26,7 +26,7 @@ Claude writes the clip list. The owner's executor (Muse) generates the clips in 
   - Veo 3.1 Lite 10, Fast 20, Quality 100 credits per 8 s clip.
 - Balance 21 Nov 2026: 1,050 credits, resets 3 Dec. Muse reports the running total with each video. Prefer lengths of 10 s or less (cheaper rate) when the slice allows.
 - **Outputs = x1 before generating.** The manual create bar defaults to x2 (an 8 s Omni 1.2 clip shows 48 credits at x2, 24 at x1): x2 doubles every cost and makes two variants. We need exactly one clip per prompt. (The Flow-agent defaults panel's "1 output" is a different setting.)
-- **At most 10 Flow clips per video**; more needs the owner's explicit approval.
+- **No clip limit** (owner 2026-11-21: "you can use any amount of clips"). Use as many as the video needs; every table shows the total credit cost and the running monthly balance.
 - "Confirm before generating" stays on **Always**; never set it to Never. Muse approves each generation's stated cost one at a time, nothing else. If a price differs from the above, stop and report.
 - Include the total credit cost of the clip list at the bottom of the table.
 
@@ -40,9 +40,24 @@ Claude writes the clip list. The owner's executor (Muse) generates the clips in 
 Before the first clip, write one style block for the video (look - realistic cinematic OR flat cartoon, never mixed; lighting; palette; realism; camera behaviour) and paste it word for word into every prompt. It never changes mid-video. If the owner corrects it, say the correction back in short plain sentences, confirm, then continue.
 Channel default (owner may change): `realistic cinematic space visuals, deep blacks, warm starlight with a soft amber accent, physically plausible motion, no cartoon styling`
 
+## Motion: one per clip (owner approved 2026-11-21)
+Every clip has **exactly one motion: one camera move OR one subject action, never both** (stable clips, still literal to the line).
+- **Camera-move clip** (zoom in/out, reveal, scale, 3D object): moves allowed are slowly dollies in toward, slowly pulls back from, slowly orbits around, glides forward through. Smooth, slow, no handheld shake, no whip pans. Template:
+  `A <length>-second <style> clip, <LOCKED STYLE, verbatim>, <subject> stays steady while the camera <one move> <target>, the move is smooth and continuous with no cuts, with no spoken dialogue and no background music, motion is smooth and simple with no glitching, no warping, no morphing, no flickering, no extra limbs, no duplicate characters, and no on-screen text, subtitles, watermarks or logos.`
+- **Action clip:** the locked-camera template below.
+- The video's camera language (which moves, how slow) is part of the locked style block.
+- Zoom in/out happens inside Flow; never fake a zoom on a Flow clip in the edit.
+- **Chained shots:** for a big moment, 2-4 clips chained end frame -> start frame so the cuts read as one shot. The next clip's row says `Chain: start frame = last frame of <clip>`.
+- **Hero reference images (ingredients):** up to 3 clean images (no text, no UI, no watermark) of the video's recurring objects, made once and reused so they look the same in every clip.
+- **Drafts:** a hard clip may get a 360p draft (1 credit/s) before the 720p final; finals are downloaded with the 1080p upscale (5 credits).
+- **Aspect:** 16:9 for videos, 9:16 generated natively for Shorts.
+- Strongest clips go to the opening 90 s and each chapter's turn.
+- Full plan: `docs/research/flow/PLAN.md`.
+
 ## Prompt template (follow exactly)
 One flowing paragraph, plain prose, no headers, bullets, labels or line breaks. Style block verbatim. The length in seconds comes from the clip list. Say what stays still. One simple continuous action. End with the negative run.
 
+Action-clip template (locked camera):
 `A <length>-second <style> clip, <LOCKED STYLE, verbatim>, <one simple continuous action>, against <static background> which is completely still with no moving elements and no camera movement, with no spoken dialogue and no background music, the camera stays completely locked with no zoom or pan, motion is smooth and simple with no glitching, no warping, no morphing, no flickering, no extra limbs, no duplicate characters, and no on-screen text, subtitles, watermarks or logos.`
 
 - Silent always (voice and music are added later), **and strip the audio track anyway**: every Flow file arrives with one (measured 21 Nov 2026: -45.7 dB average, peaks -19.8 dB, audible). Muse strips it after download; our ingest strips it again (`ffmpeg -an`). No clip enters the timeline with generator audio.
@@ -57,11 +72,11 @@ Muse generates exactly 4 s on Omni 1.2 Flash (12 credits) and trims it to the sl
 ## The handoff: one table per video (nothing is generated before it exists)
 Locked style block at the top, then:
 
-| Clip | Narration quote (Hindi, exact words) | What it means (English) | Needed length (s) | Full Flow prompt |
-|---|---|---|---|---|
+| Clip | Narration quote (Hindi, exact words) | What it means (English) | Needed length (s) | Motion | Chain | References | Aspect | Full Flow prompt |
+|---|---|---|---|---|---|---|---|---|
 
 - One row per clip, one clip per narration slice; never reuse a clip in another scene.
-- Needed length: any whole number of seconds from 3 to 15; a slice over 15 s gets two rows, split at a clause break. At most 10 rows unless the owner approves more.
+- Needed length: any whole number of seconds from 3 to 15; a slice over 15 s gets two rows, split at a clause break. No row limit.
 - No absolute timestamps: quote + needed length is the timing. Measure needed length from the recorded voice (word times in `voice/timeline.json`, at the final speed).
 - Number clips `<prod>-<chapter>-<nn>` (e.g. `10-ch2-07`) and ask for the returned files to carry that number, so the pipeline places them automatically.
 
@@ -88,7 +103,7 @@ Locked style block at the top, then:
 - Present a still, fallback or missing clip as the real clip.
 - Make anything public or share a Drive link as public without the owner's explicit order for that file.
 
-**Short version:** Flow's default model is Omni 1.2 Flash: silent clips of 3 to 15 s, 3 credits a second at 720p (8 s = 24 credits), with Outputs set to x1 first (the bar defaults to x2, which doubles the spend). Veo 3.1 is fixed at 8 s. Strip the audio track from every clip; asking for silence does not remove it. At most 10 clips per video. One visual per slice, showing exactly what is said. Real people get free photos. One locked style block in every prompt. No text, dialogue or music in any clip. Audio first, measure, clip list, generate, raw cut, owner approves.
+**Short version:** Flow's default model is Omni 1.2 Flash: silent clips of 3 to 15 s, 3 credits a second at 720p (8 s = 24 credits), with Outputs set to x1 first (the bar defaults to x2, which doubles the spend). Veo 3.1 is fixed at 8 s. Strip the audio track from every clip; asking for silence does not remove it. No clip limit; show the credit total. One visual per slice, showing exactly what is said. Real people get free photos. One locked style block in every prompt. No text, dialogue or music in any clip. Audio first, measure, clip list, generate, raw cut, owner approves.
 
 ## Lessons log (mistakes caught; add every new one, never repeat)
 - 2026-11-21: the rulebook said Flow makes only 8 s clips. True in Sep-Oct 2026, wrong now: Omni 1.2 Flash makes 3-15 s. Always brief the exact length from the measured voice.
@@ -97,3 +112,4 @@ Locked style block at the top, then:
 - 2026-11-21: asking for "no dialogue, no music" does not give a silent file: every clip carries a quiet ambience track. Strip it.
 - 2026-11-21: Google's help page (Veo 4/6/8 s) disagreed with the live screen (fixed 8 s). The live screen governs.
 - Before Flow (09 video): random stock clips that did not match the narration and repeated static galaxy zooms. Every clip must show exactly the line it sits on, and never repeat.
+- 2026-11-21: the rulebook had a 10-clips-per-video cap; the owner removed it. No limit; always show the credit total.
