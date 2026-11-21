@@ -1,7 +1,7 @@
 """Check narration.hi.md (the exact text ElevenLabs will read) before any recording, so every section is right
 the first time and never has to be paid for twice (owner, 2026-10-27). Exit 1 if anything is flagged.
 
-  python scripts/elevenlabs/tts_check.py productions/NN-slug/tts/narration.hi.md [--allow-pauses]
+  python scripts/elevenlabs/tts_check.py productions/NN-slug/tts/narration.hi.md [--allow-pauses] [--allow-long]
 
 Checks: words from productions/tts-lexicon.json "replace" (mispronounced or unwanted, with the fix); "..." and
 other pause marks (no pauses since 2026-10-27); digits and symbols ElevenLabs reads oddly; Latin acronyms that
@@ -20,6 +20,9 @@ LEX = json.load(open(os.path.join(ROOT, "productions", "tts-lexicon.json"), enco
 HINGLISH = {"hai", "hain", "tha", "thi", "aur", "ki", "ka", "ke", "mein", "se", "ko", "ne", "nahi", "naye", "bhi", "ek",
             "yeh", "woh", "jo", "kya", "sab", "toh", "par", "ab", "tak"}
 BITE = re.compile(r"\[bite:([\w-]+)\]")
+
+
+ALLOW_LONG = False
 
 
 def check(path, allow_pauses=False):
@@ -65,7 +68,7 @@ def check(path, allow_pauses=False):
             if m in HINGLISH:
                 problems.append(f"{where}: '{m}' is Hindi in Latin letters: write it in Devanagari")
         for s in re.split(r"[।?!.][\"”]?\s", text):
-            if len(s.split()) > 28:
+            if len(s.split()) > 28 and not ALLOW_LONG:   # owner 2026-11-21 (video 10): may keep long sentences whole
                 problems.append(f"{where}: a {len(s.split())}-word sentence: split it (long sentences lose their tune)")
         for m in re.finditer(r"\b[A-Z][\w'’]*(?:\s+[A-Z][\w'’]*)*", text):  # names and English terms never heard yet
             t = m.group(0)
@@ -81,6 +84,8 @@ def check(path, allow_pauses=False):
 
 def main():
     path = sys.argv[1]
+    global ALLOW_LONG
+    ALLOW_LONG = "--allow-long" in sys.argv
     problems, new_terms, _ = check(path, "--allow-pauses" in sys.argv)
     for p in problems:
         print("FLAG", p)
