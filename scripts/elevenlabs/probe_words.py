@@ -7,7 +7,7 @@ The terms tts_check.py lists as never heard are read in one request, each with u
 from its own sentence, then transcribed (faster-whisper, English) and compared with the spelling: "ok" or
 "LISTEN". The audio goes to work/<NN-slug>/voice_probe/probe.mp3 (send it to the owner) with probe.txt (the
 order). A term that comes out wrong gets a new spelling in narration.hi.md (Devanagari, the way it is said) and an
-entry in productions/tts-lexicon.json "replace"; probe again. --accept adds the "ok" terms to "verified"."""
+entry in productions/tts-lexicon.json "replace"; probe again. --accept adds the "ok" terms of the LAST probe (probe.txt) to "verified" without recording again."""
 import difflib, json, os, re, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -44,6 +44,16 @@ def main():
     n = int((opt("--context") or ["3"])[0])  # words either side; fewer = cheaper
     pieces = [snippet(t, ctx[t], n) for t in order]
     text = "। ".join(pieces) + "।"
+    pt = os.path.join(out, "probe.txt")
+    if "--accept" in sys.argv and os.path.exists(pt):   # reuse the last probe: never pay for it twice (2026-11-21)
+        ok = [m_.group(1).strip() for m_ in (re.match(r"\s*[\d.]+s\s+ok\s+(.+?)\s+heard:", ln) for ln in open(pt)) if m_]
+        ok = [t for t in ok if t in order] or ok
+        lp = os.path.join(ROOT, "productions", "tts-lexicon.json")
+        lex = json.load(open(lp, encoding="utf-8"))
+        lex["verified"] = sorted(set(lex["verified"]) | {w for t in ok for w in t.split()}, key=str.lower)
+        open(lp, "w", encoding="utf-8").write(json.dumps(lex, ensure_ascii=False, indent=1) + "\n")
+        print(f"{len(ok)} terms from the last probe added to verified (no new recording)")
+        return
     for f in ("probe.mp3", "probe.align.json"):
         if os.path.exists(os.path.join(out, f)):
             os.remove(os.path.join(out, f))
