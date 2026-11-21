@@ -14,3 +14,5 @@ Owner: "use only those repos that you think we can integrate… if something doe
 - **lemo-opuscar** (MIT code, CC BY-NC style docs, so it lives outside the repo): tested. `dark-documentary` fits our look but needs a GPU (7 s a frame here); keep for the Colab GPU step. `flat-space-explainer` renders fast but is cartoon, `hardcore-info` is a white product teardown (29 s a frame): not our style, not used.
 - Not used: video-shotcraft (product promos), pixelfx, the Claude character base, mcp-for-blender (needs a desktop app; Blender comes later via Colab). joeseesun/opus-video-prompts has no licence: read only.
 
+
+**Warning (2026-11-21):** never put `/home/user/tools/ffmpeg7` first on PATH for the main pipeline: that static build cannot read https URLs, so the footage stage skipped 117 clips ("0x0"). Use it only for these experiments; the pipeline uses the system ffmpeg.
