@@ -173,7 +173,7 @@ V जो दिवाली के अनार @ [F:10-ch3-01] a Diwali anaar f
 C जो दिवाली के अनार | which, like a Diwali anaar, threw out all its matter in one burst and was gone
 V बाहर निकाल कर ख़त्म @ fireworks fading out in the night sky | the end of a fireworks show
 V उन्होंने इसे Small Bang @ a burst of light expanding in dark space | an explosion of light in darkness
-K उन्होंने इसे Small Bang @ A *SMALL BANG* [Bang] | kicker=Retter and Heller
+K उन्होंने इसे Small Bang @ *A SMALL BANG* [Bang] | kicker=Retter and Heller
 C उन्होंने इसे Small Bang | They called it a Small Bang, but the story twisted when scientists later re-checked the burst's old light
 V लेकिन story में एक twist @ [W:dramatic_look] dramatic look
 T लेकिन story में एक twist | whip

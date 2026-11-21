@@ -20,6 +20,12 @@ sys.path.insert(0, os.path.join(ROOT, "scripts", "video"))
 import sfx  # noqa: E402
 
 SR = 44100
+
+
+def mk(kind, **kw):  # sfx generators may return stereo; this layer is mono
+    x, pl = sfx.make(kind, **kw)
+    x = np.asarray(x, float)
+    return (x.mean(1) if x.ndim == 2 else x), pl
 a = sys.argv[1:]
 master, tlp, postp, out = a[:4]
 lead = float(a[a.index("--lead") + 1]) if "--lead" in a else 0.5
@@ -116,7 +122,7 @@ def g_traffic(d):
 
 def g_ticks(d, every=1.0):
     x = np.zeros(int(d * SR))
-    tk, _ = sfx.make("tick")
+    tk, _ = mk("tick")
     for b in np.arange(0.05, d - 0.1, every):
         i = int(b * SR); n = min(len(tk), len(x) - i); x[i:i + n] += tk[:n]
     return x / (np.abs(x).max() + 1e-9)
@@ -150,7 +156,7 @@ def g_heartbeat(d, bpm=72):
 
 
 def g_door(d):
-    x, _ = sfx.make("kz_thud"); out = np.zeros(int(d * SR)); n = min(len(x), len(out)); out[:n] = x[:n]
+    x, _ = mk("kz_thud"); out = np.zeros(int(d * SR)); n = min(len(x), len(out)); out[:n] = x[:n]
     return out
 
 
@@ -199,10 +205,10 @@ for f in P.get("foley", []):
 shake = []
 for m in P.get("moments", []):
     t = when(m["sec"], m["at"]); b = m.get("build", 2.5); g = db(m.get("gain_db", -6))
-    r, _ = sfx.make("riser", d=b); add(r / (np.abs(r).max() + 1e-9), t - b, g * 0.55)
+    r, _ = mk("riser", d=b); add(r / (np.abs(r).max() + 1e-9), t - b, g * 0.55)
     add(g_heartbeat(b, 84) * np.linspace(0.3, 1, int(b * SR)), t - b, g * 0.5)
     for k, gg in (("bass_impact", 1.0), ("impact", 0.7), ("sub_drop", 0.9)):
-        x, _ = sfx.make(k); add(x / (np.abs(x).max() + 1e-9), t, g * gg)
+        x, _ = mk(k); add(x / (np.abs(x).max() + 1e-9), t, g * gg)
     shake.append((t, t + m.get("shake", 0.6)))
 mix = base + np.repeat(layer[:, None], 2, 1)
 mix_wav = os.path.join(tmp, "mix.wav")
