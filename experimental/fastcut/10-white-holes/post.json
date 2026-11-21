@@ -1,0 +1,40 @@
+{"ambience": {"gain_db": -27},
+ "foley": [
+  {"kind": "fast_ticks", "sec": "opening", "from": "एक सौ दो seconds", "to": "उससे इतनी energy", "gain_db": -26},
+  {"kind": "wind", "sec": "opening", "from": "तुरंत वहाँ देखा", "to": "तब कुछ scientists", "gain_db": -26},
+  {"kind": "door", "sec": "ch1", "from": "जिसके अंदर जाने", "to": "+1.2", "gain_db": -12},
+  {"kind": "fast_ticks", "sec": "ch1", "from": "ये equations time के आगे", "to": "और पीछे चलने", "gain_db": -24},
+  {"kind": "slow_ticks", "sec": "ch1", "from": "और पीछे चलने", "to": "दोनों में बिल्कुल", "gain_db": -22},
+  {"kind": "crowd", "sec": "ch1", "from": "अगर cricket match का replay", "to": "इसी तरह black hole का replay", "gain_db": -24},
+  {"kind": "plop", "sec": "ch1", "from": "light और matter सिर्फ़ बाहर", "to": "+0.5", "gain_db": -20},
+  {"kind": "heartbeat", "sec": "ch2", "from": "-", "to": "क्योंकि kitchen में", "gain_db": -22},
+  {"kind": "boil", "sec": "ch2", "from": "क्योंकि kitchen में", "to": "Nature में चीज़ें", "gain_db": -22},
+  {"kind": "shatter", "sec": "ch2", "from": "काम करता है जो हमने", "to": "+1.4", "gain_db": -16},
+  {"kind": "traffic", "sec": "ch2", "from": "उसकी boundary के बाहर जमा", "to": "Eardley के हिसाब से ये", "gain_db": -22},
+  {"kind": "wind", "sec": "ch2", "from": "मुंबई के टी आई एफ़ आर", "to": "जयंत नार्लीकर", "gain_db": -24},
+  {"kind": "slow_ticks", "sec": "ch2", "from": "लेकिन कई सालों तक", "to": "फिर दो हज़ार छह में", "gain_db": -24},
+  {"kind": "crackle", "sec": "ch3", "from": "जो दिवाली के अनार", "to": "उन्होंने इसे Small Bang", "gain_db": -20},
+  {"kind": "heartbeat", "sec": "ch3", "from": "इसलिए ज़्यादातर astronomers", "to": "कोई पक्का proof", "gain_db": -24},
+  {"kind": "boing", "sec": "ch4", "from": "वो ज़ोर से वापस खुलती", "to": "+1.2", "gain_db": -16},
+  {"kind": "ticks", "sec": "ch4", "from": "यहाँ सारा खेल time का", "to": "black hole के आस पास time", "gain_db": -20},
+  {"kind": "plop", "sec": "ch4", "from": "black hole के आस पास time", "to": "+0.5", "gain_db": -18},
+  {"kind": "slow_ticks", "sec": "ch4", "from": "black hole के आस पास time", "to": "लेकिन बाहर से देखने", "gain_db": -22},
+  {"kind": "boing", "sec": "ch5", "from": "तो इसी वजह से उनका bounce", "to": "+1.0", "gain_db": -20},
+  {"kind": "wind", "sec": "ending", "from": "-", "to": "Science अभी तक", "gain_db": -24}
+ ],
+ "moments": [
+  {"sec": "opening", "at": "धमाका", "build": 1.8, "gain_db": -6},
+  {"sec": "opening", "at": "white hole,", "build": 2.5, "gain_db": -5},
+  {"sec": "ch2", "at": "collapse", "build": 2.5, "gain_db": -5},
+  {"sec": "ch2", "at": "flash देखी", "build": 2.0, "gain_db": -7},
+  {"sec": "ch3", "at": "twist", "build": 2.0, "gain_db": -6},
+  {"sec": "ch4", "at": "यही bounce", "build": 2.5, "gain_db": -5},
+  {"sec": "ch5", "at": "white hole जैसा", "build": 3.0, "gain_db": -5},
+  {"sec": "ending", "at": "कोई धमाका दिखता", "build": 2.0, "gain_db": -7}
+ ],
+ "bw": [
+  {"sec": "ch1", "from": "फिर भी ज़्यादातर", "to": "+3.4"},
+  {"sec": "ch2", "from": "-", "to": "क्योंकि kitchen में"},
+  {"sec": "ch2", "from": "मतलब ये बन भी", "to": "उसी साल"},
+  {"sec": "ch3", "from": "कोई पक्का proof", "to": "लेकिन white hole का idea"}
+ ]}
