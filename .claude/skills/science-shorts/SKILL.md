@@ -158,3 +158,6 @@ Motion graphics only: `scripts/video/short_crunch.py` + `space3d.py` (see produc
 
 ## 3D Shorts with web3d (2026-11-20)
 For motion-graphics Shorts, write a scene in `scripts/video/web3d/scenes/` and render it with `scripts/video/short_web3d.py` (see productions/README.md, "3D motion-graphics engine"). Check `--stills` before the full render. Plain text only; photos whole.
+
+## Scripts (2026-11-21)
+Write or fix every Short script with the `youtube-shorts-scriptwriter` skill (`.claude/skills/youtube-shorts-scriptwriter/SKILL.md`) and add each new lesson to its log.
