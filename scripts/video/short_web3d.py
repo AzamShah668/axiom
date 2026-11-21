@@ -14,12 +14,18 @@ import sfx as fx           # noqa: E402
 import beats               # noqa: E402  (music offset so beats land on cuts)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SHOTS = {"blunder": [0, 15, 24, 35, 45, 54, 73, 84]}
+SHOTS = {"blunder": [0, 15, 24, 35, 45, 54, 73, 84], "halfway": [0, 7, 26, 44, 56, 80, 97, 110]}
 HITS = {"blunder": [("kz_thud", 0, 0.0, 0), ("kz_shot", 5, 0.0, -2), ("riser", 12, -1.0, -6), ("kz_whoosh", "s1", -0.2, -3),
                     ("kz_thud", 16, 0.05, -6), ("kz_whoosh", "s2", -0.2, -3), ("kz_whoosh", "s3", -0.2, -3), ("sub_drop", 39, 0.0, -3),
                     ("kz_shot", 39, 0.0, -4), ("kz_whoosh", 42, 0.0, -8), ("kz_typing", 43, 0.1, -10), ("kz_whoosh", "s4", -0.2, -2),
                     ("kz_shot", 49, 0.0, -2), ("kz_whoosh", "s5", -0.2, -3), ("kz_scratch", 61, 0.0, -4), ("kz_thud", 66, 0.0, -4),
-                    ("kz_whoosh", "s6", -0.2, -3), ("kz_thud", 83, 0.1, -5), ("bell", "s7", 0.2, -6)]}
+                    ("kz_whoosh", "s6", -0.2, -3), ("kz_thud", 83, 0.1, -5), ("bell", "s7", 0.2, -6)],
+        "halfway": [("kz_thud", 0, 0.0, 0), ("kz_shot", 6, 0.0, -4), ("kz_whoosh", "s1", -0.2, -3), ("kz_thud", 9, 0.0, -6),
+                    ("kz_whoosh", 19, -0.3, -4), ("kz_typing", 23, 0.0, -10), ("kz_whoosh", "s2", -0.2, -3), ("sub_drop", 40, 0.0, -4),
+                    ("kz_whoosh", "s3", -0.2, -3), ("kz_thud", 54, 0.0, -6), ("kz_whoosh", "s4", -0.2, -3), ("kz_shot", 64, 0.0, -5),
+                    ("kz_thud", 71, 0.0, -4), ("kz_whoosh", "s5", -0.2, -3), ("kz_thud", 87, 0.0, -5), ("riser", 95, -1.0, -5),
+                    ("kz_shot", 95, 0.3, 0), ("sub_drop", 95, 0.35, -2), ("kz_whoosh", "s6", -0.2, -3), ("kz_whoosh", 108, 0.0, -4),
+                    ("kz_whoosh", "s7", -0.2, -4), ("bell", 117, 0.1, -6)]}
 
 
 def main():
