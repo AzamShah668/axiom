@@ -51,7 +51,41 @@
   "dark star field slowly drifting",
   "faint distant galaxies in dark space"
  ],
- "pin": {},
+ "pin": {
+  "opening/8": "flow10_10_op_02#0",
+  "opening/14": "flow10_10_op_01#0",
+  "opening/15": "mg10_bh_vs_wh#0",
+  "ch1/3": "flow10_10_ch1_01#0",
+  "ch1/6": "web10_gargantua_orange#0",
+  "ch1/12": "web10_einstein1930#0",
+  "ch1/13": "web10_thorne_blackboard#0",
+  "ch1/16": "web10_tenet_reverse#0",
+  "ch1/19": "web10_cricket_rev#0",
+  "ch1/23": "flow10_10_ch1_03#0",
+  "ch1/25": "web3d10_wh_fountain#0",
+  "ch1/31": "mg10_kruskal#0",
+  "ch2/1": "web10_math_lady#0",
+  "ch2/2": "flow10_10_ch2_01#0",
+  "ch2/14": "flow10_10_ch2_02#0",
+  "ch2/18": "flow10_10_ch2_03#0",
+  "ch2/30": "mg10_timeline#0",
+  "ch3/8": "mg10_burst_bars#0",
+  "ch3/11": "flow10_10_ch3_02#0",
+  "ch3/16": "flow10_10_ch3_01#0",
+  "ch3/19": "web10_dramatic_look#0",
+  "ch4/14": "flow10_10_ch4_01#0",
+  "ch4/16": "flow10_10_ch4_02#0",
+  "ch4/17": "flow10_10_ch4_03#0",
+  "ch4/19": "web10_gargantua_disk#0",
+  "ch4/20": "mg10_two_clocks#0",
+  "ch4/21": "web10_cooper_shock#0",
+  "ch4/29": "flow10_10_ch4_04#0",
+  "ch5/10": "flow10_10_ch5_01#0",
+  "ch5/11": "mg10_atom_speck#0",
+  "ch5/12": "flow10_10_ch5_02#0",
+  "ending/2": "web10_gargantua_edge#0",
+  "ending/7": "flow10_10_end_01#0"
+ },
  "ban": [
   "noirlab_noirlab2403c",
   "pexels_11336047",
@@ -125,7 +159,13 @@
     0,
     1.5
    ]
+  ],
+  "flow10_10_ch4_01": [
+   [
+    0,
+    1.5
+   ]
   ]
  },
- "stock_ok": "person|man|head|thinking|clock|pendulum|hourglass|kitchen|milk|ink|smoke|incense|glass|moscow|kremlin|calendar|scientist|desk|paper|traffic|mumbai|marine drive|indian city|magnifying|map|city timelapse|puzzle|jigsaw|light bulb|firework|road|astronomers|computers|meeting|conference|whiteboard|blackboard|chalk|lecture|magnets|bridge under construction|half built|water drop|splash|flag|tricolour|university|campus|feather|scale|ball bouncing|rubber ball|book|equations|door|barrier|no entry|fountain|cricket|stadium|stopwatch|mainframe|computer|mirror|tape|film reel|tunnel|mission control|control room|monitors|rocket launch"
+ "stock_ok": "person|man|head|thinking|clock|pendulum|hourglass|kitchen|milk|ink|smoke|incense|glass|moscow|kremlin|calendar|scientist|desk|paper|traffic|mumbai|marine drive|indian city|magnifying|map|city timelapse|puzzle|jigsaw|light bulb|firework|road|astronomers|computers|meeting|conference|whiteboard|blackboard|chalk|lecture|magnets|bridge under construction|half built|water drop|splash|flag|tricolour|university|campus|feather|scale|ball bouncing|rubber ball|book|equations|door|barrier|no entry|fountain|cricket|stadium|stopwatch|mainframe|computer|mirror|tape|film reel|tunnel|mission control|control room|monitors|rocket launch|bowler|crease|spring toy|slinky|bridge"
 }
