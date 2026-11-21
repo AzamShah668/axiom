@@ -8,6 +8,7 @@ V - @ a gamma ray burst exploding in deep space | a powerful flash of light from
 V नासा के एक satellite @ the Swift observatory satellite orbiting Earth | a NASA satellite in orbit
 N एक सौ दो seconds @ hero | value=102 | unit=SECONDS | land=दो | over
 C - | In 2006 there was an explosion in space that a NASA satellite caught for 102 seconds
+# FLOW 10-op-02
 V उससे इतनी energy @ the surface of the Sun with solar flares | the Sun glowing in space
 K उससे इतनी energy @ MORE ENERGY [energy] / *THAN THE SUN'S WHOLE LIFE* [सूरज] | kicker=in 102 seconds
 C उससे इतनी energy | It released more energy than our Sun gives off in its whole life
@@ -102,6 +103,7 @@ C जबकि लंबे वाले | while long ones come from a big star 
 V दो हज़ार छह का वो धमाका @ an empty dark patch of sky with faint galaxies | a deep field of distant galaxies
 K दो हज़ार छह का वो धमाका @ 102 SECONDS [दो] / *NO SUPERNOVA* [supernova] | kicker=the 2006 burst
 C दो हज़ार छह का वो धमाका | The 2006 blast lasted 102 seconds, a long one, but no supernova followed
+# FLOW 10-ch3-02
 V Scientists ने उसे hybrid @ telescope images of a gamma ray burst afterglow | a fading point of light in deep space
 C Scientists ने उसे hybrid | Scientists called it a hybrid, because it fit no category
 L Alon Retter @ ALON RETTER | astronomer · 2011
@@ -135,6 +137,7 @@ C दबते दबते एक limit | Squeezed to a limit it bounces back, 
 # FLOW 10-ch4-02
 V और यही bounce @ a black hole flashing and turning into a bright white glowing sphere | a burst of white light from a dark sphere
 C और यही bounce | and that bounce turns the black hole into a white hole
+# FLOW 10-ch4-03
 V यहाँ सारा खेल time का @ a pocket watch ticking in slow motion | clock hands turning slowly
 C यहाँ सारा खेल time का | Here it is all about time, because near a black hole time runs very slowly
 V अंदर के matter के लिए @ stars orbiting a black hole | a black hole with a slowly turning disk
@@ -147,6 +150,7 @@ L Javier Olmedo @ JAVIER OLMEDO | physicist · 2018
 G परमप्रीत सिंह @ photo:Parampreet
 L परमप्रीत सिंह @ PARAMPREET SINGH | physicist · 2018
 C दो हज़ार अठारह में | In 2018, with Javier Olmedo and Parampreet Singh, he showed that in this theory the infinite-density point at the centre disappears
+# FLOW 10-ch4-04
 V बल्कि वहाँ एक bridge @ a wormhole tunnel through space visualization | a tunnel of light through spacetime
 C बल्कि वहाँ एक bridge | and a bridge forms there instead, joining the black hole to its opposite, a white hole
 
@@ -158,6 +162,7 @@ C कुछ scientists के हिसाब से | Some scientists think man
 # FLOW 10-ch5-01
 V और उनके बचे हुए pieces @ tiny faint glowing specks drifting through dark space | faint points of light drifting in the dark
 C और उनके बचे हुए pieces | and their leftover pieces may still be drifting through space
+# FLOW 10-ch5-02
 V एक piece का size @ grains of sand close up | sand grains falling in slow motion
 K एक piece का size @ SMALLER THAN AN ATOM [atom] / *AS HEAVY AS A GRAIN OF SAND* [रेत]
 C एक piece का size | Each piece is smaller than an atom and weighs like a small grain of sand; they neither shine nor collide with anything
@@ -176,5 +181,6 @@ C Big Bang में सारा matter | In the Big Bang all matter and energy
 V - @ distant galaxies slowly drifting in deep space | a slow flight through a star field {hold}
 K - @ BLACK HOLES' LAST STAGE [stage] / BIG BANG'S TWIN [twin] / *OR JUST MATHS?* [maths]
 C - | So what are white holes? The last stage of black holes, the Big Bang's twin, or just maths that nature never lets happen?
+# FLOW 10-end-01
 V Science अभी तक @ a lone flash of light in dark space | a distant burst of light in the dark
 C Science अभी तक | Science hasn't decided yet, but whenever a blast without a star appears in space, scientists ask that same 2006 question again
