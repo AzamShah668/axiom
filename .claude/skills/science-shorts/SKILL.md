@@ -156,8 +156,8 @@ python scripts/youtube/upload_youtube.py upload $WORK/out/shorts/<id>.mp4 produc
 Motion graphics only: `scripts/video/short_crunch.py` + `space3d.py` (see productions/README.md). The owner writes the Short scripts; Rudra (voice-preset.json) at 1.1x; one continuous zoom journey timed to the words; quote ElevenLabs characters and wait for OK before recording.
 
 
-## 3D Shorts with web3d (2026-11-20)
-For motion-graphics Shorts, write a scene in `scripts/video/web3d/scenes/` and render it with `scripts/video/short_web3d.py` (see productions/README.md, "3D motion-graphics engine"). Check `--stills` before the full render. Plain text only; photos whole.
+## Motion-graphics Shorts (owner 2026-11-21)
+Use our own Python engine `scripts/video/space3d.py` the way `scripts/video/short_crunch.py` does (the posted Short 2). The web3d/three.js experiments in `experimental/motion-repos/` are not used.
 
 ## Scripts (2026-11-21)
 Write or fix every Short script with the `youtube-shorts-scriptwriter` skill (`.claude/skills/youtube-shorts-scriptwriter/SKILL.md`) and add each new lesson to its log.

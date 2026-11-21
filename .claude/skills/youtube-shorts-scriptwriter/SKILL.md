@@ -38,7 +38,7 @@ The owner writes or approves every Short script. This skill drafts, fixes and ch
 - Voice: Rudra (`vIdhHAZdn1bGjKe1dFw8`), `eleven_multilingual_v2`, stability 0.35, style 0.45 (`productions/voice-preset.json`); played at 1.1x in the Short.
 
 ## 6. After the voice
-Render with `scripts/video/short_web3d.py` (one web3d scene per Short, `--stills` check first): motion graphics only, PLAIN text, photos whole and never under text, one word caption, Darkest Child low, kz hits. Package in `productions/<prod>/shorts/<name>.md`. Upload private; the owner posts.
+Render with our own Python engine (`scripts/video/space3d.py`, the way `scripts/video/short_crunch.py` does; check stills first): motion graphics only, PLAIN text, photos whole and never under text, one word caption, Darkest Child low, kz hits. Package in `productions/<prod>/shorts/<name>.md`. Upload private; the owner posts.
 
 ## Lessons log (do not repeat)
 - 2026-11-21 (halfway, with Gemini): "shayad" in the hook made it weak; cut it.

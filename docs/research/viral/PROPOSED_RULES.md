@@ -28,7 +28,7 @@ Limits: YouTube pages were blocked from the sandbox, so titles and view counts a
 2. State the surprise, hold back the "why"; one fact per sentence; English only for names and numbers.
 3. "Socho/tum" once in the first 5 s.
 4. Three beats (hook, two "but" steps, payoff), payoff by ~80% of the runtime, then stop.
-5. A new visual every 1.5-2.5 s (the web3d scenes do this); captions always on, PLAIN text.
+5. A new visual every 1.5-2.5 s; captions always on, PLAIN text.
 6. End on a line that loops back to the hook, or the 1-second "full video" card; no like/subscribe.
 The owner's three 09 Shorts already follow 1, 3 and 4 ("Socho…" openings, a turn, then the question for the full video).
 

@@ -251,16 +251,8 @@ in 2+ videos. Drive: `drive_sync.py put`; making a file public needs the owner's
 **Later**: Blender for hero 3D shots, rendered on the owner's Colab Pro GPU through a Drive job folder
 (`blender -b -P scene.py`); mcp-for-blender does not fit (needs Blender's UI).
 
-## 3D motion-graphics engine (web3d) and the repo review (2026-11-20)
-Owner: "use only those repos that you think we can integrate… if something doesn't match our style, do not add that."
-- **web3d** (`scripts/video/web3d/`): three.js + postprocessing (bloom, vignette) + rapier physics, rendered frame by frame in headless Chromium. Each scene is a pure function of time (`init`, `render(t)`). About 0.4-0.5 s a frame at 1080x1920 on our CPU, so a 30 s Short is about 8 minutes. Text stays PLAIN (2D overlay), photos are drawn whole as framed prints.
-  - `node scripts/video/web3d/render_web3d.js <scene> --dur S --out x.mp4 [--size 1080x1920] [--params @p.json] [--stills 1.5,8]`; `--stills` writes review stills first.
-  - Shorts: `python scripts/video/short_web3d.py <scene> <timeline.json> <voice.wav> <captions.txt> <music.mp3> <out.mp4>` (word times at 1.1x, sound hits per scene in `HITS`, `--audio-only` remixes).
-  - First scene: `scenes/blunder.js` (09 Short 3). Shared parts in `scenes/_lib.js` (stars, glow, bloom, plain-text overlay, easing).
-  - Install once per container (outside the repo): `sh scripts/setup/fetch_motion_tools.sh`.
-- **Beat sync** (`scripts/video/beats.py`, librosa): cuts stay on the words; the music start point is chosen so its beats land on the cuts (Short 3: 204 ms -> 98 ms average miss).
-- **lemo-opuscar** (MIT code, CC BY-NC style docs, so it lives outside the repo): tested. `dark-documentary` fits our look but needs a GPU (7 s a frame here); keep for the Colab GPU step. `flat-space-explainer` renders fast but is cartoon, `hardcore-info` is a white product teardown (29 s a frame): not our style, not used.
-- Not used: video-shotcraft (product promos), pixelfx, the Claude character base, mcp-for-blender (needs a desktop app; Blender comes later via Colab). joeseesun/opus-video-prompts has no licence: read only.
+## Not in the pipeline: the repo experiments (owner, 2026-11-21)
+The owner did not like the 3D engine (web3d) Shorts (blunder, halfway v1) or the other add-ons from the motion-graphics repos. They are kept separately in `experimental/motion-repos/` and are NOT used. Shorts use our own Python engine (`scripts/video/space3d.py`, as in the posted Short 2 'crunch').
 
 ## Google Flow clips (owner, 2026-11-21)
 Visuals that real footage or photos cannot show exactly come from Google Flow, directed with the `flow-clip-director` skill: Claude writes the clip table (exact Hindi quote, meaning, needed length, one-paragraph prompt with a locked style block), the owner's executor generates silent clips of 3-15 s on Omni 1.2 Flash (3 credits a second at 720p, max 10 per video) and returns them in a Drive folder; raw cut goes to the owner for approval before finishing. Real people stay photos.
