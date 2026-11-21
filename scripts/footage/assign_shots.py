@@ -9,7 +9,7 @@ edit.json may hold: "pin" {"<section>/<n>": "<shot id>"} to force a shot onto th
 "exclude" {"<clip>": [[from_s, to_s], ...]} to cut seconds out, "crops" {"<clip>": [x0, y0, x1, y1]}.
 Review sheets show every item's chosen frame with its query and score - look at them before rendering.
 """
-import argparse, json, os, sys
+import argparse, json, os, re, sys
 import numpy as np, cv2
 from scipy.optimize import linear_sum_assignment
 
@@ -256,6 +256,14 @@ def main():
     bite_cols = [j for j, s_ in enumerate(pool) if s_["clip"].startswith("bite_")]
     if bite_cols:  # a real recording's clip plays only at its own recording, never as ordinary footage
         S[np.ix_([i for i, it in enumerate(items) if not it.get("bite")], bite_cols)] = -1000.0
+    # owner 2026-11-21 (video 10): stock sites (Pexels/Pixabay) only for Earth scenes; space beats come from real
+    # archives only (their recent uploads are CGI/AI spaceships and fake space). edit.base "stock_ok": regex of queries.
+    stock_ok = re.compile(edit.get("stock_ok", r"cricket|stadium|mumbai|kitchen|milk|stove|ink|smoke|sand|hourglass|clock|watch|"
+                                    r"spring|firework|anaar|telescope|observatory|dome|city|skyline|people|hand"), re.I)
+    stock_cols = [j for j, s_ in enumerate(pool) if s_["clip"].startswith(("pexels_", "pixabay_"))]
+    space_rows = [i for i, it in enumerate(items) if it["kind"] == "clip" and not any(stock_ok.search(q) for q in it["q"])]
+    if stock_cols and space_rows:
+        S[np.ix_(space_rows, stock_cols)] = -1000.0
     if len(pool) > n_vis:  # placeholders only ever stand behind our own graphics
         hid, vis = np.arange(n_vis, len(pool)), np.array([i not in own_rows for i in range(len(items))])
         S[np.ix_(vis, hid)], S[np.ix_(~vis, hid)] = -1000.0, 1.0

@@ -1,9 +1,67 @@
-{"style": "v3", "lead_in": 0.5,
- "cards": {"ch1": ["", "THE BLACK HOLE *PLAYED BACKWARDS*"], "ch2": ["", "TOO STRANGE *TO EXIST*"], "ch3": ["", "THE BURST *WITHOUT A STAR*"],
-           "ch4": ["", "WHEN A BLACK HOLE *TURNS WHITE*"], "ch5": ["", "HIDDEN IN *PLAIN SIGHT*"], "ending": ["", "NO *VERDICT* YET"]},
+{
+ "style": "v3",
+ "lead_in": 0.5,
+ "cards": {
+  "ch1": [
+   "",
+   "THE BLACK HOLE *PLAYED BACKWARDS*"
+  ],
+  "ch2": [
+   "",
+   "TOO STRANGE *TO EXIST*"
+  ],
+  "ch3": [
+   "",
+   "THE BURST *WITHOUT A STAR*"
+  ],
+  "ch4": [
+   "",
+   "WHEN A BLACK HOLE *TURNS WHITE*"
+  ],
+  "ch5": [
+   "",
+   "HIDDEN IN *PLAIN SIGHT*"
+  ],
+  "ending": [
+   "",
+   "NO *VERDICT* YET"
+  ]
+ },
  "count_total": 6,
- "music": [{"from": "opening", "track": "Darkest_Child.mp3", "gain": -3.0, "start": 32.0}],
- "grade": {"preset": "amber_teal", "contrast": 0.25, "sat": 1.3, "vignette": 0.35, "grain": 3},
- "card_query": ["slow flight through a star field", "a dark nebula drifting"],
- "bg_query": ["dark star field slowly drifting", "faint distant galaxies in dark space"],
- "pin": {}, "ban": [], "crops": {}, "exclude": {}}
+ "music": [
+  {
+   "from": "opening",
+   "track": "Darkest_Child.mp3",
+   "gain": -3.0,
+   "start": 32.0
+  }
+ ],
+ "grade": {
+  "preset": "amber_teal",
+  "contrast": 0.25,
+  "sat": 1.3,
+  "vignette": 0.35,
+  "grain": 3
+ },
+ "card_query": [
+  "slow flight through a star field",
+  "a dark nebula drifting"
+ ],
+ "bg_query": [
+  "dark star field slowly drifting",
+  "faint distant galaxies in dark space"
+ ],
+ "pin": {},
+ "ban": [
+  "noirlab_noirlab2403c",
+  "pexels_11336047",
+  "pexels_29109518",
+  "pexels_29431459",
+  "pexels_3141206",
+  "pexels_32336493",
+  "pexels_6791697",
+  "pexels_9424215"
+ ],
+ "crops": {},
+ "exclude": {}
+}
