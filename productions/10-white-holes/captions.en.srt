@@ -1,0 +1,248 @@
+1
+00:00:00,000 --> 00:00:07,000
+In 2006 there was an explosion in space that a NASA satellite caught for 102 seconds
+
+2
+00:00:07,445 --> 00:00:12,568
+It released more energy than our Sun gives off in its whole life
+
+3
+00:00:12,568 --> 00:00:15,507
+The world's biggest telescopes looked there at once
+
+4
+00:00:15,507 --> 00:00:21,258
+Then some scientists named something strange, a white hole, the exact opposite of a black hole
+
+5
+00:00:21,258 --> 00:00:23,992
+But do white holes really exist?
+
+6
+00:00:25,319 --> 00:00:30,376
+When a very big star runs out of fuel, it starts to fall inward under its own weight
+
+7
+00:00:30,376 --> 00:00:34,698
+and is squeezed so much that not even light can escape its gravity
+
+8
+00:00:34,698 --> 00:00:41,698
+That is a black hole, ringed by a boundary called the event horizon; past it, nothing comes back
+
+9
+00:00:44,158 --> 00:00:49,820
+In 1915 Einstein wrote the equations of gravity, and black holes came out of those very equations
+
+10
+00:00:49,820 --> 00:00:52,031
+but they hid something strange
+
+11
+00:00:52,031 --> 00:00:57,867
+These equations work exactly the same with time running forward or backward
+
+12
+00:00:57,867 --> 00:01:04,867
+Run a cricket replay backwards and the ball leaves the keeper's gloves and goes straight back to the bowler's hand
+
+13
+00:01:05,382 --> 00:01:08,626
+and to physics, both videos look perfectly right
+
+14
+00:01:08,626 --> 00:01:13,687
+Run a black hole's replay backwards the same way and you get a white hole
+
+15
+00:01:13,687 --> 00:01:19,693
+a boundary from which light and matter only come out, and nothing can go in
+
+16
+00:01:19,693 --> 00:01:26,693
+In 1960, Martin Kruskal and George Szekeres drew the full mathematical map of a black hole's spacetime
+
+17
+00:01:27,096 --> 00:01:30,647
+and this second part turned up hidden in the equations
+
+18
+00:01:30,647 --> 00:01:37,047
+Maths allowed the white hole, yet most scientists refused to accept it
+
+19
+00:01:38,375 --> 00:01:40,303
+Their first doubt was about the direction of time
+
+20
+00:01:40,303 --> 00:01:46,825
+because milk boils over in the kitchen, but spilt milk never climbs back into the pot by itself
+
+21
+00:01:46,825 --> 00:01:50,639
+In nature things spread out; they never gather back by themselves
+
+22
+00:01:50,639 --> 00:01:55,942
+while a white hole does exactly that reverse, which we have never seen happen
+
+23
+00:01:55,942 --> 00:02:02,942
+Still, in 1964 the Russian scientist Igor Novikov said white holes could exist
+
+24
+00:02:02,955 --> 00:02:06,854
+but ten years later Douglas Eardley showed a big problem with it
+
+25
+00:02:06,854 --> 00:02:13,854
+Nothing can enter a white hole, but its gravity piles dust and radiation up just outside its boundary
+
+26
+00:02:15,138 --> 00:02:22,138
+By Eardley's account this piled-up matter grows so heavy that the whole white hole collapses into a black hole
+
+27
+00:02:22,854 --> 00:02:25,571
+So even if one formed, it would not last
+
+28
+00:02:25,571 --> 00:02:32,571
+The same year, 1974, Jayant Narlikar and his team at TIFR in Mumbai took a different angle
+
+29
+00:02:33,549 --> 00:02:39,412
+and wrote in the famous journal Nature that white holes could be behind the fastest radiation in space
+
+30
+00:02:39,412 --> 00:02:46,412
+For them it was a big clue to the biggest explosions in space, but for years nobody caught such a blast
+
+31
+00:02:47,907 --> 00:02:52,161
+Then in 2006 the Swift satellite saw that strange flash
+
+32
+00:02:53,488 --> 00:02:59,849
+Sometimes a very bright flash of gamma rays comes from space; it is called a gamma ray burst, and there are two kinds
+
+33
+00:02:59,849 --> 00:03:04,698
+Short ones last under two seconds and come from two dead stars colliding
+
+34
+00:03:04,698 --> 00:03:10,692
+while long ones come from a big star dying, and a supernova's light always follows
+
+35
+00:03:10,692 --> 00:03:17,692
+The 2006 blast lasted 102 seconds, a long one, but no supernova followed
+
+36
+00:03:17,705 --> 00:03:22,395
+Scientists called it a hybrid, because it fit no category
+
+37
+00:03:22,395 --> 00:03:28,849
+In 2011 Alon Retter and Shlomo Heller suggested it was perhaps a white hole
+
+38
+00:03:28,849 --> 00:03:34,526
+which, like a Diwali anaar, threw out all its matter in one burst and was gone
+
+39
+00:03:34,526 --> 00:03:41,526
+They called it a Small Bang, but the story twisted when scientists later re-checked the burst's old light
+
+40
+00:03:43,334 --> 00:03:45,502
+and found signs of a kilonova
+
+41
+00:03:45,502 --> 00:03:52,502
+A kilonova is the faint light after two dead stars, neutron stars, collide, so most astronomers think it was a neutron star crash, not a white hole
+
+42
+00:03:58,393 --> 00:04:04,044
+There is no firm proof, but the white hole idea came back by another road
+
+43
+00:04:05,371 --> 00:04:12,371
+Now the very centre of a black hole, where Einstein's equations say all matter is crushed into a tiny point and density becomes infinite
+
+44
+00:04:15,441 --> 00:04:22,441
+But where a number becomes infinite, physics fails: at such tiny scales quantum physics rules, and no theory yet joins it with gravity
+
+45
+00:04:27,086 --> 00:04:34,086
+In 2014 Carlo Rovelli and Hal Haggard suggested that matter may never reach that point
+
+46
+00:04:34,320 --> 00:04:41,320
+Squeezed to a limit it bounces back, the way a spring pressed all the way springs back hard
+
+47
+00:04:43,015 --> 00:04:46,324
+and that bounce turns the black hole into a white hole
+
+48
+00:04:46,324 --> 00:04:51,008
+Here it is all about time, because near a black hole time runs very slowly
+
+49
+00:04:51,008 --> 00:04:58,008
+For the matter inside, the bounce takes a second, but for anyone outside it can take billions of years, so today's black holes haven't turned white yet
+
+50
+00:05:01,351 --> 00:05:07,745
+And here comes a big Indian name, Abhay Ashtekar, one of the founders of loop quantum gravity
+
+51
+00:05:07,745 --> 00:05:14,745
+In 2018, with Javier Olmedo and Parampreet Singh, he showed that in this theory the infinite-density point at the centre disappears
+
+52
+00:05:17,196 --> 00:05:23,095
+and a bridge forms there instead, joining the black hole to its opposite, a white hole
+
+53
+00:05:24,422 --> 00:05:31,422
+If black holes really become white holes, the change comes first in the smallest ones, because with less mass their bounce comes sooner
+
+54
+00:05:35,067 --> 00:05:42,067
+Some scientists think many tiny black holes formed just after the Big Bang and, over billions of years, became white holes
+
+55
+00:05:43,093 --> 00:05:47,129
+and their leftover pieces may still be drifting through space
+
+56
+00:05:47,129 --> 00:05:54,129
+Each piece is smaller than an atom and weighs like a small grain of sand; they neither shine nor collide with anything
+
+57
+00:05:55,139 --> 00:06:02,046
+We know them only by gravity, just like dark matter, which holds galaxies together but can't be seen
+
+58
+00:06:02,046 --> 00:06:08,891
+so Carlo Rovelli and colleagues suggested part of dark matter could be such white holes
+
+59
+00:06:08,891 --> 00:06:12,700
+This is only an idea for now, but there is a theory even bigger
+
+60
+00:06:12,700 --> 00:06:19,700
+In the Big Bang all matter and energy came out of one place and nothing went in; a white hole does exactly this, so some physicists think our Big Bang was like a giant white hole
+
+61
+00:06:26,649 --> 00:06:33,649
+So what are white holes? The last stage of black holes, the Big Bang's twin, or just maths that nature never lets happen?
+
+62
+00:06:34,174 --> 00:06:41,174
+Science hasn't decided yet, but whenever a blast without a star appears in space, scientists ask that same 2006 question again
+
