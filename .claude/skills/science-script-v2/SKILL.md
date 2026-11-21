@@ -287,3 +287,6 @@ Read `productions/README.md` "Owner rules from video 09" and apply every Script 
 
 ## Owner's sentences stay whole (owner, 2026-11-21, video 10)
 When the owner gives his final script, keep every sentence exactly as he wrote it: do not split long sentences or change commas into full stops. The narration stage then runs with `TTS_CHECK_FLAGS=--allow-long`. Mention the length risk once if a sentence is very long; the owner decides.
+
+## Numbers in the voice (owner, 2026-11-21, probe on video 10)
+Years stay in Hindi words (दो हज़ार छह, उन्नीस सौ साठ). After a number above one, write the plural English unit: एक सौ दो seconds, दो seconds (the owner picked 'एक सौ दो seconds' over 'second' and over 'one hundred two seconds'). 'एक second' stays singular.
