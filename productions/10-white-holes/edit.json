@@ -82,7 +82,10 @@
   "pexels_3141206",
   "pexels_32336493",
   "pexels_6791697",
-  "pexels_9424215"
+  "pexels_7429350",
+  "pexels_9424215",
+  "svs_14881",
+  "svs_5366"
  ],
  "crops": {},
  "exclude": {},
@@ -255,14 +258,6 @@
       "a quasar jet shooting out of a galaxy",
       "jets of gas blasting from a galaxy core"
      ]
-    },
-    {
-     "at": "Martin Kruskal",
-     "gfx": "photo:Kruskal"
-    },
-    {
-     "at": "George Szekeres",
-     "gfx": "photo:Szekeres"
     },
     {
      "at": "तो equations में",
@@ -455,14 +450,6 @@
      ]
     },
     {
-     "at": "Igor Novikov",
-     "gfx": "photo:Novikov"
-    },
-    {
-     "at": "Douglas Eardley",
-     "gfx": "photo:Eardley"
-    },
-    {
      "at": "White hole के अंदर कुछ",
      "opt": "9s",
      "q": [
@@ -488,10 +475,6 @@
       "Mumbai skyline at night",
       "the Mumbai coastline at dusk"
      ]
-    },
-    {
-     "at": "जयंत नार्लीकर",
-     "gfx": "photo:Narlikar"
     },
     {
      "at": "और famous journal Nature",
@@ -771,10 +754,6 @@
      "gfx": "blueprint:WHERE PHYSICS BREAKS"
     },
     {
-     "at": "Carlo Rovelli",
-     "gfx": "photo:Rovelli"
-    },
-    {
      "at": "दबते दबते एक limit",
      "q": [
       "a supernova core collapse simulation rebounding",
@@ -815,10 +794,6 @@
     {
      "at": "अभय अश्टेकर",
      "gfx": "photo:Ashtekar"
-    },
-    {
-     "at": "परमप्रीत सिंह",
-     "gfx": "photo:Parampreet"
     },
     {
      "at": "बल्कि वहाँ एक bridge",

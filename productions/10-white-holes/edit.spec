@@ -48,9 +48,9 @@ C इसी तरह black hole का replay | Run a black hole's replay backw
 V एक ऐसी boundary @ a quasar jet shooting out of a galaxy | jets of gas blasting from a galaxy core
 K एक ऐसी boundary @ EVERYTHING COMES OUT [बाहर] / *NOTHING GOES IN* [अंदर] | kicker=a white hole
 C एक ऐसी boundary | a boundary from which light and matter only come out, and nothing can go in
-G Martin Kruskal @ photo:Kruskal
+# (photo:Kruskal waits for a free photo; the animated name card shows)
 L Martin Kruskal @ MARTIN KRUSKAL | mathematician · 1960
-G George Szekeres @ photo:Szekeres
+# (photo:Szekeres waits for a free photo; the animated name card shows)
 L George Szekeres @ GEORGE SZEKERES | mathematician · 1960
 C उन्नीस सौ साठ में | In 1960, Martin Kruskal and George Szekeres drew the full mathematical map of a black hole's spacetime
 G तो equations में @ spacetime
@@ -68,10 +68,10 @@ V Nature में चीज़ें @ ink spreading in water | smoke spreading
 C Nature में चीज़ें | In nature things spread out; they never gather back by themselves
 V जबकि white hole @ glowing gas flowing outward from a star | a nebula expanding
 C जबकि white hole | while a white hole does exactly that reverse, which we have never seen happen
-G Igor Novikov @ photo:Novikov
+# (photo:Novikov waits for a free photo; the animated name card shows)
 L Igor Novikov @ IGOR NOVIKOV | Russian astrophysicist · 1964
 C फिर भी उन्नीस सौ चौंसठ | Still, in 1964 the Russian scientist Igor Novikov said white holes could exist
-G Douglas Eardley @ photo:Eardley
+# (photo:Eardley waits for a free photo; the animated name card shows)
 L Douglas Eardley @ DOUGLAS EARDLEY | physicist · 1974
 C लेकिन दस साल बाद | but ten years later Douglas Eardley showed a big problem with it
 # FLOW 10-ch2-02
@@ -83,7 +83,7 @@ C Eardley के हिसाब से ये | By Eardley's account this piled
 G मतलब ये बन भी जाए @ stamp:UNSTABLE;it would not last
 C मतलब ये बन भी जाए | So even if one formed, it would not last
 V उसी साल @ Mumbai skyline at night | the Mumbai coastline at dusk
-G जयंत नार्लीकर @ photo:Narlikar
+# (photo:Narlikar waits for a free photo; the animated name card shows)
 L जयंत नार्लीकर @ JAYANT NARLIKAR | astrophysicist · TIFR Mumbai · 1974
 C उसी साल | The same year, 1974, Jayant Narlikar and his team at TIFR in Mumbai took a different angle
 G और famous journal Nature @ journal:1974;Nature, volume 251;Narlikar, Apparao, Dadhich;*High energy radiation from white holes*
@@ -127,7 +127,7 @@ V - @ flying into a black hole visualization | zooming into the centre of a blac
 C - | Now the very centre of a black hole, where Einstein's equations say all matter is crushed into a tiny point and density becomes infinite
 G लेकिन जहाँ कोई number @ blueprint:WHERE PHYSICS BREAKS
 C लेकिन जहाँ कोई number | But where a number becomes infinite, physics fails: at such tiny scales quantum physics rules, and no theory yet joins it with gravity
-G Carlo Rovelli @ photo:Rovelli
+# (photo:Rovelli waits for a free photo; the animated name card shows)
 L Carlo Rovelli @ CARLO ROVELLI | physicist · loop quantum gravity
 L Hal Haggard @ HAL HAGGARD | physicist · 2014
 C दो हज़ार चौदह में | In 2014 Carlo Rovelli and Hal Haggard suggested that matter may never reach that point
@@ -148,7 +148,7 @@ G अभय अश्टेकर @ photo:Ashtekar
 L अभय अश्टेकर @ ABHAY ASHTEKAR | physicist · a founder of loop quantum gravity
 C और यहीं एक बड़ा Indian नाम | And here comes a big Indian name, Abhay Ashtekar, one of the founders of loop quantum gravity
 L Javier Olmedo @ JAVIER OLMEDO | physicist · 2018
-G परमप्रीत सिंह @ photo:Parampreet
+# (photo:Parampreet waits for a free photo; the animated name card shows)
 L परमप्रीत सिंह @ PARAMPREET SINGH | physicist · 2018
 C दो हज़ार अठारह में | In 2018, with Javier Olmedo and Parampreet Singh, he showed that in this theory the infinite-density point at the centre disappears
 # FLOW 10-ch4-04
